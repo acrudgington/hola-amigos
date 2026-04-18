@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#FF8C42" />
+    <meta name="description" content="¡Hola, Amigo! — A fun interactive Spanish course for kids aged 6+. Learn A1 to A2 with games, quizzes, and stories!" />
+    <title>¡Hola, Amigo! — Learn Spanish</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☀️</text></svg>" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      body { font-family: 'Nunito', sans-serif; background: #FFF8E1; -webkit-font-smoothing: antialiased; }
+      @keyframes fBob { 0% { transform: translateY(0) rotate(0deg); } 100% { transform: translateY(-18px) rotate(8deg); } }
+      @keyframes cPop { 0% { opacity: 0; transform: scale(0.85) translateY(14px); } 100% { opacity: 1; transform: scale(1) translateY(0); } }
+      @keyframes bIn { 0% { transform: scale(0.5); opacity: 0; } 50% { transform: scale(1.12); } 100% { transform: scale(1); opacity: 1; } }
+      @keyframes cFall { 0% { transform: translateY(0) rotate(0deg); opacity: 1; } 100% { transform: translateY(100vh) rotate(720deg); opacity: 0; } }
+      @keyframes shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-6px); } 75% { transform: translateX(6px); } }
+      input:focus { outline: none; border-color: #4D96FF !important; box-shadow: 0 0 0 3px rgba(77,150,255,0.2); }
+      button:active { transform: scale(0.97) !important; }
+      button { -webkit-tap-highlight-color: transparent; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
