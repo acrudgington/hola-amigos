@@ -184,10 +184,11 @@ LESSONS.forEach(l => { if (STORIES[l.id] && !l.story) l.story = STORIES[l.id]; }
 // SONGS — classic Spanish kids' songs with karaoke lyrics
 // ============================================================
 const SONGS = [
+  // WORLD 1 — Classic farm & animal songs
   {
     id: "pollitos", title: "Los pollitos dicen", subtitle: "The little chicks say", emoji: "🐥",
-    color: "#FFD93D", bg: "#FFFBE5",
-    about: "A classic Spanish song about baby chicks wanting food. Sung to every child in Spain!",
+    color: "#FFD93D", bg: "#FFFBE5", youtubeId: "nf5tvAWmvIo", channel: "LiaChaCha",
+    about: "A classic song about baby chicks calling for their mother when hungry or cold.",
     lines: [
       { es: "Los pollitos dicen:", en: "The little chicks say:" },
       { es: "pío, pío, pío,", en: "peep, peep, peep," },
@@ -200,9 +201,52 @@ const SONGS = [
     ]
   },
   {
+    id: "vaca_lola", title: "La vaca Lola", subtitle: "Lola the cow", emoji: "🐮",
+    color: "#FF8C42", bg: "#FFF3E8", youtubeId: "y-q9emjHJ2w", channel: "Toy Cantando",
+    about: "The most famous cow in Spanish kids' songs! Everyone knows Lola.",
+    lines: [
+      { es: "La vaca Lola,", en: "Lola the cow," },
+      { es: "la vaca Lola,", en: "Lola the cow," },
+      { es: "tiene cabeza", en: "has a head" },
+      { es: "y tiene cola,", en: "and has a tail," },
+      { es: "la vaca Lola.", en: "Lola the cow." },
+      { es: "¡Muu! ¡Muu!", en: "Moo! Moo!" },
+    ]
+  },
+  {
+    id: "cinco_patitos", title: "Los cinco patitos", subtitle: "Five little ducklings", emoji: "🦆",
+    color: "#FFD93D", bg: "#FFFBE5", youtubeId: "lLjBH-yZRL8", channel: "El Reino Infantil",
+    about: "Five little ducks go out to play — a favourite counting song!",
+    lines: [
+      { es: "Los cinco patitos", en: "The five little ducklings" },
+      { es: "se fueron a nadar,", en: "went out to swim," },
+      { es: "el más pequeñito", en: "the littlest one" },
+      { es: "se quiso quedar.", en: "wanted to stay." },
+      { es: "Mamá pata enojada", en: "Mother duck got angry" },
+      { es: "le quiso regañar,", en: "wanted to scold him," },
+      { es: "y el pobre patito", en: "and the poor duckling" },
+      { es: "se puso a llorar.", en: "started to cry." },
+    ]
+  },
+  {
+    id: "arana", title: "La araña pequeñita", subtitle: "The tiny spider", emoji: "🕷️",
+    color: "#4D96FF", bg: "#E4F0FF", youtubeId: "zJZhsXhvFy0", channel: "Super Simple Español",
+    about: "The Spanish version of 'Itsy Bitsy Spider' — perfect for little hands doing actions!",
+    lines: [
+      { es: "La araña pequeñita", en: "The itsy bitsy spider" },
+      { es: "subió, subió, subió.", en: "went up, up, up." },
+      { es: "Vino la lluvia", en: "The rain came" },
+      { es: "y se la llevó.", en: "and washed her away." },
+      { es: "Salió el sol", en: "The sun came out" },
+      { es: "y todo lo secó,", en: "and dried up everything," },
+      { es: "y la araña pequeñita", en: "and the itsy bitsy spider" },
+      { es: "subió, subió, subió.", en: "went up, up, up." },
+    ]
+  },
+  {
     id: "elefante", title: "Un elefante", subtitle: "One elephant", emoji: "🐘",
-    color: "#B983FF", bg: "#F3EAFF",
-    about: "A counting song about elephants balancing on a spider's web! A Spanish classroom favourite.",
+    color: "#B983FF", bg: "#F3EAFF", youtubeId: "9FPzKKcVVEA", channel: "Canticos",
+    about: "A counting song about elephants balancing on a spider's web!",
     lines: [
       { es: "Un elefante se balanceaba", en: "One elephant was balancing" },
       { es: "sobre la tela de una araña,", en: "on a spider's web," },
@@ -210,12 +254,59 @@ const SONGS = [
       { es: "fue a llamar a otro elefante.", en: "he called another elephant." },
       { es: "Dos elefantes se balanceaban...", en: "Two elephants were balancing..." },
       { es: "Tres elefantes se balanceaban...", en: "Three elephants were balancing..." },
+      { es: "Cuatro elefantes se balanceaban...", en: "Four elephants were balancing..." },
     ]
   },
   {
-    id: "colores", title: "De colores", subtitle: "Of colours", emoji: "🌈",
-    color: "#6BCB77", bg: "#E8F8EA",
-    about: "A beautiful folk song about all the colours of nature — one of Spain's most beloved songs.",
+    id: "saltaba", title: "Saltaba la rana", subtitle: "The frog was jumping", emoji: "🐸",
+    color: "#6BCB77", bg: "#E8F8EA", youtubeId: "AM7dxcvVXFY", channel: "El Reino Infantil",
+    about: "A cheerful song about a frog and a fly — great for animal words and actions!",
+    lines: [
+      { es: "Saltaba la rana", en: "The frog was jumping" },
+      { es: "debajo del agua,", en: "under the water," },
+      { es: "saltaba la rana", en: "the frog was jumping" },
+      { es: "sobre una lechuga.", en: "on a lettuce." },
+      { es: "Una mosca pasa,", en: "A fly goes by," },
+      { es: "¡zas! se la traga,", en: "zap! she swallows it," },
+      { es: "saltaba la rana", en: "the frog was jumping" },
+      { es: "muy contenta hoy.", en: "very happy today." },
+    ]
+  },
+  // WORLD 2 — Colour, greeting, action songs
+  {
+    id: "veo_veo", title: "Veo Veo", subtitle: "I spy (I see, I see)", emoji: "👀",
+    color: "#FF6B6B", bg: "#FFE8E8", youtubeId: "klGK7ehiDPg", channel: "El Reino Infantil",
+    about: "The famous Spanish 'I Spy' game turned into a song! A must-know classic from Spain.",
+    lines: [
+      { es: "Veo veo", en: "I see, I see" },
+      { es: "¿Qué ves?", en: "What do you see?" },
+      { es: "Una cosita", en: "A little thing" },
+      { es: "¿Y qué cosita es?", en: "And what little thing is it?" },
+      { es: "Empieza con la A", en: "It starts with the letter A" },
+      { es: "¿Qué será? ¿Qué será?", en: "What could it be? What could it be?" },
+      { es: "¡Es un amigo!", en: "It's a friend!" },
+      { es: "Veo veo, ¿qué ves?", en: "I see, what do you see?" },
+    ]
+  },
+  {
+    id: "hola", title: "¡Hola!", subtitle: "Hello song", emoji: "👋",
+    color: "#FF8C42", bg: "#FFF3E8", youtubeId: "4deUxsQOGps", channel: "Super Simple Español",
+    about: "A friendly song to greet everyone in your life — perfect for learning hellos!",
+    lines: [
+      { es: "¡Hola, hola!", en: "Hello, hello!" },
+      { es: "¿Cómo estás?", en: "How are you?" },
+      { es: "¡Hola, hola!", en: "Hello, hello!" },
+      { es: "Vengan a saludar.", en: "Come and say hi." },
+      { es: "¡Hola, papá!", en: "Hello, Dad!" },
+      { es: "¡Hola, mamá!", en: "Hello, Mum!" },
+      { es: "¡Hola, amigos!", en: "Hello, friends!" },
+      { es: "¡Hola a todos!", en: "Hello everyone!" },
+    ]
+  },
+  {
+    id: "de_colores", title: "De colores", subtitle: "Of colours", emoji: "🌈",
+    color: "#6BCB77", bg: "#E8F8EA", youtubeId: "hEtWoWxWvE4", channel: "El Reino Infantil",
+    about: "A beautiful folk song about all the colours of nature — a Spanish treasure.",
     lines: [
       { es: "De colores,", en: "Of colours," },
       { es: "de colores se visten los campos", en: "the fields dress in colours" },
@@ -229,38 +320,165 @@ const SONGS = [
     ]
   },
   {
-    id: "arana", title: "La araña pequeñita", subtitle: "The tiny spider", emoji: "🕷️",
-    color: "#4D96FF", bg: "#E4F0FF",
-    about: "The Spanish version of 'Itsy Bitsy Spider' — perfect for little hands doing the actions!",
+    id: "cabeza", title: "Cabeza, hombros, rodillas, pies", subtitle: "Head, shoulders, knees, toes", emoji: "👶",
+    color: "#4D96FF", bg: "#E4F0FF", youtubeId: "e3M4IlJNkvA", channel: "Super Simple Español",
+    about: "Point to each body part as you sing! The best way to learn body vocabulary.",
     lines: [
-      { es: "La araña pequeñita", en: "The itsy bitsy spider" },
-      { es: "subió, subió, subió.", en: "went up, up, up." },
-      { es: "Vino la lluvia", en: "The rain came" },
-      { es: "y se la llevó.", en: "and washed her away." },
-      { es: "Salió el sol", en: "The sun came out" },
-      { es: "y todo lo secó,", en: "and dried up everything," },
-      { es: "y la araña pequeñita", en: "and the itsy bitsy spider" },
-      { es: "subió, subió, subió.", en: "went up, up, up." },
+      { es: "Cabeza, hombros,", en: "Head, shoulders," },
+      { es: "rodillas, pies,", en: "knees, toes," },
+      { es: "rodillas, pies.", en: "knees, toes." },
+      { es: "Cabeza, hombros,", en: "Head, shoulders," },
+      { es: "rodillas, pies,", en: "knees, toes," },
+      { es: "rodillas, pies.", en: "knees, toes." },
+      { es: "Ojos, orejas,", en: "Eyes, ears," },
+      { es: "boca y nariz,", en: "mouth and nose," },
+      { es: "cabeza, hombros,", en: "head, shoulders," },
+      { es: "rodillas, pies.", en: "knees, toes." },
+    ]
+  },
+  // WORLD 3 — Bedtime & everyday song classics
+  {
+    id: "estrellita", title: "Estrellita dónde estás", subtitle: "Twinkle Twinkle Little Star", emoji: "⭐",
+    color: "#FFD93D", bg: "#FFFBE5", youtubeId: "n6TzQ8NlbcE", channel: "Super Simple Español",
+    about: "The Spanish version of Twinkle Twinkle — a perfect bedtime song.",
+    lines: [
+      { es: "Estrellita, ¿dónde estás?", en: "Little star, where are you?" },
+      { es: "Me pregunto qué serás.", en: "I wonder what you are." },
+      { es: "En el cielo y en el mar,", en: "In the sky and in the sea," },
+      { es: "un diamante de verdad.", en: "a real diamond." },
+      { es: "Estrellita, ¿dónde estás?", en: "Little star, where are you?" },
+      { es: "Me pregunto qué serás.", en: "I wonder what you are." },
     ]
   },
   {
-    id: "saltaba", title: "Saltaba la rana", subtitle: "The frog was jumping", emoji: "🐸",
-    color: "#6BCB77", bg: "#E8F8EA",
-    about: "A cheerful song about a frog and a fly. Great for practising animal words and actions!",
+    id: "pin_pon", title: "Pin Pon", subtitle: "Pin Pon the doll", emoji: "🧸",
+    color: "#FF9EC7", bg: "#FFE8F2", youtubeId: "3QJ_fXL-BjQ", channel: "El Reino Infantil",
+    about: "Pin Pon is a little cardboard doll who washes his face — a timeless classic!",
     lines: [
-      { es: "Saltaba la rana", en: "The frog was jumping" },
-      { es: "debajo del agua,", en: "under the water," },
-      { es: "saltaba la rana", en: "the frog was jumping" },
-      { es: "sobre una lechuga.", en: "on a lettuce." },
-      { es: "Una mosca pasa,", en: "A fly goes by," },
-      { es: "¡zas! se la traga,", en: "splat! she swallows it," },
-      { es: "saltaba la rana", en: "the frog was jumping" },
-      { es: "muy contenta hoy.", en: "very happy today." },
+      { es: "Pin Pon es un muñeco,", en: "Pin Pon is a doll," },
+      { es: "muy guapo y de cartón.", en: "very handsome, made of cardboard." },
+      { es: "Se lava la carita", en: "He washes his little face" },
+      { es: "con agua y con jabón.", en: "with water and soap." },
+      { es: "Se desenreda el pelo", en: "He combs his hair" },
+      { es: "con peine de marfil,", en: "with an ivory comb," },
+      { es: "y aunque se da tirones", en: "and even when it pulls" },
+      { es: "no llora ni hace así.", en: "he doesn't cry or fuss." },
+    ]
+  },
+  {
+    id: "arroz", title: "Arroz con leche", subtitle: "Rice pudding", emoji: "🍚",
+    color: "#FF8C42", bg: "#FFF3E8", youtubeId: "kXYRCcmR_Zg", channel: "El Reino Infantil",
+    about: "A sweet traditional song about a boy looking for a wife — sung at every playground!",
+    lines: [
+      { es: "Arroz con leche,", en: "Rice pudding," },
+      { es: "me quiero casar", en: "I want to marry" },
+      { es: "con una señorita", en: "a young lady" },
+      { es: "de San Nicolás.", en: "from San Nicolás." },
+      { es: "Que sepa coser,", en: "Who knows how to sew," },
+      { es: "que sepa bordar,", en: "who knows how to embroider," },
+      { es: "que sepa abrir la puerta", en: "who knows how to open the door" },
+      { es: "para ir a jugar.", en: "to go out and play." },
+    ]
+  },
+  {
+    id: "barquito", title: "El barquito chiquitito", subtitle: "The tiny little boat", emoji: "⛵",
+    color: "#4D96FF", bg: "#E4F0FF", youtubeId: "aRXTrvnoufQ", channel: "El Reino Infantil",
+    about: "A tiny boat sets sail and has an adventure — a sweet, silly song everyone loves.",
+    lines: [
+      { es: "Había una vez", en: "Once upon a time" },
+      { es: "un barquito chiquitito,", en: "a tiny little boat," },
+      { es: "que no podía,", en: "that couldn't," },
+      { es: "que no podía navegar.", en: "that couldn't sail." },
+      { es: "Pasaron una,", en: "One," },
+      { es: "dos, tres,", en: "two, three," },
+      { es: "cuatro, cinco, seis semanas,", en: "four, five, six weeks went by," },
+      { es: "y aquel barquito,", en: "and that little boat," },
+      { es: "y aquel barquito navegó.", en: "and that little boat did sail." },
+    ]
+  },
+  {
+    id: "boton", title: "Debajo de un botón", subtitle: "Under a button", emoji: "🔘",
+    color: "#B983FF", bg: "#F3EAFF", youtubeId: "27rQGpEtn0Y", channel: "El Reino Infantil",
+    about: "A silly rhyming song about a tiny mouse hiding under a button — kids love the rhymes!",
+    lines: [
+      { es: "Debajo de un botón, ton, ton,", en: "Under a button, ton, ton," },
+      { es: "que encontró Martín, tín, tín,", en: "that Martin found, tin, tin," },
+      { es: "había un ratón, ton, ton,", en: "there was a mouse, ton, ton," },
+      { es: "¡ay qué chiquitín, tín, tín!", en: "oh so tiny, tin, tin!" },
+      { es: "¡Ay qué chiquitín, tín, tín,", en: "Oh so tiny, tin, tin," },
+      { es: "era aquel ratón, ton, ton,", en: "was that little mouse, ton, ton," },
+      { es: "que encontró Martín, tín, tín,", en: "that Martin found, tin, tin," },
+      { es: "debajo de un botón, ton, ton!", en: "under a button, ton, ton!" },
+    ]
+  },
+  // WORLD 4 — Animals, nature, celebration songs
+  {
+    id: "burro", title: "A mi burro", subtitle: "My little donkey", emoji: "🫏",
+    color: "#FF6B6B", bg: "#FFE8E8", youtubeId: "eRECrp0KBKY", channel: "Canciones Infantiles",
+    about: "Counting song about a poorly donkey who visits the doctor — great for body vocabulary!",
+    lines: [
+      { es: "A mi burro, a mi burro", en: "My donkey, my donkey" },
+      { es: "le duele la cabeza,", en: "has a sore head," },
+      { es: "el médico le ha puesto", en: "the doctor gave him" },
+      { es: "una corbata negra.", en: "a black tie." },
+      { es: "A mi burro, a mi burro", en: "My donkey, my donkey" },
+      { es: "le duele la garganta,", en: "has a sore throat," },
+      { es: "el médico le ha puesto", en: "the doctor gave him" },
+      { es: "una bufanda blanca.", en: "a white scarf." },
+    ]
+  },
+  {
+    id: "muneca", title: "Tengo una muñeca", subtitle: "I have a doll", emoji: "👗",
+    color: "#FF9EC7", bg: "#FFE8F2", youtubeId: "jTXpqW9v4GM", channel: "El Reino Infantil",
+    about: "A classic song about a little girl's beloved doll — great for colours and numbers.",
+    lines: [
+      { es: "Tengo una muñeca", en: "I have a doll" },
+      { es: "vestida de azul,", en: "dressed in blue," },
+      { es: "con su camisita", en: "with her little shirt" },
+      { es: "y su canesú.", en: "and her top." },
+      { es: "La saqué a paseo,", en: "I took her for a walk," },
+      { es: "se me constipó,", en: "she got a cold," },
+      { es: "la tengo en la cama", en: "I have her in bed" },
+      { es: "con mucho dolor.", en: "with lots of pain." },
+      { es: "Dos y dos son cuatro,", en: "Two and two is four," },
+      { es: "cuatro y dos son seis,", en: "four and two is six," },
+      { es: "seis y dos son ocho,", en: "six and two is eight," },
+      { es: "y ocho dieciséis.", en: "and eight, sixteen." },
+    ]
+  },
+  {
+    id: "aserrin", title: "Aserrín, aserrán", subtitle: "Sawing song", emoji: "🪵",
+    color: "#FF8C42", bg: "#FFF3E8", youtubeId: "jMGTM3HQgDI", channel: "El Reino Infantil",
+    about: "A rhythmic lap-bouncing song that Spanish parents sing to their babies.",
+    lines: [
+      { es: "Aserrín, aserrán,", en: "Saw-saw, saw-saw," },
+      { es: "los maderos de San Juan,", en: "the timbers of San Juan," },
+      { es: "piden pan,", en: "they ask for bread," },
+      { es: "no les dan,", en: "they don't get it," },
+      { es: "piden queso,", en: "they ask for cheese," },
+      { es: "les dan hueso,", en: "they get a bone," },
+      { es: "y les cortan el pescuezo.", en: "and they cut their necks." },
+      { es: "¡Zacatraz, zacatraz!", en: "Snip-snap, snip-snap!" },
+    ]
+  },
+  {
+    id: "sol", title: "Sol, solecito", subtitle: "Sun, little sun", emoji: "☀️",
+    color: "#FFD93D", bg: "#FFFBE5", youtubeId: "9MnZk7JnpA0", channel: "El Reino Infantil",
+    about: "A sweet song asking the sun to come out and warm everyone up.",
+    lines: [
+      { es: "Sol, solecito,", en: "Sun, little sun," },
+      { es: "caliéntame un poquito,", en: "warm me up a little," },
+      { es: "por hoy, por mañana,", en: "for today, for tomorrow," },
+      { es: "por toda la semana.", en: "for the whole week." },
+      { es: "Luna, lunera,", en: "Moon, mooney," },
+      { es: "cascabelera,", en: "jingly one," },
+      { es: "cinco pollitos", en: "five little chicks" },
+      { es: "y una ternera.", en: "and a calf." },
     ]
   },
   {
     id: "cumple", title: "Cumpleaños feliz", subtitle: "Happy Birthday", emoji: "🎂",
-    color: "#FF9EC7", bg: "#FFE8F2",
+    color: "#FF9EC7", bg: "#FFE8F2", youtubeId: "WZ22HRqVw1Q", channel: "El Reino Infantil",
     about: "The Spanish happy birthday song — sing it at every birthday party in Spain!",
     lines: [
       { es: "Cumpleaños feliz,", en: "Happy birthday to you," },
@@ -726,81 +944,59 @@ function Result({ score, total, onRetry, onBack, onEarnStar }) {
 // SONG PLAYER — karaoke-style with highlighted current line
 // ============================================================
 function SongPlayer({ song, onDone, onBack }) {
-  const [currentLine, setCurrentLine] = useState(-1);
-  const [playing, setPlaying] = useState(false);
   const [showEn, setShowEn] = useState(true);
-  const timeoutRef = useRef(null);
+  const [completed, setCompleted] = useState(false);
 
-  useEffect(() => () => { if (timeoutRef.current) clearTimeout(timeoutRef.current); window.speechSynthesis?.cancel(); }, []);
-
-  const playFromLine = (startIdx) => {
-    setPlaying(true);
-    const playLine = (idx) => {
-      if (idx >= song.lines.length) {
-        setPlaying(false);
-        setCurrentLine(-1);
-        onDone?.();
-        return;
-      }
-      setCurrentLine(idx);
-      window.speechSynthesis?.cancel();
-      const utter = new SpeechSynthesisUtterance(song.lines[idx].es);
-      utter.lang = "es-ES";
-      utter.rate = 0.75; // slower for singing
-      utter.pitch = 1.1;
-      const spain = speech.voices.find(v => v.lang === "es-ES") || speech.voices[0];
-      if (spain) utter.voice = spain;
-      utter.onend = () => {
-        timeoutRef.current = setTimeout(() => playLine(idx + 1), 400);
-      };
-      window.speechSynthesis?.speak(utter);
-    };
-    playLine(startIdx);
-  };
-
-  const stop = () => {
-    window.speechSynthesis?.cancel();
-    if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    setPlaying(false);
-    setCurrentLine(-1);
+  const markDone = () => {
+    if (completed) return;
+    setCompleted(true);
+    onDone?.();
   };
 
   return <div style={{ minHeight: "100vh", background: song.bg }}>
     <Bgs e={[song.emoji, "🎵", "🎶", "✨"]} />
-    <div style={{ position: "relative", zIndex: 1, maxWidth: 520, margin: "0 auto", padding: "14px 14px 40px" }}>
+    <div style={{ position: "relative", zIndex: 1, maxWidth: 560, margin: "0 auto", padding: "14px 14px 40px" }}>
       <Btn onClick={onBack} style={{ marginBottom: 12, fontSize: 12 }}>← Songs</Btn>
       <div style={{ textAlign: "center", marginBottom: 14 }}>
         <div style={{ fontSize: 56, animation: "bIn .5s" }}>{song.emoji}</div>
         <h2 style={{ fontSize: 26, fontWeight: 900, fontFamily: FN, color: "#1E3A5F" }}>{song.title}</h2>
         <p style={{ fontSize: 13, color: "#888", fontFamily: FN }}>{song.subtitle}</p>
+        {song.channel && <p style={{ fontSize: 11, color: "#aaa", fontFamily: FN, marginTop: 2 }}>Video by {song.channel}</p>}
       </div>
       <div style={{ background: "#fff", borderRadius: 18, padding: "14px 16px", marginBottom: 14, fontSize: 13, color: "#555", fontFamily: FN, fontStyle: "italic", border: `2px solid ${song.color}30`, textAlign: "center" }}>💡 {song.about}</div>
 
-      {/* Controls */}
-      <div style={{ display: "flex", gap: 8, justifyContent: "center", marginBottom: 16 }}>
-        {!playing ? <Btn onClick={() => playFromLine(0)} bg={song.color} color="#fff" border="transparent" style={{ fontSize: 15, padding: "12px 28px" }}>▶ Play Song</Btn>
-          : <Btn onClick={stop} bg="#FF6B6B" color="#fff" border="transparent" style={{ fontSize: 15, padding: "12px 28px" }}>⏸ Stop</Btn>}
+      {/* YouTube embed — responsive 16:9 */}
+      <div style={{ position: "relative", paddingBottom: "56.25%", height: 0, overflow: "hidden", borderRadius: 18, marginBottom: 14, boxShadow: "0 6px 24px rgba(0,0,0,.12)", background: "#000" }}>
+        <iframe
+          src={`https://www.youtube-nocookie.com/embed/${song.youtubeId}?rel=0&modestbranding=1`}
+          title={song.title}
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", border: 0 }}
+        />
+      </div>
+
+      {/* Toggle + mark as sung */}
+      <div style={{ display: "flex", gap: 8, justifyContent: "center", marginBottom: 16, flexWrap: "wrap" }}>
         <Btn onClick={() => setShowEn(!showEn)} style={{ fontSize: 12 }}>{showEn ? "Hide English" : "Show English"}</Btn>
+        {!completed ? <Btn onClick={markDone} bg={song.color} color="#fff" border="transparent" style={{ fontSize: 13, padding: "10px 20px" }}>⭐ I sang along!</Btn>
+          : <div style={{ padding: "10px 20px", background: "#E8F8EA", color: "#6BCB77", borderRadius: 50, fontSize: 13, fontWeight: 900, fontFamily: FN }}>✓ Great singing!</div>}
       </div>
 
       {/* Lyrics */}
       <div style={{ background: "#fff", borderRadius: 20, padding: "20px 16px", boxShadow: "0 3px 12px rgba(0,0,0,.05)" }}>
-        {song.lines.map((line, i) => {
-          const active = i === currentLine;
-          return <div key={i} onClick={() => !playing && playFromLine(i)} style={{
-            marginBottom: 14, padding: active ? "10px 12px" : "6px 12px", borderRadius: 12,
-            background: active ? song.color : "transparent",
-            color: active ? "#fff" : "#1E3A5F",
-            transition: "all .3s", cursor: playing ? "default" : "pointer",
-            transform: active ? "scale(1.03)" : "scale(1)",
-            boxShadow: active ? `0 4px 16px ${song.color}60` : "none",
-          }}>
-            <div style={{ fontSize: active ? 19 : 17, fontWeight: 800, fontFamily: FN, lineHeight: 1.3 }}>{line.es}</div>
-            {showEn && <div style={{ fontSize: active ? 13 : 12, opacity: active ? 0.9 : 0.6, fontFamily: FN, fontStyle: "italic", marginTop: 2 }}>{line.en}</div>}
-          </div>;
-        })}
+        <div style={{ fontSize: 11, fontWeight: 800, color: "#aaa", fontFamily: FN, textTransform: "uppercase", letterSpacing: 2, marginBottom: 10, textAlign: "center" }}>🎤 Sing Along!</div>
+        {song.lines.map((line, i) => <div key={i} style={{
+          marginBottom: 14, padding: "6px 12px", borderRadius: 12,
+          borderLeft: `3px solid ${song.color}`,
+          background: `${song.color}08`,
+        }}>
+          <div style={{ fontSize: 16, fontWeight: 800, fontFamily: FN, color: "#1E3A5F", lineHeight: 1.4 }}>{line.es}</div>
+          {showEn && <div style={{ fontSize: 12, color: "#888", fontFamily: FN, fontStyle: "italic", marginTop: 2 }}>{line.en}</div>}
+        </div>)}
       </div>
-      <div style={{ textAlign: "center", marginTop: 14, fontSize: 12, color: "#888", fontFamily: FN }}>💡 Tap any line to sing from there!</div>
+      <div style={{ textAlign: "center", marginTop: 14, fontSize: 11, color: "#888", fontFamily: FN }}>💡 Watch the video, read along, and sing!</div>
     </div>
   </div>;
 }
