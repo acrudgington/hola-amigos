@@ -821,6 +821,84 @@ function BadgeToast({ badge, onClose }) {
 }
 
 // ============================================================
+// MASCOTS — Sol (the sun) and Luna (the moon)
+// ============================================================
+function Sol({ size = 56 }) {
+  const r = size / 2;
+  return <svg width={size} height={size} viewBox="0 0 100 100" style={{ filter: "drop-shadow(0 4px 8px rgba(255,200,50,.4))" }} aria-label="Sol the sun">
+    {/* Sun rays */}
+    <g style={{ transformOrigin: "50px 50px", animation: "solSpin 22s linear infinite" }}>
+      {Array.from({ length: 12 }).map((_, i) => <rect key={i} x="48" y="4" width="4" height="14" rx="2" fill="#FFD93D" transform={`rotate(${i * 30} 50 50)`} />)}
+    </g>
+    {/* Sun body */}
+    <circle cx="50" cy="50" r="28" fill="#FFD93D" stroke="#FF8C42" strokeWidth="2" />
+    <circle cx="50" cy="50" r="28" fill="url(#solGrad)" />
+    <defs>
+      <radialGradient id="solGrad" cx="40%" cy="38%">
+        <stop offset="0%" stopColor="#FFEC84" />
+        <stop offset="100%" stopColor="#FFB12B" />
+      </radialGradient>
+    </defs>
+    {/* Cheeks */}
+    <circle cx="38" cy="56" r="4.5" fill="#FF9EC7" opacity="0.75" />
+    <circle cx="62" cy="56" r="4.5" fill="#FF9EC7" opacity="0.75" />
+    {/* Eyes */}
+    <g>
+      <ellipse cx="41" cy="47" rx="3.2" ry="4" fill="#1E3A5F" />
+      <circle cx="42" cy="46" r="1" fill="#fff" />
+      <ellipse cx="59" cy="47" rx="3.2" ry="4" fill="#1E3A5F" />
+      <circle cx="60" cy="46" r="1" fill="#fff" />
+    </g>
+    {/* Smile */}
+    <path d="M 42 56 Q 50 64 58 56" stroke="#1E3A5F" strokeWidth="2.4" fill="none" strokeLinecap="round" />
+    <style>{`@keyframes solSpin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }`}</style>
+  </svg>;
+}
+
+function Luna({ size = 56 }) {
+  return <svg width={size} height={size} viewBox="0 0 100 100" style={{ filter: "drop-shadow(0 4px 8px rgba(150,180,255,.4))" }} aria-label="Luna the moon">
+    <defs>
+      <radialGradient id="lunaGrad" cx="35%" cy="35%">
+        <stop offset="0%" stopColor="#F7F4FF" />
+        <stop offset="100%" stopColor="#B8B5E8" />
+      </radialGradient>
+    </defs>
+    {/* Moon body (crescent-ish round) */}
+    <circle cx="50" cy="50" r="32" fill="url(#lunaGrad)" stroke="#8F8BD6" strokeWidth="2" />
+    {/* Craters */}
+    <circle cx="70" cy="42" r="3" fill="#C9C5F0" opacity="0.7" />
+    <circle cx="68" cy="64" r="4" fill="#C9C5F0" opacity="0.7" />
+    <circle cx="78" cy="55" r="2" fill="#C9C5F0" opacity="0.6" />
+    {/* Sleepy cap */}
+    <path d="M 26 34 Q 30 20 48 22 L 56 30 Z" fill="#B983FF" />
+    <circle cx="30" cy="22" r="4" fill="#FFD93D" />
+    {/* Cheeks */}
+    <circle cx="36" cy="58" r="4" fill="#FF9EC7" opacity="0.7" />
+    <circle cx="56" cy="60" r="4" fill="#FF9EC7" opacity="0.7" />
+    {/* Closed sleepy eyes */}
+    <path d="M 36 49 Q 40 45 44 49" stroke="#1E3A5F" strokeWidth="2.4" fill="none" strokeLinecap="round" />
+    <path d="M 52 50 Q 56 46 60 50" stroke="#1E3A5F" strokeWidth="2.4" fill="none" strokeLinecap="round" />
+    {/* Gentle smile */}
+    <path d="M 42 58 Q 48 63 54 58" stroke="#1E3A5F" strokeWidth="2.4" fill="none" strokeLinecap="round" />
+  </svg>;
+}
+
+// A sparkly starfield for dark navy backgrounds
+function Starfield() {
+  const stars = Array.from({ length: 50 }, (_, i) => ({
+    left: (i * 37) % 100, top: (i * 53) % 100, size: 1 + (i % 4), delay: (i * 0.3) % 3,
+  }));
+  return <div style={{ position: "fixed", inset: 0, pointerEvents: "none", zIndex: 0, overflow: "hidden" }}>
+    {stars.map((s, i) => <div key={i} style={{
+      position: "absolute", left: `${s.left}%`, top: `${s.top}%`, width: s.size, height: s.size,
+      background: "#fff", borderRadius: "50%", opacity: 0.5 + (i % 3) * 0.15,
+      animation: `twinkle ${2 + (i % 3)}s ${s.delay}s ease-in-out infinite alternate`,
+    }} />)}
+    <style>{`@keyframes twinkle { from { opacity: 0.2; transform: scale(0.8); } to { opacity: 1; transform: scale(1.3); } }`}</style>
+  </div>;
+}
+
+// ============================================================
 // AUTH SCREEN
 // ============================================================
 function AuthScreen({ onLogin }) {
@@ -1178,73 +1256,170 @@ export default function App() {
   // ============================================================
   // HOME SCREEN (child's learning hub)
   // ============================================================
-  if (screen === "home") return <div style={{ minHeight: "100vh", background: "linear-gradient(180deg,#FFF8E1 0%,#FFE0EC 40%,#E4F0FF 80%,#F3EAFF 100%)" }}>
-    <Bgs e={["☀️","🌈","⭐","🦋","🌻","🎈"]} />
+  if (screen === "home") return <div style={{ minHeight: "100vh", background: "linear-gradient(180deg,#0B1A3A 0%,#14275A 40%,#1E3A70 100%)", color: "#fff" }}>
+    <Starfield />
     <Confetti active={conf} />
     {newBadge && <BadgeToast badge={newBadge} onClose={() => setNewBadge(null)} />}
-    <div style={{ position: "relative", zIndex: 1, maxWidth: 540, margin: "0 auto", padding: "14px 14px 50px" }}>
-      {/* Top bar */}
-      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 14 }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-          <div style={{ fontSize: 36 }}>{child.avatar}</div>
-          <div>
-            <div style={{ fontSize: 14, fontWeight: 800, color: "#1E3A5F", fontFamily: FN }}>¡Hola, {child.name}! 👋</div>
-            {progress.streak > 0 && <div style={{ fontSize: 11, color: "#FF6B6B", fontFamily: FN, fontWeight: 700 }}>🔥 {progress.streak} day streak!</div>}
+    <div style={{ position: "relative", zIndex: 1, maxWidth: 560, margin: "0 auto", padding: "14px 14px 60px" }}>
+      {/* Top bar: Sol & Luna mascots on left, action buttons on right */}
+      <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", marginBottom: 18 }}>
+        <div>
+          <div style={{ fontSize: 11, fontWeight: 700, color: "#FFD93D", fontFamily: FN, textTransform: "uppercase", letterSpacing: 1.2, marginBottom: 4, opacity: 0.85 }}>Our friends</div>
+          <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+            <Sol size={54} />
+            <Luna size={54} />
           </div>
+          <div style={{ fontSize: 13, fontWeight: 900, color: "#fff", fontFamily: FN, marginTop: 4 }}>Sol y Luna</div>
         </div>
         <div style={{ display: "flex", gap: 6 }}>
-          <button onClick={() => go("profile")} title="Profile" style={{ background: "#fff", border: "2px solid #e8e8e8", borderRadius: 12, padding: "6px 10px", fontSize: 13, fontFamily: FN, color: "#666", cursor: "pointer" }}>⚙️</button>
-          <button onClick={backToChildPicker} title="Switch child" style={{ background: "#fff", border: "2px solid #e8e8e8", borderRadius: 12, padding: "6px 10px", fontSize: 13, fontFamily: FN, color: "#666", cursor: "pointer" }}>👥</button>
+          <button onClick={() => go("profile")} title="Profile" style={{ background: "rgba(255,255,255,0.1)", border: "2px solid rgba(255,255,255,0.2)", borderRadius: 12, padding: "8px 12px", fontSize: 14, fontFamily: FN, color: "#fff", cursor: "pointer", backdropFilter: "blur(10px)" }}>⚙️</button>
+          <button onClick={backToChildPicker} title="Switch child" style={{ background: "rgba(255,255,255,0.1)", border: "2px solid rgba(255,255,255,0.2)", borderRadius: 12, padding: "8px 12px", fontSize: 14, fontFamily: FN, color: "#fff", cursor: "pointer", backdropFilter: "blur(10px)" }}>👥</button>
         </div>
       </div>
+
+      {/* Child greeting */}
+      <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 14, background: "rgba(255,255,255,0.08)", borderRadius: 16, padding: "10px 14px", border: "1px solid rgba(255,255,255,0.1)" }}>
+        <div style={{ fontSize: 32 }}>{child.avatar}</div>
+        <div>
+          <div style={{ fontSize: 14, fontWeight: 800, color: "#fff", fontFamily: FN }}>¡Hola, {child.name}! 👋</div>
+          {progress.streak > 0 && <div style={{ fontSize: 11, color: "#FFD93D", fontFamily: FN, fontWeight: 700 }}>🔥 {progress.streak} day streak!</div>}
+        </div>
+      </div>
+
+      {/* Title */}
       <div style={{ textAlign: "center", marginBottom: 18 }}>
-        <h1 style={{ fontSize: 32, fontWeight: 900, fontFamily: FN, background: "linear-gradient(135deg,#FF8C42,#FF6B6B,#B983FF)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>¡Hola, Amigo!</h1>
+        <h1 style={{ fontSize: 34, fontWeight: 900, fontFamily: FN, background: "linear-gradient(135deg,#FFD93D,#FF8C42,#FF9EC7)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", marginBottom: 2 }}>¡Hola, Amigo!</h1>
+        <p style={{ fontSize: 12, color: "rgba(255,255,255,0.7)", fontFamily: FN }}>Follow the golden path to learn Spanish!</p>
       </div>
+
       {/* Stats bar */}
-      <div style={{ background: "#fff", borderRadius: 18, padding: "10px 14px", marginBottom: 18, display: "flex", alignItems: "center", justifyContent: "space-around", boxShadow: "0 3px 12px rgba(0,0,0,.05)" }}>
+      <div style={{ background: "rgba(255,255,255,0.08)", borderRadius: 16, padding: "10px 14px", marginBottom: 20, display: "flex", alignItems: "center", justifyContent: "space-around", border: "1px solid rgba(255,255,255,0.1)" }}>
         <div style={{ textAlign: "center" }}>
-          <div style={{ fontSize: 20, fontWeight: 900, color: "#FF8C42", fontFamily: FN }}>⭐ {totalStars}</div>
-          <div style={{ fontSize: 9, color: "#999", fontFamily: FN, textTransform: "uppercase", fontWeight: 700 }}>Stars</div>
+          <div style={{ fontSize: 18, fontWeight: 900, color: "#FFD93D", fontFamily: FN }}>⭐ {totalStars}</div>
+          <div style={{ fontSize: 9, color: "rgba(255,255,255,0.6)", fontFamily: FN, textTransform: "uppercase", fontWeight: 700 }}>Stars</div>
         </div>
-        <div style={{ width: 1, height: 30, background: "#eee" }} />
+        <div style={{ width: 1, height: 28, background: "rgba(255,255,255,0.15)" }} />
         <button onClick={() => setScreen("badges")} style={{ textAlign: "center", background: "none", border: "none", cursor: "pointer", padding: 0 }}>
-          <div style={{ fontSize: 20, fontWeight: 900, color: "#B983FF", fontFamily: FN }}>🏆 {(progress.badges || []).length}</div>
-          <div style={{ fontSize: 9, color: "#999", fontFamily: FN, textTransform: "uppercase", fontWeight: 700 }}>Badges</div>
+          <div style={{ fontSize: 18, fontWeight: 900, color: "#B983FF", fontFamily: FN }}>🏆 {(progress.badges || []).length}</div>
+          <div style={{ fontSize: 9, color: "rgba(255,255,255,0.6)", fontFamily: FN, textTransform: "uppercase", fontWeight: 700 }}>Badges</div>
         </button>
-        <div style={{ width: 1, height: 30, background: "#eee" }} />
+        <div style={{ width: 1, height: 28, background: "rgba(255,255,255,0.15)" }} />
         <button onClick={() => setScreen("songs")} style={{ textAlign: "center", background: "none", border: "none", cursor: "pointer", padding: 0 }}>
-          <div style={{ fontSize: 20, fontWeight: 900, color: "#FF9EC7", fontFamily: FN }}>🎵 {Object.keys(progress.songsDone || {}).length}</div>
-          <div style={{ fontSize: 9, color: "#999", fontFamily: FN, textTransform: "uppercase", fontWeight: 700 }}>Songs</div>
+          <div style={{ fontSize: 18, fontWeight: 900, color: "#FF9EC7", fontFamily: FN }}>🎵 {Object.keys(progress.songsDone || {}).length}</div>
+          <div style={{ fontSize: 9, color: "rgba(255,255,255,0.6)", fontFamily: FN, textTransform: "uppercase", fontWeight: 700 }}>Songs</div>
         </button>
       </div>
 
       {/* Songs & Badges quick buttons */}
-      <div style={{ display: "flex", gap: 8, marginBottom: 20 }}>
-        <button onClick={() => setScreen("songs")} style={{ flex: 1, background: "linear-gradient(135deg,#FF9EC7,#FFD93D)", border: "none", borderRadius: 16, padding: "12px", color: "#fff", fontWeight: 900, fontSize: 14, fontFamily: FN, cursor: "pointer", boxShadow: "0 3px 12px rgba(255,158,199,.3)" }}>🎵 Sing Along!</button>
-        <button onClick={() => setScreen("badges")} style={{ flex: 1, background: "linear-gradient(135deg,#B983FF,#4D96FF)", border: "none", borderRadius: 16, padding: "12px", color: "#fff", fontWeight: 900, fontSize: 14, fontFamily: FN, cursor: "pointer", boxShadow: "0 3px 12px rgba(185,131,255,.3)" }}>🏆 Trophies</button>
+      <div style={{ display: "flex", gap: 8, marginBottom: 22 }}>
+        <button onClick={() => setScreen("songs")} style={{ flex: 1, background: "linear-gradient(135deg,#FF9EC7,#FFD93D)", border: "none", borderRadius: 14, padding: "11px", color: "#1E3A5F", fontWeight: 900, fontSize: 13, fontFamily: FN, cursor: "pointer", boxShadow: "0 4px 14px rgba(255,158,199,.35)" }}>🎵 Sing Along!</button>
+        <button onClick={() => setScreen("badges")} style={{ flex: 1, background: "linear-gradient(135deg,#B983FF,#4D96FF)", border: "none", borderRadius: 14, padding: "11px", color: "#fff", fontWeight: 900, fontSize: 13, fontFamily: FN, cursor: "pointer", boxShadow: "0 4px 14px rgba(185,131,255,.35)" }}>🏆 Trophies</button>
       </div>
 
-      {/* Worlds */}
-      {WORLDS.map(w => {
-        const ls = LESSONS.filter(l => l.id >= w.range[0] && l.id <= w.range[1]);
-        const ws = ls.reduce((a, l) => a + (stars[l.id] || 0), 0);
-        return <div key={w.id} style={{ marginBottom: 22 }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}>
-            <span style={{ fontSize: 26 }}>{w.emoji}</span>
-            <div><div style={{ fontSize: 16, fontWeight: 900, color: w.color, fontFamily: FN }}>{w.name}</div><div style={{ fontSize: 11, color: "#999", fontFamily: FN }}>{w.desc} · {ws}/{ls.length * 3} ⭐</div></div>
-          </div>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8 }}>
-            {ls.map((l, i) => { const s = stars[l.id] || 0; const ch = [16, 24, 32].includes(l.id);
-              return <button key={l.id} onClick={() => go("lesson", LESSONS.indexOf(l))}
-                style={{ background: ch ? "linear-gradient(135deg,#FFF8E1,#FFE8E8)" : "#fff", border: ch ? "2px solid #FFD93D" : "none", borderRadius: 16, padding: "12px 8px", cursor: "pointer", textAlign: "center", boxShadow: "0 3px 10px rgba(0,0,0,.05)", borderLeft: ch ? "none" : `4px solid ${l.color}`, transition: "transform .15s", animation: "cPop .3s ease-out backwards", animationDelay: `${i * 0.04}s` }}
-                onMouseEnter={e => e.currentTarget.style.transform = "scale(1.03)"} onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}>
-                <div style={{ fontSize: 26, marginBottom: 2 }}>{l.emoji}</div>
-                <div style={{ fontSize: 11, fontWeight: 800, color: "#1E3A5F", fontFamily: FN }}>{l.id}. {l.subtitle}</div>
-                <div style={{ marginTop: 3, fontSize: 11 }}>{[0, 1, 2].map(j => <span key={j} style={{ opacity: j < s ? 1 : 0.2 }}>⭐</span>)}</div>
-              </button>; })}
-          </div>
-        </div>;
-      })}
+      {/* YELLOW BRICK ROAD of all 32 lessons */}
+      <div style={{ position: "relative", padding: "12px 0" }}>
+        {WORLDS.map((w) => {
+          const ls = LESSONS.filter(l => l.id >= w.range[0] && l.id <= w.range[1]);
+          const ws = ls.reduce((a, l) => a + (stars[l.id] || 0), 0);
+          const wsMax = ls.length * 3;
+          return <div key={w.id} style={{ marginBottom: 8 }}>
+            {/* World banner */}
+            <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 10, padding: "10px 14px", background: `linear-gradient(90deg, ${w.color}40, transparent)`, borderRadius: 14, border: `1px solid ${w.color}80` }}>
+              <div style={{ fontSize: 30 }}>{w.emoji}</div>
+              <div>
+                <div style={{ fontSize: 15, fontWeight: 900, color: w.color, fontFamily: FN, textShadow: "0 1px 3px rgba(0,0,0,0.3)" }}>{w.name}</div>
+                <div style={{ fontSize: 10, color: "rgba(255,255,255,0.7)", fontFamily: FN }}>{w.desc} · {ws}/{wsMax} ⭐</div>
+              </div>
+            </div>
+
+            {/* The road itself — snake pattern, 2 per row with alternating alignment */}
+            <div style={{ position: "relative", padding: "6px 4px" }}>
+              {ls.map((l, i) => {
+                const s = stars[l.id] || 0;
+                const ch = [16, 24, 32].includes(l.id);
+                const earnedSome = s > 0;
+                const isLeft = i % 2 === 0;
+
+                // Determine lesson lock state (unlock first lesson, then sequentially from max completed)
+                const completedLessonIds = Object.keys(stars).map(Number);
+                const maxCompleted = completedLessonIds.length ? Math.max(...completedLessonIds) : 0;
+                const isUnlocked = l.id === 1 || l.id <= maxCompleted + 1;
+
+                return <div key={l.id} style={{
+                  display: "flex", justifyContent: isLeft ? "flex-start" : "flex-end",
+                  position: "relative", marginBottom: 8, paddingLeft: isLeft ? 8 : 0, paddingRight: isLeft ? 0 : 8,
+                }}>
+                  {/* Connector line to next stone */}
+                  {i < ls.length - 1 && <div style={{
+                    position: "absolute",
+                    left: isLeft ? "30%" : "auto", right: isLeft ? "auto" : "30%",
+                    top: 58, width: "40%", height: 4, borderRadius: 2,
+                    background: earnedSome ? "linear-gradient(90deg,#FFD93D,#FF8C42)" : "rgba(255,255,255,0.15)",
+                    zIndex: 0,
+                  }} />}
+
+                  <button
+                    onClick={() => isUnlocked && go("lesson", LESSONS.indexOf(l))}
+                    disabled={!isUnlocked}
+                    style={{
+                      position: "relative", zIndex: 1,
+                      width: ch ? 128 : 108, height: ch ? 128 : 108,
+                      borderRadius: ch ? 26 : "50%",
+                      background: !isUnlocked
+                        ? "linear-gradient(135deg,#2a3a5f,#1a2a4a)"
+                        : ch
+                          ? "linear-gradient(135deg,#FFE580,#FFB12B,#FF8C42)"
+                          : earnedSome
+                            ? "linear-gradient(135deg,#FFE580,#FFD93D,#FFB12B)"
+                            : "linear-gradient(135deg,#F5E0A0,#E3C97B)",
+                      border: ch ? "4px solid #FFF4C7" : earnedSome ? "4px solid #FFF4C7" : "4px solid #D4B868",
+                      cursor: isUnlocked ? "pointer" : "not-allowed",
+                      boxShadow: isUnlocked
+                        ? (ch ? "0 0 24px #FFD93D80, 0 6px 14px rgba(255,140,66,.5)" : earnedSome ? "0 0 16px rgba(255,217,61,.6), 0 4px 10px rgba(255,140,66,.4)" : "0 4px 10px rgba(0,0,0,0.3)")
+                        : "0 2px 6px rgba(0,0,0,0.3)",
+                      padding: 4, fontFamily: FN, color: "#1E3A5F",
+                      transition: "transform .2s", opacity: isUnlocked ? 1 : 0.45,
+                      animation: "cPop .4s ease-out backwards", animationDelay: `${i * 0.04}s`,
+                      display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center",
+                    }}
+                    onMouseEnter={e => { if (isUnlocked) e.currentTarget.style.transform = "scale(1.05)"; }}
+                    onMouseLeave={e => { if (isUnlocked) e.currentTarget.style.transform = "scale(1)"; }}
+                  >
+                    {/* Number badge */}
+                    <div style={{
+                      position: "absolute", top: -8, left: "50%", transform: "translateX(-50%)",
+                      background: ch ? "linear-gradient(135deg,#FF6B6B,#B983FF)" : "#1E3A5F",
+                      color: "#fff", fontSize: 11, fontWeight: 900, fontFamily: FN,
+                      borderRadius: 50, padding: "2px 8px", minWidth: 22, textAlign: "center",
+                      border: "2px solid #FFF4C7", boxShadow: "0 2px 6px rgba(0,0,0,.3)",
+                    }}>{l.id}</div>
+
+                    {!isUnlocked ? (
+                      <div style={{ fontSize: 30 }}>🔒</div>
+                    ) : (
+                      <>
+                        <div style={{ fontSize: ch ? 34 : 28, lineHeight: 1, marginTop: 6 }}>{ch ? "🏆" : l.emoji}</div>
+                        <div style={{ fontSize: 9, fontWeight: 800, color: "#1E3A5F", fontFamily: FN, marginTop: 3, padding: "0 4px", lineHeight: 1.15, textAlign: "center" }}>{l.subtitle}</div>
+                        <div style={{ marginTop: 3, fontSize: 10, letterSpacing: 1 }}>
+                          {[0, 1, 2].map(j => <span key={j} style={{ opacity: j < s ? 1 : 0.25, filter: j < s ? "drop-shadow(0 0 2px #FF8C42)" : "none" }}>⭐</span>)}
+                        </div>
+                      </>
+                    )}
+                  </button>
+                </div>;
+              })}
+            </div>
+          </div>;
+        })}
+      </div>
+
+      {/* Sol & Luna footer message */}
+      <div style={{ textAlign: "center", marginTop: 24, padding: "14px 18px", background: "rgba(255,255,255,0.06)", borderRadius: 16, border: "1px solid rgba(255,255,255,0.1)" }}>
+        <div style={{ display: "flex", justifyContent: "center", gap: 8, marginBottom: 6 }}>
+          <Sol size={34} /><Luna size={34} />
+        </div>
+        <p style={{ fontSize: 12, color: "rgba(255,255,255,0.75)", fontFamily: FN, fontStyle: "italic", margin: 0 }}>Keep going, {child.name}! Sol y Luna are so proud of you! ✨</p>
+      </div>
     </div>
   </div>;
 
