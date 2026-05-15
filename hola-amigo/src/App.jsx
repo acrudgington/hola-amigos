@@ -6,7 +6,7 @@ import { useState, useEffect, useMemo, useRef } from "react";
 // Storage schema:
 //   hola_parents        → [{ email, name, pass, created, children: [childId...] }]
 //   hola_children       → { [childId]: { id, parentEmail, name, avatar, created } }
-//   hola_progress_<id>  → { stars, lastLesson, streak, lastActive, timeSpent, badges, songsDone, lessonsDone, correctAnswers }
+//   hola_progress_<id>  → { stars, lastLesson, streak, lastActive, timeSpent, badges, lessonsDone, correctAnswers }
 //   hola_session        → { parentEmail, activeChildId }
 
 const db = {
@@ -43,7 +43,7 @@ const db = {
     db.saveChildren(children);
     parents[pIdx].children = [...(parents[pIdx].children || []), id];
     db.saveParents(parents);
-    db.saveProgress(id, { stars: {}, lastLesson: 1, streak: 0, lastActive: null, timeSpent: 0, badges: [], songsDone: {}, lessonsDone: 0, correctAnswers: 0 });
+    db.saveProgress(id, { stars: {}, lastLesson: 1, streak: 0, lastActive: null, timeSpent: 0, badges: [], lessonsDone: 0, correctAnswers: 0 });
     return child;
   },
   deleteChild(childId) {
@@ -70,8 +70,8 @@ const db = {
   getProgress(childId) {
     try {
       const p = JSON.parse(localStorage.getItem(`hola_progress_${childId}`));
-      return { stars: {}, lastLesson: 1, streak: 0, lastActive: null, timeSpent: 0, badges: [], songsDone: {}, lessonsDone: 0, correctAnswers: 0, ...(p || {}) };
-    } catch { return { stars: {}, lastLesson: 1, streak: 0, lastActive: null, timeSpent: 0, badges: [], songsDone: {}, lessonsDone: 0, correctAnswers: 0 }; }
+      return { stars: {}, lastLesson: 1, streak: 0, lastActive: null, timeSpent: 0, badges: [], lessonsDone: 0, correctAnswers: 0, ...(p || {}) };
+    } catch { return { stars: {}, lastLesson: 1, streak: 0, lastActive: null, timeSpent: 0, badges: [], lessonsDone: 0, correctAnswers: 0 }; }
   },
   saveProgress(childId, p) { localStorage.setItem(`hola_progress_${childId}`, JSON.stringify(p)); },
 
@@ -340,84 +340,6 @@ const STORIES = {
 // Patch stories onto lessons (lesson 31 already has one)
 LESSONS.forEach(l => { if (STORIES[l.id] && !l.story) l.story = STORIES[l.id]; });
 
-// ============================================================
-// SONGS — classic Spanish kids' songs with karaoke lyrics
-// ============================================================
-const SONGS = [
-  {
-    id: "pollitos", title: "Los pollitos dicen", subtitle: "The little chicks say", emoji: "🐥",
-    color: "#FFD93D", bg: "#FFFBE5", youtubeId: "R2CikV3xAxc", channel: "Canticos",
-    about: "The classic Spanish song about baby chicks calling for their mother when they are hungry or cold. Sung by kids everywhere in Spain!",
-    lines: [
-      { es: "Los pollitos dicen pío, pío, pío,", en: "The little chicks say peep, peep, peep," },
-      { es: "cuando tienen hambre, cuando tienen frío.", en: "when they are hungry, when they are cold." },
-      { es: "La gallina busca el maíz y el trigo,", en: "The hen looks for the corn and the wheat," },
-      { es: "les da la comida y les presta abrigo.", en: "she gives them food and keeps them warm." },
-      { es: "Bajo sus dos alas, acurrucaditos,", en: "Under her two wings, all snuggled up," },
-      { es: "duermen los pollitos hasta el otro día.", en: "the little chicks sleep until the next day." },
-    ]
-  },
-  {
-    id: "arana", title: "La araña chiquitita", subtitle: "The itsy bitsy spider", emoji: "🕷️",
-    color: "#4D96FF", bg: "#E4F0FF", youtubeId: "uiJwTCUog34", channel: "Canticos",
-    about: "The Spanish version of 'Itsy Bitsy Spider' — perfect for little hands doing the actions! Also teaches opposites: up/down, dry/wet, cold/hot.",
-    lines: [
-      { es: "La araña chiquitita", en: "The itsy bitsy spider" },
-      { es: "subió, subió, subió.", en: "climbed up, up, up." },
-      { es: "Vino la lluvia", en: "The rain came" },
-      { es: "y se la llevó.", en: "and washed her away." },
-      { es: "Salió el sol", en: "The sun came out" },
-      { es: "y todo se secó.", en: "and dried everything up." },
-      { es: "Y la araña chiquitita", en: "And the itsy bitsy spider" },
-      { es: "subió, subió, subió.", en: "climbed up, up, up." },
-      { es: "Chiquita — Grande", en: "Little — Big" },
-      { es: "Arriba — Abajo", en: "Up — Down" },
-      { es: "Seco — Mojado", en: "Dry — Wet" },
-      { es: "Frío — Caliente", en: "Cold — Hot" },
-      { es: "Triste — Feliz", en: "Sad — Happy" },
-    ]
-  },
-  {
-    id: "elefante", title: "Un elefante se balanceaba", subtitle: "One elephant was balancing", emoji: "🐘",
-    color: "#B983FF", bg: "#F3EAFF", youtubeId: "2vCscfOuxEw", channel: "Canticos",
-    about: "A counting song about elephants balancing on a spider's web — a Spanish classroom favourite!",
-    lines: [
-      { es: "Un elefante se balanceaba", en: "One elephant was balancing" },
-      { es: "sobre la tela de una araña,", en: "on a spider's web," },
-      { es: "como veía que resistía,", en: "and since it held up well," },
-      { es: "fue a llamar a otro elefante.", en: "he went to call another elephant." },
-      { es: "Dos elefantes se balanceaban,", en: "Two elephants were balancing," },
-      { es: "sobre la tela de una araña,", en: "on a spider's web," },
-      { es: "como veían que resistía,", en: "and since it held up well," },
-      { es: "fueron a llamar a otro elefante.", en: "they went to call another elephant." },
-      { es: "Tres elefantes se balanceaban,", en: "Three elephants were balancing," },
-      { es: "sobre la tela de una araña,", en: "on a spider's web," },
-      { es: "como veían que resistía,", en: "and since it held up well," },
-      { es: "fueron a llamar a otro elefante.", en: "they went to call another elephant." },
-      { es: "Cuatro elefantes se balanceaban,", en: "Four elephants were balancing," },
-      { es: "sobre la tela de una araña…", en: "on a spider's web…" },
-      { es: "¡Uuuuuupa!", en: "Ooooooops!" },
-    ]
-  },
-  {
-    id: "veo_veo", title: "Veo Veo", subtitle: "I spy (I see, I see)", emoji: "👀",
-    color: "#FF6B6B", bg: "#FFE8E8", youtubeId: "klGK7ehiDPg", channel: "El Reino Infantil",
-    about: "The famous Spanish 'I Spy' game turned into a song! A must-know classic from Spain. This version uses each vowel (A, E, I, O, U) — a full, traditional length (~4 min).",
-    lines: [
-      { es: "Veo, veo… ¿Qué ves?", en: "I see, I see… What do you see?" },
-      { es: "Una cosita.", en: "A little thing." },
-      { es: "¿Y qué cosita es?", en: "And what little thing is it?" },
-      { es: "Empieza con la A.", en: "It starts with the letter A." },
-      { es: "¿Qué será? ¿Qué será? ¿Qué será?", en: "What could it be? What could it be?" },
-      { es: "¡No, no, no! Eso no es así.", en: "No, no, no! That's not it." },
-      { es: "Con la A se escribe amor,", en: "With the A we write 'love' (amor)," },
-      { es: "con la A se escribe adiós,", en: "with the A we write 'goodbye' (adiós)," },
-      { es: "la alegría del amigo", en: "the joy of a friend" },
-      { es: "y un montón de cosas más.", en: "and a whole bunch of other things." },
-      { es: "(Y luego con la E, I, O, U…)", en: "(And then with E, I, O, U…)" },
-    ]
-  },
-];
 
 // ============================================================
 // BADGES — unlockable achievements
@@ -452,8 +374,6 @@ const BADGES = [
   { id: "streak_3", name: "On Fire!", desc: "3-day streak", emoji: "🔥", check: p => (p.streak || 0) >= 3 },
   { id: "streak_7", name: "Week Warrior", desc: "7-day streak", emoji: "🔥", check: p => (p.streak || 0) >= 7 },
   { id: "streak_30", name: "Month Master", desc: "30-day streak!", emoji: "🔥", check: p => (p.streak || 0) >= 30 },
-  { id: "first_song", name: "Little Singer", desc: "Sang your first song", emoji: "🎵", check: p => Object.keys(p.songsDone || {}).length >= 1 },
-  { id: "all_songs", name: "Song Star", desc: "Sang all the songs!", emoji: "🎤", check: p => Object.keys(p.songsDone || {}).length >= SONGS.length },
   { id: "speaker", name: "Speaking Star", desc: "Used the mic 10 times", emoji: "🗣️", check: p => (p.micUses || 0) >= 10 },
   { id: "story_lover", name: "Story Lover", desc: "Read 10 stories", emoji: "📖", check: p => (p.storiesRead || 0) >= 10 },
   { id: "quiz_master", name: "Quiz Master", desc: "100 correct answers", emoji: "🧠", check: p => (p.correctAnswers || 0) >= 100 },
@@ -875,67 +795,6 @@ function Result({ score, total, onRetry, onBack, onEarnStar }) {
 
 // ============================================================
 // ============================================================
-// SONG PLAYER — karaoke-style with highlighted current line
-// ============================================================
-function SongPlayer({ song, onDone, onBack }) {
-  const [showEn, setShowEn] = useState(true);
-  const [completed, setCompleted] = useState(false);
-
-  const markDone = () => {
-    if (completed) return;
-    setCompleted(true);
-    onDone?.();
-  };
-
-  return <div style={{ minHeight: "100vh", background: song.bg }}>
-    <Bgs e={[song.emoji, "🎵", "🎶", "✨"]} />
-    <div style={{ position: "relative", zIndex: 1, maxWidth: 560, margin: "0 auto", padding: "14px 14px 40px" }}>
-      <Btn onClick={onBack} style={{ marginBottom: 12, fontSize: 12 }}>← Songs</Btn>
-      <div style={{ textAlign: "center", marginBottom: 14 }}>
-        <div style={{ fontSize: 56, animation: "bIn .5s" }}>{song.emoji}</div>
-        <h2 style={{ fontSize: 26, fontWeight: 900, fontFamily: FN, color: "#1E3A5F" }}>{song.title}</h2>
-        <p style={{ fontSize: 13, color: "#888", fontFamily: FN }}>{song.subtitle}</p>
-        {song.channel && <p style={{ fontSize: 11, color: "#aaa", fontFamily: FN, marginTop: 2 }}>Video by {song.channel}</p>}
-      </div>
-      <div style={{ background: "#fff", borderRadius: 18, padding: "14px 16px", marginBottom: 14, fontSize: 13, color: "#555", fontFamily: FN, fontStyle: "italic", border: `2px solid ${song.color}30`, textAlign: "center" }}>💡 {song.about}</div>
-
-      {/* YouTube embed — responsive 16:9 */}
-      <div style={{ position: "relative", paddingBottom: "56.25%", height: 0, overflow: "hidden", borderRadius: 18, marginBottom: 14, boxShadow: "0 6px 24px rgba(0,0,0,.12)", background: "#000" }}>
-        <iframe
-          src={`https://www.youtube-nocookie.com/embed/${song.youtubeId}?rel=0&modestbranding=1`}
-          title={song.title}
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-          style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", border: 0 }}
-        />
-      </div>
-
-      {/* Toggle + mark as sung */}
-      <div style={{ display: "flex", gap: 8, justifyContent: "center", marginBottom: 16, flexWrap: "wrap" }}>
-        <Btn onClick={() => setShowEn(!showEn)} style={{ fontSize: 12 }}>{showEn ? "Hide English" : "Show English"}</Btn>
-        {!completed ? <Btn onClick={markDone} bg={song.color} color="#fff" border="transparent" style={{ fontSize: 13, padding: "10px 20px" }}>⭐ I sang along!</Btn>
-          : <div style={{ padding: "10px 20px", background: "#E8F8EA", color: "#6BCB77", borderRadius: 50, fontSize: 13, fontWeight: 900, fontFamily: FN }}>✓ Great singing!</div>}
-      </div>
-
-      {/* Lyrics */}
-      <div style={{ background: "#fff", borderRadius: 20, padding: "20px 16px", boxShadow: "0 3px 12px rgba(0,0,0,.05)" }}>
-        <div style={{ fontSize: 11, fontWeight: 800, color: "#aaa", fontFamily: FN, textTransform: "uppercase", letterSpacing: 2, marginBottom: 10, textAlign: "center" }}>🎤 Sing Along!</div>
-        {song.lines.map((line, i) => <div key={i} style={{
-          marginBottom: 14, padding: "6px 12px", borderRadius: 12,
-          borderLeft: `3px solid ${song.color}`,
-          background: `${song.color}08`,
-        }}>
-          <div style={{ fontSize: 16, fontWeight: 800, fontFamily: FN, color: "#1E3A5F", lineHeight: 1.4 }}>{line.es}</div>
-          {showEn && <div style={{ fontSize: 12, color: "#888", fontFamily: FN, fontStyle: "italic", marginTop: 2 }}>{line.en}</div>}
-        </div>)}
-      </div>
-      <div style={{ textAlign: "center", marginTop: 14, fontSize: 11, color: "#888", fontFamily: FN }}>💡 Watch the video, read along, and sing!</div>
-    </div>
-  </div>;
-}
-
-// ============================================================
 // BADGE CABINET
 // ============================================================
 function BadgeCabinet({ progress, onBack }) {
@@ -1222,7 +1081,6 @@ function ParentDashboard({ parent, onBack }) {
         const completedLessons = Object.keys(p.stars || {}).length;
         const perfectLessons = Object.values(p.stars || {}).filter(s => s === 3).length;
         const badgeCount = (p.badges || []).length;
-        const songsCount = Object.keys(p.songsDone || {}).length;
         const lastActive = p.lastActive ? new Date(p.lastActive) : null;
         const daysAgo = lastActive ? Math.floor((Date.now() - lastActive.getTime()) / 86400000) : null;
         const activeLabel = lastActive ? (daysAgo === 0 ? "Active today" : daysAgo === 1 ? "Yesterday" : `${daysAgo} days ago`) : "Not started yet";
@@ -1242,7 +1100,7 @@ function ParentDashboard({ parent, onBack }) {
             </div>
             <button onClick={() => setDelChild(c)} title="Remove child" style={{ background: "transparent", border: "none", color: "#FF6B6B", cursor: "pointer", fontSize: 18, padding: 4 }}>🗑️</button>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 8, marginBottom: 12 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 8, marginBottom: 12 }}>
             <div style={{ textAlign: "center", background: "#FFF8E1", borderRadius: 12, padding: "10px 4px" }}>
               <div style={{ fontSize: 20, fontWeight: 900, color: "#FF8C42", fontFamily: FN }}>{totalStars}</div>
               <div style={{ fontSize: 9, color: "#999", fontFamily: FN }}>⭐ Stars</div>
@@ -1254,10 +1112,6 @@ function ParentDashboard({ parent, onBack }) {
             <div style={{ textAlign: "center", background: "#F3EAFF", borderRadius: 12, padding: "10px 4px" }}>
               <div style={{ fontSize: 20, fontWeight: 900, color: "#B983FF", fontFamily: FN }}>{badgeCount}</div>
               <div style={{ fontSize: 9, color: "#999", fontFamily: FN }}>Badges</div>
-            </div>
-            <div style={{ textAlign: "center", background: "#FFE8F2", borderRadius: 12, padding: "10px 4px" }}>
-              <div style={{ fontSize: 20, fontWeight: 900, color: "#FF9EC7", fontFamily: FN }}>{songsCount}/{SONGS.length}</div>
-              <div style={{ fontSize: 9, color: "#999", fontFamily: FN }}>Songs</div>
             </div>
           </div>
           <div style={{ marginBottom: 4 }}>
@@ -1296,9 +1150,8 @@ export default function App() {
   const [parent, setParent] = useState(null);
   const [child, setChild] = useState(null);
   const [progress, setProgress] = useState(null);
-  const [screen, setScreen] = useState("childPicker"); // childPicker | dashboard | home | lesson | profile | songs | song | badges | flash | match | quiz | build | sayit | story
+  const [screen, setScreen] = useState("childPicker"); // childPicker | dashboard | home | lesson | profile | badges | flash | match | quiz | build | sayit | story
   const [lIdx, setLIdx] = useState(0);
-  const [songIdx, setSongIdx] = useState(0);
   const [conf, setConf] = useState(false);
   const [result, setResult] = useState(null);
   const [ready, setReady] = useState(false);
@@ -1366,7 +1219,6 @@ export default function App() {
   const stars = progress?.stars || {};
   const totalStars = Object.values(stars).reduce((a, b) => a + b, 0);
   const lesson = LESSONS[lIdx];
-  const song = SONGS[songIdx];
 
   const earn = (id) => {
     if (!progress) return;
@@ -1385,19 +1237,8 @@ export default function App() {
     save({ ...progress, [key]: (progress[key] || 0) + amount });
   };
 
-  const markSongDone = (songId) => {
-    if (!progress) return;
-    const songsDone = { ...(progress.songsDone || {}), [songId]: Date.now() };
-    save({ ...progress, songsDone });
-    setConf(true);
-    setTimeout(() => setConf(false), 2500);
-  };
-
   const go = (s, i) => {
-    if (i !== undefined) {
-      if (s === "song") setSongIdx(i);
-      else setLIdx(i);
-    }
+    if (i !== undefined) setLIdx(i);
     setScreen(s);
     setResult(null);
   };
@@ -1471,28 +1312,62 @@ export default function App() {
           <div style={{ fontSize: 18, fontWeight: 900, color: "#B983FF", fontFamily: FN }}>🏆 {(progress.badges || []).length}</div>
           <div style={{ fontSize: 9, color: "rgba(255,255,255,0.6)", fontFamily: FN, textTransform: "uppercase", fontWeight: 700 }}>Badges</div>
         </button>
-        <div style={{ width: 1, height: 28, background: "rgba(255,255,255,0.15)" }} />
-        <button onClick={() => setScreen("songs")} style={{ textAlign: "center", background: "none", border: "none", cursor: "pointer", padding: 0 }}>
-          <div style={{ fontSize: 18, fontWeight: 900, color: "#FF9EC7", fontFamily: FN }}>🎵 {Object.keys(progress.songsDone || {}).length}</div>
-          <div style={{ fontSize: 9, color: "rgba(255,255,255,0.6)", fontFamily: FN, textTransform: "uppercase", fontWeight: 700 }}>Songs</div>
-        </button>
       </div>
 
-      {/* Songs & Badges quick buttons */}
-      <div style={{ display: "flex", gap: 8, marginBottom: 22 }}>
-        <button onClick={() => setScreen("songs")} style={{ flex: 1, background: "linear-gradient(135deg,#FF9EC7,#FFD93D)", border: "none", borderRadius: 14, padding: "11px", color: "#1E3A5F", fontWeight: 900, fontSize: 13, fontFamily: FN, cursor: "pointer", boxShadow: "0 4px 14px rgba(255,158,199,.35)" }}>🎵 Sing Along!</button>
-        <button onClick={() => setScreen("badges")} style={{ flex: 1, background: "linear-gradient(135deg,#B983FF,#4D96FF)", border: "none", borderRadius: 14, padding: "11px", color: "#fff", fontWeight: 900, fontSize: 13, fontFamily: FN, cursor: "pointer", boxShadow: "0 4px 14px rgba(185,131,255,.35)" }}>🏆 Trophies</button>
+      {/* Badges quick button */}
+      <div style={{ marginBottom: 22 }}>
+        <button onClick={() => setScreen("badges")} style={{ width: "100%", background: "linear-gradient(135deg,#B983FF,#4D96FF)", border: "none", borderRadius: 14, padding: "11px", color: "#fff", fontWeight: 900, fontSize: 13, fontFamily: FN, cursor: "pointer", boxShadow: "0 4px 14px rgba(185,131,255,.35)" }}>🏆 Trophies</button>
       </div>
 
-      {/* YELLOW BRICK ROAD of all 32 lessons */}
+      {/* YELLOW BRICK ROAD — curving SVG path with stones along the way */}
       <div style={{ position: "relative", padding: "12px 0" }}>
         {WORLDS.map((w) => {
           const ls = LESSONS.filter(l => l.id >= w.range[0] && l.id <= w.range[1]);
           const ws = ls.reduce((a, l) => a + (stars[l.id] || 0), 0);
           const wsMax = ls.length * 3;
-          return <div key={w.id} style={{ marginBottom: 8 }}>
+
+          // Layout params
+          const stoneGap = 130;      // vertical spacing between stones
+          const topPad = 40;          // padding above first stone
+          const bottomPad = 40;       // padding below last stone
+          const leftX = 20;           // % from left (outer left stones)
+          const rightX = 80;          // % from left (outer right stones)
+          const containerHeight = ls.length * stoneGap + topPad + bottomPad;
+
+          // Build stone positions
+          const stones = ls.map((l, i) => ({
+            lesson: l,
+            x: i % 2 === 0 ? leftX : rightX,
+            y: topPad + (i + 0.5) * stoneGap,
+            isLeft: i % 2 === 0,
+          }));
+
+          // Build smooth SVG path connecting stones via cubic Bezier
+          // Each segment: previous stone → next stone with control points pulled
+          // along the y-axis to create an S-shape between alternating x positions.
+          let d = "";
+          stones.forEach((p, i) => {
+            if (i === 0) {
+              // Start from above the first stone, descending into it
+              d += `M ${p.x} ${topPad - 10}`;
+              d += ` L ${p.x} ${p.y}`;
+            } else {
+              const prev = stones[i - 1];
+              // Control points: at midY, pulled towards each end's x to create a smooth wave
+              const c1x = prev.x;
+              const c1y = (prev.y + p.y) / 2;
+              const c2x = p.x;
+              const c2y = (prev.y + p.y) / 2;
+              d += ` C ${c1x} ${c1y}, ${c2x} ${c2y}, ${p.x} ${p.y}`;
+            }
+          });
+          // Tail beyond last stone
+          const last = stones[stones.length - 1];
+          d += ` L ${last.x} ${last.y + 20}`;
+
+          return <div key={w.id} style={{ marginBottom: 16 }}>
             {/* World banner */}
-            <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 10, padding: "10px 14px", background: `linear-gradient(90deg, ${w.color}40, transparent)`, borderRadius: 14, border: `1px solid ${w.color}80` }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 14, padding: "10px 14px", background: `linear-gradient(90deg, ${w.color}40, transparent)`, borderRadius: 14, border: `1px solid ${w.color}80` }}>
               <div style={{ fontSize: 30 }}>{w.emoji}</div>
               <div>
                 <div style={{ fontSize: 15, fontWeight: 900, color: w.color, fontFamily: FN, textShadow: "0 1px 3px rgba(0,0,0,0.3)" }}>{w.name}</div>
@@ -1500,39 +1375,61 @@ export default function App() {
               </div>
             </div>
 
-            {/* The road itself — snake pattern, 2 per row with alternating alignment */}
-            <div style={{ position: "relative", padding: "6px 4px" }}>
-              {ls.map((l, i) => {
+            {/* Path container — SVG plus absolutely-positioned stones */}
+            <div style={{ position: "relative", height: containerHeight, width: "100%" }}>
+              {/* The road (SVG) — drawn behind the stones */}
+              <svg
+                viewBox={`0 0 100 ${containerHeight}`}
+                preserveAspectRatio="none"
+                width="100%"
+                height={containerHeight}
+                style={{ position: "absolute", inset: 0, zIndex: 0, overflow: "visible" }}
+              >
+                <defs>
+                  <linearGradient id={`road-${w.id}`} x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stopColor="#FFE580" />
+                    <stop offset="50%" stopColor="#FFD93D" />
+                    <stop offset="100%" stopColor="#FFB12B" />
+                  </linearGradient>
+                </defs>
+                {/* Outer dark edge (depth) */}
+                <path d={d} fill="none" stroke="#6B4F0E" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round" vectorEffect="non-scaling-stroke" opacity="0.5" />
+                {/* Yellow brick surface */}
+                <path d={d} fill="none" stroke={`url(#road-${w.id})`} strokeWidth="12" strokeLinecap="round" strokeLinejoin="round" vectorEffect="non-scaling-stroke" />
+                {/* Highlight glow strip */}
+                <path d={d} fill="none" stroke="#FFF4C7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" vectorEffect="non-scaling-stroke" opacity="0.8" />
+                {/* Brick dashes for texture */}
+                <path d={d} fill="none" stroke="#9B6B0E" strokeWidth="10" strokeLinecap="butt" strokeDasharray="2 14" vectorEffect="non-scaling-stroke" opacity="0.4" />
+              </svg>
+
+              {/* Lesson stones positioned absolutely */}
+              {stones.map((stone, i) => {
+                const l = stone.lesson;
                 const s = stars[l.id] || 0;
                 const ch = [16, 24, 32, 40, 50, 60, 68, 76, 84, 92, 100].includes(l.id);
                 const earnedSome = s > 0;
-                const isLeft = i % 2 === 0;
-
-                // Determine lesson lock state (unlock first lesson, then sequentially from max completed)
                 const completedLessonIds = Object.keys(stars).map(Number);
                 const maxCompleted = completedLessonIds.length ? Math.max(...completedLessonIds) : 0;
                 const isUnlocked = l.id === 1 || l.id <= maxCompleted + 1;
+                const stoneSize = ch ? 100 : 86;
 
-                return <div key={l.id} style={{
-                  display: "flex", justifyContent: isLeft ? "flex-start" : "flex-end",
-                  position: "relative", marginBottom: 8, paddingLeft: isLeft ? 8 : 0, paddingRight: isLeft ? 0 : 8,
-                }}>
-                  {/* Connector line to next stone */}
-                  {i < ls.length - 1 && <div style={{
+                return <div
+                  key={l.id}
+                  style={{
                     position: "absolute",
-                    left: isLeft ? "30%" : "auto", right: isLeft ? "auto" : "30%",
-                    top: 58, width: "40%", height: 4, borderRadius: 2,
-                    background: earnedSome ? "linear-gradient(90deg,#FFD93D,#FF8C42)" : "rgba(255,255,255,0.15)",
-                    zIndex: 0,
-                  }} />}
-
+                    top: `${stone.y - stoneSize / 2}px`,
+                    left: `${stone.x}%`,
+                    transform: "translateX(-50%)",
+                    zIndex: 1,
+                  }}
+                >
                   <button
                     onClick={() => isUnlocked && go("lesson", LESSONS.indexOf(l))}
                     disabled={!isUnlocked}
                     style={{
-                      position: "relative", zIndex: 1,
-                      width: ch ? 128 : 108, height: ch ? 128 : 108,
-                      borderRadius: ch ? 26 : "50%",
+                      position: "relative",
+                      width: stoneSize, height: stoneSize,
+                      borderRadius: ch ? 22 : "50%",
                       background: !isUnlocked
                         ? "linear-gradient(135deg,#2a3a5f,#1a2a4a)"
                         : ch
@@ -1550,7 +1447,7 @@ export default function App() {
                       animation: "cPop .4s ease-out backwards", animationDelay: `${i * 0.04}s`,
                       display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center",
                     }}
-                    onMouseEnter={e => { if (isUnlocked) e.currentTarget.style.transform = "scale(1.05)"; }}
+                    onMouseEnter={e => { if (isUnlocked) e.currentTarget.style.transform = "scale(1.08)"; }}
                     onMouseLeave={e => { if (isUnlocked) e.currentTarget.style.transform = "scale(1)"; }}
                   >
                     {/* Number badge */}
@@ -1563,12 +1460,12 @@ export default function App() {
                     }}>{l.id}</div>
 
                     {!isUnlocked ? (
-                      <div style={{ fontSize: 30 }}>🔒</div>
+                      <div style={{ fontSize: 28 }}>🔒</div>
                     ) : (
                       <>
-                        <div style={{ fontSize: ch ? 34 : 28, lineHeight: 1, marginTop: 6 }}>{ch ? "🏆" : l.emoji}</div>
-                        <div style={{ fontSize: 9, fontWeight: 800, color: "#1E3A5F", fontFamily: FN, marginTop: 3, padding: "0 4px", lineHeight: 1.15, textAlign: "center" }}>{l.subtitle}</div>
-                        <div style={{ marginTop: 3, fontSize: 10, letterSpacing: 1 }}>
+                        <div style={{ fontSize: ch ? 30 : 26, lineHeight: 1, marginTop: 4 }}>{ch ? "🏆" : l.emoji}</div>
+                        <div style={{ fontSize: 8, fontWeight: 800, color: "#1E3A5F", fontFamily: FN, marginTop: 2, padding: "0 4px", lineHeight: 1.1, textAlign: "center" }}>{l.subtitle}</div>
+                        <div style={{ marginTop: 2, fontSize: 9, letterSpacing: 1 }}>
                           {[0, 1, 2].map(j => <span key={j} style={{ opacity: j < s ? 1 : 0.25, filter: j < s ? "drop-shadow(0 0 2px #FF8C42)" : "none" }}>⭐</span>)}
                         </div>
                       </>
@@ -1617,42 +1514,6 @@ export default function App() {
       </div>
     </div>
   </div>;
-
-  // ============================================================
-  // SONGS LIST
-  // ============================================================
-  if (screen === "songs") return <div style={{ minHeight: "100vh", background: "linear-gradient(180deg,#FFFBE5,#FFE8F2)", padding: "16px 16px 40px" }}>
-    <Bgs e={["🎵","🎶","🎤","✨"]} />
-    <Confetti active={conf} />
-    {newBadge && <BadgeToast badge={newBadge} onClose={() => setNewBadge(null)} />}
-    <div style={{ position: "relative", zIndex: 1, maxWidth: 520, margin: "0 auto" }}>
-      <Btn onClick={() => go("home")} style={{ marginBottom: 14, fontSize: 13 }}>← Home</Btn>
-      <div style={{ textAlign: "center", marginBottom: 20 }}>
-        <div style={{ fontSize: 48, animation: "bIn .5s" }}>🎵</div>
-        <h2 style={{ fontSize: 26, fontWeight: 900, color: "#1E3A5F", fontFamily: FN }}>Sing Along!</h2>
-        <p style={{ fontSize: 13, color: "#888", fontFamily: FN }}>Classic Spanish kids' songs</p>
-      </div>
-      <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-        {SONGS.map((s, i) => {
-          const done = !!(progress.songsDone || {})[s.id];
-          return <button key={s.id} onClick={() => go("song", i)} style={{ display: "flex", alignItems: "center", gap: 14, background: "#fff", border: "none", borderRadius: 18, padding: "14px 16px", cursor: "pointer", boxShadow: "0 3px 12px rgba(0,0,0,.05)", textAlign: "left", borderLeft: `5px solid ${s.color}`, transition: "transform .15s", animation: "cPop .3s ease-out backwards", animationDelay: `${i * 0.05}s` }}
-            onMouseEnter={e => e.currentTarget.style.transform = "scale(1.02)"} onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}>
-            <div style={{ fontSize: 38 }}>{s.emoji}</div>
-            <div style={{ flex: 1 }}>
-              <div style={{ fontSize: 16, fontWeight: 900, color: "#1E3A5F", fontFamily: FN }}>{s.title}</div>
-              <div style={{ fontSize: 12, color: "#888", fontFamily: FN }}>{s.subtitle}</div>
-            </div>
-            {done && <div style={{ fontSize: 20 }} title="Sung!">⭐</div>}
-          </button>;
-        })}
-      </div>
-    </div>
-  </div>;
-
-  // ============================================================
-  // SONG PLAYER
-  // ============================================================
-  if (screen === "song") return <><SongPlayer song={song} onDone={() => markSongDone(song.id)} onBack={() => setScreen("songs")} /><Confetti active={conf} />{newBadge && <BadgeToast badge={newBadge} onClose={() => setNewBadge(null)} />}</>;
 
   // ============================================================
   // BADGES
