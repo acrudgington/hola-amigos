@@ -484,9 +484,20 @@ if (typeof window !== "undefined" && window.speechSynthesis) {
 }
 
 // ============================================================
-// SHARED UTILITIES
+// DESIGN SYSTEM — "Day & Night" (Sol amber + Luna indigo on warm cream)
 // ============================================================
 const FN = "'Nunito', sans-serif";
+const FD = "'Baloo 2', 'Nunito', sans-serif"; // display face
+const T = {
+  sun: "#FFAF00", sunDark: "#D18C00", sunLight: "#FFF3D6",   // Sol — primary
+  luna: "#7B6FDE", lunaDark: "#5F53C7", lunaLight: "#EFECFF", // Luna — secondary
+  green: "#3FC252", greenDark: "#2FA33F",                    // correct
+  red: "#FF5A5F", redDark: "#E04347",                        // wrong / danger
+  ink: "#4B4453", muted: "#9C93A3",                          // text
+  cream: "#FFF9EF", card: "#FFFFFF", line: "#EFE6D8",        // surfaces
+  lock: "#E9E2D5", lockDark: "#D8CFBD",                      // locked stones
+  night: "#221B4A",                                          // Luna's footer strip
+};
 const sh = a => [...a].sort(() => Math.random() - 0.5);
 
 function Confetti({ active }) {
@@ -503,15 +514,39 @@ function Bgs({ e = ["⭐","🌟","✨"] }) {
   </div>;
 }
 
-const Btn = ({ children, onClick, bg="#fff", color="#1E3A5F", border="#e0e0e0", full, style: s, ...p }) =>
-  <button onClick={onClick} style={{ background:bg, border:`3px solid ${border}`, borderRadius:50, padding:"12px 24px", color, fontWeight:700, fontSize:15, cursor:"pointer", fontFamily:FN, transition:"transform .15s", width:full?"100%":"auto", ...s }}
-    onMouseEnter={e => e.currentTarget.style.transform = "scale(1.03)"}
-    onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"} {...p}>{children}</button>;
+// Chunky 3D button — solid fill with darker "edge" underneath, presses down on tap.
+// bg/color/border kept for backwards compat: `border` doubles as the edge colour when given.
+const EDGE_MAP = { "#fff": "#E2D8C6", "#FFFFFF": "#E2D8C6" };
+const darken = (hex) => {
+  if (!hex || !hex.startsWith("#") || hex.length < 7) return "rgba(0,0,0,0.25)";
+  const n = parseInt(hex.slice(1, 7), 16);
+  const f = (v) => Math.max(0, Math.round(v * 0.78));
+  return `#${((f(n >> 16 & 255) << 16) | (f(n >> 8 & 255) << 8) | f(n & 255)).toString(16).padStart(6, "0")}`;
+};
+const Btn = ({ children, onClick, bg = "#fff", color = T.ink, border, full, edge, style: s, ...p }) => {
+  const isGradient = typeof bg === "string" && bg.includes("gradient");
+  const face = isGradient ? T.sun : bg;
+  const edgeColor = edge || (border && border !== "transparent" && border !== "#e0e0e0" ? border : null) || EDGE_MAP[face] || darken(face);
+  const solidBg = isGradient ? T.sun : bg;
+  const isWhite = solidBg === "#fff" || solidBg === "#FFFFFF";
+  return <button onClick={onClick} style={{
+    background: solidBg,
+    border: isWhite ? `2px solid ${T.line}` : "none",
+    borderRadius: 16, padding: "13px 24px",
+    color: isWhite ? (color === "#fff" ? T.ink : color) : (color === T.ink && !isWhite ? "#fff" : color),
+    fontWeight: 800, fontSize: 14, letterSpacing: 0.6, textTransform: "uppercase",
+    cursor: "pointer", fontFamily: FN,
+    boxShadow: `0 4px 0 ${isWhite ? T.line : edgeColor}`,
+    transition: "filter .12s",
+    width: full ? "100%" : "auto", ...s }}
+    onMouseEnter={e => e.currentTarget.style.filter = "brightness(1.05)"}
+    onMouseLeave={e => e.currentTarget.style.filter = "none"} {...p}>{children}</button>;
+};
 
 const Input = ({ label, ...p }) =>
   <div style={{ marginBottom: 14 }}>
-    <label style={{ display:"block", fontSize:13, fontWeight:700, color:"#666", fontFamily:FN, marginBottom:4 }}>{label}</label>
-    <input {...p} style={{ width:"100%", padding:"12px 16px", borderRadius:14, border:"3px solid #e0e0e0", fontSize:16, fontFamily:FN, color:"#1E3A5F", ...(p.style||{}) }} />
+    <label style={{ display:"block", fontSize:12, fontWeight:800, color:T.muted, fontFamily:FN, marginBottom:5, textTransform:"uppercase", letterSpacing:0.8 }}>{label}</label>
+    <input {...p} style={{ width:"100%", padding:"13px 16px", borderRadius:14, border:`2px solid ${T.line}`, background:"#FFFDF8", fontSize:16, fontFamily:FN, fontWeight:700, color:T.ink, ...(p.style||{}) }} />
   </div>;
 
 // ============================================================
@@ -523,7 +558,7 @@ function FlashCard({ word, index }) {
     <div onClick={() => setF(!f)} style={{ cursor:"pointer", width:"100%", minHeight:125, position:"relative", transformStyle:"preserve-3d", transition:"transform .5s cubic-bezier(.4,0,.2,1)", transform:f?"rotateY(180deg)":"rotateY(0)" }}>
       <div style={{ position:"absolute", inset:0, backfaceVisibility:"hidden", background:"#fff", borderRadius:20, padding:"14px 10px", display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center", boxShadow:"0 4px 16px rgba(0,0,0,.07)", border:"3px solid #f0f0f0" }}>
         <div style={{ fontSize:34, marginBottom:3 }}>{word.emoji}</div>
-        <div style={{ fontSize:16, fontWeight:800, color:"#1E3A5F", fontFamily:FN, textAlign:"center" }}>{word.es}</div>
+        <div style={{ fontSize:16, fontWeight:800, color:T.ink, fontFamily:FN, textAlign:"center" }}>{word.es}</div>
         <div style={{ fontSize:9, color:"#bbb", marginTop:2 }}>tap to flip</div>
       </div>
       <div style={{ position:"absolute", inset:0, backfaceVisibility:"hidden", transform:"rotateY(180deg)", background:"linear-gradient(135deg,#667eea,#764ba2)", borderRadius:20, padding:"14px 10px", display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center", color:"#fff" }}>
@@ -558,7 +593,7 @@ function MatchGame({ words, onDone }) {
     <div style={{ display:"flex", gap:8 }}>
       {["es", "en"].map(side => <div key={side} style={{ flex:1, display:"flex", flexDirection:"column", gap:6 }}>
         {(side === "es" ? pool : sEn).map((w, i) => <button key={w[side === "es" ? "es" : "en"] + i} disabled={matched.includes(w.es)} onClick={() => click(side, i, w)}
-          style={{ padding:"10px 6px", borderRadius:12, border:"3px solid", fontFamily:FN, fontSize:side === "es" ? 14 : 13, fontWeight:700, cursor:"pointer", color:"#1E3A5F", transition:"all .2s",
+          style={{ padding:"10px 6px", borderRadius:12, border:"3px solid", fontFamily:FN, fontSize:side === "es" ? 14 : 13, fontWeight:700, cursor:"pointer", color:T.ink, transition:"all .2s",
             borderColor: matched.includes(w.es) ? "#6BCB77" : isSel(side, i) ? (side === "es" ? "#4D96FF" : "#FF8C42") : "#e8e8e8",
             background: matched.includes(w.es) ? "#E8F8EA" : isSel(side, i) ? (side === "es" ? "#E4F0FF" : "#FFF3E8") : "#fff",
             opacity: matched.includes(w.es) ? 0.5 : 1 }}>
@@ -585,9 +620,9 @@ function Quiz({ words, gaps, onDone }) {
     setTimeout(() => { setFb(null); if (idx + 1 < items.length) setIdx(idx + 1); else onDone(score + (ok ? 1 : 0), items.length); }, 900); };
   return <div style={{ textAlign: "center" }}>
     <div style={{ fontSize: 11, color: "#999", fontFamily: FN, marginBottom: 8 }}>Q {idx + 1}/{items.length}</div>
-    <div style={{ fontSize: 16, fontWeight: 800, color: "#1E3A5F", fontFamily: FN, marginBottom: 14, lineHeight: 1.4 }}>{it.q}</div>
+    <div style={{ fontSize: 16, fontWeight: 800, color: T.ink, fontFamily: FN, marginBottom: 14, lineHeight: 1.4 }}>{it.q}</div>
     <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8, maxWidth: 340, margin: "0 auto" }}>
-      {it.opts.map(o => <button key={o} onClick={() => pick(o)} style={{ padding: "11px 8px", borderRadius: 14, border: "3px solid", fontFamily: FN, fontSize: 14, fontWeight: 700, cursor: "pointer", color: "#1E3A5F",
+      {it.opts.map(o => <button key={o} onClick={() => pick(o)} style={{ padding: "11px 8px", borderRadius: 14, border: "3px solid", fontFamily: FN, fontSize: 14, fontWeight: 700, cursor: "pointer", color: T.ink,
         borderColor: fb && o === it.ans ? "#6BCB77" : "#e8e8e8", background: fb && o === it.ans ? "#E8F8EA" : "#fff" }}>{o}</button>)}
     </div>
     {fb && <div style={{ fontSize: 22, marginTop: 10, animation: "bIn .3s" }}>{fb === "✅" ? "⭐ Correct!" : "Not quite!"}</div>}
@@ -615,7 +650,7 @@ function SentenceBuilder({ sentences, onDone }) {
         : <span style={{ color: "#ccc", fontSize: 13, fontFamily: FN }}>Tap words in order…</span>}
     </div>
     <div style={{ display: "flex", flexWrap: "wrap", gap: 6, justifyContent: "center", marginBottom: 12 }}>
-      {avail.map((w, i) => <button key={w + i} onClick={() => tap(w)} style={{ background: "#fff", border: "2px solid #ddd", borderRadius: 10, padding: "7px 12px", fontSize: 14, fontWeight: 700, cursor: "pointer", fontFamily: FN, color: "#1E3A5F" }}>{w}</button>)}
+      {avail.map((w, i) => <button key={w + i} onClick={() => tap(w)} style={{ background: "#fff", border: "2px solid #ddd", borderRadius: 10, padding: "7px 12px", fontSize: 14, fontWeight: 700, cursor: "pointer", fontFamily: FN, color: T.ink }}>{w}</button>)}
     </div>
     <div style={{ display: "flex", gap: 8, justifyContent: "center" }}>
       <Btn onClick={undo} border="#ddd" color="#888" style={{ fontSize: 12, padding: "8px 16px" }}>↩ Undo</Btn>
@@ -635,7 +670,7 @@ function StoryReader({ story, onDone }) {
   if (!story) return <div style={{ textAlign: "center", padding: 20, fontFamily: FN, color: "#999" }}>No story yet!</div>;
   if (step < story.paras.length) return <div style={{ textAlign: "center" }}>
     <div style={{ fontSize: 26, marginBottom: 6 }}>📖</div>
-    <h3 style={{ fontSize: 20, fontWeight: 900, fontFamily: FN, color: "#1E3A5F", marginBottom: 12 }}>{story.title}</h3>
+    <h3 style={{ fontSize: 20, fontWeight: 900, fontFamily: FN, color: T.ink, marginBottom: 12 }}>{story.title}</h3>
     <div style={{ background: "#fff", borderRadius: 18, padding: 18, boxShadow: "0 3px 12px rgba(0,0,0,.05)", fontSize: 16, lineHeight: 1.7, fontFamily: FN, color: "#333", fontStyle: "italic", marginBottom: 14 }}>{story.paras[step]}</div>
     <Btn onClick={() => setStep(step + 1)} bg="linear-gradient(135deg,#4D96FF,#667eea)" color="#fff" border="transparent">{step < story.paras.length - 1 ? "Next page →" : "Questions →"}</Btn>
   </div>;
@@ -645,9 +680,9 @@ function StoryReader({ story, onDone }) {
     setTimeout(() => { setFb(null); if (qIdx + 1 < story.qs.length) setQIdx(qIdx + 1); else onDone(score + (ok ? 1 : 0), story.qs.length); }, 900); };
   return <div style={{ textAlign: "center" }}>
     <div style={{ fontSize: 13, color: "#999", fontFamily: FN, marginBottom: 8 }}>Q {qIdx + 1}/{story.qs.length}</div>
-    <div style={{ fontSize: 16, fontWeight: 800, color: "#1E3A5F", fontFamily: FN, marginBottom: 12 }}>{q.q}</div>
+    <div style={{ fontSize: 16, fontWeight: 800, color: T.ink, fontFamily: FN, marginBottom: 12 }}>{q.q}</div>
     <div style={{ display: "flex", flexDirection: "column", gap: 7, maxWidth: 300, margin: "0 auto" }}>
-      {q.opts.map((o, i) => <button key={o} onClick={() => pick(i)} style={{ padding: "11px", borderRadius: 12, border: "3px solid", fontFamily: FN, fontSize: 14, fontWeight: 700, cursor: "pointer", color: "#1E3A5F",
+      {q.opts.map((o, i) => <button key={o} onClick={() => pick(i)} style={{ padding: "11px", borderRadius: 12, border: "3px solid", fontFamily: FN, fontSize: 14, fontWeight: 700, cursor: "pointer", color: T.ink,
         borderColor: fb !== null && i === q.ans ? "#6BCB77" : "#e8e8e8", background: fb !== null && i === q.ans ? "#E8F8EA" : "#fff" }}>{o}</button>)}
     </div>
     {fb === true && <div style={{ fontSize: 20, marginTop: 8, animation: "bIn .3s" }}>⭐</div>}
@@ -673,7 +708,7 @@ function SayItGame({ words, onDone }) {
   if (!speech.recogSupported()) {
     return <div style={{ textAlign: "center", padding: 20, fontFamily: FN }}>
       <div style={{ fontSize: 36, marginBottom: 10 }}>🎤</div>
-      <div style={{ fontSize: 16, fontWeight: 800, color: "#1E3A5F", marginBottom: 8 }}>Microphone not supported</div>
+      <div style={{ fontSize: 16, fontWeight: 800, color: T.ink, marginBottom: 8 }}>Microphone not supported</div>
       <div style={{ fontSize: 13, color: "#888", lineHeight: 1.5 }}>Speech recognition works best in Chrome, Edge, or Safari. Try using one of those browsers to play the "Say It!" game!</div>
     </div>;
   }
@@ -722,7 +757,7 @@ function SayItGame({ words, onDone }) {
   return <div style={{ textAlign: "center" }}>
     <div style={{ fontSize: 12, color: "#999", fontFamily: FN, marginBottom: 8 }}>Word {idx + 1} / {pool.length}</div>
     <div style={{ fontSize: 50, marginBottom: 4, animation: "bIn .4s" }}>{word.emoji}</div>
-    <div style={{ fontSize: 28, fontWeight: 900, color: "#1E3A5F", fontFamily: FN, marginBottom: 4 }}>{word.es}</div>
+    <div style={{ fontSize: 28, fontWeight: 900, color: T.ink, fontFamily: FN, marginBottom: 4 }}>{word.es}</div>
     <div style={{ fontSize: 13, color: "#888", fontFamily: FN, marginBottom: 4 }}>🗣️ {word.say}</div>
     <div style={{ fontSize: 13, color: "#aaa", fontFamily: FN, marginBottom: 18, fontStyle: "italic" }}>({word.en})</div>
 
@@ -784,10 +819,10 @@ function Result({ score, total, onRetry, onBack, onEarnStar }) {
   useEffect(() => { if (pct >= 0.6 && onEarnStar) onEarnStar(); }, []);
   return <div style={{ textAlign: "center", padding: "20px 0" }}>
     <div style={{ fontSize: 56, marginBottom: 6, animation: "bIn .5s" }}>{pct >= 0.8 ? "🏆" : pct >= 0.6 ? "⭐" : "💪"}</div>
-    <div style={{ fontSize: 22, fontWeight: 900, color: "#1E3A5F", fontFamily: FN }}>{score}/{total}</div>
-    <div style={{ fontSize: 14, color: "#888", margin: "6px 0 18px", fontFamily: FN }}>{pct >= 0.8 ? "Amazing! Superstar!" : pct >= 0.6 ? "Great job!" : "Keep practising!"}</div>
+    <div style={{ fontSize: 22, fontWeight: 900, color: T.ink, fontFamily: FN }}>{score}/{total}</div>
+    <div style={{ fontSize: 14, color: T.muted, fontWeight: 700, margin: "6px 0 18px", fontFamily: FN }}>{pct >= 0.8 ? "Amazing! Superstar!" : pct >= 0.6 ? "Great job!" : "Keep practising!"}</div>
     <div style={{ display: "flex", gap: 8, justifyContent: "center", flexWrap: "wrap" }}>
-      <Btn onClick={onRetry} bg="linear-gradient(135deg,#4D96FF,#667eea)" color="#fff" border="transparent">Try Again</Btn>
+      <Btn onClick={onRetry} bg={T.luna} color="#fff" edge={T.lunaDark}>Try Again</Btn>
       <Btn onClick={onBack}>Back</Btn>
     </div>
   </div>;
@@ -801,29 +836,28 @@ function BadgeCabinet({ progress, onBack }) {
   const owned = new Set(progress.badges || []);
   const unlocked = BADGES.filter(b => owned.has(b.id));
   const locked = BADGES.filter(b => !owned.has(b.id));
-  return <div style={{ minHeight: "100vh", background: "linear-gradient(180deg,#FFF8E1,#F3EAFF)", padding: "16px 16px 40px" }}>
-    <Bgs e={["🏆","⭐","🎖️"]} />
+  return <div style={{ minHeight: "100vh", background: T.cream, padding: "16px 16px 40px" }}>
     <div style={{ position: "relative", zIndex: 1, maxWidth: 500, margin: "0 auto" }}>
-      <Btn onClick={onBack} style={{ marginBottom: 14, fontSize: 13 }}>← Back</Btn>
+      <Btn onClick={onBack} style={{ marginBottom: 14, fontSize: 12, padding: "10px 18px" }}>← Back</Btn>
       <div style={{ textAlign: "center", marginBottom: 20 }}>
         <div style={{ fontSize: 48 }}>🏆</div>
-        <h2 style={{ fontSize: 26, fontWeight: 900, fontFamily: FN, color: "#1E3A5F" }}>Trophy Cabinet</h2>
-        <p style={{ fontSize: 13, color: "#888", fontFamily: FN }}>{unlocked.length} of {BADGES.length} badges unlocked</p>
+        <h2 style={{ fontSize: 28, fontWeight: 800, fontFamily: FD, color: T.ink }}>Trophy Cabinet</h2>
+        <p style={{ fontSize: 13, color: T.muted, fontWeight: 700, fontFamily: FN }}>{unlocked.length} of {BADGES.length} badges unlocked</p>
       </div>
-      {unlocked.length > 0 && <><h3 style={{ fontSize: 16, fontWeight: 800, color: "#FF8C42", fontFamily: FN, marginBottom: 10 }}>🎉 Unlocked</h3>
+      {unlocked.length > 0 && <><h3 style={{ fontSize: 15, fontWeight: 900, color: T.sunDark, fontFamily: FN, marginBottom: 10, textTransform: "uppercase", letterSpacing: 1 }}>🎉 Unlocked</h3>
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 20 }}>
-        {unlocked.map(b => <div key={b.id} style={{ background: "linear-gradient(135deg,#FFF8E1,#FFE8E8)", borderRadius: 18, padding: "14px 10px", textAlign: "center", border: "2px solid #FFD93D", boxShadow: "0 3px 12px rgba(255,217,61,.3)", animation: "cPop .3s ease-out backwards" }}>
+        {unlocked.map(b => <div key={b.id} style={{ background: "#fff", borderRadius: 18, padding: "14px 10px", textAlign: "center", border: `2px solid ${T.sun}`, boxShadow: `0 4px 0 ${T.sunDark}`, animation: "cPop .3s ease-out backwards" }}>
           <div style={{ fontSize: 40 }}>{b.emoji}</div>
-          <div style={{ fontSize: 13, fontWeight: 900, color: "#1E3A5F", fontFamily: FN, marginTop: 4 }}>{b.name}</div>
-          <div style={{ fontSize: 11, color: "#888", fontFamily: FN, marginTop: 2 }}>{b.desc}</div>
+          <div style={{ fontSize: 13, fontWeight: 800, color: T.ink, fontFamily: FD, marginTop: 4 }}>{b.name}</div>
+          <div style={{ fontSize: 11, color: T.muted, fontWeight: 700, fontFamily: FN, marginTop: 2 }}>{b.desc}</div>
         </div>)}
       </div></>}
-      {locked.length > 0 && <><h3 style={{ fontSize: 16, fontWeight: 800, color: "#999", fontFamily: FN, marginBottom: 10 }}>🔒 Still to earn</h3>
+      {locked.length > 0 && <><h3 style={{ fontSize: 15, fontWeight: 900, color: T.muted, fontFamily: FN, marginBottom: 10, textTransform: "uppercase", letterSpacing: 1 }}>🔒 Still to earn</h3>
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
-        {locked.map(b => <div key={b.id} style={{ background: "#fff", borderRadius: 18, padding: "14px 10px", textAlign: "center", border: "2px dashed #e0e0e0", opacity: 0.6 }}>
+        {locked.map(b => <div key={b.id} style={{ background: "#fff", borderRadius: 18, padding: "14px 10px", textAlign: "center", border: `2px dashed ${T.lockDark}`, opacity: 0.65 }}>
           <div style={{ fontSize: 40, filter: "grayscale(1)" }}>{b.emoji}</div>
-          <div style={{ fontSize: 13, fontWeight: 900, color: "#888", fontFamily: FN, marginTop: 4 }}>{b.name}</div>
-          <div style={{ fontSize: 11, color: "#aaa", fontFamily: FN, marginTop: 2 }}>{b.desc}</div>
+          <div style={{ fontSize: 13, fontWeight: 800, color: T.muted, fontFamily: FD, marginTop: 4 }}>{b.name}</div>
+          <div style={{ fontSize: 11, color: T.muted, fontWeight: 700, fontFamily: FN, marginTop: 2 }}>{b.desc}</div>
         </div>)}
       </div></>}
     </div>
@@ -838,11 +872,11 @@ function BadgeToast({ badge, onClose }) {
   if (!badge) return null;
   const b = BADGES.find(x => x.id === badge);
   if (!b) return null;
-  return <div style={{ position: "fixed", top: 20, left: "50%", transform: "translateX(-50%)", background: "linear-gradient(135deg,#FFD93D,#FF8C42)", color: "#fff", padding: "14px 20px", borderRadius: 50, boxShadow: "0 8px 24px rgba(255,140,66,.4)", zIndex: 10000, display: "flex", alignItems: "center", gap: 10, fontFamily: FN, animation: "bIn .5s", maxWidth: "90%" }}>
+  return <div style={{ position: "fixed", top: 20, left: "50%", transform: "translateX(-50%)", background: T.sun, color: "#fff", padding: "13px 20px", borderRadius: 18, boxShadow: `0 5px 0 ${T.sunDark}`, zIndex: 10000, display: "flex", alignItems: "center", gap: 10, fontFamily: FN, animation: "bIn .5s", maxWidth: "90%" }}>
     <div style={{ fontSize: 28 }}>{b.emoji}</div>
     <div>
-      <div style={{ fontSize: 11, opacity: .9, fontWeight: 700 }}>NEW BADGE!</div>
-      <div style={{ fontSize: 15, fontWeight: 900 }}>{b.name}</div>
+      <div style={{ fontSize: 10, opacity: .95, fontWeight: 900, letterSpacing: 1 }}>NEW BADGE!</div>
+      <div style={{ fontSize: 16, fontWeight: 800, fontFamily: FD }}>{b.name}</div>
     </div>
   </div>;
 }
@@ -953,30 +987,29 @@ function AuthScreen({ onLogin }) {
     onLogin(parent);
   };
 
-  return <div style={{ minHeight: "100vh", background: "linear-gradient(180deg,#FFF8E1 0%,#FFE0EC 50%,#E4F0FF 100%)", display: "flex", alignItems: "center", justifyContent: "center", padding: 16 }}>
-    <Bgs e={["☀️","🌈","⭐","🦋","🌻"]} />
+  return <div style={{ minHeight: "100vh", background: T.cream, display: "flex", alignItems: "center", justifyContent: "center", padding: 16 }}>
     <div style={{ position: "relative", zIndex: 1, width: "100%", maxWidth: 400 }}>
-      <div style={{ textAlign: "center", marginBottom: 28 }}>
-        <div style={{ fontSize: 48, animation: "bIn .6s" }}>☀️</div>
-        <h1 style={{ fontSize: 36, fontWeight: 900, fontFamily: FN, background: "linear-gradient(135deg,#FF8C42,#FF6B6B,#B983FF)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>¡Hola, Amigo!</h1>
-        <p style={{ fontSize: 14, color: "#666", fontFamily: FN }}>Your family's Spanish adventure</p>
+      <div style={{ textAlign: "center", marginBottom: 26 }}>
+        <div style={{ display: "flex", justifyContent: "center", gap: 8, marginBottom: 8, animation: "bIn .6s" }}><Sol size={58} /><Luna size={58} /></div>
+        <h1 style={{ fontSize: 38, fontWeight: 800, fontFamily: FD, color: T.ink }}>¡Hola, <span style={{ color: T.sun }}>Amigo!</span></h1>
+        <p style={{ fontSize: 14, color: T.muted, fontFamily: FN, fontWeight: 700 }}>Your family's Spanish adventure</p>
       </div>
-      <div style={{ background: "#fff", borderRadius: 24, padding: "28px 24px", boxShadow: "0 8px 32px rgba(0,0,0,.08)" }}>
-        <div style={{ fontSize: 12, color: "#888", fontFamily: FN, textAlign: "center", marginBottom: 14 }}>👨‍👩‍👧‍👦 Parent account — you'll add your children next</div>
-        <div style={{ display: "flex", gap: 4, marginBottom: 20, background: "#f5f5f5", borderRadius: 12, padding: 4 }}>
-          {["login", "signup"].map(m => <button key={m} onClick={() => { setMode(m); setError(""); }} style={{ flex: 1, padding: 10, borderRadius: 10, border: "none", fontFamily: FN, fontWeight: 700, fontSize: 14, cursor: "pointer", background: mode === m ? "#fff" : "transparent", color: mode === m ? "#1E3A5F" : "#999", boxShadow: mode === m ? "0 2px 8px rgba(0,0,0,.08)" : "none", transition: "all .2s" }}>{m === "login" ? "Log In" : "Sign Up"}</button>)}
+      <div style={{ background: "#fff", borderRadius: 22, padding: "26px 22px", border: `2px solid ${T.line}`, boxShadow: `0 5px 0 ${T.line}` }}>
+        <div style={{ fontSize: 12, color: T.muted, fontFamily: FN, fontWeight: 700, textAlign: "center", marginBottom: 14 }}>👨‍👩‍👧‍👦 Parent account — you'll add your children next</div>
+        <div style={{ display: "flex", gap: 4, marginBottom: 20, background: T.cream, borderRadius: 14, padding: 4, border: `2px solid ${T.line}` }}>
+          {["login", "signup"].map(m => <button key={m} onClick={() => { setMode(m); setError(""); }} style={{ flex: 1, padding: 10, borderRadius: 10, border: "none", fontFamily: FN, fontWeight: 900, fontSize: 13, textTransform: "uppercase", letterSpacing: 0.6, cursor: "pointer", background: mode === m ? T.sun : "transparent", color: mode === m ? "#fff" : T.muted, boxShadow: mode === m ? `0 3px 0 ${T.sunDark}` : "none", transition: "all .2s" }}>{m === "login" ? "Log In" : "Sign Up"}</button>)}
         </div>
         {mode === "signup" && <Input label="Parent's Name" placeholder="e.g. Ant" value={name} onChange={e => setName(e.target.value)} />}
         <Input label="Email" placeholder="your@email.com" type="email" value={email} onChange={e => setEmail(e.target.value)} />
         <Input label="Password" placeholder="••••••" type="password" value={pass} onChange={e => setPass(e.target.value)} />
-        {error && <div style={{ color: "#FF6B6B", fontSize: 13, fontFamily: FN, marginBottom: 12, textAlign: "center" }}>{error}</div>}
-        <Btn full onClick={mode === "login" ? handleLogin : handleSignup} bg="linear-gradient(135deg,#FF8C42,#FF6B6B)" color="#fff" border="transparent" style={{ marginTop: 4 }}>
+        {error && <div style={{ color: T.red, fontSize: 13, fontWeight: 700, fontFamily: FN, marginBottom: 12, textAlign: "center" }}>{error}</div>}
+        <Btn full onClick={mode === "login" ? handleLogin : handleSignup} bg={T.sun} color="#fff" edge={T.sunDark} style={{ marginTop: 4 }}>
           {mode === "login" ? "Log In 🚀" : "Create Account 🌟"}
         </Btn>
       </div>
-      <p style={{ textAlign: "center", marginTop: 16, fontSize: 12, color: "#999", fontFamily: FN }}>
+      <p style={{ textAlign: "center", marginTop: 16, fontSize: 12, color: T.muted, fontFamily: FN, fontWeight: 700 }}>
         {mode === "login" ? "Don't have an account? " : "Already have an account? "}
-        <span onClick={() => { setMode(mode === "login" ? "signup" : "login"); setError(""); }} style={{ color: "#4D96FF", cursor: "pointer", fontWeight: 700 }}>{mode === "login" ? "Sign up!" : "Log in!"}</span>
+        <span onClick={() => { setMode(mode === "login" ? "signup" : "login"); setError(""); }} style={{ color: T.luna, cursor: "pointer", fontWeight: 900 }}>{mode === "login" ? "Sign up!" : "Log in!"}</span>
       </p>
     </div>
   </div>;
@@ -995,18 +1028,18 @@ function AddChildModal({ onClose, onAdd }) {
     if (!name.trim()) return setError("Please enter a name!");
     onAdd(name.trim(), avatar);
   };
-  return <div onClick={onClose} style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,.5)", zIndex: 100, display: "flex", alignItems: "center", justifyContent: "center", padding: 16 }}>
-    <div onClick={e => e.stopPropagation()} style={{ background: "#fff", borderRadius: 20, padding: 22, maxWidth: 380, width: "100%", boxShadow: "0 20px 60px rgba(0,0,0,.2)", animation: "bIn .3s" }}>
-      <h3 style={{ fontSize: 20, fontWeight: 900, fontFamily: FN, color: "#1E3A5F", marginBottom: 14, textAlign: "center" }}>Add a child 🌟</h3>
+  return <div onClick={onClose} style={{ position: "fixed", inset: 0, background: "rgba(34,27,74,.55)", zIndex: 100, display: "flex", alignItems: "center", justifyContent: "center", padding: 16 }}>
+    <div onClick={e => e.stopPropagation()} style={{ background: "#fff", borderRadius: 22, padding: 22, maxWidth: 380, width: "100%", border: `2px solid ${T.line}`, boxShadow: `0 6px 0 ${T.line}`, animation: "bIn .3s" }}>
+      <h3 style={{ fontSize: 22, fontWeight: 800, fontFamily: FD, color: T.ink, marginBottom: 14, textAlign: "center" }}>Add a child 🌟</h3>
       <Input label="Child's name" placeholder="e.g. Sol" value={name} onChange={e => setName(e.target.value)} />
-      <div style={{ fontSize: 13, fontWeight: 700, color: "#666", fontFamily: FN, marginBottom: 6 }}>Choose an avatar</div>
+      <div style={{ fontSize: 12, fontWeight: 800, color: T.muted, fontFamily: FN, marginBottom: 6, textTransform: "uppercase", letterSpacing: 0.8 }}>Choose an avatar</div>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(8, 1fr)", gap: 4, marginBottom: 14 }}>
-        {AVATARS.map(a => <button key={a} onClick={() => setAvatar(a)} style={{ fontSize: 22, padding: 6, background: avatar === a ? "#FFF3E8" : "#fff", border: `2px solid ${avatar === a ? "#FF8C42" : "#e8e8e8"}`, borderRadius: 10, cursor: "pointer" }}>{a}</button>)}
+        {AVATARS.map(a => <button key={a} onClick={() => setAvatar(a)} style={{ fontSize: 22, padding: 6, background: avatar === a ? T.sunLight : "#fff", border: `2px solid ${avatar === a ? T.sun : T.line}`, borderRadius: 10, cursor: "pointer", boxShadow: avatar === a ? `0 2px 0 ${T.sunDark}` : "none" }}>{a}</button>)}
       </div>
-      {error && <div style={{ color: "#FF6B6B", fontSize: 13, fontFamily: FN, marginBottom: 10, textAlign: "center" }}>{error}</div>}
+      {error && <div style={{ color: T.red, fontSize: 13, fontWeight: 700, fontFamily: FN, marginBottom: 10, textAlign: "center" }}>{error}</div>}
       <div style={{ display: "flex", gap: 8 }}>
         <Btn onClick={onClose} full>Cancel</Btn>
-        <Btn onClick={submit} bg="linear-gradient(135deg,#FF8C42,#FF6B6B)" color="#fff" border="transparent" full>Add ✓</Btn>
+        <Btn onClick={submit} bg={T.sun} color="#fff" edge={T.sunDark} full>Add ✓</Btn>
       </div>
     </div>
   </div>;
@@ -1020,32 +1053,31 @@ function ChildPicker({ parent, onPickChild, onViewDashboard, onLogout, refresh }
     setShowAdd(false);
     refresh();
   };
-  return <div style={{ minHeight: "100vh", background: "linear-gradient(180deg,#FFF8E1 0%,#FFE0EC 50%,#E4F0FF 100%)" }}>
-    <Bgs e={["☀️","🌈","⭐","🦋","🌻","🎈"]} />
-    <div style={{ position: "relative", zIndex: 1, maxWidth: 500, margin: "0 auto", padding: "16px 16px 50px" }}>
+  return <div style={{ minHeight: "100vh", background: T.cream }}>
+    <div style={{ position: "relative", zIndex: 1, maxWidth: 500, margin: "0 auto", padding: "22px 16px 50px" }}>
       <div style={{ textAlign: "center", marginBottom: 24 }}>
-        <div style={{ fontSize: 44, animation: "bIn .5s" }}>☀️</div>
-        <h1 style={{ fontSize: 32, fontWeight: 900, fontFamily: FN, background: "linear-gradient(135deg,#FF8C42,#FF6B6B,#B983FF)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>¡Hola, Amigo!</h1>
-        <p style={{ fontSize: 13, color: "#666", fontFamily: FN }}>Welcome, {parent.name}! Who's learning today?</p>
+        <div style={{ display: "flex", justifyContent: "center", gap: 8, marginBottom: 8, animation: "bIn .5s" }}><Sol size={50} /><Luna size={50} /></div>
+        <h1 style={{ fontSize: 32, fontWeight: 800, fontFamily: FD, color: T.ink }}>¡Hola, <span style={{ color: T.sun }}>Amigo!</span></h1>
+        <p style={{ fontSize: 13, color: T.muted, fontFamily: FN, fontWeight: 700 }}>Welcome, {parent.name}! Who's learning today?</p>
       </div>
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 16 }}>
         {children.map(c => {
           const p = db.getProgress(c.id);
           const totalStars = Object.values(p.stars || {}).reduce((a,b) => a+b, 0);
-          return <button key={c.id} onClick={() => onPickChild(c)} style={{ background: "#fff", border: "none", borderRadius: 20, padding: "20px 12px", cursor: "pointer", boxShadow: "0 4px 16px rgba(0,0,0,.06)", animation: "cPop .3s ease-out backwards" }}>
+          return <button key={c.id} onClick={() => onPickChild(c)} style={{ background: "#fff", border: `2px solid ${T.line}`, borderRadius: 20, padding: "20px 12px", cursor: "pointer", boxShadow: `0 5px 0 ${T.line}`, animation: "cPop .3s ease-out backwards" }}>
             <div style={{ fontSize: 56 }}>{c.avatar}</div>
-            <div style={{ fontSize: 16, fontWeight: 900, color: "#1E3A5F", fontFamily: FN, marginTop: 4 }}>{c.name}</div>
-            <div style={{ fontSize: 12, color: "#888", fontFamily: FN, marginTop: 2 }}>⭐ {totalStars} · {Object.keys(p.stars || {}).length} lessons</div>
-            {p.streak > 0 && <div style={{ fontSize: 11, color: "#FF6B6B", fontFamily: FN, marginTop: 2, fontWeight: 700 }}>🔥 {p.streak} day streak</div>}
+            <div style={{ fontSize: 17, fontWeight: 800, color: T.ink, fontFamily: FD, marginTop: 4 }}>{c.name}</div>
+            <div style={{ fontSize: 12, color: T.muted, fontFamily: FN, fontWeight: 700, marginTop: 2 }}>⭐ {totalStars} · {Object.keys(p.stars || {}).length} lessons</div>
+            {p.streak > 0 && <div style={{ fontSize: 11, color: "#FF7A00", fontFamily: FN, marginTop: 2, fontWeight: 900 }}>🔥 {p.streak} day streak</div>}
           </button>;
         })}
-        <button onClick={() => setShowAdd(true)} style={{ background: "rgba(255,255,255,.5)", border: "3px dashed #FF8C42", borderRadius: 20, padding: "20px 12px", cursor: "pointer", color: "#FF8C42", fontFamily: FN, fontWeight: 700 }}>
-          <div style={{ fontSize: 48 }}>+</div>
-          <div style={{ fontSize: 13, marginTop: 4 }}>Add child</div>
+        <button onClick={() => setShowAdd(true)} style={{ background: T.sunLight, border: `3px dashed ${T.sun}`, borderRadius: 20, padding: "20px 12px", cursor: "pointer", color: T.sunDark, fontFamily: FN, fontWeight: 800 }}>
+          <div style={{ fontSize: 48, lineHeight: 1 }}>+</div>
+          <div style={{ fontSize: 13, marginTop: 4, textTransform: "uppercase", letterSpacing: 0.6 }}>Add child</div>
         </button>
       </div>
-      {children.length > 0 && <Btn onClick={onViewDashboard} full bg="#fff" border="#4D96FF" color="#4D96FF" style={{ marginBottom: 10 }}>📊 View Parent Dashboard</Btn>}
-      <Btn onClick={onLogout} full bg="#fff" border="#e0e0e0" color="#999">Log Out</Btn>
+      {children.length > 0 && <Btn onClick={onViewDashboard} full bg={T.luna} color="#fff" edge={T.lunaDark} style={{ marginBottom: 10 }}>📊 Parent Dashboard</Btn>}
+      <Btn onClick={onLogout} full>Log Out</Btn>
     </div>
     {showAdd && <AddChildModal onClose={() => setShowAdd(false)} onAdd={handleAdd} />}
   </div>;
@@ -1065,16 +1097,15 @@ function ParentDashboard({ parent, onBack }) {
     setRefresh(r => r + 1);
   };
 
-  return <div style={{ minHeight: "100vh", background: "linear-gradient(180deg,#FFF8E1,#E4F0FF)", padding: "16px 16px 40px" }}>
-    <Bgs e={["📊","⭐","📈"]} />
+  return <div style={{ minHeight: "100vh", background: T.cream, padding: "16px 16px 40px" }}>
     <div style={{ position: "relative", zIndex: 1, maxWidth: 520, margin: "0 auto" }}>
-      <Btn onClick={onBack} style={{ marginBottom: 16, fontSize: 13 }}>← Back</Btn>
+      <Btn onClick={onBack} style={{ marginBottom: 16, fontSize: 12, padding: "10px 18px" }}>← Back</Btn>
       <div style={{ textAlign: "center", marginBottom: 20 }}>
         <div style={{ fontSize: 40 }}>📊</div>
-        <h2 style={{ fontSize: 26, fontWeight: 900, fontFamily: FN, color: "#1E3A5F" }}>Parent Dashboard</h2>
-        <p style={{ fontSize: 13, color: "#888", fontFamily: FN }}>{children.length} {children.length === 1 ? "child" : "children"} · {parent.name}</p>
+        <h2 style={{ fontSize: 28, fontWeight: 800, fontFamily: FD, color: T.ink }}>Parent Dashboard</h2>
+        <p style={{ fontSize: 13, color: T.muted, fontFamily: FN, fontWeight: 700 }}>{children.length} {children.length === 1 ? "child" : "children"} · {parent.name}</p>
       </div>
-      {children.length === 0 && <div style={{ background: "#fff", borderRadius: 20, padding: 30, textAlign: "center", boxShadow: "0 3px 12px rgba(0,0,0,.05)" }}><div style={{ fontSize: 40, marginBottom: 10 }}>👶</div><p style={{ fontFamily: FN, color: "#888" }}>No children yet! Add one to start tracking progress.</p></div>}
+      {children.length === 0 && <div style={{ background: "#fff", borderRadius: 20, padding: 30, textAlign: "center", border: `2px solid ${T.line}`, boxShadow: `0 5px 0 ${T.line}` }}><div style={{ fontSize: 40, marginBottom: 10 }}>👶</div><p style={{ fontFamily: FN, fontWeight: 700, color: T.muted }}>No children yet! Add one to start tracking progress.</p></div>}
       {children.map(c => {
         const p = db.getProgress(c.id);
         const totalStars = Object.values(p.stars || {}).reduce((a,b) => a+b, 0);
@@ -1084,58 +1115,57 @@ function ParentDashboard({ parent, onBack }) {
         const lastActive = p.lastActive ? new Date(p.lastActive) : null;
         const daysAgo = lastActive ? Math.floor((Date.now() - lastActive.getTime()) / 86400000) : null;
         const activeLabel = lastActive ? (daysAgo === 0 ? "Active today" : daysAgo === 1 ? "Yesterday" : `${daysAgo} days ago`) : "Not started yet";
-        // Per-world progress
-        const worldProgress = [1,2,3,4].map(w => {
-          const r = [[1,8],[9,16],[17,24],[25,32]][w-1];
-          let stars = 0;
-          for (let i = r[0]; i <= r[1]; i++) stars += (p.stars || {})[i] || 0;
-          return { world: w, stars, max: (r[1]-r[0]+1)*3 };
+        // Per-world progress across all 12 worlds
+        const worldProgress = WORLDS.map(w => {
+          let starsSum = 0;
+          for (let i = w.range[0]; i <= w.range[1]; i++) starsSum += (p.stars || {})[i] || 0;
+          return { world: w, stars: starsSum, max: (w.range[1]-w.range[0]+1)*3 };
         });
-        return <div key={c.id} style={{ background: "#fff", borderRadius: 20, padding: 18, marginBottom: 14, boxShadow: "0 3px 12px rgba(0,0,0,.05)" }}>
+        return <div key={c.id} style={{ background: "#fff", borderRadius: 20, padding: 18, marginBottom: 14, border: `2px solid ${T.line}`, boxShadow: `0 5px 0 ${T.line}` }}>
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 14 }}>
             <div style={{ fontSize: 42 }}>{c.avatar}</div>
             <div style={{ flex: 1 }}>
-              <div style={{ fontSize: 18, fontWeight: 900, fontFamily: FN, color: "#1E3A5F" }}>{c.name}</div>
-              <div style={{ fontSize: 12, color: "#888", fontFamily: FN }}>{activeLabel} · 🔥 {p.streak || 0} day streak</div>
+              <div style={{ fontSize: 19, fontWeight: 800, fontFamily: FD, color: T.ink }}>{c.name}</div>
+              <div style={{ fontSize: 12, color: T.muted, fontFamily: FN, fontWeight: 700 }}>{activeLabel} · 🔥 {p.streak || 0} day streak</div>
             </div>
-            <button onClick={() => setDelChild(c)} title="Remove child" style={{ background: "transparent", border: "none", color: "#FF6B6B", cursor: "pointer", fontSize: 18, padding: 4 }}>🗑️</button>
+            <button onClick={() => setDelChild(c)} title="Remove child" style={{ background: "transparent", border: "none", color: T.red, cursor: "pointer", fontSize: 18, padding: 4 }}>🗑️</button>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 8, marginBottom: 12 }}>
-            <div style={{ textAlign: "center", background: "#FFF8E1", borderRadius: 12, padding: "10px 4px" }}>
-              <div style={{ fontSize: 20, fontWeight: 900, color: "#FF8C42", fontFamily: FN }}>{totalStars}</div>
-              <div style={{ fontSize: 9, color: "#999", fontFamily: FN }}>⭐ Stars</div>
+            <div style={{ textAlign: "center", background: T.sunLight, borderRadius: 12, padding: "10px 4px" }}>
+              <div style={{ fontSize: 20, fontWeight: 900, color: T.sunDark, fontFamily: FN }}>{totalStars}</div>
+              <div style={{ fontSize: 9, color: T.muted, fontFamily: FN, fontWeight: 800, textTransform: "uppercase" }}>⭐ Stars</div>
             </div>
-            <div style={{ textAlign: "center", background: "#E8F8EA", borderRadius: 12, padding: "10px 4px" }}>
-              <div style={{ fontSize: 20, fontWeight: 900, color: "#6BCB77", fontFamily: FN }}>{completedLessons}/32</div>
-              <div style={{ fontSize: 9, color: "#999", fontFamily: FN }}>Lessons</div>
+            <div style={{ textAlign: "center", background: "#E9F8EC", borderRadius: 12, padding: "10px 4px" }}>
+              <div style={{ fontSize: 20, fontWeight: 900, color: T.green, fontFamily: FN }}>{completedLessons}/{LESSONS.length}</div>
+              <div style={{ fontSize: 9, color: T.muted, fontFamily: FN, fontWeight: 800, textTransform: "uppercase" }}>Lessons</div>
             </div>
-            <div style={{ textAlign: "center", background: "#F3EAFF", borderRadius: 12, padding: "10px 4px" }}>
-              <div style={{ fontSize: 20, fontWeight: 900, color: "#B983FF", fontFamily: FN }}>{badgeCount}</div>
-              <div style={{ fontSize: 9, color: "#999", fontFamily: FN }}>Badges</div>
+            <div style={{ textAlign: "center", background: T.lunaLight, borderRadius: 12, padding: "10px 4px" }}>
+              <div style={{ fontSize: 20, fontWeight: 900, color: T.luna, fontFamily: FN }}>{badgeCount}</div>
+              <div style={{ fontSize: 9, color: T.muted, fontFamily: FN, fontWeight: 800, textTransform: "uppercase" }}>Badges</div>
             </div>
           </div>
           <div style={{ marginBottom: 4 }}>
-            {worldProgress.map(wp => <div key={wp.world} style={{ marginBottom: 6 }}>
-              <div style={{ display: "flex", justifyContent: "space-between", fontSize: 11, color: "#666", fontFamily: FN, marginBottom: 2 }}>
-                <span>{WORLDS[wp.world-1].emoji} {WORLDS[wp.world-1].name}</span>
-                <span>{wp.stars}/{wp.max} ⭐</span>
+            {worldProgress.map(wp => <div key={wp.world.id} style={{ marginBottom: 6 }}>
+              <div style={{ display: "flex", justifyContent: "space-between", fontSize: 11, color: T.ink, fontFamily: FN, fontWeight: 700, marginBottom: 2 }}>
+                <span>{wp.world.emoji} {wp.world.name}</span>
+                <span style={{ color: T.muted }}>{wp.stars}/{wp.max} ⭐</span>
               </div>
-              <div style={{ background: "#f0f0f0", borderRadius: 50, height: 6, overflow: "hidden" }}>
-                <div style={{ height: "100%", width: `${(wp.stars/wp.max)*100}%`, background: WORLDS[wp.world-1].color, transition: "width .5s" }} />
+              <div style={{ background: T.line, borderRadius: 50, height: 7, overflow: "hidden" }}>
+                <div style={{ height: "100%", width: `${(wp.stars/wp.max)*100}%`, background: wp.world.color, transition: "width .5s", borderRadius: 50 }} />
               </div>
             </div>)}
           </div>
-          {perfectLessons > 0 && <div style={{ fontSize: 11, color: "#6BCB77", fontFamily: FN, textAlign: "center", marginTop: 6, fontWeight: 700 }}>⭐⭐⭐ Perfect on {perfectLessons} {perfectLessons === 1 ? "lesson" : "lessons"}!</div>}
+          {perfectLessons > 0 && <div style={{ fontSize: 11, color: T.green, fontFamily: FN, textAlign: "center", marginTop: 6, fontWeight: 900 }}>⭐⭐⭐ Perfect on {perfectLessons} {perfectLessons === 1 ? "lesson" : "lessons"}!</div>}
         </div>;
       })}
-      {delChild && <div onClick={() => setDelChild(null)} style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,.5)", zIndex: 100, display: "flex", alignItems: "center", justifyContent: "center", padding: 16 }}>
-        <div onClick={e => e.stopPropagation()} style={{ background: "#fff", borderRadius: 20, padding: 22, maxWidth: 360, width: "100%", textAlign: "center" }}>
+      {delChild && <div onClick={() => setDelChild(null)} style={{ position: "fixed", inset: 0, background: "rgba(34,27,74,.55)", zIndex: 100, display: "flex", alignItems: "center", justifyContent: "center", padding: 16 }}>
+        <div onClick={e => e.stopPropagation()} style={{ background: "#fff", borderRadius: 20, padding: 22, maxWidth: 360, width: "100%", textAlign: "center", border: `2px solid ${T.line}`, boxShadow: `0 6px 0 ${T.line}` }}>
           <div style={{ fontSize: 40, marginBottom: 8 }}>⚠️</div>
-          <h3 style={{ fontSize: 18, fontWeight: 900, fontFamily: FN, color: "#1E3A5F", marginBottom: 8 }}>Remove {delChild.name}?</h3>
-          <p style={{ fontSize: 13, color: "#888", fontFamily: FN, marginBottom: 14 }}>This will delete all their progress. This cannot be undone.</p>
+          <h3 style={{ fontSize: 20, fontWeight: 800, fontFamily: FD, color: T.ink, marginBottom: 8 }}>Remove {delChild.name}?</h3>
+          <p style={{ fontSize: 13, color: T.muted, fontFamily: FN, fontWeight: 700, marginBottom: 14 }}>This will delete all their progress. This cannot be undone.</p>
           <div style={{ display: "flex", gap: 8 }}>
             <Btn onClick={() => setDelChild(null)} full>Cancel</Btn>
-            <Btn onClick={doDelete} bg="#FF6B6B" color="#fff" border="transparent" full>Remove</Btn>
+            <Btn onClick={doDelete} bg={T.red} color="#fff" edge={T.redDark} full>Remove</Btn>
           </div>
         </div>
       </div>}
@@ -1265,252 +1295,189 @@ export default function App() {
   // ============================================================
   // HOME SCREEN (child's learning hub)
   // ============================================================
-  if (screen === "home") return <div style={{ minHeight: "100vh", background: "linear-gradient(180deg,#0B1A3A 0%,#14275A 40%,#1E3A70 100%)", color: "#fff" }}>
-    <Starfield />
+  if (screen === "home") return <div style={{ minHeight: "100vh", background: T.cream, color: T.ink }}>
     <Confetti active={conf} />
     {newBadge && <BadgeToast badge={newBadge} onClose={() => setNewBadge(null)} />}
-    <div style={{ position: "relative", zIndex: 1, maxWidth: 560, margin: "0 auto", padding: "14px 14px 60px" }}>
-      {/* Top bar: Sol & Luna mascots on left, action buttons on right */}
-      <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", marginBottom: 18 }}>
-        <div>
-          <div style={{ fontSize: 11, fontWeight: 700, color: "#FFD93D", fontFamily: FN, textTransform: "uppercase", letterSpacing: 1.2, marginBottom: 4, opacity: 0.85 }}>Our friends</div>
-          <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
-            <Sol size={54} />
-            <Luna size={54} />
-          </div>
-          <div style={{ fontSize: 13, fontWeight: 900, color: "#fff", fontFamily: FN, marginTop: 4 }}>Sol y Luna</div>
-        </div>
-        <div style={{ display: "flex", gap: 6 }}>
-          <button onClick={() => go("profile")} title="Profile" style={{ background: "rgba(255,255,255,0.1)", border: "2px solid rgba(255,255,255,0.2)", borderRadius: 12, padding: "8px 12px", fontSize: 14, fontFamily: FN, color: "#fff", cursor: "pointer", backdropFilter: "blur(10px)" }}>⚙️</button>
-          <button onClick={backToChildPicker} title="Switch child" style={{ background: "rgba(255,255,255,0.1)", border: "2px solid rgba(255,255,255,0.2)", borderRadius: 12, padding: "8px 12px", fontSize: 14, fontFamily: FN, color: "#fff", cursor: "pointer", backdropFilter: "blur(10px)" }}>👥</button>
-        </div>
-      </div>
 
-      {/* Child greeting */}
-      <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 14, background: "rgba(255,255,255,0.08)", borderRadius: 16, padding: "10px 14px", border: "1px solid rgba(255,255,255,0.1)" }}>
-        <div style={{ fontSize: 32 }}>{child.avatar}</div>
-        <div>
-          <div style={{ fontSize: 14, fontWeight: 800, color: "#fff", fontFamily: FN }}>¡Hola, {child.name}! 👋</div>
-          {progress.streak > 0 && <div style={{ fontSize: 11, color: "#FFD93D", fontFamily: FN, fontWeight: 700 }}>🔥 {progress.streak} day streak!</div>}
-        </div>
-      </div>
-
-      {/* Title */}
-      <div style={{ textAlign: "center", marginBottom: 18 }}>
-        <h1 style={{ fontSize: 34, fontWeight: 900, fontFamily: FN, background: "linear-gradient(135deg,#FFD93D,#FF8C42,#FF9EC7)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", marginBottom: 2 }}>¡Hola, Amigo!</h1>
-        <p style={{ fontSize: 12, color: "rgba(255,255,255,0.7)", fontFamily: FN }}>Follow the golden path to learn Spanish!</p>
-      </div>
-
-      {/* Stats bar */}
-      <div style={{ background: "rgba(255,255,255,0.08)", borderRadius: 16, padding: "10px 14px", marginBottom: 20, display: "flex", alignItems: "center", justifyContent: "space-around", border: "1px solid rgba(255,255,255,0.1)" }}>
-        <div style={{ textAlign: "center" }}>
-          <div style={{ fontSize: 18, fontWeight: 900, color: "#FFD93D", fontFamily: FN }}>⭐ {totalStars}</div>
-          <div style={{ fontSize: 9, color: "rgba(255,255,255,0.6)", fontFamily: FN, textTransform: "uppercase", fontWeight: 700 }}>Stars</div>
-        </div>
-        <div style={{ width: 1, height: 28, background: "rgba(255,255,255,0.15)" }} />
-        <button onClick={() => setScreen("badges")} style={{ textAlign: "center", background: "none", border: "none", cursor: "pointer", padding: 0 }}>
-          <div style={{ fontSize: 18, fontWeight: 900, color: "#B983FF", fontFamily: FN }}>🏆 {(progress.badges || []).length}</div>
-          <div style={{ fontSize: 9, color: "rgba(255,255,255,0.6)", fontFamily: FN, textTransform: "uppercase", fontWeight: 700 }}>Badges</div>
+    {/* Sticky stat bar */}
+    <div style={{ position: "sticky", top: 0, zIndex: 20, background: "#fff", borderBottom: `2px solid ${T.line}` }}>
+      <div style={{ maxWidth: 560, margin: "0 auto", padding: "10px 14px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8 }}>
+        <button onClick={() => go("profile")} title="Profile" style={{ display: "flex", alignItems: "center", gap: 7, background: "none", border: "none", cursor: "pointer", padding: 0 }}>
+          <div style={{ fontSize: 28, lineHeight: 1 }}>{child.avatar}</div>
+          <div style={{ fontSize: 14, fontWeight: 800, color: T.ink, fontFamily: FN }}>{child.name}</div>
         </button>
-      </div>
-
-      {/* Badges quick button */}
-      <div style={{ marginBottom: 22 }}>
-        <button onClick={() => setScreen("badges")} style={{ width: "100%", background: "linear-gradient(135deg,#B983FF,#4D96FF)", border: "none", borderRadius: 14, padding: "11px", color: "#fff", fontWeight: 900, fontSize: 13, fontFamily: FN, cursor: "pointer", boxShadow: "0 4px 14px rgba(185,131,255,.35)" }}>🏆 Trophies</button>
-      </div>
-
-      {/* YELLOW BRICK ROAD — curving SVG path with stones along the way */}
-      <div style={{ position: "relative", padding: "12px 0" }}>
-        {WORLDS.map((w) => {
-          const ls = LESSONS.filter(l => l.id >= w.range[0] && l.id <= w.range[1]);
-          const ws = ls.reduce((a, l) => a + (stars[l.id] || 0), 0);
-          const wsMax = ls.length * 3;
-
-          // Layout params
-          const stoneGap = 130;      // vertical spacing between stones
-          const topPad = 40;          // padding above first stone
-          const bottomPad = 40;       // padding below last stone
-          const leftX = 20;           // % from left (outer left stones)
-          const rightX = 80;          // % from left (outer right stones)
-          const containerHeight = ls.length * stoneGap + topPad + bottomPad;
-
-          // Build stone positions
-          const stones = ls.map((l, i) => ({
-            lesson: l,
-            x: i % 2 === 0 ? leftX : rightX,
-            y: topPad + (i + 0.5) * stoneGap,
-            isLeft: i % 2 === 0,
-          }));
-
-          // Build smooth SVG path connecting stones via cubic Bezier
-          // Each segment: previous stone → next stone with control points pulled
-          // along the y-axis to create an S-shape between alternating x positions.
-          let d = "";
-          stones.forEach((p, i) => {
-            if (i === 0) {
-              // Start from above the first stone, descending into it
-              d += `M ${p.x} ${topPad - 10}`;
-              d += ` L ${p.x} ${p.y}`;
-            } else {
-              const prev = stones[i - 1];
-              // Control points: at midY, pulled towards each end's x to create a smooth wave
-              const c1x = prev.x;
-              const c1y = (prev.y + p.y) / 2;
-              const c2x = p.x;
-              const c2y = (prev.y + p.y) / 2;
-              d += ` C ${c1x} ${c1y}, ${c2x} ${c2y}, ${p.x} ${p.y}`;
-            }
-          });
-          // Tail beyond last stone
-          const last = stones[stones.length - 1];
-          d += ` L ${last.x} ${last.y + 20}`;
-
-          return <div key={w.id} style={{ marginBottom: 16 }}>
-            {/* World banner */}
-            <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 14, padding: "10px 14px", background: `linear-gradient(90deg, ${w.color}40, transparent)`, borderRadius: 14, border: `1px solid ${w.color}80` }}>
-              <div style={{ fontSize: 30 }}>{w.emoji}</div>
-              <div>
-                <div style={{ fontSize: 15, fontWeight: 900, color: w.color, fontFamily: FN, textShadow: "0 1px 3px rgba(0,0,0,0.3)" }}>{w.name}</div>
-                <div style={{ fontSize: 10, color: "rgba(255,255,255,0.7)", fontFamily: FN }}>{w.desc} · {ws}/{wsMax} ⭐</div>
-              </div>
-            </div>
-
-            {/* Path container — SVG plus absolutely-positioned stones */}
-            <div style={{ position: "relative", height: containerHeight, width: "100%" }}>
-              {/* The road (SVG) — drawn behind the stones */}
-              <svg
-                viewBox={`0 0 100 ${containerHeight}`}
-                preserveAspectRatio="none"
-                width="100%"
-                height={containerHeight}
-                style={{ position: "absolute", inset: 0, zIndex: 0, overflow: "visible" }}
-              >
-                <defs>
-                  <linearGradient id={`road-${w.id}`} x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stopColor="#FFE580" />
-                    <stop offset="50%" stopColor="#FFD93D" />
-                    <stop offset="100%" stopColor="#FFB12B" />
-                  </linearGradient>
-                </defs>
-                {/* Outer dark edge (depth) */}
-                <path d={d} fill="none" stroke="#6B4F0E" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round" vectorEffect="non-scaling-stroke" opacity="0.5" />
-                {/* Yellow brick surface */}
-                <path d={d} fill="none" stroke={`url(#road-${w.id})`} strokeWidth="12" strokeLinecap="round" strokeLinejoin="round" vectorEffect="non-scaling-stroke" />
-                {/* Highlight glow strip */}
-                <path d={d} fill="none" stroke="#FFF4C7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" vectorEffect="non-scaling-stroke" opacity="0.8" />
-                {/* Brick dashes for texture */}
-                <path d={d} fill="none" stroke="#9B6B0E" strokeWidth="10" strokeLinecap="butt" strokeDasharray="2 14" vectorEffect="non-scaling-stroke" opacity="0.4" />
-              </svg>
-
-              {/* Lesson stones positioned absolutely */}
-              {stones.map((stone, i) => {
-                const l = stone.lesson;
-                const s = stars[l.id] || 0;
-                const ch = [16, 24, 32, 40, 50, 60, 68, 76, 84, 92, 100].includes(l.id);
-                const earnedSome = s > 0;
-                const completedLessonIds = Object.keys(stars).map(Number);
-                const maxCompleted = completedLessonIds.length ? Math.max(...completedLessonIds) : 0;
-                const isUnlocked = l.id === 1 || l.id <= maxCompleted + 1;
-                const stoneSize = ch ? 100 : 86;
-
-                return <div
-                  key={l.id}
-                  style={{
-                    position: "absolute",
-                    top: `${stone.y - stoneSize / 2}px`,
-                    left: `${stone.x}%`,
-                    transform: "translateX(-50%)",
-                    zIndex: 1,
-                  }}
-                >
-                  <button
-                    onClick={() => isUnlocked && go("lesson", LESSONS.indexOf(l))}
-                    disabled={!isUnlocked}
-                    style={{
-                      position: "relative",
-                      width: stoneSize, height: stoneSize,
-                      borderRadius: ch ? 22 : "50%",
-                      background: !isUnlocked
-                        ? "linear-gradient(135deg,#2a3a5f,#1a2a4a)"
-                        : ch
-                          ? "linear-gradient(135deg,#FFE580,#FFB12B,#FF8C42)"
-                          : earnedSome
-                            ? "linear-gradient(135deg,#FFE580,#FFD93D,#FFB12B)"
-                            : "linear-gradient(135deg,#F5E0A0,#E3C97B)",
-                      border: ch ? "4px solid #FFF4C7" : earnedSome ? "4px solid #FFF4C7" : "4px solid #D4B868",
-                      cursor: isUnlocked ? "pointer" : "not-allowed",
-                      boxShadow: isUnlocked
-                        ? (ch ? "0 0 24px #FFD93D80, 0 6px 14px rgba(255,140,66,.5)" : earnedSome ? "0 0 16px rgba(255,217,61,.6), 0 4px 10px rgba(255,140,66,.4)" : "0 4px 10px rgba(0,0,0,0.3)")
-                        : "0 2px 6px rgba(0,0,0,0.3)",
-                      padding: 4, fontFamily: FN, color: "#1E3A5F",
-                      transition: "transform .2s", opacity: isUnlocked ? 1 : 0.45,
-                      animation: "cPop .4s ease-out backwards", animationDelay: `${i * 0.04}s`,
-                      display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center",
-                    }}
-                    onMouseEnter={e => { if (isUnlocked) e.currentTarget.style.transform = "scale(1.08)"; }}
-                    onMouseLeave={e => { if (isUnlocked) e.currentTarget.style.transform = "scale(1)"; }}
-                  >
-                    {/* Number badge */}
-                    <div style={{
-                      position: "absolute", top: -8, left: "50%", transform: "translateX(-50%)",
-                      background: ch ? "linear-gradient(135deg,#FF6B6B,#B983FF)" : "#1E3A5F",
-                      color: "#fff", fontSize: 11, fontWeight: 900, fontFamily: FN,
-                      borderRadius: 50, padding: "2px 8px", minWidth: 22, textAlign: "center",
-                      border: "2px solid #FFF4C7", boxShadow: "0 2px 6px rgba(0,0,0,.3)",
-                    }}>{l.id}</div>
-
-                    {!isUnlocked ? (
-                      <div style={{ fontSize: 28 }}>🔒</div>
-                    ) : (
-                      <>
-                        <div style={{ fontSize: ch ? 30 : 26, lineHeight: 1, marginTop: 4 }}>{ch ? "🏆" : l.emoji}</div>
-                        <div style={{ fontSize: 8, fontWeight: 800, color: "#1E3A5F", fontFamily: FN, marginTop: 2, padding: "0 4px", lineHeight: 1.1, textAlign: "center" }}>{l.subtitle}</div>
-                        <div style={{ marginTop: 2, fontSize: 9, letterSpacing: 1 }}>
-                          {[0, 1, 2].map(j => <span key={j} style={{ opacity: j < s ? 1 : 0.25, filter: j < s ? "drop-shadow(0 0 2px #FF8C42)" : "none" }}>⭐</span>)}
-                        </div>
-                      </>
-                    )}
-                  </button>
-                </div>;
-              })}
-            </div>
-          </div>;
-        })}
-      </div>
-
-      {/* Sol & Luna footer message */}
-      <div style={{ textAlign: "center", marginTop: 24, padding: "14px 18px", background: "rgba(255,255,255,0.06)", borderRadius: 16, border: "1px solid rgba(255,255,255,0.1)" }}>
-        <div style={{ display: "flex", justifyContent: "center", gap: 8, marginBottom: 6 }}>
-          <Sol size={34} /><Luna size={34} />
+        <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
+          <div title="Day streak" style={{ display: "flex", alignItems: "center", gap: 4, fontSize: 15, fontWeight: 900, fontFamily: FN, color: "#FF7A00" }}>🔥 {progress.streak || 0}</div>
+          <div title="Stars" style={{ display: "flex", alignItems: "center", gap: 4, fontSize: 15, fontWeight: 900, fontFamily: FN, color: T.sunDark }}>⭐ {totalStars}</div>
+          <button onClick={() => setScreen("badges")} title="Trophies" style={{ display: "flex", alignItems: "center", gap: 4, fontSize: 15, fontWeight: 900, fontFamily: FN, color: T.luna, background: "none", border: "none", cursor: "pointer", padding: 0 }}>🏆 {(progress.badges || []).length}</button>
+          <button onClick={backToChildPicker} title="Switch child" style={{ background: "#fff", border: `2px solid ${T.line}`, borderRadius: 12, padding: "5px 10px", fontSize: 14, cursor: "pointer", boxShadow: `0 3px 0 ${T.line}` }}>👥</button>
         </div>
-        <p style={{ fontSize: 12, color: "rgba(255,255,255,0.75)", fontFamily: FN, fontStyle: "italic", margin: 0 }}>Keep going, {child.name}! Sol y Luna are so proud of you! ✨</p>
       </div>
     </div>
+
+    <div style={{ position: "relative", zIndex: 1, maxWidth: 560, margin: "0 auto", padding: "18px 14px 0" }}>
+      {/* Header: logo + mascots */}
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 18 }}>
+        <div>
+          <h1 style={{ fontSize: 34, fontWeight: 800, fontFamily: FD, color: T.ink, lineHeight: 1.05 }}>¡Hola, <span style={{ color: T.sun }}>Amigo!</span></h1>
+          <p style={{ fontSize: 12, color: T.muted, fontFamily: FN, fontWeight: 700, marginTop: 2 }}>Follow the sun-stones. Learn Spanish!</p>
+        </div>
+        <div style={{ textAlign: "center", background: "#fff", border: `2px solid ${T.line}`, borderRadius: 18, padding: "8px 12px", boxShadow: `0 4px 0 ${T.line}` }}>
+          <div style={{ fontSize: 9, fontWeight: 800, color: T.muted, fontFamily: FN, textTransform: "uppercase", letterSpacing: 1, marginBottom: 2 }}>Our friends</div>
+          <div style={{ display: "flex", gap: 4, justifyContent: "center" }}><Sol size={40} /><Luna size={40} /></div>
+          <div style={{ fontSize: 11, fontWeight: 800, color: T.ink, fontFamily: FD, marginTop: 2 }}>Sol y Luna</div>
+        </div>
+      </div>
+
+      {/* THE PATH — Sol-stones and Luna-gates on a dotted trail */}
+      {WORLDS.map((w) => {
+        const ls = LESSONS.filter(l => l.id >= w.range[0] && l.id <= w.range[1]);
+        const ws = ls.reduce((a, l) => a + (stars[l.id] || 0), 0);
+        const wsMax = ls.length * 3;
+
+        const stoneGap = 112;
+        const topPad = 30;
+        const bottomPad = 26;
+        const leftX = 32;   // gentler wave than before
+        const rightX = 68;
+        const containerHeight = ls.length * stoneGap + topPad + bottomPad;
+
+        const stones = ls.map((l, i) => ({
+          lesson: l,
+          x: i % 2 === 0 ? leftX : rightX,
+          y: topPad + (i + 0.5) * stoneGap,
+        }));
+
+        // Dotted trail path (soft bezier wave between stones)
+        let d = "";
+        stones.forEach((p, i) => {
+          if (i === 0) d += `M ${p.x} ${p.y}`;
+          else {
+            const prev = stones[i - 1];
+            const midY = (prev.y + p.y) / 2;
+            d += ` C ${prev.x} ${midY}, ${p.x} ${midY}, ${p.x} ${p.y}`;
+          }
+        });
+
+        const completedLessonIds = Object.keys(stars).map(Number);
+        const maxCompleted = completedLessonIds.length ? Math.max(...completedLessonIds) : 0;
+
+        return <div key={w.id} style={{ marginBottom: 10 }}>
+          {/* World banner — chunky solid card */}
+          <div style={{ background: w.color, borderRadius: 18, padding: "14px 16px", boxShadow: `0 5px 0 ${darken(w.color)}`, display: "flex", alignItems: "center", gap: 12, marginBottom: 6 }}>
+            <div style={{ fontSize: 32, filter: "drop-shadow(0 2px 0 rgba(0,0,0,0.15))" }}>{w.emoji}</div>
+            <div style={{ flex: 1 }}>
+              <div style={{ fontSize: 17, fontWeight: 800, color: "#fff", fontFamily: FD, lineHeight: 1.1 }}>{w.name}</div>
+              <div style={{ fontSize: 11, color: "rgba(255,255,255,0.9)", fontFamily: FN, fontWeight: 700 }}>{w.desc}</div>
+            </div>
+            <div style={{ background: "rgba(255,255,255,0.25)", borderRadius: 12, padding: "5px 10px", fontSize: 12, fontWeight: 900, fontFamily: FN, color: "#fff", whiteSpace: "nowrap" }}>{ws}/{wsMax} ⭐</div>
+          </div>
+
+          {/* Path container */}
+          <div style={{ position: "relative", height: containerHeight, width: "100%" }}>
+            <svg viewBox={`0 0 100 ${containerHeight}`} preserveAspectRatio="none" width="100%" height={containerHeight}
+              style={{ position: "absolute", inset: 0, zIndex: 0 }}>
+              <path d={d} fill="none" stroke="#E4D9C4" strokeWidth="5" strokeLinecap="round" strokeDasharray="0.1 12" vectorEffect="non-scaling-stroke" />
+            </svg>
+
+            {stones.map((stone, i) => {
+              const l = stone.lesson;
+              const s = stars[l.id] || 0;
+              const ch = [16, 24, 32, 40, 50, 60, 68, 76, 84, 92, 100].includes(l.id);
+              const isUnlocked = l.id === 1 || l.id <= maxCompleted + 1;
+              const isCurrent = isUnlocked && l.id === maxCompleted + 1;
+              const done = s > 0;
+              const stoneSize = ch ? 82 : 72;
+
+              // Sol-stones (amber) for lessons; Luna-gates (indigo) for milestones
+              const face = !isUnlocked ? T.lock : ch ? T.luna : T.sun;
+              const edgeC = !isUnlocked ? T.lockDark : ch ? T.lunaDark : T.sunDark;
+
+              return <div key={l.id} style={{ position: "absolute", top: stone.y - stoneSize / 2, left: `${stone.x}%`, transform: "translateX(-50%)", zIndex: 1, textAlign: "center" }}>
+                {/* ¡VAMOS! bubble on the current stone */}
+                {isCurrent && <div style={{
+                  position: "absolute", top: -34, left: "50%", transform: "translateX(-50%)",
+                  background: "#fff", border: `2px solid ${T.line}`, borderRadius: 12, padding: "4px 12px",
+                  fontSize: 11, fontWeight: 900, fontFamily: FN, color: ch ? T.luna : T.sunDark, letterSpacing: 1,
+                  boxShadow: `0 3px 0 ${T.line}`, whiteSpace: "nowrap", animation: "bobY 1.2s ease-in-out infinite alternate", zIndex: 3,
+                }}>¡VAMOS!<div style={{ position: "absolute", bottom: -6, left: "50%", transform: "translateX(-50%) rotate(45deg)", width: 10, height: 10, background: "#fff", borderRight: `2px solid ${T.line}`, borderBottom: `2px solid ${T.line}` }} /></div>}
+
+                <button
+                  onClick={() => isUnlocked && go("lesson", LESSONS.indexOf(l))}
+                  disabled={!isUnlocked}
+                  style={{
+                    position: "relative",
+                    width: stoneSize, height: stoneSize,
+                    borderRadius: "50%",
+                    background: face,
+                    border: "none",
+                    cursor: isUnlocked ? "pointer" : "default",
+                    boxShadow: `0 6px 0 ${edgeC}`,
+                    fontFamily: FN,
+                    animation: "cPop .4s ease-out backwards", animationDelay: `${i * 0.04}s`,
+                    display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center",
+                  }}
+                >
+                  {/* Sun-ray ring on current stone */}
+                  {isCurrent && <div style={{ position: "absolute", inset: -9, borderRadius: "50%", border: `4px dashed ${ch ? T.luna : T.sun}`, opacity: 0.7, animation: "solSpin 14s linear infinite", pointerEvents: "none" }} />}
+                  {!isUnlocked
+                    ? <div style={{ fontSize: 22, opacity: 0.55 }}>🔒</div>
+                    : <>
+                      <div style={{ fontSize: ch ? 30 : 27, lineHeight: 1, filter: "drop-shadow(0 2px 0 rgba(0,0,0,0.15))" }}>{ch ? "🏆" : l.emoji}</div>
+                      {/* Luna's crescent stamp on completed stones */}
+                      {done && <div style={{ position: "absolute", top: -3, right: -3, width: 22, height: 22, borderRadius: "50%", background: T.green, border: "2.5px solid #fff", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 11, color: "#fff", fontWeight: 900 }}>✓</div>}
+                    </>}
+                </button>
+                {/* Label + stars below the stone */}
+                {isUnlocked && <div style={{ marginTop: 5, width: 110, marginLeft: -19 }}>
+                  <div style={{ fontSize: 10, fontWeight: 800, color: T.ink, fontFamily: FN, lineHeight: 1.15 }}>{l.id}. {l.subtitle}</div>
+                  <div style={{ fontSize: 9, letterSpacing: 1, marginTop: 1 }}>
+                    {[0, 1, 2].map(j => <span key={j} style={{ opacity: j < s ? 1 : 0.22 }}>⭐</span>)}
+                  </div>
+                </div>}
+              </div>;
+            })}
+          </div>
+        </div>;
+      })}
+    </div>
+
+    {/* Luna's goodnight footer — the night lives down here now */}
+    <div style={{ background: T.night, marginTop: 28, position: "relative", overflow: "hidden" }}>
+      <div style={{ maxWidth: 560, margin: "0 auto", padding: "26px 18px 30px", textAlign: "center", position: "relative", zIndex: 1 }}>
+        <div style={{ display: "flex", justifyContent: "center", gap: 10, marginBottom: 8 }}>
+          <Sol size={36} /><Luna size={36} />
+        </div>
+        <p style={{ fontSize: 13, color: "rgba(255,255,255,0.85)", fontFamily: FD, fontWeight: 700, margin: 0 }}>Keep going, {child.name}!</p>
+        <p style={{ fontSize: 11, color: "rgba(255,255,255,0.55)", fontFamily: FN, fontWeight: 700, marginTop: 3 }}>Sol y Luna are so proud of you ✨</p>
+      </div>
+      {[12, 28, 46, 62, 78, 90].map((x, i) => <div key={i} style={{ position: "absolute", left: `${x}%`, top: `${14 + (i * 17) % 55}%`, width: 3, height: 3, borderRadius: "50%", background: "#fff", opacity: 0.6, animation: `twinkle ${2 + i % 3}s ${i * 0.4}s ease-in-out infinite alternate` }} />)}
+    </div>
+    <style>{`@keyframes bobY { from { transform: translateX(-50%) translateY(0); } to { transform: translateX(-50%) translateY(-5px); } } @keyframes twinkle { from { opacity: 0.2; } to { opacity: 0.9; } } @keyframes solSpin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }`}</style>
   </div>;
 
   // ============================================================
   // PROFILE SCREEN (child's profile)
   // ============================================================
-  if (screen === "profile") return <div style={{ minHeight: "100vh", background: "linear-gradient(180deg,#FFF8E1,#E4F0FF)", padding: 16 }}>
-    <Bgs e={["⭐","🌟"]} />
+  if (screen === "profile") return <div style={{ minHeight: "100vh", background: T.cream, padding: 16 }}>
     <div style={{ position: "relative", zIndex: 1, maxWidth: 440, margin: "0 auto", paddingTop: 16 }}>
-      <Btn onClick={() => go("home")} style={{ marginBottom: 16, fontSize: 13 }}>← Back</Btn>
-      <div style={{ background: "#fff", borderRadius: 24, padding: "28px 24px", boxShadow: "0 6px 24px rgba(0,0,0,.06)", textAlign: "center" }}>
+      <Btn onClick={() => go("home")} style={{ marginBottom: 16, fontSize: 12, padding: "10px 18px" }}>← Back</Btn>
+      <div style={{ background: "#fff", borderRadius: 24, padding: "28px 24px", border: `2px solid ${T.line}`, boxShadow: `0 5px 0 ${T.line}`, textAlign: "center" }}>
         <div style={{ fontSize: 72, marginBottom: 8 }}>{child.avatar}</div>
-        <h2 style={{ fontSize: 24, fontWeight: 900, color: "#1E3A5F", fontFamily: FN }}>{child.name}</h2>
-        <p style={{ fontSize: 12, color: "#888", fontFamily: FN }}>Parent: {parent.name}</p>
+        <h2 style={{ fontSize: 26, fontWeight: 800, color: T.ink, fontFamily: FD }}>{child.name}</h2>
+        <p style={{ fontSize: 12, color: T.muted, fontFamily: FN, fontWeight: 700 }}>Parent: {parent.name}</p>
         <div style={{ margin: "16px 0", display: "flex", justifyContent: "center", gap: 14, flexWrap: "wrap" }}>
-          <div style={{ textAlign: "center" }}><div style={{ fontSize: 24, fontWeight: 900, color: "#FF8C42", fontFamily: FN }}>{totalStars}</div><div style={{ fontSize: 10, color: "#999", fontFamily: FN }}>Stars ⭐</div></div>
-          <div style={{ textAlign: "center" }}><div style={{ fontSize: 24, fontWeight: 900, color: "#6BCB77", fontFamily: FN }}>{Object.keys(stars).length}</div><div style={{ fontSize: 10, color: "#999", fontFamily: FN }}>Lessons</div></div>
-          <div style={{ textAlign: "center" }}><div style={{ fontSize: 24, fontWeight: 900, color: "#B983FF", fontFamily: FN }}>{(progress.badges || []).length}</div><div style={{ fontSize: 10, color: "#999", fontFamily: FN }}>Badges</div></div>
-          <div style={{ textAlign: "center" }}><div style={{ fontSize: 24, fontWeight: 900, color: "#FF6B6B", fontFamily: FN }}>🔥 {progress.streak || 0}</div><div style={{ fontSize: 10, color: "#999", fontFamily: FN }}>Streak</div></div>
+          <div style={{ textAlign: "center" }}><div style={{ fontSize: 24, fontWeight: 900, color: T.sunDark, fontFamily: FN }}>{totalStars}</div><div style={{ fontSize: 10, color: T.muted, fontFamily: FN, fontWeight: 800, textTransform: "uppercase" }}>Stars ⭐</div></div>
+          <div style={{ textAlign: "center" }}><div style={{ fontSize: 24, fontWeight: 900, color: T.green, fontFamily: FN }}>{Object.keys(stars).length}</div><div style={{ fontSize: 10, color: T.muted, fontFamily: FN, fontWeight: 800, textTransform: "uppercase" }}>Lessons</div></div>
+          <div style={{ textAlign: "center" }}><div style={{ fontSize: 24, fontWeight: 900, color: T.luna, fontFamily: FN }}>{(progress.badges || []).length}</div><div style={{ fontSize: 10, color: T.muted, fontFamily: FN, fontWeight: 800, textTransform: "uppercase" }}>Badges</div></div>
+          <div style={{ textAlign: "center" }}><div style={{ fontSize: 24, fontWeight: 900, color: "#FF7A00", fontFamily: FN }}>🔥 {progress.streak || 0}</div><div style={{ fontSize: 10, color: T.muted, fontFamily: FN, fontWeight: 800, textTransform: "uppercase" }}>Streak</div></div>
         </div>
-        <div style={{ background: "#f0f0f0", borderRadius: 50, height: 14, margin: "12px 0", overflow: "hidden" }}>
-          <div style={{ height: "100%", borderRadius: 50, background: "linear-gradient(90deg,#6BCB77,#4D96FF)", width: `${(Object.keys(stars).length / LESSONS.length * 100)}%`, transition: "width .5s" }} />
+        <div style={{ background: T.line, borderRadius: 50, height: 14, margin: "12px 0", overflow: "hidden" }}>
+          <div style={{ height: "100%", borderRadius: 50, background: T.sun, width: `${(Object.keys(stars).length / LESSONS.length * 100)}%`, transition: "width .5s" }} />
         </div>
-        <p style={{ fontSize: 12, color: "#999", fontFamily: FN, marginBottom: 16 }}>{Math.round(Object.keys(stars).length / LESSONS.length * 100)}% complete</p>
-        <Btn onClick={() => setScreen("badges")} full bg="#fff" border="#B983FF" color="#B983FF" style={{ marginBottom: 8 }}>🏆 Trophy Cabinet</Btn>
-        <Btn onClick={backToChildPicker} full bg="#fff" border="#4D96FF" color="#4D96FF" style={{ marginBottom: 8 }}>👥 Switch child</Btn>
+        <p style={{ fontSize: 12, color: T.muted, fontFamily: FN, fontWeight: 700, marginBottom: 16 }}>{Math.round(Object.keys(stars).length / LESSONS.length * 100)}% complete</p>
+        <Btn onClick={() => setScreen("badges")} full bg={T.luna} color="#fff" edge={T.lunaDark} style={{ marginBottom: 8 }}>🏆 Trophy Cabinet</Btn>
+        <Btn onClick={backToChildPicker} full style={{ marginBottom: 8 }}>👥 Switch child</Btn>
       </div>
     </div>
   </div>;
@@ -1537,33 +1504,34 @@ export default function App() {
     if (hasS) acts.push({ label: "🔨 Sentences", desc: "Build sentences!", scr: "build", clr: "#B983FF" });
     if (hasSt) acts.push({ label: "📖 Story", desc: "Read a story!", scr: "story", clr: "#FF9EC7" });
     return <div style={{ minHeight: "100vh", background: lesson.bg }}>
-      <Bgs e={[lesson.emoji, "⭐", "🌟"]} /><Confetti active={conf} />
+      <Confetti active={conf} />
       {newBadge && <BadgeToast badge={newBadge} onClose={() => setNewBadge(null)} />}
       <div style={{ position: "relative", zIndex: 1, maxWidth: 500, margin: "0 auto", padding: "14px 14px 36px" }}>
-        <Btn onClick={() => go("home")} style={{ marginBottom: 12, fontSize: 12 }}>← {w?.name || "Home"}</Btn>
+        <Btn onClick={() => go("home")} style={{ marginBottom: 12, fontSize: 12, padding: "10px 18px" }}>← {w?.name || "Home"}</Btn>
         <div style={{ textAlign: "center", marginBottom: 20 }}>
           <div style={{ fontSize: 48, animation: "bIn .5s" }}>{lesson.emoji}</div>
-          <div style={{ fontSize: 12, fontWeight: 700, color: lesson.color, fontFamily: FN, textTransform: "uppercase", letterSpacing: 2 }}>Lesson {lesson.id}</div>
-          <h2 style={{ fontSize: 28, fontWeight: 900, color: "#1E3A5F", fontFamily: FN }}>{lesson.title}</h2>
-          <p style={{ fontSize: 14, color: "#888", fontFamily: FN }}>{lesson.subtitle}</p>
+          <div style={{ fontSize: 11, fontWeight: 900, color: lesson.color, fontFamily: FN, textTransform: "uppercase", letterSpacing: 2 }}>Lesson {lesson.id}</div>
+          <h2 style={{ fontSize: 30, fontWeight: 800, color: T.ink, fontFamily: FD }}>{lesson.title}</h2>
+          <p style={{ fontSize: 14, color: T.muted, fontFamily: FN, fontWeight: 700 }}>{lesson.subtitle}</p>
           <div style={{ marginTop: 4, fontSize: 16, letterSpacing: 3 }}>{[0, 1, 2].map(j => <span key={j} style={{ opacity: j < s ? 1 : 0.2 }}>⭐</span>)}</div>
         </div>
-        <div style={{ background: "#fff", borderRadius: 20, padding: "18px 16px", marginBottom: 14, textAlign: "center", boxShadow: "0 3px 12px rgba(0,0,0,.04)", borderLeft: `5px solid ${lesson.color}`, position: "relative" }}>
+        <div style={{ background: "#fff", borderRadius: 20, padding: "18px 16px", marginBottom: 12, textAlign: "center", border: `2px solid ${T.line}`, boxShadow: `0 4px 0 ${T.line}`, position: "relative" }}>
           <div style={{ position: "absolute", top: 10, right: 10 }}><SpeakBtn text={lesson.phrase.es} size={12} color={lesson.color} /></div>
-          <div style={{ fontSize: 9, textTransform: "uppercase", color: "#aaa", fontWeight: 700, letterSpacing: 2, marginBottom: 5, fontFamily: FN }}>Today's Phrase</div>
-          <div style={{ fontSize: 20, fontWeight: 900, color: lesson.color, fontFamily: FN }}>{lesson.phrase.es}</div>
-          <div style={{ fontSize: 13, color: "#666", marginTop: 3, fontFamily: FN }}>{lesson.phrase.en}</div>
+          <div style={{ fontSize: 9, textTransform: "uppercase", color: T.muted, fontWeight: 900, letterSpacing: 2, marginBottom: 5, fontFamily: FN }}>Today's Phrase</div>
+          <div style={{ fontSize: 21, fontWeight: 800, color: lesson.color, fontFamily: FD }}>{lesson.phrase.es}</div>
+          <div style={{ fontSize: 13, color: T.ink, fontWeight: 700, marginTop: 3, fontFamily: FN }}>{lesson.phrase.en}</div>
         </div>
-        <div style={{ background: "linear-gradient(135deg,#FFF8E1,#FFFBE7)", borderRadius: 16, padding: "12px 14px", marginBottom: 14, border: "2px solid #FFD93D" }}>
-          <div style={{ fontSize: 12, fontWeight: 800, color: "#FF8C42", fontFamily: FN }}>💡 Did you know?</div>
-          <div style={{ fontSize: 12, color: "#555", fontFamily: FN, lineHeight: 1.5, marginTop: 2 }}>{lesson.funFact}</div>
+        <div style={{ background: T.sunLight, borderRadius: 16, padding: "12px 14px", marginBottom: 14, border: `2px solid ${T.sun}` }}>
+          <div style={{ fontSize: 12, fontWeight: 900, color: T.sunDark, fontFamily: FN }}>💡 Did you know?</div>
+          <div style={{ fontSize: 12, color: T.ink, fontWeight: 600, fontFamily: FN, lineHeight: 1.5, marginTop: 2 }}>{lesson.funFact}</div>
         </div>
-        <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
           {acts.map(a => <button key={a.scr} onClick={() => go(a.scr)}
-            style={{ display: "flex", alignItems: "center", gap: 10, background: "#fff", border: "none", borderRadius: 16, padding: "12px 14px", cursor: "pointer", boxShadow: "0 2px 10px rgba(0,0,0,.04)", textAlign: "left", borderLeft: `4px solid ${a.clr}`, transition: "transform .15s" }}
-            onMouseEnter={e => e.currentTarget.style.transform = "scale(1.02)"} onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}>
-            <div><div style={{ fontSize: 14, fontWeight: 800, color: "#1E3A5F", fontFamily: FN }}>{a.label}</div><div style={{ fontSize: 11, color: "#999", fontFamily: FN }}>{a.desc}</div></div>
-            <div style={{ marginLeft: "auto", fontSize: 18, color: "#ccc" }}>→</div>
+            style={{ display: "flex", alignItems: "center", gap: 12, background: "#fff", border: `2px solid ${T.line}`, borderRadius: 16, padding: "13px 14px", cursor: "pointer", boxShadow: `0 4px 0 ${T.line}`, textAlign: "left", transition: "filter .12s" }}
+            onMouseEnter={e => e.currentTarget.style.filter = "brightness(0.98)"} onMouseLeave={e => e.currentTarget.style.filter = "none"}>
+            <div style={{ width: 42, height: 42, borderRadius: 12, background: a.clr, boxShadow: `0 3px 0 ${darken(a.clr)}`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 20, flexShrink: 0 }}>{a.label.slice(0, 2).trim()}</div>
+            <div><div style={{ fontSize: 14, fontWeight: 800, color: T.ink, fontFamily: FN }}>{a.label.slice(2).trim()}</div><div style={{ fontSize: 11, color: T.muted, fontWeight: 700, fontFamily: FN }}>{a.desc}</div></div>
+            <div style={{ marginLeft: "auto", fontSize: 18, color: T.muted }}>→</div>
           </button>)}
         </div>
       </div>
@@ -1574,19 +1542,19 @@ export default function App() {
   // ACTIVITY WRAPPER
   // ============================================================
   const AW = ({ title, em, children }) => <div style={{ minHeight: "100vh", background: lesson.bg }}>
-    <Bgs e={[em || lesson.emoji, "⭐"]} /><Confetti active={conf} />
+    <Confetti active={conf} />
     {newBadge && <BadgeToast badge={newBadge} onClose={() => setNewBadge(null)} />}
     <div style={{ position: "relative", zIndex: 1, maxWidth: 500, margin: "0 auto", padding: "14px 14px 36px" }}>
-      <Btn onClick={() => go("lesson")} style={{ marginBottom: 12, fontSize: 12 }}>← Back</Btn>
+      <Btn onClick={() => go("lesson")} style={{ marginBottom: 12, fontSize: 12, padding: "10px 18px" }}>← Back</Btn>
       <div style={{ textAlign: "center", marginBottom: 14 }}>
-        <h2 style={{ fontSize: 24, fontWeight: 900, color: "#1E3A5F", fontFamily: FN }}>{title}</h2>
-        <div style={{ fontSize: 12, color: "#888", fontFamily: FN }}>Lesson {lesson.id}: {lesson.subtitle}</div>
+        <h2 style={{ fontSize: 26, fontWeight: 800, color: T.ink, fontFamily: FD }}>{title}</h2>
+        <div style={{ fontSize: 12, color: T.muted, fontWeight: 700, fontFamily: FN }}>Lesson {lesson.id}: {lesson.subtitle}</div>
       </div>
       {children}
     </div>
   </div>;
 
-  const card = (ch) => <div style={{ background: "#fff", borderRadius: 20, padding: 16, boxShadow: "0 3px 12px rgba(0,0,0,.04)" }}>{ch}</div>;
+  const card = (ch) => <div style={{ background: "#fff", borderRadius: 20, padding: 16, border: `2px solid ${T.line}`, boxShadow: `0 4px 0 ${T.line}` }}>{ch}</div>;
 
   if (screen === "flash") return <AW title="📚 Flashcards" em="📚">
     <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>{lesson.words.map((w, i) => <FlashCard key={w.es} word={w} index={i} />)}</div>
