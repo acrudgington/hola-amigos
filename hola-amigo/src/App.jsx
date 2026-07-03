@@ -6,7 +6,8 @@ import { useState, useEffect, useMemo, useRef } from "react";
 // Storage schema:
 //   hola_parents        → [{ email, name, pass, created, children: [childId...] }]
 //   hola_children       → { [childId]: { id, parentEmail, name, avatar, created } }
-//   hola_progress_<id>  → { stars, lastLesson, streak, lastActive, timeSpent, badges, lessonsDone, correctAnswers }
+//   hola_progress_<id>  → { stars, lastLesson, streak, lastActive, timeSpent, badges, lessonsDone, correctAnswers,
+//                            wordMemory, dailyGoal, dailyDate, dailyCount, reviewsDone }
 //   hola_session        → { parentEmail, activeChildId }
 
 const db = {
@@ -43,7 +44,7 @@ const db = {
     db.saveChildren(children);
     parents[pIdx].children = [...(parents[pIdx].children || []), id];
     db.saveParents(parents);
-    db.saveProgress(id, { stars: {}, lastLesson: 1, streak: 0, lastActive: null, timeSpent: 0, badges: [], lessonsDone: 0, correctAnswers: 0 });
+    db.saveProgress(id, { stars: {}, lastLesson: 1, streak: 0, lastActive: null, timeSpent: 0, badges: [], lessonsDone: 0, correctAnswers: 0, wordMemory: {}, dailyGoal: 3, dailyDate: null, dailyCount: 0, reviewsDone: 0 });
     return child;
   },
   deleteChild(childId) {
@@ -70,8 +71,8 @@ const db = {
   getProgress(childId) {
     try {
       const p = JSON.parse(localStorage.getItem(`hola_progress_${childId}`));
-      return { stars: {}, lastLesson: 1, streak: 0, lastActive: null, timeSpent: 0, badges: [], lessonsDone: 0, correctAnswers: 0, ...(p || {}) };
-    } catch { return { stars: {}, lastLesson: 1, streak: 0, lastActive: null, timeSpent: 0, badges: [], lessonsDone: 0, correctAnswers: 0 }; }
+      return { stars: {}, lastLesson: 1, streak: 0, lastActive: null, timeSpent: 0, badges: [], lessonsDone: 0, correctAnswers: 0, wordMemory: {}, dailyGoal: 3, dailyDate: null, dailyCount: 0, reviewsDone: 0, ...(p || {}) };
+    } catch { return { stars: {}, lastLesson: 1, streak: 0, lastActive: null, timeSpent: 0, badges: [], lessonsDone: 0, correctAnswers: 0, wordMemory: {}, dailyGoal: 3, dailyDate: null, dailyCount: 0, reviewsDone: 0 }; }
   },
   saveProgress(childId, p) { localStorage.setItem(`hola_progress_${childId}`, JSON.stringify(p)); },
 
@@ -87,6 +88,57 @@ const db = {
     p.lastActive = Date.now();
     db.saveProgress(childId, p);
     return p;
+  },
+
+  // === SPACED REPETITION (Leitner boxes 1–5) ===
+  // Interval per box, in days. Box 1 = due next day, box 5 = due in ~3 weeks.
+  _boxIntervals: [0, 1, 2, 4, 9, 21],
+  // Record a word encounter. Correct → promote a box, wrong → back to box 1.
+  recordWord(childId, es, en, correct) {
+    if (!es) return;
+    const p = db.getProgress(childId);
+    const wm = { ...(p.wordMemory || {}) };
+    const prev = wm[es] || { box: 0, seen: 0, en };
+    const box = correct ? Math.min(5, (prev.box || 0) + 1) : 1;
+    wm[es] = { box, seen: (prev.seen || 0) + 1, en: en || prev.en || "", last: Date.now() };
+    db.saveProgress(childId, { ...p, wordMemory: wm });
+  },
+  // Words whose review interval has elapsed, most overdue first.
+  getDueWords(childId) {
+    const p = db.getProgress(childId);
+    const wm = p.wordMemory || {};
+    const now = Date.now();
+    const due = [];
+    for (const es in wm) {
+      const w = wm[es];
+      const intervalMs = (db._boxIntervals[w.box] || 0) * 86400000;
+      const dueAt = (w.last || 0) + intervalMs;
+      if (now >= dueAt) due.push({ es, en: w.en, box: w.box, overdue: now - dueAt });
+    }
+    due.sort((a, b) => b.overdue - a.overdue);
+    return due;
+  },
+  countDueWords(childId) { return db.getDueWords(childId).length; },
+
+  // === DAILY GOAL (show-up streak) ===
+  // Returns progress with today's daily count reset if it's a new day.
+  getDaily(childId) {
+    const p = db.getProgress(childId);
+    const today = new Date().toDateString();
+    if (p.dailyDate !== today) return { count: 0, goal: p.dailyGoal || 3, met: false, isNewDay: true };
+    return { count: p.dailyCount || 0, goal: p.dailyGoal || 3, met: (p.dailyCount || 0) >= (p.dailyGoal || 3), isNewDay: false };
+  },
+  // Record one completed activity toward today's goal. Returns {count, goal, met, justMet}.
+  bumpDaily(childId) {
+    const p = db.getProgress(childId);
+    const today = new Date().toDateString();
+    let count = p.dailyDate === today ? (p.dailyCount || 0) : 0;
+    const wasMet = count >= (p.dailyGoal || 3);
+    count += 1;
+    const goal = p.dailyGoal || 3;
+    const met = count >= goal;
+    db.saveProgress(childId, { ...p, dailyDate: today, dailyCount: count });
+    return { count, goal, met, justMet: met && !wasMet };
   },
 };
 
@@ -340,6 +392,22 @@ const STORIES = {
 // Patch stories onto lessons (lesson 31 already has one)
 LESSONS.forEach(l => { if (STORIES[l.id] && !l.story) l.story = STORIES[l.id]; });
 
+// Flattened, de-duplicated list of every vocab word across the course.
+// Used for spaced-repetition review distractors and emoji lookups.
+const ALL_WORDS = (() => {
+  const seen = new Set(); const out = [];
+  LESSONS.forEach(l => (l.words || []).forEach(w => {
+    if (!seen.has(w.es)) { seen.add(w.es); out.push(w); }
+  }));
+  return out;
+})();
+// Map lesson id → its vocab, for building a child's "learned words" pool
+const wordsForLessonsUpTo = (maxLessonId) => {
+  const seen = new Set(); const out = [];
+  LESSONS.forEach(l => { if (l.id <= maxLessonId) (l.words || []).forEach(w => { if (!seen.has(w.es)) { seen.add(w.es); out.push(w); } }); });
+  return out;
+};
+
 
 // ============================================================
 // BADGES — unlockable achievements
@@ -375,6 +443,8 @@ const BADGES = [
   { id: "streak_7", name: "Week Warrior", desc: "7-day streak", emoji: "🔥", check: p => (p.streak || 0) >= 7 },
   { id: "streak_30", name: "Month Master", desc: "30-day streak!", emoji: "🔥", check: p => (p.streak || 0) >= 30 },
   { id: "speaker", name: "Speaking Star", desc: "Used the mic 10 times", emoji: "🗣️", check: p => (p.micUses || 0) >= 10 },
+  { id: "reviewer", name: "Memory Keeper", desc: "Did 5 daily reviews", emoji: "🔁", check: p => (p.reviewsDone || 0) >= 5 },
+  { id: "reviewer_pro", name: "Memory Master", desc: "Did 20 daily reviews", emoji: "🧩", check: p => (p.reviewsDone || 0) >= 20 },
   { id: "story_lover", name: "Story Lover", desc: "Read 10 stories", emoji: "📖", check: p => (p.storiesRead || 0) >= 10 },
   { id: "quiz_master", name: "Quiz Master", desc: "100 correct answers", emoji: "🧠", check: p => (p.correctAnswers || 0) >= 100 },
   { id: "halfway", name: "Halfway There!", desc: "Finished 50 lessons", emoji: "🎯", check: p => Object.keys(p.stars || {}).length >= 50 },
@@ -606,9 +676,9 @@ function MatchGame({ words, onDone }) {
 // ============================================================
 // GAME: QUIZ
 // ============================================================
-function Quiz({ words, gaps, onDone }) {
+function Quiz({ words, gaps, onDone, onWord }) {
   const items = useMemo(() => {
-    const q = words.slice(0, 8).map(w => ({ q: `What does "${w.es}" ${w.emoji} mean?`, opts: sh([w, ...words.filter(x => x.es !== w.es)].slice(0, 4)).map(x => x.en), ans: w.en }));
+    const q = words.slice(0, 8).map(w => ({ q: `What does "${w.es}" ${w.emoji} mean?`, opts: sh([w, ...words.filter(x => x.es !== w.es)].slice(0, 4)).map(x => x.en), ans: w.en, es: w.es, en: w.en }));
     if (gaps) gaps.forEach(g => q.push({ q: g.q, opts: g.opts, ans: g.opts[g.ans] }));
     return sh(q).slice(0, 8);
   }, [words, gaps]);
@@ -617,6 +687,7 @@ function Quiz({ words, gaps, onDone }) {
   if (idx >= items.length) return null;
   const it = items[idx];
   const pick = o => { if (fb) return; const ok = o === it.ans; if (ok) setScore(s => s + 1); setFb(ok ? "✅" : "❌");
+    if (it.es) onWord?.(it.es, it.en, ok);
     setTimeout(() => { setFb(null); if (idx + 1 < items.length) setIdx(idx + 1); else onDone(score + (ok ? 1 : 0), items.length); }, 900); };
   return <div style={{ textAlign: "center" }}>
     <div style={{ fontSize: 11, color: "#999", fontFamily: FN, marginBottom: 8 }}>Q {idx + 1}/{items.length}</div>
@@ -664,36 +735,77 @@ function SentenceBuilder({ sentences, onDone }) {
 // ============================================================
 // GAME: STORY READER
 // ============================================================
-function StoryReader({ story, onDone }) {
+function StoryReader({ story, onDone, onWord }) {
   const [step, setStep] = useState(0); const [qIdx, setQIdx] = useState(0); const [score, setScore] = useState(0); const [fb, setFb] = useState(null);
-  useEffect(() => { setStep(0); setQIdx(0); setScore(0); setFb(null); }, [story]);
-  if (!story) return <div style={{ textAlign: "center", padding: 20, fontFamily: FN, color: "#999" }}>No story yet!</div>;
-  if (step < story.paras.length) return <div style={{ textAlign: "center" }}>
-    <div style={{ fontSize: 26, marginBottom: 6 }}>📖</div>
-    <h3 style={{ fontSize: 20, fontWeight: 900, fontFamily: FN, color: T.ink, marginBottom: 12 }}>{story.title}</h3>
-    <div style={{ background: "#fff", borderRadius: 18, padding: 18, boxShadow: "0 3px 12px rgba(0,0,0,.05)", fontSize: 16, lineHeight: 1.7, fontFamily: FN, color: "#333", fontStyle: "italic", marginBottom: 14 }}>{story.paras[step]}</div>
-    <Btn onClick={() => setStep(step + 1)} bg="linear-gradient(135deg,#4D96FF,#667eea)" color="#fff" border="transparent">{step < story.paras.length - 1 ? "Next page →" : "Questions →"}</Btn>
-  </div>;
+  const [reading, setReading] = useState(false);
+  const [activeSent, setActiveSent] = useState(-1);
+  const readTimer = useRef(null);
+  useEffect(() => { setStep(0); setQIdx(0); setScore(0); setFb(null); setReading(false); setActiveSent(-1); }, [story]);
+  useEffect(() => () => { if (readTimer.current) clearTimeout(readTimer.current); window.speechSynthesis?.cancel(); }, []);
+
+  if (!story) return <div style={{ textAlign: "center", padding: 20, fontFamily: FN, color: T.muted }}>No story yet!</div>;
+
+  // Split the current paragraph into sentences for karaoke highlighting
+  const splitSentences = (para) => para.match(/[^.!?]+[.!?]*/g)?.map(s => s.trim()).filter(Boolean) || [para];
+
+  if (step < story.paras.length) {
+    const sentences = splitSentences(story.paras[step]);
+
+    const stopReading = () => { if (readTimer.current) clearTimeout(readTimer.current); window.speechSynthesis?.cancel(); setReading(false); setActiveSent(-1); };
+
+    const readAll = () => {
+      if (reading) { stopReading(); return; }
+      setReading(true);
+      let i = 0;
+      const readNext = () => {
+        if (i >= sentences.length) { setReading(false); setActiveSent(-1); return; }
+        setActiveSent(i);
+        speech.speak(sentences[i], 0.82);
+        // Estimate duration from length; advance after it
+        const ms = Math.max(1600, sentences[i].length * 75);
+        readTimer.current = setTimeout(() => { i++; readNext(); }, ms);
+      };
+      readNext();
+    };
+
+    return <div style={{ textAlign: "center" }}>
+      <div style={{ fontSize: 26, marginBottom: 6 }}>📖</div>
+      <h3 style={{ fontSize: 22, fontWeight: 800, fontFamily: FD, color: T.ink, marginBottom: 12 }}>{story.title}</h3>
+      <div style={{ background: "#fff", borderRadius: 18, padding: 18, border: `2px solid ${T.line}`, boxShadow: `0 4px 0 ${T.line}`, fontSize: 16, lineHeight: 1.8, fontFamily: FN, color: T.ink, marginBottom: 14, textAlign: "left" }}>
+        {sentences.map((s, i) => <span key={i} onClick={() => { window.speechSynthesis?.cancel(); speech.speak(s, 0.82); setActiveSent(i); }} style={{
+          cursor: "pointer",
+          background: activeSent === i ? T.sunLight : "transparent",
+          borderRadius: 6, padding: "1px 2px", transition: "background .2s",
+          boxShadow: activeSent === i ? `0 0 0 2px ${T.sun}` : "none",
+        }}>{s} </span>)}
+      </div>
+      <div style={{ display: "flex", gap: 8, justifyContent: "center", flexWrap: "wrap" }}>
+        <Btn onClick={readAll} bg={reading ? T.red : T.luna} color="#fff" edge={reading ? T.redDark : T.lunaDark}>{reading ? "⏹ Stop" : "▶ Read to me"}</Btn>
+        <Btn onClick={() => { stopReading(); setStep(step + 1); }} bg={T.sun} color="#fff" edge={T.sunDark}>{step < story.paras.length - 1 ? "Next page →" : "Questions →"}</Btn>
+      </div>
+      <div style={{ fontSize: 11, color: T.muted, fontFamily: FN, fontWeight: 700, marginTop: 10 }}>💡 Tap any sentence to hear it!</div>
+    </div>;
+  }
   const q = story.qs[qIdx];
   if (qIdx >= story.qs.length) return null;
   const pick = i => { if (fb !== null) return; const ok = i === q.ans; if (ok) setScore(s => s + 1); setFb(ok);
     setTimeout(() => { setFb(null); if (qIdx + 1 < story.qs.length) setQIdx(qIdx + 1); else onDone(score + (ok ? 1 : 0), story.qs.length); }, 900); };
   return <div style={{ textAlign: "center" }}>
-    <div style={{ fontSize: 13, color: "#999", fontFamily: FN, marginBottom: 8 }}>Q {qIdx + 1}/{story.qs.length}</div>
+    <div style={{ fontSize: 13, color: T.muted, fontFamily: FN, fontWeight: 700, marginBottom: 8 }}>Q {qIdx + 1}/{story.qs.length}</div>
     <div style={{ fontSize: 16, fontWeight: 800, color: T.ink, fontFamily: FN, marginBottom: 12 }}>{q.q}</div>
     <div style={{ display: "flex", flexDirection: "column", gap: 7, maxWidth: 300, margin: "0 auto" }}>
-      {q.opts.map((o, i) => <button key={o} onClick={() => pick(i)} style={{ padding: "11px", borderRadius: 12, border: "3px solid", fontFamily: FN, fontSize: 14, fontWeight: 700, cursor: "pointer", color: T.ink,
-        borderColor: fb !== null && i === q.ans ? "#6BCB77" : "#e8e8e8", background: fb !== null && i === q.ans ? "#E8F8EA" : "#fff" }}>{o}</button>)}
+      {q.opts.map((o, i) => <button key={o} onClick={() => pick(i)} style={{ padding: "11px", borderRadius: 12, border: "2px solid", fontFamily: FN, fontSize: 14, fontWeight: 800, cursor: "pointer", color: T.ink,
+        borderColor: fb !== null && i === q.ans ? T.green : T.line, background: fb !== null && i === q.ans ? "#E9F8EC" : "#fff", boxShadow: `0 3px 0 ${fb !== null && i === q.ans ? T.greenDark : T.line}` }}>{o}</button>)}
     </div>
     {fb === true && <div style={{ fontSize: 20, marginTop: 8, animation: "bIn .3s" }}>⭐</div>}
-    {fb === false && <div style={{ fontSize: 14, marginTop: 8, color: "#FF6B6B", fontFamily: FN }}>Not quite!</div>}
+    {fb === false && <div style={{ fontSize: 14, marginTop: 8, color: T.red, fontWeight: 700, fontFamily: FN }}>Not quite!</div>}
   </div>;
 }
 
 // ============================================================
 // GAME: SAY IT! (speak-back)
 // ============================================================
-function SayItGame({ words, onDone }) {
+function SayItGame({ words, onDone, onWord }) {
   const pool = useMemo(() => words.slice(0, 6), [words]);
   const [idx, setIdx] = useState(0);
   const [score, setScore] = useState(0);
@@ -736,6 +848,7 @@ function SayItGame({ words, onDone }) {
           else res = "fail";
           setResult(res);
           if (res === "pass" || res === "close") setScore(s => s + 1);
+          onWord?.(word.es, word.en, res === "pass" || res === "close");
         },
         onError: (err) => {
           setListening(false);
@@ -809,6 +922,242 @@ function SayItGame({ words, onDone }) {
 
     <style>{`@keyframes pulse { 0%, 100% { transform: scale(1); box-shadow: 0 6px 20px rgba(255,107,107,.35); } 50% { transform: scale(1.08); box-shadow: 0 6px 30px rgba(255,107,107,.6); } }`}</style>
   </div>;
+}
+
+// ============================================================
+// GAME: LISTEN & CHOOSE (Escucha) — builds the ear
+// ============================================================
+function ListenGame({ words, onDone, onWord }) {
+  const pool = useMemo(() => sh(words.slice(0, 8)).slice(0, 6), [words]);
+  const [idx, setIdx] = useState(0);
+  const [score, setScore] = useState(0);
+  const [fb, setFb] = useState(null); // index chosen | null
+  useEffect(() => { setIdx(0); setScore(0); setFb(null); }, [words]);
+
+  const opts = useMemo(() => {
+    if (idx >= pool.length) return [];
+    const correct = pool[idx];
+    const distractors = sh(words.filter(w => w.es !== correct.es)).slice(0, 3);
+    return sh([correct, ...distractors]);
+  }, [idx, pool, words]);
+
+  // Auto-play the word when the question appears
+  useEffect(() => {
+    if (idx < pool.length) { const t = setTimeout(() => speech.speak(pool[idx].es), 350); return () => clearTimeout(t); }
+  }, [idx, pool]);
+
+  if (!speech.supported()) return <div style={{ textAlign: "center", padding: 20, fontFamily: FN }}>
+    <div style={{ fontSize: 36, marginBottom: 10 }}>🔊</div>
+    <div style={{ fontSize: 15, fontWeight: 800, color: T.ink, marginBottom: 6 }}>Audio not supported</div>
+    <div style={{ fontSize: 13, color: T.muted, fontWeight: 600 }}>The Listen game needs speech, which works best in Chrome, Edge, or Safari.</div>
+  </div>;
+
+  if (idx >= pool.length) return null;
+  const word = pool[idx];
+
+  const pick = (o) => {
+    if (fb !== null) return;
+    const ok = o.es === word.es;
+    setFb(o.es);
+    if (ok) setScore(s => s + 1);
+    onWord?.(word.es, word.en, ok);
+    setTimeout(() => {
+      setFb(null);
+      if (idx + 1 < pool.length) setIdx(idx + 1);
+      else onDone(score + (ok ? 1 : 0), pool.length);
+    }, 1000);
+  };
+
+  return <div style={{ textAlign: "center" }}>
+    <div style={{ fontSize: 12, color: T.muted, fontFamily: FN, fontWeight: 700, marginBottom: 10 }}>Sound {idx + 1} / {pool.length}</div>
+    <div style={{ fontSize: 13, color: T.muted, fontFamily: FN, fontWeight: 700, marginBottom: 10 }}>Listen, then tap the right picture!</div>
+    <button onClick={() => speech.speak(word.es)} style={{
+      background: T.luna, border: "none", borderRadius: "50%", width: 92, height: 92, fontSize: 40, cursor: "pointer",
+      color: "#fff", boxShadow: `0 6px 0 ${T.lunaDark}`, marginBottom: 18,
+    }}>🔊</button>
+    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, maxWidth: 340, margin: "0 auto" }}>
+      {opts.map(o => {
+        const isCorrect = fb !== null && o.es === word.es;
+        const isWrongPick = fb === o.es && o.es !== word.es;
+        return <button key={o.es} onClick={() => pick(o)} disabled={fb !== null} style={{
+          padding: "16px 8px", borderRadius: 16, cursor: fb !== null ? "default" : "pointer", fontFamily: FN,
+          border: `2px solid ${isCorrect ? T.green : isWrongPick ? T.red : T.line}`,
+          background: isCorrect ? "#E9F8EC" : isWrongPick ? "#FFECED" : "#fff",
+          boxShadow: `0 4px 0 ${isCorrect ? T.greenDark : isWrongPick ? T.redDark : T.line}`,
+        }}>
+          <div style={{ fontSize: 40 }}>{o.emoji}</div>
+          <div style={{ fontSize: 13, fontWeight: 800, color: T.ink, marginTop: 4 }}>{o.en}</div>
+        </button>;
+      })}
+    </div>
+    {fb !== null && <div style={{ marginTop: 12, fontSize: 18, fontWeight: 900, fontFamily: FN, color: fb === word.es ? T.green : T.red, animation: "bIn .3s" }}>
+      {fb === word.es ? "⭐ ¡Sí!" : <>It was <b>{word.emoji} {word.es}</b></>}
+    </div>}
+  </div>;
+}
+
+// ============================================================
+// GAME: LEARN — gentle interleaved intro (4 words, check, 4 more, mix)
+// ============================================================
+function LearnIntro({ words, onDone, onWord }) {
+  const pool = useMemo(() => words.slice(0, 8), [words]);
+  // Phases: 'show' (flashcard-style intro of a batch), 'check' (quick recognition of that batch)
+  const [phase, setPhase] = useState("show");
+  const [batch, setBatch] = useState(0); // 0 = first 4, 1 = second 4
+  const [showIdx, setShowIdx] = useState(0);
+  const [checkIdx, setCheckIdx] = useState(0);
+  const [fb, setFb] = useState(null);
+  const [mix, setMix] = useState(false);
+
+  useEffect(() => { setPhase("show"); setBatch(0); setShowIdx(0); setCheckIdx(0); setFb(null); setMix(false); }, [words]);
+
+  const batchWords = mix ? pool : pool.slice(batch * 4, batch * 4 + 4);
+
+  // Stable options for the current check question (always computed — no conditional hooks)
+  const checkWord = batchWords[checkIdx];
+  const checkOpts = useMemo(() => {
+    if (!checkWord) return [];
+    const distractors = sh(pool.filter(x => x.es !== checkWord.es)).slice(0, 3);
+    return sh([checkWord, ...distractors]);
+  }, [checkWord && checkWord.es, phase, mix, batch, pool]);
+
+  // SHOW phase — reveal each word with audio
+  if (phase === "show") {
+    const w = batchWords[showIdx];
+    if (!w) return null;
+    return <div style={{ textAlign: "center" }}>
+      <div style={{ fontSize: 12, color: T.muted, fontFamily: FN, fontWeight: 700, marginBottom: 8 }}>New word {showIdx + 1} / {batchWords.length}</div>
+      <div style={{ background: "#fff", borderRadius: 22, padding: "26px 18px", border: `2px solid ${T.line}`, boxShadow: `0 5px 0 ${T.line}`, marginBottom: 16, animation: "bIn .3s" }}>
+        <div style={{ fontSize: 60, marginBottom: 6 }}>{w.emoji}</div>
+        <div style={{ fontSize: 26, fontWeight: 800, color: T.ink, fontFamily: FD }}>{w.es}</div>
+        <div style={{ fontSize: 15, color: T.muted, fontWeight: 700, fontFamily: FN, marginTop: 2 }}>{w.en}</div>
+        <div style={{ fontSize: 13, color: T.muted, fontFamily: FN, marginTop: 4 }}>🗣️ {w.say}</div>
+        <div style={{ marginTop: 12 }}><SpeakBtn text={w.es} size={16} color={T.luna} /></div>
+      </div>
+      <Btn onClick={() => {
+        speech.speak(w.es);
+        if (showIdx + 1 < batchWords.length) setShowIdx(showIdx + 1);
+        else { setPhase("check"); setCheckIdx(0); }
+      }} bg={T.sun} color="#fff" edge={T.sunDark}>{showIdx + 1 < batchWords.length ? "Next →" : "Let's practise! →"}</Btn>
+    </div>;
+  }
+
+  // CHECK phase — recognition quiz over the current batch
+  const cw = checkWord;
+  if (!cw) return null;
+  const opts = checkOpts;
+
+  const pick = (o) => {
+    if (fb !== null) return;
+    const ok = o.en === cw.en;
+    setFb(o.en);
+    onWord?.(cw.es, cw.en, ok);
+    setTimeout(() => {
+      setFb(null);
+      if (checkIdx + 1 < batchWords.length) { setCheckIdx(checkIdx + 1); return; }
+      // Batch finished
+      if (!mix && batch === 0) { setBatch(1); setPhase("show"); setShowIdx(0); }
+      else if (!mix && batch === 1) { setMix(true); setPhase("check"); setCheckIdx(0); } // final mixed round over all 8
+      else onDone(); // mix done
+    }, 900);
+  };
+
+  const heading = mix ? "Mix them all up! 🎯" : `Practise batch ${batch + 1}`;
+  return <div style={{ textAlign: "center" }}>
+    <div style={{ fontSize: 12, color: T.muted, fontFamily: FN, fontWeight: 700, marginBottom: 4 }}>{heading}</div>
+    <div style={{ fontSize: 12, color: T.muted, fontFamily: FN, marginBottom: 12 }}>{checkIdx + 1} / {batchWords.length}</div>
+    <div style={{ fontSize: 54, marginBottom: 6 }}>{cw.emoji}</div>
+    <div style={{ fontSize: 15, fontWeight: 800, color: T.ink, fontFamily: FN, marginBottom: 14 }}>What does this mean?</div>
+    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8, maxWidth: 340, margin: "0 auto" }}>
+      {opts.map(o => {
+        const isCorrect = fb !== null && o.en === cw.en;
+        const isWrongPick = fb === o.en && o.en !== cw.en;
+        return <button key={o.en} onClick={() => pick(o)} disabled={fb !== null} style={{
+          padding: "12px 8px", borderRadius: 14, cursor: fb !== null ? "default" : "pointer", fontFamily: FN, fontSize: 14, fontWeight: 800, color: T.ink,
+          border: `2px solid ${isCorrect ? T.green : isWrongPick ? T.red : T.line}`,
+          background: isCorrect ? "#E9F8EC" : isWrongPick ? "#FFECED" : "#fff",
+          boxShadow: `0 3px 0 ${isCorrect ? T.greenDark : isWrongPick ? T.redDark : T.line}`,
+        }}>{o.en}</button>;
+      })}
+    </div>
+    {fb !== null && <div style={{ marginTop: 12, fontSize: 16, fontWeight: 900, fontFamily: FN, color: fb === cw.en ? T.green : T.red, animation: "bIn .3s" }}>
+      {fb === cw.en ? "⭐ ¡Muy bien!" : <>It's <b>{cw.en}</b></>}
+    </div>}
+  </div>;
+}
+
+// ============================================================
+// GAME: DAILY REVIEW — spaced repetition over previously learned words
+// ============================================================
+function ReviewGame({ dueWords, allWords, onDone, onWord }) {
+  // dueWords: [{es, en}]; allWords: full pool for distractors
+  const pool = useMemo(() => dueWords.slice(0, 10), [dueWords]);
+  const [idx, setIdx] = useState(0);
+  const [score, setScore] = useState(0);
+  const [fb, setFb] = useState(null);
+  const [mode, setMode] = useState("read"); // alternate read/listen
+  useEffect(() => { setIdx(0); setScore(0); setFb(null); }, [dueWords]);
+
+  const opts = useMemo(() => {
+    if (idx >= pool.length) return [];
+    const cur = pool[idx];
+    const distractors = sh(allWords.filter(w => w.en !== cur.en)).slice(0, 3);
+    // Ensure the distractors carry en + emoji; find matching word objects where possible
+    return sh([{ es: cur.es, en: cur.en, emoji: findEmoji(cur.es, allWords) }, ...distractors.map(d => ({ es: d.es, en: d.en, emoji: d.emoji }))]);
+  }, [idx, pool, allWords]);
+
+  useEffect(() => { setMode(idx % 2 === 0 ? "read" : "listen"); }, [idx]);
+  useEffect(() => {
+    if (mode === "listen" && idx < pool.length) { const t = setTimeout(() => speech.speak(pool[idx].es), 350); return () => clearTimeout(t); }
+  }, [mode, idx, pool]);
+
+  if (idx >= pool.length) return null;
+  const cur = pool[idx];
+
+  const pick = (o) => {
+    if (fb !== null) return;
+    const ok = o.en === cur.en;
+    setFb(o.en);
+    if (ok) setScore(s => s + 1);
+    onWord?.(cur.es, cur.en, ok);
+    setTimeout(() => {
+      setFb(null);
+      if (idx + 1 < pool.length) setIdx(idx + 1);
+      else onDone(score + (ok ? 1 : 0), pool.length);
+    }, 950);
+  };
+
+  return <div style={{ textAlign: "center" }}>
+    <div style={{ fontSize: 12, color: T.muted, fontFamily: FN, fontWeight: 700, marginBottom: 10 }}>Review {idx + 1} / {pool.length}</div>
+    {mode === "listen" ? <>
+      <div style={{ fontSize: 13, color: T.muted, fontFamily: FN, fontWeight: 700, marginBottom: 10 }}>Listen and choose!</div>
+      <button onClick={() => speech.speak(cur.es)} style={{ background: T.luna, border: "none", borderRadius: "50%", width: 80, height: 80, fontSize: 34, cursor: "pointer", color: "#fff", boxShadow: `0 5px 0 ${T.lunaDark}`, marginBottom: 16 }}>🔊</button>
+    </> : <>
+      <div style={{ fontSize: 30, fontWeight: 800, color: T.ink, fontFamily: FD, marginBottom: 4 }}>{cur.es}</div>
+      <div style={{ marginBottom: 14 }}><SpeakBtn text={cur.es} size={14} color={T.luna} /></div>
+    </>}
+    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8, maxWidth: 340, margin: "0 auto" }}>
+      {opts.map(o => {
+        const isCorrect = fb !== null && o.en === cur.en;
+        const isWrongPick = fb === o.en && o.en !== cur.en;
+        return <button key={o.en} onClick={() => pick(o)} disabled={fb !== null} style={{
+          padding: "12px 8px", borderRadius: 14, cursor: fb !== null ? "default" : "pointer", fontFamily: FN, fontSize: 14, fontWeight: 800, color: T.ink,
+          border: `2px solid ${isCorrect ? T.green : isWrongPick ? T.red : T.line}`,
+          background: isCorrect ? "#E9F8EC" : isWrongPick ? "#FFECED" : "#fff",
+          boxShadow: `0 3px 0 ${isCorrect ? T.greenDark : isWrongPick ? T.redDark : T.line}`,
+        }}>{o.emoji ? `${o.emoji} ` : ""}{o.en}</button>;
+      })}
+    </div>
+    {fb !== null && <div style={{ marginTop: 12, fontSize: 16, fontWeight: 900, fontFamily: FN, color: fb === cur.en ? T.green : T.red, animation: "bIn .3s" }}>
+      {fb === cur.en ? "⭐ ¡Correcto!" : <>It's <b>{cur.en}</b></>}
+    </div>}
+  </div>;
+}
+
+// Helper: find the emoji for a Spanish word across the whole course
+function findEmoji(es, allWords) {
+  const w = allWords.find(x => x.es === es);
+  return w ? w.emoji : "";
 }
 
 // ============================================================
@@ -1180,7 +1529,7 @@ export default function App() {
   const [parent, setParent] = useState(null);
   const [child, setChild] = useState(null);
   const [progress, setProgress] = useState(null);
-  const [screen, setScreen] = useState("childPicker"); // childPicker | dashboard | home | lesson | profile | badges | flash | match | quiz | build | sayit | story
+  const [screen, setScreen] = useState("childPicker"); // childPicker | dashboard | home | lesson | profile | badges | learn | flash | listen | match | quiz | build | sayit | story | review
   const [lIdx, setLIdx] = useState(0);
   const [conf, setConf] = useState(false);
   const [result, setResult] = useState(null);
@@ -1267,6 +1616,25 @@ export default function App() {
     save({ ...progress, [key]: (progress[key] || 0) + amount });
   };
 
+  // Record a single word encounter into spaced-repetition memory (fire-and-forget).
+  const recordWord = (es, en, correct) => {
+    if (!child) return;
+    db.recordWord(child.id, es, en, correct);
+    // keep local progress roughly in sync for the due-count badge on home
+    setProgress(prev => prev ? db.getProgress(child.id) : prev);
+  };
+
+  // Count one completed activity toward today's goal; celebrate if just met.
+  const completeActivity = () => {
+    if (!child) return;
+    const r = db.bumpDaily(child.id);
+    setProgress(db.getProgress(child.id));
+    if (r.justMet) {
+      setConf(true);
+      setTimeout(() => setConf(false), 3000);
+    }
+  };
+
   const go = (s, i) => {
     if (i !== undefined) setLIdx(i);
     setScreen(s);
@@ -1328,6 +1696,37 @@ export default function App() {
           <div style={{ fontSize: 11, fontWeight: 800, color: T.ink, fontFamily: FD, marginTop: 2 }}>Sol y Luna</div>
         </div>
       </div>
+
+      {/* Daily goal + Daily Review cards */}
+      {(() => {
+        const daily = db.getDaily(child.id);
+        const dueCount = db.countDueWords(child.id);
+        const pct = Math.min(1, daily.count / daily.goal);
+        const R = 26, C = 2 * Math.PI * R;
+        return <div style={{ display: "flex", gap: 10, marginBottom: 18 }}>
+          {/* Daily goal ring */}
+          <div style={{ flex: 1, background: "#fff", border: `2px solid ${T.line}`, borderRadius: 18, boxShadow: `0 4px 0 ${T.line}`, padding: "12px 14px", display: "flex", alignItems: "center", gap: 12 }}>
+            <svg width="64" height="64" viewBox="0 0 64 64" style={{ flexShrink: 0 }}>
+              <circle cx="32" cy="32" r={R} fill="none" stroke={T.line} strokeWidth="7" />
+              <circle cx="32" cy="32" r={R} fill="none" stroke={daily.met ? T.green : T.sun} strokeWidth="7" strokeLinecap="round"
+                strokeDasharray={C} strokeDashoffset={C * (1 - pct)} transform="rotate(-90 32 32)" style={{ transition: "stroke-dashoffset .5s" }} />
+              <text x="32" y="32" textAnchor="middle" dominantBaseline="central" fontFamily={FN} fontWeight="900" fontSize="15" fill={T.ink}>{daily.met ? "✓" : `${daily.count}/${daily.goal}`}</text>
+            </svg>
+            <div>
+              <div style={{ fontSize: 13, fontWeight: 800, color: T.ink, fontFamily: FN }}>{daily.met ? "Goal done! 🎉" : "Daily goal"}</div>
+              <div style={{ fontSize: 11, color: T.muted, fontWeight: 700, fontFamily: FN }}>{daily.met ? "Amazing work today" : `${daily.goal - daily.count} more to go`}</div>
+            </div>
+          </div>
+          {/* Daily Review */}
+          <button onClick={() => go("review")} style={{ flex: 1, background: dueCount > 0 ? T.luna : "#fff", border: dueCount > 0 ? "none" : `2px solid ${T.line}`, borderRadius: 18, boxShadow: `0 4px 0 ${dueCount > 0 ? T.lunaDark : T.line}`, padding: "12px 14px", cursor: "pointer", textAlign: "left", display: "flex", alignItems: "center", gap: 10 }}>
+            <div style={{ fontSize: 30 }}>🔁</div>
+            <div>
+              <div style={{ fontSize: 13, fontWeight: 800, color: dueCount > 0 ? "#fff" : T.ink, fontFamily: FN }}>Daily Review</div>
+              <div style={{ fontSize: 11, fontWeight: 700, fontFamily: FN, color: dueCount > 0 ? "rgba(255,255,255,0.9)" : T.muted }}>{dueCount > 0 ? `${dueCount} word${dueCount === 1 ? "" : "s"} to refresh` : "Keep words fresh"}</div>
+            </div>
+          </button>
+        </div>;
+      })()}
 
       {/* THE PATH — Sol-stones and Luna-gates on a dotted trail */}
       {WORLDS.map((w) => {
@@ -1496,7 +1895,9 @@ export default function App() {
     const hasS = lesson.sentences?.length > 0;
     const hasSt = !!lesson.story;
     const acts = [
+      { label: "🌱 Learn", desc: "Meet the new words", scr: "learn", clr: "#3FC252" },
       { label: "📚 Flashcards", desc: "Flip to learn", scr: "flash", clr: "#4D96FF" },
+      { label: "👂 Listen", desc: "Hear it, tap the picture", scr: "listen", clr: "#7B6FDE" },
       { label: "🎯 Matching", desc: "Match Spanish → English", scr: "match", clr: "#6BCB77" },
       { label: "🧠 Quiz", desc: "Test yourself", scr: "quiz", clr: "#FF8C42" },
       { label: "🎤 Say It!", desc: "Say the words aloud!", scr: "sayit", clr: "#FF6B6B" },
@@ -1556,20 +1957,58 @@ export default function App() {
 
   const card = (ch) => <div style={{ background: "#fff", borderRadius: 20, padding: 16, border: `2px solid ${T.line}`, boxShadow: `0 4px 0 ${T.line}` }}>{ch}</div>;
 
+  if (screen === "learn") return <AW title="🌱 Learn" em="🌱">{card(
+    <LearnIntro words={lesson.words} onWord={recordWord} onDone={() => { completeActivity(); earn(lesson.id); go("lesson"); }} />
+  )}</AW>;
+
   if (screen === "flash") return <AW title="📚 Flashcards" em="📚">
     <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>{lesson.words.map((w, i) => <FlashCard key={w.es} word={w} index={i} />)}</div>
-    <div style={{ textAlign: "center", marginTop: 18 }}><Btn onClick={() => { earn(lesson.id); go("lesson"); }} bg="linear-gradient(135deg,#FFD93D,#FF8C42)" color="#fff" border="transparent">⭐ I've learnt these!</Btn></div>
+    <div style={{ textAlign: "center", marginTop: 18 }}><Btn onClick={() => { lesson.words.forEach(w => recordWord(w.es, w.en, true)); completeActivity(); earn(lesson.id); go("lesson"); }} bg={T.sun} color="#fff" edge={T.sunDark}>⭐ I've learnt these!</Btn></div>
   </AW>;
 
-  if (screen === "match") return <AW title="🎯 Matching" em="🎯">{card(result ? <Result score={result.s} total={result.t} onRetry={() => { setResult(null); go("match"); }} onBack={() => go("lesson")} onEarnStar={() => earn(lesson.id)} /> : <MatchGame words={lesson.words} onDone={() => { incrementStat("correctAnswers", 6); setResult({ s: 6, t: 6 }); }} />)}</AW>;
+  if (screen === "listen") return <AW title="👂 Listen" em="👂">{card(result ? <Result score={result.s} total={result.t} onRetry={() => { setResult(null); go("listen"); }} onBack={() => go("lesson")} onEarnStar={() => earn(lesson.id)} /> : <ListenGame words={lesson.words} onWord={recordWord} onDone={(s, t) => { incrementStat("correctAnswers", s); completeActivity(); setResult({ s, t }); }} />)}</AW>;
 
-  if (screen === "quiz") return <AW title="🧠 Quiz" em="🧠">{card(result ? <Result score={result.s} total={result.t} onRetry={() => { setResult(null); go("quiz"); }} onBack={() => go("lesson")} onEarnStar={() => earn(lesson.id)} /> : <Quiz words={lesson.words} gaps={lesson.gaps} onDone={(s, t) => { incrementStat("correctAnswers", s); setResult({ s, t }); }} />)}</AW>;
+  if (screen === "match") return <AW title="🎯 Matching" em="🎯">{card(result ? <Result score={result.s} total={result.t} onRetry={() => { setResult(null); go("match"); }} onBack={() => go("lesson")} onEarnStar={() => earn(lesson.id)} /> : <MatchGame words={lesson.words} onDone={() => { lesson.words.slice(0,6).forEach(w => recordWord(w.es, w.en, true)); incrementStat("correctAnswers", 6); completeActivity(); setResult({ s: 6, t: 6 }); }} />)}</AW>;
 
-  if (screen === "build") return <AW title="🔨 Sentences" em="🔨">{card(result ? <Result score={result.s} total={result.t} onRetry={() => { setResult(null); go("build"); }} onBack={() => go("lesson")} onEarnStar={() => earn(lesson.id)} /> : <SentenceBuilder sentences={lesson.sentences} onDone={(s, t) => { incrementStat("correctAnswers", s); setResult({ s, t }); }} />)}</AW>;
+  if (screen === "quiz") return <AW title="🧠 Quiz" em="🧠">{card(result ? <Result score={result.s} total={result.t} onRetry={() => { setResult(null); go("quiz"); }} onBack={() => go("lesson")} onEarnStar={() => earn(lesson.id)} /> : <Quiz words={lesson.words} gaps={lesson.gaps} onWord={recordWord} onDone={(s, t) => { incrementStat("correctAnswers", s); completeActivity(); setResult({ s, t }); }} />)}</AW>;
 
-  if (screen === "sayit") return <AW title="🎤 Say It!" em="🎤">{card(result ? <Result score={result.s} total={result.t} onRetry={() => { setResult(null); go("sayit"); }} onBack={() => go("lesson")} onEarnStar={() => earn(lesson.id)} /> : <SayItGame words={lesson.words} onDone={(s, t) => { incrementStat("micUses", t); incrementStat("correctAnswers", s); setResult({ s, t }); }} />)}</AW>;
+  if (screen === "build") return <AW title="🔨 Sentences" em="🔨">{card(result ? <Result score={result.s} total={result.t} onRetry={() => { setResult(null); go("build"); }} onBack={() => go("lesson")} onEarnStar={() => earn(lesson.id)} /> : <SentenceBuilder sentences={lesson.sentences} onDone={(s, t) => { incrementStat("correctAnswers", s); completeActivity(); setResult({ s, t }); }} />)}</AW>;
 
-  if (screen === "story") return <AW title="📖 Story" em="📖">{card(result ? <Result score={result.s} total={result.t} onRetry={() => { setResult(null); go("story"); }} onBack={() => go("lesson")} onEarnStar={() => earn(lesson.id)} /> : <StoryReader story={lesson.story} onDone={(s, t) => { incrementStat("storiesRead", 1); incrementStat("correctAnswers", s); setResult({ s, t }); }} />)}</AW>;
+  if (screen === "sayit") return <AW title="🎤 Say It!" em="🎤">{card(result ? <Result score={result.s} total={result.t} onRetry={() => { setResult(null); go("sayit"); }} onBack={() => go("lesson")} onEarnStar={() => earn(lesson.id)} /> : <SayItGame words={lesson.words} onWord={recordWord} onDone={(s, t) => { incrementStat("micUses", t); incrementStat("correctAnswers", s); completeActivity(); setResult({ s, t }); }} />)}</AW>;
+
+  if (screen === "story") return <AW title="📖 Story" em="📖">{card(result ? <Result score={result.s} total={result.t} onRetry={() => { setResult(null); go("story"); }} onBack={() => go("lesson")} onEarnStar={() => earn(lesson.id)} /> : <StoryReader story={lesson.story} onDone={(s, t) => { incrementStat("storiesRead", 1); incrementStat("correctAnswers", s); completeActivity(); setResult({ s, t }); }} />)}</AW>;
+
+  // DAILY REVIEW — spaced repetition over previously learned words
+  if (screen === "review") {
+    const maxDone = Math.max(1, ...Object.keys(stars).map(Number));
+    const learnedPool = wordsForLessonsUpTo(maxDone);
+    const due = db.getDueWords(child.id);
+    // If nothing is technically "due", fall back to a mixed refresh of learned words
+    const reviewList = (due.length ? due : learnedPool.map(w => ({ es: w.es, en: w.en }))).slice(0, 10);
+    return <div style={{ minHeight: "100vh", background: T.cream }}>
+      <Confetti active={conf} />
+      {newBadge && <BadgeToast badge={newBadge} onClose={() => setNewBadge(null)} />}
+      <div style={{ position: "relative", zIndex: 1, maxWidth: 500, margin: "0 auto", padding: "14px 14px 36px" }}>
+        <Btn onClick={() => go("home")} style={{ marginBottom: 12, fontSize: 12, padding: "10px 18px" }}>← Home</Btn>
+        <div style={{ textAlign: "center", marginBottom: 14 }}>
+          <div style={{ display: "flex", justifyContent: "center", gap: 6, marginBottom: 4 }}><Sol size={40} /><Luna size={40} /></div>
+          <h2 style={{ fontSize: 26, fontWeight: 800, color: T.ink, fontFamily: FD }}>Daily Review</h2>
+          <div style={{ fontSize: 12, color: T.muted, fontWeight: 700, fontFamily: FN }}>Words you've learned before — let's keep them fresh!</div>
+        </div>
+        {card(reviewList.length === 0
+          ? <div style={{ textAlign: "center", padding: 20 }}>
+              <div style={{ fontSize: 44, marginBottom: 8 }}>🌟</div>
+              <div style={{ fontSize: 16, fontWeight: 800, color: T.ink, fontFamily: FN, marginBottom: 6 }}>Nothing to review yet!</div>
+              <div style={{ fontSize: 13, color: T.muted, fontWeight: 600, fontFamily: FN, marginBottom: 16 }}>Finish a lesson or two, then come back to keep your words strong.</div>
+              <Btn onClick={() => go("home")} bg={T.sun} color="#fff" edge={T.sunDark}>Back to lessons</Btn>
+            </div>
+          : result
+            ? <Result score={result.s} total={result.t} onRetry={() => { setResult(null); go("review"); }} onBack={() => go("home")} onEarnStar={() => {}} />
+            : <ReviewGame dueWords={reviewList} allWords={ALL_WORDS} onWord={recordWord} onDone={(s, t) => { incrementStat("correctAnswers", s); incrementStat("reviewsDone", 1); completeActivity(); setResult({ s, t }); }} />
+        )}
+      </div>
+    </div>;
+  }
 
   return null;
 }
