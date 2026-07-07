@@ -2404,8 +2404,10 @@ export default function App() {
   const recordWord = (es, en, correct) => {
     if (!child) return;
     db.recordWord(child.id, es, en, correct);
-    // keep local progress roughly in sync for the due-count badge on home
-    setProgress(prev => prev ? db.getProgress(child.id) : prev);
+    // NOTE: deliberately NOT calling setProgress here. The home screen reads
+    // due-word and daily counts fresh from the db when it renders, so syncing
+    // React state on every answer is unnecessary — and worse, it re-renders the
+    // App mid-activity, which remounts the game and resets it to the start.
 
     // Mascot reactions — occasional and earned, never on every answer.
     if (correct) {
@@ -2933,31 +2935,31 @@ export default function App() {
     onRetry={() => { setResult(null); go(retryScreen); }}
     onBack={() => go("lesson")} onEarnStar={() => earn(lesson.id)} />;
 
-  if (screen === "learn") return <AW title="🌱 Learn" em="🌱">{card(
+  if (screen === "learn") return AW({ title: "🌱 Learn", children: card(
     <LearnIntro words={lesson.words} onWord={recordWord} onDone={() => { if (inJourney) advanceJourney(0, 0); else { completeActivity(); earn(lesson.id); go("lesson"); } }} />
-  )}</AW>;
+  )});
 
-  if (screen === "flash") return <AW title="📚 Flashcards" em="📚">
+  if (screen === "flash") return AW({ title: "📚 Flashcards", children: <>
     <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>{lesson.words.map((w, i) => <FlashCard key={w.es} word={w} index={i} />)}</div>
     <div style={{ textAlign: "center", marginTop: 18 }}><Btn onClick={() => { lesson.words.forEach(w => recordWord(w.es, w.en, true)); if (inJourney) advanceJourney(0, 0); else { completeActivity(); earn(lesson.id); go("lesson"); } }} bg={T.sun} color="#fff" edge={T.sunDark}>{inJourney ? "Next →" : "⭐ I've learnt these!"}</Btn></div>
-  </AW>;
+  </> });
 
-  if (screen === "listen") return <AW title="👂 Listen" em="👂">{card(result ? freeResult("listen") : <ListenGame words={lesson.words} onWord={recordWord} onDone={(s, t) => finishActivity(s, t)} />)}</AW>;
+  if (screen === "listen") return AW({ title: "👂 Listen", children: card(result ? freeResult("listen") : <ListenGame words={lesson.words} onWord={recordWord} onDone={(s, t) => finishActivity(s, t)} />) });
 
-  if (screen === "match") return <AW title="🎯 Matching" em="🎯">{card(result ? freeResult("match") : <MatchGame words={lesson.words} onDone={() => { lesson.words.slice(0,6).forEach(w => recordWord(w.es, w.en, true)); finishActivity(6, 6); }} />)}</AW>;
+  if (screen === "match") return AW({ title: "🎯 Matching", children: card(result ? freeResult("match") : <MatchGame words={lesson.words} onDone={() => { lesson.words.slice(0,6).forEach(w => recordWord(w.es, w.en, true)); finishActivity(6, 6); }} />) });
 
-  if (screen === "quiz") return <AW title="🧠 Quiz" em="🧠">{card(result ? freeResult("quiz") : <Quiz words={lesson.words} gaps={lesson.gaps} onWord={recordWord} onDone={(s, t) => finishActivity(s, t)} />)}</AW>;
+  if (screen === "quiz") return AW({ title: "🧠 Quiz", children: card(result ? freeResult("quiz") : <Quiz words={lesson.words} gaps={lesson.gaps} onWord={recordWord} onDone={(s, t) => finishActivity(s, t)} />) });
 
-  if (screen === "build") return <AW title="🔨 Sentences" em="🔨">{card(result ? freeResult("build") : <SentenceBuilder sentences={lesson.sentences} onDone={(s, t) => finishActivity(s, t)} />)}</AW>;
+  if (screen === "build") return AW({ title: "🔨 Sentences", children: card(result ? freeResult("build") : <SentenceBuilder sentences={lesson.sentences} onDone={(s, t) => finishActivity(s, t)} />) });
 
-  if (screen === "sayit") return <AW title="🎤 Say It!" em="🎤">{card(result ? freeResult("sayit") : <SayItGame words={lesson.words} onWord={recordWord} onDone={(s, t) => finishActivity(s, t, { stat: "micUses", statAmount: t })} />)}</AW>;
+  if (screen === "sayit") return AW({ title: "🎤 Say It!", children: card(result ? freeResult("sayit") : <SayItGame words={lesson.words} onWord={recordWord} onDone={(s, t) => finishActivity(s, t, { stat: "micUses", statAmount: t })} />) });
 
-  if (screen === "story") return <AW title="📖 Story" em="📖">{card(result ? freeResult("story") : <StoryReader story={lesson.story} onWord={recordWord} onDone={(s, t) => finishActivity(s, t, { extraStat: "storiesRead" })} />)}</AW>;
+  if (screen === "story") return AW({ title: "📖 Story", children: card(result ? freeResult("story") : <StoryReader story={lesson.story} onWord={recordWord} onDone={(s, t) => finishActivity(s, t, { extraStat: "storiesRead" })} />) });
 
   // SURPRISE — a light interstitial; no scoring, just advances the journey
-  if (screen === "surprise") return <AW title="🎁 Surprise!" em="🎁">{card(
+  if (screen === "surprise") return AW({ title: "🎁 Surprise!", children: card(
     <SurpriseCard surprise={surpriseFor(lesson.id)} onDone={() => { if (inJourney) advanceJourney(0, 0); else go("lesson"); }} />
-  )}</AW>;
+  )});
 
   // WARM-UP — recall of words from earlier lessons (or this world for milestones)
   if (screen === "warmup") {
@@ -2965,25 +2967,25 @@ export default function App() {
     const earlierPool = wordsForLessonsUpTo(prevId);
     // If there's nothing earlier yet (lesson 1), fall back to this lesson's words
     const warmWords = earlierPool.length >= 4 ? earlierPool : lesson.words;
-    return <AW title="🔥 Warm-up" em="🔥">{card(
+    return AW({ title: "🔥 Warm-up", children: card(
       <WarmUp words={warmWords} allWords={ALL_WORDS} onWord={recordWord} onDone={(s, t) => finishActivity(s, t)} />
-    )}</AW>;
+    )});
   }
 
   // BOSS BATTLE — end-of-world mixed challenge
   if (screen === "boss") {
     const worldWords = wordsForWorld(lesson.id);
     const world = WORLDS.find(w => lesson.id >= w.range[0] && lesson.id <= w.range[1]);
-    return <AW title="⚔️ Boss Challenge" em="⚔️">{card(
+    return AW({ title: "⚔️ Boss Challenge", children: card(
       <BossBattle words={worldWords.length >= 4 ? worldWords : lesson.words} world={world} onWord={recordWord} onDone={(s, t) => finishActivity(s, t)} />
-    )}</AW>;
+    )});
   }
 
-  if (screen === "dragmatch") return <AW title="👆 Drag & Match" em="👆">{card(result ? freeResult("dragmatch") : <DragMatch words={lesson.words} onWord={recordWord} onDone={(s, t) => finishActivity(s, t)} />)}</AW>;
+  if (screen === "dragmatch") return AW({ title: "👆 Drag & Match", children: card(result ? freeResult("dragmatch") : <DragMatch words={lesson.words} onWord={recordWord} onDone={(s, t) => finishActivity(s, t)} />) });
 
-  if (screen === "oddone") return <AW title="🤔 Odd One Out" em="🤔">{card(result ? freeResult("oddone") : <OddOneOut words={lesson.words} allWords={ALL_WORDS} onWord={recordWord} onDone={(s, t) => finishActivity(s, t)} />)}</AW>;
+  if (screen === "oddone") return AW({ title: "🤔 Odd One Out", children: card(result ? freeResult("oddone") : <OddOneOut words={lesson.words} allWords={ALL_WORDS} onWord={recordWord} onDone={(s, t) => finishActivity(s, t)} />) });
 
-  if (screen === "wordorder") return <AW title="🧩 Word Order" em="🧩">{card(result ? freeResult("wordorder") : <WordOrder sentences={lesson.sentences} onDone={(s, t) => finishActivity(s, t)} />)}</AW>;
+  if (screen === "wordorder") return AW({ title: "🧩 Word Order", children: card(result ? freeResult("wordorder") : <WordOrder sentences={lesson.sentences} onDone={(s, t) => finishActivity(s, t)} />) });
 
   // ============================================================
   // LESSON COMPLETE — celebration at the end of a journey
