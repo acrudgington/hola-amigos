@@ -44,7 +44,7 @@ const db = {
     db.saveChildren(children);
     parents[pIdx].children = [...(parents[pIdx].children || []), id];
     db.saveParents(parents);
-    db.saveProgress(id, { stars: {}, lastLesson: 1, streak: 0, lastActive: null, timeSpent: 0, badges: [], lessonsDone: 0, correctAnswers: 0, wordMemory: {}, dailyGoal: 3, dailyDate: null, dailyCount: 0, reviewsDone: 0 });
+    db.saveProgress(id, { stars: {}, lastLesson: 1, streak: 0, lastActive: null, timeSpent: 0, badges: [], lessonsDone: 0, correctAnswers: 0, wordMemory: {}, dailyGoal: 3, dailyDate: null, dailyCount: 0, reviewsDone: 0, stickers: [], outfits: [], solOutfit: null, lunaOutfit: null });
     return child;
   },
   deleteChild(childId) {
@@ -71,8 +71,8 @@ const db = {
   getProgress(childId) {
     try {
       const p = JSON.parse(localStorage.getItem(`hola_progress_${childId}`));
-      return { stars: {}, lastLesson: 1, streak: 0, lastActive: null, timeSpent: 0, badges: [], lessonsDone: 0, correctAnswers: 0, wordMemory: {}, dailyGoal: 3, dailyDate: null, dailyCount: 0, reviewsDone: 0, ...(p || {}) };
-    } catch { return { stars: {}, lastLesson: 1, streak: 0, lastActive: null, timeSpent: 0, badges: [], lessonsDone: 0, correctAnswers: 0, wordMemory: {}, dailyGoal: 3, dailyDate: null, dailyCount: 0, reviewsDone: 0 }; }
+      return { stars: {}, lastLesson: 1, streak: 0, lastActive: null, timeSpent: 0, badges: [], lessonsDone: 0, correctAnswers: 0, wordMemory: {}, dailyGoal: 3, dailyDate: null, dailyCount: 0, reviewsDone: 0, stickers: [], outfits: [], solOutfit: null, lunaOutfit: null, ...(p || {}) };
+    } catch { return { stars: {}, lastLesson: 1, streak: 0, lastActive: null, timeSpent: 0, badges: [], lessonsDone: 0, correctAnswers: 0, wordMemory: {}, dailyGoal: 3, dailyDate: null, dailyCount: 0, reviewsDone: 0, stickers: [], outfits: [], solOutfit: null, lunaOutfit: null }; }
   },
   saveProgress(childId, p) { localStorage.setItem(`hola_progress_${childId}`, JSON.stringify(p)); },
 
@@ -146,22 +146,38 @@ const db = {
 // COURSE DATA — 32 LESSONS, 4 WORLDS
 // ============================================================
 const WORLDS = [
-  { id: 1, name: "Starter Island", emoji: "🏝️", color: "#FF8C42", desc: "First words & vocab", range: [1, 8] },
-  { id: 2, name: "Word Town", emoji: "🏘️", color: "#6BCB77", desc: "More vocab + A1 Challenge!", range: [9, 16] },
-  { id: 3, name: "Sentence City", emoji: "🏙️", color: "#4D96FF", desc: "Sentences & grammar!", range: [17, 24] },
-  { id: 4, name: "Story Land", emoji: "📖", color: "#B983FF", desc: "Past, future + A2 Final!", range: [25, 32] },
-  { id: 5, name: "Plaza del Pueblo", emoji: "⛲", color: "#FF9EC7", desc: "Town life & vocabulary!", range: [33, 40] },
-  { id: 6, name: "Puente de Expresiones", emoji: "🌉", color: "#FFD93D", desc: "Express yourself!", range: [41, 50] },
-  { id: 7, name: "Storyteller's Castle", emoji: "🏰", color: "#FF6B6B", desc: "Tell stories & give advice!", range: [51, 60] },
-  { id: 8, name: "Vida Diaria", emoji: "🏠", color: "#FF8C42", desc: "Daily home life!", range: [61, 68] },
-  { id: 9, name: "Cosas que Hago", emoji: "🎮", color: "#4D96FF", desc: "Actions, toys & games!", range: [69, 76] },
-  { id: 10, name: "El Mundo Alrededor", emoji: "🌍", color: "#6BCB77", desc: "Animals, nature & space!", range: [77, 84] },
-  { id: 11, name: "Cómo Soy", emoji: "👤", color: "#B983FF", desc: "Who I am — me, family, school!", range: [85, 92] },
-  { id: 12, name: "Repaso Total", emoji: "🌟", color: "#FFD93D", desc: "Big review of everything!", range: [93, 100] },
+  { id: 1, name: "Starter Island", emoji: "🏝️", color: "#FF9F45", desc: "First words & vocab", range: [1, 8], tint: "#FFF3E0", deco: ["🌴", "🐚", "☀️", "🌊"], scene: "island" },
+  { id: 2, name: "Word Town", emoji: "🏘️", color: "#5BC98A", desc: "More vocab + A1 Challenge!", range: [9, 16], tint: "#E9F8EE", deco: ["🏡", "🌳", "🌷", "🐦"], scene: "town" },
+  { id: 3, name: "Sentence City", emoji: "🏙️", color: "#4D96FF", desc: "Sentences & grammar!", range: [17, 24], tint: "#E6F0FF", deco: ["🏢", "🚕", "🚦", "🌆"], scene: "city" },
+  { id: 4, name: "Story Land", emoji: "📖", color: "#B06BE0", desc: "Past, future + A2 Final!", range: [25, 32], tint: "#F4EBFC", deco: ["📖", "✨", "🕯️", "🦉"], scene: "story" },
+  { id: 5, name: "Plaza del Pueblo", emoji: "⛲", color: "#FF7EB0", desc: "Town life & vocabulary!", range: [33, 40], tint: "#FFEDF4", deco: ["⛲", "🌺", "🕊️", "🎏"], scene: "plaza" },
+  { id: 6, name: "Puente de Expresiones", emoji: "🌉", color: "#F5B700", desc: "Express yourself!", range: [41, 50], tint: "#FFF7DB", deco: ["🌉", "💬", "🎈", "🌤️"], scene: "bridge" },
+  { id: 7, name: "Storyteller's Castle", emoji: "🏰", color: "#FF6363", desc: "Tell stories & give advice!", range: [51, 60], tint: "#FFEBEB", deco: ["🏰", "🛡️", "👑", "🐉"], scene: "castle" },
+  { id: 8, name: "Vida Diaria", emoji: "🏠", color: "#FF8A5B", desc: "Daily home life!", range: [61, 68], tint: "#FFEFE8", deco: ["🏠", "🍳", "🛋️", "🌻"], scene: "home" },
+  { id: 9, name: "Cosas que Hago", emoji: "🎮", color: "#3FB4C9", desc: "Actions, toys & games!", range: [69, 76], tint: "#E4F7FA", deco: ["🎮", "⚽", "🎨", "🪁"], scene: "play" },
+  { id: 10, name: "El Mundo Alrededor", emoji: "🌍", color: "#54B678", desc: "Animals, nature & space!", range: [77, 84], tint: "#E7F6EC", deco: ["🌍", "🦋", "🌲", "🚀"], scene: "nature" },
+  { id: 11, name: "Cómo Soy", emoji: "👤", color: "#8B7BE8", desc: "Who I am — me, family, school!", range: [85, 92], tint: "#EEEBFC", deco: ["👤", "👨‍👩‍👧", "🎒", "💜"], scene: "self" },
+  { id: 12, name: "Repaso Total", emoji: "🌟", color: "#FFB627", desc: "Big review of everything!", range: [93, 100], tint: "#FFF6DE", deco: ["🌟", "🏆", "🎉", "🌈"], scene: "stars" },
 ];
 
-const L = (id, title, sub, emoji, color, bg, words, fact, phrase, sentences, gaps, story) =>
-  ({ id, title, subtitle: sub, emoji, color, bg, words, funFact: fact, phrase, sentences: sentences || [], gaps: gaps || [], story: story || null });
+// Milestone lessons — the "boss" at the end of each world.
+const MILESTONES = [16, 24, 32, 40, 50, 60, 68, 76, 84, 92, 100];
+const isMilestone = (id) => MILESTONES.includes(id);
+
+// A tiny deterministic hash so each lesson id always gets the same variation.
+const lessonSeed = (id) => (id * 2654435761) % 2 ** 12;
+
+// Surprise cards — light, joyful interstitials that break the routine.
+// Chosen deterministically per lesson so the experience is stable, not chaotic.
+const SURPRISES = [
+  { id: "joke", emoji: "😄", title: "Sol's joke!", lines: ["¿Por qué la abeja está feliz?", "Why is the bee happy?", "Because it found its 'honey'! 🐝🍯"] },
+  { id: "joke2", emoji: "🤭", title: "Luna's riddle!", lines: ["Soy amarillo y salgo de día.", "I'm yellow and come out in the day.", "¿Quién soy? ¡Sol! ☀️"] },
+  { id: "fact", emoji: "🌎", title: "Amazing fact!", lines: ["In Spanish, upside-down ¿ and ¡ open questions and exclamations!", "So you always know what's coming. Clever, right?"] },
+  { id: "fact2", emoji: "🎉", title: "Did you know?", lines: ["Spanish is spoken by over 500 million people!", "That's a LOT of new friends to talk to. 🌍"] },
+  { id: "cheer", emoji: "💪", title: "You're amazing!", lines: ["Sol y Luna think you're doing brilliantly.", "Every word you learn is a little superpower!"] },
+  { id: "star", emoji: "⭐", title: "Star moment!", lines: ["Take a deep breath and smile.", "You're getting better every single day. ¡Vamos!"] },
+];
+const surpriseFor = (id) => SURPRISES[lessonSeed(id) % SURPRISES.length];
 
 const LESSONS = [
   L(1,"¡Hola!","Hello & Goodbye","👋","#FF8C42","#FFF3E8",[{es:"Hola",en:"Hello",say:"OH-la",emoji:"👋"},{es:"Adiós",en:"Goodbye",say:"ah-DYOS",emoji:"👋"},{es:"Buenos días",en:"Good morning",say:"BWAY-nos DEE-as",emoji:"☀️"},{es:"Buenas tardes",en:"Good afternoon",say:"BWAY-nas TAR-des",emoji:"🌤️"},{es:"Buenas noches",en:"Good night",say:"BWAY-nas NOH-ches",emoji:"🌙"},{es:"¿Qué tal?",en:"How are you?",say:"keh TAL",emoji:"😊"},{es:"Bien",en:"Good",say:"byen",emoji:"👍"},{es:"Gracias",en:"Thank you",say:"GRAH-thyass",emoji:"🙏"}],"In Spain, people say ¡Buenas! as a friendly shortcut for hello!",{es:"¡Hola! ¿Qué tal?",en:"Hello! How are you?"}),
@@ -408,6 +424,15 @@ const wordsForLessonsUpTo = (maxLessonId) => {
   return out;
 };
 
+// All vocabulary within a world (by lesson id range) — used for mini-boss battles.
+const wordsForWorld = (lessonId) => {
+  const w = WORLDS.find(w => lessonId >= w.range[0] && lessonId <= w.range[1]);
+  if (!w) return [];
+  const seen = new Set(); const out = [];
+  LESSONS.forEach(l => { if (l.id >= w.range[0] && l.id <= w.range[1]) (l.words || []).forEach(x => { if (!seen.has(x.es)) { seen.add(x.es); out.push(x); } }); });
+  return out;
+};
+
 
 // ============================================================
 // BADGES — unlockable achievements
@@ -460,27 +485,109 @@ function checkBadges(progress) {
 }
 
 // ============================================================
+// COLLECTIBLE STICKERS — earned at milestones, browsed in the album.
+// rarity: common / rare / legendary (affects the album's frame colour)
+// ============================================================
+const starsOf = p => Object.values(p.stars || {}).reduce((a, b) => a + b, 0);
+const lessonsOf = p => Object.keys(p.stars || {}).length;
+const STICKERS = [
+  // World completion stickers (earn by finishing each world's milestone)
+  { id: "s_island", name: "Island Explorer", emoji: "🏝️", rarity: "common", desc: "Finished Starter Island", check: p => (p.stars||{})[8] >= 1 },
+  { id: "s_town", name: "Townsfolk", emoji: "🏘️", rarity: "common", desc: "Finished Word Town", check: p => (p.stars||{})[16] >= 1 },
+  { id: "s_city", name: "City Slicker", emoji: "🏙️", rarity: "common", desc: "Finished Sentence City", check: p => (p.stars||{})[24] >= 1 },
+  { id: "s_story", name: "Bookworm", emoji: "📖", rarity: "rare", desc: "Finished Story Land", check: p => (p.stars||{})[32] >= 1 },
+  { id: "s_plaza", name: "Plaza Star", emoji: "⛲", rarity: "rare", desc: "Finished Plaza del Pueblo", check: p => (p.stars||{})[40] >= 1 },
+  { id: "s_bridge", name: "Bridge Builder", emoji: "🌉", rarity: "rare", desc: "Finished the Bridge", check: p => (p.stars||{})[50] >= 1 },
+  { id: "s_castle", name: "Castle Guard", emoji: "🏰", rarity: "rare", desc: "Finished the Castle", check: p => (p.stars||{})[60] >= 1 },
+  { id: "s_home", name: "Home Hero", emoji: "🏠", rarity: "rare", desc: "Finished Vida Diaria", check: p => (p.stars||{})[68] >= 1 },
+  { id: "s_play", name: "Game Champ", emoji: "🎮", rarity: "rare", desc: "Finished Cosas que Hago", check: p => (p.stars||{})[76] >= 1 },
+  { id: "s_nature", name: "Nature Friend", emoji: "🌍", rarity: "rare", desc: "Finished El Mundo Alrededor", check: p => (p.stars||{})[84] >= 1 },
+  { id: "s_self", name: "True Self", emoji: "💜", rarity: "legendary", desc: "Finished Cómo Soy", check: p => (p.stars||{})[92] >= 1 },
+  { id: "s_final", name: "Grand Master", emoji: "👑", rarity: "legendary", desc: "Completed all 100 lessons!", check: p => (p.stars||{})[100] >= 1 },
+  // Fun themed stickers by other achievements
+  { id: "s_rocket", name: "Blast Off!", emoji: "🚀", rarity: "common", desc: "Earned 10 stars", check: p => starsOf(p) >= 10 },
+  { id: "s_rainbow", name: "Rainbow", emoji: "🌈", rarity: "rare", desc: "Earned 50 stars", check: p => starsOf(p) >= 50 },
+  { id: "s_unicorn", name: "Unicorn", emoji: "🦄", rarity: "legendary", desc: "Earned 150 stars", check: p => starsOf(p) >= 150 },
+  { id: "s_fire", name: "Hot Streak", emoji: "🔥", rarity: "common", desc: "3-day streak", check: p => (p.streak||0) >= 3 },
+  { id: "s_star7", name: "Shooting Star", emoji: "☄️", rarity: "rare", desc: "7-day streak", check: p => (p.streak||0) >= 7 },
+  { id: "s_brain", name: "Big Brain", emoji: "🧠", rarity: "rare", desc: "100 correct answers", check: p => (p.correctAnswers||0) >= 100 },
+  { id: "s_mic", name: "Superstar Singer", emoji: "🎤", rarity: "common", desc: "Used the mic 10 times", check: p => (p.micUses||0) >= 10 },
+  { id: "s_owl", name: "Wise Owl", emoji: "🦉", rarity: "rare", desc: "Did 10 daily reviews", check: p => (p.reviewsDone||0) >= 10 },
+  { id: "s_medal", name: "Gold Medal", emoji: "🥇", rarity: "rare", desc: "3 stars in 10 lessons", check: p => Object.values(p.stars||{}).filter(s => s === 3).length >= 10 },
+  { id: "s_trophy", name: "Halfway Hero", emoji: "🏆", rarity: "rare", desc: "Finished 50 lessons", check: p => lessonsOf(p) >= 50 },
+];
+function checkStickers(progress) {
+  const owned = new Set(progress.stickers || []);
+  const newOnes = [];
+  STICKERS.forEach(s => { if (!owned.has(s.id) && s.check(progress)) { owned.add(s.id); newOnes.push(s.id); } });
+  return { allStickers: [...owned], newStickers: newOnes };
+}
+
+// ============================================================
+// MASCOT OUTFITS — cosmetic accessories the child unlocks & equips.
+// Rendered on the Sol/Luna SVGs via an `outfit` prop.
+// ============================================================
+const OUTFITS = [
+  { id: "none", name: "None", emoji: "🚫", desc: "No accessory", check: () => true },
+  { id: "party", name: "Party Hat", emoji: "🎉", desc: "Finish your first lesson", check: p => lessonsOf(p) >= 1 },
+  { id: "sunglasses", name: "Cool Shades", emoji: "😎", desc: "Earn 20 stars", check: p => starsOf(p) >= 20 },
+  { id: "crown", name: "Royal Crown", emoji: "👑", desc: "Finish a whole world", check: p => (p.stars||{})[16] >= 1 },
+  { id: "flower", name: "Flower Crown", emoji: "🌸", desc: "5-day streak", check: p => (p.streak||0) >= 5 },
+  { id: "wizard", name: "Wizard Hat", emoji: "🧙", desc: "Earn 75 stars", check: p => starsOf(p) >= 75 },
+  { id: "bow", name: "Fancy Bow", emoji: "🎀", desc: "Read 5 stories", check: p => (p.storiesRead||0) >= 5 },
+];
+function checkOutfits(progress) {
+  const owned = new Set(progress.outfits || ["none"]);
+  owned.add("none");
+  const newOnes = [];
+  OUTFITS.forEach(o => { if (!owned.has(o.id) && o.check(progress)) { owned.add(o.id); newOnes.push(o.id); } });
+  return { allOutfits: [...owned], newOutfits: newOnes };
+}
+
+// ============================================================
 // SPEECH (text-to-speech + speech recognition)
 // ============================================================
 const speech = {
-  voices: [],
+  esVoices: [],
+  enVoices: [],
   _loaded: false,
   _load() {
     if (typeof window === "undefined" || !window.speechSynthesis) return;
-    speech.voices = window.speechSynthesis.getVoices().filter(v => v.lang.startsWith("es"));
-    if (speech.voices.length) speech._loaded = true;
+    const all = window.speechSynthesis.getVoices();
+    speech.esVoices = all.filter(v => v.lang && v.lang.toLowerCase().startsWith("es"));
+    speech.enVoices = all.filter(v => v.lang && v.lang.toLowerCase().startsWith("en"));
+    if (speech.esVoices.length || speech.enVoices.length) speech._loaded = true;
   },
-  speak(text, rate = 0.85) {
+  // Pick the best voice for a language, preferring a specific region.
+  _pickVoice(lang) {
+    if (lang === "en") {
+      // Prefer British English, then any English, then a Spanish voice as last resort
+      return speech.enVoices.find(v => v.lang === "en-GB")
+        || speech.enVoices.find(v => v.lang.toLowerCase().startsWith("en"))
+        || speech.esVoices[0] || null;
+    }
+    // Spanish: prefer Spain Spanish, then any Spanish, then any English as last resort
+    return speech.esVoices.find(v => v.lang === "es-ES")
+      || speech.esVoices[0]
+      || speech.enVoices[0] || null;
+  },
+  // speak(text, rateOrOpts). Backwards compatible: a number = Spanish at that rate.
+  // Or pass { lang: "es"|"en", rate }. Default language is Spanish.
+  speak(text, opts) {
     if (typeof window === "undefined" || !window.speechSynthesis) return;
     if (!speech._loaded) speech._load();
+    // Normalise arguments
+    let lang = "es", rate;
+    if (typeof opts === "number") rate = opts;
+    else if (opts && typeof opts === "object") { lang = opts.lang || "es"; rate = opts.rate; }
+    if (rate == null) rate = lang === "en" ? 0.95 : 0.85; // English a touch faster/natural, Spanish slower to imitate
     window.speechSynthesis.cancel();
     const utter = new SpeechSynthesisUtterance(text);
-    utter.lang = "es-ES";
+    utter.lang = lang === "en" ? "en-GB" : "es-ES";
     utter.rate = rate;
     utter.pitch = 1.05;
-    // Prefer Spain Spanish if available
-    const spain = speech.voices.find(v => v.lang === "es-ES") || speech.voices[0];
-    if (spain) utter.voice = spain;
+    const v = speech._pickVoice(lang);
+    if (v) utter.voice = v;
     window.speechSynthesis.speak(utter);
   },
   supported() {
@@ -760,7 +867,7 @@ function StoryReader({ story, onDone, onWord }) {
       const readNext = () => {
         if (i >= sentences.length) { setReading(false); setActiveSent(-1); return; }
         setActiveSent(i);
-        speech.speak(sentences[i], 0.82);
+        speech.speak(sentences[i], { lang: "en", rate: 0.9 });
         // Estimate duration from length; advance after it
         const ms = Math.max(1600, sentences[i].length * 75);
         readTimer.current = setTimeout(() => { i++; readNext(); }, ms);
@@ -772,7 +879,7 @@ function StoryReader({ story, onDone, onWord }) {
       <div style={{ fontSize: 26, marginBottom: 6 }}>📖</div>
       <h3 style={{ fontSize: 22, fontWeight: 800, fontFamily: FD, color: T.ink, marginBottom: 12 }}>{story.title}</h3>
       <div style={{ background: "#fff", borderRadius: 18, padding: 18, border: `2px solid ${T.line}`, boxShadow: `0 4px 0 ${T.line}`, fontSize: 16, lineHeight: 1.8, fontFamily: FN, color: T.ink, marginBottom: 14, textAlign: "left" }}>
-        {sentences.map((s, i) => <span key={i} onClick={() => { window.speechSynthesis?.cancel(); speech.speak(s, 0.82); setActiveSent(i); }} style={{
+        {sentences.map((s, i) => <span key={i} onClick={() => { window.speechSynthesis?.cancel(); speech.speak(s, { lang: "en", rate: 0.9 }); setActiveSent(i); }} style={{
           cursor: "pointer",
           background: activeSent === i ? T.sunLight : "transparent",
           borderRadius: 6, padding: "1px 2px", transition: "background .2s",
@@ -783,7 +890,7 @@ function StoryReader({ story, onDone, onWord }) {
         <Btn onClick={readAll} bg={reading ? T.red : T.luna} color="#fff" edge={reading ? T.redDark : T.lunaDark}>{reading ? "⏹ Stop" : "▶ Read to me"}</Btn>
         <Btn onClick={() => { stopReading(); setStep(step + 1); }} bg={T.sun} color="#fff" edge={T.sunDark}>{step < story.paras.length - 1 ? "Next page →" : "Questions →"}</Btn>
       </div>
-      <div style={{ fontSize: 11, color: T.muted, fontFamily: FN, fontWeight: 700, marginTop: 10 }}>💡 Tap any sentence to hear it!</div>
+      <div style={{ fontSize: 11, color: T.muted, fontFamily: FN, fontWeight: 700, marginTop: 10 }}>💡 Tap any sentence to hear it read aloud!</div>
     </div>;
   }
   const q = story.qs[qIdx];
@@ -1161,6 +1268,357 @@ function findEmoji(es, allWords) {
 }
 
 // ============================================================
+// SURPRISE CARD — a light interstitial that breaks the routine
+// ============================================================
+function SurpriseCard({ surprise, onDone }) {
+  return <div style={{ textAlign: "center", animation: "bIn .4s" }}>
+    <div style={{ fontSize: 64, marginBottom: 6, animation: "bobY 1.4s ease-in-out infinite alternate" }}>{surprise.emoji}</div>
+    <h3 style={{ fontSize: 24, fontWeight: 800, fontFamily: FD, color: T.ink, marginBottom: 14 }}>{surprise.title}</h3>
+    <div style={{ background: "#fff", borderRadius: 20, padding: "22px 18px", border: `2px solid ${T.line}`, boxShadow: `0 4px 0 ${T.line}`, marginBottom: 18 }}>
+      {surprise.lines.map((line, i) => <p key={i} style={{ fontSize: i === 0 ? 18 : 14, fontWeight: i === 0 ? 800 : 700, color: i === 0 ? T.ink : T.muted, fontFamily: i === 0 ? FD : FN, lineHeight: 1.5, marginBottom: i < surprise.lines.length - 1 ? 8 : 0 }}>{line}</p>)}
+    </div>
+    <Btn onClick={onDone} bg={T.sun} color="#fff" edge={T.sunDark}>Continue →</Btn>
+  </div>;
+}
+
+// ============================================================
+// WARM-UP — "Can you still remember?" quick recall of earlier words
+// ============================================================
+function WarmUp({ words, allWords, onDone, onWord }) {
+  const pool = useMemo(() => sh(words).slice(0, 5), [words]);
+  const [idx, setIdx] = useState(0);
+  const [score, setScore] = useState(0);
+  const [fb, setFb] = useState(null);
+  useEffect(() => { setIdx(0); setScore(0); setFb(null); }, [words]);
+
+  const cur = pool[idx];
+  const opts = useMemo(() => {
+    if (!cur) return [];
+    const distractors = sh(allWords.filter(w => w.en !== cur.en)).slice(0, 3);
+    return sh([cur, ...distractors]);
+  }, [cur && cur.es, allWords]);
+  if (!cur) return null;
+
+  const pick = (o) => {
+    if (fb !== null) return;
+    const ok = o.en === cur.en;
+    setFb(o.en);
+    if (ok) setScore(s => s + 1);
+    onWord?.(cur.es, cur.en, ok);
+    setTimeout(() => {
+      setFb(null);
+      if (idx + 1 < pool.length) setIdx(idx + 1);
+      else onDone(score + (ok ? 1 : 0), pool.length);
+    }, 850);
+  };
+
+  return <div style={{ textAlign: "center" }}>
+    <div style={{ fontSize: 13, color: T.muted, fontFamily: FN, fontWeight: 700, marginBottom: 4 }}>Can you still remember? 🤔</div>
+    <div style={{ fontSize: 12, color: T.muted, fontFamily: FN, marginBottom: 12 }}>{idx + 1} / {pool.length}</div>
+    <div style={{ fontSize: 30, fontWeight: 800, color: T.ink, fontFamily: FD, marginBottom: 4 }}>{cur.es}</div>
+    <div style={{ marginBottom: 14 }}><SpeakBtn text={cur.es} size={14} color={T.luna} /></div>
+    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8, maxWidth: 340, margin: "0 auto" }}>
+      {opts.map(o => {
+        const isCorrect = fb !== null && o.en === cur.en;
+        const isWrongPick = fb === o.en && o.en !== cur.en;
+        return <button key={o.en} onClick={() => pick(o)} disabled={fb !== null} style={{
+          padding: "12px 8px", borderRadius: 14, cursor: fb !== null ? "default" : "pointer", fontFamily: FN, fontSize: 14, fontWeight: 800, color: T.ink,
+          border: `2px solid ${isCorrect ? T.green : isWrongPick ? T.red : T.line}`,
+          background: isCorrect ? "#E9F8EC" : isWrongPick ? "#FFECED" : "#fff",
+          boxShadow: `0 3px 0 ${isCorrect ? T.greenDark : isWrongPick ? T.redDark : T.line}`,
+        }}>{o.emoji ? `${o.emoji} ` : ""}{o.en}</button>;
+      })}
+    </div>
+    {fb !== null && <div style={{ marginTop: 12, fontSize: 16, fontWeight: 900, fontFamily: FN, color: fb === cur.en ? T.green : T.red, animation: "bIn .3s" }}>
+      {fb === cur.en ? "⭐ ¡Sí!" : <>It's <b>{cur.en}</b></>}
+    </div>}
+  </div>;
+}
+
+// ============================================================
+// BOSS BATTLE — end-of-world mixed challenge with a health bar
+// ============================================================
+function BossBattle({ words, world, onDone, onWord }) {
+  const questions = useMemo(() => {
+    const qs = sh(words).slice(0, 10).map(w => ({
+      es: w.es, en: w.en, emoji: w.emoji,
+      mode: Math.random() < 0.5 ? "read" : "listen",
+    }));
+    return qs;
+  }, [words]);
+  const [idx, setIdx] = useState(0);
+  const [score, setScore] = useState(0);
+  const [fb, setFb] = useState(null);
+  const [hitFlash, setHitFlash] = useState(false);
+  useEffect(() => { setIdx(0); setScore(0); setFb(null); }, [words]);
+
+  const cur = questions[idx];
+  const opts = useMemo(() => {
+    if (!cur) return [];
+    const distractors = sh(words.filter(w => w.en !== cur.en)).slice(0, 3);
+    return sh([{ en: cur.en, emoji: cur.emoji }, ...distractors.map(d => ({ en: d.en, emoji: d.emoji }))]);
+  }, [cur && cur.es, words]);
+
+  useEffect(() => {
+    if (cur && cur.mode === "listen") { const t = setTimeout(() => speech.speak(cur.es), 350); return () => clearTimeout(t); }
+  }, [idx, cur]);
+
+  if (!cur) return null;
+  const bossHealth = Math.max(0, 100 - (idx / questions.length) * 100);
+
+  const pick = (o) => {
+    if (fb !== null) return;
+    const ok = o.en === cur.en;
+    setFb(o.en);
+    if (ok) { setScore(s => s + 1); setHitFlash(true); setTimeout(() => setHitFlash(false), 300); }
+    onWord?.(cur.es, cur.en, ok);
+    setTimeout(() => {
+      setFb(null);
+      if (idx + 1 < questions.length) setIdx(idx + 1);
+      else onDone(score + (ok ? 1 : 0), questions.length);
+    }, 900);
+  };
+
+  return <div style={{ textAlign: "center" }}>
+    {/* Boss + health bar */}
+    <div style={{ marginBottom: 14 }}>
+      <div style={{ fontSize: 52, transition: "transform .2s", transform: hitFlash ? "scale(1.15) rotate(-5deg)" : "scale(1)", filter: hitFlash ? "brightness(1.3)" : "none" }}>{world?.emoji || "🏆"}</div>
+      <div style={{ fontSize: 12, fontWeight: 900, color: T.ink, fontFamily: FD, margin: "4px 0 6px" }}>{world?.name || "Boss"} Challenge!</div>
+      <div style={{ maxWidth: 260, margin: "0 auto", background: "#FFECED", border: `2px solid ${T.redDark}`, borderRadius: 50, height: 14, overflow: "hidden" }}>
+        <div style={{ height: "100%", width: `${bossHealth}%`, background: `linear-gradient(90deg, ${T.red}, ${T.redDark})`, borderRadius: 50, transition: "width .5s ease-out" }} />
+      </div>
+      <div style={{ fontSize: 10, fontWeight: 800, color: T.muted, fontFamily: FN, marginTop: 3, textTransform: "uppercase", letterSpacing: 1 }}>Question {idx + 1} of {questions.length}</div>
+    </div>
+    {/* Question */}
+    {cur.mode === "listen" ? <>
+      <div style={{ fontSize: 12, color: T.muted, fontFamily: FN, fontWeight: 700, marginBottom: 8 }}>Listen and choose!</div>
+      <button onClick={() => speech.speak(cur.es)} style={{ background: T.luna, border: "none", borderRadius: "50%", width: 72, height: 72, fontSize: 30, cursor: "pointer", color: "#fff", boxShadow: `0 5px 0 ${T.lunaDark}`, marginBottom: 14 }}>🔊</button>
+    </> : <>
+      <div style={{ fontSize: 28, fontWeight: 800, color: T.ink, fontFamily: FD, marginBottom: 4 }}>{cur.es}</div>
+      <div style={{ marginBottom: 12 }}><SpeakBtn text={cur.es} size={13} color={T.luna} /></div>
+    </>}
+    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8, maxWidth: 340, margin: "0 auto" }}>
+      {opts.map(o => {
+        const isCorrect = fb !== null && o.en === cur.en;
+        const isWrongPick = fb === o.en && o.en !== cur.en;
+        return <button key={o.en} onClick={() => pick(o)} disabled={fb !== null} style={{
+          padding: "12px 8px", borderRadius: 14, cursor: fb !== null ? "default" : "pointer", fontFamily: FN, fontSize: 14, fontWeight: 800, color: T.ink,
+          border: `2px solid ${isCorrect ? T.green : isWrongPick ? T.red : T.line}`,
+          background: isCorrect ? "#E9F8EC" : isWrongPick ? "#FFECED" : "#fff",
+          boxShadow: `0 3px 0 ${isCorrect ? T.greenDark : isWrongPick ? T.redDark : T.line}`,
+        }}>{o.emoji ? `${o.emoji} ` : ""}{o.en}</button>;
+      })}
+    </div>
+    {fb !== null && <div style={{ marginTop: 12, fontSize: 16, fontWeight: 900, fontFamily: FN, color: fb === cur.en ? T.green : T.red, animation: "bIn .3s" }}>
+      {fb === cur.en ? "💥 ¡Toma!" : <>It's <b>{cur.en}</b></>}
+    </div>}
+  </div>;
+}
+
+// ============================================================
+// GAME: DRAG & DROP MATCH — drag the Spanish word onto its picture
+// Uses pointer events so it works with finger (touch) and mouse alike.
+// ============================================================
+function DragMatch({ words, onDone, onWord }) {
+  const pool = useMemo(() => sh(words.slice(0, 8)).slice(0, 4), [words]);
+  const [targets] = useMemo(() => [sh(pool)], [pool]); // picture targets in random order
+  const [placed, setPlaced] = useState({});   // es -> true when correctly placed
+  const [wrong, setWrong] = useState(null);    // es of a word that just missed
+  const [drag, setDrag] = useState(null);      // { es, x, y, dx, dy }
+  const targetRefs = useRef({});
+  const doneCount = Object.keys(placed).length;
+
+  useEffect(() => { setPlaced({}); setWrong(null); setDrag(null); }, [words]);
+
+  const onPointerDown = (e, w) => {
+    if (placed[w.es]) return;
+    const rect = e.currentTarget.getBoundingClientRect();
+    setDrag({ es: w.es, en: w.en, x: e.clientX, y: e.clientY, dx: e.clientX - rect.left - rect.width / 2, dy: e.clientY - rect.top - rect.height / 2 });
+    e.currentTarget.setPointerCapture?.(e.pointerId);
+  };
+  const onPointerMove = (e) => { if (drag) setDrag(d => ({ ...d, x: e.clientX, y: e.clientY })); };
+  const onPointerUp = (e) => {
+    if (!drag) return;
+    // Which target is under the pointer?
+    let hitEs = null;
+    for (const es in targetRefs.current) {
+      const el = targetRefs.current[es];
+      if (!el) continue;
+      const r = el.getBoundingClientRect();
+      if (e.clientX >= r.left && e.clientX <= r.right && e.clientY >= r.top && e.clientY <= r.bottom) { hitEs = es; break; }
+    }
+    const ok = hitEs === drag.es;
+    onWord?.(drag.es, drag.en, ok);
+    if (ok) {
+      const np = { ...placed, [drag.es]: true };
+      setPlaced(np);
+      speech.speak(drag.es);
+      if (Object.keys(np).length === pool.length) setTimeout(() => onDone(pool.length, pool.length), 700);
+    } else {
+      setWrong(drag.es);
+      setTimeout(() => setWrong(null), 500);
+    }
+    setDrag(null);
+  };
+
+  return <div style={{ textAlign: "center", touchAction: "none" }} onPointerMove={onPointerMove} onPointerUp={onPointerUp}>
+    <div style={{ fontSize: 13, color: T.muted, fontFamily: FN, fontWeight: 700, marginBottom: 4 }}>Drag each word to its picture! 👆</div>
+    <div style={{ fontSize: 12, color: T.muted, fontFamily: FN, marginBottom: 14 }}>{doneCount} / {pool.length}</div>
+    {/* Picture targets */}
+    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, maxWidth: 320, margin: "0 auto 18px" }}>
+      {targets.map(w => {
+        const done = placed[w.es];
+        return <div key={w.es} ref={el => targetRefs.current[w.es] = el} style={{
+          background: done ? "#E9F8EC" : "#fff", border: `3px ${done ? "solid" : "dashed"} ${done ? T.green : T.line}`,
+          borderRadius: 16, padding: "12px 8px", minHeight: 92, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center",
+          transition: "all .2s",
+        }}>
+          <div style={{ fontSize: 44 }}>{w.emoji}</div>
+          {done && <div style={{ fontSize: 13, fontWeight: 800, color: T.green, fontFamily: FN, marginTop: 2 }}>{w.es} ✓</div>}
+        </div>;
+      })}
+    </div>
+    {/* Draggable word chips */}
+    <div style={{ display: "flex", flexWrap: "wrap", gap: 8, justifyContent: "center", minHeight: 44 }}>
+      {pool.map(w => {
+        if (placed[w.es]) return null;
+        const isDragging = drag?.es === w.es;
+        const isWrong = wrong === w.es;
+        return <div key={w.es} onPointerDown={e => onPointerDown(e, w)} style={{
+          background: isWrong ? T.red : T.luna, color: "#fff", padding: "10px 16px", borderRadius: 12,
+          fontSize: 15, fontWeight: 800, fontFamily: FN, cursor: "grab", userSelect: "none", touchAction: "none",
+          boxShadow: `0 4px 0 ${isWrong ? T.redDark : T.lunaDark}`,
+          opacity: isDragging ? 0.3 : 1, transition: isWrong ? "background .2s" : "opacity .1s",
+          animation: isWrong ? "shake .4s" : "none",
+        }}>{w.es}</div>;
+      })}
+    </div>
+    {/* The floating chip that follows the finger */}
+    {drag && <div style={{
+      position: "fixed", left: drag.x - drag.dx, top: drag.y - drag.dy, transform: "translate(-50%, -50%) scale(1.1)",
+      background: T.luna, color: "#fff", padding: "10px 16px", borderRadius: 12, fontSize: 15, fontWeight: 800, fontFamily: FN,
+      boxShadow: `0 8px 20px rgba(0,0,0,.25)`, pointerEvents: "none", zIndex: 1000, userSelect: "none",
+    }}>{drag.es}</div>}
+    <style>{`@keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-5px)} 75%{transform:translateX(5px)} }`}</style>
+  </div>;
+}
+
+// ============================================================
+// GAME: ODD ONE OUT — three words belong to this lesson, one is a stranger
+// ============================================================
+function OddOneOut({ words, allWords, onDone, onWord }) {
+  const rounds = useMemo(() => {
+    const lessonWords = words.slice(0, 8);
+    const outsiders = allWords.filter(w => !lessonWords.some(lw => lw.es === w.es));
+    const r = [];
+    for (let i = 0; i < 4; i++) {
+      const three = sh(lessonWords).slice(0, 3);
+      const odd = sh(outsiders)[0] || sh(allWords)[0];
+      if (!odd || three.length < 3) continue;
+      r.push({ items: sh([...three, { ...odd, isOdd: true }]), oddEs: odd.es });
+    }
+    return r;
+  }, [words, allWords]);
+  const [idx, setIdx] = useState(0);
+  const [score, setScore] = useState(0);
+  const [fb, setFb] = useState(null);
+  useEffect(() => { setIdx(0); setScore(0); setFb(null); }, [words]);
+
+  if (!rounds.length) return <div style={{ textAlign: "center", padding: 20, fontFamily: FN, color: T.muted }}>Not enough words yet!</div>;
+  if (idx >= rounds.length) return null;
+  const round = rounds[idx];
+
+  const pick = (item) => {
+    if (fb !== null) return;
+    const ok = item.isOdd;
+    setFb(item.es);
+    if (ok) setScore(s => s + 1);
+    onWord?.(item.es, item.en, ok);
+    setTimeout(() => {
+      setFb(null);
+      if (idx + 1 < rounds.length) setIdx(idx + 1);
+      else onDone(score + (ok ? 1 : 0), rounds.length);
+    }, 1000);
+  };
+
+  return <div style={{ textAlign: "center" }}>
+    <div style={{ fontSize: 13, color: T.muted, fontFamily: FN, fontWeight: 700, marginBottom: 4 }}>Which one doesn't belong? 🤔</div>
+    <div style={{ fontSize: 12, color: T.muted, fontFamily: FN, marginBottom: 14 }}>{idx + 1} / {rounds.length}</div>
+    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, maxWidth: 320, margin: "0 auto" }}>
+      {round.items.map(item => {
+        const revealed = fb !== null;
+        const isThisOdd = item.isOdd;
+        const isPicked = fb === item.es;
+        let bg = "#fff", bd = T.line, sh2 = T.line;
+        if (revealed) {
+          if (isThisOdd) { bg = "#E9F8EC"; bd = T.green; sh2 = T.greenDark; }
+          else if (isPicked) { bg = "#FFECED"; bd = T.red; sh2 = T.redDark; }
+        }
+        return <button key={item.es} onClick={() => pick(item)} disabled={revealed} style={{
+          background: bg, border: `2px solid ${bd}`, borderRadius: 16, padding: "16px 8px", cursor: revealed ? "default" : "pointer",
+          fontFamily: FN, boxShadow: `0 4px 0 ${sh2}`, transition: "all .2s",
+        }}>
+          <div style={{ fontSize: 40 }}>{item.emoji}</div>
+          <div style={{ fontSize: 13, fontWeight: 800, color: T.ink, marginTop: 4 }}>{item.es}</div>
+        </button>;
+      })}
+    </div>
+    {fb !== null && <div style={{ marginTop: 12, fontSize: 16, fontWeight: 900, fontFamily: FN, color: fb === round.oddEs ? T.green : T.red, animation: "bIn .3s" }}>
+      {fb === round.oddEs ? "⭐ ¡Correcto!" : "The odd one was highlighted!"}
+    </div>}
+  </div>;
+}
+
+// ============================================================
+// GAME: WORD ORDER — put the scrambled sentence in the right order
+// Tap words to add them in sequence; tap a placed word to remove it.
+// ============================================================
+function WordOrder({ sentences, onDone }) {
+  const pool = useMemo(() => (sentences || []).slice(0, 5), [sentences]);
+  const [idx, setIdx] = useState(0);
+  const [placed, setPlaced] = useState([]);
+  const [avail, setAvail] = useState([]);
+  const [fb, setFb] = useState(null);
+  const [score, setScore] = useState(0);
+  useEffect(() => { setIdx(0); setScore(0); setFb(null); setPlaced([]); if (pool.length) setAvail(sh(pool[0].shuffle)); }, [sentences]);
+
+  if (!pool.length) return <div style={{ textAlign: "center", padding: 20, fontFamily: FN, color: T.muted }}>No sentences yet!</div>;
+  if (idx >= pool.length) return null;
+  const s = pool[idx];
+
+  const addWord = (w, i) => { if (fb !== null) return; setPlaced([...placed, w]); setAvail(avail.filter((_, j) => j !== i)); };
+  const removeWord = (i) => { if (fb !== null) return; const w = placed[i]; setPlaced(placed.filter((_, j) => j !== i)); setAvail([...avail, w]); };
+  const check = () => {
+    const ok = placed.join(" ") === s.correct.join(" ");
+    setFb(ok); if (ok) { setScore(sc => sc + 1); speech.speak(s.correct.join(" ")); }
+    setTimeout(() => {
+      setFb(null);
+      const ni = idx + 1;
+      if (ni < pool.length) { setIdx(ni); setPlaced([]); setAvail(sh(pool[ni].shuffle)); }
+      else onDone(score + (ok ? 1 : 0), pool.length);
+    }, 1300);
+  };
+
+  return <div style={{ textAlign: "center" }}>
+    <div style={{ fontSize: 12, color: T.muted, fontFamily: FN, fontWeight: 700, marginBottom: 4 }}>Put the words in order! 🧩</div>
+    <div style={{ fontSize: 12, color: T.muted, fontFamily: FN, marginBottom: 4 }}>Sentence {idx + 1} / {pool.length}</div>
+    <div style={{ fontSize: 14, color: T.ink, fontFamily: FN, fontWeight: 700, marginBottom: 12 }}>🇬🇧 {s.en}</div>
+    {/* Placed row */}
+    <div style={{ minHeight: 52, background: fb === true ? "#E9F8EC" : fb === false ? "#FFECED" : "#FCF7EE", borderRadius: 14, padding: "10px 8px", marginBottom: 14, display: "flex", flexWrap: "wrap", gap: 6, justifyContent: "center", alignItems: "center", border: `2px dashed ${fb === true ? T.green : fb === false ? T.red : T.line}` }}>
+      {placed.length ? placed.map((w, i) => <button key={i} onClick={() => removeWord(i)} style={{ background: fb === true ? T.green : fb === false ? T.red : T.luna, color: "#fff", padding: "7px 12px", borderRadius: 10, fontSize: 15, fontWeight: 800, fontFamily: FN, border: "none", cursor: "pointer", boxShadow: `0 3px 0 ${fb === true ? T.greenDark : fb === false ? T.redDark : T.lunaDark}` }}>{w}</button>)
+        : <span style={{ color: T.muted, fontSize: 13, fontFamily: FN, fontWeight: 700 }}>Tap words below in order…</span>}
+    </div>
+    {/* Available words */}
+    <div style={{ display: "flex", flexWrap: "wrap", gap: 7, justifyContent: "center", marginBottom: 14, minHeight: 40 }}>
+      {avail.map((w, i) => <button key={w + i} onClick={() => addWord(w, i)} style={{ background: "#fff", border: `2px solid ${T.line}`, borderRadius: 10, padding: "8px 14px", fontSize: 15, fontWeight: 800, cursor: "pointer", fontFamily: FN, color: T.ink, boxShadow: `0 3px 0 ${T.line}` }}>{w}</button>)}
+    </div>
+    {placed.length === s.correct.length && fb === null && <Btn onClick={check} bg={T.green} color="#fff" edge={T.greenDark}>Check ✓</Btn>}
+    {fb === true && <div style={{ marginTop: 8, fontSize: 20, animation: "bIn .3s" }}>⭐ ¡Perfecto!</div>}
+    {fb === false && <div style={{ marginTop: 8, fontSize: 13, color: T.red, fontFamily: FN, fontWeight: 700 }}>Answer: <b>{s.correct.join(" ")}</b></div>}
+  </div>;
+}
+
+// ============================================================
 // RESULT SCREEN
 // ============================================================
 function Result({ score, total, onRetry, onBack, onEarnStar }) {
@@ -1181,34 +1639,112 @@ function Result({ score, total, onRetry, onBack, onEarnStar }) {
 // ============================================================
 // BADGE CABINET
 // ============================================================
-function BadgeCabinet({ progress, onBack }) {
-  const owned = new Set(progress.badges || []);
-  const unlocked = BADGES.filter(b => owned.has(b.id));
-  const locked = BADGES.filter(b => !owned.has(b.id));
+function BadgeCabinet({ progress, onBack, onEquip }) {
+  const [tab, setTab] = useState("trophies");
+  const ownedBadges = new Set(progress.badges || []);
+  const ownedStickers = new Set(progress.stickers || []);
+  const ownedOutfits = new Set([...(progress.outfits || []), "none"]);
+  const unlockedBadges = BADGES.filter(b => ownedBadges.has(b.id));
+  const lockedBadges = BADGES.filter(b => !ownedBadges.has(b.id));
+  const solOutfit = progress.solOutfit || "none";
+  const lunaOutfit = progress.lunaOutfit || "none";
+
+  const tabBtn = (id, label, emoji) => <button onClick={() => setTab(id)} style={{
+    flex: 1, padding: "9px 4px", borderRadius: 12, border: "none", cursor: "pointer", fontFamily: FN, fontWeight: 900, fontSize: 12,
+    background: tab === id ? T.sun : "transparent", color: tab === id ? "#fff" : T.muted,
+    boxShadow: tab === id ? `0 3px 0 ${T.sunDark}` : "none", transition: "all .15s",
+  }}>{emoji} {label}</button>;
+
   return <div style={{ minHeight: "100vh", background: T.cream, padding: "16px 16px 40px" }}>
     <div style={{ position: "relative", zIndex: 1, maxWidth: 500, margin: "0 auto" }}>
       <Btn onClick={onBack} style={{ marginBottom: 14, fontSize: 12, padding: "10px 18px" }}>← Back</Btn>
-      <div style={{ textAlign: "center", marginBottom: 20 }}>
-        <div style={{ fontSize: 48 }}>🏆</div>
-        <h2 style={{ fontSize: 28, fontWeight: 800, fontFamily: FD, color: T.ink }}>Trophy Cabinet</h2>
-        <p style={{ fontSize: 13, color: T.muted, fontWeight: 700, fontFamily: FN }}>{unlocked.length} of {BADGES.length} badges unlocked</p>
+      <div style={{ textAlign: "center", marginBottom: 16 }}>
+        <div style={{ fontSize: 44 }}>🏆</div>
+        <h2 style={{ fontSize: 26, fontWeight: 800, fontFamily: FD, color: T.ink }}>Trophy Shelf</h2>
       </div>
-      {unlocked.length > 0 && <><h3 style={{ fontSize: 15, fontWeight: 900, color: T.sunDark, fontFamily: FN, marginBottom: 10, textTransform: "uppercase", letterSpacing: 1 }}>🎉 Unlocked</h3>
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 20 }}>
-        {unlocked.map(b => <div key={b.id} style={{ background: "#fff", borderRadius: 18, padding: "14px 10px", textAlign: "center", border: `2px solid ${T.sun}`, boxShadow: `0 4px 0 ${T.sunDark}`, animation: "cPop .3s ease-out backwards" }}>
-          <div style={{ fontSize: 40 }}>{b.emoji}</div>
-          <div style={{ fontSize: 13, fontWeight: 800, color: T.ink, fontFamily: FD, marginTop: 4 }}>{b.name}</div>
-          <div style={{ fontSize: 11, color: T.muted, fontWeight: 700, fontFamily: FN, marginTop: 2 }}>{b.desc}</div>
-        </div>)}
-      </div></>}
-      {locked.length > 0 && <><h3 style={{ fontSize: 15, fontWeight: 900, color: T.muted, fontFamily: FN, marginBottom: 10, textTransform: "uppercase", letterSpacing: 1 }}>🔒 Still to earn</h3>
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
-        {locked.map(b => <div key={b.id} style={{ background: "#fff", borderRadius: 18, padding: "14px 10px", textAlign: "center", border: `2px dashed ${T.lockDark}`, opacity: 0.65 }}>
-          <div style={{ fontSize: 40, filter: "grayscale(1)" }}>{b.emoji}</div>
-          <div style={{ fontSize: 13, fontWeight: 800, color: T.muted, fontFamily: FD, marginTop: 4 }}>{b.name}</div>
-          <div style={{ fontSize: 11, color: T.muted, fontWeight: 700, fontFamily: FN, marginTop: 2 }}>{b.desc}</div>
-        </div>)}
-      </div></>}
+      {/* Tabs */}
+      <div style={{ display: "flex", gap: 4, background: "#fff", border: `2px solid ${T.line}`, borderRadius: 16, padding: 4, marginBottom: 18, boxShadow: `0 3px 0 ${T.line}` }}>
+        {tabBtn("trophies", "Badges", "🏆")}
+        {tabBtn("stickers", "Stickers", "✨")}
+        {tabBtn("outfits", "Dress Up", "🎩")}
+      </div>
+
+      {/* TROPHIES / BADGES */}
+      {tab === "trophies" && <>
+        <p style={{ fontSize: 13, color: T.muted, fontWeight: 700, fontFamily: FN, textAlign: "center", marginBottom: 14 }}>{unlockedBadges.length} of {BADGES.length} badges earned</p>
+        {unlockedBadges.length > 0 && <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 18 }}>
+          {unlockedBadges.map(b => <div key={b.id} style={{ background: "#fff", borderRadius: 18, padding: "14px 10px", textAlign: "center", border: `2px solid ${T.sun}`, boxShadow: `0 4px 0 ${T.sunDark}`, animation: "cPop .3s ease-out backwards" }}>
+            <div style={{ fontSize: 40 }}>{b.emoji}</div>
+            <div style={{ fontSize: 13, fontWeight: 800, color: T.ink, fontFamily: FD, marginTop: 4 }}>{b.name}</div>
+            <div style={{ fontSize: 11, color: T.muted, fontWeight: 700, fontFamily: FN, marginTop: 2 }}>{b.desc}</div>
+          </div>)}
+        </div>}
+        {lockedBadges.length > 0 && <><h3 style={{ fontSize: 13, fontWeight: 900, color: T.muted, fontFamily: FN, marginBottom: 10, textTransform: "uppercase", letterSpacing: 1 }}>🔒 Still to earn</h3>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
+          {lockedBadges.map(b => <div key={b.id} style={{ background: "#fff", borderRadius: 18, padding: "14px 10px", textAlign: "center", border: `2px dashed ${T.lockDark}`, opacity: 0.6 }}>
+            <div style={{ fontSize: 40, filter: "grayscale(1)" }}>{b.emoji}</div>
+            <div style={{ fontSize: 13, fontWeight: 800, color: T.muted, fontFamily: FD, marginTop: 4 }}>{b.name}</div>
+            <div style={{ fontSize: 11, color: T.muted, fontWeight: 700, fontFamily: FN, marginTop: 2 }}>{b.desc}</div>
+          </div>)}
+        </div></>}
+      </>}
+
+      {/* STICKER ALBUM */}
+      {tab === "stickers" && <>
+        <p style={{ fontSize: 13, color: T.muted, fontWeight: 700, fontFamily: FN, textAlign: "center", marginBottom: 14 }}>{ownedStickers.size} of {STICKERS.length} stickers collected</p>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 10 }}>
+          {STICKERS.map(s => {
+            const has = ownedStickers.has(s.id);
+            const rc = RARITY[s.rarity]?.c || T.line;
+            return <div key={s.id} style={{
+              background: has ? "#fff" : "#F5F0E6", borderRadius: 16, padding: "12px 6px", textAlign: "center",
+              border: `2px ${has ? "solid" : "dashed"} ${has ? rc : T.lockDark}`,
+              boxShadow: has ? `0 4px 0 ${darken(rc)}` : "none", opacity: has ? 1 : 0.55,
+              animation: has ? "cPop .3s ease-out backwards" : "none",
+            }}>
+              <div style={{ fontSize: 34, filter: has ? "none" : "grayscale(1)" }}>{has ? s.emoji : "❓"}</div>
+              <div style={{ fontSize: 10, fontWeight: 800, color: has ? T.ink : T.muted, fontFamily: FN, marginTop: 3, lineHeight: 1.1 }}>{has ? s.name : "???"}</div>
+              {has && s.rarity !== "common" && <div style={{ fontSize: 8, fontWeight: 900, color: rc, fontFamily: FN, marginTop: 2, textTransform: "uppercase", letterSpacing: 0.5 }}>{s.rarity}</div>}
+            </div>;
+          })}
+        </div>
+      </>}
+
+      {/* DRESS UP — choose outfits for Sol & Luna */}
+      {tab === "outfits" && <>
+        <p style={{ fontSize: 13, color: T.muted, fontWeight: 700, fontFamily: FN, textAlign: "center", marginBottom: 16 }}>Dress up Sol & Luna! Tap an outfit to wear it.</p>
+        {/* Live preview */}
+        <div style={{ display: "flex", justifyContent: "center", gap: 24, marginBottom: 18, background: "#fff", border: `2px solid ${T.line}`, borderRadius: 20, padding: "18px", boxShadow: `0 4px 0 ${T.line}` }}>
+          <div style={{ textAlign: "center" }}><Sol size={70} mood="happy" outfit={solOutfit} /><div style={{ fontSize: 12, fontWeight: 800, color: T.ink, fontFamily: FD, marginTop: 4 }}>Sol</div></div>
+          <div style={{ textAlign: "center" }}><Luna size={70} mood="happy" outfit={lunaOutfit} /><div style={{ fontSize: 12, fontWeight: 800, color: T.ink, fontFamily: FD, marginTop: 4 }}>Luna</div></div>
+        </div>
+        {["sol", "luna"].map(who => {
+          const current = who === "sol" ? solOutfit : lunaOutfit;
+          return <div key={who} style={{ marginBottom: 16 }}>
+            <h3 style={{ fontSize: 13, fontWeight: 900, color: who === "sol" ? T.sunDark : T.luna, fontFamily: FN, marginBottom: 8, textTransform: "uppercase", letterSpacing: 1 }}>{who === "sol" ? "☀️ Sol's outfit" : "🌙 Luna's outfit"}</h3>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr", gap: 8 }}>
+              {OUTFITS.map(o => {
+                const has = ownedOutfits.has(o.id);
+                const active = current === o.id;
+                return <button key={o.id} disabled={!has} onClick={() => onEquip(who, o.id)} style={{
+                  background: active ? (who === "sol" ? T.sunLight : T.lunaLight) : "#fff",
+                  border: `2px solid ${active ? (who === "sol" ? T.sun : T.luna) : T.line}`,
+                  borderRadius: 14, padding: "10px 4px", textAlign: "center", cursor: has ? "pointer" : "not-allowed",
+                  opacity: has ? 1 : 0.4, boxShadow: active ? `0 3px 0 ${who === "sol" ? T.sunDark : T.lunaDark}` : "none",
+                }}>
+                  <div style={{ fontSize: 22, filter: has ? "none" : "grayscale(1)" }}>{has ? o.emoji : "🔒"}</div>
+                  <div style={{ fontSize: 9, fontWeight: 800, color: T.ink, fontFamily: FN, marginTop: 2, lineHeight: 1 }}>{o.name}</div>
+                </button>;
+              })}
+            </div>
+          </div>;
+        })}
+        {/* Locked outfits hint */}
+        {OUTFITS.some(o => !ownedOutfits.has(o.id)) && <div style={{ background: T.sunLight, borderRadius: 14, padding: "10px 14px", border: `2px solid ${T.sun}` }}>
+          <div style={{ fontSize: 11, fontWeight: 900, color: T.sunDark, fontFamily: FN, marginBottom: 4 }}>🔒 Locked outfits:</div>
+          {OUTFITS.filter(o => !ownedOutfits.has(o.id)).map(o => <div key={o.id} style={{ fontSize: 11, color: T.ink, fontWeight: 700, fontFamily: FN }}>{o.emoji} {o.name} — {o.desc}</div>)}
+        </div>}
+      </>}
     </div>
   </div>;
 }
@@ -1230,14 +1766,68 @@ function BadgeToast({ badge, onClose }) {
   </div>;
 }
 
+const RARITY = { common: { c: "#6BCB77", label: "Sticker" }, rare: { c: "#4D96FF", label: "Rare Sticker" }, legendary: { c: "#B983FF", label: "Legendary!" } };
+function RewardToast({ reward, onClose }) {
+  useEffect(() => { const t = setTimeout(onClose, 4200); return () => clearTimeout(t); }, []);
+  if (!reward) return null;
+  const item = reward.type === "sticker" ? STICKERS.find(s => s.id === reward.id) : OUTFITS.find(o => o.id === reward.id);
+  if (!item) return null;
+  const isSticker = reward.type === "sticker";
+  const col = isSticker ? (RARITY[item.rarity]?.c || T.sun) : T.luna;
+  const label = isSticker ? (RARITY[item.rarity]?.label || "Sticker") : "New Outfit";
+  return <div style={{ position: "fixed", top: 20, left: "50%", transform: "translateX(-50%)", background: col, color: "#fff", padding: "13px 20px", borderRadius: 18, boxShadow: `0 5px 0 ${darken(col)}`, zIndex: 10000, display: "flex", alignItems: "center", gap: 12, fontFamily: FN, animation: "bIn .5s", maxWidth: "90%" }}>
+    <div style={{ fontSize: 34, animation: "rewardSpin .6s ease-out" }}>{item.emoji}</div>
+    <div>
+      <div style={{ fontSize: 10, opacity: .95, fontWeight: 900, letterSpacing: 1 }}>NEW {label.toUpperCase()}!</div>
+      <div style={{ fontSize: 16, fontWeight: 800, fontFamily: FD }}>{item.name}</div>
+    </div>
+    <style>{`@keyframes rewardSpin { from { transform: rotate(-25deg) scale(0.5); } to { transform: rotate(0) scale(1); } }`}</style>
+  </div>;
+}
+
 // ============================================================
 // MASCOTS — Sol (the sun) and Luna (the moon)
 // ============================================================
-function Sol({ size = 56 }) {
+// Accessory drawn on top of a mascot's head (in 100x100 viewBox space).
+function OutfitAccessory({ outfit }) {
+  if (!outfit || outfit === "none") return null;
+  switch (outfit) {
+    case "party": // party hat
+      return <g><polygon points="50,2 40,26 60,26" fill="#FF6B9D" stroke="#E0466B" strokeWidth="1.5" /><circle cx="50" cy="4" r="3.5" fill="#FFD93D" /><circle cx="45" cy="16" r="1.6" fill="#fff" /><circle cx="54" cy="20" r="1.6" fill="#fff" /></g>;
+    case "sunglasses":
+      return <g><rect x="30" y="42" width="16" height="10" rx="3" fill="#1E3A5F" /><rect x="54" y="42" width="16" height="10" rx="3" fill="#1E3A5F" /><rect x="46" y="45" width="8" height="3" fill="#1E3A5F" /></g>;
+    case "crown":
+      return <g><polygon points="34,20 40,10 50,18 60,10 66,20 66,26 34,26" fill="#FFD93D" stroke="#E0A800" strokeWidth="1.5" /><circle cx="40" cy="10" r="2.5" fill="#FF6B9D" /><circle cx="50" cy="16" r="2.5" fill="#4D96FF" /><circle cx="60" cy="10" r="2.5" fill="#FF6B9D" /></g>;
+    case "flower":
+      return <g><g transform="translate(30,18)"><circle r="4" fill="#FF9EC7" /><circle cx="-5" cy="-2" r="3" fill="#FFB3D9" /><circle cx="5" cy="-2" r="3" fill="#FFB3D9" /><circle cx="-3" cy="4" r="3" fill="#FFB3D9" /><circle cx="3" cy="4" r="3" fill="#FFB3D9" /><circle r="2" fill="#FFD93D" /></g><g transform="translate(68,20)"><circle r="3.5" fill="#B983FF" /><circle r="1.6" fill="#FFD93D" /></g></g>;
+    case "wizard":
+      return <g><polygon points="50,0 34,28 66,28" fill="#6C5CE7" stroke="#4A3FB0" strokeWidth="1.5" /><text x="50" y="20" fontSize="8" textAnchor="middle">⭐</text><ellipse cx="50" cy="28" rx="18" ry="4" fill="#6C5CE7" stroke="#4A3FB0" strokeWidth="1" /></g>;
+    case "bow":
+      return <g transform="translate(50,18)"><path d="M0 0 L-12 -6 L-12 6 Z" fill="#FF6B9D" stroke="#E0466B" strokeWidth="1" /><path d="M0 0 L12 -6 L12 6 Z" fill="#FF6B9D" stroke="#E0466B" strokeWidth="1" /><circle r="3" fill="#E0466B" /></g>;
+    default:
+      return null;
+  }
+}
+
+function Sol({ size = 56, mood = "happy", outfit }) {
   const r = size / 2;
+  // Expression variants
+  const eyes = {
+    happy: <g><ellipse cx="41" cy="47" rx="3.2" ry="4" fill="#1E3A5F" /><circle cx="42" cy="46" r="1" fill="#fff" /><ellipse cx="59" cy="47" rx="3.2" ry="4" fill="#1E3A5F" /><circle cx="60" cy="46" r="1" fill="#fff" /></g>,
+    celebrate: <g><path d="M 37 48 Q 41 43 45 48" stroke="#1E3A5F" strokeWidth="2.6" fill="none" strokeLinecap="round" /><path d="M 55 48 Q 59 43 63 48" stroke="#1E3A5F" strokeWidth="2.6" fill="none" strokeLinecap="round" /></g>,
+    encourage: <g><ellipse cx="41" cy="47" rx="3" ry="3.6" fill="#1E3A5F" /><circle cx="42" cy="46" r="1" fill="#fff" /><ellipse cx="59" cy="47" rx="3" ry="3.6" fill="#1E3A5F" /><circle cx="60" cy="46" r="1" fill="#fff" /></g>,
+    wink: <g><path d="M 37 47 Q 41 43 45 47" stroke="#1E3A5F" strokeWidth="2.6" fill="none" strokeLinecap="round" /><ellipse cx="59" cy="47" rx="3.2" ry="4" fill="#1E3A5F" /><circle cx="60" cy="46" r="1" fill="#fff" /></g>,
+  }[mood] || null;
+  const mouth = {
+    happy: <path d="M 42 56 Q 50 64 58 56" stroke="#1E3A5F" strokeWidth="2.4" fill="none" strokeLinecap="round" />,
+    celebrate: <ellipse cx="50" cy="58" rx="7" ry="8" fill="#E0466B" />,
+    encourage: <path d="M 43 57 Q 50 61 57 57" stroke="#1E3A5F" strokeWidth="2.4" fill="none" strokeLinecap="round" />,
+    wink: <path d="M 42 56 Q 50 63 58 56" stroke="#1E3A5F" strokeWidth="2.4" fill="none" strokeLinecap="round" />,
+  }[mood] || null;
+  const spin = mood === "celebrate" ? "solSpin 4s linear infinite" : "solSpin 22s linear infinite";
   return <svg width={size} height={size} viewBox="0 0 100 100" style={{ filter: "drop-shadow(0 4px 8px rgba(255,200,50,.4))" }} aria-label="Sol the sun">
     {/* Sun rays */}
-    <g style={{ transformOrigin: "50px 50px", animation: "solSpin 22s linear infinite" }}>
+    <g style={{ transformOrigin: "50px 50px", animation: spin }}>
       {Array.from({ length: 12 }).map((_, i) => <rect key={i} x="48" y="4" width="4" height="14" rx="2" fill="#FFD93D" transform={`rotate(${i * 30} 50 50)`} />)}
     </g>
     {/* Sun body */}
@@ -1252,20 +1842,26 @@ function Sol({ size = 56 }) {
     {/* Cheeks */}
     <circle cx="38" cy="56" r="4.5" fill="#FF9EC7" opacity="0.75" />
     <circle cx="62" cy="56" r="4.5" fill="#FF9EC7" opacity="0.75" />
-    {/* Eyes */}
-    <g>
-      <ellipse cx="41" cy="47" rx="3.2" ry="4" fill="#1E3A5F" />
-      <circle cx="42" cy="46" r="1" fill="#fff" />
-      <ellipse cx="59" cy="47" rx="3.2" ry="4" fill="#1E3A5F" />
-      <circle cx="60" cy="46" r="1" fill="#fff" />
-    </g>
-    {/* Smile */}
-    <path d="M 42 56 Q 50 64 58 56" stroke="#1E3A5F" strokeWidth="2.4" fill="none" strokeLinecap="round" />
+    {eyes}
+    {mouth}
+    <OutfitAccessory outfit={outfit} />
     <style>{`@keyframes solSpin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }`}</style>
   </svg>;
 }
 
-function Luna({ size = 56 }) {
+function Luna({ size = 56, mood = "sleepy", outfit }) {
+  const eyes = {
+    sleepy: <g><path d="M 36 49 Q 40 45 44 49" stroke="#1E3A5F" strokeWidth="2.4" fill="none" strokeLinecap="round" /><path d="M 52 50 Q 56 46 60 50" stroke="#1E3A5F" strokeWidth="2.4" fill="none" strokeLinecap="round" /></g>,
+    happy: <g><ellipse cx="40" cy="49" rx="3" ry="3.6" fill="#1E3A5F" /><circle cx="41" cy="48" r="0.9" fill="#fff" /><ellipse cx="56" cy="50" rx="3" ry="3.6" fill="#1E3A5F" /><circle cx="57" cy="49" r="0.9" fill="#fff" /></g>,
+    celebrate: <g><path d="M 36 50 Q 40 45 44 50" stroke="#1E3A5F" strokeWidth="2.6" fill="none" strokeLinecap="round" /><path d="M 52 51 Q 56 46 60 51" stroke="#1E3A5F" strokeWidth="2.6" fill="none" strokeLinecap="round" /></g>,
+    encourage: <g><ellipse cx="40" cy="49" rx="2.8" ry="3.4" fill="#1E3A5F" /><circle cx="41" cy="48" r="0.9" fill="#fff" /><ellipse cx="56" cy="50" rx="2.8" ry="3.4" fill="#1E3A5F" /><circle cx="57" cy="49" r="0.9" fill="#fff" /></g>,
+  }[mood] || null;
+  const mouth = {
+    sleepy: <path d="M 42 58 Q 48 63 54 58" stroke="#1E3A5F" strokeWidth="2.4" fill="none" strokeLinecap="round" />,
+    happy: <path d="M 41 58 Q 48 64 55 58" stroke="#1E3A5F" strokeWidth="2.4" fill="none" strokeLinecap="round" />,
+    celebrate: <ellipse cx="48" cy="59" rx="6" ry="7" fill="#7B5BC0" />,
+    encourage: <path d="M 42 59 Q 48 62 54 59" stroke="#1E3A5F" strokeWidth="2.4" fill="none" strokeLinecap="round" />,
+  }[mood] || null;
   return <svg width={size} height={size} viewBox="0 0 100 100" style={{ filter: "drop-shadow(0 4px 8px rgba(150,180,255,.4))" }} aria-label="Luna the moon">
     <defs>
       <radialGradient id="lunaGrad" cx="35%" cy="35%">
@@ -1273,7 +1869,7 @@ function Luna({ size = 56 }) {
         <stop offset="100%" stopColor="#B8B5E8" />
       </radialGradient>
     </defs>
-    {/* Moon body (crescent-ish round) */}
+    {/* Moon body */}
     <circle cx="50" cy="50" r="32" fill="url(#lunaGrad)" stroke="#8F8BD6" strokeWidth="2" />
     {/* Craters */}
     <circle cx="70" cy="42" r="3" fill="#C9C5F0" opacity="0.7" />
@@ -1285,12 +1881,168 @@ function Luna({ size = 56 }) {
     {/* Cheeks */}
     <circle cx="36" cy="58" r="4" fill="#FF9EC7" opacity="0.7" />
     <circle cx="56" cy="60" r="4" fill="#FF9EC7" opacity="0.7" />
-    {/* Closed sleepy eyes */}
-    <path d="M 36 49 Q 40 45 44 49" stroke="#1E3A5F" strokeWidth="2.4" fill="none" strokeLinecap="round" />
-    <path d="M 52 50 Q 56 46 60 50" stroke="#1E3A5F" strokeWidth="2.4" fill="none" strokeLinecap="round" />
-    {/* Gentle smile */}
-    <path d="M 42 58 Q 48 63 54 58" stroke="#1E3A5F" strokeWidth="2.4" fill="none" strokeLinecap="round" />
+    {eyes}
+    {mouth}
+    <OutfitAccessory outfit={outfit} />
   </svg>;
+}
+
+// ============================================================
+// WORLD SCENE — a simple themed horizon behind each world banner.
+// Pure SVG so it's crisp at any size and adds no load time.
+// ============================================================
+function WorldScene({ world, height = 60 }) {
+  const c = world.color;
+  const dk = darken(c);
+  const scene = world.scene;
+  const shapes = {
+    island: <>
+      <path d={`M0 ${height} Q 60 ${height-14} 120 ${height} T 240 ${height} T 360 ${height} T 480 ${height} V ${height} H0 Z`} fill={c} opacity="0.25" />
+      <ellipse cx="70" cy={height} rx="34" ry="14" fill={c} opacity="0.5" />
+      <ellipse cx="300" cy={height} rx="40" ry="12" fill={c} opacity="0.4" />
+      <text x="66" y={height-8} fontSize="20">🌴</text>
+      <text x="290" y={height-6} fontSize="16">🌴</text>
+    </>,
+    town: <>
+      {[20, 70, 120, 175, 230, 290, 340].map((x, i) => <rect key={i} x={x} y={height - (18 + (i % 3) * 10)} width="34" height={18 + (i % 3) * 10} rx="4" fill={c} opacity={0.3 + (i % 3) * 0.12} />)}
+      {[30, 130, 240, 350].map((x, i) => <polygon key={i} points={`${x-2},${height-(18+(i%3)*10)} ${x+18},${height-(28+(i%3)*10)} ${x+38},${height-(18+(i%3)*10)}`} fill={dk} opacity="0.35" />)}
+    </>,
+    city: <>
+      {[10, 50, 92, 140, 190, 240, 295, 350].map((x, i) => { const h = 22 + ((i * 13) % 30); return <rect key={i} x={x} y={height - h} width="32" height={h} rx="2" fill={c} opacity={0.25 + (i % 4) * 0.1} />; })}
+      {[10, 92, 190, 295].map((x, i) => { const h = 22 + ((i * 2 * 13) % 30); return Array.from({ length: 3 }).map((_, j) => <rect key={`${i}-${j}`} x={x + 6 + j * 9} y={height - h + 6} width="4" height="5" fill="#FFF3C4" opacity="0.8" />); })}
+    </>,
+    story: <>
+      <path d={`M0 ${height} Q 120 ${height-24} 240 ${height} T 480 ${height} V ${height} H0 Z`} fill={c} opacity="0.22" />
+      {[40, 110, 180, 260, 330].map((x, i) => <text key={i} x={x} y={height - 12 - (i % 2) * 8} fontSize="13" opacity="0.5">✨</text>)}
+      <text x="200" y={height-18} fontSize="20">🌙</text>
+    </>,
+    plaza: <>
+      <path d={`M0 ${height} Q 120 ${height-16} 240 ${height} T 480 ${height} V ${height} H0 Z`} fill={c} opacity="0.22" />
+      <text x="180" y={height-6} fontSize="26">⛲</text>
+      {[60, 300].map((x, i) => <text key={i} x={x} y={height-8} fontSize="16" opacity="0.7">🌺</text>)}
+    </>,
+    bridge: <>
+      <path d={`M10 ${height} Q 190 ${height-40} 370 ${height}`} stroke={c} strokeWidth="6" fill="none" opacity="0.4" />
+      <path d={`M10 ${height} Q 190 ${height-40} 370 ${height}`} stroke={dk} strokeWidth="2" fill="none" opacity="0.4" strokeDasharray="2 8" />
+      {[70, 150, 230, 310].map((x, i) => <line key={i} x1={x} y1={height} x2={x} y2={height - (34 - Math.abs(190 - x) / 6)} stroke={c} strokeWidth="3" opacity="0.3" />)}
+    </>,
+    castle: <>
+      <rect x="150" y={height - 40} width="120" height="40" fill={c} opacity="0.3" />
+      {[150, 185, 220, 255].map((x, i) => <rect key={i} x={x} y={height - 48} width="16" height="12" fill={c} opacity="0.4" />)}
+      <polygon points={`180,${height-40} 195,${height-58} 210,${height-40}`} fill={dk} opacity="0.4" />
+      <polygon points={`225,${height-40} 240,${height-58} 255,${height-40}`} fill={dk} opacity="0.4" />
+      <text x="196" y={height-44} fontSize="10">🚩</text>
+    </>,
+    home: <>
+      <path d={`M0 ${height} Q 60 ${height-12} 120 ${height} T 240 ${height} T 360 ${height} V ${height} H0 Z`} fill={c} opacity="0.22" />
+      <rect x="150" y={height - 30} width="60" height="30" rx="3" fill={c} opacity="0.4" />
+      <polygon points={`145,${height-30} 180,${height-50} 215,${height-30}`} fill={dk} opacity="0.4" />
+      <rect x="172" y={height - 20} width="16" height="20" fill={dk} opacity="0.5" />
+      {[70, 300].map((x, i) => <text key={i} x={x} y={height-6} fontSize="16" opacity="0.7">🌻</text>)}
+    </>,
+    play: <>
+      <path d={`M0 ${height} Q 120 ${height-14} 240 ${height} T 480 ${height} V ${height} H0 Z`} fill={c} opacity="0.22" />
+      {["⚽", "🎨", "🪁", "🎮", "🧩"].map((e, i) => <text key={i} x={40 + i * 70} y={height - 8 - (i % 2) * 10} fontSize="16" opacity="0.75">{e}</text>)}
+    </>,
+    nature: <>
+      <path d={`M0 ${height} Q 90 ${height-20} 180 ${height} T 360 ${height} T 480 ${height} V ${height} H0 Z`} fill={c} opacity="0.25" />
+      {[40, 90, 150, 210, 280, 340].map((x, i) => <text key={i} x={x} y={height-6} fontSize={14 + (i % 3) * 3} opacity="0.7">{["🌲","🌳","🌲","🍄","🌳","🌲"][i]}</text>)}
+    </>,
+    self: <>
+      <path d={`M0 ${height} Q 120 ${height-16} 240 ${height} T 480 ${height} V ${height} H0 Z`} fill={c} opacity="0.22" />
+      {["🎒", "👤", "💜", "📚", "🎈"].map((e, i) => <text key={i} x={45 + i * 70} y={height - 8 - (i % 2) * 8} fontSize="15" opacity="0.75">{e}</text>)}
+    </>,
+    stars: <>
+      {Array.from({ length: 14 }).map((_, i) => <text key={i} x={(i * 53) % 460 + 10} y={12 + ((i * 29) % (height - 20))} fontSize={10 + (i % 3) * 4} opacity="0.6">{["⭐","🌟","✨"][i % 3]}</text>)}
+      <text x="200" y={height-10} fontSize="24">🌈</text>
+    </>,
+  };
+  return <svg width="100%" height={height} viewBox={`0 0 400 ${height}`} preserveAspectRatio="xMidYMax slice" style={{ display: "block" }}>
+    <defs>
+      <linearGradient id={`sky-${world.id}`} x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stopColor={world.tint} />
+        <stop offset="100%" stopColor={c} stopOpacity="0.12" />
+      </linearGradient>
+    </defs>
+    <rect width="400" height={height} fill={`url(#sky-${world.id})`} />
+    {shapes[scene] || null}
+  </svg>;
+}
+
+// ============================================================
+// MASCOT REACTIONS — Sol & Luna respond to what the child does.
+// Reactions are occasional and earned, never constant noise.
+// ============================================================
+// A small mascot with a speech bubble that pops in, then fades.
+function MascotReaction({ who = "sol", mood, text, onDone, duration = 1800 }) {
+  useEffect(() => {
+    if (!text) return;
+    const t = setTimeout(() => onDone?.(), duration);
+    return () => clearTimeout(t);
+  }, [text]);
+  if (!text) return null;
+  return <div style={{
+    position: "fixed", bottom: 22, left: "50%", transform: "translateX(-50%)",
+    zIndex: 9000, display: "flex", alignItems: "flex-end", gap: 8, pointerEvents: "none",
+    animation: "reactIn .35s cubic-bezier(.2,1.4,.4,1)",
+  }}>
+    <div style={{ flexShrink: 0, animation: "reactBob 1s ease-in-out infinite alternate" }}>
+      {who === "sol" ? <Sol size={54} mood={mood || "celebrate"} /> : <Luna size={54} mood={mood || "happy"} />}
+    </div>
+    <div style={{
+      background: "#fff", border: `2px solid ${T.line}`, borderRadius: 16, borderBottomLeftRadius: 4,
+      padding: "10px 14px", boxShadow: `0 4px 0 ${T.line}`, maxWidth: 220, marginBottom: 6,
+    }}>
+      <div style={{ fontSize: 14, fontWeight: 800, color: T.ink, fontFamily: FN, lineHeight: 1.3 }}>{text}</div>
+    </div>
+    <style>{`
+      @keyframes reactIn { from { opacity: 0; transform: translateX(-50%) translateY(20px); } to { opacity: 1; transform: translateX(-50%) translateY(0); } }
+      @keyframes reactBob { from { transform: translateY(0); } to { transform: translateY(-5px); } }
+    `}</style>
+  </div>;
+}
+
+// Reaction lines for in-activity moments. Sol = energetic, Luna = gentle.
+const REACTIONS = {
+  streak: [
+    { who: "sol", mood: "celebrate", text: "¡Increíble! You're on fire! 🔥" },
+    { who: "sol", mood: "celebrate", text: "Three in a row! ¡Vamos!" },
+    { who: "sol", mood: "wink", text: "¡Qué bien! Keep going!" },
+    { who: "luna", mood: "happy", text: "Beautiful work! ✨" },
+  ],
+  recover: [
+    { who: "luna", mood: "encourage", text: "¡Sí! You got it that time!" },
+    { who: "luna", mood: "happy", text: "See? You can do it! 💫" },
+  ],
+  wrong: [
+    { who: "luna", mood: "encourage", text: "¡Casi! Try the next one." },
+    { who: "luna", mood: "encourage", text: "That's okay — keep going!" },
+  ],
+};
+const pickReaction = (kind) => {
+  const arr = REACTIONS[kind];
+  if (!arr || !arr.length) return null;
+  return arr[Math.floor(Math.random() * arr.length)];
+};
+
+// Home-screen greeting, chosen from what's genuinely true for this child.
+function pickGreeting(progress, childName) {
+  const p = progress || {};
+  const streak = p.streak || 0;
+  const last = p.lastActive ? new Date(p.lastActive) : null;
+  const daysSince = last ? Math.floor((Date.now() - last.getTime()) / 86400000) : null;
+  const stars = Object.values(p.stars || {}).reduce((a, b) => a + b, 0);
+  const lessonsDone = Object.keys(p.stars || {}).length;
+  const hour = new Date().getHours();
+
+  if (lessonsDone === 0) return { who: "sol", mood: "celebrate", text: `¡Hola, ${childName}! Ready for your first adventure? 🌟` };
+  if (daysSince !== null && daysSince >= 2) return { who: "luna", mood: "happy", text: `¡Bienvenido, ${childName}! We missed you! 💜` };
+  if (streak >= 5) return { who: "sol", mood: "celebrate", text: `${streak} days in a row! ¡Increíble! 🔥` };
+  if (streak >= 2) return { who: "sol", mood: "wink", text: `${streak}-day streak! Keep it going, ${childName}!` };
+  if (hour < 12) return { who: "sol", mood: "happy", text: `¡Buenos días, ${childName}! Let's learn! ☀️` };
+  if (hour >= 19) return { who: "luna", mood: "sleepy", text: `¡Buenas noches, ${childName}! One more lesson? 🌙` };
+  if (stars >= 30) return { who: "sol", mood: "celebrate", text: `${stars} stars already! ¡Fantástico!` };
+  return { who: "sol", mood: "happy", text: `¡Hola, ${childName}! What shall we learn today?` };
 }
 
 // A sparkly starfield for dark navy backgrounds
@@ -1536,6 +2288,13 @@ export default function App() {
   const [ready, setReady] = useState(false);
   const [refreshKey, setRefreshKey] = useState(0);
   const [newBadge, setNewBadge] = useState(null);
+  const [newReward, setNewReward] = useState(null);   // { type: "sticker"|"outfit", id }
+  const [journey, setJourney] = useState(null);   // array of activity screen names, or null when free-play
+  const [journeyStep, setJourneyStep] = useState(0);
+  const [journeyScore, setJourneyScore] = useState({ correct: 0, total: 0 });
+  const [reaction, setReaction] = useState(null);      // { who, mood, text } | null
+  const correctStreak = useRef(0);                     // consecutive correct answers
+  const lastWasWrong = useRef(false);                  // for "recovery" reactions
 
   // Restore session on mount
   useEffect(() => {
@@ -1582,22 +2341,39 @@ export default function App() {
   };
 
   const save = (newProg) => {
-    setProgress(newProg);
-    if (child) db.saveProgress(child.id, newProg);
-    // Check badges
-    const { allBadges, newBadges } = checkBadges(newProg);
-    if (newBadges.length > 0) {
-      const updated = { ...newProg, badges: allBadges };
-      setProgress(updated);
-      if (child) db.saveProgress(child.id, updated);
-      // Show toast for first new badge (queue not implemented for simplicity)
-      setNewBadge(newBadges[0]);
-    }
+    // Award badges, stickers, and outfits together on any progress change.
+    let updated = { ...newProg };
+    const { allBadges, newBadges } = checkBadges(updated);
+    if (newBadges.length > 0) updated.badges = allBadges;
+    const { allStickers, newStickers } = checkStickers(updated);
+    if (newStickers.length > 0) updated.stickers = allStickers;
+    const { allOutfits, newOutfits } = checkOutfits(updated);
+    if (newOutfits.length > 0) updated.outfits = allOutfits;
+
+    setProgress(updated);
+    if (child) db.saveProgress(child.id, updated);
+
+    // Show a reward toast — prioritise stickers/outfits (new!), then badges.
+    if (newStickers.length > 0) setNewReward({ type: "sticker", id: newStickers[0] });
+    else if (newOutfits.length > 0) setNewReward({ type: "outfit", id: newOutfits[0] });
+    else if (newBadges.length > 0) setNewBadge(newBadges[0]);
+  };
+
+  // Equip an outfit on a mascot (persisted).
+  const equipOutfit = (who, outfitId) => {
+    if (!progress) return;
+    const key = who === "sol" ? "solOutfit" : "lunaOutfit";
+    const updated = { ...progress, [key]: outfitId };
+    setProgress(updated);
+    if (child) db.saveProgress(child.id, updated);
   };
 
   const stars = progress?.stars || {};
   const totalStars = Object.values(stars).reduce((a, b) => a + b, 0);
   const lesson = LESSONS[lIdx];
+  // Background for lesson/activity screens — tinted to match the lesson's world
+  const lessonWorld = lesson ? WORLDS.find(w => lesson.id >= w.range[0] && lesson.id <= w.range[1]) : null;
+  const lessonBg = lessonWorld ? `linear-gradient(180deg, ${lessonWorld.tint} 0%, #FFFDF8 60%)` : (lesson?.bg || T.cream);
 
   const earn = (id) => {
     if (!progress) return;
@@ -1612,8 +2388,12 @@ export default function App() {
   };
 
   const incrementStat = (key, amount = 1) => {
-    if (!progress) return;
-    save({ ...progress, [key]: (progress[key] || 0) + amount });
+    setProgress(prev => {
+      if (!prev) return prev;
+      const np = { ...prev, [key]: (prev[key] || 0) + amount };
+      if (child) db.saveProgress(child.id, np);
+      return np;
+    });
   };
 
   // Record a single word encounter into spaced-repetition memory (fire-and-forget).
@@ -1622,6 +2402,25 @@ export default function App() {
     db.recordWord(child.id, es, en, correct);
     // keep local progress roughly in sync for the due-count badge on home
     setProgress(prev => prev ? db.getProgress(child.id) : prev);
+
+    // Mascot reactions — occasional and earned, never on every answer.
+    if (correct) {
+      correctStreak.current += 1;
+      // Celebrate every 3rd consecutive correct answer
+      if (correctStreak.current > 0 && correctStreak.current % 3 === 0) {
+        const r = pickReaction("streak");
+        if (r) setReaction(r);
+      } else if (lastWasWrong.current) {
+        // Gentle "you recovered" nudge, ~half the time to stay fresh
+        if (Math.random() < 0.5) { const r = pickReaction("recover"); if (r) setReaction(r); }
+      }
+      lastWasWrong.current = false;
+    } else {
+      correctStreak.current = 0;
+      lastWasWrong.current = true;
+      // Occasional gentle encouragement after a miss (~1 in 3)
+      if (Math.random() < 0.34) { const r = pickReaction("wrong"); if (r) setReaction(r); }
+    }
   };
 
   // Count one completed activity toward today's goal; celebrate if just met.
@@ -1640,6 +2439,126 @@ export default function App() {
     setScreen(s);
     setResult(null);
   };
+
+  // ============================================================
+  // GUIDED LESSON JOURNEY
+  // Build an ordered sequence of activities for a lesson and walk
+  // the child through them one at a time with a progress bar.
+  // ============================================================
+  // Build a lesson's activity sequence with deterministic per-lesson variety.
+  // Screen names can be plain ("quiz") or tagged ("surprise", "warmup", "boss").
+  const buildJourney = (lsn) => {
+    const seed = lessonSeed(lsn.id);
+
+    // MILESTONE lessons become a "boss battle" over the whole world's vocab.
+    if (isMilestone(lsn.id)) {
+      const seq = ["learn"];                 // quick refresh of this lesson's words
+      seq.push("warmup");                    // recall earlier world words
+      seq.push("boss");                      // the mixed world challenge
+      if (lsn.story) seq.push("story");      // wind down with the story
+      return seq;
+    }
+
+    // Core activities every lesson needs
+    const core = ["learn", "flash", "listen", "match", "quiz", "sayit"];
+    if (lsn.sentences?.length > 0) core.push("build");
+
+    // VARIETY: opening style chosen by seed. Standard (learn-first) is most
+    // common; story-first and warm-up-first add change of pace.
+    const opener = seed % 5; // 0,1,2 → standard; 3 → story-first; 4 → warm-up-first
+    let seq;
+    if (opener === 3 && lsn.story) {
+      // Story-first: read the story, then learn the words that appeared
+      seq = ["story", ...core];
+    } else if (opener === 4) {
+      // Warm-up first: a quick recall of earlier words, then learn
+      seq = ["warmup", ...core];
+    } else {
+      // Standard: learn first
+      seq = [...core];
+    }
+
+    // Append the story at the end if it wasn't used as the opener
+    if (lsn.story && !seq.includes("story")) seq.push("story");
+
+    // RICHER ACTIVITY TYPES — swap some standard games for hands-on variants,
+    // chosen deterministically so each lesson has a stable, distinct texture.
+    // (a) ~half of lessons use drag-and-drop instead of tap matching
+    if (seed % 2 === 0) {
+      const mi = seq.indexOf("match");
+      if (mi !== -1) seq[mi] = "dragmatch";
+    }
+    // (b) ~1 in 3 lessons insert an "odd one out" categorisation round after the quiz
+    if (seed % 3 === 1) {
+      const qi = seq.indexOf("quiz");
+      if (qi !== -1) seq.splice(qi + 1, 0, "oddone");
+    }
+    // (c) lessons with sentences: ~half turn "build" into the richer word-order challenge
+    if (seed % 2 === 1) {
+      const bi = seq.indexOf("build");
+      if (bi !== -1) seq[bi] = "wordorder";
+    }
+
+    // SURPRISE: roughly 1 in 4 lessons gets a surprise card dropped mid-journey
+    if (seed % 4 === 0) {
+      const insertAt = 2 + (seed % 2); // after the 2nd or 3rd activity
+      seq.splice(Math.min(insertAt, seq.length), 0, "surprise");
+    }
+
+    // LENGTH VARIETY: some lessons are shorter "snack" sessions.
+    // Every 3rd-ish lesson trims a couple of the middle games (keeps learn + quiz + story).
+    if (seed % 3 === 2 && seq.length > 6) {
+      // Remove one of listen/match/sayit to shorten, keeping pedagogical spread
+      const trimmable = ["match", "dragmatch", "sayit", "listen"];
+      for (const t of trimmable) {
+        const i = seq.indexOf(t);
+        if (i !== -1) { seq.splice(i, 1); break; }
+      }
+    }
+
+    return seq;
+  };
+
+  // Enter a lesson: start its guided journey from step 0.
+  const startLesson = (idx) => {
+    const lsn = LESSONS[idx];
+    const seq = buildJourney(lsn);
+    correctStreak.current = 0;
+    lastWasWrong.current = false;
+    setReaction(null);
+    setLIdx(idx);
+    setJourney(seq);
+    setJourneyStep(0);
+    setJourneyScore({ correct: 0, total: 0 });
+    setResult(null);
+    setScreen(seq[0]);
+  };
+
+  // Called when the current journey activity is finished.
+  // Tally score, then advance to the next activity or the celebration.
+  const advanceJourney = (correct = 0, total = 0) => {
+    setJourneyScore(prev => ({ correct: prev.correct + correct, total: prev.total + total }));
+    setResult(null);
+    if (!journey) { go("lesson"); return; }
+    const next = journeyStep + 1;
+    if (next < journey.length) {
+      setJourneyStep(next);
+      setScreen(journey[next]);
+    } else {
+      // Journey complete — award the star and celebrate
+      earn(lesson.id);
+      setScreen("done");
+    }
+  };
+
+  // Leave the journey early, back to the path.
+  const exitJourney = () => {
+    setJourney(null);
+    setResult(null);
+    go("home");
+  };
+
+  const inJourney = journey !== null && screen !== "lesson" && screen !== "done";
 
   // Loading
   if (!ready) return <div style={{ minHeight: "100vh", background: "#FFF8E1", display: "flex", alignItems: "center", justifyContent: "center" }}>
@@ -1666,6 +2585,7 @@ export default function App() {
   if (screen === "home") return <div style={{ minHeight: "100vh", background: T.cream, color: T.ink }}>
     <Confetti active={conf} />
     {newBadge && <BadgeToast badge={newBadge} onClose={() => setNewBadge(null)} />}
+    {newReward && <RewardToast reward={newReward} onClose={() => setNewReward(null)} />}
 
     {/* Sticky stat bar */}
     <div style={{ position: "sticky", top: 0, zIndex: 20, background: "#fff", borderBottom: `2px solid ${T.line}` }}>
@@ -1692,10 +2612,19 @@ export default function App() {
         </div>
         <div style={{ textAlign: "center", background: "#fff", border: `2px solid ${T.line}`, borderRadius: 18, padding: "8px 12px", boxShadow: `0 4px 0 ${T.line}` }}>
           <div style={{ fontSize: 9, fontWeight: 800, color: T.muted, fontFamily: FN, textTransform: "uppercase", letterSpacing: 1, marginBottom: 2 }}>Our friends</div>
-          <div style={{ display: "flex", gap: 4, justifyContent: "center" }}><Sol size={40} /><Luna size={40} /></div>
+          <div style={{ display: "flex", gap: 4, justifyContent: "center" }}><Sol size={40} outfit={progress.solOutfit} /><Luna size={40} outfit={progress.lunaOutfit} /></div>
           <div style={{ fontSize: 11, fontWeight: 800, color: T.ink, fontFamily: FD, marginTop: 2 }}>Sol y Luna</div>
         </div>
       </div>
+
+      {/* Contextual greeting from Sol or Luna */}
+      {(() => {
+        const g = pickGreeting(progress, child.name);
+        return <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16, background: "#fff", border: `2px solid ${T.line}`, borderRadius: 18, padding: "10px 14px", boxShadow: `0 4px 0 ${T.line}` }}>
+          <div style={{ flexShrink: 0 }}>{g.who === "sol" ? <Sol size={46} mood={g.mood} outfit={progress.solOutfit} /> : <Luna size={46} mood={g.mood} outfit={progress.lunaOutfit} />}</div>
+          <div style={{ fontSize: 14, fontWeight: 800, color: T.ink, fontFamily: FN, lineHeight: 1.35 }}>{g.text}</div>
+        </div>;
+      })()}
 
       {/* Daily goal + Daily Review cards */}
       {(() => {
@@ -1761,9 +2690,11 @@ export default function App() {
         const completedLessonIds = Object.keys(stars).map(Number);
         const maxCompleted = completedLessonIds.length ? Math.max(...completedLessonIds) : 0;
 
-        return <div key={w.id} style={{ marginBottom: 10 }}>
+        return <div key={w.id} style={{ marginBottom: 18, background: w.tint, borderRadius: 22, padding: "0 0 10px", overflow: "hidden", border: `2px solid ${w.color}22` }}>
+          {/* Themed horizon scene */}
+          <WorldScene world={w} height={54} />
           {/* World banner — chunky solid card */}
-          <div style={{ background: w.color, borderRadius: 18, padding: "14px 16px", boxShadow: `0 5px 0 ${darken(w.color)}`, display: "flex", alignItems: "center", gap: 12, marginBottom: 6 }}>
+          <div style={{ margin: "-14px 10px 6px", position: "relative", zIndex: 1, background: w.color, borderRadius: 18, padding: "14px 16px", boxShadow: `0 5px 0 ${darken(w.color)}`, display: "flex", alignItems: "center", gap: 12 }}>
             <div style={{ fontSize: 32, filter: "drop-shadow(0 2px 0 rgba(0,0,0,0.15))" }}>{w.emoji}</div>
             <div style={{ flex: 1 }}>
               <div style={{ fontSize: 17, fontWeight: 800, color: "#fff", fontFamily: FD, lineHeight: 1.1 }}>{w.name}</div>
@@ -1774,9 +2705,16 @@ export default function App() {
 
           {/* Path container */}
           <div style={{ position: "relative", height: containerHeight, width: "100%" }}>
+            {/* Themed ambient decorations behind the trail */}
+            {(w.deco || []).map((emo, di) => <div key={di} style={{
+              position: "absolute", zIndex: 0, pointerEvents: "none", userSelect: "none",
+              left: `${[8, 82, 14, 78][di % 4]}%`,
+              top: `${18 + (di * 137) % Math.max(1, containerHeight - 60)}px`,
+              fontSize: 26, opacity: 0.16,
+            }}>{emo}</div>)}
             <svg viewBox={`0 0 100 ${containerHeight}`} preserveAspectRatio="none" width="100%" height={containerHeight}
               style={{ position: "absolute", inset: 0, zIndex: 0 }}>
-              <path d={d} fill="none" stroke="#E4D9C4" strokeWidth="5" strokeLinecap="round" strokeDasharray="0.1 12" vectorEffect="non-scaling-stroke" />
+              <path d={d} fill="none" stroke={darken(w.color)} strokeOpacity="0.3" strokeWidth="5" strokeLinecap="round" strokeDasharray="0.1 12" vectorEffect="non-scaling-stroke" />
             </svg>
 
             {stones.map((stone, i) => {
@@ -1802,7 +2740,7 @@ export default function App() {
                 }}>¡VAMOS!<div style={{ position: "absolute", bottom: -6, left: "50%", transform: "translateX(-50%) rotate(45deg)", width: 10, height: 10, background: "#fff", borderRight: `2px solid ${T.line}`, borderBottom: `2px solid ${T.line}` }} /></div>}
 
                 <button
-                  onClick={() => isUnlocked && go("lesson", LESSONS.indexOf(l))}
+                  onClick={() => isUnlocked && startLesson(LESSONS.indexOf(l))}
                   disabled={!isUnlocked}
                   style={{
                     position: "relative",
@@ -1845,7 +2783,7 @@ export default function App() {
     <div style={{ background: T.night, marginTop: 28, position: "relative", overflow: "hidden" }}>
       <div style={{ maxWidth: 560, margin: "0 auto", padding: "26px 18px 30px", textAlign: "center", position: "relative", zIndex: 1 }}>
         <div style={{ display: "flex", justifyContent: "center", gap: 10, marginBottom: 8 }}>
-          <Sol size={36} /><Luna size={36} />
+          <Sol size={36} outfit={progress.solOutfit} /><Luna size={36} outfit={progress.lunaOutfit} />
         </div>
         <p style={{ fontSize: 13, color: "rgba(255,255,255,0.85)", fontFamily: FD, fontWeight: 700, margin: 0 }}>Keep going, {child.name}!</p>
         <p style={{ fontSize: 11, color: "rgba(255,255,255,0.55)", fontFamily: FN, fontWeight: 700, marginTop: 3 }}>Sol y Luna are so proud of you ✨</p>
@@ -1875,7 +2813,7 @@ export default function App() {
           <div style={{ height: "100%", borderRadius: 50, background: T.sun, width: `${(Object.keys(stars).length / LESSONS.length * 100)}%`, transition: "width .5s" }} />
         </div>
         <p style={{ fontSize: 12, color: T.muted, fontFamily: FN, fontWeight: 700, marginBottom: 16 }}>{Math.round(Object.keys(stars).length / LESSONS.length * 100)}% complete</p>
-        <Btn onClick={() => setScreen("badges")} full bg={T.luna} color="#fff" edge={T.lunaDark} style={{ marginBottom: 8 }}>🏆 Trophy Cabinet</Btn>
+        <Btn onClick={() => setScreen("badges")} full bg={T.luna} color="#fff" edge={T.lunaDark} style={{ marginBottom: 8 }}>🏆 Trophy Shelf</Btn>
         <Btn onClick={backToChildPicker} full style={{ marginBottom: 8 }}>👥 Switch child</Btn>
       </div>
     </div>
@@ -1884,7 +2822,7 @@ export default function App() {
   // ============================================================
   // BADGES
   // ============================================================
-  if (screen === "badges") return <BadgeCabinet progress={progress} onBack={() => go("home")} />;
+  if (screen === "badges") return <BadgeCabinet progress={progress} onBack={() => go("home")} onEquip={equipOutfit} />;
 
   // ============================================================
   // LESSON HUB
@@ -1899,14 +2837,18 @@ export default function App() {
       { label: "📚 Flashcards", desc: "Flip to learn", scr: "flash", clr: "#4D96FF" },
       { label: "👂 Listen", desc: "Hear it, tap the picture", scr: "listen", clr: "#7B6FDE" },
       { label: "🎯 Matching", desc: "Match Spanish → English", scr: "match", clr: "#6BCB77" },
+      { label: "👆 Drag & Match", desc: "Drag words to pictures", scr: "dragmatch", clr: "#5F6FE0" },
+      { label: "🤔 Odd One Out", desc: "Spot the stranger", scr: "oddone", clr: "#FF922B" },
       { label: "🧠 Quiz", desc: "Test yourself", scr: "quiz", clr: "#FF8C42" },
       { label: "🎤 Say It!", desc: "Say the words aloud!", scr: "sayit", clr: "#FF6B6B" },
     ];
     if (hasS) acts.push({ label: "🔨 Sentences", desc: "Build sentences!", scr: "build", clr: "#B983FF" });
+    if (hasS) acts.push({ label: "🧩 Word Order", desc: "Unscramble the sentence", scr: "wordorder", clr: "#9B6BD8" });
     if (hasSt) acts.push({ label: "📖 Story", desc: "Read a story!", scr: "story", clr: "#FF9EC7" });
-    return <div style={{ minHeight: "100vh", background: lesson.bg }}>
+    return <div style={{ minHeight: "100vh", background: lessonBg }}>
       <Confetti active={conf} />
       {newBadge && <BadgeToast badge={newBadge} onClose={() => setNewBadge(null)} />}
+    {newReward && <RewardToast reward={newReward} onClose={() => setNewReward(null)} />}
       <div style={{ position: "relative", zIndex: 1, maxWidth: 500, margin: "0 auto", padding: "14px 14px 36px" }}>
         <Btn onClick={() => go("home")} style={{ marginBottom: 12, fontSize: 12, padding: "10px 18px" }}>← {w?.name || "Home"}</Btn>
         <div style={{ textAlign: "center", marginBottom: 20 }}>
@@ -1926,8 +2868,10 @@ export default function App() {
           <div style={{ fontSize: 12, fontWeight: 900, color: T.sunDark, fontFamily: FN }}>💡 Did you know?</div>
           <div style={{ fontSize: 12, color: T.ink, fontWeight: 600, fontFamily: FN, lineHeight: 1.5, marginTop: 2 }}>{lesson.funFact}</div>
         </div>
+        <Btn full onClick={() => startLesson(lIdx)} bg={T.green} color="#fff" edge={T.greenDark} style={{ marginBottom: 8, fontSize: 15, padding: "15px" }}>▶ Start guided lesson</Btn>
+        <div style={{ fontSize: 11, fontWeight: 800, color: T.muted, fontFamily: FN, textTransform: "uppercase", letterSpacing: 1, textAlign: "center", margin: "12px 0 8px" }}>…or practise one activity</div>
         <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-          {acts.map(a => <button key={a.scr} onClick={() => go(a.scr)}
+          {acts.map(a => <button key={a.scr} onClick={() => { setJourney(null); go(a.scr); }}
             style={{ display: "flex", alignItems: "center", gap: 12, background: "#fff", border: `2px solid ${T.line}`, borderRadius: 16, padding: "13px 14px", cursor: "pointer", boxShadow: `0 4px 0 ${T.line}`, textAlign: "left", transition: "filter .12s" }}
             onMouseEnter={e => e.currentTarget.style.filter = "brightness(0.98)"} onMouseLeave={e => e.currentTarget.style.filter = "none"}>
             <div style={{ width: 42, height: 42, borderRadius: 12, background: a.clr, boxShadow: `0 3px 0 ${darken(a.clr)}`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 20, flexShrink: 0 }}>{a.label.slice(0, 2).trim()}</div>
@@ -1942,11 +2886,24 @@ export default function App() {
   // ============================================================
   // ACTIVITY WRAPPER
   // ============================================================
-  const AW = ({ title, em, children }) => <div style={{ minHeight: "100vh", background: lesson.bg }}>
+  // Activity wrapper. In a journey it shows a progress bar + Exit; in free-play a Back button.
+  const AW = ({ title, em, children }) => <div style={{ minHeight: "100vh", background: lessonBg }}>
     <Confetti active={conf} />
     {newBadge && <BadgeToast badge={newBadge} onClose={() => setNewBadge(null)} />}
+    {newReward && <RewardToast reward={newReward} onClose={() => setNewReward(null)} />}
+    {reaction && <MascotReaction who={reaction.who} mood={reaction.mood} text={reaction.text} onDone={() => setReaction(null)} />}
     <div style={{ position: "relative", zIndex: 1, maxWidth: 500, margin: "0 auto", padding: "14px 14px 36px" }}>
-      <Btn onClick={() => go("lesson")} style={{ marginBottom: 12, fontSize: 12, padding: "10px 18px" }}>← Back</Btn>
+      {inJourney ? (
+        <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16 }}>
+          <button onClick={exitJourney} title="Exit lesson" style={{ background: "#fff", border: `2px solid ${T.line}`, borderRadius: 12, width: 38, height: 38, fontSize: 16, cursor: "pointer", boxShadow: `0 3px 0 ${T.line}`, flexShrink: 0, color: T.muted }}>✕</button>
+          <div style={{ flex: 1, background: "#fff", border: `2px solid ${T.line}`, borderRadius: 50, height: 16, overflow: "hidden", boxShadow: `inset 0 1px 2px rgba(0,0,0,0.05)` }}>
+            <div style={{ height: "100%", width: `${(journeyStep / journey.length) * 100}%`, background: T.green, borderRadius: 50, transition: "width .4s ease-out", boxShadow: `0 0 8px ${T.green}66` }} />
+          </div>
+          <div style={{ fontSize: 12, fontWeight: 900, color: T.muted, fontFamily: FN, flexShrink: 0 }}>{journeyStep + 1}/{journey.length}</div>
+        </div>
+      ) : (
+        <Btn onClick={() => go("lesson")} style={{ marginBottom: 12, fontSize: 12, padding: "10px 18px" }}>← Back</Btn>
+      )}
       <div style={{ textAlign: "center", marginBottom: 14 }}>
         <h2 style={{ fontSize: 26, fontWeight: 800, color: T.ink, fontFamily: FD }}>{title}</h2>
         <div style={{ fontSize: 12, color: T.muted, fontWeight: 700, fontFamily: FN }}>Lesson {lesson.id}: {lesson.subtitle}</div>
@@ -1957,26 +2914,107 @@ export default function App() {
 
   const card = (ch) => <div style={{ background: "#fff", borderRadius: 20, padding: 16, border: `2px solid ${T.line}`, boxShadow: `0 4px 0 ${T.line}` }}>{ch}</div>;
 
+  // A game finished. In a journey → advance. In free-play → show Result screen.
+  const finishActivity = (correct, total, opts = {}) => {
+    completeActivity();
+    if (opts.stat) incrementStat(opts.stat, opts.statAmount ?? total);
+    if (correct != null) incrementStat("correctAnswers", correct);
+    if (opts.extraStat) incrementStat(opts.extraStat, opts.extraAmount ?? 1);
+    if (inJourney) advanceJourney(correct || 0, total || 0);
+    else setResult({ s: correct ?? total, t: total });
+  };
+
+  // Continue button shown on a free-play Result — in journey we never reach here.
+  const freeResult = (retryScreen) => <Result score={result.s} total={result.t}
+    onRetry={() => { setResult(null); go(retryScreen); }}
+    onBack={() => go("lesson")} onEarnStar={() => earn(lesson.id)} />;
+
   if (screen === "learn") return <AW title="🌱 Learn" em="🌱">{card(
-    <LearnIntro words={lesson.words} onWord={recordWord} onDone={() => { completeActivity(); earn(lesson.id); go("lesson"); }} />
+    <LearnIntro words={lesson.words} onWord={recordWord} onDone={() => { if (inJourney) advanceJourney(0, 0); else { completeActivity(); earn(lesson.id); go("lesson"); } }} />
   )}</AW>;
 
   if (screen === "flash") return <AW title="📚 Flashcards" em="📚">
     <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>{lesson.words.map((w, i) => <FlashCard key={w.es} word={w} index={i} />)}</div>
-    <div style={{ textAlign: "center", marginTop: 18 }}><Btn onClick={() => { lesson.words.forEach(w => recordWord(w.es, w.en, true)); completeActivity(); earn(lesson.id); go("lesson"); }} bg={T.sun} color="#fff" edge={T.sunDark}>⭐ I've learnt these!</Btn></div>
+    <div style={{ textAlign: "center", marginTop: 18 }}><Btn onClick={() => { lesson.words.forEach(w => recordWord(w.es, w.en, true)); if (inJourney) advanceJourney(0, 0); else { completeActivity(); earn(lesson.id); go("lesson"); } }} bg={T.sun} color="#fff" edge={T.sunDark}>{inJourney ? "Next →" : "⭐ I've learnt these!"}</Btn></div>
   </AW>;
 
-  if (screen === "listen") return <AW title="👂 Listen" em="👂">{card(result ? <Result score={result.s} total={result.t} onRetry={() => { setResult(null); go("listen"); }} onBack={() => go("lesson")} onEarnStar={() => earn(lesson.id)} /> : <ListenGame words={lesson.words} onWord={recordWord} onDone={(s, t) => { incrementStat("correctAnswers", s); completeActivity(); setResult({ s, t }); }} />)}</AW>;
+  if (screen === "listen") return <AW title="👂 Listen" em="👂">{card(result ? freeResult("listen") : <ListenGame words={lesson.words} onWord={recordWord} onDone={(s, t) => finishActivity(s, t)} />)}</AW>;
 
-  if (screen === "match") return <AW title="🎯 Matching" em="🎯">{card(result ? <Result score={result.s} total={result.t} onRetry={() => { setResult(null); go("match"); }} onBack={() => go("lesson")} onEarnStar={() => earn(lesson.id)} /> : <MatchGame words={lesson.words} onDone={() => { lesson.words.slice(0,6).forEach(w => recordWord(w.es, w.en, true)); incrementStat("correctAnswers", 6); completeActivity(); setResult({ s: 6, t: 6 }); }} />)}</AW>;
+  if (screen === "match") return <AW title="🎯 Matching" em="🎯">{card(result ? freeResult("match") : <MatchGame words={lesson.words} onDone={() => { lesson.words.slice(0,6).forEach(w => recordWord(w.es, w.en, true)); finishActivity(6, 6); }} />)}</AW>;
 
-  if (screen === "quiz") return <AW title="🧠 Quiz" em="🧠">{card(result ? <Result score={result.s} total={result.t} onRetry={() => { setResult(null); go("quiz"); }} onBack={() => go("lesson")} onEarnStar={() => earn(lesson.id)} /> : <Quiz words={lesson.words} gaps={lesson.gaps} onWord={recordWord} onDone={(s, t) => { incrementStat("correctAnswers", s); completeActivity(); setResult({ s, t }); }} />)}</AW>;
+  if (screen === "quiz") return <AW title="🧠 Quiz" em="🧠">{card(result ? freeResult("quiz") : <Quiz words={lesson.words} gaps={lesson.gaps} onWord={recordWord} onDone={(s, t) => finishActivity(s, t)} />)}</AW>;
 
-  if (screen === "build") return <AW title="🔨 Sentences" em="🔨">{card(result ? <Result score={result.s} total={result.t} onRetry={() => { setResult(null); go("build"); }} onBack={() => go("lesson")} onEarnStar={() => earn(lesson.id)} /> : <SentenceBuilder sentences={lesson.sentences} onDone={(s, t) => { incrementStat("correctAnswers", s); completeActivity(); setResult({ s, t }); }} />)}</AW>;
+  if (screen === "build") return <AW title="🔨 Sentences" em="🔨">{card(result ? freeResult("build") : <SentenceBuilder sentences={lesson.sentences} onDone={(s, t) => finishActivity(s, t)} />)}</AW>;
 
-  if (screen === "sayit") return <AW title="🎤 Say It!" em="🎤">{card(result ? <Result score={result.s} total={result.t} onRetry={() => { setResult(null); go("sayit"); }} onBack={() => go("lesson")} onEarnStar={() => earn(lesson.id)} /> : <SayItGame words={lesson.words} onWord={recordWord} onDone={(s, t) => { incrementStat("micUses", t); incrementStat("correctAnswers", s); completeActivity(); setResult({ s, t }); }} />)}</AW>;
+  if (screen === "sayit") return <AW title="🎤 Say It!" em="🎤">{card(result ? freeResult("sayit") : <SayItGame words={lesson.words} onWord={recordWord} onDone={(s, t) => finishActivity(s, t, { stat: "micUses", statAmount: t })} />)}</AW>;
 
-  if (screen === "story") return <AW title="📖 Story" em="📖">{card(result ? <Result score={result.s} total={result.t} onRetry={() => { setResult(null); go("story"); }} onBack={() => go("lesson")} onEarnStar={() => earn(lesson.id)} /> : <StoryReader story={lesson.story} onDone={(s, t) => { incrementStat("storiesRead", 1); incrementStat("correctAnswers", s); completeActivity(); setResult({ s, t }); }} />)}</AW>;
+  if (screen === "story") return <AW title="📖 Story" em="📖">{card(result ? freeResult("story") : <StoryReader story={lesson.story} onWord={recordWord} onDone={(s, t) => finishActivity(s, t, { extraStat: "storiesRead" })} />)}</AW>;
+
+  // SURPRISE — a light interstitial; no scoring, just advances the journey
+  if (screen === "surprise") return <AW title="🎁 Surprise!" em="🎁">{card(
+    <SurpriseCard surprise={surpriseFor(lesson.id)} onDone={() => { if (inJourney) advanceJourney(0, 0); else go("lesson"); }} />
+  )}</AW>;
+
+  // WARM-UP — recall of words from earlier lessons (or this world for milestones)
+  if (screen === "warmup") {
+    const prevId = Math.max(1, lesson.id - 1);
+    const earlierPool = wordsForLessonsUpTo(prevId);
+    // If there's nothing earlier yet (lesson 1), fall back to this lesson's words
+    const warmWords = earlierPool.length >= 4 ? earlierPool : lesson.words;
+    return <AW title="🔥 Warm-up" em="🔥">{card(
+      <WarmUp words={warmWords} allWords={ALL_WORDS} onWord={recordWord} onDone={(s, t) => finishActivity(s, t)} />
+    )}</AW>;
+  }
+
+  // BOSS BATTLE — end-of-world mixed challenge
+  if (screen === "boss") {
+    const worldWords = wordsForWorld(lesson.id);
+    const world = WORLDS.find(w => lesson.id >= w.range[0] && lesson.id <= w.range[1]);
+    return <AW title="⚔️ Boss Challenge" em="⚔️">{card(
+      <BossBattle words={worldWords.length >= 4 ? worldWords : lesson.words} world={world} onWord={recordWord} onDone={(s, t) => finishActivity(s, t)} />
+    )}</AW>;
+  }
+
+  if (screen === "dragmatch") return <AW title="👆 Drag & Match" em="👆">{card(result ? freeResult("dragmatch") : <DragMatch words={lesson.words} onWord={recordWord} onDone={(s, t) => finishActivity(s, t)} />)}</AW>;
+
+  if (screen === "oddone") return <AW title="🤔 Odd One Out" em="🤔">{card(result ? freeResult("oddone") : <OddOneOut words={lesson.words} allWords={ALL_WORDS} onWord={recordWord} onDone={(s, t) => finishActivity(s, t)} />)}</AW>;
+
+  if (screen === "wordorder") return <AW title="🧩 Word Order" em="🧩">{card(result ? freeResult("wordorder") : <WordOrder sentences={lesson.sentences} onDone={(s, t) => finishActivity(s, t)} />)}</AW>;
+
+  // ============================================================
+  // LESSON COMPLETE — celebration at the end of a journey
+  // ============================================================
+  if (screen === "done") {
+    const s = stars[lesson.id] || 0;
+    const js = journeyScore;
+    const pct = js.total > 0 ? js.correct / js.total : 1;
+    const msg = pct >= 0.85 ? "¡Increíble! Perfect work!" : pct >= 0.6 ? "¡Muy bien! Great job!" : "¡Bien hecho! Keep practising!";
+    const nextIdx = LESSONS.findIndex(l => l.id === lesson.id + 1);
+    const hasNext = nextIdx !== -1;
+    return <div style={{ minHeight: "100vh", background: lessonBg, display: "flex", alignItems: "center", justifyContent: "center", padding: 16 }}>
+      <Confetti active={true} />
+      {newBadge && <BadgeToast badge={newBadge} onClose={() => setNewBadge(null)} />}
+    {newReward && <RewardToast reward={newReward} onClose={() => setNewReward(null)} />}
+      <div style={{ position: "relative", zIndex: 1, maxWidth: 420, width: "100%", textAlign: "center" }}>
+        <div style={{ display: "flex", justifyContent: "center", gap: 10, marginBottom: 10 }}>
+          <Sol size={62} mood={pct >= 0.85 ? "celebrate" : pct >= 0.6 ? "happy" : "encourage"} outfit={progress.solOutfit} />
+          <Luna size={62} mood={pct >= 0.85 ? "celebrate" : pct >= 0.6 ? "happy" : "encourage"} outfit={progress.lunaOutfit} />
+        </div>
+        <div style={{ background: "#fff", borderRadius: 24, padding: "28px 22px", border: `2px solid ${T.line}`, boxShadow: `0 6px 0 ${T.line}`, animation: "bIn .5s" }}>
+          <div style={{ fontSize: 13, fontWeight: 900, color: T.green, fontFamily: FN, textTransform: "uppercase", letterSpacing: 2 }}>Lesson complete!</div>
+          <h2 style={{ fontSize: 30, fontWeight: 800, color: T.ink, fontFamily: FD, margin: "4px 0 8px" }}>{lesson.title}</h2>
+          <div style={{ fontSize: 40, letterSpacing: 6, marginBottom: 6 }}>{[0,1,2].map(j => <span key={j} style={{ opacity: j < s ? 1 : 0.2, animation: j < s ? `bIn .4s ${0.3 + j * 0.2}s backwards` : "none" }}>⭐</span>)}</div>
+          <p style={{ fontSize: 15, fontWeight: 800, color: T.ink, fontFamily: FN, marginBottom: 4 }}>{msg}</p>
+          {js.total > 0 && <p style={{ fontSize: 13, color: T.muted, fontWeight: 700, fontFamily: FN, marginBottom: 16 }}>You got {js.correct} of {js.total} right!</p>}
+          <div style={{ display: "flex", flexDirection: "column", gap: 8, marginTop: 16 }}>
+            {hasNext && <Btn full onClick={() => startLesson(nextIdx)} bg={T.sun} color="#fff" edge={T.sunDark}>Next lesson →</Btn>}
+            <Btn full onClick={() => { setJourney(null); go("home"); }} bg={hasNext ? "#fff" : T.sun} color={hasNext ? T.ink : "#fff"} edge={hasNext ? undefined : T.sunDark}>Back to the map</Btn>
+            <button onClick={() => { setJourney(null); go("lesson"); }} style={{ background: "none", border: "none", color: T.muted, fontFamily: FN, fontWeight: 800, fontSize: 12, cursor: "pointer", marginTop: 4, textTransform: "uppercase", letterSpacing: 0.6 }}>Practise this lesson again</button>
+          </div>
+        </div>
+      </div>
+    </div>;
+  }
 
   // DAILY REVIEW — spaced repetition over previously learned words
   if (screen === "review") {
@@ -1988,10 +3026,11 @@ export default function App() {
     return <div style={{ minHeight: "100vh", background: T.cream }}>
       <Confetti active={conf} />
       {newBadge && <BadgeToast badge={newBadge} onClose={() => setNewBadge(null)} />}
+    {newReward && <RewardToast reward={newReward} onClose={() => setNewReward(null)} />}
       <div style={{ position: "relative", zIndex: 1, maxWidth: 500, margin: "0 auto", padding: "14px 14px 36px" }}>
         <Btn onClick={() => go("home")} style={{ marginBottom: 12, fontSize: 12, padding: "10px 18px" }}>← Home</Btn>
         <div style={{ textAlign: "center", marginBottom: 14 }}>
-          <div style={{ display: "flex", justifyContent: "center", gap: 6, marginBottom: 4 }}><Sol size={40} /><Luna size={40} /></div>
+          <div style={{ display: "flex", justifyContent: "center", gap: 6, marginBottom: 4 }}><Sol size={40} outfit={progress.solOutfit} /><Luna size={40} outfit={progress.lunaOutfit} /></div>
           <h2 style={{ fontSize: 26, fontWeight: 800, color: T.ink, fontFamily: FD }}>Daily Review</h2>
           <div style={{ fontSize: 12, color: T.muted, fontWeight: 700, fontFamily: FN }}>Words you've learned before — let's keep them fresh!</div>
         </div>
