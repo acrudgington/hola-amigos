@@ -179,6 +179,10 @@ const SURPRISES = [
 ];
 const surpriseFor = (id) => SURPRISES[lessonSeed(id) % SURPRISES.length];
 
+// Lesson builder — assembles a lesson object from positional args.
+const L = (id, title, sub, emoji, color, bg, words, fact, phrase, sentences, gaps, story) =>
+  ({ id, title, subtitle: sub, emoji, color, bg, words, funFact: fact, phrase, sentences: sentences || [], gaps: gaps || [], story: story || null });
+
 const LESSONS = [
   L(1,"¡Hola!","Hello & Goodbye","👋","#FF8C42","#FFF3E8",[{es:"Hola",en:"Hello",say:"OH-la",emoji:"👋"},{es:"Adiós",en:"Goodbye",say:"ah-DYOS",emoji:"👋"},{es:"Buenos días",en:"Good morning",say:"BWAY-nos DEE-as",emoji:"☀️"},{es:"Buenas tardes",en:"Good afternoon",say:"BWAY-nas TAR-des",emoji:"🌤️"},{es:"Buenas noches",en:"Good night",say:"BWAY-nas NOH-ches",emoji:"🌙"},{es:"¿Qué tal?",en:"How are you?",say:"keh TAL",emoji:"😊"},{es:"Bien",en:"Good",say:"byen",emoji:"👍"},{es:"Gracias",en:"Thank you",say:"GRAH-thyass",emoji:"🙏"}],"In Spain, people say ¡Buenas! as a friendly shortcut for hello!",{es:"¡Hola! ¿Qué tal?",en:"Hello! How are you?"}),
   L(2,"Me llamo…","My name is…","📛","#B983FF","#F3EAFF",[{es:"Me llamo…",en:"My name is…",say:"meh YAH-mo",emoji:"🙋"},{es:"¿Cómo te llamas?",en:"What's your name?",say:"KOH-mo teh YAH-mas",emoji:"❓"},{es:"Mucho gusto",en:"Nice to meet you",say:"MOO-cho GOOS-to",emoji:"🤝"},{es:"Amigo",en:"Friend (boy)",say:"ah-MEE-go",emoji:"👦"},{es:"Amiga",en:"Friend (girl)",say:"ah-MEE-ga",emoji:"👧"},{es:"Sí",en:"Yes",say:"see",emoji:"✅"},{es:"No",en:"No",say:"no",emoji:"❌"},{es:"Por favor",en:"Please",say:"por fa-BOR",emoji:"🙏"}],"Boys say 'Encantado' and girls say 'Encantada'!",{es:"¡Hola! Me llamo Sol.",en:"Hello! My name is Sol."}),
