@@ -56,7 +56,7 @@ export function Sol({ size = 56, mood = "happy", outfit }) {
     {/* Cheeks */}
     <circle cx="38" cy="56" r="4.5" fill="#FF9EC7" opacity="0.75" />
     <circle cx="62" cy="56" r="4.5" fill="#FF9EC7" opacity="0.75" />
-    {eyes}
+    <g className="m-eyes">{eyes}</g>
     {mouth}
     <OutfitAccessory outfit={outfit} />
   </svg>;
@@ -95,7 +95,7 @@ export function Luna({ size = 56, mood = "sleepy", outfit }) {
     {/* Cheeks */}
     <circle cx="36" cy="58" r="4" fill="#FF9EC7" opacity="0.7" />
     <circle cx="56" cy="60" r="4" fill="#FF9EC7" opacity="0.7" />
-    {eyes}
+    <g className="m-eyes">{eyes}</g>
     {mouth}
     <OutfitAccessory outfit={outfit} />
   </svg>;

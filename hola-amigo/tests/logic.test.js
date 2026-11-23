@@ -116,3 +116,32 @@ test("speech matching ignores accents and punctuation", () => {
   assert.ok(similarity("buenos dias", "Buenos días") === 1);
   assert.ok(similarity("hola", "adiós") < 0.5);
 });
+
+import { XP, addXP, claimChest, dailyQuests, dayKey, levelInfo, recordCombo, weekXP } from "../src/lib/db.js";
+
+test("XP adds up per day and levels follow the curve", () => {
+  const now = new Date(2026, 4, 10, 12).getTime();
+  let p = addXP(fresh(), 100, now);
+  p = addXP(p, 30, now);
+  assert.equal(p.xp, 130);
+  assert.equal(p.xpByDay[dayKey(now)], 130);
+  assert.equal(levelInfo(0).level, 1);
+  assert.equal(levelInfo(119).level, 1);
+  assert.equal(levelInfo(120).level, 2);
+  assert.equal(levelInfo(360).level, 3);
+  const w = weekXP(p, now);
+  assert.equal(w.length, 7);
+  assert.equal(w[6].xp, 130);
+});
+
+test("daily quest chest opens once, only when all quests are done", () => {
+  const now = Date.now();
+  let p = fresh();
+  assert.equal(claimChest(p, now), p);
+  for (let i = 0; i < 3; i++) p = bumpDaily(p).progress;
+  p = recordCombo(addXP(p, 120, now), 5, now);
+  assert.equal(dailyQuests(p, now).allDone, true);
+  const opened = claimChest(p, now);
+  assert.equal(opened.xp, p.xp + XP.chest);
+  assert.equal(claimChest(opened, now), opened);
+});

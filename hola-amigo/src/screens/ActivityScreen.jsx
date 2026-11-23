@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { surpriseFor, wordsForLessonsUpTo, wordsForWorld, worldOf } from "../data/course.js";
 import { ACTIVITIES } from "../lib/journey.js";
 import { Button, Card, ProgressBar } from "../components/ui.jsx";
@@ -14,7 +15,7 @@ function SurpriseCard({ surprise, onDone }) {
     <div className="float" style={{ fontSize: 70 }}>{surprise.emoji}</div>
     <h3 className="h2" style={{ margin: "6px 0 14px" }}>{surprise.title}</h3>
     <div className="card card--sun card--pad" style={{ marginBottom: 20 }}>
-      {surprise.lines.map((line, i) => <p key={i} style={{ fontSize: i ? 15 : 19, fontWeight: i ? 700 : 800, fontFamily: i ? undefined : "var(--font-display)", color: i ? "var(--ink-2)" : "var(--ink)", lineHeight: 1.45, marginTop: i ? 8 : 0 }}>{line}</p>)}
+      {surprise.lines.map((line, i) => <p key={i} style={{ fontSize: i ? 15 : 19, fontWeight: i ? 700 : 800, fontFamily: i ? undefined : "var(--font-display)", color: i ? "var(--text-2)" : "var(--text)", lineHeight: 1.45, marginTop: i ? 8 : 0 }}>{line}</p>)}
     </div>
     <Button variant="sun" size="lg" block onClick={onDone}>Continue →</Button>
   </div>;
@@ -36,7 +37,7 @@ function FreeResult({ score, total, onRetry, onBack }) {
 }
 
 // One activity screen. Keyed by the parent, so a fresh key = a fresh game.
-export function ActivityScreen({ lesson, type, journey, onExit, onFinish, onRetry, onWord }) {
+export function ActivityScreen({ lesson, type, journey, combo = 0, sessionXp = 0, onExit, onFinish, onRetry, onWord }) {
   const [result, setResult] = useState(null);
   // Activity inputs are fixed for the life of this screen.
   const [inputs] = useState(() => {
@@ -51,7 +52,6 @@ export function ActivityScreen({ lesson, type, journey, onExit, onFinish, onRetr
     return {};
   });
   const meta = ACTIVITIES[type] || { title: type, emoji: "✨" };
-  const world = worldOf(lesson.id);
 
   const finish = (correct, total, stats) => {
     onFinish(correct, total, stats);
@@ -81,13 +81,24 @@ export function ActivityScreen({ lesson, type, journey, onExit, onFinish, onRetr
     boss: () => <BossBattle words={inputs.words} world={inputs.world} {...common} onDone={finish} />,
   };
 
-  return <div className="app-bg app-bg--world" style={{ "--world-tint": world?.tint }}>
+  return <div className="app-bg">
     <div className="page">
-      {journey ? <div className="activity-head">
-        <button type="button" className="icon-btn" onClick={onExit} aria-label="Leave lesson" title="Leave lesson">✕</button>
-        <div className="grow"><ProgressBar value={journey.step / journey.steps.length} label="Lesson progress" /></div>
-        <div className="counter" style={{ flexShrink: 0 }}>{journey.step + 1}/{journey.steps.length}</div>
-      </div> : <div style={{ marginBottom: 14 }}><Button size="sm" onClick={onExit}>← Back</Button></div>}
+      <div className="activity-head">
+        <button type="button" className="icon-btn" onClick={onExit} aria-label={journey ? "Leave lesson" : "Back"} title={journey ? "Leave lesson" : "Back"}>{journey ? "✕" : "←"}</button>
+        <div className="grow">
+          {journey
+            ? <ProgressBar value={journey.step / journey.steps.length} label="Lesson progress" />
+            : <div className="small muted">Practice · {lesson.title}</div>}
+        </div>
+        <AnimatePresence>
+          {combo >= 2 && <motion.span key="combo" className="combo" initial={{ scale: 0, rotate: -20 }} animate={{ scale: 1, rotate: 0 }} exit={{ scale: 0 }}
+            transition={{ type: "spring", stiffness: 500, damping: 15 }}>
+            <span className="combo__flame">🔥</span><motion.span key={combo} initial={{ scale: 1.8 }} animate={{ scale: 1 }}>x{combo}</motion.span>
+          </motion.span>}
+        </AnimatePresence>
+        <span className="xp-chip" aria-label={`${sessionXp} XP earned`}>⚡<motion.span key={sessionXp} initial={{ y: -8, opacity: 0 }} animate={{ y: 0, opacity: 1 }}>{sessionXp}</motion.span></span>
+      </div>
+      {journey && <div className="counter text-center" style={{ marginTop: -10, marginBottom: 12 }}>Step {journey.step + 1} of {journey.steps.length}</div>}
 
       <div className="activity-title">
         <h2 className="h2"><span aria-hidden="true">{meta.emoji}</span>{meta.title}</h2>
@@ -96,9 +107,11 @@ export function ActivityScreen({ lesson, type, journey, onExit, onFinish, onRetr
 
       {type === "flash" && !result
         ? games.flash()
-        : <Card className="card--pad-lg" style={{ padding: "22px 16px" }}>
+        : <motion.div initial={{ opacity: 0, y: 24, scale: 0.98 }} animate={{ opacity: 1, y: 0, scale: 1 }} transition={{ type: "spring", stiffness: 260, damping: 24 }}>
+          <Card className="card--pad-lg" style={{ padding: "24px 16px" }}>
             {result ? <FreeResult {...result} onRetry={onRetry} onBack={onExit} /> : (games[type]?.() ?? <p className="muted text-center">Unknown activity.</p>)}
-          </Card>}
+          </Card>
+        </motion.div>}
     </div>
   </div>;
 }

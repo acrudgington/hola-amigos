@@ -1,5 +1,5 @@
 // ¡Hola, Amigo! Service Worker — enables offline mode
-const CACHE_NAME = 'hola-amigo-v2';
+const CACHE_NAME = 'hola-amigo-v3';
 const OFFLINE_URLS = ['/', '/index.html', '/manifest.json', '/icon-192.png', '/icon-512.png'];
 
 self.addEventListener('install', event => {

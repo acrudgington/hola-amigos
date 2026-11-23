@@ -26,8 +26,19 @@ An interactive Spanish learning app for kids aged 6+, taking them from absolute 
 ### Gamification
 - **⭐ Stars** per lesson (1–3, based on how well the lesson went; your best score counts)
 - **🔥 Daily streaks** — consecutive days of practice
-- **🏆 29 badges, 22 collectible stickers and 7 mascot outfits** on the Trophy Shelf
+- **🏆 28 badges, 22 collectible stickers and 7 mascot outfits** on the Trophy Shelf
+- **⚡ XP & levels**: XP for every right answer, activity and lesson; level-ups get a full-screen celebration
+- **🔥 Combos**: answer streaks build a combo meter, with bonus XP every 5 in a row
+- **📜 Daily quests** with a treasure chest to open when all three are done
+- **📊 Personal dashboard**: weekly XP chart, streak calendar and a "word power" mastery bar
 - **🎉 Confetti** celebrations on every star
+
+### Look & feel
+- **Two themes**: *Galaxy* (deep-space glass with aurora lights and shooting stars) and *Daylight*
+- **Dashboard layout**: sidebar + stats panel on desktop, bottom tab bar on phones
+- **Motion everywhere**: spring animations, page transitions, floating "+XP" pop-ups, a tilting "Up next" card, a flowing path on the map
+- **Sound effects** synthesised in the browser (no audio files), with a mute button
+- Respects the device's *reduce motion* setting
 
 ### Mobile & offline
 - **Installable PWA** — "Add to Home Screen" on iPhone/iPad/Android
@@ -87,12 +98,12 @@ On Desktop: Chrome/Edge will show an install icon in the address bar
 ## Tech Stack
 
 - React 18 + Vite 6
+- Framer Motion (animations)
 - Fredoka + Nunito fonts (Google Fonts)
 - Plain CSS design system with CSS variables (`src/styles.css`)
 - Web Speech API (TTS + speech recognition)
 - localStorage (persistent)
 - Service Worker (offline support)
-- No external UI libraries — everything custom built
 
 ## Project Structure
 
@@ -107,8 +118,8 @@ hola-amigo/
 │   ├── data/
 │   │   ├── course.js       # 12 worlds, 100 lessons, stories
 │   │   └── rewards.js      # Badges, stickers, outfits
-│   ├── lib/                # Storage, speech, journey builder, helpers
-│   ├── components/         # Buttons, cards, toasts, confetti, Sol & Luna mascots
+│   ├── lib/                # Storage & XP, speech, sound effects, preferences, journey builder
+│   ├── components/         # Shell (sidebar/tab bar), widgets & charts, cosmic background, UI kit, Sol & Luna
 │   ├── games/              # One file per family of activities
 │   └── screens/            # Auth, family, home map, lesson, activity, review…
 └── tests/logic.test.js     # node --test
