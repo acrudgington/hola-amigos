@@ -109,7 +109,7 @@ function World({ world, stars, unlockedUpTo, currentId, onStart, currentRef }) {
         return <div key={l.id} className="stone-wrap" style={{ left: `${x}%`, top: y - size / 2 }} ref={current ? currentRef : undefined}>
           {current && <div className="vamos">¡VAMOS!</div>}
           <motion.button type="button" className={`stone ${cls}`} style={{ "--size": `${size}px` }}
-            initial={{ scale: 0, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }}
+            initial={{ scale: 0.5, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }}
             transition={{ type: "spring", stiffness: 380, damping: 16, delay: i * 0.05 }}
             disabled={!unlocked} onClick={() => onStart(l)}
             aria-label={unlocked ? `Lesson ${l.id}: ${l.subtitle}. ${s} of 3 stars` : `Lesson ${l.id}, locked`}>

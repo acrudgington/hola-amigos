@@ -26,9 +26,9 @@ function ChildReport({ child, onRemove }) {
     </div>
 
     <div className="grid-4" style={{ marginBottom: 16 }}>
-      <div className="stat" style={{ background: "var(--sel2-bg)" }}><div className="stat__value" style={{ color: "var(--sun-d)" }}>{sumStars(p)}</div><div className="stat__label">Stars</div></div>
-      <div className="stat" style={{ background: "var(--good-bg)" }}><div className="stat__value" style={{ color: "var(--mint-d)" }}>{countLessons(p)}</div><div className="stat__label">Lessons</div></div>
-      <div className="stat" style={{ background: "var(--sel-bg)" }}><div className="stat__value" style={{ color: "var(--sky-d)" }}>{words.length}</div><div className="stat__label">Words met</div></div>
+      <div className="stat" style={{ background: "var(--sel2-bg)" }}><div className="stat__value" style={{ color: "var(--sun)" }}>{sumStars(p)}</div><div className="stat__label">Stars</div></div>
+      <div className="stat" style={{ background: "var(--good-bg)" }}><div className="stat__value" style={{ color: "var(--mint)" }}>{countLessons(p)}</div><div className="stat__label">Lessons</div></div>
+      <div className="stat" style={{ background: "var(--sel-bg)" }}><div className="stat__value" style={{ color: "var(--sky)" }}>{words.length}</div><div className="stat__label">Words met</div></div>
       <div className="stat" style={{ background: "rgba(139,124,255,.14)" }}><div className="stat__value" style={{ color: "var(--luna)" }}>{strong}</div><div className="stat__label">Strong</div></div>
     </div>
 
