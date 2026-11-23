@@ -5,12 +5,12 @@ An interactive Spanish learning app for kids aged 6+, taking them from absolute 
 ## 🌟 Features
 
 ### Learning content
-- **32 lessons** across 4 themed worlds (Starter Island → Word Town → Sentence City → Story Land)
-- **300+ Spanish words** across vocabulary, phrases, grammar, past, future, and everyday situations
-- **7 activity types**: Flashcards, Matching, Quiz, Say It! (speaking), Sentence Builder, Stories, Songs
-- **3 milestone challenges**: A1 Final (Lesson 16), Sentence Champion (Lesson 24), A2 Final (Lesson 32)
+- **100 lessons** across 12 themed worlds, from Starter Island to Repaso Total
+- **800 Spanish words** across vocabulary, phrases, grammar, past, future, and everyday situations
+- **14 activity types**: Learn, Flashcards, Listen, Matching, Drag & Match, Odd One Out, Quiz, Say It! (speaking), Sentences, Word Order, Stories, Warm-ups, Surprises and end-of-world Boss Battles
+- **Guided lessons** that mix the activities differently in each lesson, scored 1–3 stars
+- **Daily review** with spaced repetition (Leitner boxes) so words stick
 - **Interactive stories** on every lesson, written around that lesson's vocabulary
-- **6 classic Spanish songs** with karaoke-style highlighted lyrics (Los pollitos dicen, Un elefante, De colores, etc.)
 
 ### Audio & voice
 - **🔊 Listen buttons** on every flashcard and phrase — hear words in Spanish
@@ -18,15 +18,15 @@ An interactive Spanish learning app for kids aged 6+, taking them from absolute 
 - Uses native browser speech APIs (no paid services needed)
 
 ### Family accounts & progress
-- **Parent accounts** with email + password login
+- **Parent accounts** with email + password login (passwords are hashed, never stored as plain text)
 - **Multiple child profiles** per family — each child has their own avatar, name, and separate progress
 - **Parent Dashboard** showing all children's stats in one place
 - **Persistent progress** saved locally (survives browser refresh)
 
 ### Gamification
-- **⭐ Stars** earned per activity (up to 3 per lesson)
+- **⭐ Stars** per lesson (1–3, based on how well the lesson went; your best score counts)
 - **🔥 Daily streaks** — consecutive days of practice
-- **🏆 20 unlockable badges** — trophy cabinet with milestones (First Star, A1 Champion, Week Warrior, Song Star, etc.)
+- **🏆 29 badges, 22 collectible stickers and 7 mascot outfits** on the Trophy Shelf
 - **🎉 Confetti** celebrations on every star
 
 ### Mobile & offline
@@ -42,6 +42,12 @@ npm run dev
 ```
 
 Open http://localhost:5173 in your browser.
+
+Run the logic tests (course data, stars, streaks, spaced repetition, rewards):
+
+```bash
+npm test
+```
 
 ## Deploy to Vercel (Recommended — Free)
 
@@ -81,7 +87,8 @@ On Desktop: Chrome/Edge will show an install icon in the address bar
 ## Tech Stack
 
 - React 18 + Vite 6
-- Nunito font (Google Fonts)
+- Fredoka + Nunito fonts (Google Fonts)
+- Plain CSS design system with CSS variables (`src/styles.css`)
 - Web Speech API (TTS + speech recognition)
 - localStorage (persistent)
 - Service Worker (offline support)
@@ -91,18 +98,20 @@ On Desktop: Chrome/Edge will show an install icon in the address bar
 
 ```
 hola-amigo/
-├── index.html              # Entry HTML with PWA manifest, SW registration
-├── public/
-│   ├── manifest.json       # PWA manifest
-│   ├── sw.js               # Service worker for offline
-│   ├── icon-192.png        # PWA icon
-│   └── icon-512.png        # Large PWA icon
+├── index.html
+├── public/                 # PWA manifest, service worker, icons
 ├── src/
-│   ├── main.jsx            # React entry
-│   └── App.jsx             # Complete app (~1400 lines)
-├── package.json
-├── vite.config.js
-└── README.md
+│   ├── main.jsx            # React entry (+ service worker in production)
+│   ├── App.jsx             # Session, navigation and the single progress-saving path
+│   ├── styles.css          # Design system: tokens, components, animations
+│   ├── data/
+│   │   ├── course.js       # 12 worlds, 100 lessons, stories
+│   │   └── rewards.js      # Badges, stickers, outfits
+│   ├── lib/                # Storage, speech, journey builder, helpers
+│   ├── components/         # Buttons, cards, toasts, confetti, Sol & Luna mascots
+│   ├── games/              # One file per family of activities
+│   └── screens/            # Auth, family, home map, lesson, activity, review…
+└── tests/logic.test.js     # node --test
 ```
 
 ## License
