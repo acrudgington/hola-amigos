@@ -25,7 +25,7 @@ export function DoneScreen({ lesson, result, progress, onNext, onHome, onPractic
           <div className="float float--delay"><Luna size={78} mood={mood} outfit={progress.lunaOutfit} /></div>
         </div>
         <Card className="card--pad-lg" style={{ animation: "bounce-in .5s var(--ease-spring)" }}>
-          <div className="eyebrow" style={{ color: "var(--mint-d)" }}>Lesson complete!</div>
+          <div className="eyebrow" style={{ color: "var(--mint)" }}>Lesson complete!</div>
           <h1 className="h1" style={{ margin: "6px 0 4px", fontSize: 32 }}>{lesson.title}</h1>
           <div className="big-stars" aria-label={`${after} of 3 stars`}>
             {[0, 1, 2].map(j => <span key={j} className={j < after ? "on" : ""} style={{ animationDelay: `${0.3 + j * 0.2}s` }}>⭐</span>)}
