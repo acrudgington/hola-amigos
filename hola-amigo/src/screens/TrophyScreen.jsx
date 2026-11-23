@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { BADGES, OUTFITS, RARITY, STICKERS } from "../data/rewards.js";
 import { darken } from "../lib/utils.js";
-import { Button, Card } from "../components/ui.jsx";
+import { Card, Segmented } from "../components/ui.jsx";
 import { Luna, Sol } from "../components/Mascots.jsx";
 
 const TABS = [["badges", "🏆 Badges"], ["stickers", "✨ Stickers"], ["outfits", "🎩 Dress up"]];
@@ -14,23 +14,20 @@ export function TrophyScreen({ progress, onBack, onEquip }) {
   const current = { sol: progress.solOutfit || "none", luna: progress.lunaOutfit || "none" };
   const sortedBadges = [...BADGES].sort((a, b) => badges.has(b.id) - badges.has(a.id));
 
-  return <div className="app-bg">
-    <div className="page">
-      <Button size="sm" onClick={onBack} style={{ marginBottom: 10 }}>← Map</Button>
+  return <div>
+    <div>
       <div className="text-center" style={{ marginBottom: 16 }}>
         <div style={{ fontSize: 50 }} className="float">🏆</div>
         <h1 className="h2">Trophy shelf</h1>
       </div>
-      <div className="segmented" role="tablist" style={{ marginBottom: 18, background: "#fff" }}>
-        {TABS.map(([id, label]) => <button key={id} type="button" role="tab" aria-selected={tab === id} onClick={() => setTab(id)}>{label}</button>)}
-      </div>
+      <div style={{ marginBottom: 18 }}><Segmented id="trophy-tabs" options={TABS} value={tab} onChange={setTab} /></div>
 
       {tab === "badges" && <>
         <p className="small muted text-center" style={{ marginBottom: 14 }}>{badges.size} of {BADGES.length} badges earned</p>
         <div className="grid-2">
           {sortedBadges.map((b, i) => {
             const has = badges.has(b.id);
-            return <Card key={b.id} pad={false} className={`trophy ${has ? "" : "trophy--locked"}`} style={{ animationDelay: `${Math.min(i, 12) * 0.03}s`, ...(has ? { borderColor: "#ffd98a", boxShadow: "0 4px 0 #ffc65a" } : {}) }}>
+            return <Card key={b.id} pad={false} className={`trophy ${has ? "trophy--earned" : "trophy--locked"}`}>
               <div className="trophy__emoji">{b.emoji}</div>
               <div className="trophy__name">{has ? b.name : `🔒 ${b.name}`}</div>
               <div className="trophy__desc">{b.desc}</div>

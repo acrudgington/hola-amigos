@@ -56,7 +56,7 @@ export function StoryReader({ story, onDone }) {
       <div className="page-dots" aria-label={`Page ${page + 1} of ${story.paras.length}`}>
         {story.paras.map((_, i) => <span key={i} className={i === page ? "is-on" : ""} />)}
       </div>
-      <div key={page} className="card card--pad story-page" style={{ marginBottom: 16, animation: "pop-in .35s var(--ease-spring)", background: "#fffdf7" }}>
+      <div key={page} className="card card--pad story-page" style={{ marginBottom: 16, animation: "pop-in .35s var(--ease-spring)" }}>
         {sentences.map((s, i) => <span key={i} className={`story-sentence ${active === i ? "is-active" : ""}`}
           onClick={() => { stop(); setActive(i); speech.speak(s, { lang: "en", rate: 0.9 }); }}>{s} </span>)}
       </div>
@@ -84,6 +84,6 @@ export function StoryReader({ story, onDone }) {
     <div className="counter" style={{ marginBottom: 8 }}>Question {qIdx + 1} / {questions.length}</div>
     <p key={qIdx} className="prompt" style={{ animation: "pop-in .3s var(--ease-spring)" }}>{q.q}</p>
     <Choices list options={q.opts} getKey={o => o.text} render={o => <span>{o.text}</span>} answerKey={q.answer} picked={picked} onPick={pick} />
-    <Feedback show={picked != null} good={picked === q.answer}>{picked === q.answer ? "⭐ ¡Muy bien!" : <>It was <b>&nbsp;{q.answer}</b></>}</Feedback>
+    <Feedback show={picked != null} good={picked === q.answer}>{picked === q.answer ? "⭐ ¡Muy bien!" : <>It was <b>{q.answer}</b></>}</Feedback>
   </div>;
 }

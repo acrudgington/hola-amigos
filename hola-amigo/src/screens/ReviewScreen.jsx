@@ -17,9 +17,8 @@ export function ReviewScreen({ progress, onBack, onFinish, onWord }) {
 
   const again = () => { setList(makeList(progress)); setResult(null); setRun(r => r + 1); };
 
-  return <div className="app-bg">
-    <div className="page">
-      <Button size="sm" onClick={onBack}>← Map</Button>
+  return <div>
+    <div>
       <div className="text-center" style={{ margin: "10px 0 16px" }}>
         <div className="row row--center" style={{ gap: 4 }}><Sol size={48} outfit={progress.solOutfit} /><Luna size={46} mood="happy" outfit={progress.lunaOutfit} /></div>
         <h1 className="h2" style={{ marginTop: 6 }}>Daily review</h1>

@@ -38,7 +38,7 @@ export function LearnIntro({ words, onDone, onWord }) {
   if (step.kind === "show") {
     return <div className="text-center" key={at}>
       <div className="counter" style={{ marginBottom: 12 }}>New word {step.i + 1} / {step.n}</div>
-      <div className="card card--pad-lg" style={{ marginBottom: 18, animation: "bounce-in .4s var(--ease-spring)", background: "linear-gradient(180deg,#fff, #fffaf0)" }}>
+      <div className="card card--pad-lg" style={{ marginBottom: 18, animation: "bounce-in .4s var(--ease-spring)" }}>
         <div className="big-emoji float">{w.emoji}</div>
         <div className="big-word" style={{ marginTop: 6 }}>{w.es}</div>
         <div className="h3 muted" style={{ marginTop: 4 }}>{w.en}</div>
@@ -67,7 +67,7 @@ export function LearnIntro({ words, onDone, onWord }) {
     </div>
     <p className="say-hint" style={{ marginBottom: 12 }}>What does it mean?</p>
     <Choices options={step.options} getKey={o => o.en} render={o => <span>{o.en}</span>} answerKey={w.en} picked={picked} onPick={pick} />
-    <Feedback show={picked != null} good={picked === w.en}>{picked === w.en ? "⭐ ¡Muy bien!" : <>It’s <b>&nbsp;{w.en}</b></>}</Feedback>
+    <Feedback show={picked != null} good={picked === w.en}>{picked === w.en ? "⭐ ¡Muy bien!" : <>It’s <b>{w.en}</b></>}</Feedback>
   </div>;
 }
 
@@ -270,6 +270,6 @@ export function OddOneOut({ words, onDone, onWord }) {
     <div className="counter" style={{ marginBottom: 14 }}>{idx + 1} / {rounds.length}</div>
     <Choices options={round.items} getKey={o => o.es} answerKey={round.odd.es} picked={picked} onPick={pick}
       render={o => <><span className="choice__emoji">{o.emoji}</span><span>{o.es}</span>{picked != null && <span className="choice__sub">{o.en}</span>}</>} />
-    <Feedback show={picked != null} good={good}>{good ? "⭐ ¡Correcto!" : <>The stranger was <b>&nbsp;{round.odd.es}</b></>}</Feedback>
+    <Feedback show={picked != null} good={good}>{good ? "⭐ ¡Correcto!" : <>The stranger was <b>{round.odd.es}</b></>}</Feedback>
   </div>;
 }

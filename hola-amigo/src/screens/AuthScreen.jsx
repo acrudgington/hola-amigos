@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { db } from "../lib/db.js";
-import { Button, Clouds, Field } from "../components/ui.jsx";
+import { motion } from "framer-motion";
+import { Button, Field, Segmented } from "../components/ui.jsx";
 import { Luna, Sol } from "../components/Mascots.jsx";
 
 export function AuthScreen({ onLogin }) {
@@ -38,23 +39,19 @@ export function AuthScreen({ onLogin }) {
   };
 
   return <div className="app-bg">
-    <Clouds />
-    <div className="center-screen" style={{ position: "relative", zIndex: 1 }}>
+    <div className="center-screen">
       <div style={{ width: "100%", maxWidth: 410 }}>
         <div className="text-center" style={{ marginBottom: 22 }}>
           <div className="row row--center" style={{ gap: 6, marginBottom: 10 }}>
             <div className="float"><Sol size={84} mood="celebrate" /></div>
             <div className="float float--delay"><Luna size={78} mood="happy" /></div>
           </div>
-          <h1 className="h1">¡Hola, <span className="brand-accent">Amigo!</span></h1>
-          <p className="muted" style={{ marginTop: 6 }}>Spanish adventures for curious kids</p>
+          <h1 className="h1" style={{ fontSize: 46 }}>¡Hola, <span className="gradient-text">Amigo!</span></h1>
+          <p className="muted" style={{ marginTop: 6 }}>Spanish adventures for curious kids · 100 lessons · 800 words</p>
         </div>
 
-        <form className="card card--pad-lg" onSubmit={submit} noValidate>
-          <div className="segmented" role="tablist" style={{ marginBottom: 20 }}>
-            <button type="button" role="tab" aria-selected={mode === "login"} onClick={() => switchMode("login")}>Log in</button>
-            <button type="button" role="tab" aria-selected={mode === "signup"} onClick={() => switchMode("signup")}>Sign up</button>
-          </div>
+        <motion.form className="card card--pad-lg card--glow" onSubmit={submit} noValidate initial={{ opacity: 0, y: 30, scale: 0.96 }} animate={{ opacity: 1, y: 0, scale: 1 }} transition={{ type: "spring", stiffness: 220, damping: 22, delay: 0.1 }}>
+          <div style={{ marginBottom: 20 }}><Segmented id="auth" options={[["login", "Log in"], ["signup", "Sign up"]]} value={mode} onChange={switchMode} /></div>
           <p className="small muted text-center" style={{ marginBottom: 16 }}>👨‍👩‍👧 Grown-ups: make a family account, then add each child.</p>
           {mode === "signup" && <Field label="Your name" placeholder="e.g. Sam" value={name} onChange={e => setName(e.target.value)} autoComplete="name" />}
           <Field label="Email" type="email" placeholder="you@example.com" value={email} onChange={e => setEmail(e.target.value)} autoComplete="email" inputMode="email" />
@@ -62,7 +59,7 @@ export function AuthScreen({ onLogin }) {
             autoComplete={mode === "signup" ? "new-password" : "current-password"} />
           {error && <div className="form-error" role="alert">{error}</div>}
           <Button type="submit" variant="sun" size="lg" block disabled={busy}>{mode === "login" ? "Log in 🚀" : "Create account 🌟"}</Button>
-        </form>
+        </motion.form>
 
         <p className="text-center small muted" style={{ marginTop: 16 }}>
           {mode === "login" ? "New here? " : "Already have an account? "}

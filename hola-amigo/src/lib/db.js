@@ -30,6 +30,7 @@ export const DEFAULT_PROGRESS = Object.freeze({
   badges: [], lessonsDone: 0, correctAnswers: 0, wordMemory: {},
   dailyGoal: 3, dailyDate: null, dailyCount: 0, reviewsDone: 0,
   micUses: 0, storiesRead: 0,
+  xp: 0, xpByDay: {}, bestCombo: 0, comboDay: null, comboToday: 0, chestDay: null,
   stickers: [], outfits: [], solOutfit: null, lunaOutfit: null,
 });
 
@@ -120,7 +121,7 @@ export const db = {
   clearSession: () => { try { localStorage.removeItem("hola_session"); } catch { /* ignore */ } },
 
   // ---------- progress ----------
-  getProgress: childId => ({ ...DEFAULT_PROGRESS, ...(read(`hola_progress_${childId}`, null) || {}) }),
+  getProgress: childId => migrate({ ...DEFAULT_PROGRESS, ...(read(`hola_progress_${childId}`, null) || {}) }),
   saveProgress: (childId, p) => write(`hola_progress_${childId}`, p),
 };
 
@@ -215,3 +216,75 @@ export function repairProgress(p, isEarned) {
 }
 
 export const addStat = (p, key, amount = 1) => ({ ...p, [key]: (p[key] || 0) + amount });
+
+// ============================================================
+// XP, LEVELS & DAILY QUESTS
+// ============================================================
+export const XP = { correct: 10, activity: 15, lesson: 50, perStar: 20, review: 25, combo5: 15, chest: 50 };
+
+// Local calendar date as YYYY-MM-DD (not UTC, so "today" matches the child's day).
+export const dayKey = (t = Date.now()) => {
+  const d = new Date(t);
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+};
+
+// Saves from before XP existed get a fair starting total.
+function migrate(p) {
+  if (p.xp === 0 && !Object.keys(p.xpByDay || {}).length && (p.correctAnswers || Object.keys(p.stars || {}).length)) {
+    const stars = Object.values(p.stars || {}).reduce((a, b) => a + b, 0);
+    return { ...p, xp: (p.correctAnswers || 0) * XP.correct + stars * XP.perStar + Object.keys(p.stars).length * XP.lesson };
+  }
+  return p;
+}
+
+export function addXP(p, amount, now = Date.now()) {
+  if (!amount) return p;
+  const k = dayKey(now);
+  return { ...p, xp: (p.xp || 0) + amount, xpByDay: { ...(p.xpByDay || {}), [k]: ((p.xpByDay || {})[k] || 0) + amount } };
+}
+
+// Level L starts at 60·(L−1)·L XP: 0, 120, 360, 720, 1200, …
+export const xpForLevel = L => 60 * (L - 1) * L;
+export function levelInfo(xp = 0) {
+  let L = 1;
+  while (xp >= xpForLevel(L + 1)) L++;
+  const base = xpForLevel(L), next = xpForLevel(L + 1);
+  return { level: L, into: xp - base, span: next - base, pct: (xp - base) / (next - base), toNext: next - xp };
+}
+
+export const LEVEL_TITLES = ["Explorador", "Aprendiz", "Amigo", "Viajero", "Estrella", "Campeón", "Héroe", "Leyenda", "Maestro", "Superestrella"];
+export const levelTitle = L => LEVEL_TITLES[Math.min(LEVEL_TITLES.length - 1, Math.floor((L - 1) / 2))];
+
+// Last 7 days of XP, oldest first.
+export function weekXP(p, now = Date.now()) {
+  return Array.from({ length: 7 }, (_, i) => {
+    const t = now - (6 - i) * 86400000;
+    return { key: dayKey(t), date: new Date(t), xp: (p.xpByDay || {})[dayKey(t)] || 0 };
+  });
+}
+
+export function recordCombo(p, combo, now = Date.now()) {
+  const k = dayKey(now);
+  const today = p.comboDay === k ? p.comboToday || 0 : 0;
+  return { ...p, bestCombo: Math.max(p.bestCombo || 0, combo), comboDay: k, comboToday: Math.max(today, combo) };
+}
+
+export function dailyQuests(p, now = Date.now()) {
+  const k = dayKey(now);
+  const daily = getDaily(p);
+  const xpToday = (p.xpByDay || {})[k] || 0;
+  const combo = p.comboDay === k ? p.comboToday || 0 : 0;
+  const quests = [
+    { id: "acts", emoji: "🎯", label: `Finish ${daily.goal} activities`, value: Math.min(daily.count, daily.goal), goal: daily.goal },
+    { id: "xp", emoji: "⚡", label: "Earn 100 XP", value: Math.min(xpToday, 100), goal: 100 },
+    { id: "combo", emoji: "🔥", label: "Get a 5-answer combo", value: Math.min(combo, 5), goal: 5 },
+  ];
+  const allDone = quests.every(q => q.value >= q.goal);
+  return { quests, allDone, claimed: p.chestDay === k };
+}
+
+export function claimChest(p, now = Date.now()) {
+  const q = dailyQuests(p, now);
+  if (!q.allDone || q.claimed) return p;
+  return { ...addXP(p, XP.chest, now), chestDay: dayKey(now) };
+}

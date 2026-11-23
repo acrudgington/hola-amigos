@@ -70,8 +70,8 @@ export function WorldScene({ world, height = 60 }) {
   return <svg width="100%" height={height} viewBox={`0 0 400 ${height}`} preserveAspectRatio="xMidYMax slice" style={{ display: "block" }}>
     <defs>
       <linearGradient id={`sky-${world.id}`} x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stopColor={world.tint} />
-        <stop offset="100%" stopColor={c} stopOpacity="0.12" />
+        <stop offset="0%" stopColor={c} stopOpacity="0" />
+        <stop offset="100%" stopColor={c} stopOpacity="0.22" />
       </linearGradient>
     </defs>
     <rect width="400" height={height} fill={`url(#sky-${world.id})`} />

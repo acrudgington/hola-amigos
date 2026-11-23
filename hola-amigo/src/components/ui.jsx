@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { speech } from "../lib/speech.js";
 import { findReward, RARITY } from "../data/rewards.js";
 import { darken } from "../lib/utils.js";
@@ -105,12 +106,6 @@ export function RewardToast({ reward, onClose }) {
   </button>;
 }
 
-export function Clouds() {
-  return <div className="clouds" aria-hidden="true">
-    {[{ top: 40, d: 70, delay: -10, s: 1 }, { top: 120, d: 95, delay: -60, s: 0.7 }, { top: 200, d: 80, delay: -35, s: 0.85 }].map((c, i) =>
-      <div key={i} className="cloud" style={{ top: c.top, animationDuration: `${c.d}s`, animationDelay: `${c.delay}s`, transform: `scale(${c.s})` }} />)}
-  </div>;
-}
 
 // Shared multiple-choice grid. `options` are items; `getKey`/`render` describe
 // them; `answerKey` is the correct key; `picked` the chosen key (or null).
@@ -128,4 +123,39 @@ export function Choices({ options, getKey, render, answerKey, picked, onPick, li
 export function Feedback({ show, good, children }) {
   if (!show) return <div className="feedback-spacer" />;
   return <div className={`feedback ${good ? "feedback--good" : "feedback--bad"}`} role="status">{children}</div>;
+}
+
+// Tab-style switcher with a highlight that slides between options.
+export function Segmented({ options, value, onChange, id = "seg" }) {
+  return <div className="segmented" role="tablist">
+    {options.map(([key, label]) => <button key={key} type="button" role="tab" aria-selected={value === key} onClick={() => onChange(key)}>
+      {value === key && <motion.span layoutId={`${id}-pill`} className="segmented__pill" transition={{ type: "spring", stiffness: 500, damping: 36 }} />}
+      {label}
+    </button>)}
+  </div>;
+}
+
+// "+10 XP" numbers that float up from where the child answered.
+export function XpPops({ pops }) {
+  return <AnimatePresence>
+    {pops.map(p => <motion.div key={p.id} className="xp-pop" style={{ left: p.x, top: p.y }}
+      initial={{ opacity: 0, y: 0, scale: 0.6, x: "-50%" }} animate={{ opacity: [0, 1, 1, 0], y: -90, scale: [0.6, 1.25, 1, 1] }}
+      exit={{ opacity: 0 }} transition={{ duration: 1.2, ease: "easeOut" }}>+{p.amount} XP{p.label ? ` ${p.label}` : ""}</motion.div>)}
+  </AnimatePresence>;
+}
+
+export function LevelUpModal({ level, title, onClose }) {
+  return <div className="modal-backdrop" onClick={onClose}>
+    <div className="sunburst" aria-hidden="true" />
+    <motion.div className="modal card card--pad-lg level-up card--glow" role="dialog" aria-modal="true" aria-labelledby="lvl-title" onClick={e => e.stopPropagation()}
+      initial={{ scale: 0.4, rotate: -8, opacity: 0 }} animate={{ scale: 1, rotate: 0, opacity: 1 }} transition={{ type: "spring", stiffness: 260, damping: 16 }}>
+      <div className="eyebrow" style={{ color: "var(--gold)" }}>Level up!</div>
+      <motion.div className="level-up__badge" initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 0.2, type: "spring", stiffness: 300, damping: 12 }}>
+        <span className="level-up__num gradient-text">{level}</span>
+      </motion.div>
+      <h2 id="lvl-title" className="h1" style={{ fontSize: 34 }}>¡Increíble!</h2>
+      <p className="muted" style={{ margin: "6px 0 20px" }}>You’re now a <b style={{ color: "var(--text)" }}>{title}</b>. Keep going!</p>
+      <Button variant="sun" size="lg" block onClick={onClose}>¡Vamos! 🚀</Button>
+    </motion.div>
+  </div>;
 }

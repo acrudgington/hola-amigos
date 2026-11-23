@@ -48,7 +48,7 @@ function RoundGame({ rounds, onDone, onWord, counterLabel = "Question", header, 
     </div>
     <Choices options={item.options} getKey={item.keyOf} render={item.render} answerKey={item.answerKey} picked={picked} onPick={pick} list={item.list} />
     <Feedback show={picked != null} good={good}>
-      {good ? praiseText : <>It’s <b>&nbsp;{item.reveal}</b></>}
+      {good ? praiseText : <>It’s <b>{item.reveal}</b></>}
     </Feedback>
   </div>;
 }
@@ -101,7 +101,7 @@ export function Quiz({ words, gaps = [], onDone, onWord }) {
 export function ListenGame({ words, onDone, onWord }) {
   const [rounds] = useState(() => shuffle(words.slice(0, 8)).slice(0, 6).map(w => ({
     ...meaningRound(w, words, { listen: true }),
-    render: o => <><span className="choice__emoji">{o.emoji}</span><span className="choice__sub" style={{ color: "var(--ink)" }}>{o.en}</span></>,
+    render: o => <><span className="choice__emoji">{o.emoji}</span><span className="choice__sub" style={{ color: "var(--text)" }}>{o.en}</span></>,
   })));
   if (!speech.supported()) return <Unsupported emoji="🔊" title="Audio not supported" text="The Listen game needs speech, which works best in Chrome, Edge or Safari." onSkip={() => onDone(0, 0)} />;
   return <RoundGame rounds={rounds} onDone={onDone} onWord={onWord} counterLabel="Sound" />;

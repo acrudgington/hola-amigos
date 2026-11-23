@@ -6,13 +6,13 @@ import { Button, Card, SpeakButton, Stars } from "../components/ui.jsx";
 // Lesson page: today's phrase, a fun fact, the guided lesson, and free practice.
 export function LessonScreen({ lesson, stars, onBack, onStart, onPractice }) {
   const world = worldOf(lesson.id);
-  return <div className="app-bg app-bg--world" style={{ "--world-tint": world?.tint }}>
+  return <div className="app-bg">
     <div className="page">
       <Button size="sm" onClick={onBack}>← {world?.name || "Map"}</Button>
 
       <div className="lesson-hero">
         <div className="lesson-hero__emoji" aria-hidden="true">{lesson.emoji}</div>
-        <div className="eyebrow" style={{ color: lesson.color }}>Lesson {lesson.id}</div>
+        <div className="eyebrow" style={{ color: world?.color }}>Lesson {lesson.id} · {world?.name}</div>
         <h1 className="h1" style={{ marginTop: 2 }}>{lesson.title}</h1>
         <p className="muted" style={{ marginTop: 4 }}>{lesson.subtitle}</p>
         <Stars count={stars} className="big-stars" />
@@ -21,7 +21,7 @@ export function LessonScreen({ lesson, stars, onBack, onStart, onPractice }) {
       <Card className="text-center" style={{ marginBottom: 12, position: "relative" }}>
         <div className="eyebrow" style={{ marginBottom: 6 }}>Today’s phrase</div>
         <div className="row row--center" style={{ gap: 10 }}>
-          <div className="display" style={{ fontSize: 24, color: lesson.color }}>{lesson.phrase.es}</div>
+          <div className="display gradient-text" style={{ fontSize: 26 }}>{lesson.phrase.es}</div>
           <SpeakButton text={lesson.phrase.es} size={38} />
         </div>
         <div style={{ fontWeight: 700, marginTop: 4 }}>{lesson.phrase.en}</div>
@@ -39,8 +39,8 @@ export function LessonScreen({ lesson, stars, onBack, onStart, onPractice }) {
       <div className="stack" style={{ "--gap": "10px" }}>
         {practiceList(lesson).map(key => {
           const a = ACTIVITIES[key];
-          return <button key={key} type="button" className="activity-row" onClick={() => onPractice(key)}>
-            <span className="activity-row__icon" style={{ background: tint(a.color, 0.82), color: a.color }} aria-hidden="true">{a.emoji}</span>
+          return <button key={key} type="button" className="activity-row" style={{ "--row-c": a.color }} onClick={() => onPractice(key)}>
+            <span className="activity-row__icon" style={{ background: `linear-gradient(135deg, ${a.color}, ${tint(a.color, 0.35)})`, boxShadow: `0 6px 18px -6px ${a.color}` }} aria-hidden="true">{a.emoji}</span>
             <span className="grow">
               <span style={{ display: "block", fontWeight: 900 }}>{a.title}</span>
               <span className="small muted">{a.desc}</span>
