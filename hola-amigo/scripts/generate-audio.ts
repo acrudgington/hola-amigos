@@ -39,7 +39,12 @@ async function api<T>(path: string, body?: unknown, attempt = 0): Promise<T> {
   });
   if (res.ok) return (await res.json()) as T;
   const text = await res.text();
-  if ((res.status === 429 || res.status >= 500) && attempt < 5) {
+  // 429 = Google's per-minute quota: wait for the minute to roll over and carry on.
+  if (res.status === 429 && attempt < 8) {
+    await new Promise(r => setTimeout(r, 65_000));
+    return api<T>(path, body, attempt + 1);
+  }
+  if (res.status >= 500 && attempt < 5) {
     await new Promise(r => setTimeout(r, 1000 * 2 ** attempt));
     return api<T>(path, body, attempt + 1);
   }
