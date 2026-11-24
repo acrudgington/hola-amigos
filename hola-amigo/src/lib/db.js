@@ -30,7 +30,7 @@ export const DEFAULT_PROGRESS = Object.freeze({
   badges: [], lessonsDone: 0, correctAnswers: 0, wordMemory: {},
   dailyGoal: 3, dailyDate: null, dailyCount: 0, reviewsDone: 0,
   micUses: 0, storiesRead: 0,
-  xp: 0, xpByDay: {}, bestCombo: 0, comboDay: null, comboToday: 0, chestDay: null,
+  xp: 0, xpByDay: {}, bestCombo: 0, comboDay: null, comboToday: 0, chestDay: null, events: [],
   stickers: [], outfits: [], solOutfit: null, lunaOutfit: null,
 });
 
@@ -287,4 +287,22 @@ export function claimChest(p, now = Date.now()) {
   const q = dailyQuests(p, now);
   if (!q.allDone || q.claimed) return p;
   return { ...addXP(p, XP.chest, now), chestDay: dayKey(now) };
+}
+
+// ============================================================
+// ACTIVITY FEED — the latest things the child achieved (newest first)
+// ============================================================
+export function logEvent(p, ev, now = Date.now()) {
+  return { ...p, events: [{ ...ev, t: now }, ...(p.events || [])].slice(0, 40) };
+}
+
+export function timeAgo(t, now = Date.now()) {
+  const s = Math.max(0, Math.round((now - t) / 1000));
+  if (s < 45) return "just now";
+  const m = Math.round(s / 60);
+  if (m < 60) return `${m} min ago`;
+  const h = Math.round(m / 60);
+  if (h < 24) return `${h} h ago`;
+  const d = Math.round(h / 24);
+  return d === 1 ? "yesterday" : `${d} days ago`;
 }

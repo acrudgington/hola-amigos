@@ -4,10 +4,10 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { AnimatePresence, MotionConfig, motion } from "framer-motion";
 import { LESSONS } from "./data/course.js";
-import { BADGES, applyRewards } from "./data/rewards.js";
+import { BADGES, applyRewards, findReward } from "./data/rewards.js";
 import {
   XP, addStat, addXP, awardStars, bumpDaily, claimChest, db, levelInfo, levelTitle,
-  recordCombo, recordWord, repairProgress, starsForScore, touchStreak,
+  logEvent, recordCombo, recordWord, repairProgress, starsForScore, touchStreak,
 } from "./lib/db.js";
 import { buildJourney } from "./lib/journey.js";
 import { pickReaction } from "./lib/greeting.js";
@@ -17,6 +17,7 @@ import { Confetti, LevelUpModal, RewardToast, XpPops } from "./components/ui.jsx
 import { MascotReaction } from "./components/Mascots.jsx";
 import { Cosmos } from "./components/Cosmos.jsx";
 import { Shell } from "./components/Shell.jsx";
+import { CommandPalette } from "./components/CommandPalette.jsx";
 import { AuthScreen } from "./screens/AuthScreen.jsx";
 import { FamilyScreen } from "./screens/FamilyScreen.jsx";
 import { ParentDashboard } from "./screens/ParentDashboard.jsx";
@@ -64,6 +65,7 @@ export default function App() {
   const [pops, setPops] = useState([]);
   const [levelUp, setLevelUp] = useState(null);
   const [prefs, setPrefs] = useState(loadPrefs);
+  const [palette, setPalette] = useState(false);
   const childRef = useRef(child);
   const streakRef = useRef({ run: 0, lastWrong: false });
   const sessionXpRef = useRef(0);
@@ -102,11 +104,17 @@ export default function App() {
     const id = childRef.current?.id;
     if (!id) return null;
     const before = db.getProgress(id);
-    const { progress: next, rewards: won } = applyRewards(fn(before));
+    let { progress: next, rewards: won } = applyRewards(fn(before));
+    const L0 = levelInfo(before.xp).level, L1 = levelInfo(next.xp).level;
+    // Everything earned also lands in the activity feed.
+    for (const r of won) {
+      const item = findReward(r);
+      if (item) next = logEvent(next, { type: r.type, emoji: item.emoji, text: `New ${r.type === "badge" ? "badge" : r.type === "sticker" ? "sticker" : "outfit"}: ${item.name}` });
+    }
+    if (L1 > L0) next = logEvent(next, { type: "level", emoji: "⬆️", text: `Reached level ${L1} — ${levelTitle(L1)}!` });
     db.saveProgress(id, next);
     setProgress(next);
     if (won.length) { setRewards(q => [...q, ...won]); sfx.star(); }
-    const L0 = levelInfo(before.xp).level, L1 = levelInfo(next.xp).level;
     if (L1 > L0) {
       setTimeout(() => { setLevelUp({ level: L1, title: levelTitle(L1) }); sfx.levelUp(); setConfetti(c => c + 1); }, 450);
     }
@@ -220,7 +228,8 @@ export default function App() {
     const before = db.getProgress(child.id).stars?.[lesson.id] || 0;
     const earned = starsForScore(j.correct, j.total);
     const bonus = XP.lesson + earned * XP.perStar;
-    const after = update(p => addXP(awardStars(p, lesson.id, earned), bonus))?.stars?.[lesson.id] || earned;
+    const after = update(p => logEvent(addXP(awardStars(p, lesson.id, earned), bonus),
+      { type: "lesson", title: lesson.title, emoji: lesson.emoji, text: `Finished “${lesson.title}” · ${"★".repeat(earned)} · +${sessionXpRef.current + bonus} XP` }))?.stars?.[lesson.id] || earned;
     sessionXpRef.current += bonus;
     setDoneResult({ correct: j.correct, total: j.total, earned, before, after, xp: sessionXpRef.current });
     setJourney(null);
@@ -236,13 +245,29 @@ export default function App() {
     update(p => {
       const r = bumpDaily(addStat(addStat(p, "correctAnswers", s), "reviewsDone", 1));
       goalMet = r.justMet;
-      return addXP(r.progress, XP.review);
+      return logEvent(addXP(r.progress, XP.review), { type: "review", emoji: "🔁", text: `Daily review: ${s} of ${t} right` });
     });
     sfx.complete();
     if (goalMet || s === t) celebrate();
   };
 
-  const openChest = () => { update(p => claimChest(p)); gainXP(XP.chest, "🎁"); celebrate(); sfx.levelUp(); };
+  const openChest = () => { update(p => logEvent(claimChest(p), { type: "chest", emoji: "🎁", text: `Opened the treasure chest · +${XP.chest} XP` })); gainXP(XP.chest, "🎁"); celebrate(); sfx.levelUp(); };
+
+  // Sol's mission steps.
+  const onMission = step => {
+    if (step.action === "review") setView("review");
+    else if (step.action === "lesson") step.done ? openLesson(step.lesson) : startLesson(step.lesson);
+    else if (step.action === "quests" && step.ready) openChest();
+  };
+
+  // ⌘K / Ctrl+K opens "Ask Sol".
+  useEffect(() => {
+    const key = e => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") { e.preventDefault(); if (childRef.current) setPalette(p => !p); }
+    };
+    window.addEventListener("keydown", key);
+    return () => window.removeEventListener("keydown", key);
+  }, []);
   const equip = (who, id) => update(p => ({ ...p, [who === "sol" ? "solOutfit" : "lunaOutfit"]: id }));
 
   // ---------- render ----------
@@ -251,6 +276,8 @@ export default function App() {
     <XpPops pops={pops} />
     {rewards[0] && <RewardToast key={`${rewards[0].type}-${rewards[0].id}`} reward={rewards[0]} onClose={() => setRewards(q => q.slice(1))} />}
     {(view === "activity" || view === "review") && <MascotReaction reaction={reaction} onDone={() => setReaction(null)} />}
+    {palette && child && progress && <CommandPalette onClose={() => setPalette(false)} onOpenLesson={openLesson}
+      unlockedUpTo={Math.min(LESSONS.length, Object.keys(progress.stars || {}).reduce((m, id) => Math.max(m, Number(id)), 0) + 1)} />}
     {levelUp && <LevelUpModal level={levelUp.level} title={levelUp.title} onClose={() => setLevelUp(null)} />}
   </>;
 
@@ -261,13 +288,13 @@ export default function App() {
     content = <FamilyScreen parent={parent} onPickChild={pickChild} onDashboard={() => setView("dashboard")} onLogout={logout} prefs={prefs} onToggle={togglePref} />;
   } else if (SHELL_VIEWS.has(view)) {
     let inner = null;
-    if (view === "home") inner = <HomeScreen child={child} progress={progress} previousVisit={previousVisit}
-      onStartLesson={startLesson} onOpenLesson={openLesson} onReview={() => setView("review")} onClaim={openChest} />;
+    if (view === "home") inner = <HomeScreen child={child} progress={progress}
+      onStartLesson={startLesson} onOpenLesson={openLesson} onClaim={openChest} onSearch={() => setPalette(true)} onMission={onMission} />;
     if (view === "profile") inner = <ProfileScreen child={child} parent={parent} progress={progress} onTrophies={() => setView("trophies")} onSwitchChild={switchChild} />;
     if (view === "trophies") inner = <TrophyScreen progress={progress} onEquip={equip} />;
     if (view === "review") inner = <ReviewScreen progress={progress} onBack={goHome} onFinish={finishReview} onWord={onWord} />;
     if (view === "lesson") inner = <LessonScreen lesson={lesson} stars={progress.stars?.[lesson.id] || 0} onBack={goHome} onStart={() => startLesson(lesson)} onPractice={practice} />;
-    content = <Shell child={child} progress={progress} active={view === "lesson" ? "home" : view} onNav={nav} prefs={prefs} onToggle={togglePref} onClaim={openChest}>
+    content = <Shell child={child} progress={progress} active={view === "lesson" ? "home" : view} onNav={nav} prefs={prefs} onToggle={togglePref} onSearch={() => setPalette(true)}>
       <AnimatePresence mode="wait">
         <motion.div key={view + lessonId} {...pageMotion}>{inner}</motion.div>
       </AnimatePresence>

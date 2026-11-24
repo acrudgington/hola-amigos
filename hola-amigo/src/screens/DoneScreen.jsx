@@ -37,7 +37,7 @@ export function DoneScreen({ lesson, result, progress, onNext, onHome, onPractic
           </motion.div>
           <div style={{ margin: "10px 0 4px" }}>
             <div className="row row--between tiny muted" style={{ marginBottom: 5 }}><span>Level {lvl.level}</span><span>{lvl.toNext} XP to level {lvl.level + 1}</span></div>
-            <ProgressBar value={lvl.pct} color="var(--g-brand)" label="Level progress" />
+            <ProgressBar value={lvl.pct} color="var(--luna)" label="Level progress" />
           </div>
           <p className="small" style={{ fontWeight: 800, marginTop: 8, color: gained > 0 ? "var(--gold)" : "var(--muted)" }}>
             {gained > 0 ? `+${gained} new star${gained === 1 ? "" : "s"}! ⭐` : after >= 3 ? "All 3 stars — you’re a star! 🌟" : `You earned ${earned} star${earned === 1 ? "" : "s"} this time. Beat your best to win more!`}
