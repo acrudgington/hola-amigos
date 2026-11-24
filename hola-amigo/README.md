@@ -33,10 +33,13 @@ An interactive Spanish learning app for kids aged 6+, taking them from absolute 
 - **📊 Personal dashboard**: weekly XP chart, streak calendar and a "word power" mastery bar
 - **🎉 Confetti** celebrations on every star
 
-### Look & feel
-- **Two themes**: *Galaxy* (deep-space glass with aurora lights and shooting stars) and *Daylight*
-- **Dashboard layout**: sidebar + stats panel on desktop, bottom tab bar on phones
-- **Motion everywhere**: spring animations, page transitions, floating "+XP" pop-ups, a tilting "Up next" card, a flowing path on the map
+### Look & feel — "mission control for kids"
+- **Bento dashboard** home: Sol's mission plan, an "Up next" lesson card, live stat tiles with sparklines, daily quests, an activity feed, a weekly XP chart and word-power meter
+- **Sol the study buddy** plans today's mission (review → lesson → treasure chest) as a live, step-by-step checklist
+- **Ask Sol** (⌘K / Ctrl+K): search all 800 words and 100 lessons; tap a word to hear it
+- **Journey map** with world tabs: flip through the 12 worlds, each with its own illustrated banner and winding path
+- **Night and Day themes**: crisp, flat surfaces on a dot-grid canvas, with a custom SVG icon set
+- **Motion**: spring animations, page transitions, typing text, flowing paths, floating "+XP" pop-ups
 - **Sound effects** synthesised in the browser (no audio files), with a mute button
 - Respects the device's *reduce motion* setting
 
@@ -118,8 +121,8 @@ hola-amigo/
 │   ├── data/
 │   │   ├── course.js       # 12 worlds, 100 lessons, stories
 │   │   └── rewards.js      # Badges, stickers, outfits
-│   ├── lib/                # Storage & XP, speech, sound effects, preferences, journey builder
-│   ├── components/         # Shell (sidebar/tab bar), widgets & charts, cosmic background, UI kit, Sol & Luna
+│   ├── lib/                # Storage, XP & activity log, Sol's mission planner, speech, sound, journey builder
+│   ├── components/         # Shell, widgets & charts, Ask Sol palette, icons, UI kit, Sol & Luna
 │   ├── games/              # One file per family of activities
 │   └── screens/            # Auth, family, home map, lesson, activity, review…
 └── tests/logic.test.js     # node --test

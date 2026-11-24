@@ -39,7 +39,7 @@ export function Sol({ size = 56, mood = "happy", outfit }) {
     encourage: <path d="M 43 57 Q 50 61 57 57" stroke="#1E3A5F" strokeWidth="2.4" fill="none" strokeLinecap="round" />,
     wink: <path d="M 42 56 Q 50 63 58 56" stroke="#1E3A5F" strokeWidth="2.4" fill="none" strokeLinecap="round" />,
   }[mood] || null;
-  return <svg width={size} height={size} viewBox="0 0 100 100" style={{ filter: "drop-shadow(0 4px 8px rgba(255,200,50,.4))" }} role="img" aria-label="Sol the sun">
+  return <svg width={size} height={size} viewBox="0 0 100 100" role="img" aria-label="Sol the sun">
     {/* Sun rays */}
     <g className={`mascot-spin ${mood === "celebrate" ? "mascot-spin--fast" : ""}`}>
       {Array.from({ length: 12 }).map((_, i) => <rect key={i} x="48" y="4" width="4" height="14" rx="2" fill="#FFD93D" transform={`rotate(${i * 30} 50 50)`} />)}
@@ -76,7 +76,7 @@ export function Luna({ size = 56, mood = "sleepy", outfit }) {
     celebrate: <ellipse cx="48" cy="59" rx="6" ry="7" fill="#7B5BC0" />,
     encourage: <path d="M 42 59 Q 48 62 54 59" stroke="#1E3A5F" strokeWidth="2.4" fill="none" strokeLinecap="round" />,
   }[mood] || null;
-  return <svg width={size} height={size} viewBox="0 0 100 100" style={{ filter: "drop-shadow(0 4px 8px rgba(150,180,255,.4))" }} role="img" aria-label="Luna the moon">
+  return <svg width={size} height={size} viewBox="0 0 100 100" role="img" aria-label="Luna the moon">
     <defs>
       <radialGradient id={gid} cx="35%" cy="35%">
         <stop offset="0%" stopColor="#F7F4FF" />

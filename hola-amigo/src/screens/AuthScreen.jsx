@@ -50,7 +50,7 @@ export function AuthScreen({ onLogin }) {
           <p className="muted" style={{ marginTop: 6 }}>Spanish adventures for curious kids · 100 lessons · 800 words</p>
         </div>
 
-        <motion.form className="card card--pad-lg card--glow" onSubmit={submit} noValidate initial={{ opacity: 0, y: 30, scale: 0.96 }} animate={{ opacity: 1, y: 0, scale: 1 }} transition={{ type: "spring", stiffness: 220, damping: 22, delay: 0.1 }}>
+        <motion.form className="card card--pad-lg" onSubmit={submit} noValidate initial={{ opacity: 0, y: 30, scale: 0.96 }} animate={{ opacity: 1, y: 0, scale: 1 }} transition={{ type: "spring", stiffness: 220, damping: 22, delay: 0.1 }}>
           <div style={{ marginBottom: 20 }}><Segmented id="auth" options={[["login", "Log in"], ["signup", "Sign up"]]} value={mode} onChange={switchMode} /></div>
           <p className="small muted text-center" style={{ marginBottom: 16 }}>👨‍👩‍👧 Grown-ups: make a family account, then add each child.</p>
           {mode === "signup" && <Field label="Your name" placeholder="e.g. Sam" value={name} onChange={e => setName(e.target.value)} autoComplete="name" />}

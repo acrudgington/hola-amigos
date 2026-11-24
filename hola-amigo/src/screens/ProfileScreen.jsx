@@ -20,7 +20,7 @@ export function ProfileScreen({ child, parent, progress, onTrophies, onSwitchChi
     { v: (progress.badges || []).length, l: "Badges", e: "🏆", c: "var(--luna)" },
   ];
   return <div className="stack" style={{ "--gap": "16px", paddingTop: 6 }}>
-    <Card className="card--pad-lg card--glow">
+    <Card className="card--pad-lg">
       <div className="row" style={{ gap: 18, flexWrap: "wrap" }}>
         <div className="profile-tile__avatar" style={{ width: 96, height: 96, fontSize: 60, margin: 0 }}>{child.avatar}</div>
         <div className="grow">
@@ -34,7 +34,7 @@ export function ProfileScreen({ child, parent, progress, onTrophies, onSwitchChi
         <div className="row row--between small" style={{ fontWeight: 800, marginBottom: 6 }}>
           <span>Course progress</span><span className="muted">{Math.round(pct * 100)}%</span>
         </div>
-        <ProgressBar value={pct} color="var(--g-sun)" label="Course progress" />
+        <ProgressBar value={pct} color="var(--sun)" label="Course progress" />
       </div>
     </Card>
 

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { Icon } from "../components/Icon.jsx";
 import { surpriseFor, wordsForLessonsUpTo, wordsForWorld, worldOf } from "../data/course.js";
 import { ACTIVITIES } from "../lib/journey.js";
 import { Button, Card, ProgressBar } from "../components/ui.jsx";
@@ -84,7 +85,7 @@ export function ActivityScreen({ lesson, type, journey, combo = 0, sessionXp = 0
   return <div className="app-bg">
     <div className="page">
       <div className="activity-head">
-        <button type="button" className="icon-btn" onClick={onExit} aria-label={journey ? "Leave lesson" : "Back"} title={journey ? "Leave lesson" : "Back"}>{journey ? "✕" : "←"}</button>
+        <button type="button" className="icon-btn" onClick={onExit} aria-label={journey ? "Leave lesson" : "Back"} title={journey ? "Leave lesson" : "Back"}><Icon name={journey ? "x" : "arrowLeft"} size={20} stroke={2.5} /></button>
         <div className="grow">
           {journey
             ? <ProgressBar value={journey.step / journey.steps.length} label="Lesson progress" />
@@ -93,10 +94,10 @@ export function ActivityScreen({ lesson, type, journey, combo = 0, sessionXp = 0
         <AnimatePresence>
           {combo >= 2 && <motion.span key="combo" className="combo" initial={{ scale: 0, rotate: -20 }} animate={{ scale: 1, rotate: 0 }} exit={{ scale: 0 }}
             transition={{ type: "spring", stiffness: 500, damping: 15 }}>
-            <span className="combo__flame">🔥</span><motion.span key={combo} initial={{ scale: 1.8 }} animate={{ scale: 1 }}>x{combo}</motion.span>
+            <span className="combo__flame"><Icon name="flame" size={15} fill /></span><motion.span key={combo} initial={{ scale: 1.8 }} animate={{ scale: 1 }}>x{combo}</motion.span>
           </motion.span>}
         </AnimatePresence>
-        <span className="xp-chip" aria-label={`${sessionXp} XP earned`}>⚡<motion.span key={sessionXp} initial={{ y: -8, opacity: 0 }} animate={{ y: 0, opacity: 1 }}>{sessionXp}</motion.span></span>
+        <span className="xp-chip" aria-label={`${sessionXp} XP earned`}><Icon name="bolt" size={15} fill /><motion.span key={sessionXp} initial={{ y: -8, opacity: 0 }} animate={{ y: 0, opacity: 1 }}>{sessionXp}</motion.span></span>
       </div>
       {journey && <div className="counter text-center" style={{ marginTop: -10, marginBottom: 12 }}>Step {journey.step + 1} of {journey.steps.length}</div>}
 

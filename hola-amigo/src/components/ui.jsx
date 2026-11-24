@@ -147,11 +147,11 @@ export function XpPops({ pops }) {
 export function LevelUpModal({ level, title, onClose }) {
   return <div className="modal-backdrop" onClick={onClose}>
     <div className="sunburst" aria-hidden="true" />
-    <motion.div className="modal card card--pad-lg level-up card--glow" role="dialog" aria-modal="true" aria-labelledby="lvl-title" onClick={e => e.stopPropagation()}
+    <motion.div className="modal card card--pad-lg level-up" role="dialog" aria-modal="true" aria-labelledby="lvl-title" onClick={e => e.stopPropagation()}
       initial={{ scale: 0.4, rotate: -8, opacity: 0 }} animate={{ scale: 1, rotate: 0, opacity: 1 }} transition={{ type: "spring", stiffness: 260, damping: 16 }}>
       <div className="eyebrow" style={{ color: "var(--gold)" }}>Level up!</div>
       <motion.div className="level-up__badge" initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 0.2, type: "spring", stiffness: 300, damping: 12 }}>
-        <span className="level-up__num gradient-text">{level}</span>
+        <span className="level-up__num">{level}</span>
       </motion.div>
       <h2 id="lvl-title" className="h1" style={{ fontSize: 34 }}>¡Increíble!</h2>
       <p className="muted" style={{ margin: "6px 0 20px" }}>You’re now a <b style={{ color: "var(--text)" }}>{title}</b>. Keep going!</p>

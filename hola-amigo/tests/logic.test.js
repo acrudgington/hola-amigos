@@ -145,3 +145,29 @@ test("daily quest chest opens once, only when all quests are done", () => {
   assert.equal(opened.xp, p.xp + XP.chest);
   assert.equal(claimChest(opened, now), opened);
 });
+
+import { logEvent, timeAgo } from "../src/lib/db.js";
+import { planMission } from "../src/lib/mission.js";
+
+test("Sol's mission plan marks steps done and points at the next one", () => {
+  const now = Date.now();
+  let p = fresh();
+  let plan = planMission(p, now);
+  assert.equal(plan.steps[0].id, "lesson");          // brand-new learner: no review step yet
+  assert.equal(plan.steps[0].active, true);
+  p = recordWord(p, "Hola", "Hello", true, now);
+  p = logEvent(p, { type: "review", text: "x" }, now);
+  plan = planMission(p, now);
+  assert.equal(plan.steps[0].id, "review");
+  assert.equal(plan.steps[0].done, true);
+  assert.equal(plan.active.id, "lesson");
+  assert.equal(plan.completed, 1);
+});
+
+test("activity feed keeps the newest 40 events", () => {
+  let p = fresh();
+  for (let i = 0; i < 45; i++) p = logEvent(p, { type: "lesson", text: `e${i}` }, 1000 + i);
+  assert.equal(p.events.length, 40);
+  assert.equal(p.events[0].text, "e44");
+  assert.equal(timeAgo(Date.now() - 5 * 60000), "5 min ago");
+});
