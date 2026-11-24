@@ -1,127 +1,134 @@
 // ============================================================
-// ¡Hola, Amigo! — app shell: session, navigation, progress & game feel
+// ¡Hola, Amigo! — app shell
+// Wires together: the account/storage services, the navigation state
+// machine (state/nav.ts), the progress store (state/useProgress.ts) and the
+// game-feel layer (XP pops, combos, sounds, toasts, level-ups).
 // ============================================================
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useReducer, useRef, useState } from "react";
 import { AnimatePresence, MotionConfig, motion } from "framer-motion";
-import { LESSONS } from "./content/index.ts";
-import { BADGES, applyRewards, findReward } from "./domain/rewards.ts";
+import { lessonById, LESSONS, type Lesson } from "./content/index.ts";
+import { isBadgeEarned, type EarnedReward } from "./domain/rewards.ts";
 import {
-  XP, addStat, addXP, awardStars, bumpDaily, claimChest, db, levelInfo, levelTitle,
-  logEvent, recordCombo, recordWord, repairProgress, starsForScore, touchStreak,
+  XP, addStat, addXP, awardStars, bumpDaily, claimChest, logEvent, maxCompleted,
+  recordCombo, recordWord, repairProgress, starsForScore, touchStreak,
 } from "./domain/progress.ts";
-import { buildJourney } from "./lib/journey.ts";
-import { pickReaction } from "./lib/reactions.ts";
-import { applyTheme, loadPrefs, savePrefs } from "./lib/prefs.ts";
+import { services, type Child, type Parent } from "./services/index.ts";
+import { initialNav, isLastStep, navReducer, type ShellView } from "./state/nav.ts";
+import { useProgress } from "./state/useProgress.ts";
+import { buildJourney, type ActivityType } from "./lib/journey.ts";
+import type { MissionStep } from "./lib/mission.ts";
+import { pickReaction, type Reaction } from "./lib/reactions.ts";
+import { applyTheme, loadPrefs, savePrefs, type Prefs } from "./lib/prefs.ts";
 import { setSoundEnabled, sfx } from "./lib/sound.ts";
-import { Confetti, LevelUpModal, RewardToast, XpPops } from "./components/ui.tsx";
+import { Confetti, LevelUpModal, RewardToast, XpPops, type XpPop } from "./components/ui.tsx";
 import { MascotReaction } from "./components/Mascots.tsx";
 import { Cosmos } from "./components/Cosmos.tsx";
-import { Shell } from "./components/Shell.tsx";
+import { Shell, type NavKey } from "./components/Shell.tsx";
 import { CommandPalette } from "./components/CommandPalette.tsx";
 import { AuthScreen } from "./screens/AuthScreen.tsx";
 import { FamilyScreen } from "./screens/FamilyScreen.tsx";
 import { ParentDashboard } from "./screens/ParentDashboard.tsx";
 import { HomeScreen } from "./screens/HomeScreen.tsx";
 import { LessonScreen } from "./screens/LessonScreen.tsx";
-import { ActivityScreen } from "./screens/ActivityScreen.tsx";
+import { ActivityScreen, type ActivityStats } from "./screens/ActivityScreen.tsx";
 import { DoneScreen } from "./screens/DoneScreen.tsx";
 import { ReviewScreen } from "./screens/ReviewScreen.tsx";
 import { ProfileScreen } from "./screens/ProfileScreen.tsx";
 import { TrophyScreen } from "./screens/TrophyScreen.tsx";
 
-const badgeEarned = (id, p) => !!BADGES.find(b => b.id === id)?.check(p);
 const SHELL_VIEWS = new Set(["home", "review", "trophies", "profile", "lesson"]);
-
-// Restore the saved session synchronously, so there's no loading flash.
-function restore() {
-  const sess = db.getSession();
-  const parent = sess?.parentEmail ? db.findParent(sess.parentEmail) : null;
-  const child = parent && sess.activeChildId ? db.getChild(sess.activeChildId) : null;
-  return { parent, child };
-}
-
 const pageMotion = {
-  // Opacity + y only: a lingering filter/transform would break position:fixed
-  // children (tab bar, modals), and framer resets y:0 to "transform: none".
+  // Opacity + y only: a lingering filter/transform would break position:fixed children.
   initial: { opacity: 0, y: 18 },
   animate: { opacity: 1, y: 0, transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] } },
   exit: { opacity: 0, y: -10, transition: { duration: 0.18 } },
 };
 
 export default function App() {
-  const [{ parent, child }, setWho] = useState(restore);
-  const [progress, setProgress] = useState(() => (child ? db.getProgress(child.id) : null));
-  const [previousVisit, setPreviousVisit] = useState(null);
-  const [view, setView] = useState(child ? "home" : "family");
-  const [lessonId, setLessonId] = useState(1);
-  const [activity, setActivity] = useState(null);   // { type, run }
-  const [journey, setJourney] = useState(null);     // { steps, step, correct, total }
-  const [doneResult, setDoneResult] = useState(null);
-  const [rewards, setRewards] = useState([]);
+  // ---------- who is using the app ----------
+  const [booted, setBooted] = useState(false);
+  const [parent, setParent] = useState<Parent | null>(null);
+  const [child, setChild] = useState<Child | null>(null);
+  const [nav, dispatch] = useReducer(navReducer, initialNav(false));
+
+  // ---------- game-feel state ----------
+  const [rewards, setRewards] = useState<EarnedReward[]>([]);
   const [confetti, setConfetti] = useState(0);
-  const [reaction, setReaction] = useState(null);
+  const [reaction, setReaction] = useState<Reaction | null>(null);
   const [combo, setCombo] = useState(0);
   const [sessionXp, setSessionXp] = useState(0);
-  const [pops, setPops] = useState([]);
-  const [levelUp, setLevelUp] = useState(null);
-  const [prefs, setPrefs] = useState(loadPrefs);
+  const [pops, setPops] = useState<XpPop[]>([]);
+  const [levelUp, setLevelUp] = useState<{ level: number; title: string } | null>(null);
+  const [prefs, setPrefs] = useState<Prefs>(loadPrefs);
   const [palette, setPalette] = useState(false);
-  const childRef = useRef(child);
-  const streakRef = useRef({ run: 0, lastWrong: false });
+  const streak = useRef({ run: 0, lastWrong: false });
   const sessionXpRef = useRef(0);
   const pointer = useRef({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
-  childRef.current = child;
 
-  const lesson = LESSONS.find(l => l.id === lessonId) || LESSONS[0];
+  const celebrate = useCallback(() => setConfetti(c => c + 1), []);
+  const { progress, load, clear, update } = useProgress({
+    onRewards: won => { setRewards(q => [...q, ...won]); sfx.star(); },
+    onLevelUp: (level, title) => setTimeout(() => { setLevelUp({ level, title }); sfx.levelUp(); celebrate(); }, 450),
+  });
+
+  const lesson: Lesson = lessonById(nav.lessonId) ?? LESSONS[0];
+
+  // ---------- start-up: restore the signed-in parent and active child ----------
+  const enterChild = useCallback(async (c: Child) => {
+    setChild(c);
+    await load(c.id);
+    update(p => touchStreak(repairProgress(p, isBadgeEarned)));
+  }, [load, update]);
+
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      const p = await services.auth.current();
+      const session = await services.session.get();
+      const c = p && session?.activeChildId ? await services.family.getChild(session.activeChildId) : null;
+      if (cancelled) return;
+      setParent(p);
+      if (c) { await enterChild(c); dispatch({ type: "go", view: "home" }); }
+      setBooted(true);
+    })();
+    return () => { cancelled = true; };
+  }, [enterChild]);
 
   // ---------- preferences ----------
   useEffect(() => { applyTheme(prefs.theme); setSoundEnabled(prefs.sound); savePrefs(prefs); }, [prefs]);
-  const togglePref = key => setPrefs(p => key === "theme"
+  const togglePref = (key: keyof Prefs) => setPrefs(p => (key === "theme"
     ? { ...p, theme: p.theme === "galaxy" ? "daylight" : "galaxy" }
-    : { ...p, sound: !p.sound });
+    : { ...p, sound: !p.sound }));
 
-  // Remember where the child last tapped (XP pops float up from there) + a soft tap sound.
+  // Remember the last tap (XP pops rise from there) and play a soft tap sound.
   useEffect(() => {
-    const down = e => {
+    const down = (e: PointerEvent) => {
       pointer.current = { x: e.clientX, y: e.clientY };
-      if (e.target.closest?.("button, [role=button]")) sfx.tap();
+      if ((e.target as Element | null)?.closest?.("button, [role=button]")) sfx.tap();
     };
     window.addEventListener("pointerdown", down, { passive: true });
     return () => window.removeEventListener("pointerdown", down);
   }, []);
 
-  const celebrate = useCallback(() => setConfetti(c => c + 1), []);
+  // ⌘K / Ctrl+K opens "Ask Sol".
+  useEffect(() => {
+    const key = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") { e.preventDefault(); setPalette(p => !p); }
+    };
+    window.addEventListener("keydown", key);
+    return () => window.removeEventListener("keydown", key);
+  }, []);
+
   useEffect(() => {
     if (!confetti) return;
     const t = setTimeout(() => setConfetti(0), 3200);
     return () => clearTimeout(t);
   }, [confetti]);
 
-  // ---------- progress: the single write path ----------
-  // Read the latest saved copy, apply a pure change, award anything newly
-  // earned, then save + render — so no update can overwrite another.
-  const update = useCallback(fn => {
-    const id = childRef.current?.id;
-    if (!id) return null;
-    const before = db.getProgress(id);
-    let { progress: next, rewards: won } = applyRewards(fn(before));
-    const L0 = levelInfo(before.xp).level, L1 = levelInfo(next.xp).level;
-    // Everything earned also lands in the activity feed.
-    for (const r of won) {
-      const item = findReward(r);
-      if (item) next = logEvent(next, { type: r.type, emoji: item.emoji, text: `New ${r.type === "badge" ? "badge" : r.type === "sticker" ? "sticker" : "outfit"}: ${item.name}` });
-    }
-    if (L1 > L0) next = logEvent(next, { type: "level", emoji: "⬆️", text: `Reached level ${L1} — ${levelTitle(L1)}!` });
-    db.saveProgress(id, next);
-    setProgress(next);
-    if (won.length) { setRewards(q => [...q, ...won]); sfx.star(); }
-    if (L1 > L0) {
-      setTimeout(() => { setLevelUp({ level: L1, title: levelTitle(L1) }); sfx.levelUp(); setConfetti(c => c + 1); }, 450);
-    }
-    return next;
-  }, []);
+  // Scroll to the top whenever the screen changes (the map manages its own scroll).
+  useEffect(() => { if (nav.view !== "home") window.scrollTo(0, 0); }, [nav.view, nav.activity?.run]);
 
-  const gainXP = (amount, label) => {
+  const gainXP = (amount: number, label?: string) => {
     sessionXpRef.current += amount;
     setSessionXp(sessionXpRef.current);
     const id = Math.random();
@@ -129,57 +136,37 @@ export default function App() {
     setTimeout(() => setPops(p => p.filter(x => x.id !== id)), 1300);
   };
 
-  // Open a child's profile: record the visit, repair old saves.
-  const entered = useRef(null);
-  const enterChild = useCallback(c => {
-    childRef.current = c;
-    if (entered.current === c.id) return;
-    entered.current = c.id;
-    setPreviousVisit(db.getProgress(c.id).lastActive);
-    update(p => touchStreak(repairProgress(p, badgeEarned)));
-  }, [update]);
-
-  useEffect(() => { if (child) enterChild(child); }, []); // eslint-disable-line react-hooks/exhaustive-deps
-
-  // Scroll to the top whenever the screen changes (the map handles its own scroll).
-  useEffect(() => { if (view !== "home") window.scrollTo(0, 0); }, [view, activity, journey?.step]);
-
-  // ---------- navigation ----------
-  const resetSession = () => { sessionXpRef.current = 0; setSessionXp(0); setCombo(0); streakRef.current = { run: 0, lastWrong: false }; setReaction(null); };
-  const login = p => { db.setSession({ parentEmail: p.email, activeChildId: null }); setWho({ parent: p, child: null }); setView("family"); };
-  const logout = () => { entered.current = null; db.clearSession(); setWho({ parent: null, child: null }); setProgress(null); setView("family"); };
-  const pickChild = c => {
-    db.setSession({ parentEmail: parent.email, activeChildId: c.id });
-    setWho({ parent, child: c });
-    enterChild(c);
-    setView("home");
+  // ---------- accounts & navigation ----------
+  const resetSession = () => {
+    sessionXpRef.current = 0; setSessionXp(0); setCombo(0);
+    streak.current = { run: 0, lastWrong: false }; setReaction(null);
   };
-  const switchChild = () => {
-    db.setSession({ parentEmail: parent.email, activeChildId: null });
-    setWho({ parent, child: null });
-    entered.current = null;
-    setProgress(null); setJourney(null); setActivity(null);
-    setView("family");
+  const login = (p: Parent) => { setParent(p); dispatch({ type: "go", view: "family" }); };
+  const logout = async () => { await services.auth.logOut(); setParent(null); setChild(null); clear(); dispatch({ type: "go", view: "family" }); };
+  const pickChild = async (c: Child) => {
+    if (!parent) return;
+    await services.session.set({ parentId: parent.id, activeChildId: c.id });
+    await enterChild(c);
+    dispatch({ type: "go", view: "home" });
   };
-  const goHome = () => { setJourney(null); setActivity(null); setView("home"); };
-  const openLesson = l => { setLessonId(l.id); setJourney(null); setActivity(null); setView("lesson"); };
-  const nav = key => (key === "family" ? switchChild() : (setJourney(null), setActivity(null), setView(key)));
-
-  const startLesson = l => {
-    const steps = buildJourney(l);
+  const switchChild = async () => {
+    if (parent) await services.session.set({ parentId: parent.id, activeChildId: null });
+    setChild(null); clear();
+    dispatch({ type: "go", view: "family" });
+  };
+  const goTo = (key: NavKey) => (key === "family" ? void switchChild() : dispatch({ type: "go", view: key as ShellView }));
+  const openLesson = (l: Lesson) => dispatch({ type: "openLesson", lessonId: l.id });
+  const startLesson = (l: Lesson) => {
     resetSession();
-    setLessonId(l.id);
-    setJourney({ steps, step: 0, correct: 0, total: 0 });
-    setActivity({ type: steps[0], run: Date.now() });
-    setView("activity");
+    dispatch({ type: "startLesson", lessonId: l.id, steps: buildJourney(l), run: Date.now() });
     sfx.whoosh();
   };
-  const practice = type => { resetSession(); setJourney(null); setActivity({ type, run: Date.now() }); setView("activity"); };
+  const practice = (activity: ActivityType) => { resetSession(); dispatch({ type: "practice", activity, run: Date.now() }); };
 
   // ---------- answers & activities ----------
-  const onWord = useCallback((es, en, ok, { quiet } = {}) => {
-    const s = streakRef.current;
-    if (quiet) { update(p => recordWord(p, es, en, ok)); return; }
+  const onWord = useCallback((es: string, en: string, ok: boolean, opts?: { quiet?: boolean }) => {
+    const s = streak.current;
+    if (opts?.quiet) { update(p => recordWord(p, es, en, ok)); return; }
     if (ok) {
       s.run += 1;
       const bonus = s.run % 5 === 0 ? XP.combo5 : 0;
@@ -194,15 +181,12 @@ export default function App() {
     } else {
       update(p => recordWord(p, es, en, ok));
       sfx.wrong();
-      s.run = 0;
-      s.lastWrong = true;
-      setCombo(0);
+      s.run = 0; s.lastWrong = true; setCombo(0);
       if (Math.random() < 0.34) setReaction(pickReaction("wrong"));
     }
   }, [update]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // An activity finished (in a journey or in free practice).
-  const finishActivity = (correct = 0, total = 0, stats = {}) => {
+  const finishActivity = (correct = 0, total = 0, stats: ActivityStats = {}) => {
     let goalMet = false;
     update(p => {
       let n = p;
@@ -214,33 +198,29 @@ export default function App() {
     });
     if (!stats.noCount) { sessionXpRef.current += XP.activity; setSessionXp(sessionXpRef.current); }
     if (goalMet) celebrate();
-    if (!journey) { if (total) sfx.complete(); return; }
+    if (!nav.journey) { if (total) sfx.complete(); return; }
 
-    const j = { ...journey, correct: journey.correct + correct, total: journey.total + total };
-    const next = j.step + 1;
-    if (next < j.steps.length) {
-      setJourney({ ...j, step: next });
-      setActivity({ type: j.steps[next], run: Date.now() });
+    if (!isLastStep(nav)) {
+      dispatch({ type: "activityFinished", correct, total, run: Date.now() });
       sfx.whoosh();
       return;
     }
     // Journey complete → stars from how well it went, plus a lesson XP bonus.
-    const before = db.getProgress(child.id).stars?.[lesson.id] || 0;
+    const j = { correct: nav.journey.correct + correct, total: nav.journey.total + total };
+    const before = progress?.stars[lesson.id] || 0;
     const earned = starsForScore(j.correct, j.total);
     const bonus = XP.lesson + earned * XP.perStar;
+    const xp = sessionXpRef.current + bonus;
     const after = update(p => logEvent(addXP(awardStars(p, lesson.id, earned), bonus),
-      { type: "lesson", title: lesson.title, emoji: lesson.emoji, text: `Finished “${lesson.title}” · ${"★".repeat(earned)} · +${sessionXpRef.current + bonus} XP` }))?.stars?.[lesson.id] || earned;
-    sessionXpRef.current += bonus;
-    setDoneResult({ correct: j.correct, total: j.total, earned, before, after, xp: sessionXpRef.current });
-    setJourney(null);
-    setActivity(null);
+      { type: "lesson", title: lesson.title, emoji: lesson.emoji, text: `Finished “${lesson.title}” · ${"★".repeat(earned)} · +${xp} XP` }))?.stars[lesson.id] ?? earned;
+    sessionXpRef.current = xp;
+    dispatch({ type: "lessonComplete", result: { ...j, earned, before, after, xp } });
     setReaction(null);
-    setView("done");
     celebrate();
     sfx.complete();
   };
 
-  const finishReview = (s, t) => {
+  const finishReview = (s: number, t: number) => {
     let goalMet = false;
     update(p => {
       const r = bumpDaily(addStat(addStat(p, "correctAnswers", s), "reviewsDone", 1));
@@ -251,65 +231,58 @@ export default function App() {
     if (goalMet || s === t) celebrate();
   };
 
-  const openChest = () => { update(p => logEvent(claimChest(p), { type: "chest", emoji: "🎁", text: `Opened the treasure chest · +${XP.chest} XP` })); gainXP(XP.chest, "🎁"); celebrate(); sfx.levelUp(); };
-
-  // Sol's mission steps.
-  const onMission = step => {
-    if (step.action === "review") setView("review");
-    else if (step.action === "lesson") step.done ? openLesson(step.lesson) : startLesson(step.lesson);
+  const openChest = () => {
+    update(p => logEvent(claimChest(p), { type: "chest", emoji: "🎁", text: `Opened the treasure chest · +${XP.chest} XP` }));
+    gainXP(XP.chest, "🎁"); celebrate(); sfx.levelUp();
+  };
+  const equip = (who: "sol" | "luna", id: string) => update(p => ({ ...p, [who === "sol" ? "solOutfit" : "lunaOutfit"]: id }));
+  const onMission = (step: MissionStep) => {
+    if (step.action === "review") dispatch({ type: "go", view: "review" });
+    else if (step.action === "lesson" && step.lesson) (step.done ? openLesson(step.lesson) : startLesson(step.lesson));
     else if (step.action === "quests" && step.ready) openChest();
   };
 
-  // ⌘K / Ctrl+K opens "Ask Sol".
-  useEffect(() => {
-    const key = e => {
-      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") { e.preventDefault(); if (childRef.current) setPalette(p => !p); }
-    };
-    window.addEventListener("keydown", key);
-    return () => window.removeEventListener("keydown", key);
-  }, []);
-  const equip = (who, id) => update(p => ({ ...p, [who === "sol" ? "solOutfit" : "lunaOutfit"]: id }));
-
   // ---------- render ----------
-  const overlays = <>
-    <Confetti burst={confetti} />
-    <XpPops pops={pops} />
-    {rewards[0] && <RewardToast key={`${rewards[0].type}-${rewards[0].id}`} reward={rewards[0]} onClose={() => setRewards(q => q.slice(1))} />}
-    {(view === "activity" || view === "review") && <MascotReaction reaction={reaction} onDone={() => setReaction(null)} />}
-    {palette && child && progress && <CommandPalette onClose={() => setPalette(false)} onOpenLesson={openLesson}
-      unlockedUpTo={Math.min(LESSONS.length, Object.keys(progress.stars || {}).reduce((m, id) => Math.max(m, Number(id)), 0) + 1)} />}
-    {levelUp && <LevelUpModal level={levelUp.level} title={levelUp.title} onClose={() => setLevelUp(null)} />}
-  </>;
-
-  let content;
-  if (!parent) content = <AuthScreen onLogin={login} />;
-  else if (view === "dashboard") content = <ParentDashboard parent={parent} onBack={() => setView("family")} />;
-  else if (!child || !progress || view === "family") {
-    content = <FamilyScreen parent={parent} onPickChild={pickChild} onDashboard={() => setView("dashboard")} onLogout={logout} prefs={prefs} onToggle={togglePref} />;
-  } else if (SHELL_VIEWS.has(view)) {
-    let inner = null;
-    if (view === "home") inner = <HomeScreen child={child} progress={progress}
-      onStartLesson={startLesson} onOpenLesson={openLesson} onClaim={openChest} onSearch={() => setPalette(true)} onMission={onMission} />;
-    if (view === "profile") inner = <ProfileScreen child={child} parent={parent} progress={progress} onTrophies={() => setView("trophies")} onSwitchChild={switchChild} />;
-    if (view === "trophies") inner = <TrophyScreen progress={progress} onEquip={equip} />;
-    if (view === "review") inner = <ReviewScreen progress={progress} onBack={goHome} onFinish={finishReview} onWord={onWord} />;
-    if (view === "lesson") inner = <LessonScreen lesson={lesson} stars={progress.stars?.[lesson.id] || 0} onBack={goHome} onStart={() => startLesson(lesson)} onPractice={practice} />;
-    content = <Shell child={child} progress={progress} active={view === "lesson" ? "home" : view} onNav={nav} prefs={prefs} onToggle={togglePref} onSearch={() => setPalette(true)}>
+  let content: JSX.Element | null = null;
+  let topKey = nav.view as string;
+  if (!booted) {
+    content = <div className="center-screen" aria-busy="true"><div className="muted">Loading…</div></div>;
+    topKey = "boot";
+  } else if (!parent) {
+    content = <AuthScreen onLogin={login} />;
+    topKey = "auth";
+  } else if (nav.view === "dashboard") {
+    content = <ParentDashboard parent={parent} onBack={() => dispatch({ type: "go", view: "family" })} />;
+  } else if (!child || !progress || nav.view === "family") {
+    content = <FamilyScreen parent={parent} onPickChild={c => void pickChild(c)} onDashboard={() => dispatch({ type: "go", view: "dashboard" })}
+      onLogout={() => void logout()} prefs={prefs} onToggle={togglePref} />;
+    topKey = "family";
+  } else if (SHELL_VIEWS.has(nav.view)) {
+    let inner: JSX.Element | null = null;
+    if (nav.view === "home") inner = <HomeScreen child={child} progress={progress} onStartLesson={startLesson} onOpenLesson={openLesson}
+      onClaim={openChest} onSearch={() => setPalette(true)} onMission={onMission} />;
+    if (nav.view === "profile") inner = <ProfileScreen child={child} parent={parent} progress={progress} onTrophies={() => dispatch({ type: "go", view: "trophies" })} onSwitchChild={() => void switchChild()} />;
+    if (nav.view === "trophies") inner = <TrophyScreen progress={progress} onEquip={equip} />;
+    if (nav.view === "review") inner = <ReviewScreen progress={progress} onBack={() => dispatch({ type: "go", view: "home" })} onFinish={finishReview} onWord={onWord} />;
+    if (nav.view === "lesson") inner = <LessonScreen lesson={lesson} stars={progress.stars[lesson.id] || 0} onBack={() => dispatch({ type: "go", view: "home" })}
+      onStart={() => startLesson(lesson)} onPractice={practice} />;
+    content = <Shell child={child} progress={progress} active={nav.view === "lesson" ? "home" : (nav.view as ShellView)} onNav={goTo}
+      prefs={prefs} onToggle={togglePref} onSearch={() => setPalette(true)}>
       <AnimatePresence mode="wait">
-        <motion.div key={view + lessonId} {...pageMotion}>{inner}</motion.div>
+        <motion.div key={nav.view + nav.lessonId} {...pageMotion}>{inner}</motion.div>
       </AnimatePresence>
     </Shell>;
-  } else if (view === "activity" && activity) {
-    content = <ActivityScreen key={`${activity.type}-${activity.run}`} lesson={lesson} type={activity.type} journey={journey}
+    topKey = "shell";
+  } else if (nav.view === "activity" && nav.activity) {
+    content = <ActivityScreen key={`${nav.activity.type}-${nav.activity.run}`} lesson={lesson} type={nav.activity.type} journey={nav.journey}
       combo={combo} sessionXp={sessionXp} onWord={onWord} onFinish={finishActivity}
-      onExit={() => (journey ? goHome() : openLesson(lesson))}
-      onRetry={() => practice(activity.type)} />;
-  } else if (view === "done" && doneResult) {
-    content = <DoneScreen lesson={lesson} result={doneResult} progress={progress}
-      onNext={startLesson} onHome={goHome} onPractice={() => openLesson(lesson)} />;
+      onExit={() => dispatch({ type: "exitActivity" })} onRetry={() => practice(nav.activity!.type)} />;
+    topKey = `act-${nav.activity.run}`;
+  } else if (nav.view === "done" && nav.done) {
+    content = <DoneScreen lesson={lesson} result={nav.done} progress={progress}
+      onNext={startLesson} onHome={() => dispatch({ type: "go", view: "home" })} onPractice={() => openLesson(lesson)} />;
   }
 
-  const topKey = !parent ? "auth" : SHELL_VIEWS.has(view) && child ? "shell" : view === "activity" ? `act-${activity?.run}` : view;
   return <MotionConfig reducedMotion="user">
     <Cosmos />
     <div className="app">
@@ -317,6 +290,12 @@ export default function App() {
         <motion.div key={topKey} {...pageMotion}>{content}</motion.div>
       </AnimatePresence>
     </div>
-    {overlays}
+    <Confetti burst={confetti} />
+    <XpPops pops={pops} />
+    {rewards[0] && <RewardToast key={`${rewards[0].type}-${rewards[0].id}`} reward={rewards[0]} onClose={() => setRewards(q => q.slice(1))} />}
+    {(nav.view === "activity" || nav.view === "review") && <MascotReaction reaction={reaction} onDone={() => setReaction(null)} />}
+    {palette && child && progress && <CommandPalette onClose={() => setPalette(false)} onOpenLesson={openLesson}
+      unlockedUpTo={Math.min(LESSONS.length, maxCompleted(progress.stars) + 1)} />}
+    {levelUp && <LevelUpModal level={levelUp.level} title={levelUp.title} onClose={() => setLevelUp(null)} />}
   </MotionConfig>;
 }

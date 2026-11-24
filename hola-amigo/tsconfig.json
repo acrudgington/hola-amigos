@@ -16,7 +16,7 @@
     "skipLibCheck": true,
     "allowImportingTsExtensions": true,
     "noEmit": true,
-    "types": ["vite/client", "vite-plugin-pwa/client"]
+    "types": ["vite/client", "vite-plugin-pwa/client", "node"]
   },
   "include": ["src", "tests", "scripts", "vite.config.ts", "playwright.config.ts", "e2e"]
 }

@@ -608,3 +608,9 @@ li:last-child > .step .step__rail { display: none; }
 .bento-col > .card { height: auto; }
 .big-stars { font-size: 46px; }
 .btn--ghost, .btn--ghost.btn--sm { box-shadow: none; }
+
+/* PWA update banner */
+.update-banner { position: fixed; left: 12px; right: 12px; bottom: calc(max(12px, env(safe-area-inset-bottom)) + 84px); z-index: 1200; max-width: 520px; margin: 0 auto;
+  display: flex; align-items: center; gap: 10px; padding: 10px 10px 10px 14px; border-radius: 16px; background: var(--surface); border: 1px solid var(--border-2);
+  box-shadow: var(--shadow-lift); font-weight: 800; font-size: 14px; animation: pop-up 0.35s var(--ease-spring); }
+@media (min-width: 900px) { .update-banner { bottom: 20px; } }

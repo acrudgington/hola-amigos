@@ -1,27 +1,30 @@
 import { useEffect, useRef, useState } from "react";
 import { shuffle } from "../lib/utils.ts";
-import { similarity, speech } from "../lib/speech.ts";
+import { similarity, speech, type Recognizer } from "../lib/speech.ts";
+import type { Word } from "../content/index.ts";
+import type { GameProps } from "./types.ts";
 import { Button, SpeakButton } from "../components/ui.tsx";
 import { Unsupported } from "./ChoiceGames.tsx";
 import { useLater } from "./hooks.ts";
 
-const RESULTS = {
+type Outcome = "pass" | "close" | "fail";
+const RESULTS: Record<Outcome, { emoji: string; title: string; color: string }> = {
   pass: { emoji: "🤩", title: "¡Perfecto!", color: "var(--mint-d)" },
   close: { emoji: "😊", title: "Close enough!", color: "var(--sun-d)" },
   fail: { emoji: "🙉", title: "Let’s try again!", color: "var(--coral-d)" },
 };
 
 // Say the word aloud; the browser's speech recogniser checks it.
-export function SayItGame({ words, onDone, onWord }) {
+export function SayItGame({ words, onDone, onWord }: GameProps & { words: Word[] }) {
   const [pool] = useState(() => shuffle(words.slice(0, 8)).slice(0, 6));
   const [idx, setIdx] = useState(0);
-  const [phase, setPhase] = useState("idle"); // idle | prompting | listening | result
-  const [heard, setHeard] = useState(null);
-  const [result, setResult] = useState(null);
-  const [err, setErr] = useState(null);
+  const [phase, setPhase] = useState<"idle" | "prompting" | "listening" | "result">("idle");
+  const [heard, setHeard] = useState<string | null>(null);
+  const [result, setResult] = useState<Outcome | null>(null);
+  const [err, setErr] = useState<string | null>(null);
   const score = useRef(0);
   const scored = useRef(false);
-  const recog = useRef(null);
+  const recog = useRef<Recognizer | null>(null);
   const later = useLater();
 
   // Stop the microphone if the child leaves mid-listen.

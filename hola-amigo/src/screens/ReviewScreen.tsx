@@ -1,19 +1,19 @@
 import { useState } from "react";
-import { getDueWords } from "../domain/progress.ts";
+import { getDueWords, maxCompleted, type Progress } from "../domain/progress.ts";
+import type { OnWord } from "../games/types.ts";
 import { shuffle } from "../lib/utils.ts";
 import { wordsForLessonsUpTo } from "../content/index.ts";
 import { Button, Card } from "../components/ui.tsx";
 import { Luna, Sol } from "../components/Mascots.tsx";
 import { ReviewGame } from "../games/ChoiceGames.tsx";
-import { maxCompleted } from "./HomeScreen.tsx";
 
 // Daily review — spaced repetition over words the child has met before.
-export function ReviewScreen({ progress, onBack, onFinish, onWord }) {
+export function ReviewScreen({ progress, onBack, onFinish, onWord }: { progress: Progress; onBack: () => void; onFinish: (s: number, t: number) => void; onWord: OnWord }) {
   // Snapshot the list when the screen opens. (Previously it was recomputed on
   // every render, so answering a word changed the list and restarted the game.)
   const [run, setRun] = useState(0);
   const [list, setList] = useState(() => makeList(progress));
-  const [result, setResult] = useState(null);
+  const [result, setResult] = useState<{ s: number; t: number } | null>(null);
 
   const again = () => { setList(makeList(progress)); setResult(null); setRun(r => r + 1); };
 
@@ -44,7 +44,7 @@ export function ReviewScreen({ progress, onBack, onFinish, onWord }) {
   </div>;
 }
 
-function makeList(progress) {
+function makeList(progress: Progress): { es: string; en: string; emoji?: string }[] {
   const due = getDueWords(progress);
   if (due.length) return due.slice(0, 10);
   // Nothing technically due → a mixed refresh of everything learned so far.

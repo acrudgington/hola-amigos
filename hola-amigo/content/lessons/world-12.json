@@ -943,7 +943,7 @@
       "subtitle": "Final Mega Champion",
       "emoji": "🏆",
       "milestone": true,
-      "funFact": "¡FELICIDADES! You have completed all 100 lessons! 100 hours of learning, 800+ words! You ARE a Spanish superstar! 🎉🌟🏆",
+      "funFact": "¡FELICIDADES! You have completed all 100 lessons! 100 hours of learning, nearly 700 words! You ARE a Spanish superstar! 🎉🌟🏆",
       "phrase": {
         "es": "¡Soy un mega campeón del español!",
         "en": "I am a mega Spanish champion!"
@@ -1098,7 +1098,7 @@
         "title": "The Mega Champion",
         "paras": [
           "Sol and Luna stand on top of the mountain. 'We did it!' they shout to the sky.",
-          "'100 lessons! 800 palabras! We can speak Spanish like real Spaniards!'",
+          "'100 lessons! ¡Casi 700 palabras! We can speak Spanish like real Spaniards!'",
           "They look down at their journey — from ¡Hola! to today. ¡Qué viaje increíble! Eres un MEGA CAMPEÓN! 🏆🌟"
         ],
         "qs": [
@@ -1114,7 +1114,7 @@
           {
             "q": "How many words have they learned?",
             "opts": [
-              "800",
+              "Almost 700",
               "500",
               "1000"
             ],

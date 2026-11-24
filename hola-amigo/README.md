@@ -6,7 +6,7 @@ An interactive Spanish learning app for kids aged 6+, taking them from absolute 
 
 ### Learning content
 - **100 lessons** across 12 themed worlds, from Starter Island to Repaso Total
-- **800 Spanish words** across vocabulary, phrases, grammar, past, future, and everyday situations
+- **690 Spanish words** across vocabulary, phrases, grammar, past, future, and everyday situations
 - **14 activity types**: Learn, Flashcards, Listen, Matching, Drag & Match, Odd One Out, Quiz, Say It! (speaking), Sentences, Word Order, Stories, Warm-ups, Surprises and end-of-world Boss Battles
 - **Guided lessons** that mix the activities differently in each lesson, scored 1–3 stars
 - **Daily review** with spaced repetition (Leitner boxes) so words stick
@@ -36,7 +36,7 @@ An interactive Spanish learning app for kids aged 6+, taking them from absolute 
 ### Look & feel — "mission control for kids"
 - **Bento dashboard** home: Sol's mission plan, an "Up next" lesson card, live stat tiles with sparklines, daily quests, an activity feed, a weekly XP chart and word-power meter
 - **Sol the study buddy** plans today's mission (review → lesson → treasure chest) as a live, step-by-step checklist
-- **Ask Sol** (⌘K / Ctrl+K): search all 800 words and 100 lessons; tap a word to hear it
+- **Ask Sol** (⌘K / Ctrl+K): search all 690 words and 100 lessons; tap a word to hear it
 - **Journey map** with world tabs: flip through the 12 worlds, each with its own illustrated banner and winding path
 - **Night and Day themes**: crisp, flat surfaces on a dot-grid canvas, with a custom SVG icon set
 - **Motion**: spring animations, page transitions, typing text, flowing paths, floating "+XP" pop-ups
@@ -57,11 +57,52 @@ npm run dev
 
 Open http://localhost:5173 in your browser.
 
-Run the logic tests (course data, stars, streaks, spaced repetition, rewards):
+### Useful commands
 
-```bash
-npm test
+| Command | What it does |
+|---|---|
+| `npm run dev` | Start the app locally with live reload |
+| `npm run typecheck` | Strict TypeScript check of the whole app |
+| `npm test` | Unit tests (Vitest): progress rules, rewards, lesson flow, storage, content |
+| `npm run content:check` | Validate every lesson file in `content/` |
+| `npm run test:e2e` | Real-browser tests on phone and desktop sizes (Playwright) |
+| `npm run build` | Typecheck, then build the installable app into `dist/` |
+| `npm run ci` | Everything CI runs, except the browser tests |
+
+The first time you run the browser tests on a new machine, install the browser with `npx playwright install chromium`.
+
+GitHub Actions (`.github/workflows/ci.yml`) runs all of this on every push and pull request.
+
+## Editing lessons
+
+All course content lives in `content/` as plain JSON, so it can be edited without touching code:
+
+- `content/worlds.json`: the 12 worlds (name, colour, lesson range, scenery)
+- `content/lessons/world-01.json` … `world-12.json`: each world's lessons (words, phrase, fun fact, sentences, quiz questions, story)
+- `content/surprises.json`: the surprise cards
+
+Spanish is **Castilian (Spain)**: the `say` pronunciation guides use Castilian sounds (e.g. *GRAH-thyass*).
+
+After editing, run `npm run content:check`. It checks every file against the schema (`src/content/schema.ts`) and teaching rules: lesson ids run 1–100 with no gaps, sentence tiles match their answers, quiz answers point at a real option, and so on. CI runs the same check, so broken content can't be merged.
+
+## Architecture
+
 ```
+src/
+├── content/      Course loader + schema (content itself is in /content)
+├── domain/       Pure rules: progress, XP, streaks, spaced repetition, rewards
+├── services/     Accounts & storage behind interfaces (on-device today, Firebase in step 2)
+├── state/        Navigation & lesson-flow state machine, progress store, hooks
+├── lib/          Speech, sound, journeys, Sol's mission planner, preferences
+├── components/   Shell, widgets, Ask Sol palette, icons, mascots, UI kit
+├── games/        The 14 activity types
+└── screens/      One file per screen
+```
+
+- **Screens never touch storage directly.** They go through `services` (`src/services/types.ts`), whose methods are all async. That lets a cloud backend replace on-device storage without changing any screen.
+- **Progress changes are pure functions** (`src/domain/progress.ts`) applied through one store (`src/state/useProgress.ts`). The store awards rewards, renders immediately, and queues saves so they always land in order.
+- **Navigation is a pure state machine** (`src/state/nav.ts`). Every transition (start lesson, finish activity, exit…) is unit tested.
+- **Product settings live in `src/config.ts`:** Castilian Spanish, pricing (£5/month or £40/year), the free tier and which backend to use.
 
 ## Deploy to Vercel (Recommended — Free)
 
@@ -100,33 +141,14 @@ On Desktop: Chrome/Edge will show an install icon in the address bar
 
 ## Tech Stack
 
-- React 18 + Vite 6
+- React 18 + TypeScript (strict) + Vite 6
 - Framer Motion (animations)
+- Zod (content validation), Vitest (unit tests), Playwright (browser tests)
+- vite-plugin-pwa / Workbox (installable, offline-ready app)
 - Fredoka + Nunito fonts (Google Fonts)
 - Plain CSS design system with CSS variables (`src/styles.css`)
 - Web Speech API (TTS + speech recognition)
 - localStorage (persistent)
-- Service Worker (offline support)
-
-## Project Structure
-
-```
-hola-amigo/
-├── index.html
-├── public/                 # PWA manifest, service worker, icons
-├── src/
-│   ├── main.jsx            # React entry (+ service worker in production)
-│   ├── App.jsx             # Session, navigation and the single progress-saving path
-│   ├── styles.css          # Design system: tokens, components, animations
-│   ├── data/
-│   │   ├── course.js       # 12 worlds, 100 lessons, stories
-│   │   └── rewards.js      # Badges, stickers, outfits
-│   ├── lib/                # Storage, XP & activity log, Sol's mission planner, speech, sound, journey builder
-│   ├── components/         # Shell, widgets & charts, Ask Sol palette, icons, UI kit, Sol & Luna
-│   ├── games/              # One file per family of activities
-│   └── screens/            # Auth, family, home map, lesson, activity, review…
-└── tests/logic.test.js     # node --test
-```
 
 ## License
 

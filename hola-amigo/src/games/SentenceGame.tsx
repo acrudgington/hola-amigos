@@ -5,16 +5,20 @@ import { shuffle } from "../lib/utils.ts";
 import { speech } from "../lib/speech.ts";
 import { Button, Feedback } from "../components/ui.tsx";
 import { useLater } from "./hooks.ts";
+import type { Sentence } from "../content/index.ts";
+import type { OnDone } from "./types.ts";
+
+interface Tile { id: number; w: string }
 
 // Each tile gets an id so repeated words ("el … el") behave correctly.
-const tilesFor = s => shuffle(s.shuffle.map((w, i) => ({ id: i, w })));
+const tilesFor = (s: Sentence): Tile[] => shuffle(s.shuffle.map((w, i) => ({ id: i, w })));
 
-export function SentenceGame({ sentences, onDone, variant = "build" }) {
+export function SentenceGame({ sentences, onDone, variant = "build" }: { sentences: Sentence[]; onDone: OnDone; variant?: "build" | "wordorder" }) {
   const [pool] = useState(() => (variant === "wordorder" ? shuffle(sentences).slice(0, 5) : sentences));
   const [idx, setIdx] = useState(0);
-  const [placed, setPlaced] = useState([]);
-  const [avail, setAvail] = useState(() => (pool[0] ? tilesFor(pool[0]) : []));
-  const [fb, setFb] = useState(null); // true | false | null
+  const [placed, setPlaced] = useState<Tile[]>([]);
+  const [avail, setAvail] = useState<Tile[]>(() => (pool[0] ? tilesFor(pool[0]) : []));
+  const [fb, setFb] = useState<boolean | null>(null);
   const score = useRef(0);
   const later = useLater();
 
@@ -22,8 +26,8 @@ export function SentenceGame({ sentences, onDone, variant = "build" }) {
   const s = pool[idx];
   if (!s) return null;
 
-  const add = t => { if (fb !== null) return; setPlaced([...placed, t]); setAvail(avail.filter(x => x.id !== t.id)); };
-  const remove = t => { if (fb !== null) return; setPlaced(placed.filter(x => x.id !== t.id)); setAvail([...avail, t]); };
+  const add = (t: Tile) => { if (fb !== null) return; setPlaced([...placed, t]); setAvail(avail.filter(x => x.id !== t.id)); };
+  const remove = (t: Tile) => { if (fb !== null) return; setPlaced(placed.filter(x => x.id !== t.id)); setAvail([...avail, t]); };
   const undo = () => { if (placed.length) remove(placed[placed.length - 1]); };
   const check = () => {
     const ok = placed.map(t => t.w).join(" ") === s.correct.join(" ");

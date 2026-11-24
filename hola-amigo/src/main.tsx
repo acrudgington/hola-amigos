@@ -1,18 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
+import { UpdateBanner } from "./components/UpdateBanner.tsx";
 import "./styles.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <App />
+    {import.meta.env.PROD && <UpdateBanner />}
   </React.StrictMode>,
 );
-
-// Offline support. Only in production builds — in dev the service worker
-// would cache Vite's modules and serve stale code.
-if (import.meta.env.PROD && "serviceWorker" in navigator) {
-  window.addEventListener("load", () => {
-    navigator.serviceWorker.register("/sw.js").catch(err => console.warn("Service worker registration failed:", err));
-  });
-}

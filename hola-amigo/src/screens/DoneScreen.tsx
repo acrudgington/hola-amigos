@@ -1,12 +1,13 @@
-import { LESSONS } from "../content/index.ts";
+import { LESSONS, type Lesson } from "../content/index.ts";
+import type { DoneResult } from "../state/nav.ts";
 import { motion } from "framer-motion";
-import { levelInfo } from "../domain/progress.ts";
+import { levelInfo, type Progress } from "../domain/progress.ts";
 import { Button, Card, ProgressBar } from "../components/ui.tsx";
 import { AnimatedNumber } from "../components/Widgets.tsx";
 import { Luna, Sol } from "../components/Mascots.tsx";
 
 // Celebration at the end of a guided lesson.
-export function DoneScreen({ lesson, result, progress, onNext, onHome, onPractice }) {
+export function DoneScreen({ lesson, result, progress, onNext, onHome, onPractice }: { lesson: Lesson; result: DoneResult; progress: Progress; onNext: (l: Lesson) => void; onHome: () => void; onPractice: () => void }) {
   const { correct, total, earned, before, after } = result;
   const pct = total ? correct / total : 1;
   const mood = pct >= 0.85 ? "celebrate" : pct >= 0.6 ? "happy" : "encourage";

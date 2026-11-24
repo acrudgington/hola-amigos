@@ -1,10 +1,66 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+/// <reference types="vitest/config" />
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import { VitePWA } from "vite-plugin-pwa";
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    // Installable "add to home screen" app that works offline.
+    VitePWA({
+      registerType: "prompt",        // never reload mid-lesson: ask first
+      filename: "sw.js",             // same URL as the old hand-written worker, so it replaces it
+      includeAssets: ["icon-192.png", "icon-512.png"],
+      manifest: {
+        name: "¡Hola, Amigo! — Learn Spanish",
+        short_name: "Hola Amigo",
+        description: "A fun, interactive Spanish (Castilian) course for children aged 6+.",
+        lang: "en-GB",
+        start_url: "/",
+        scope: "/",
+        display: "standalone",
+        orientation: "portrait",
+        background_color: "#0B0C14",
+        theme_color: "#0B0C14",
+        categories: ["education", "kids"],
+        icons: [
+          { src: "/icon-192.png", sizes: "192x192", type: "image/png", purpose: "any" },
+          { src: "/icon-512.png", sizes: "512x512", type: "image/png", purpose: "any" },
+          { src: "/icon-512.png", sizes: "512x512", type: "image/png", purpose: "maskable" },
+        ],
+      },
+      workbox: {
+        globPatterns: ["**/*.{js,css,html,png,svg,ico,webmanifest}"],
+        navigateFallback: "/index.html",
+        cleanupOutdatedCaches: true,
+        runtimeCaching: [
+          {
+            // Google Fonts stylesheets and font files: cache so the app looks right offline.
+            urlPattern: ({ url }) => url.origin === "https://fonts.googleapis.com" || url.origin === "https://fonts.gstatic.com",
+            handler: "CacheFirst",
+            options: { cacheName: "google-fonts", expiration: { maxEntries: 30, maxAgeSeconds: 60 * 60 * 24 * 365 }, cacheableResponse: { statuses: [0, 200] } },
+          },
+        ],
+      },
+    }),
+  ],
   build: {
-    outDir: 'dist',
+    outDir: "dist",
     sourcemap: false,
+    rollupOptions: {
+      output: {
+        // Separate long-lived chunks: an app update doesn't re-download
+        // unchanged course content or libraries.
+        manualChunks: id => {
+          if (id.includes("/content/")) return "content";
+          if (id.includes("node_modules")) return "vendor";
+          return undefined;
+        },
+      },
+    },
   },
-})
+  test: {
+    include: ["tests/**/*.test.ts"],
+    environment: "node",
+  },
+});

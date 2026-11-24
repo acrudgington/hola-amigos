@@ -1,18 +1,20 @@
 import { useState } from "react";
 import { BADGES, OUTFITS, RARITY, STICKERS } from "../domain/rewards.ts";
+import type { Progress } from "../domain/progress.ts";
 import { darken } from "../lib/utils.ts";
 import { Card, Segmented } from "../components/ui.tsx";
 import { Luna, Sol } from "../components/Mascots.tsx";
 
-const TABS = [["badges", "🏆 Badges"], ["stickers", "✨ Stickers"], ["outfits", "🎩 Dress up"]];
+type Tab = "badges" | "stickers" | "outfits";
+const TABS = [["badges", "🏆 Badges"], ["stickers", "✨ Stickers"], ["outfits", "🎩 Dress up"]] as const;
 
-export function TrophyScreen({ progress, onBack, onEquip }) {
-  const [tab, setTab] = useState("badges");
+export function TrophyScreen({ progress, onEquip }: { progress: Progress; onEquip: (who: "sol" | "luna", outfitId: string) => void }) {
+  const [tab, setTab] = useState<Tab>("badges");
   const badges = new Set(progress.badges || []);
   const stickers = new Set(progress.stickers || []);
   const outfits = new Set([...(progress.outfits || []), "none"]);
   const current = { sol: progress.solOutfit || "none", luna: progress.lunaOutfit || "none" };
-  const sortedBadges = [...BADGES].sort((a, b) => badges.has(b.id) - badges.has(a.id));
+  const sortedBadges = [...BADGES].sort((a, b) => Number(badges.has(b.id)) - Number(badges.has(a.id)));
 
   return <div>
     <div>
@@ -25,7 +27,7 @@ export function TrophyScreen({ progress, onBack, onEquip }) {
       {tab === "badges" && <>
         <p className="small muted text-center" style={{ marginBottom: 14 }}>{badges.size} of {BADGES.length} badges earned</p>
         <div className="grid-2">
-          {sortedBadges.map((b, i) => {
+          {sortedBadges.map(b => {
             const has = badges.has(b.id);
             return <Card key={b.id} pad={false} className={`trophy ${has ? "trophy--earned" : "trophy--locked"}`}>
               <div className="trophy__emoji">{b.emoji}</div>
@@ -57,7 +59,7 @@ export function TrophyScreen({ progress, onBack, onEquip }) {
           <div className="text-center"><div className="float"><Sol size={92} outfit={current.sol} /></div><div className="h3">Sol</div></div>
           <div className="text-center"><div className="float float--delay"><Luna size={92} mood="happy" outfit={current.luna} /></div><div className="h3">Luna</div></div>
         </Card>
-        {["sol", "luna"].map(who => <div key={who} style={{ marginBottom: 18 }}>
+        {(["sol", "luna"] as const).map(who => <div key={who} style={{ marginBottom: 18 }}>
           <div className="eyebrow" style={{ marginBottom: 8, color: who === "sol" ? "var(--sun-d)" : "var(--luna)" }}>{who === "sol" ? "☀️ Sol’s outfit" : "🌙 Luna’s outfit"}</div>
           <div className="grid-4">
             {OUTFITS.map(o => {

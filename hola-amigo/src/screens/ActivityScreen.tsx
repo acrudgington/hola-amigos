@@ -1,8 +1,13 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Icon } from "../components/Icon.tsx";
-import { surpriseFor, wordsForLessonsUpTo, wordsForWorld, worldOf } from "../content/index.ts";
-import { ACTIVITIES } from "../lib/journey.ts";
+import { surpriseFor, wordsForLessonsUpTo, wordsForWorld, worldOf, type Lesson, type Surprise, type Word, type World } from "../content/index.ts";
+import { ACTIVITIES, type ActivityType } from "../lib/journey.ts";
+import type { Mood } from "../lib/reactions.ts";
+import type { Journey } from "../state/nav.ts";
+import type { OnWord } from "../games/types.ts";
+
+export interface ActivityStats { micUses?: number; storiesRead?: number; noCount?: boolean }
 import { Button, Card, ProgressBar } from "../components/ui.tsx";
 import { Luna, Sol } from "../components/Mascots.tsx";
 import { BossBattle, ListenGame, Quiz, WarmUp } from "../games/ChoiceGames.tsx";
@@ -11,7 +16,7 @@ import { SentenceGame } from "../games/SentenceGame.tsx";
 import { StoryReader } from "../games/StoryReader.tsx";
 import { SayItGame } from "../games/SayItGame.tsx";
 
-function SurpriseCard({ surprise, onDone }) {
+function SurpriseCard({ surprise, onDone }: { surprise: Surprise; onDone: () => void }) {
   return <div className="text-center" style={{ animation: "bounce-in .4s var(--ease-spring)" }}>
     <div className="float" style={{ fontSize: 70 }}>{surprise.emoji}</div>
     <h3 className="h2" style={{ margin: "6px 0 14px" }}>{surprise.title}</h3>
@@ -22,9 +27,9 @@ function SurpriseCard({ surprise, onDone }) {
   </div>;
 }
 
-function FreeResult({ score, total, onRetry, onBack }) {
+function FreeResult({ score, total, onRetry, onBack }: { score: number; total: number; onRetry: () => void; onBack: () => void }) {
   const pct = total ? score / total : 1;
-  const tier = pct >= 0.8 ? { e: "🏆", t: "Amazing! Superstar!", m: "celebrate" } : pct >= 0.6 ? { e: "⭐", t: "Great job!", m: "happy" } : { e: "💪", t: "Keep practising!", m: "encourage" };
+  const tier: { e: string; t: string; m: Mood } = pct >= 0.8 ? { e: "🏆", t: "Amazing! Superstar!", m: "celebrate" } : pct >= 0.6 ? { e: "⭐", t: "Great job!", m: "happy" } : { e: "💪", t: "Keep practising!", m: "encourage" };
   return <div className="text-center" style={{ padding: "8px 0" }}>
     <div className="row row--center" style={{ gap: 6, marginBottom: 6 }}><Sol size={60} mood={tier.m === "happy" ? "wink" : tier.m} /><Luna size={56} mood={tier.m} /></div>
     <div style={{ fontSize: 54, animation: "bounce-in .5s var(--ease-spring)" }}>{tier.e}</div>
@@ -38,10 +43,14 @@ function FreeResult({ score, total, onRetry, onBack }) {
 }
 
 // One activity screen. Keyed by the parent, so a fresh key = a fresh game.
-export function ActivityScreen({ lesson, type, journey, combo = 0, sessionXp = 0, onExit, onFinish, onRetry, onWord }) {
-  const [result, setResult] = useState(null);
+interface ActivityScreenProps {
+  lesson: Lesson; type: ActivityType; journey: Journey | null; combo?: number; sessionXp?: number;
+  onExit: () => void; onFinish: (correct: number, total: number, stats?: ActivityStats) => void; onRetry: () => void; onWord: OnWord;
+}
+export function ActivityScreen({ lesson, type, journey, combo = 0, sessionXp = 0, onExit, onFinish, onRetry, onWord }: ActivityScreenProps) {
+  const [result, setResult] = useState<{ score: number; total: number } | null>(null);
   // Activity inputs are fixed for the life of this screen.
-  const [inputs] = useState(() => {
+  const [inputs] = useState((): { words?: Word[]; world?: World } => {
     if (type === "warmup") {
       const earlier = wordsForLessonsUpTo(Math.max(1, lesson.id - 1));
       return { words: earlier.length >= 4 ? earlier : lesson.words };
@@ -52,9 +61,9 @@ export function ActivityScreen({ lesson, type, journey, combo = 0, sessionXp = 0
     }
     return {};
   });
-  const meta = ACTIVITIES[type] || { title: type, emoji: "✨" };
+  const meta = ACTIVITIES[type];
 
-  const finish = (correct, total, stats) => {
+  const finish = (correct: number, total: number, stats?: ActivityStats) => {
     onFinish(correct, total, stats);
     if (!journey) {
       if (total > 0) setResult({ score: correct, total });
@@ -62,7 +71,7 @@ export function ActivityScreen({ lesson, type, journey, combo = 0, sessionXp = 0
     }
   };
   const common = { onWord };
-  const games = {
+  const games: Record<ActivityType, () => JSX.Element> = {
     learn: () => <LearnIntro words={lesson.words} {...common} onDone={() => finish(0, 0)} />,
     flash: () => <FlashCards words={lesson.words} cta={journey ? "Next →" : "⭐ I’ve learnt these!"} onDone={() => {
       lesson.words.forEach(w => onWord(w.es, w.en, true, { quiet: true }));
@@ -78,8 +87,8 @@ export function ActivityScreen({ lesson, type, journey, combo = 0, sessionXp = 0
     wordorder: () => <SentenceGame sentences={lesson.sentences} variant="wordorder" onDone={finish} />,
     story: () => <StoryReader story={lesson.story} onDone={(s, t) => finish(s, t, { storiesRead: 1 })} />,
     surprise: () => <SurpriseCard surprise={surpriseFor(lesson.id)} onDone={() => finish(0, 0, { noCount: true })} />,
-    warmup: () => <WarmUp words={inputs.words} {...common} onDone={finish} />,
-    boss: () => <BossBattle words={inputs.words} world={inputs.world} {...common} onDone={finish} />,
+    warmup: () => <WarmUp words={inputs.words ?? lesson.words} {...common} onDone={finish} />,
+    boss: () => <BossBattle words={inputs.words ?? lesson.words} world={inputs.world} {...common} onDone={finish} />,
   };
 
   return <div className="app-bg">

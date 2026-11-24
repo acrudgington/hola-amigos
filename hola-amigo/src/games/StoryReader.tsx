@@ -3,22 +3,26 @@ import { shuffle } from "../lib/utils.ts";
 import { speech } from "../lib/speech.ts";
 import { Button, Choices, Feedback } from "../components/ui.tsx";
 import { useLater } from "./hooks.ts";
+import type { Story } from "../content/index.ts";
+import type { OnDone } from "./types.ts";
+
+interface Opt { text: string; correct: boolean }
 
 // Split on sentence ends, but not inside quotes like "says '¡Hola!' to her".
-const splitSentences = para => para.split(/(?<=[.!?…]['’"]?)\s+(?=[A-Z¡¿'"‘“ÁÉÍÓÚÑ])/).map(s => s.trim()).filter(Boolean);
+const splitSentences = (para: string) => para.split(/(?<=[.!?…]['’"]?)\s+(?=[A-Z¡¿'"‘“ÁÉÍÓÚÑ])/).map(s => s.trim()).filter(Boolean);
 
 // A short illustrated story, read page by page, followed by questions.
-export function StoryReader({ story, onDone }) {
+export function StoryReader({ story, onDone }: { story: Story; onDone: OnDone }) {
   // BUGFIX: in the course data the right answer is ALWAYS the first option
   // (ans: 0 in all 300 questions), and the old reader never shuffled — so
   // "always tap the top one" won every time. Options are now shuffled.
   const [questions] = useState(() => (story?.qs || []).map(q => {
-    const opts = shuffle(q.opts.map((text, i) => ({ text, correct: i === q.ans })));
-    return { q: q.q, opts, answer: opts.find(o => o.correct).text };
+    const opts = shuffle<Opt>(q.opts.map((text, i) => ({ text, correct: i === q.ans })));
+    return { q: q.q, opts, answer: opts.find(o => o.correct)?.text ?? "" };
   }));
   const [page, setPage] = useState(0);
   const [qIdx, setQIdx] = useState(0);
-  const [picked, setPicked] = useState(null);
+  const [picked, setPicked] = useState<string | null>(null);
   const [active, setActive] = useState(-1);
   const [reading, setReading] = useState(false);
   const score = useRef(0);
@@ -36,7 +40,7 @@ export function StoryReader({ story, onDone }) {
       if (reading) { stop(); return; }
       const id = ++runId.current;
       setReading(true);
-      const readFrom = i => {
+      const readFrom = (i: number) => {
         if (id !== runId.current) return;
         if (i >= sentences.length) { setReading(false); setActive(-1); return; }
         setActive(i);
@@ -70,7 +74,7 @@ export function StoryReader({ story, onDone }) {
 
   const q = questions[qIdx];
   if (!q) return null;
-  const pick = o => {
+  const pick = (o: Opt) => {
     if (picked != null) return;
     if (o.correct) score.current += 1;
     setPicked(o.text);

@@ -1,5 +1,5 @@
 import type React from "react";
-// "Ask Sol" — a ⌘K command palette that searches every lesson and all 800 words.
+// "Ask Sol" — a ⌘K command palette that searches every lesson and every word in the course.
 // Words can be heard instantly; unlocked lessons open directly.
 import { useEffect, useMemo, useRef, useState } from "react";
 import { motion } from "framer-motion";

@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { db, getDueWords, liveStreak } from "../domain/progress.ts";
-import { countLessons, sumStars } from "../domain/progress.ts";
+import { countLessons, getDueWords, liveStreak, sumStars, type Progress } from "../domain/progress.ts";
+import { services, type Child, type Parent } from "../services/index.ts";
+import { useFamily } from "../state/useFamily.ts";
 import { LESSONS, WORLDS } from "../content/index.ts";
 import { Button, Card, Modal, ProgressBar } from "../components/ui.tsx";
 
-function ChildReport({ child, onRemove }) {
-  const p = db.getProgress(child.id);
+function ChildReport({ child, progress: p, onRemove }: { child: Child; progress: Progress; onRemove: (c: Child) => void }) {
   const stars = p.stars || {};
   const words = Object.values(p.wordMemory || {});
   const strong = words.filter(w => w.box >= 3).length;
@@ -13,7 +13,7 @@ function ChildReport({ child, onRemove }) {
   const daysAgo = p.lastActive ? Math.floor((Date.now() - p.lastActive) / 86400000) : null;
   const active = daysAgo == null ? "Not started yet" : daysAgo === 0 ? "Active today" : daysAgo === 1 ? "Active yesterday" : `Last seen ${daysAgo} days ago`;
   const perfect = Object.values(stars).filter(s => s === 3).length;
-  const started = WORLDS.filter(w => Object.keys(stars).some(id => id >= w.range[0] && id <= w.range[1]) || w.id === 1);
+  const started = WORLDS.filter(w => Object.keys(stars).map(Number).some(id => id >= w.range[0] && id <= w.range[1]) || w.id === 1);
 
   return <Card style={{ marginBottom: 16 }}>
     <div className="row" style={{ marginBottom: 16 }}>
@@ -55,11 +55,11 @@ function ChildReport({ child, onRemove }) {
   </Card>;
 }
 
-export function ParentDashboard({ parent, onBack }) {
-  const [toRemove, setToRemove] = useState(null);
-  const [, force] = useState(0);
-  const children = db.getChildrenOf(parent.email);
-  const remove = () => { db.deleteChild(toRemove.id); setToRemove(null); force(x => x + 1); };
+export function ParentDashboard({ parent, onBack }: { parent: Parent; onBack: () => void }) {
+  const [toRemove, setToRemove] = useState<Child | null>(null);
+  const { family, reload } = useFamily(parent.id);
+  const children = family ?? [];
+  const remove = async () => { if (!toRemove) return; await services.family.removeChild(toRemove.id); setToRemove(null); await reload(); };
 
   return <div className="app-bg">
     <div className="page">
@@ -70,7 +70,7 @@ export function ParentDashboard({ parent, onBack }) {
         <p className="muted small" style={{ marginTop: 4 }}>{children.length} {children.length === 1 ? "learner" : "learners"} · {parent.name}</p>
       </div>
       {children.length === 0 && <Card className="text-center"><div style={{ fontSize: 44 }}>👶</div><p className="muted">No learners yet — add one to start tracking progress.</p></Card>}
-      {children.map(c => <ChildReport key={c.id} child={c} onRemove={setToRemove} />)}
+      {children.map(({ child, progress }) => <ChildReport key={child.id} child={child} progress={progress} onRemove={setToRemove} />)}
     </div>
     {toRemove && <Modal onClose={() => setToRemove(null)} labelledBy="rm-title">
       <div className="text-center">

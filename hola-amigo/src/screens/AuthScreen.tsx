@@ -1,20 +1,22 @@
-import { useState } from "react";
-import { db } from "../domain/progress.ts";
+import { useState, type FormEvent } from "react";
+import { ALL_WORDS, LESSONS } from "../content/index.ts";
+import { services, type Parent } from "../services/index.ts";
 import { motion } from "framer-motion";
 import { Button, Field, Segmented } from "../components/ui.tsx";
 import { Luna, Sol } from "../components/Mascots.tsx";
 
-export function AuthScreen({ onLogin }) {
-  const [mode, setMode] = useState("login");
+type Mode = "login" | "signup";
+export function AuthScreen({ onLogin }: { onLogin: (p: Parent) => void }) {
+  const [mode, setMode] = useState<Mode>("login");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
 
-  const switchMode = m => { setMode(m); setError(""); };
+  const switchMode = (m: Mode) => { setMode(m); setError(""); };
 
-  const submit = async e => {
+  const submit = async (e: FormEvent) => {
     e.preventDefault();
     if (busy) return;
     setError("");
@@ -25,13 +27,13 @@ export function AuthScreen({ onLogin }) {
     try {
       if (mode === "signup") {
         if (pass.length < 6) return setError("Password needs at least 6 characters.");
-        const parent = await db.createParent(name.trim(), em, pass);
-        if (!parent) return setError("An account with this email already exists — try logging in!");
-        onLogin(parent);
+        const res = await services.auth.signUp(name.trim(), em, pass);
+        if (!res.ok) return setError(res.error);
+        onLogin(res.parent);
       } else {
-        const res = await db.login(em, pass);
-        if (typeof res === "string") return setError(res);
-        onLogin(res);
+        const res = await services.auth.logIn(em, pass);
+        if (!res.ok) return setError(res.error);
+        onLogin(res.parent);
       }
     } finally {
       setBusy(false);
@@ -47,7 +49,7 @@ export function AuthScreen({ onLogin }) {
             <div className="float float--delay"><Luna size={78} mood="happy" /></div>
           </div>
           <h1 className="h1" style={{ fontSize: 46 }}>¡Hola, <span className="gradient-text">Amigo!</span></h1>
-          <p className="muted" style={{ marginTop: 6 }}>Spanish adventures for curious kids · 100 lessons · 800 words</p>
+          <p className="muted" style={{ marginTop: 6 }}>Spanish adventures for curious kids · {LESSONS.length} lessons · {ALL_WORDS.length} words</p>
         </div>
 
         <motion.form className="card card--pad-lg" onSubmit={submit} noValidate initial={{ opacity: 0, y: 30, scale: 0.96 }} animate={{ opacity: 1, y: 0, scale: 1 }} transition={{ type: "spring", stiffness: 220, damping: 22, delay: 0.1 }}>

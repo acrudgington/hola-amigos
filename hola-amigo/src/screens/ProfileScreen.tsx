@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
 import { LESSONS } from "../content/index.ts";
-import { levelInfo, levelTitle, liveStreak } from "../domain/progress.ts";
-import { countLessons, sumStars } from "../domain/progress.ts";
+import { countLessons, levelInfo, levelTitle, liveStreak, sumStars, type Progress } from "../domain/progress.ts";
+import type { Child, Parent } from "../services/index.ts";
 import { Button, Card, ProgressBar } from "../components/ui.tsx";
 import { AnimatedNumber, LevelRing, MasteryCard, StreakCard, WeeklyChart } from "../components/Widgets.tsx";
 
 // "Me" — the child's personal stats dashboard.
-export function ProfileScreen({ child, parent, progress, onTrophies, onSwitchChild }) {
+export function ProfileScreen({ child, parent, progress, onTrophies, onSwitchChild }: { child: Child; parent: Parent; progress: Progress; onTrophies: () => void; onSwitchChild: () => void }) {
   const lessons = countLessons(progress);
   const words = Object.keys(progress.wordMemory || {}).length;
   const pct = lessons / LESSONS.length;

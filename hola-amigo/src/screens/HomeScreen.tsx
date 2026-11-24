@@ -1,8 +1,10 @@
 // Home: a kid-friendly "mission control" bento dashboard + the Journey map.
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { LESSONS, WORLDS, isMilestone, lessonsInWorld, worldOf } from "../content/index.ts";
-import { getDaily, levelInfo, liveStreak, weekXP } from "../domain/progress.ts";
+import { LESSONS, WORLDS, isMilestone, lessonsInWorld, worldOf, type Lesson, type World } from "../content/index.ts";
+import { getDaily, levelInfo, liveStreak, maxCompleted, sumStars, weekXP, type Progress } from "../domain/progress.ts";
+import type { MissionStep } from "../lib/mission.ts";
+import type { Child } from "../services/index.ts";
 import { darken } from "../lib/utils.ts";
 import { Stars } from "../components/ui.tsx";
 import { Icon } from "../components/Icon.tsx";
@@ -11,20 +13,18 @@ import { ActivityFeed, AgentPanel, KpiTile, MasteryCard, QuestsCard, WeeklyChart
 
 const EASE = [0.22, 1, 0.36, 1];
 
-// Highest lesson id with at least one star (0 if none).
-export const maxCompleted = stars => Object.keys(stars).reduce((m, id) => Math.max(m, Number(id)), 0);
 
-function greetingFor(name) {
+function greetingFor(name: string) {
   const h = new Date().getHours();
   return h < 12 ? `¡Buenos días, ${name}!` : h < 19 ? `¡Buenas tardes, ${name}!` : `¡Buenas noches, ${name}!`;
 }
 
-function NextCard({ lesson, label, onClick }) {
+function NextCard({ lesson, label, onClick }: { lesson: Lesson; label: string; onClick: () => void }) {
   const world = worldOf(lesson.id);
   const c = world?.color || "#7C6CF2";
   return <motion.button type="button" className="next-card" onClick={onClick} style={{ "--c1": c, "--edge-c": darken(c, 0.68) }}
     initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: EASE, delay: 0.05 }} whileHover={{ y: -3 }}>
-    <div className="next-card__scene"><WorldScene world={world} height={110} /></div>
+    <div className="next-card__scene">{world && <WorldScene world={world} height={110} />}</div>
     <div className="next-card__top"><span className="next-card__tag">{label}</span></div>
     <div className="row" style={{ position: "relative", gap: 14 }}>
       <motion.div className="next-card__emoji" aria-hidden="true" animate={{ rotate: [0, -6, 6, 0], y: [0, -3, 0] }} transition={{ duration: 2.6, repeat: Infinity, repeatDelay: 1.2 }}>
@@ -44,7 +44,8 @@ function NextCard({ lesson, label, onClick }) {
 }
 
 // One world's winding path of lesson stones.
-function WorldPath({ world, stars, unlockedUpTo, currentId, onStart }) {
+interface MapProps { stars: Record<string, number>; unlockedUpTo: number; currentId: number | null; onStart: (l: Lesson) => void }
+function WorldPath({ world, stars, unlockedUpTo, currentId, onStart }: MapProps & { world: World }) {
   const lessons = lessonsInWorld(world);
   const earned = lessons.reduce((a, l) => a + (stars[l.id] || 0), 0);
   const max = lessons.length * 3;
@@ -53,7 +54,7 @@ function WorldPath({ world, stars, unlockedUpTo, currentId, onStart }) {
   const height = lessons.length * GAP + TOP + BOTTOM;
   const xs = [50, 76, 50, 24];
   const stones = lessons.map((l, i) => ({ l, x: xs[i % 4], y: TOP + (i + 0.5) * GAP }));
-  const pathTo = n => stones.slice(0, n).reduce((d, p, i) => {
+  const pathTo = (n: number) => stones.slice(0, n).reduce((d, p, i) => {
     if (!i) return `M ${p.x} ${p.y}`;
     const prev = stones[i - 1], mid = (prev.y + p.y) / 2;
     return `${d} C ${prev.x} ${mid}, ${p.x} ${mid}, ${p.x} ${p.y}`;
@@ -112,13 +113,13 @@ function WorldPath({ world, stars, unlockedUpTo, currentId, onStart }) {
   </div>;
 }
 
-function Journey({ stars, unlockedUpTo, currentId, onStart }) {
+function Journey({ stars, unlockedUpTo, currentId, onStart }: MapProps) {
   const currentWorld = worldOf(currentId || unlockedUpTo) || WORLDS[0];
   const [wid, setWid] = useState(currentWorld.id);
-  const world = WORLDS.find(w => w.id === wid);
-  const tabs = useRef(null);
+  const world = WORLDS.find(w => w.id === wid) ?? WORLDS[0];
+  const tabs = useRef<HTMLDivElement>(null);
   useEffect(() => { tabs.current?.querySelector('[aria-selected="true"]')?.scrollIntoView({ inline: "center", block: "nearest" }); }, [wid]);
-  const go = d => setWid(id => Math.min(WORLDS.length, Math.max(1, id + d)));
+  const go = (d: number) => setWid(id => Math.min(WORLDS.length, Math.max(1, id + d)));
 
   return <section className="card journey" aria-label="Journey map">
     <div className="journey__head">
@@ -154,7 +155,10 @@ function Journey({ stars, unlockedUpTo, currentId, onStart }) {
   </section>;
 }
 
-export function HomeScreen({ child, progress, onStartLesson, onOpenLesson, onClaim, onSearch, onMission }) {
+export function HomeScreen({ child, progress, onStartLesson, onOpenLesson, onClaim, onSearch, onMission }: {
+  child: Child; progress: Progress; onStartLesson: (l: Lesson) => void; onOpenLesson: (l: Lesson) => void;
+  onClaim: () => void; onSearch: () => void; onMission: (s: MissionStep) => void;
+}) {
   const stars = progress.stars || {};
   const done = maxCompleted(stars);
   const unlockedUpTo = Math.min(LESSONS.length, done + 1);
@@ -162,7 +166,7 @@ export function HomeScreen({ child, progress, onStartLesson, onOpenLesson, onCla
   const allDone = done >= LESSONS.length && stars[current.id] > 0;
   const week = weekXP(progress);
   const today = week[6].xp;
-  const words = Object.values(progress.wordMemory || {});
+  const words = Object.values(progress.wordMemory);
   const strong = words.filter(w => w.box >= 3).length;
   const daily = getDaily(progress);
   const streak = liveStreak(progress);

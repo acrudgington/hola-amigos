@@ -1,10 +1,10 @@
-import { worldOf } from "../content/index.ts";
-import { ACTIVITIES, practiceList } from "../lib/journey.ts";
+import { worldOf, type Lesson } from "../content/index.ts";
+import { ACTIVITIES, practiceList, type ActivityType } from "../lib/journey.ts";
 import { tint } from "../lib/utils.ts";
 import { Button, Card, SpeakButton, Stars } from "../components/ui.tsx";
 
 // Lesson page: today's phrase, a fun fact, the guided lesson, and free practice.
-export function LessonScreen({ lesson, stars, onBack, onStart, onPractice }) {
+export function LessonScreen({ lesson, stars, onBack, onStart, onPractice }: { lesson: Lesson; stars: number; onBack: () => void; onStart: () => void; onPractice: (a: ActivityType) => void }) {
   const world = worldOf(lesson.id);
   return <div className="app-bg">
     <div className="page">

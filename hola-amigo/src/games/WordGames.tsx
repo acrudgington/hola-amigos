@@ -252,7 +252,7 @@ export function OddOneOut({ words, onDone, onWord }: GameProps & { words: Word[]
     }).filter((r): r is { items: OddItem[]; odd: Word } => r !== null);
   });
   const [idx, setIdx] = useState(0);
-  const [picked, setPicked] = useState(null);
+  const [picked, setPicked] = useState<string | null>(null);
   const score = useRef(0);
   const later = useLater();
   const round = rounds[idx];

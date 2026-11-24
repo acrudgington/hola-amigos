@@ -1,6 +1,8 @@
-import { useState } from "react";
-import { db, liveStreak } from "../domain/progress.ts";
-import { countLessons, sumStars } from "../domain/progress.ts";
+import { useState, type FormEvent } from "react";
+import { countLessons, liveStreak, sumStars } from "../domain/progress.ts";
+import { services, type Child, type Parent } from "../services/index.ts";
+import { useFamily } from "../state/useFamily.ts";
+import type { Prefs } from "../lib/prefs.ts";
 import { motion } from "framer-motion";
 import { Button, Card, Field, Modal } from "../components/ui.tsx";
 import { PrefToggles } from "../components/Shell.tsx";
@@ -8,11 +10,11 @@ import { Luna, Sol } from "../components/Mascots.tsx";
 
 export const AVATARS = ["🦊", "🐼", "🦄", "🐯", "🐶", "🐱", "🐰", "🐸", "🦁", "🐻", "🐨", "🐵", "🦉", "🐢", "🐙", "🦋"];
 
-function AddChildModal({ onClose, onAdd }) {
+function AddChildModal({ onClose, onAdd }: { onClose: () => void; onAdd: (name: string, avatar: string) => void }) {
   const [name, setName] = useState("");
   const [avatar, setAvatar] = useState(AVATARS[0]);
   const [error, setError] = useState("");
-  const submit = e => {
+  const submit = (e: FormEvent) => {
     e.preventDefault();
     if (!name.trim()) return setError("Please type a name!");
     onAdd(name.trim(), avatar);
@@ -35,11 +37,11 @@ function AddChildModal({ onClose, onAdd }) {
   </Modal>;
 }
 
-export function FamilyScreen({ parent, onPickChild, onDashboard, onLogout, prefs, onToggle }) {
+export function FamilyScreen({ parent, onPickChild, onDashboard, onLogout, prefs, onToggle }: { parent: Parent; onPickChild: (c: Child) => void; onDashboard: () => void; onLogout: () => void; prefs?: Prefs; onToggle?: (key: keyof Prefs) => void }) {
   const [showAdd, setShowAdd] = useState(false);
-  const [, force] = useState(0);
-  const children = db.getChildrenOf(parent.email);
-  const add = (name, avatar) => { db.createChild(parent.email, name, avatar); setShowAdd(false); force(x => x + 1); };
+  const { family, reload } = useFamily(parent.id);
+  const add = async (name: string, avatar: string) => { await services.family.addChild(parent.id, name, avatar); setShowAdd(false); await reload(); };
+  const children = family ?? [];
 
   return <div className="app-bg">
     <div className="page">
@@ -52,8 +54,7 @@ export function FamilyScreen({ parent, onPickChild, onDashboard, onLogout, prefs
       </div>
 
       <div className="grid-2" style={{ gap: 14, marginBottom: 22 }}>
-        {children.map((c, i) => {
-          const p = db.getProgress(c.id);
+        {children.map(({ child: c, progress: p }, i) => {
           const streak = liveStreak(p);
           return <motion.div key={c.id} initial={{ opacity: 0, y: 24, scale: 0.9 }} animate={{ opacity: 1, y: 0, scale: 1 }} transition={{ delay: i * 0.07, type: "spring", stiffness: 260, damping: 20 }}>
           <Card as="button" type="button" pad={false} className="profile-tile" onClick={() => onPickChild(c)}>
@@ -73,7 +74,7 @@ export function FamilyScreen({ parent, onPickChild, onDashboard, onLogout, prefs
       <div className="stack">
         {children.length > 0 && <Button variant="luna" block onClick={onDashboard}>📊 Grown-up dashboard</Button>}
         <Button block onClick={onLogout}>Log out</Button>
-        {prefs && <PrefToggles prefs={prefs} onToggle={onToggle} />}
+        {prefs && onToggle && <PrefToggles prefs={prefs} onToggle={onToggle} />}
       </div>
     </div>
     {showAdd && <AddChildModal onClose={() => setShowAdd(false)} onAdd={add} />}
