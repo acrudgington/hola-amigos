@@ -27,8 +27,10 @@ async function playThrough(page: Page) {
       if (await check.isEnabled().catch(() => false) && await tap(check)) await page.waitForTimeout(2300);
       continue;
     }
-    const choice = page.locator(".choice:not([disabled])").first();
-    if (await choice.count()) { await tap(choice); await page.waitForTimeout(1150); continue; }
+    // Pick a random answer (tapping the same one forever would never make a pair in Matching).
+    const choices = page.locator(".choice:not([disabled])");
+    const n = await choices.count();
+    if (n) { await tap(choices.nth(Math.floor(Math.random() * n))); await page.waitForTimeout(650); continue; }
     const learnt = page.getByRole("button", { name: /I’ve learnt/ });
     if (await learnt.count()) { await tap(learnt); continue; }
     await page.waitForTimeout(250);
