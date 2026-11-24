@@ -1,0 +1,230 @@
+[
+  {
+    "id": 1,
+    "name": "Starter Island",
+    "emoji": "🏝️",
+    "color": "#FF9F45",
+    "desc": "First words & vocab",
+    "range": [
+      1,
+      8
+    ],
+    "deco": [
+      "🌴",
+      "🐚",
+      "☀️",
+      "🌊"
+    ],
+    "scene": "island",
+    "tint": "#FFF3E0"
+  },
+  {
+    "id": 2,
+    "name": "Word Town",
+    "emoji": "🏘️",
+    "color": "#5BC98A",
+    "desc": "More vocab + A1 Challenge!",
+    "range": [
+      9,
+      16
+    ],
+    "deco": [
+      "🏡",
+      "🌳",
+      "🌷",
+      "🐦"
+    ],
+    "scene": "town",
+    "tint": "#E9F8EE"
+  },
+  {
+    "id": 3,
+    "name": "Sentence City",
+    "emoji": "🏙️",
+    "color": "#4D96FF",
+    "desc": "Sentences & grammar!",
+    "range": [
+      17,
+      24
+    ],
+    "deco": [
+      "🏢",
+      "🚕",
+      "🚦",
+      "🌆"
+    ],
+    "scene": "city",
+    "tint": "#E6F0FF"
+  },
+  {
+    "id": 4,
+    "name": "Story Land",
+    "emoji": "📖",
+    "color": "#B06BE0",
+    "desc": "Past, future + A2 Final!",
+    "range": [
+      25,
+      32
+    ],
+    "deco": [
+      "📖",
+      "✨",
+      "🕯️",
+      "🦉"
+    ],
+    "scene": "story",
+    "tint": "#F4EBFC"
+  },
+  {
+    "id": 5,
+    "name": "Plaza del Pueblo",
+    "emoji": "⛲",
+    "color": "#FF7EB0",
+    "desc": "Town life & vocabulary!",
+    "range": [
+      33,
+      40
+    ],
+    "deco": [
+      "⛲",
+      "🌺",
+      "🕊️",
+      "🎏"
+    ],
+    "scene": "plaza",
+    "tint": "#FFEDF4"
+  },
+  {
+    "id": 6,
+    "name": "Puente de Expresiones",
+    "emoji": "🌉",
+    "color": "#F5B700",
+    "desc": "Express yourself!",
+    "range": [
+      41,
+      50
+    ],
+    "deco": [
+      "🌉",
+      "💬",
+      "🎈",
+      "🌤️"
+    ],
+    "scene": "bridge",
+    "tint": "#FFF7DB"
+  },
+  {
+    "id": 7,
+    "name": "Storyteller's Castle",
+    "emoji": "🏰",
+    "color": "#FF6363",
+    "desc": "Tell stories & give advice!",
+    "range": [
+      51,
+      60
+    ],
+    "deco": [
+      "🏰",
+      "🛡️",
+      "👑",
+      "🐉"
+    ],
+    "scene": "castle",
+    "tint": "#FFEBEB"
+  },
+  {
+    "id": 8,
+    "name": "Vida Diaria",
+    "emoji": "🏠",
+    "color": "#FF8A5B",
+    "desc": "Daily home life!",
+    "range": [
+      61,
+      68
+    ],
+    "deco": [
+      "🏠",
+      "🍳",
+      "🛋️",
+      "🌻"
+    ],
+    "scene": "home",
+    "tint": "#FFEFE8"
+  },
+  {
+    "id": 9,
+    "name": "Cosas que Hago",
+    "emoji": "🎮",
+    "color": "#3FB4C9",
+    "desc": "Actions, toys & games!",
+    "range": [
+      69,
+      76
+    ],
+    "deco": [
+      "🎮",
+      "⚽",
+      "🎨",
+      "🪁"
+    ],
+    "scene": "play",
+    "tint": "#E4F7FA"
+  },
+  {
+    "id": 10,
+    "name": "El Mundo Alrededor",
+    "emoji": "🌍",
+    "color": "#54B678",
+    "desc": "Animals, nature & space!",
+    "range": [
+      77,
+      84
+    ],
+    "deco": [
+      "🌍",
+      "🦋",
+      "🌲",
+      "🚀"
+    ],
+    "scene": "nature",
+    "tint": "#E7F6EC"
+  },
+  {
+    "id": 11,
+    "name": "Cómo Soy",
+    "emoji": "👤",
+    "color": "#8B7BE8",
+    "desc": "Who I am — me, family, school!",
+    "range": [
+      85,
+      92
+    ],
+    "deco": [
+      "👤",
+      "👨‍👩‍👧",
+      "🎒",
+      "💜"
+    ],
+    "scene": "self",
+    "tint": "#EEEBFC"
+  },
+  {
+    "id": 12,
+    "name": "Repaso Total",
+    "emoji": "🌟",
+    "color": "#FFB627",
+    "desc": "Big review of everything!",
+    "range": [
+      93,
+      100
+    ],
+    "deco": [
+      "🌟",
+      "🏆",
+      "🎉",
+      "🌈"
+    ],
+    "scene": "stars",
+    "tint": "#FFF6DE"
+  }
+]

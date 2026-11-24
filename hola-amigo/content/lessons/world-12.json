@@ -1,0 +1,1136 @@
+{
+  "world": 12,
+  "lessons": [
+    {
+      "id": 93,
+      "title": "Repaso: Saludos y números",
+      "subtitle": "Greetings + numbers 1-50",
+      "emoji": "🔢",
+      "milestone": false,
+      "funFact": "In Spain, you say 'veintiuno' (21), 'veintidós' (22) — one word, not two!",
+      "phrase": {
+        "es": "Hola, encantado. Tengo treinta amigos.",
+        "en": "Hello, pleased to meet you. I have thirty friends."
+      },
+      "words": [
+        {
+          "es": "Veinte",
+          "en": "Twenty",
+          "say": "BEYN-teh",
+          "emoji": "2️⃣0️⃣"
+        },
+        {
+          "es": "Treinta",
+          "en": "Thirty",
+          "say": "TREYN-tah",
+          "emoji": "3️⃣0️⃣"
+        },
+        {
+          "es": "Cuarenta",
+          "en": "Forty",
+          "say": "kwah-REN-tah",
+          "emoji": "4️⃣0️⃣"
+        },
+        {
+          "es": "Cincuenta",
+          "en": "Fifty",
+          "say": "theen-KWEN-tah",
+          "emoji": "5️⃣0️⃣"
+        },
+        {
+          "es": "Encantado",
+          "en": "Pleased to meet you (m)",
+          "say": "en-kahn-TAH-do",
+          "emoji": "🤝"
+        },
+        {
+          "es": "Encantada",
+          "en": "Pleased to meet you (f)",
+          "say": "en-kahn-TAH-dah",
+          "emoji": "🤝"
+        },
+        {
+          "es": "Hasta luego",
+          "en": "See you later",
+          "say": "AHS-tah LWEH-go",
+          "emoji": "👋"
+        },
+        {
+          "es": "Hasta mañana",
+          "en": "See you tomorrow",
+          "say": "AHS-tah mah-NYAH-nah",
+          "emoji": "📅"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Tengo",
+            "veinte",
+            "años"
+          ],
+          "shuffle": [
+            "años",
+            "veinte",
+            "Tengo"
+          ],
+          "en": "I'm twenty years old."
+        },
+        {
+          "correct": [
+            "Hasta",
+            "luego",
+            "amigo"
+          ],
+          "shuffle": [
+            "amigo",
+            "luego",
+            "Hasta"
+          ],
+          "en": "See you later friend."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "The Big Reunion",
+        "paras": [
+          "¡Hola a todos! Sol greets everyone. 'Encantado!' he says to a new face.",
+          "He counts his amigos — uno, dos… ¡veinte amigos! Treinta primos! Cuarenta peluches en casa.",
+          "'¡Hasta mañana!' shout the friends. ¡Qué fiesta tan grande!"
+        ],
+        "qs": [
+          {
+            "q": "How does Sol greet a new person?",
+            "opts": [
+              "Encantado",
+              "Adiós",
+              "Buenas noches"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How many friends does Sol have?",
+            "opts": [
+              "Twenty",
+              "Ten",
+              "Fifty"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How many cousins?",
+            "opts": [
+              "Thirty",
+              "Twenty",
+              "Forty"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 94,
+      "title": "Repaso: Colores y formas",
+      "subtitle": "Colours + shapes",
+      "emoji": "⭐",
+      "milestone": false,
+      "funFact": "In Spanish, you say 'azul claro' for light blue and 'azul oscuro' for dark blue!",
+      "phrase": {
+        "es": "Veo una estrella amarilla y un corazón rojo.",
+        "en": "I see a yellow star and a red heart."
+      },
+      "words": [
+        {
+          "es": "El círculo",
+          "en": "Circle",
+          "say": "el THEER-koo-lo",
+          "emoji": "⭕"
+        },
+        {
+          "es": "El cuadrado",
+          "en": "Square",
+          "say": "el kwah-DRAH-do",
+          "emoji": "⬜"
+        },
+        {
+          "es": "El triángulo",
+          "en": "Triangle",
+          "say": "el tree-AHN-goo-lo",
+          "emoji": "🔺"
+        },
+        {
+          "es": "El rectángulo",
+          "en": "Rectangle",
+          "say": "el rek-TAHN-goo-lo",
+          "emoji": "▭"
+        },
+        {
+          "es": "La estrella",
+          "en": "Star",
+          "say": "la es-TREH-yah",
+          "emoji": "⭐"
+        },
+        {
+          "es": "El corazón",
+          "en": "Heart",
+          "say": "el ko-rah-THON",
+          "emoji": "❤️"
+        },
+        {
+          "es": "Claro",
+          "en": "Light (colour)",
+          "say": "KLAH-ro",
+          "emoji": "💡"
+        },
+        {
+          "es": "Oscuro",
+          "en": "Dark (colour)",
+          "say": "os-KOO-ro",
+          "emoji": "⚫"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "El",
+            "cuadrado",
+            "es",
+            "azul",
+            "oscuro"
+          ],
+          "shuffle": [
+            "oscuro",
+            "azul",
+            "El",
+            "cuadrado",
+            "es"
+          ],
+          "en": "The square is dark blue."
+        },
+        {
+          "correct": [
+            "Mi",
+            "corazón",
+            "favorito",
+            "es",
+            "rosa"
+          ],
+          "shuffle": [
+            "rosa",
+            "favorito",
+            "Mi",
+            "corazón",
+            "es"
+          ],
+          "en": "My favourite heart is pink."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "The Shapes Show",
+        "paras": [
+          "Luna draws muchas formas. Un círculo grande, un cuadrado azul claro, un triángulo verde.",
+          "Sol adds un corazón rojo and una estrella amarilla. They make a beautiful painting.",
+          "'Mi favorita es la estrella oscura,' says Luna. 'Yo prefiero el corazón.' Both are happy."
+        ],
+        "qs": [
+          {
+            "q": "What does Luna draw first?",
+            "opts": [
+              "A big circle",
+              "A heart",
+              "A star"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What colour is the heart?",
+            "opts": [
+              "Red",
+              "Blue",
+              "Green"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What is Luna's favourite?",
+            "opts": [
+              "The dark star",
+              "The heart",
+              "The circle"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 95,
+      "title": "Repaso: Comida y sabores",
+      "subtitle": "Food + flavours",
+      "emoji": "🍕",
+      "milestone": false,
+      "funFact": "Spain is famous for 'tapas' — small plates of food shared between friends!",
+      "phrase": {
+        "es": "El chocolate es dulce y delicioso.",
+        "en": "Chocolate is sweet and delicious."
+      },
+      "words": [
+        {
+          "es": "Dulce",
+          "en": "Sweet",
+          "say": "DOOL-theh",
+          "emoji": "🍭"
+        },
+        {
+          "es": "Salado",
+          "en": "Salty",
+          "say": "sah-LAH-do",
+          "emoji": "🧂"
+        },
+        {
+          "es": "Ácido",
+          "en": "Sour",
+          "say": "AH-thee-do",
+          "emoji": "🍋"
+        },
+        {
+          "es": "Amargo",
+          "en": "Bitter",
+          "say": "ah-MAR-go",
+          "emoji": "☕"
+        },
+        {
+          "es": "Picante",
+          "en": "Spicy",
+          "say": "pee-KAHN-teh",
+          "emoji": "🌶️"
+        },
+        {
+          "es": "Caliente",
+          "en": "Hot (temperature)",
+          "say": "kah-LYEN-teh",
+          "emoji": "🔥"
+        },
+        {
+          "es": "Frío",
+          "en": "Cold",
+          "say": "FREE-oh",
+          "emoji": "❄️"
+        },
+        {
+          "es": "Delicioso",
+          "en": "Delicious",
+          "say": "deh-lee-THYOH-so",
+          "emoji": "😋"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "El",
+            "limón",
+            "es",
+            "muy",
+            "ácido"
+          ],
+          "shuffle": [
+            "ácido",
+            "limón",
+            "El",
+            "muy",
+            "es"
+          ],
+          "en": "The lemon is very sour."
+        },
+        {
+          "correct": [
+            "Me",
+            "encanta",
+            "la",
+            "pizza",
+            "caliente"
+          ],
+          "shuffle": [
+            "caliente",
+            "la",
+            "Me",
+            "pizza",
+            "encanta"
+          ],
+          "en": "I love hot pizza."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "The Flavour Adventure",
+        "paras": [
+          "Sol y Luna try many flavours. Sol tastes un limón — '¡Ácido!' Then chocolate — 'Dulce!'",
+          "Luna tries un chile picante — '¡Necesito agua!' Then helado frío — 'Delicioso!'",
+          "They agree: la comida is muy interesante. ¡Cuántos sabores diferentes!"
+        ],
+        "qs": [
+          {
+            "q": "What does Sol say about the lemon?",
+            "opts": [
+              "Sour",
+              "Sweet",
+              "Salty"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Luna need after the chili?",
+            "opts": [
+              "Water",
+              "Milk",
+              "Bread"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What is the ice cream?",
+            "opts": [
+              "Delicious",
+              "Bitter",
+              "Hot"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 96,
+      "title": "Repaso: Familia y casa",
+      "subtitle": "Family + home expanded",
+      "emoji": "🏠",
+      "milestone": false,
+      "funFact": "Spanish families often eat lunch together at 2pm and dinner at 9pm — meals are sacred!",
+      "phrase": {
+        "es": "Quiero a mi familia y cenamos juntos.",
+        "en": "I love my family and we dine together."
+      },
+      "words": [
+        {
+          "es": "Vivir",
+          "en": "To live",
+          "say": "bee-BEER",
+          "emoji": "🏠"
+        },
+        {
+          "es": "La habitación",
+          "en": "Room",
+          "say": "la ah-bee-tah-THYON",
+          "emoji": "🚪"
+        },
+        {
+          "es": "Compartir",
+          "en": "To share",
+          "say": "kom-par-TEER",
+          "emoji": "🤝"
+        },
+        {
+          "es": "Juntos",
+          "en": "Together",
+          "say": "HOON-tos",
+          "emoji": "👨‍👩‍👧‍👦"
+        },
+        {
+          "es": "Querer",
+          "en": "To love (people)",
+          "say": "keh-REHR",
+          "emoji": "❤️"
+        },
+        {
+          "es": "Cuidar",
+          "en": "To take care of",
+          "say": "kwee-DAR",
+          "emoji": "🤗"
+        },
+        {
+          "es": "Cenar juntos",
+          "en": "To dine together",
+          "say": "theh-NAR HOON-tos",
+          "emoji": "🍽️"
+        },
+        {
+          "es": "Mi familia",
+          "en": "My family",
+          "say": "mee fah-MEE-lyah",
+          "emoji": "👨‍👩‍👧"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Vivimos",
+            "en",
+            "una",
+            "casa",
+            "grande"
+          ],
+          "shuffle": [
+            "grande",
+            "casa",
+            "Vivimos",
+            "una",
+            "en"
+          ],
+          "en": "We live in a big house."
+        },
+        {
+          "correct": [
+            "Comparto",
+            "una",
+            "habitación",
+            "con",
+            "mi",
+            "hermana"
+          ],
+          "shuffle": [
+            "hermana",
+            "habitación",
+            "Comparto",
+            "con",
+            "mi",
+            "una"
+          ],
+          "en": "I share a room with my sister."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "Family at Home",
+        "paras": [
+          "Sol y Luna viven en una casa grande. Comparten una habitación con su hermana.",
+          "Mamá y papá cuidan a todos. They cenan juntos every night at las ocho.",
+          "'Quiero mucho a mi familia,' says Sol. ¡La familia es lo más importante!"
+        ],
+        "qs": [
+          {
+            "q": "Who do they share a room with?",
+            "opts": [
+              "Their sister",
+              "Their brother",
+              "Their cousin"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "When do they dine together?",
+            "opts": [
+              "Every night at eight",
+              "Every morning",
+              "Sometimes"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Sol say is most important?",
+            "opts": [
+              "Family",
+              "Toys",
+              "School"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 97,
+      "title": "Repaso: Tiempo y estaciones",
+      "subtitle": "Weather + seasons + time",
+      "emoji": "⏰",
+      "milestone": false,
+      "funFact": "Spain has 'siesta' — a tradition where people take a nap after lunch in the hottest months!",
+      "phrase": {
+        "es": "Hoy hace buen tiempo y mañana también.",
+        "en": "Today the weather is nice and tomorrow too."
+      },
+      "words": [
+        {
+          "es": "Hoy",
+          "en": "Today",
+          "say": "OY",
+          "emoji": "📅"
+        },
+        {
+          "es": "Mañana",
+          "en": "Tomorrow",
+          "say": "mah-NYAH-nah",
+          "emoji": "➡️"
+        },
+        {
+          "es": "Ayer",
+          "en": "Yesterday",
+          "say": "ah-YEHR",
+          "emoji": "⬅️"
+        },
+        {
+          "es": "Hace buen tiempo",
+          "en": "The weather is nice",
+          "say": "AH-theh bwen TYEM-po",
+          "emoji": "☀️"
+        },
+        {
+          "es": "Hace mal tiempo",
+          "en": "The weather is bad",
+          "say": "AH-theh mal TYEM-po",
+          "emoji": "⛈️"
+        },
+        {
+          "es": "Esta semana",
+          "en": "This week",
+          "say": "ES-tah seh-MAH-nah",
+          "emoji": "📅"
+        },
+        {
+          "es": "El mes",
+          "en": "The month",
+          "say": "el MES",
+          "emoji": "🗓️"
+        },
+        {
+          "es": "El año",
+          "en": "The year",
+          "say": "el AH-nyo",
+          "emoji": "📆"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Mañana",
+            "es",
+            "mi",
+            "cumpleaños"
+          ],
+          "shuffle": [
+            "cumpleaños",
+            "mi",
+            "Mañana",
+            "es"
+          ],
+          "en": "Tomorrow is my birthday."
+        },
+        {
+          "correct": [
+            "Esta",
+            "semana",
+            "tengo",
+            "cole"
+          ],
+          "shuffle": [
+            "cole",
+            "semana",
+            "Esta",
+            "tengo"
+          ],
+          "en": "This week I have school."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "Through the Year",
+        "paras": [
+          "Hoy hace buen tiempo y Sol is happy. Ayer hizo mal tiempo with lots of rain.",
+          "Esta semana is special — Luna's cumpleaños. El próximo mes will be summer.",
+          "'El año pasa muy rápido,' says Sol. 'Pero cada día es una aventura nueva!'"
+        ],
+        "qs": [
+          {
+            "q": "What is the weather like today?",
+            "opts": [
+              "Nice",
+              "Bad",
+              "Cold"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What was the weather yesterday?",
+            "opts": [
+              "Rainy",
+              "Sunny",
+              "Snowy"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What's special this week?",
+            "opts": [
+              "Luna's birthday",
+              "Sol's exam",
+              "A holiday"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 98,
+      "title": "Repaso: En el restaurante",
+      "subtitle": "Restaurant scenario",
+      "emoji": "🍽️",
+      "milestone": false,
+      "funFact": "In Spain, tipping ('propina') is not required — but a small amount is appreciated!",
+      "phrase": {
+        "es": "De primero quiero ensalada, por favor.",
+        "en": "As a starter I want salad, please."
+      },
+      "words": [
+        {
+          "es": "La mesa",
+          "en": "Table",
+          "say": "la MEH-sah",
+          "emoji": "🪑"
+        },
+        {
+          "es": "El camarero",
+          "en": "Waiter",
+          "say": "el kah-mah-REH-ro",
+          "emoji": "🧑‍💼"
+        },
+        {
+          "es": "La carta",
+          "en": "Menu",
+          "say": "la KAR-tah",
+          "emoji": "📋"
+        },
+        {
+          "es": "De primero",
+          "en": "As a starter",
+          "say": "deh pree-MEH-ro",
+          "emoji": "1️⃣"
+        },
+        {
+          "es": "De segundo",
+          "en": "As a main",
+          "say": "deh seh-GOON-do",
+          "emoji": "2️⃣"
+        },
+        {
+          "es": "De postre",
+          "en": "For dessert",
+          "say": "deh POS-treh",
+          "emoji": "🍰"
+        },
+        {
+          "es": "Para beber",
+          "en": "To drink",
+          "say": "PAH-rah beh-BEHR",
+          "emoji": "🥤"
+        },
+        {
+          "es": "La propina",
+          "en": "Tip",
+          "say": "la pro-PEE-nah",
+          "emoji": "💰"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "¿Me",
+            "trae",
+            "la",
+            "carta?"
+          ],
+          "shuffle": [
+            "carta?",
+            "la",
+            "¿Me",
+            "trae"
+          ],
+          "en": "Can you bring me the menu?"
+        },
+        {
+          "correct": [
+            "De",
+            "postre",
+            "quiero",
+            "helado"
+          ],
+          "shuffle": [
+            "helado",
+            "quiero",
+            "De",
+            "postre"
+          ],
+          "en": "For dessert I want ice cream."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "Dinner at the Restaurant",
+        "paras": [
+          "Sol's family go al restaurante. The camarero brings la carta. Sol says 'De primero quiero ensalada.'",
+          "Luna chooses pollo de segundo y helado de postre. Para beber, agua para todos.",
+          "After eating, papá pays and leaves una propina. '¡Qué delicioso! ¡Gracias!'"
+        ],
+        "qs": [
+          {
+            "q": "What does Sol have first?",
+            "opts": [
+              "Salad",
+              "Chicken",
+              "Soup"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Luna have for dessert?",
+            "opts": [
+              "Ice cream",
+              "Cake",
+              "Fruit"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Dad leave?",
+            "opts": [
+              "A tip",
+              "Nothing",
+              "A note"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 99,
+      "title": "Repaso: De compras",
+      "subtitle": "Shopping scenario",
+      "emoji": "🛍️",
+      "milestone": false,
+      "funFact": "In Spain, 'las rebajas' are the big January and July sales — everything is discounted!",
+      "phrase": {
+        "es": "Quiero la talla mediana, por favor.",
+        "en": "I want the medium size, please."
+      },
+      "words": [
+        {
+          "es": "La tienda",
+          "en": "Shop",
+          "say": "la TYEN-dah",
+          "emoji": "🏪"
+        },
+        {
+          "es": "El probador",
+          "en": "Fitting room",
+          "say": "el pro-bah-DOR",
+          "emoji": "👗"
+        },
+        {
+          "es": "La talla",
+          "en": "Size",
+          "say": "la TAH-yah",
+          "emoji": "📏"
+        },
+        {
+          "es": "Mediano",
+          "en": "Medium",
+          "say": "meh-DYAH-no",
+          "emoji": "📐"
+        },
+        {
+          "es": "Pequeño",
+          "en": "Small",
+          "say": "peh-KEH-nyo",
+          "emoji": "👶"
+        },
+        {
+          "es": "Grande",
+          "en": "Big",
+          "say": "GRAHN-deh",
+          "emoji": "📦"
+        },
+        {
+          "es": "Me lo llevo",
+          "en": "I'll take it",
+          "say": "meh lo YEH-bo",
+          "emoji": "🛍️"
+        },
+        {
+          "es": "La rebaja",
+          "en": "Sale/discount",
+          "say": "la reh-BAH-hah",
+          "emoji": "💸"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "¿Puedo",
+            "probar",
+            "esto?"
+          ],
+          "shuffle": [
+            "esto?",
+            "probar",
+            "¿Puedo"
+          ],
+          "en": "Can I try this on?"
+        },
+        {
+          "correct": [
+            "Está",
+            "de",
+            "rebajas",
+            "y",
+            "es",
+            "barato"
+          ],
+          "shuffle": [
+            "barato",
+            "rebajas",
+            "Está",
+            "es",
+            "de",
+            "y"
+          ],
+          "en": "It's on sale and it's cheap."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "Shopping Day",
+        "paras": [
+          "Luna goes to la tienda. She wants un vestido nuevo. The talla mediana fits well!",
+          "She goes to el probador to try it on. '¡Está perfecta!' she says. '¡Me lo llevo!'",
+          "Today is las rebajas, so it's muy barato. Luna is muy feliz with her new dress!"
+        ],
+        "qs": [
+          {
+            "q": "What does Luna want to buy?",
+            "opts": [
+              "A dress",
+              "Shoes",
+              "A book"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Where does she try it on?",
+            "opts": [
+              "Fitting room",
+              "At home",
+              "At the cash"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Why is it cheap?",
+            "opts": [
+              "It's on sale",
+              "It's broken",
+              "It's small"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 100,
+      "title": "¡MEGA CAMPEÓN!",
+      "subtitle": "Final Mega Champion",
+      "emoji": "🏆",
+      "milestone": true,
+      "funFact": "¡FELICIDADES! You have completed all 100 lessons! 100 hours of learning, 800+ words! You ARE a Spanish superstar! 🎉🌟🏆",
+      "phrase": {
+        "es": "¡Soy un mega campeón del español!",
+        "en": "I am a mega Spanish champion!"
+      },
+      "words": [
+        {
+          "es": "¡Hola!",
+          "en": "Hello!",
+          "say": "OH-lah",
+          "emoji": "👋"
+        },
+        {
+          "es": "Mi familia",
+          "en": "My family",
+          "say": "mee fah-MEE-lyah",
+          "emoji": "👨‍👩‍👧"
+        },
+        {
+          "es": "Tengo",
+          "en": "I have",
+          "say": "TEN-go",
+          "emoji": "🎁"
+        },
+        {
+          "es": "Me encanta",
+          "en": "I love",
+          "say": "meh en-KAHN-tah",
+          "emoji": "😍"
+        },
+        {
+          "es": "En mi casa",
+          "en": "In my home",
+          "say": "en mee KAH-sah",
+          "emoji": "🏠"
+        },
+        {
+          "es": "Soy amable",
+          "en": "I am kind",
+          "say": "soy ah-MAH-bleh",
+          "emoji": "😊"
+        },
+        {
+          "es": "Mañana",
+          "en": "Tomorrow",
+          "say": "mah-NYAH-nah",
+          "emoji": "➡️"
+        },
+        {
+          "es": "¡Eres genial!",
+          "en": "You're amazing!",
+          "say": "EH-res heh-NYAL",
+          "emoji": "🌟"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Hola",
+            "mi",
+            "familia",
+            "es",
+            "grande"
+          ],
+          "shuffle": [
+            "grande",
+            "mi",
+            "Hola",
+            "familia",
+            "es"
+          ],
+          "en": "Hello, my family is big."
+        },
+        {
+          "correct": [
+            "Me",
+            "encanta",
+            "mi",
+            "casa",
+            "y",
+            "mi",
+            "barrio"
+          ],
+          "shuffle": [
+            "barrio",
+            "mi",
+            "Me",
+            "encanta",
+            "y",
+            "mi",
+            "casa"
+          ],
+          "en": "I love my house and my neighbourhood."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'¡Hola!' means:",
+          "opts": [
+            "Hello!",
+            "Goodbye!",
+            "Thank you!"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Mi familia' means:",
+          "opts": [
+            "My family",
+            "My friends",
+            "My home"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Me encanta' means:",
+          "opts": [
+            "I love",
+            "I like",
+            "I hate"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Soy amable' means:",
+          "opts": [
+            "I am kind",
+            "I am happy",
+            "I am tired"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Mañana' means:",
+          "opts": [
+            "Tomorrow",
+            "Today",
+            "Yesterday"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "How many lessons have you done?",
+          "opts": [
+            "100",
+            "50",
+            "75"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "The Mega Champion",
+        "paras": [
+          "Sol and Luna stand on top of the mountain. 'We did it!' they shout to the sky.",
+          "'100 lessons! 800 palabras! We can speak Spanish like real Spaniards!'",
+          "They look down at their journey — from ¡Hola! to today. ¡Qué viaje increíble! Eres un MEGA CAMPEÓN! 🏆🌟"
+        ],
+        "qs": [
+          {
+            "q": "How many lessons have they done?",
+            "opts": [
+              "100",
+              "50",
+              "75"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How many words have they learned?",
+            "opts": [
+              "800",
+              "500",
+              "1000"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What kind of champion are they?",
+            "opts": [
+              "Mega champion",
+              "Small champion",
+              "Bronze champion"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    }
+  ]
+}

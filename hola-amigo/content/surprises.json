@@ -1,0 +1,58 @@
+[
+  {
+    "id": "joke",
+    "emoji": "😄",
+    "title": "Sol's joke!",
+    "lines": [
+      "¿Por qué la abeja está feliz?",
+      "Why is the bee happy?",
+      "Because it found its 'honey'! 🐝🍯"
+    ]
+  },
+  {
+    "id": "joke2",
+    "emoji": "🤭",
+    "title": "Luna's riddle!",
+    "lines": [
+      "Soy amarillo y salgo de día.",
+      "I'm yellow and come out in the day.",
+      "¿Quién soy? ¡Sol! ☀️"
+    ]
+  },
+  {
+    "id": "fact",
+    "emoji": "🌎",
+    "title": "Amazing fact!",
+    "lines": [
+      "In Spanish, upside-down ¿ and ¡ open questions and exclamations!",
+      "So you always know what's coming. Clever, right?"
+    ]
+  },
+  {
+    "id": "fact2",
+    "emoji": "🎉",
+    "title": "Did you know?",
+    "lines": [
+      "Spanish is spoken by over 500 million people!",
+      "That's a LOT of new friends to talk to. 🌍"
+    ]
+  },
+  {
+    "id": "cheer",
+    "emoji": "💪",
+    "title": "You're amazing!",
+    "lines": [
+      "Sol y Luna think you're doing brilliantly.",
+      "Every word you learn is a little superpower!"
+    ]
+  },
+  {
+    "id": "star",
+    "emoji": "⭐",
+    "title": "Star moment!",
+    "lines": [
+      "Take a deep breath and smile.",
+      "You're getting better every single day. ¡Vamos!"
+    ]
+  }
+]

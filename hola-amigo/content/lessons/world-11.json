@@ -1,0 +1,1122 @@
+{
+  "world": 11,
+  "lessons": [
+    {
+      "id": 85,
+      "title": "Cómo me veo",
+      "subtitle": "How I look",
+      "emoji": "👀",
+      "milestone": false,
+      "funFact": "In Spain, lots of people have brown hair and brown eyes — 'moreno' is super common!",
+      "phrase": {
+        "es": "Tengo el pelo rubio y los ojos azules.",
+        "en": "I have blonde hair and blue eyes."
+      },
+      "words": [
+        {
+          "es": "El pelo",
+          "en": "Hair",
+          "say": "el PEH-lo",
+          "emoji": "💇"
+        },
+        {
+          "es": "Los ojos",
+          "en": "Eyes",
+          "say": "los OH-hos",
+          "emoji": "👁️"
+        },
+        {
+          "es": "Rubio",
+          "en": "Blonde",
+          "say": "ROO-byo",
+          "emoji": "👱"
+        },
+        {
+          "es": "Moreno",
+          "en": "Dark-haired",
+          "say": "mo-REH-no",
+          "emoji": "👨"
+        },
+        {
+          "es": "Pelirrojo",
+          "en": "Red-haired",
+          "say": "peh-lee-RROH-ho",
+          "emoji": "👩‍🦰"
+        },
+        {
+          "es": "Las gafas",
+          "en": "Glasses",
+          "say": "las GAH-fas",
+          "emoji": "👓"
+        },
+        {
+          "es": "Las pecas",
+          "en": "Freckles",
+          "say": "las PEH-kahs",
+          "emoji": "😊"
+        },
+        {
+          "es": "Largo / Corto",
+          "en": "Long / Short",
+          "say": "LAR-go / KOR-toh",
+          "emoji": "📏"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Mi",
+            "amiga",
+            "tiene",
+            "gafas"
+          ],
+          "shuffle": [
+            "gafas",
+            "Mi",
+            "tiene",
+            "amiga"
+          ],
+          "en": "My friend wears glasses."
+        },
+        {
+          "correct": [
+            "Tengo",
+            "el",
+            "pelo",
+            "largo"
+          ],
+          "shuffle": [
+            "largo",
+            "Tengo",
+            "pelo",
+            "el"
+          ],
+          "en": "I have long hair."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "My New Look",
+        "paras": [
+          "Luna has long pelo rubio y ojos azules. Today she gets gafas nuevas — ¡rosas!",
+          "Sol has pelo moreno y corto. He has muchas pecas on his face. '¡Te ves diferente!' he tells Luna.",
+          "Luna laughs: 'Igual de bonita!' They both look in el espejo and smile."
+        ],
+        "qs": [
+          {
+            "q": "What colour are Luna's eyes?",
+            "opts": [
+              "Blue",
+              "Brown",
+              "Green"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Sol have on his face?",
+            "opts": [
+              "Freckles",
+              "A scar",
+              "Makeup"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How does Luna feel about her new glasses?",
+            "opts": [
+              "Just as pretty",
+              "Sad",
+              "Ugly"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 86,
+      "title": "Mi personalidad",
+      "subtitle": "My personality",
+      "emoji": "😊",
+      "milestone": false,
+      "funFact": "Spanish people often greet kids with 'qué simpático!' — meaning 'how nice/sweet!'",
+      "phrase": {
+        "es": "Soy amable y un poco gracioso.",
+        "en": "I'm kind and a bit funny."
+      },
+      "words": [
+        {
+          "es": "Amable",
+          "en": "Kind",
+          "say": "ah-MAH-bleh",
+          "emoji": "😊"
+        },
+        {
+          "es": "Gracioso",
+          "en": "Funny",
+          "say": "grah-THYO-so",
+          "emoji": "😂"
+        },
+        {
+          "es": "Valiente",
+          "en": "Brave",
+          "say": "bah-LYEN-teh",
+          "emoji": "🦁"
+        },
+        {
+          "es": "Inteligente",
+          "en": "Clever",
+          "say": "een-teh-lee-HEN-teh",
+          "emoji": "🧠"
+        },
+        {
+          "es": "Generoso",
+          "en": "Generous",
+          "say": "heh-neh-ROH-so",
+          "emoji": "🎁"
+        },
+        {
+          "es": "Paciente",
+          "en": "Patient",
+          "say": "pah-THYEN-teh",
+          "emoji": "⏳"
+        },
+        {
+          "es": "Trabajador",
+          "en": "Hardworking",
+          "say": "trah-bah-hah-DOR",
+          "emoji": "💪"
+        },
+        {
+          "es": "Curioso",
+          "en": "Curious",
+          "say": "koo-RYOH-so",
+          "emoji": "🔍"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Mi",
+            "hermana",
+            "es",
+            "muy",
+            "valiente"
+          ],
+          "shuffle": [
+            "valiente",
+            "Mi",
+            "hermana",
+            "muy",
+            "es"
+          ],
+          "en": "My sister is very brave."
+        },
+        {
+          "correct": [
+            "Eres",
+            "muy",
+            "generoso"
+          ],
+          "shuffle": [
+            "generoso",
+            "Eres",
+            "muy"
+          ],
+          "en": "You are very generous."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "What I'm Like",
+        "paras": [
+          "Luna dice: 'Soy paciente y curiosa. I love to learn new things.'",
+          "Sol replies: 'Soy gracioso y valiente. I love to make people laugh.'",
+          "Mamá says: 'Los dos sois muy amables y trabajadores. ¡Soy afortunada!'"
+        ],
+        "qs": [
+          {
+            "q": "How does Luna describe herself?",
+            "opts": [
+              "Patient and curious",
+              "Funny and brave",
+              "Loud and silly"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How does Sol describe himself?",
+            "opts": [
+              "Funny and brave",
+              "Quiet and shy",
+              "Tall and strong"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Mum say about them?",
+            "opts": [
+              "Kind and hardworking",
+              "Loud",
+              "Boring"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 87,
+      "title": "Mis gustos",
+      "subtitle": "My likes",
+      "emoji": "❤️",
+      "milestone": false,
+      "funFact": "In Spanish, 'me gusta' literally means 'it pleases me' — the food likes YOU, not the other way!",
+      "phrase": {
+        "es": "Me encanta el chocolate pero odio las verduras.",
+        "en": "I love chocolate but I hate vegetables."
+      },
+      "words": [
+        {
+          "es": "Me gusta",
+          "en": "I like",
+          "say": "meh GOOS-tah",
+          "emoji": "❤️"
+        },
+        {
+          "es": "No me gusta",
+          "en": "I don't like",
+          "say": "no meh GOOS-tah",
+          "emoji": "💔"
+        },
+        {
+          "es": "Me encanta",
+          "en": "I love",
+          "say": "meh en-KAHN-tah",
+          "emoji": "😍"
+        },
+        {
+          "es": "Odio",
+          "en": "I hate",
+          "say": "OH-dyo",
+          "emoji": "😖"
+        },
+        {
+          "es": "Prefiero",
+          "en": "I prefer",
+          "say": "preh-FYEH-ro",
+          "emoji": "⭐"
+        },
+        {
+          "es": "Lo mejor",
+          "en": "The best thing",
+          "say": "lo meh-HOR",
+          "emoji": "🏆"
+        },
+        {
+          "es": "Lo peor",
+          "en": "The worst thing",
+          "say": "lo peh-OR",
+          "emoji": "💩"
+        },
+        {
+          "es": "Mi favorito",
+          "en": "My favourite",
+          "say": "mee fah-bo-REE-toh",
+          "emoji": "⭐"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Prefiero",
+            "el",
+            "helado"
+          ],
+          "shuffle": [
+            "helado",
+            "el",
+            "Prefiero"
+          ],
+          "en": "I prefer ice cream."
+        },
+        {
+          "correct": [
+            "Mi",
+            "color",
+            "favorito",
+            "es",
+            "el",
+            "verde"
+          ],
+          "shuffle": [
+            "verde",
+            "favorito",
+            "Mi",
+            "color",
+            "es",
+            "el"
+          ],
+          "en": "My favourite colour is green."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "What I Love",
+        "paras": [
+          "Sol confiesa: 'Me encanta el chocolate. Odio las verduras.' Luna laughs.",
+          "'Yo prefiero el helado. Mi sabor favorito es la vainilla.'",
+          "Mamá says: 'Lo mejor es probar de todo!' They smile and agree. ¡Qué ricos son los gustos diferentes!"
+        ],
+        "qs": [
+          {
+            "q": "What does Sol love?",
+            "opts": [
+              "Chocolate",
+              "Vegetables",
+              "Fish"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What's Luna's favourite ice cream flavour?",
+            "opts": [
+              "Vanilla",
+              "Chocolate",
+              "Strawberry"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does mum say is best?",
+            "opts": [
+              "To try everything",
+              "To eat sweets",
+              "To skip dinner"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 88,
+      "title": "Mi familia extendida",
+      "subtitle": "Extended family",
+      "emoji": "👨‍👩‍👧‍👦",
+      "milestone": false,
+      "funFact": "In Spain, godparents ('padrinos') are very important — they're like a second set of parents!",
+      "phrase": {
+        "es": "Tengo dos tíos y cuatro primos.",
+        "en": "I have two uncles and four cousins."
+      },
+      "words": [
+        {
+          "es": "El tío",
+          "en": "Uncle",
+          "say": "el TEE-oh",
+          "emoji": "👨"
+        },
+        {
+          "es": "La tía",
+          "en": "Aunt",
+          "say": "la TEE-ah",
+          "emoji": "👩"
+        },
+        {
+          "es": "El primo",
+          "en": "Cousin (m)",
+          "say": "el PREE-mo",
+          "emoji": "👦"
+        },
+        {
+          "es": "La prima",
+          "en": "Cousin (f)",
+          "say": "la PREE-mah",
+          "emoji": "👧"
+        },
+        {
+          "es": "El sobrino",
+          "en": "Nephew",
+          "say": "el so-BREE-no",
+          "emoji": "👶"
+        },
+        {
+          "es": "La sobrina",
+          "en": "Niece",
+          "say": "la so-BREE-nah",
+          "emoji": "👶"
+        },
+        {
+          "es": "El padrino",
+          "en": "Godfather",
+          "say": "el pah-DREE-no",
+          "emoji": "👨‍👦"
+        },
+        {
+          "es": "La madrina",
+          "en": "Godmother",
+          "say": "la mah-DREE-nah",
+          "emoji": "👩‍👧"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Mi",
+            "tía",
+            "vive",
+            "en",
+            "Madrid"
+          ],
+          "shuffle": [
+            "Madrid",
+            "tía",
+            "Mi",
+            "en",
+            "vive"
+          ],
+          "en": "My aunt lives in Madrid."
+        },
+        {
+          "correct": [
+            "Mi",
+            "primo",
+            "es",
+            "mayor",
+            "que",
+            "yo"
+          ],
+          "shuffle": [
+            "yo",
+            "mayor",
+            "Mi",
+            "primo",
+            "que",
+            "es"
+          ],
+          "en": "My cousin is older than me."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "The Family Reunion",
+        "paras": [
+          "Today todos los primos visit! Sol has dos tíos y tres primas. Luna has una tía favorita.",
+          "Su prima mayor cuenta cuentos divertidos. El sobrino más pequeño cries a little.",
+          "Los padrinos arrive with regalos. ¡Qué día tan especial con toda la familia!"
+        ],
+        "qs": [
+          {
+            "q": "How many cousins does Sol have?",
+            "opts": [
+              "Three",
+              "Two",
+              "Five"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does the older cousin do?",
+            "opts": [
+              "Tells funny stories",
+              "Plays football",
+              "Sleeps"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Who arrives with presents?",
+            "opts": [
+              "The godparents",
+              "The grandparents",
+              "The neighbours"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 89,
+      "title": "Mis vecinos",
+      "subtitle": "My neighbours",
+      "emoji": "🏘️",
+      "milestone": false,
+      "funFact": "Many Spanish flats have a 'portero' — a concierge who looks after the building!",
+      "phrase": {
+        "es": "Mis vecinos viven en el piso de arriba.",
+        "en": "My neighbours live on the floor above."
+      },
+      "words": [
+        {
+          "es": "El vecino",
+          "en": "Neighbour (m)",
+          "say": "el beh-THEE-no",
+          "emoji": "👨"
+        },
+        {
+          "es": "La vecina",
+          "en": "Neighbour (f)",
+          "say": "la beh-THEE-nah",
+          "emoji": "👩"
+        },
+        {
+          "es": "El barrio",
+          "en": "Neighbourhood",
+          "say": "el BAH-rryo",
+          "emoji": "🏘️"
+        },
+        {
+          "es": "El edificio",
+          "en": "Building",
+          "say": "el eh-dee-FEE-thyo",
+          "emoji": "🏢"
+        },
+        {
+          "es": "El piso",
+          "en": "Floor/flat",
+          "say": "el PEE-so",
+          "emoji": "🏠"
+        },
+        {
+          "es": "El ascensor",
+          "en": "Lift/elevator",
+          "say": "el ahs-then-SOR",
+          "emoji": "🛗"
+        },
+        {
+          "es": "Las escaleras",
+          "en": "Stairs",
+          "say": "las es-kah-LEH-rahs",
+          "emoji": "🪜"
+        },
+        {
+          "es": "El portero",
+          "en": "Concierge",
+          "say": "el por-TEH-ro",
+          "emoji": "👨‍💼"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Subo",
+            "en",
+            "el",
+            "ascensor"
+          ],
+          "shuffle": [
+            "ascensor",
+            "el",
+            "Subo",
+            "en"
+          ],
+          "en": "I go up in the lift."
+        },
+        {
+          "correct": [
+            "Mi",
+            "barrio",
+            "es",
+            "muy",
+            "tranquilo"
+          ],
+          "shuffle": [
+            "tranquilo",
+            "barrio",
+            "Mi",
+            "muy",
+            "es"
+          ],
+          "en": "My neighbourhood is very quiet."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "Our Neighbourhood",
+        "paras": [
+          "Sol and Luna viven en un edificio de cinco pisos. They live en el tercer piso.",
+          "Sus vecinos are very friendly. Una vecina hace galletas for them sometimes.",
+          "El portero del edificio is called Carlos. He smiles every morning. ¡Qué bonito barrio!"
+        ],
+        "qs": [
+          {
+            "q": "What floor do Sol and Luna live on?",
+            "opts": [
+              "Third",
+              "First",
+              "Fifth"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does their neighbour bake?",
+            "opts": [
+              "Cookies",
+              "Bread",
+              "Cake"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What's the concierge called?",
+            "opts": [
+              "Carlos",
+              "Pedro",
+              "Juan"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 90,
+      "title": "Mi cole en detalle",
+      "subtitle": "School subjects",
+      "emoji": "🏫",
+      "milestone": false,
+      "funFact": "In Spanish schools, kids start English from age 3 — they grow up bilingual!",
+      "phrase": {
+        "es": "Me gustan las matemáticas y la música.",
+        "en": "I like maths and music."
+      },
+      "words": [
+        {
+          "es": "Las matemáticas",
+          "en": "Maths",
+          "say": "las mah-teh-MAH-tee-kahs",
+          "emoji": "➕"
+        },
+        {
+          "es": "El inglés",
+          "en": "English",
+          "say": "el een-GLES",
+          "emoji": "🇬🇧"
+        },
+        {
+          "es": "La educación física",
+          "en": "PE",
+          "say": "la eh-doo-kah-THYON FEE-see-kah",
+          "emoji": "🏃"
+        },
+        {
+          "es": "El arte",
+          "en": "Art",
+          "say": "el AR-teh",
+          "emoji": "🎨"
+        },
+        {
+          "es": "La ciencia",
+          "en": "Science",
+          "say": "la THYEN-thyah",
+          "emoji": "🔬"
+        },
+        {
+          "es": "La música",
+          "en": "Music",
+          "say": "la MOO-see-kah",
+          "emoji": "🎵"
+        },
+        {
+          "es": "La historia",
+          "en": "History",
+          "say": "la ees-TOH-ryah",
+          "emoji": "📜"
+        },
+        {
+          "es": "El examen",
+          "en": "Exam",
+          "say": "el ek-SAH-men",
+          "emoji": "📝"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Hoy",
+            "tengo",
+            "examen",
+            "de",
+            "historia"
+          ],
+          "shuffle": [
+            "historia",
+            "de",
+            "Hoy",
+            "examen",
+            "tengo"
+          ],
+          "en": "Today I have a history exam."
+        },
+        {
+          "correct": [
+            "Me",
+            "encanta",
+            "la",
+            "educación",
+            "física"
+          ],
+          "shuffle": [
+            "física",
+            "Me",
+            "la",
+            "educación",
+            "encanta"
+          ],
+          "en": "I love PE."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "My School Day",
+        "paras": [
+          "Today is a busy school day. Primero matemáticas with números difíciles. Then la educación física — ¡corremos!",
+          "Después el arte — Luna paints una flor. Música — Sol sings una canción nueva.",
+          "Mañana hay un examen de inglés. They have to estudiar a lot tonight!"
+        ],
+        "qs": [
+          {
+            "q": "What subject is first?",
+            "opts": [
+              "Maths",
+              "English",
+              "Art"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Luna paint?",
+            "opts": [
+              "A flower",
+              "A house",
+              "A face"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What's tomorrow's exam?",
+            "opts": [
+              "English",
+              "Maths",
+              "Science"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 91,
+      "title": "En la fiesta",
+      "subtitle": "At the party",
+      "emoji": "🎉",
+      "milestone": false,
+      "funFact": "In Spain, kids smash a piñata in their birthday parties — full of sweets and toys!",
+      "phrase": {
+        "es": "En la fiesta soplé las velas y comí tarta.",
+        "en": "At the party I blew the candles and ate cake."
+      },
+      "words": [
+        {
+          "es": "Los aperitivos",
+          "en": "Snacks",
+          "say": "los ah-peh-ree-TEE-bos",
+          "emoji": "🍿"
+        },
+        {
+          "es": "Las patatas fritas",
+          "en": "Crisps/chips",
+          "say": "las pah-TAH-tahs FREE-tahs",
+          "emoji": "🍟"
+        },
+        {
+          "es": "Los caramelos",
+          "en": "Sweets",
+          "say": "los kah-rah-MEH-los",
+          "emoji": "🍬"
+        },
+        {
+          "es": "La piñata",
+          "en": "Piñata",
+          "say": "la pee-NYAH-tah",
+          "emoji": "🎊"
+        },
+        {
+          "es": "Soplar las velas",
+          "en": "Blow the candles",
+          "say": "so-PLAR las BEH-las",
+          "emoji": "🎂"
+        },
+        {
+          "es": "Bailar",
+          "en": "To dance",
+          "say": "by-LAR",
+          "emoji": "💃"
+        },
+        {
+          "es": "Divertirse",
+          "en": "To have fun",
+          "say": "dee-behr-TEER-seh",
+          "emoji": "😆"
+        },
+        {
+          "es": "Disfrazarse",
+          "en": "To dress up",
+          "say": "dees-frah-THAR-seh",
+          "emoji": "🎭"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Me",
+            "disfracé",
+            "de",
+            "superhéroe"
+          ],
+          "shuffle": [
+            "superhéroe",
+            "Me",
+            "de",
+            "disfracé"
+          ],
+          "en": "I dressed up as a superhero."
+        },
+        {
+          "correct": [
+            "Hay",
+            "caramelos",
+            "en",
+            "la",
+            "piñata"
+          ],
+          "shuffle": [
+            "piñata",
+            "caramelos",
+            "Hay",
+            "la",
+            "en"
+          ],
+          "en": "There are sweets in the piñata."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "Sol's Birthday Party",
+        "paras": [
+          "¡Es el cumple de Sol! All friends come to la fiesta with regalos.",
+          "They eat patatas fritas, caramelos, y galletas. They dance to música and have a piñata!",
+          "Sol sopla las velas of his tarta and makes a deseo. '¡Quiero más cumpleaños así!'"
+        ],
+        "qs": [
+          {
+            "q": "What do they eat at the party?",
+            "opts": [
+              "Crisps, sweets, cookies",
+              "Pasta",
+              "Salad"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What do they smash?",
+            "opts": [
+              "A piñata",
+              "A balloon",
+              "A drum"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Sol wish for?",
+            "opts": [
+              "More birthdays like this",
+              "A new toy",
+              "Money"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 92,
+      "title": "¡Campeón persona!",
+      "subtitle": "Persona Champion",
+      "emoji": "🏆",
+      "milestone": true,
+      "funFact": "You can now describe yourself, your family, your school, and your parties! ¡Eres único! 🌟",
+      "phrase": {
+        "es": "Soy amable, tengo el pelo rubio y me encanta el arte.",
+        "en": "I'm kind, I have blonde hair and I love art."
+      },
+      "words": [
+        {
+          "es": "El pelo",
+          "en": "Hair",
+          "say": "el PEH-lo",
+          "emoji": "💇"
+        },
+        {
+          "es": "Amable",
+          "en": "Kind",
+          "say": "ah-MAH-bleh",
+          "emoji": "😊"
+        },
+        {
+          "es": "Me encanta",
+          "en": "I love",
+          "say": "meh en-KAHN-tah",
+          "emoji": "😍"
+        },
+        {
+          "es": "El primo",
+          "en": "Cousin",
+          "say": "el PREE-mo",
+          "emoji": "👦"
+        },
+        {
+          "es": "El vecino",
+          "en": "Neighbour",
+          "say": "el beh-THEE-no",
+          "emoji": "👨"
+        },
+        {
+          "es": "Las matemáticas",
+          "en": "Maths",
+          "say": "las mah-teh-MAH-tee-kahs",
+          "emoji": "➕"
+        },
+        {
+          "es": "La piñata",
+          "en": "Piñata",
+          "say": "la pee-NYAH-tah",
+          "emoji": "🎊"
+        },
+        {
+          "es": "Divertirse",
+          "en": "To have fun",
+          "say": "dee-behr-TEER-seh",
+          "emoji": "😆"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Mi",
+            "primo",
+            "es",
+            "muy",
+            "gracioso"
+          ],
+          "shuffle": [
+            "gracioso",
+            "Mi",
+            "primo",
+            "muy",
+            "es"
+          ],
+          "en": "My cousin is very funny."
+        },
+        {
+          "correct": [
+            "En",
+            "mi",
+            "cole",
+            "me",
+            "gusta",
+            "el",
+            "arte"
+          ],
+          "shuffle": [
+            "arte",
+            "mi",
+            "En",
+            "cole",
+            "me",
+            "el",
+            "gusta"
+          ],
+          "en": "At my school I like art."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Rubio' means:",
+          "opts": [
+            "Blonde",
+            "Dark-haired",
+            "Red-haired"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'La tía' means:",
+          "opts": [
+            "Aunt",
+            "Uncle",
+            "Cousin"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Gracioso' means:",
+          "opts": [
+            "Funny",
+            "Kind",
+            "Brave"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'El ascensor' is:",
+          "opts": [
+            "Lift",
+            "Stairs",
+            "Building"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Person Champion",
+        "paras": [
+          "Sol y Luna can now describe themselves, their family, friends, school, and parties!",
+          "'Estoy orgullosa de quien soy,' says Luna. Sol agrees: 'Y yo de ti, mi mejor amiga.'",
+          "They are unique, kind, and ready for any conversation. ¡Personas excepcionales! 👫⭐"
+        ],
+        "qs": [
+          {
+            "q": "What can they describe now?",
+            "opts": [
+              "Themselves and everything around",
+              "Just animals",
+              "Just food"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How does Luna feel?",
+            "opts": [
+              "Proud of who she is",
+              "Tired",
+              "Sad"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Sol say about Luna?",
+            "opts": [
+              "You're my best friend",
+              "You're my sister",
+              "You're funny"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    }
+  ]
+}

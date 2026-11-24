@@ -1,0 +1,1094 @@
+{
+  "world": 9,
+  "lessons": [
+    {
+      "id": 69,
+      "title": "Verbos diarios",
+      "subtitle": "Everyday actions",
+      "emoji": "🏃",
+      "milestone": false,
+      "funFact": "Spanish has TWO different verbs for 'to take' — 'tomar' and 'coger'!",
+      "phrase": {
+        "es": "Empiezo a las nueve y termino a las dos.",
+        "en": "I start at nine and finish at two."
+      },
+      "words": [
+        {
+          "es": "Abrir",
+          "en": "To open",
+          "say": "ah-BREER",
+          "emoji": "🚪"
+        },
+        {
+          "es": "Cerrar",
+          "en": "To close",
+          "say": "theh-RRAR",
+          "emoji": "🚪"
+        },
+        {
+          "es": "Encontrar",
+          "en": "To find",
+          "say": "en-kon-TRAR",
+          "emoji": "🔍"
+        },
+        {
+          "es": "Perder",
+          "en": "To lose",
+          "say": "pehr-DEHR",
+          "emoji": "❌"
+        },
+        {
+          "es": "Dar",
+          "en": "To give",
+          "say": "DAR",
+          "emoji": "🤲"
+        },
+        {
+          "es": "Tomar",
+          "en": "To take",
+          "say": "toh-MAR",
+          "emoji": "✋"
+        },
+        {
+          "es": "Empezar",
+          "en": "To start",
+          "say": "em-peh-THAR",
+          "emoji": "▶️"
+        },
+        {
+          "es": "Terminar",
+          "en": "To finish",
+          "say": "tehr-mee-NAR",
+          "emoji": "🏁"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Abro",
+            "la",
+            "puerta"
+          ],
+          "shuffle": [
+            "puerta",
+            "la",
+            "Abro"
+          ],
+          "en": "I open the door."
+        },
+        {
+          "correct": [
+            "Encontré",
+            "mi",
+            "libro"
+          ],
+          "shuffle": [
+            "libro",
+            "mi",
+            "Encontré"
+          ],
+          "en": "I found my book."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "The Magic Book",
+        "paras": [
+          "Luna abre un libro mágico. ¡Encontró una llave!",
+          "Sol toma la llave. Together they empezan an adventure. 'Vamos a abrir la puerta secreta!'",
+          "Después de muchas horas, terminan their journey con un gran tesoro. ¡Qué aventura!"
+        ],
+        "qs": [
+          {
+            "q": "What does Luna find?",
+            "opts": [
+              "A key",
+              "A book",
+              "A door"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Who takes the key?",
+            "opts": [
+              "Sol",
+              "Luna",
+              "Both"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What do they find at the end?",
+            "opts": [
+              "A treasure",
+              "Another book",
+              "A friend"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 70,
+      "title": "En el patio",
+      "subtitle": "On the playground",
+      "emoji": "🛝",
+      "milestone": false,
+      "funFact": "In Spain, school 'recreo' (break) is super important — kids play in the patio for 30 mins!",
+      "phrase": {
+        "es": "Me subo al tobogán y bajo rápido.",
+        "en": "I climb up the slide and go down fast."
+      },
+      "words": [
+        {
+          "es": "El columpio",
+          "en": "Swing",
+          "say": "el ko-LOOM-pyo",
+          "emoji": "🛝"
+        },
+        {
+          "es": "El tobogán",
+          "en": "Slide",
+          "say": "el toh-bo-GAHN",
+          "emoji": "🛝"
+        },
+        {
+          "es": "Subir",
+          "en": "To climb up",
+          "say": "soo-BEER",
+          "emoji": "⬆️"
+        },
+        {
+          "es": "Bajar",
+          "en": "To go down",
+          "say": "bah-HAR",
+          "emoji": "⬇️"
+        },
+        {
+          "es": "Caerse",
+          "en": "To fall",
+          "say": "kah-EHR-seh",
+          "emoji": "💥"
+        },
+        {
+          "es": "Levantarse",
+          "en": "To get up",
+          "say": "leh-bahn-TAR-seh",
+          "emoji": "🆙"
+        },
+        {
+          "es": "Esconderse",
+          "en": "To hide",
+          "say": "es-kon-DEHR-seh",
+          "emoji": "🙈"
+        },
+        {
+          "es": "Buscar",
+          "en": "To search",
+          "say": "boos-KAR",
+          "emoji": "🔎"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Subo",
+            "al",
+            "columpio"
+          ],
+          "shuffle": [
+            "columpio",
+            "al",
+            "Subo"
+          ],
+          "en": "I get on the swing."
+        },
+        {
+          "correct": [
+            "Mi",
+            "amigo",
+            "se",
+            "cayó"
+          ],
+          "shuffle": [
+            "cayó",
+            "Mi",
+            "amigo",
+            "se"
+          ],
+          "en": "My friend fell down."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "The Playground Race",
+        "paras": [
+          "At the patio, Sol sube al columpio. Luna baja por el tobogán muy rápido.",
+          "Suddenly Sol se cae from the swing! '¡Ay!' But he se levanta and laughs.",
+          "Luna se esconde behind a tree. Sol la busca. '¡Te encontré!' Both are smiling."
+        ],
+        "qs": [
+          {
+            "q": "Where does Sol go first?",
+            "opts": [
+              "The swing",
+              "The slide",
+              "The seesaw"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What happens to Sol?",
+            "opts": [
+              "He falls",
+              "He wins",
+              "He cries"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What do they play next?",
+            "opts": [
+              "Hide and seek",
+              "Football",
+              "Tag"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 71,
+      "title": "Construyendo cosas",
+      "subtitle": "Making things",
+      "emoji": "🛠️",
+      "milestone": false,
+      "funFact": "Spanish 'hacer' means 'to do' OR 'to make' — same word for both!",
+      "phrase": {
+        "es": "Hago manualidades con papel y tijeras.",
+        "en": "I make crafts with paper and scissors."
+      },
+      "words": [
+        {
+          "es": "Cortar",
+          "en": "To cut",
+          "say": "kor-TAR",
+          "emoji": "✂️"
+        },
+        {
+          "es": "Pegar",
+          "en": "To stick",
+          "say": "peh-GAR",
+          "emoji": "🩹"
+        },
+        {
+          "es": "Doblar",
+          "en": "To fold",
+          "say": "do-BLAR",
+          "emoji": "📄"
+        },
+        {
+          "es": "Construir",
+          "en": "To build",
+          "say": "kon-stroo-EER",
+          "emoji": "🔨"
+        },
+        {
+          "es": "Pintar",
+          "en": "To paint",
+          "say": "peen-TAR",
+          "emoji": "🎨"
+        },
+        {
+          "es": "Hacer",
+          "en": "To make/do",
+          "say": "ah-THEHR",
+          "emoji": "🛠️"
+        },
+        {
+          "es": "El papel",
+          "en": "Paper",
+          "say": "el pah-PEL",
+          "emoji": "📄"
+        },
+        {
+          "es": "Las manualidades",
+          "en": "Crafts",
+          "say": "las mah-nwah-lee-DAH-des",
+          "emoji": "🎨"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Corto",
+            "el",
+            "papel"
+          ],
+          "shuffle": [
+            "papel",
+            "el",
+            "Corto"
+          ],
+          "en": "I cut the paper."
+        },
+        {
+          "correct": [
+            "Construimos",
+            "una",
+            "casa",
+            "pequeña"
+          ],
+          "shuffle": [
+            "pequeña",
+            "casa",
+            "Construimos",
+            "una"
+          ],
+          "en": "We build a small house."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "Craft Day",
+        "paras": [
+          "Sol and Luna hacen manualidades. Luna corta papel into pieces. Sol pega them juntos.",
+          "They construyen una casita with paper. Then pintan it muchos colores. ¡Qué bonita!",
+          "'Doblé este pájaro!' Luna shows un origami pájaro. Sol is muy impressed."
+        ],
+        "qs": [
+          {
+            "q": "What does Luna cut?",
+            "opts": [
+              "Paper",
+              "Cardboard",
+              "Plastic"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What do they build?",
+            "opts": [
+              "A little house",
+              "A bird",
+              "A car"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What is Luna's origami?",
+            "opts": [
+              "A bird",
+              "A flower",
+              "A box"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 72,
+      "title": "Mis juguetes",
+      "subtitle": "My toys",
+      "emoji": "🧸",
+      "milestone": false,
+      "funFact": "Spain's most famous toy is the 'peonza' — a spinning top played for centuries!",
+      "phrase": {
+        "es": "Mi juguete favorito es mi peluche.",
+        "en": "My favourite toy is my stuffed animal."
+      },
+      "words": [
+        {
+          "es": "La pelota",
+          "en": "Ball",
+          "say": "la peh-LOH-tah",
+          "emoji": "⚽"
+        },
+        {
+          "es": "La muñeca",
+          "en": "Doll",
+          "say": "la moo-NYEH-kah",
+          "emoji": "🪆"
+        },
+        {
+          "es": "El coche de juguete",
+          "en": "Toy car",
+          "say": "el KOH-cheh deh hoo-GEH-teh",
+          "emoji": "🚗"
+        },
+        {
+          "es": "Los bloques",
+          "en": "Blocks",
+          "say": "los BLOH-kes",
+          "emoji": "🧱"
+        },
+        {
+          "es": "El puzzle",
+          "en": "Puzzle",
+          "say": "el POOS-leh",
+          "emoji": "🧩"
+        },
+        {
+          "es": "La cometa",
+          "en": "Kite",
+          "say": "la ko-MEH-tah",
+          "emoji": "🪁"
+        },
+        {
+          "es": "El peluche",
+          "en": "Stuffed animal",
+          "say": "el peh-LOO-cheh",
+          "emoji": "🧸"
+        },
+        {
+          "es": "El patinete",
+          "en": "Scooter",
+          "say": "el pah-tee-NEH-teh",
+          "emoji": "🛴"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Juego",
+            "con",
+            "mis",
+            "bloques"
+          ],
+          "shuffle": [
+            "bloques",
+            "mis",
+            "Juego",
+            "con"
+          ],
+          "en": "I play with my blocks."
+        },
+        {
+          "correct": [
+            "Tengo",
+            "una",
+            "cometa",
+            "roja"
+          ],
+          "shuffle": [
+            "roja",
+            "cometa",
+            "Tengo",
+            "una"
+          ],
+          "en": "I have a red kite."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "The Toy Box",
+        "paras": [
+          "Sol opens his caja de juguetes. There's una pelota roja, un coche pequeño, and bloques.",
+          "Luna prefiere su muñeca and una cometa for windy days. They also tienen un puzzle de cien piezas.",
+          "'¿Jugamos con todo?' Sol asks. '¡Sí!' Luna replies. Toys make life muy divertida!"
+        ],
+        "qs": [
+          {
+            "q": "What's in Sol's toy box?",
+            "opts": [
+              "Ball, car, blocks",
+              "Books",
+              "Crayons"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Luna prefer?",
+            "opts": [
+              "Her doll",
+              "Her ball",
+              "Her car"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How many pieces is the puzzle?",
+            "opts": [
+              "One hundred",
+              "Fifty",
+              "Twenty"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 73,
+      "title": "Jugar con amigos",
+      "subtitle": "Playing with friends",
+      "emoji": "🎮",
+      "milestone": false,
+      "funFact": "In Spain, kids play 'el escondite inglés' — like 'Red Light, Green Light' but with hiding!",
+      "phrase": {
+        "es": "Jugamos al escondite en el parque.",
+        "en": "We play hide and seek in the park."
+      },
+      "words": [
+        {
+          "es": "El escondite",
+          "en": "Hide and seek",
+          "say": "el es-kon-DEE-teh",
+          "emoji": "🙈"
+        },
+        {
+          "es": "Pillapilla",
+          "en": "Tag",
+          "say": "pee-yah-PEE-yah",
+          "emoji": "🏃"
+        },
+        {
+          "es": "Piedra, papel, tijera",
+          "en": "Rock paper scissors",
+          "say": "PYEH-drah pah-PEL tee-HEH-rah",
+          "emoji": "✊"
+        },
+        {
+          "es": "Las cartas",
+          "en": "Cards",
+          "say": "las KAR-tahs",
+          "emoji": "🃏"
+        },
+        {
+          "es": "El juego de mesa",
+          "en": "Board game",
+          "say": "el HWEH-go deh MEH-sah",
+          "emoji": "🎲"
+        },
+        {
+          "es": "Te toca",
+          "en": "Your turn",
+          "say": "teh TOH-kah",
+          "emoji": "👉"
+        },
+        {
+          "es": "Ganar",
+          "en": "To win",
+          "say": "gah-NAR",
+          "emoji": "🏆"
+        },
+        {
+          "es": "Empate",
+          "en": "Tie",
+          "say": "em-PAH-teh",
+          "emoji": "🤝"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Te",
+            "toca",
+            "a",
+            "ti"
+          ],
+          "shuffle": [
+            "ti",
+            "Te",
+            "a",
+            "toca"
+          ],
+          "en": "It's your turn."
+        },
+        {
+          "correct": [
+            "Juego",
+            "piedra",
+            "papel",
+            "tijera"
+          ],
+          "shuffle": [
+            "tijera",
+            "papel",
+            "Juego",
+            "piedra"
+          ],
+          "en": "I play rock paper scissors."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "Playing Games",
+        "paras": [
+          "Sol, Luna, y Estrella juegan al escondite. Luna cuenta to ten. Sol y Estrella se esconden.",
+          "Then they play piedra, papel, tijera. Sol always picks piedra! '¡Eres predecible!' Luna laughs.",
+          "Finally un juego de cartas. The game ends in empate. '¡Otra vez mañana!'"
+        ],
+        "qs": [
+          {
+            "q": "What do they play first?",
+            "opts": [
+              "Hide and seek",
+              "Cards",
+              "Tag"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Sol always pick?",
+            "opts": [
+              "Rock",
+              "Paper",
+              "Scissors"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How does the card game end?",
+            "opts": [
+              "A tie",
+              "Sol wins",
+              "Luna wins"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 74,
+      "title": "Mis libros favoritos",
+      "subtitle": "My favourite books",
+      "emoji": "📚",
+      "milestone": false,
+      "funFact": "Spain's most famous book is 'Don Quijote' — about a knight who fights windmills!",
+      "phrase": {
+        "es": "Me encanta leer cuentos antes de dormir.",
+        "en": "I love reading stories before sleep."
+      },
+      "words": [
+        {
+          "es": "El libro",
+          "en": "Book",
+          "say": "el LEE-bro",
+          "emoji": "📕"
+        },
+        {
+          "es": "El cuento",
+          "en": "Story/tale",
+          "say": "el KWEN-toh",
+          "emoji": "📖"
+        },
+        {
+          "es": "El personaje",
+          "en": "Character",
+          "say": "el pehr-soh-NAH-heh",
+          "emoji": "🧙"
+        },
+        {
+          "es": "El héroe",
+          "en": "Hero",
+          "say": "el EH-ro-eh",
+          "emoji": "🦸"
+        },
+        {
+          "es": "La heroína",
+          "en": "Heroine",
+          "say": "la eh-ro-EE-nah",
+          "emoji": "🦸‍♀️"
+        },
+        {
+          "es": "El monstruo",
+          "en": "Monster",
+          "say": "el MONS-troo-o",
+          "emoji": "👹"
+        },
+        {
+          "es": "El dragón",
+          "en": "Dragon",
+          "say": "el drah-GON",
+          "emoji": "🐉"
+        },
+        {
+          "es": "La princesa",
+          "en": "Princess",
+          "say": "la preen-THEH-sah",
+          "emoji": "👸"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "El",
+            "héroe",
+            "es",
+            "valiente"
+          ],
+          "shuffle": [
+            "valiente",
+            "es",
+            "héroe",
+            "El"
+          ],
+          "en": "The hero is brave."
+        },
+        {
+          "correct": [
+            "Leo",
+            "un",
+            "libro",
+            "cada",
+            "semana"
+          ],
+          "shuffle": [
+            "semana",
+            "libro",
+            "Leo",
+            "un",
+            "cada"
+          ],
+          "en": "I read a book every week."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "Bedtime Stories",
+        "paras": [
+          "Mamá lee un cuento. Hay una princesa valiente, un dragón friendly, y un héroe con espada.",
+          "Sol's favourite personaje es el dragón. Luna prefiere la heroína.",
+          "Al final, el héroe wins y el dragón becomes friends with todos. Sol y Luna se duermen felices."
+        ],
+        "qs": [
+          {
+            "q": "Who reads the story?",
+            "opts": [
+              "Mum",
+              "Dad",
+              "Grandma"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What is in the story?",
+            "opts": [
+              "Princess, dragon, hero",
+              "Animals",
+              "Adventures"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Who is Sol's favourite?",
+            "opts": [
+              "The dragon",
+              "The hero",
+              "The princess"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 75,
+      "title": "Películas y series",
+      "subtitle": "Movies and TV",
+      "emoji": "🎬",
+      "milestone": false,
+      "funFact": "Spanish kids love watching 'dibujos animados' — animated cartoons!",
+      "phrase": {
+        "es": "Mi película favorita es muy divertida.",
+        "en": "My favourite movie is very fun."
+      },
+      "words": [
+        {
+          "es": "La película",
+          "en": "Movie",
+          "say": "la peh-LEE-koo-lah",
+          "emoji": "🎥"
+        },
+        {
+          "es": "La serie",
+          "en": "TV series",
+          "say": "la SEH-ryeh",
+          "emoji": "📺"
+        },
+        {
+          "es": "Los dibujos",
+          "en": "Cartoons",
+          "say": "los dee-BOO-hos",
+          "emoji": "🎨"
+        },
+        {
+          "es": "El cine",
+          "en": "Cinema",
+          "say": "el THEE-neh",
+          "emoji": "🎬"
+        },
+        {
+          "es": "Ver",
+          "en": "To watch",
+          "say": "BEHR",
+          "emoji": "👀"
+        },
+        {
+          "es": "Divertido",
+          "en": "Fun",
+          "say": "dee-behr-TEE-do",
+          "emoji": "😆"
+        },
+        {
+          "es": "Aburrido",
+          "en": "Boring",
+          "say": "ah-boo-RREE-do",
+          "emoji": "😑"
+        },
+        {
+          "es": "Mi favorita",
+          "en": "My favourite",
+          "say": "mee fah-bo-REE-tah",
+          "emoji": "⭐"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Veo",
+            "una",
+            "serie",
+            "nueva"
+          ],
+          "shuffle": [
+            "nueva",
+            "Veo",
+            "serie",
+            "una"
+          ],
+          "en": "I watch a new series."
+        },
+        {
+          "correct": [
+            "Los",
+            "dibujos",
+            "son",
+            "divertidos"
+          ],
+          "shuffle": [
+            "divertidos",
+            "dibujos",
+            "Los",
+            "son"
+          ],
+          "en": "The cartoons are fun."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "Movie Night",
+        "paras": [
+          "¡Es noche de cine! Sol and Luna get into la cama with palomitas. They ponen una película.",
+          "Es muy divertida — un robot has adventures con un niño. They laugh muchísimo.",
+          "After, they watch su serie favorita — dibujos animados about little stars. 'Mi favorita!' grita Luna."
+        ],
+        "qs": [
+          {
+            "q": "What do they have?",
+            "opts": [
+              "Popcorn",
+              "Candy",
+              "Crisps"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What's the movie about?",
+            "opts": [
+              "A robot and a boy",
+              "Animals",
+              "School"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What's Luna's favourite?",
+            "opts": [
+              "Cartoons about stars",
+              "Drama",
+              "News"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 76,
+      "title": "¡Campeón del juego!",
+      "subtitle": "Juego Champion",
+      "emoji": "🏆",
+      "milestone": true,
+      "funFact": "You can now talk about toys, games, books, and movies! ¡Qué divertido! 🎉",
+      "phrase": {
+        "es": "Mi juguete favorito es la pelota.",
+        "en": "My favourite toy is the ball."
+      },
+      "words": [
+        {
+          "es": "Abrir",
+          "en": "To open",
+          "say": "ah-BREER",
+          "emoji": "🚪"
+        },
+        {
+          "es": "El columpio",
+          "en": "Swing",
+          "say": "el ko-LOOM-pyo",
+          "emoji": "🛝"
+        },
+        {
+          "es": "Cortar",
+          "en": "To cut",
+          "say": "kor-TAR",
+          "emoji": "✂️"
+        },
+        {
+          "es": "La pelota",
+          "en": "Ball",
+          "say": "la peh-LOH-tah",
+          "emoji": "⚽"
+        },
+        {
+          "es": "El escondite",
+          "en": "Hide and seek",
+          "say": "el es-kon-DEE-teh",
+          "emoji": "🙈"
+        },
+        {
+          "es": "El cuento",
+          "en": "Story",
+          "say": "el KWEN-toh",
+          "emoji": "📖"
+        },
+        {
+          "es": "La película",
+          "en": "Movie",
+          "say": "la peh-LEE-koo-lah",
+          "emoji": "🎥"
+        },
+        {
+          "es": "Divertido",
+          "en": "Fun",
+          "say": "dee-behr-TEE-do",
+          "emoji": "😆"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Veo",
+            "mi",
+            "película",
+            "favorita"
+          ],
+          "shuffle": [
+            "favorita",
+            "Veo",
+            "mi",
+            "película"
+          ],
+          "en": "I watch my favourite movie."
+        },
+        {
+          "correct": [
+            "Jugamos",
+            "al",
+            "escondite",
+            "y",
+            "reímos"
+          ],
+          "shuffle": [
+            "reímos",
+            "escondite",
+            "Jugamos",
+            "y",
+            "al"
+          ],
+          "en": "We play hide and seek and laugh."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'El cuento' means:",
+          "opts": [
+            "Story",
+            "Book",
+            "Movie"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Pillapilla' is:",
+          "opts": [
+            "Tag",
+            "Hide and seek",
+            "Cards"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Aburrido' means:",
+          "opts": [
+            "Boring",
+            "Fun",
+            "Tired"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Subir' means:",
+          "opts": [
+            "To climb up",
+            "To go down",
+            "To run"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Game Champions",
+        "paras": [
+          "Sol and Luna have learned so much about play. Toys, games, books, movies — they love everything!",
+          "'Jugar es lo mejor!' says Sol. Luna agrees: 'Y aprender mientras jugamos es perfecto.'",
+          "They are los campeones del juego. Tomorrow, new adventures! 🎮🌟"
+        ],
+        "qs": [
+          {
+            "q": "What is the best thing?",
+            "opts": [
+              "Playing",
+              "Eating",
+              "Sleeping"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Luna add?",
+            "opts": [
+              "Learning while playing is perfect",
+              "Games are boring",
+              "Play is hard"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What are they?",
+            "opts": [
+              "Game champions",
+              "Music champions",
+              "Sport champions"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    }
+  ]
+}

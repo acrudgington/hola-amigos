@@ -1,0 +1,1118 @@
+{
+  "world": 10,
+  "lessons": [
+    {
+      "id": 77,
+      "title": "Animales del zoo",
+      "subtitle": "Zoo animals",
+      "emoji": "🦁",
+      "milestone": false,
+      "funFact": "Madrid Zoo is famous for its giant pandas — born there by special arrangement with China!",
+      "phrase": {
+        "es": "En el zoo hay leones, tigres y monos.",
+        "en": "At the zoo there are lions, tigers and monkeys."
+      },
+      "words": [
+        {
+          "es": "El león",
+          "en": "Lion",
+          "say": "el leh-ON",
+          "emoji": "🦁"
+        },
+        {
+          "es": "El tigre",
+          "en": "Tiger",
+          "say": "el TEE-greh",
+          "emoji": "🐅"
+        },
+        {
+          "es": "La jirafa",
+          "en": "Giraffe",
+          "say": "la hee-RAH-fah",
+          "emoji": "🦒"
+        },
+        {
+          "es": "El elefante",
+          "en": "Elephant",
+          "say": "el eh-leh-FAHN-teh",
+          "emoji": "🐘"
+        },
+        {
+          "es": "El mono",
+          "en": "Monkey",
+          "say": "el MOH-no",
+          "emoji": "🐵"
+        },
+        {
+          "es": "La serpiente",
+          "en": "Snake",
+          "say": "la sehr-PYEN-teh",
+          "emoji": "🐍"
+        },
+        {
+          "es": "El panda",
+          "en": "Panda",
+          "say": "el PAHN-dah",
+          "emoji": "🐼"
+        },
+        {
+          "es": "El cocodrilo",
+          "en": "Crocodile",
+          "say": "el ko-ko-DREE-loh",
+          "emoji": "🐊"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "El",
+            "león",
+            "es",
+            "grande",
+            "y",
+            "fuerte"
+          ],
+          "shuffle": [
+            "fuerte",
+            "grande",
+            "El",
+            "león",
+            "y",
+            "es"
+          ],
+          "en": "The lion is big and strong."
+        },
+        {
+          "correct": [
+            "Me",
+            "encantan",
+            "las",
+            "jirafas"
+          ],
+          "shuffle": [
+            "jirafas",
+            "las",
+            "Me",
+            "encantan"
+          ],
+          "en": "I love giraffes."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "At the Zoo",
+        "paras": [
+          "Sol and Luna visit el zoo. They see un león yawning, un tigre running, and una jirafa with a very long neck!",
+          "Los monos jump from tree to tree. ¡Qué divertidos! Una serpiente verde slithers along a branch.",
+          "At the end, they see el panda eating bamboo. 'Es mi favorito!' Luna says. '¡Qué lindo!'"
+        ],
+        "qs": [
+          {
+            "q": "What is the lion doing?",
+            "opts": [
+              "Yawning",
+              "Running",
+              "Sleeping"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What is special about the giraffe?",
+            "opts": [
+              "Long neck",
+              "Big eyes",
+              "Loud voice"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does the panda eat?",
+            "opts": [
+              "Bamboo",
+              "Fruit",
+              "Fish"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 78,
+      "title": "Animales del mar",
+      "subtitle": "Sea animals",
+      "emoji": "🐠",
+      "milestone": false,
+      "funFact": "In Spain, 'pulpo a la gallega' (Galician octopus) is a famous dish — but kids prefer the sea ones!",
+      "phrase": {
+        "es": "En el mar hay peces y delfines.",
+        "en": "In the sea there are fish and dolphins."
+      },
+      "words": [
+        {
+          "es": "El pez",
+          "en": "Fish",
+          "say": "el peth",
+          "emoji": "🐠"
+        },
+        {
+          "es": "La ballena",
+          "en": "Whale",
+          "say": "la bah-YEH-nah",
+          "emoji": "🐋"
+        },
+        {
+          "es": "El tiburón",
+          "en": "Shark",
+          "say": "el tee-boo-RON",
+          "emoji": "🦈"
+        },
+        {
+          "es": "El pulpo",
+          "en": "Octopus",
+          "say": "el POOL-po",
+          "emoji": "🐙"
+        },
+        {
+          "es": "El cangrejo",
+          "en": "Crab",
+          "say": "el kahn-GREH-ho",
+          "emoji": "🦀"
+        },
+        {
+          "es": "El delfín",
+          "en": "Dolphin",
+          "say": "el del-FEEN",
+          "emoji": "🐬"
+        },
+        {
+          "es": "La tortuga",
+          "en": "Turtle",
+          "say": "la tor-TOO-gah",
+          "emoji": "🐢"
+        },
+        {
+          "es": "El caballito de mar",
+          "en": "Seahorse",
+          "say": "el kah-bah-YEE-toh deh mar",
+          "emoji": "🐴"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "El",
+            "tiburón",
+            "nada",
+            "rápido"
+          ],
+          "shuffle": [
+            "rápido",
+            "tiburón",
+            "El",
+            "nada"
+          ],
+          "en": "The shark swims fast."
+        },
+        {
+          "correct": [
+            "La",
+            "tortuga",
+            "es",
+            "muy",
+            "lenta"
+          ],
+          "shuffle": [
+            "lenta",
+            "tortuga",
+            "La",
+            "muy",
+            "es"
+          ],
+          "en": "The turtle is very slow."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "Under the Sea",
+        "paras": [
+          "Sol y Luna explore el mar. They see peces colourful and una tortuga lenta.",
+          "De repente, ¡un tiburón! But it's friendly! He swims away. Then un pulpo waves with eight arms.",
+          "Un delfín jumps out of the water. 'Hola amigos!' he sings. Sol y Luna laugh muy felices."
+        ],
+        "qs": [
+          {
+            "q": "What does the turtle do?",
+            "opts": [
+              "Moves slowly",
+              "Swims fast",
+              "Sleeps"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How many arms does the octopus have?",
+            "opts": [
+              "Eight",
+              "Six",
+              "Four"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does the dolphin do?",
+            "opts": [
+              "Sings hello",
+              "Swims away",
+              "Hides"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 79,
+      "title": "Insectos pequeños",
+      "subtitle": "Little insects",
+      "emoji": "🦋",
+      "milestone": false,
+      "funFact": "Spanish ladybugs ('mariquitas') are good luck if they land on you — make a wish!",
+      "phrase": {
+        "es": "Las mariposas son muy bonitas.",
+        "en": "Butterflies are very pretty."
+      },
+      "words": [
+        {
+          "es": "La mariposa",
+          "en": "Butterfly",
+          "say": "la mah-ree-POH-sah",
+          "emoji": "🦋"
+        },
+        {
+          "es": "La abeja",
+          "en": "Bee",
+          "say": "la ah-BEH-hah",
+          "emoji": "🐝"
+        },
+        {
+          "es": "La hormiga",
+          "en": "Ant",
+          "say": "la or-MEE-gah",
+          "emoji": "🐜"
+        },
+        {
+          "es": "La araña",
+          "en": "Spider",
+          "say": "la ah-RAH-nyah",
+          "emoji": "🕷️"
+        },
+        {
+          "es": "La mariquita",
+          "en": "Ladybug",
+          "say": "la mah-ree-KEE-tah",
+          "emoji": "🐞"
+        },
+        {
+          "es": "La mosca",
+          "en": "Fly",
+          "say": "la MOS-kah",
+          "emoji": "🪰"
+        },
+        {
+          "es": "El gusano",
+          "en": "Worm",
+          "say": "el goo-SAH-no",
+          "emoji": "🪱"
+        },
+        {
+          "es": "El caracol",
+          "en": "Snail",
+          "say": "el kah-rah-KOL",
+          "emoji": "🐌"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Veo",
+            "una",
+            "mariquita",
+            "roja"
+          ],
+          "shuffle": [
+            "roja",
+            "una",
+            "Veo",
+            "mariquita"
+          ],
+          "en": "I see a red ladybug."
+        },
+        {
+          "correct": [
+            "La",
+            "hormiga",
+            "es",
+            "muy",
+            "pequeña"
+          ],
+          "shuffle": [
+            "pequeña",
+            "hormiga",
+            "La",
+            "muy",
+            "es"
+          ],
+          "en": "The ant is very small."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "Garden Insects",
+        "paras": [
+          "In the jardín, Sol sees una mariposa azul. It flies from flower to flower.",
+          "Una abeja makes miel from the flowers. Una mariquita roja lands on Sol's hand. '¡Buena suerte!'",
+          "Luna spots una hormiga carrying a leaf to her hill. 'Las hormigas son muy fuertes!' she says."
+        ],
+        "qs": [
+          {
+            "q": "What does the butterfly do?",
+            "opts": [
+              "Flies between flowers",
+              "Sleeps",
+              "Eats"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What lands on Sol's hand?",
+            "opts": [
+              "A ladybug",
+              "A bee",
+              "A spider"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What is the ant carrying?",
+            "opts": [
+              "A leaf",
+              "A flower",
+              "Food"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 80,
+      "title": "Las estaciones",
+      "subtitle": "The seasons",
+      "emoji": "🌸",
+      "milestone": false,
+      "funFact": "In southern Spain, it almost never snows — but it does in the Sierra Nevada mountains!",
+      "phrase": {
+        "es": "En verano hace calor y nadamos.",
+        "en": "In summer it's hot and we swim."
+      },
+      "words": [
+        {
+          "es": "La primavera",
+          "en": "Spring",
+          "say": "la pree-mah-BEH-rah",
+          "emoji": "🌸"
+        },
+        {
+          "es": "El verano",
+          "en": "Summer",
+          "say": "el beh-RAH-no",
+          "emoji": "☀️"
+        },
+        {
+          "es": "El otoño",
+          "en": "Autumn",
+          "say": "el oh-TOH-nyo",
+          "emoji": "🍂"
+        },
+        {
+          "es": "El invierno",
+          "en": "Winter",
+          "say": "el een-BYEHR-no",
+          "emoji": "❄️"
+        },
+        {
+          "es": "Las flores",
+          "en": "Flowers",
+          "say": "las FLOH-res",
+          "emoji": "🌺"
+        },
+        {
+          "es": "Las hojas",
+          "en": "Leaves",
+          "say": "las OH-has",
+          "emoji": "🍁"
+        },
+        {
+          "es": "La nieve",
+          "en": "Snow",
+          "say": "la NYEH-beh",
+          "emoji": "❄️"
+        },
+        {
+          "es": "Hace calor",
+          "en": "It's hot",
+          "say": "AH-theh kah-LOR",
+          "emoji": "🥵"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "En",
+            "invierno",
+            "hace",
+            "frío"
+          ],
+          "shuffle": [
+            "frío",
+            "En",
+            "hace",
+            "invierno"
+          ],
+          "en": "In winter it's cold."
+        },
+        {
+          "correct": [
+            "En",
+            "otoño",
+            "caen",
+            "las",
+            "hojas"
+          ],
+          "shuffle": [
+            "hojas",
+            "caen",
+            "En",
+            "otoño",
+            "las"
+          ],
+          "en": "In autumn the leaves fall."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "The Four Seasons",
+        "paras": [
+          "En primavera, las flores grow. En verano, hace mucho calor and we go to the beach.",
+          "En otoño, las hojas fall from the trees, red and orange and yellow.",
+          "En invierno, hay nieve in the mountains. Sol and Luna love every season."
+        ],
+        "qs": [
+          {
+            "q": "What happens in autumn?",
+            "opts": [
+              "Leaves fall",
+              "Flowers grow",
+              "It snows"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What is the weather like in summer?",
+            "opts": [
+              "Very hot",
+              "Cold",
+              "Rainy"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Where is there snow in winter?",
+            "opts": [
+              "In the mountains",
+              "At the beach",
+              "In the garden"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 81,
+      "title": "En el jardín",
+      "subtitle": "In the garden",
+      "emoji": "🌷",
+      "milestone": false,
+      "funFact": "Spain's national tree is the holm oak ('encina') — it grows for hundreds of years!",
+      "phrase": {
+        "es": "Las plantas necesitan agua y sol para crecer.",
+        "en": "Plants need water and sun to grow."
+      },
+      "words": [
+        {
+          "es": "La planta",
+          "en": "Plant",
+          "say": "la PLAHN-tah",
+          "emoji": "🪴"
+        },
+        {
+          "es": "La flor",
+          "en": "Flower",
+          "say": "la FLOR",
+          "emoji": "🌸"
+        },
+        {
+          "es": "El árbol",
+          "en": "Tree",
+          "say": "el AR-bol",
+          "emoji": "🌳"
+        },
+        {
+          "es": "La hoja",
+          "en": "Leaf",
+          "say": "la OH-hah",
+          "emoji": "🍃"
+        },
+        {
+          "es": "La rama",
+          "en": "Branch",
+          "say": "la RAH-mah",
+          "emoji": "🌿"
+        },
+        {
+          "es": "La raíz",
+          "en": "Root",
+          "say": "la rah-EETH",
+          "emoji": "🌱"
+        },
+        {
+          "es": "La semilla",
+          "en": "Seed",
+          "say": "la seh-MEE-yah",
+          "emoji": "🌰"
+        },
+        {
+          "es": "Crecer",
+          "en": "To grow",
+          "say": "kreh-THEHR",
+          "emoji": "📈"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Planto",
+            "una",
+            "semilla"
+          ],
+          "shuffle": [
+            "semilla",
+            "una",
+            "Planto"
+          ],
+          "en": "I plant a seed."
+        },
+        {
+          "correct": [
+            "El",
+            "árbol",
+            "es",
+            "muy",
+            "alto"
+          ],
+          "shuffle": [
+            "alto",
+            "árbol",
+            "El",
+            "muy",
+            "es"
+          ],
+          "en": "The tree is very tall."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "Sol's Plant",
+        "paras": [
+          "Sol planta una semilla in el jardín. He gives it agua and sol every day.",
+          "After two weeks, una hoja appears. The raíz grows down. La rama grows up.",
+          "After dos meses, it's una planta grande con flores rosas. '¡Yo crecí esta planta!' Sol is muy orgulloso."
+        ],
+        "qs": [
+          {
+            "q": "What does Sol give the plant?",
+            "opts": [
+              "Water and sun",
+              "Sugar",
+              "Milk"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "When does the first leaf appear?",
+            "opts": [
+              "After two weeks",
+              "After one day",
+              "After a year"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What colour are the flowers?",
+            "opts": [
+              "Pink",
+              "Blue",
+              "Yellow"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 82,
+      "title": "El cielo",
+      "subtitle": "The sky",
+      "emoji": "☁️",
+      "milestone": false,
+      "funFact": "In Spanish folklore, a rainbow ('arcoíris') is a magical bridge from earth to heaven!",
+      "phrase": {
+        "es": "Después de la lluvia hay un arcoíris.",
+        "en": "After the rain there's a rainbow."
+      },
+      "words": [
+        {
+          "es": "El cielo",
+          "en": "Sky",
+          "say": "el THYEH-loh",
+          "emoji": "☁️"
+        },
+        {
+          "es": "La nube",
+          "en": "Cloud",
+          "say": "la NOO-beh",
+          "emoji": "☁️"
+        },
+        {
+          "es": "El arcoíris",
+          "en": "Rainbow",
+          "say": "el ar-ko-EE-rees",
+          "emoji": "🌈"
+        },
+        {
+          "es": "El relámpago",
+          "en": "Lightning",
+          "say": "el reh-LAHM-pah-go",
+          "emoji": "⚡"
+        },
+        {
+          "es": "El trueno",
+          "en": "Thunder",
+          "say": "el TRWEH-no",
+          "emoji": "⛈️"
+        },
+        {
+          "es": "El viento",
+          "en": "Wind",
+          "say": "el BYEN-toh",
+          "emoji": "💨"
+        },
+        {
+          "es": "La tormenta",
+          "en": "Storm",
+          "say": "la tor-MEN-tah",
+          "emoji": "⛈️"
+        },
+        {
+          "es": "La luna",
+          "en": "Moon",
+          "say": "la LOO-nah",
+          "emoji": "🌙"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Las",
+            "nubes",
+            "son",
+            "blancas"
+          ],
+          "shuffle": [
+            "blancas",
+            "nubes",
+            "Las",
+            "son"
+          ],
+          "en": "The clouds are white."
+        },
+        {
+          "correct": [
+            "Hay",
+            "tormenta",
+            "y",
+            "relámpagos"
+          ],
+          "shuffle": [
+            "relámpagos",
+            "tormenta",
+            "Hay",
+            "y"
+          ],
+          "en": "There's a storm and lightning."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "The Big Storm",
+        "paras": [
+          "El cielo gets dark. Las nubes are heavy. De repente, ¡un relámpago! Then ¡el trueno!",
+          "¡Una tormenta! El viento blows hard. La lluvia falls. Sol y Luna se esconden in their casa.",
+          "After the storm, ¡un arcoíris! 'Mira, Luna!' grita Sol. The sky is beautiful again. ¡Qué maravilloso!"
+        ],
+        "qs": [
+          {
+            "q": "What happens to the sky?",
+            "opts": [
+              "It gets dark",
+              "It gets bright",
+              "It gets pink"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Where do they hide?",
+            "opts": [
+              "At home",
+              "Under a tree",
+              "In the car"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What appears after the storm?",
+            "opts": [
+              "A rainbow",
+              "More clouds",
+              "Snow"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 83,
+      "title": "El espacio",
+      "subtitle": "Space",
+      "emoji": "🚀",
+      "milestone": false,
+      "funFact": "Spain has a special space tracking station in Madrid that talks to NASA spacecraft!",
+      "phrase": {
+        "es": "La Tierra y la Luna están en el espacio.",
+        "en": "Earth and the Moon are in space."
+      },
+      "words": [
+        {
+          "es": "La Tierra",
+          "en": "Earth",
+          "say": "la TYEH-rrah",
+          "emoji": "🌍"
+        },
+        {
+          "es": "El sol",
+          "en": "Sun",
+          "say": "el SOL",
+          "emoji": "☀️"
+        },
+        {
+          "es": "La luna",
+          "en": "Moon",
+          "say": "la LOO-nah",
+          "emoji": "🌙"
+        },
+        {
+          "es": "Las estrellas",
+          "en": "Stars",
+          "say": "las es-TREH-yas",
+          "emoji": "⭐"
+        },
+        {
+          "es": "El planeta",
+          "en": "Planet",
+          "say": "el plah-NEH-tah",
+          "emoji": "🪐"
+        },
+        {
+          "es": "El cohete",
+          "en": "Rocket",
+          "say": "el ko-EH-teh",
+          "emoji": "🚀"
+        },
+        {
+          "es": "El astronauta",
+          "en": "Astronaut",
+          "say": "el ahs-tro-NOW-tah",
+          "emoji": "👨‍🚀"
+        },
+        {
+          "es": "El universo",
+          "en": "Universe",
+          "say": "el oo-nee-BEHR-so",
+          "emoji": "🌌"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Las",
+            "estrellas",
+            "brillan",
+            "de",
+            "noche"
+          ],
+          "shuffle": [
+            "noche",
+            "brillan",
+            "Las",
+            "estrellas",
+            "de"
+          ],
+          "en": "The stars shine at night."
+        },
+        {
+          "correct": [
+            "El",
+            "cohete",
+            "va",
+            "al",
+            "espacio"
+          ],
+          "shuffle": [
+            "espacio",
+            "al",
+            "El",
+            "cohete",
+            "va"
+          ],
+          "en": "The rocket goes to space."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "Journey to the Stars",
+        "paras": [
+          "Sol y Luna sueñan con el espacio. They imagine un cohete grande. '¡Vamos al universo!'",
+          "They visit la Tierra from above — qué pequeña! Then la Luna — perfecta!",
+          "Las estrellas brillan around them. Otros planetas: Marte rojo, Júpiter enorme. ¡Qué increíble!"
+        ],
+        "qs": [
+          {
+            "q": "What do they imagine?",
+            "opts": [
+              "A big rocket",
+              "A small car",
+              "A boat"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What colour is Mars?",
+            "opts": [
+              "Red",
+              "Blue",
+              "Yellow"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Jupiter look like?",
+            "opts": [
+              "Enormous",
+              "Tiny",
+              "Green"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 84,
+      "title": "¡Campeón de la naturaleza!",
+      "subtitle": "Naturaleza Champion",
+      "emoji": "🏆",
+      "milestone": true,
+      "funFact": "You know SO much about nature, animals, weather and space now! 🌎",
+      "phrase": {
+        "es": "En primavera, las flores y mariposas son bonitas.",
+        "en": "In spring, the flowers and butterflies are pretty."
+      },
+      "words": [
+        {
+          "es": "El león",
+          "en": "Lion",
+          "say": "el leh-ON",
+          "emoji": "🦁"
+        },
+        {
+          "es": "El delfín",
+          "en": "Dolphin",
+          "say": "el del-FEEN",
+          "emoji": "🐬"
+        },
+        {
+          "es": "La mariposa",
+          "en": "Butterfly",
+          "say": "la mah-ree-POH-sah",
+          "emoji": "🦋"
+        },
+        {
+          "es": "La primavera",
+          "en": "Spring",
+          "say": "la pree-mah-BEH-rah",
+          "emoji": "🌸"
+        },
+        {
+          "es": "El árbol",
+          "en": "Tree",
+          "say": "el AR-bol",
+          "emoji": "🌳"
+        },
+        {
+          "es": "El arcoíris",
+          "en": "Rainbow",
+          "say": "el ar-ko-EE-rees",
+          "emoji": "🌈"
+        },
+        {
+          "es": "La Tierra",
+          "en": "Earth",
+          "say": "la TYEH-rrah",
+          "emoji": "🌍"
+        },
+        {
+          "es": "Las estrellas",
+          "en": "Stars",
+          "say": "las es-TREH-yas",
+          "emoji": "⭐"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "El",
+            "delfín",
+            "nada",
+            "en",
+            "el",
+            "mar"
+          ],
+          "shuffle": [
+            "mar",
+            "el",
+            "delfín",
+            "El",
+            "nada",
+            "en"
+          ],
+          "en": "The dolphin swims in the sea."
+        },
+        {
+          "correct": [
+            "En",
+            "invierno",
+            "cae",
+            "la",
+            "nieve"
+          ],
+          "shuffle": [
+            "nieve",
+            "cae",
+            "En",
+            "invierno",
+            "la"
+          ],
+          "en": "In winter the snow falls."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'El tiburón' is:",
+          "opts": [
+            "Shark",
+            "Whale",
+            "Octopus"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'El otoño' means:",
+          "opts": [
+            "Autumn",
+            "Spring",
+            "Winter"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'La semilla' means:",
+          "opts": [
+            "Seed",
+            "Leaf",
+            "Root"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'El cohete' is a:",
+          "opts": [
+            "Rocket",
+            "Planet",
+            "Star"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Nature Champions",
+        "paras": [
+          "Sol and Luna have learned about animals, weather, plants, and space. ¡Qué increíble!",
+          "'La naturaleza es lo más bonito del mundo,' says Luna. Sol agrees: 'Y debemos cuidarla.'",
+          "They are nature champions, ready to protect and enjoy our beautiful planeta. 🌍⭐"
+        ],
+        "qs": [
+          {
+            "q": "What is most beautiful according to Luna?",
+            "opts": [
+              "Nature",
+              "Toys",
+              "Music"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Sol say we must do?",
+            "opts": [
+              "Take care of it",
+              "Forget it",
+              "Sell it"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What kind of champions are they?",
+            "opts": [
+              "Nature champions",
+              "Sport champions",
+              "Music champions"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    }
+  ]
+}
