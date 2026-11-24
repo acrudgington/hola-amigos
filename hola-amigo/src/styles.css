@@ -606,3 +606,5 @@ li:last-child > .step .step__rail { display: none; }
 .world__banner-info { align-items: center; }
 @media (min-width: 1100px) { .bento > .xs-6.l-3 { grid-column: span 3; } }
 .bento-col > .card { height: auto; }
+.big-stars { font-size: 46px; }
+.btn--ghost, .btn--ghost.btn--sm { box-shadow: none; }
