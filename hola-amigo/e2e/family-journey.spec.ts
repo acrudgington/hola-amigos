@@ -1,38 +1,43 @@
-import { expect, test, type Page } from "@playwright/test";
+import { expect, test, type Locator, type Page } from "@playwright/test";
 
 // A family signs up, adds a child, plays a whole guided lesson and the
 // result is saved. Answers are tapped without knowing which is right, so
 // this checks the flow works end to end — not the child's score.
+// Buttons can vanish mid-click while one activity animates out and the next
+// animates in, so clicks use a short timeout and the loop simply looks again.
+const tap = (l: Locator) => l.click({ timeout: 3000 }).then(() => true, () => false);
+
 async function playThrough(page: Page) {
   for (let i = 0; i < 400; i++) {
     if (await page.getByText("Lesson complete!").count()) return;
-    if (await page.locator(".level-up").count()) { await page.getByRole("button", { name: /Vamos/ }).click(); continue; }
+    if (await page.locator(".level-up").count()) { await tap(page.getByRole("button", { name: /Vamos/ })); continue; }
     const next = page.getByRole("button", { name: /Next word|Let’s practise|Next →|Continue →|Questions →|Next page|Finish|Skip this/ });
-    if (await next.count() && await next.first().isEnabled()) { await next.first().click(); continue; }
+    if (await next.count() && await next.first().isEnabled().catch(() => false)) { await tap(next.first()); continue; }
     const chip = page.locator(".drag-chip:not(.drag-float)").first();
     if (await chip.count()) {
       const target = page.locator(".drop-target:not(.is-done)").first();
-      await chip.dragTo(target);
+      await chip.dragTo(target, { timeout: 3000 }).catch(() => {});
       await page.waitForTimeout(650);
       continue;
     }
     const tile = page.locator(".chips .chip").first();
     if (await tile.count()) {
-      await tile.click();
+      await tap(tile);
       const check = page.getByRole("button", { name: "Check ✓" });
-      if (await check.isEnabled()) { await check.click(); await page.waitForTimeout(2300); }
+      if (await check.isEnabled().catch(() => false) && await tap(check)) await page.waitForTimeout(2300);
       continue;
     }
     const choice = page.locator(".choice:not([disabled])").first();
-    if (await choice.count()) { await choice.click(); await page.waitForTimeout(1150); continue; }
+    if (await choice.count()) { await tap(choice); await page.waitForTimeout(1150); continue; }
     const learnt = page.getByRole("button", { name: /I’ve learnt/ });
-    if (await learnt.count()) { await learnt.click(); continue; }
+    if (await learnt.count()) { await tap(learnt); continue; }
     await page.waitForTimeout(250);
   }
   throw new Error("Lesson never finished");
 }
 
 test("sign up → add a child → play lesson 1 → progress is saved", async ({ page }) => {
+  test.setTimeout(300_000);
   const errors: string[] = [];
   page.on("pageerror", e => errors.push(e.message));
 
