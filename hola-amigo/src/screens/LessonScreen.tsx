@@ -28,7 +28,10 @@ export function LessonScreen({ lesson, stars, onBack, onStart, onPractice }: { l
       </Card>
 
       <div className="card card--sun card--pad" style={{ marginBottom: 18 }}>
-        <div style={{ fontWeight: 900, color: "var(--sun-d)", marginBottom: 2 }}>💡 Did you know?</div>
+        <div className="row row--between" style={{ marginBottom: 2 }}>
+          <div style={{ fontWeight: 900, color: "var(--sun-d)" }}>💡 Did you know?</div>
+          <SpeakButton text={lesson.funFact} lang="en" size={34} label="Hear the fun fact" />
+        </div>
         <div className="small" style={{ fontWeight: 700, lineHeight: 1.5 }}>{lesson.funFact}</div>
       </div>
 

@@ -20,6 +20,9 @@ import type { MissionStep } from "./lib/mission.ts";
 import { pickReaction, type Reaction } from "./lib/reactions.ts";
 import { applyTheme, loadPrefs, savePrefs, type Prefs } from "./lib/prefs.ts";
 import { setSoundEnabled, sfx } from "./lib/sound.ts";
+import { voice } from "./audio/player.ts";
+import { GuideContext } from "./audio/guide.ts";
+import { LEVEL_UP_LINE } from "./audio/lines.ts";
 import { Confetti, LevelUpModal, RewardToast, XpPops, type XpPop } from "./components/ui.tsx";
 import { MascotReaction } from "./components/Mascots.tsx";
 import { Cosmos } from "./components/Cosmos.tsx";
@@ -68,7 +71,7 @@ export default function App() {
   const celebrate = useCallback(() => setConfetti(c => c + 1), []);
   const { progress, load, clear, update } = useProgress({
     onRewards: won => { setRewards(q => [...q, ...won]); sfx.star(); },
-    onLevelUp: (level, title) => setTimeout(() => { setLevelUp({ level, title }); sfx.levelUp(); celebrate(); }, 450),
+    onLevelUp: (level, title) => setTimeout(() => { setLevelUp({ level, title }); sfx.levelUp(); celebrate(); voice.narrate(LEVEL_UP_LINE, { speaker: "sol", mode: "queue" }); }, 450),
   });
 
   const lesson: Lesson = lessonById(nav.lessonId) ?? LESSONS[0];
@@ -98,12 +101,13 @@ export default function App() {
   useEffect(() => { applyTheme(prefs.theme); setSoundEnabled(prefs.sound); savePrefs(prefs); }, [prefs]);
   const togglePref = (key: keyof Prefs) => setPrefs(p => (key === "theme"
     ? { ...p, theme: p.theme === "galaxy" ? "daylight" : "galaxy" }
-    : { ...p, sound: !p.sound }));
+    : { ...p, [key]: !p[key] }));
 
   // Remember the last tap (XP pops rise from there) and play a soft tap sound.
   useEffect(() => {
     const down = (e: PointerEvent) => {
       pointer.current = { x: e.clientX, y: e.clientY };
+      voice.unlock();
       if ((e.target as Element | null)?.closest?.("button, [role=button]")) sfx.tap();
     };
     window.addEventListener("pointerdown", down, { passive: true });
@@ -158,6 +162,8 @@ export default function App() {
   const openLesson = (l: Lesson) => dispatch({ type: "openLesson", lessonId: l.id });
   const startLesson = (l: Lesson) => {
     resetSession();
+    // Warm the offline cache with this lesson's words and story.
+    voice.prefetch({ spanish: [...l.words.map(w => w.es), l.phrase.es], narration: l.story.paras });
     dispatch({ type: "startLesson", lessonId: l.id, steps: buildJourney(l), run: Date.now() });
     sfx.whoosh();
   };
@@ -182,7 +188,11 @@ export default function App() {
       update(p => recordWord(p, es, en, ok));
       sfx.wrong();
       s.run = 0; s.lastWrong = true; setCombo(0);
-      if (Math.random() < 0.34) setReaction(pickReaction("wrong"));
+      if (Math.random() < 0.34) {
+        const r = pickReaction("wrong");
+        setReaction(r);
+        if (prefs.guide) voice.narrate(r.text, { speaker: r.who, mode: "queue" });   // Luna's gentle encouragement
+      }
     }
   }, [update]); // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -283,7 +293,7 @@ export default function App() {
       onNext={startLesson} onHome={() => dispatch({ type: "go", view: "home" })} onPractice={() => openLesson(lesson)} />;
   }
 
-  return <MotionConfig reducedMotion="user">
+  return <GuideContext.Provider value={prefs.guide}><MotionConfig reducedMotion="user">
     <Cosmos />
     <div className="app">
       <AnimatePresence mode="wait">
@@ -297,5 +307,5 @@ export default function App() {
     {palette && child && progress && <CommandPalette onClose={() => setPalette(false)} onOpenLesson={openLesson}
       unlockedUpTo={Math.min(LESSONS.length, maxCompleted(progress.stars) + 1)} />}
     {levelUp && <LevelUpModal level={levelUp.level} title={levelUp.title} onClose={() => setLevelUp(null)} />}
-  </MotionConfig>;
+  </MotionConfig></GuideContext.Provider>;
 }

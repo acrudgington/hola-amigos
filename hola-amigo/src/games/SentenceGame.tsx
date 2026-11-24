@@ -1,8 +1,8 @@
 // Sentence games: "Sentences" (build) and "Word Order" (unscramble).
 // They share one engine; Word Order is the shorter, tap-to-remove variant.
 import { useRef, useState } from "react";
+import { voice } from "../audio/player.ts";
 import { shuffle } from "../lib/utils.ts";
-import { speech } from "../lib/speech.ts";
 import { Button, Feedback } from "../components/ui.tsx";
 import { useLater } from "./hooks.ts";
 import type { Sentence } from "../content/index.ts";
@@ -32,7 +32,7 @@ export function SentenceGame({ sentences, onDone, variant = "build" }: { sentenc
   const check = () => {
     const ok = placed.map(t => t.w).join(" ") === s.correct.join(" ");
     setFb(ok);
-    if (ok) { score.current += 1; speech.speak(s.correct.join(" ")); }
+    if (ok) { score.current += 1; voice.spanish(s.correct.join(" ")); }
     later(() => {
       setFb(null);
       const ni = idx + 1;

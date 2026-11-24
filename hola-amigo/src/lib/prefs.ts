@@ -1,12 +1,13 @@
 // Per-device comfort settings (theme, sound). Not progress, so never synced.
 export type Theme = "galaxy" | "daylight";
-export interface Prefs { theme: Theme; sound: boolean }
+// guide: read instructions & questions aloud (for children who are still learning to read).
+export interface Prefs { theme: Theme; sound: boolean; guide: boolean }
 const KEY = "hola_prefs";
 
 export function loadPrefs(): Prefs {
   let saved: Partial<Prefs> = {};
   try { saved = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch { /* ignore */ }
-  return { theme: "galaxy", sound: true, ...saved };
+  return { theme: "galaxy", sound: true, guide: true, ...saved };
 }
 
 export function savePrefs(p: Prefs) {

@@ -25,8 +25,11 @@ export function PrefToggles({ prefs, onToggle }: { prefs: Prefs; onToggle: (key:
     <button type="button" className="toggle grow" onClick={() => onToggle("theme")} aria-label={night ? "Switch to day theme" : "Switch to night theme"}>
       <Icon name={night ? "moon" : "sun"} size={16} />{night ? "Night" : "Day"}
     </button>
-    <button type="button" className="toggle" onClick={() => onToggle("sound")} aria-label={prefs.sound ? "Mute sounds" : "Turn sounds on"} aria-pressed={prefs.sound}>
+    <button type="button" className="toggle" onClick={() => onToggle("sound")} aria-label={prefs.sound ? "Mute sound effects" : "Turn sound effects on"} aria-pressed={prefs.sound} title="Sound effects">
       <Icon name={prefs.sound ? "volume" : "mute"} size={16} />
+    </button>
+    <button type="button" className={`toggle ${prefs.guide ? "toggle--on" : ""}`} onClick={() => onToggle("guide")} aria-label={prefs.guide ? "Stop reading instructions aloud" : "Read instructions aloud"} aria-pressed={prefs.guide} title="Read instructions aloud">
+      <Icon name="chat" size={16} />
     </button>
   </div>;
 }

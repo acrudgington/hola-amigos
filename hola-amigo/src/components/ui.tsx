@@ -1,9 +1,9 @@
 import type React from "react";
+import { voice } from "../audio/player.ts";
 import { useEffect, useMemo, useRef, useState, type ButtonHTMLAttributes, type HTMLAttributes, type InputHTMLAttributes, type ReactNode } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { speech } from "../lib/speech.ts";
 import { findReward, RARITY, type EarnedReward, type Sticker } from "../domain/rewards.ts";
-import type { SpeakLang } from "../lib/speech.ts";
+export type SpeakLang = "es" | "en";
 import { darken } from "../lib/utils.ts";
 
 export type ButtonVariant = "white" | "sun" | "luna" | "mint" | "coral" | "sky" | "ghost";
@@ -44,10 +44,10 @@ export function SpeakButton({ text, size = 40, big = false, lang = "es", label =
   const [on, setOn] = useState(false);
   const t = useRef<ReturnType<typeof setTimeout>>();
   useEffect(() => () => clearTimeout(t.current), []);
-  if (!speech.supported()) return null;
+  if (!voice.available()) return null;
   const click = (e: React.MouseEvent) => {
     e.stopPropagation();
-    speech.speak(text, { lang });
+    if (lang === "es") voice.spanish(text); else voice.narrate(text);
     setOn(true);
     clearTimeout(t.current);
     t.current = setTimeout(() => setOn(false), 700);

@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { getDueWords, maxCompleted, type Progress } from "../domain/progress.ts";
+import { useSayOnShow } from "../audio/guide.ts";
+import { REVIEW_INSTRUCTION } from "../audio/lines.ts";
 import type { OnWord } from "../games/types.ts";
 import { shuffle } from "../lib/utils.ts";
 import { wordsForLessonsUpTo } from "../content/index.ts";
@@ -14,6 +16,7 @@ export function ReviewScreen({ progress, onBack, onFinish, onWord }: { progress:
   const [run, setRun] = useState(0);
   const [list, setList] = useState(() => makeList(progress));
   const [result, setResult] = useState<{ s: number; t: number } | null>(null);
+  useSayOnShow(list.length ? REVIEW_INSTRUCTION : null, { delay: 450 });
 
   const again = () => { setList(makeList(progress)); setResult(null); setRun(r => r + 1); };
 

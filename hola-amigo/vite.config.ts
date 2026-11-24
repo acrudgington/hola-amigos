@@ -35,6 +35,17 @@ export default defineConfig({
         cleanupOutdatedCaches: true,
         runtimeCaching: [
           {
+            // Voice clips: kept once heard (or prefetched when a lesson starts), so lessons talk offline.
+            urlPattern: ({ url }) => url.pathname.startsWith("/audio/") && url.pathname.endsWith(".mp3"),
+            handler: "CacheFirst",
+            options: {
+              cacheName: "voice-clips",
+              expiration: { maxEntries: 4000 },
+              cacheableResponse: { statuses: [200] },
+              rangeRequests: true,   // Safari asks for audio in byte ranges
+            },
+          },
+          {
             // Google Fonts stylesheets and font files: cache so the app looks right offline.
             urlPattern: ({ url }) => url.origin === "https://fonts.googleapis.com" || url.origin === "https://fonts.gstatic.com",
             handler: "CacheFirst",

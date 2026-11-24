@@ -614,3 +614,8 @@ li:last-child > .step .step__rail { display: none; }
   display: flex; align-items: center; gap: 10px; padding: 10px 10px 10px 14px; border-radius: 16px; background: var(--surface); border: 1px solid var(--border-2);
   box-shadow: var(--shadow-lift); font-weight: 800; font-size: 14px; animation: pop-up 0.35s var(--ease-spring); }
 @media (min-width: 900px) { .update-banner { bottom: 20px; } }
+.toggle--on { color: var(--sun); border-color: color-mix(in srgb, var(--sun) 45%, transparent); }
+.hear-btn { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; margin-left: 4px; border: 1px solid color-mix(in srgb, var(--luna) 35%, transparent);
+  background: var(--tint-luna); color: var(--luna); cursor: pointer; vertical-align: middle; transition: transform 0.15s var(--ease-spring); }
+.hear-btn:hover { transform: scale(1.08); }
+.hear-btn--quiet { opacity: 0.6; }

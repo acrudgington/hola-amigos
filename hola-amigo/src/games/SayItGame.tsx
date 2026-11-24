@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { voice } from "../audio/player.ts";
 import { shuffle } from "../lib/utils.ts";
 import { similarity, speech, type Recognizer } from "../lib/speech.ts";
 import type { Word } from "../content/index.ts";
@@ -68,7 +69,7 @@ export function SayItGame({ words, onDone, onWord }: GameProps & { words: Word[]
         onEnd: () => setPhase(p => (p === "listening" ? "idle" : p)),
       });
     };
-    speech.speak(word.es, { onEnd: () => later(start, 150) });
+    voice.spanish(word.es, { onEnd: () => later(start, 150) });
     later(start, 2500); // fallback if the voice never reports finishing
   };
 

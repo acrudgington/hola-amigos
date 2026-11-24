@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Icon } from "../components/Icon.tsx";
+import { voice } from "../audio/player.ts";
+import { useGuide, useSayOnShow } from "../audio/guide.ts";
+import { INSTRUCTIONS } from "../audio/lines.ts";
 import { surpriseFor, wordsForLessonsUpTo, wordsForWorld, worldOf, type Lesson, type Surprise, type Word, type World } from "../content/index.ts";
 import { ACTIVITIES, type ActivityType } from "../lib/journey.ts";
 import type { Mood } from "../lib/reactions.ts";
@@ -17,6 +20,7 @@ import { StoryReader } from "../games/StoryReader.tsx";
 import { SayItGame } from "../games/SayItGame.tsx";
 
 function SurpriseCard({ surprise, onDone }: { surprise: Surprise; onDone: () => void }) {
+  useSayOnShow(surprise.lines.join(" "), { delay: 450 });
   return <div className="text-center" style={{ animation: "bounce-in .4s var(--ease-spring)" }}>
     <div className="float" style={{ fontSize: 70 }}>{surprise.emoji}</div>
     <h3 className="h2" style={{ margin: "6px 0 14px" }}>{surprise.title}</h3>
@@ -62,6 +66,9 @@ export function ActivityScreen({ lesson, type, journey, combo = 0, sessionXp = 0
     return {};
   });
   const meta = ACTIVITIES[type];
+  const guide = useGuide();
+  // Read the instructions aloud as the activity opens (pre-readers can play alone).
+  useSayOnShow(type === "surprise" ? null : INSTRUCTIONS[type], { delay: 450 });
 
   const finish = (correct: number, total: number, stats?: ActivityStats) => {
     onFinish(correct, total, stats);
@@ -111,7 +118,10 @@ export function ActivityScreen({ lesson, type, journey, combo = 0, sessionXp = 0
       {journey && <div className="counter text-center" style={{ marginTop: -10, marginBottom: 12 }}>Step {journey.step + 1} of {journey.steps.length}</div>}
 
       <div className="activity-title">
-        <h2 className="h2"><span aria-hidden="true">{meta.emoji}</span>{meta.title}</h2>
+        <h2 className="h2"><span aria-hidden="true">{meta.emoji}</span>{meta.title}
+          {type !== "surprise" && <button type="button" className={`hear-btn ${guide ? "" : "hear-btn--quiet"}`} onClick={() => voice.narrate(INSTRUCTIONS[type])}
+            aria-label="Hear the instructions" title="Hear the instructions"><Icon name="volume" size={16} /></button>}
+        </h2>
         <div className="small muted" style={{ marginTop: 2 }}>Lesson {lesson.id} · {lesson.subtitle}</div>
       </div>
 

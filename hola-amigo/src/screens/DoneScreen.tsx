@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { levelInfo, type Progress } from "../domain/progress.ts";
 import { Button, Card, ProgressBar } from "../components/ui.tsx";
 import { AnimatedNumber } from "../components/Widgets.tsx";
+import { DONE_LINES } from "../audio/lines.ts";
+import { useSayOnShow } from "../audio/guide.ts";
 import { Luna, Sol } from "../components/Mascots.tsx";
 
 // Celebration at the end of a guided lesson.
@@ -11,7 +13,8 @@ export function DoneScreen({ lesson, result, progress, onNext, onHome, onPractic
   const { correct, total, earned, before, after } = result;
   const pct = total ? correct / total : 1;
   const mood = pct >= 0.85 ? "celebrate" : pct >= 0.6 ? "happy" : "encourage";
-  const msg = pct >= 0.85 ? "¡Increíble! Perfect work!" : pct >= 0.6 ? "¡Muy bien! Great job!" : "¡Bien hecho! Keep practising!";
+  const msg = pct >= 0.85 ? DONE_LINES.great : pct >= 0.6 ? DONE_LINES.good : DONE_LINES.keepGoing;
+  useSayOnShow(msg, { delay: 700, speaker: "sol" });
   const next = LESSONS.find(l => l.id === lesson.id + 1);
   const gained = after - before;
   const xpGained = result.xp || 0;

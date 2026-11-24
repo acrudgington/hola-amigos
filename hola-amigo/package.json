@@ -12,7 +12,9 @@
     "test:watch": "vitest",
     "test:e2e": "playwright test",
     "content:check": "vite-node scripts/validate-content.ts",
-    "ci": "npm run typecheck && npm run content:check && npm test && npm run build"
+    "ci": "npm run typecheck && npm run content:check && npm test && npm run build",
+    "audio:generate": "vite-node scripts/generate-audio.ts --",
+    "audio:check": "vite-node scripts/check-audio.ts --"
   },
   "dependencies": {
     "framer-motion": "^11.11.17",

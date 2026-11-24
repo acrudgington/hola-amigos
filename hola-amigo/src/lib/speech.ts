@@ -1,5 +1,6 @@
 // ============================================================
-// SPEECH — text-to-speech and speech recognition (Web Speech API)
+// SPEECH RECOGNITION (Web Speech API) for the "Say it!" game.
+// Spoken output lives in src/audio/player.ts.
 // ============================================================
 
 // Minimal typings for the (still non-standard) speech recognition API.
@@ -19,53 +20,8 @@ const recognizerCtor = (): RecognizerCtor | undefined => {
   return w.SpeechRecognition || w.webkitSpeechRecognition;
 };
 
-export type SpeakLang = "es" | "en";
-export interface SpeakOptions { lang?: SpeakLang; rate?: number; onEnd?: () => void }
-
-const hasWindow = typeof window !== "undefined";
-let esVoices: SpeechSynthesisVoice[] = [];
-let enVoices: SpeechSynthesisVoice[] = [];
-
-function loadVoices() {
-  if (!hasWindow || !window.speechSynthesis) return;
-  const all = window.speechSynthesis.getVoices();
-  esVoices = all.filter(v => v.lang?.toLowerCase().startsWith("es"));
-  enVoices = all.filter(v => v.lang?.toLowerCase().startsWith("en"));
-}
-
-if (hasWindow && window.speechSynthesis) {
-  loadVoices();
-  // addEventListener rather than assigning onvoiceschanged, so we don't clobber anyone else.
-  window.speechSynthesis.addEventListener?.("voiceschanged", loadVoices);
-}
-
-function pickVoice(lang: SpeakLang): SpeechSynthesisVoice | null {
-  if (lang === "en") return enVoices.find(v => v.lang === "en-GB") || enVoices[0] || null;
-  // Prefer Spain Spanish, then any Spanish. Never fall back to an English
-  // voice for Spanish — the browser's default for lang="es-ES" is better.
-  return esVoices.find(v => v.lang === "es-ES") || esVoices[0] || null;
-}
-
 export const speech = {
-  supported: () => hasWindow && !!window.speechSynthesis,
   recogSupported: () => !!recognizerCtor(),
-
-  // speak(text, { lang: "es" | "en", rate, onEnd })
-  speak(text: string, { lang = "es", rate, onEnd }: SpeakOptions = {}) {
-    if (!speech.supported() || !text) { onEnd?.(); return; }
-    if (!esVoices.length && !enVoices.length) loadVoices();
-    window.speechSynthesis.cancel();
-    const u = new SpeechSynthesisUtterance(text);
-    u.lang = lang === "en" ? "en-GB" : "es-ES";
-    u.rate = rate ?? (lang === "en" ? 0.95 : 0.85);
-    u.pitch = 1.05;
-    const v = pickVoice(lang);
-    if (v) u.voice = v;
-    if (onEnd) { u.onend = onEnd; u.onerror = onEnd; }
-    window.speechSynthesis.speak(u);
-  },
-
-  stop() { if (speech.supported()) window.speechSynthesis.cancel(); },
 
   // Listen for one Spanish utterance. Returns the recogniser (call .abort() to cancel).
   listen({ onResult, onError, onEnd }: { onResult?: (alts: string[]) => void; onError?: (e: string) => void; onEnd?: () => void }): Recognizer | null {

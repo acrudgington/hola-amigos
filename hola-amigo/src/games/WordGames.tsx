@@ -1,8 +1,8 @@
 import type React from "react";
+import { voice } from "../audio/player.ts";
 // Vocabulary games: Learn intro, Flashcards, Matching, Drag & Match, Odd One Out.
 import { useRef, useState } from "react";
 import { buildOptions, shuffle, uniqueBy } from "../lib/utils.ts";
-import { speech } from "../lib/speech.ts";
 import { ALL_WORDS, type Word } from "../content/index.ts";
 import type { GameProps } from "./types.ts";
 
@@ -49,7 +49,7 @@ export function LearnIntro({ words, onDone, onWord }: { words: Word[]; onDone: (
         <div className="say-hint" style={{ marginTop: 6 }}>🗣️ say: <b>{w.say}</b></div>
         <div className="row row--center" style={{ marginTop: 14 }}><SpeakButton text={w.es} size={52} /></div>
       </div>
-      <Button variant="sun" size="lg" block onClick={() => { speech.speak(w.es); next(); }}>
+      <Button variant="sun" size="lg" block onClick={() => { voice.spanish(w.es); next(); }}>
         {steps[at + 1]?.kind === "show" ? "Next word →" : "Let’s practise! →"}
       </Button>
     </div>;
@@ -81,7 +81,7 @@ export function LearnIntro({ words, onDone, onWord }: { words: Word[]; onDone: (
 function FlashCard({ word, index }: { word: Word; index: number }) {
   const [flipped, setFlipped] = useState(false);
   return <div className={`flash ${flipped ? "is-flipped" : ""}`} style={{ animationDelay: `${index * 0.05}s` }}>
-    <button type="button" className="flash__inner" onClick={() => { if (!flipped) speech.speak(word.es); setFlipped(f => !f); }}
+    <button type="button" className="flash__inner" onClick={() => { if (!flipped) voice.spanish(word.es); setFlipped(f => !f); }}
       aria-label={flipped ? `${word.es} means ${word.en}` : `${word.es}. Tap to see the meaning`}>
       <div className="flash__face flash__front">
         <div style={{ fontSize: 40 }}>{word.emoji}</div>
@@ -122,7 +122,7 @@ export function MatchGame({ words, onDone, onWord }: GameProps & { words: Word[]
 
   const click = (side: Side, w: Word) => {
     if (matched.includes(w.es) || wrong) return;
-    if (side === "es") speech.speak(w.es);
+    if (side === "es") voice.spanish(w.es);
     if (!sel || sel.side === side) { setSel({ side, w }); return; }
     const es = side === "es" ? w : sel.w;
     const en = side === "en" ? w : sel.w;
@@ -203,7 +203,7 @@ export function DragMatch({ words, onDone, onWord }: GameProps & { words: Word[]
     if (ok) {
       const np: Record<string, true> = { ...placed, [w.es]: true };
       setPlaced(np);
-      speech.speak(w.es);
+      voice.spanish(w.es);
       onWord?.(w.es, w.en, !missed.current.has(w.es));
       if (Object.keys(np).length === pool.length) later(() => onDone(pool.length - missed.current.size, pool.length), 700);
     } else {

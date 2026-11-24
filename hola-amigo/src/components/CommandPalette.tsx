@@ -1,10 +1,10 @@
 import type React from "react";
+import { voice } from "../audio/player.ts";
 // "Ask Sol" — a ⌘K command palette that searches every lesson and every word in the course.
 // Words can be heard instantly; unlocked lessons open directly.
 import { useEffect, useMemo, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { LESSONS, type Lesson, type Word } from "../content/index.ts";
-import { speech } from "../lib/speech.ts";
 import { Icon } from "./Icon.tsx";
 
 const norm = (s: string) => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[¿?¡!.,…]/g, "").trim();
@@ -49,7 +49,7 @@ export function CommandPalette({ onClose, onOpenLesson, unlockedUpTo }: { onClos
 
   const run = (r: Result | undefined) => {
     if (!r) return;
-    if (r.kind === "word") speech.speak(r.w.es);
+    if (r.kind === "word") voice.spanish(r.w.es);
     else if (!r.locked) { onOpenLesson(r.l); onClose(); }
   };
   const onKey = (e: React.KeyboardEvent) => {

@@ -24,3 +24,6 @@ export const pickReaction = (kind: Kind): Reaction => {
   const arr = REACTIONS[kind];
   return { ...arr[Math.floor(Math.random() * arr.length)], id: Math.random() };
 };
+
+// Every reaction line (the voice clip generator speaks each one).
+export const REACTION_LINES = Object.values(REACTIONS).flat();

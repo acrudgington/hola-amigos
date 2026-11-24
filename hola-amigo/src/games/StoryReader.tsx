@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { shuffle } from "../lib/utils.ts";
-import { speech } from "../lib/speech.ts";
+import { voice } from "../audio/player.ts";
+import { splitSentences } from "../audio/text.ts";
+import { useGuide } from "../audio/guide.ts";
 import { Button, Choices, Feedback } from "../components/ui.tsx";
 import { useLater } from "./hooks.ts";
 import type { Story } from "../content/index.ts";
@@ -8,8 +10,6 @@ import type { OnDone } from "./types.ts";
 
 interface Opt { text: string; correct: boolean }
 
-// Split on sentence ends, but not inside quotes like "says '¡Hola!' to her".
-const splitSentences = (para: string) => para.split(/(?<=[.!?…]['’"]?)\s+(?=[A-Z¡¿'"‘“ÁÉÍÓÚÑ])/).map(s => s.trim()).filter(Boolean);
 
 // A short illustrated story, read page by page, followed by questions.
 export function StoryReader({ story, onDone }: { story: Story; onDone: OnDone }) {
@@ -29,10 +29,20 @@ export function StoryReader({ story, onDone }: { story: Story; onDone: OnDone })
   const runId = useRef(0);
   const later = useLater();
 
-  useEffect(() => () => { runId.current++; speech.stop(); }, []);
+  useEffect(() => () => { runId.current++; voice.stop(); }, []);
+  // Read each question aloud when it appears (for pre-readers).
+  const guide = useGuide();
+  const onQuestions = page >= (story?.paras.length ?? 0);
+  useEffect(() => {
+    if (!guide || !onQuestions) return;
+    const q = questions[qIdx];
+    if (!q) return;
+    const t = setTimeout(() => voice.narrate(q.q, { mode: "queue" }), 400);
+    return () => clearTimeout(t);
+  }, [guide, onQuestions, qIdx, questions]);
   if (!story) return <p className="text-center muted">No story for this lesson yet!</p>;
 
-  const stop = () => { runId.current++; speech.stop(); setReading(false); setActive(-1); };
+  const stop = () => { runId.current++; voice.stop(); setReading(false); setActive(-1); };
 
   if (page < story.paras.length) {
     const sentences = splitSentences(story.paras[page]);
@@ -44,12 +54,12 @@ export function StoryReader({ story, onDone }: { story: Story; onDone: OnDone })
         if (id !== runId.current) return;
         if (i >= sentences.length) { setReading(false); setActive(-1); return; }
         setActive(i);
-        // Advance when the voice finishes; a timer backs it up in case the
-        // browser never fires `end` (some mobile browsers don't).
+        // Advance when the voice finishes; a generous timer backs it up in case
+        // a device voice never reports finishing (some mobile browsers don't).
         let advanced = false;
         const go = () => { if (!advanced) { advanced = true; readFrom(i + 1); } };
-        speech.speak(sentences[i], { lang: "en", rate: 0.9, onEnd: () => setTimeout(go, 250) });
-        setTimeout(go, Math.max(2500, sentences[i].length * 95));
+        voice.narrate(sentences[i], { onEnd: () => setTimeout(go, 250) });
+        setTimeout(go, 4000 + sentences[i].length * 160);
       };
       readFrom(0);
     };
@@ -62,7 +72,7 @@ export function StoryReader({ story, onDone }: { story: Story; onDone: OnDone })
       </div>
       <div key={page} className="card card--pad story-page" style={{ marginBottom: 16, animation: "pop-in .35s var(--ease-spring)" }}>
         {sentences.map((s, i) => <span key={i} className={`story-sentence ${active === i ? "is-active" : ""}`}
-          onClick={() => { stop(); setActive(i); speech.speak(s, { lang: "en", rate: 0.9 }); }}>{s} </span>)}
+          onClick={() => { stop(); setActive(i); voice.narrate(s); }}>{s} </span>)}
       </div>
       <div className="row row--center row--wrap" style={{ gap: 10 }}>
         <Button variant={reading ? "coral" : "luna"} onClick={readAll}>{reading ? "⏹ Stop" : "▶ Read to me"}</Button>
