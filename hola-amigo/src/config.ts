@@ -16,6 +16,13 @@ export const LANGUAGE = {
   ui: "en-GB",
 } as const;
 
+// The privacy notice & terms version parents agree to at sign-up. Bump it when
+// the text changes; the date of agreement is stored with each account.
+export const PRIVACY = {
+  version: "2026-11-24-draft",
+  contactEmail: "privacy@example.com",   // TODO: replace with your real contact address
+} as const;
+
 // Subscription plans (wired to payments in step 5).
 export const PRICING = {
   currency: "GBP",

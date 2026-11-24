@@ -1,6 +1,8 @@
 import { beforeEach, describe, expect, test } from "vitest";
 import { createLocalServices } from "../src/services/local.ts";
 
+const CONSENT = { version: "test", acceptedAt: 1 };
+
 // A minimal in-memory localStorage for Node.
 class MemoryStorage {
   private data = new Map<string, string>();
@@ -15,9 +17,9 @@ beforeEach(() => { (globalThis as unknown as { localStorage: MemoryStorage }).lo
 describe("on-device account & storage service", () => {
   test("sign up, log in, wrong password, duplicate email", async () => {
     const s = createLocalServices();
-    const up = await s.auth.signUp("Sam", "sam@example.com", "secret123");
+    const up = await s.auth.signUp("Sam", "sam@example.com", "secret123", CONSENT);
     expect(up.ok).toBe(true);
-    expect((await s.auth.signUp("Sam", "sam@example.com", "other")).ok).toBe(false);
+    expect((await s.auth.signUp("Sam", "sam@example.com", "other", CONSENT)).ok).toBe(false);
     expect((await s.auth.logIn("sam@example.com", "nope")).ok).toBe(false);
     expect((await s.auth.logIn("sam@example.com", "secret123")).ok).toBe(true);
     expect((await s.auth.current())?.name).toBe("Sam");
@@ -27,7 +29,7 @@ describe("on-device account & storage service", () => {
 
   test("passwords are never stored in plain text", async () => {
     const s = createLocalServices();
-    await s.auth.signUp("Sam", "sam@example.com", "secret123");
+    await s.auth.signUp("Sam", "sam@example.com", "secret123", CONSENT);
     expect(localStorage.getItem("hola_parents")).not.toContain("secret123");
   });
 
@@ -42,7 +44,7 @@ describe("on-device account & storage service", () => {
 
   test("children and their progress are stored per child and removed together", async () => {
     const s = createLocalServices();
-    const up = await s.auth.signUp("Sam", "sam@example.com", "secret123");
+    const up = await s.auth.signUp("Sam", "sam@example.com", "secret123", CONSENT);
     if (!up.ok) throw new Error("sign-up failed");
     const mia = await s.family.addChild(up.parent.id, "Mia", "🦊");
     const leo = await s.family.addChild(up.parent.id, "Leo", "🐼");
@@ -56,6 +58,21 @@ describe("on-device account & storage service", () => {
     await s.family.removeChild(mia.id);
     expect((await s.family.listChildren(up.parent.id)).map(c => c.name)).toEqual(["Leo"]);
     expect(localStorage.getItem(`hola_progress_${mia.id}`)).toBeNull();
+  });
+
+  test("a parent can download all their data and delete their account", async () => {
+    const s = createLocalServices();
+    const up = await s.auth.signUp("Sam", "sam@example.com", "secret123", CONSENT);
+    if (!up.ok) throw new Error("sign-up failed");
+    expect(up.parent.consent).toEqual(CONSENT);
+    const mia = await s.family.addChild(up.parent.id, "Mia", "🦊");
+    const exported = await s.family.exportData(up.parent.id);
+    expect(exported.children.map(c => c.child.name)).toEqual(["Mia"]);
+    expect(JSON.stringify(exported)).not.toContain("passHash");
+    expect((await s.auth.deleteAccount("wrong")).ok).toBe(false);
+    expect((await s.auth.deleteAccount("secret123")).ok).toBe(true);
+    expect(localStorage.getItem(`hola_progress_${mia.id}`)).toBeNull();
+    expect((await s.auth.logIn("sam@example.com", "secret123")).ok).toBe(false);
   });
 
   test("the session remembers which child was playing", async () => {

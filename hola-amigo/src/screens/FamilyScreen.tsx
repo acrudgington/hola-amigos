@@ -1,7 +1,8 @@
-import { useState, type FormEvent } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 import { countLessons, liveStreak, sumStars } from "../domain/progress.ts";
 import { services, type Child, type Parent } from "../services/index.ts";
 import { useFamily } from "../state/useFamily.ts";
+import { dismissDeviceLearners, findDeviceLearners, importDeviceLearners } from "../services/deviceImport.ts";
 import type { Prefs } from "../lib/prefs.ts";
 import { motion } from "framer-motion";
 import { Button, Card, Field, Modal } from "../components/ui.tsx";
@@ -42,6 +43,16 @@ export function FamilyScreen({ parent, onPickChild, onDashboard, onLogout, prefs
   const { family, reload } = useFamily(parent.id);
   const add = async (name: string, avatar: string) => { await services.family.addChild(parent.id, name, avatar); setShowAdd(false); await reload(); };
   const children = family ?? [];
+  // Learners saved on this device before cloud accounts: offer to bring them in.
+  const [deviceKids, setDeviceKids] = useState<Child[]>([]);
+  const [importing, setImporting] = useState(false);
+  useEffect(() => { void findDeviceLearners(parent.email).then(setDeviceKids); }, [parent.email]);
+  const doImport = async () => {
+    setImporting(true);
+    await importDeviceLearners(parent.email, parent.id);
+    setDeviceKids([]); setImporting(false);
+    await reload();
+  };
 
   return <div className="app-bg">
     <div className="page">
@@ -53,6 +64,13 @@ export function FamilyScreen({ parent, onPickChild, onDashboard, onLogout, prefs
         <p className="muted" style={{ marginTop: 6 }}>Hi {parent.name}! Tap a learner to start.</p>
       </div>
 
+      {deviceKids.length > 0 && <div className="notice notice--warn" style={{ marginBottom: 18 }}>
+        <div style={{ marginBottom: 8 }}>We found {deviceKids.map(k => `${k.avatar} ${k.name}`).join(", ")} saved on this device. Bring their progress into your account so it’s safe and syncs everywhere?</div>
+        <div className="row" style={{ gap: 8 }}>
+          <Button size="sm" variant="sun" disabled={importing} onClick={() => void doImport()}>{importing ? "Bringing them in…" : "Yes, bring them in"}</Button>
+          <Button size="sm" variant="ghost" onClick={() => { dismissDeviceLearners(parent.email); setDeviceKids([]); }}>Not now</Button>
+        </div>
+      </div>}
       <div className="grid-2" style={{ gap: 14, marginBottom: 22 }}>
         {children.map(({ child: c, progress: p }, i) => {
           const streak = liveStreak(p);

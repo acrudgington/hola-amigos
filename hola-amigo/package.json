@@ -14,20 +14,28 @@
     "content:check": "vite-node scripts/validate-content.ts",
     "ci": "npm run typecheck && npm run content:check && npm test && npm run build",
     "audio:generate": "vite-node scripts/generate-audio.ts --",
-    "audio:check": "vite-node scripts/check-audio.ts --"
+    "audio:check": "vite-node scripts/check-audio.ts --",
+    "test:emulators": "firebase emulators:exec --only auth,firestore --project demo-hola-amigos \"vitest run --config vitest.emulators.config.ts\"",
+    "emulators": "firebase emulators:start --only auth,firestore --project demo-hola-amigos",
+    "firebase:deploy-rules": "firebase deploy --only firestore:rules,firestore:indexes"
   },
   "dependencies": {
+    "@fontsource/fredoka": "5.3.0",
+    "@fontsource/nunito": "5.3.0",
+    "firebase": "13.1.0",
     "framer-motion": "^11.11.17",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "zod": "3.23.8"
   },
   "devDependencies": {
+    "@firebase/rules-unit-testing": "6.0.0",
     "@playwright/test": "1.63.0",
     "@types/node": "22.10.2",
     "@types/react": "18.3.12",
     "@types/react-dom": "18.3.1",
     "@vitejs/plugin-react": "^4.3.4",
+    "firebase-tools": "15.34.2",
     "jsdom": "25.0.1",
     "typescript": "5.6.3",
     "vite": "^6.0.0",

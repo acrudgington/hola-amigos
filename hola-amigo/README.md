@@ -66,6 +66,8 @@ Open http://localhost:5173 in your browser.
 | `npm test` | Unit tests (Vitest): progress rules, rewards, lesson flow, storage, content |
 | `npm run content:check` | Validate every lesson file in `content/` |
 | `npm run test:e2e` | Real-browser tests on phone and desktop sizes (Playwright) |
+| `npm run test:emulators` | Security-rules and cloud-account tests against the Firebase emulators (needs Java) |
+| `npm run emulators` | Run local Firebase Auth + Firestore for development |
 | `npm run build` | Typecheck, then build the installable app into `dist/` |
 | `npm run ci` | Everything CI runs, except the browser tests |
 
@@ -91,7 +93,7 @@ After editing, run `npm run content:check`. It checks every file against the sch
 src/
 ├── content/      Course loader + schema (content itself is in /content)
 ├── domain/       Pure rules: progress, XP, streaks, spaced repetition, rewards
-├── services/     Accounts & storage behind interfaces (on-device today, Firebase in step 2)
+├── services/     Accounts & storage behind interfaces (on-device or Firebase)
 ├── state/        Navigation & lesson-flow state machine, progress store, hooks
 ├── lib/          Speech, sound, journeys, Sol's mission planner, preferences
 ├── components/   Shell, widgets, Ask Sol palette, icons, mascots, UI kit
@@ -118,20 +120,21 @@ Same process — connect your GitHub repo. Build command: `npm run build`. Publi
 
 ## How Family Accounts Work
 
-- Sign up creates a **parent account** (email + password)
-- From parent home, **add child profiles** — each with a name and avatar
-- Click any child to enter their learning experience
-- Switch between children anytime with the 👥 button
-- **Parent Dashboard** shows all children's progress side-by-side
+- A **parent or guardian** signs up (email + password) and agrees to the privacy notice. Their consent is recorded.
+- From parent home, **add child profiles**: just a first name and an animal avatar.
+- Tap a child to start their learning. Switch children anytime with the 👥 button.
+- The **grown-up dashboard** shows every child's progress. Its *Account & privacy* panel lets the parent download all their data, reset their password, read the privacy notice, or permanently delete the account.
 
-All data is stored in browser localStorage:
-- ✅ Multiple children on one device with isolated progress
-- ✅ Survives browser refreshes and closing/reopening
-- ⚠️ Per-device storage (doesn't sync across different devices)
-- ⚠️ Clearing browser data will remove accounts
+Two backends, chosen with `VITE_BACKEND` at build time:
 
-### Want cloud sync across devices?
-Add Firebase Auth + Firestore or Supabase — the app's data layer is structured for easy upgrade.
+| | `local` (default) | `firebase` |
+|---|---|---|
+| Where data lives | This device only | Firebase (UK/EU region) with an offline copy on each device |
+| Works across devices | No | Yes |
+| Password reset | No | Yes, by email |
+| Setup | None | ~20 minutes: see **[FIREBASE_SETUP.md](FIREBASE_SETUP.md)** |
+
+Switching an existing install to Firebase is safe: when a parent signs up with the same email, the app offers to bring the children saved on that device into the new account.
 
 ## Installing as a PWA
 

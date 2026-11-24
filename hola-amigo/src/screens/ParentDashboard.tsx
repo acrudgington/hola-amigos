@@ -2,6 +2,7 @@ import { useState } from "react";
 import { countLessons, getDueWords, liveStreak, sumStars, type Progress } from "../domain/progress.ts";
 import { services, type Child, type Parent } from "../services/index.ts";
 import { useFamily } from "../state/useFamily.ts";
+import { AccountPanel } from "../components/AccountPanel.tsx";
 import { LESSONS, WORLDS } from "../content/index.ts";
 import { Button, Card, Modal, ProgressBar } from "../components/ui.tsx";
 
@@ -55,7 +56,7 @@ function ChildReport({ child, progress: p, onRemove }: { child: Child; progress:
   </Card>;
 }
 
-export function ParentDashboard({ parent, onBack }: { parent: Parent; onBack: () => void }) {
+export function ParentDashboard({ parent, onBack, onAccountDeleted }: { parent: Parent; onBack: () => void; onAccountDeleted: () => void }) {
   const [toRemove, setToRemove] = useState<Child | null>(null);
   const { family, reload } = useFamily(parent.id);
   const children = family ?? [];
@@ -71,6 +72,7 @@ export function ParentDashboard({ parent, onBack }: { parent: Parent; onBack: ()
       </div>
       {children.length === 0 && <Card className="text-center"><div style={{ fontSize: 44 }}>👶</div><p className="muted">No learners yet — add one to start tracking progress.</p></Card>}
       {children.map(({ child, progress }) => <ChildReport key={child.id} child={child} progress={progress} onRemove={setToRemove} />)}
+      <AccountPanel parent={parent} onDeleted={onAccountDeleted} />
     </div>
     {toRemove && <Modal onClose={() => setToRemove(null)} labelledBy="rm-title">
       <div className="text-center">

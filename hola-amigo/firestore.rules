@@ -1,0 +1,67 @@
+rules_version = '2';
+
+// ¡Hola, Amigo! — Firestore security rules.
+//
+// Data layout (one tree per family; nothing is shared between families):
+//   parents/{uid}                                  the parent's account record
+//   parents/{uid}/children/{childId}               a learner: first name + animal avatar only
+//   parents/{uid}/children/{childId}/progress/current   that learner's progress
+//
+// A signed-in parent can read and write only their own tree. Everything
+// else is denied. Children never have their own logins or email addresses.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isOwner(uid) {
+      return request.auth != null && request.auth.uid == uid;
+    }
+
+    function validConsent(c) {
+      return c is map && c.keys().hasOnly(['version', 'acceptedAt'])
+        && c.version is string && c.version.size() > 0 && c.version.size() <= 40
+        && c.acceptedAt is int;
+    }
+
+    function validParent(d) {
+      return d.keys().hasOnly(['name', 'email', 'created', 'consent', 'plan', 'schemaVersion'])
+        && d.name is string && d.name.size() > 0 && d.name.size() <= 60
+        && d.email is string && d.email == request.auth.token.email
+        && d.created is int
+        && validConsent(d.consent)
+        && d.schemaVersion is int;
+    }
+
+    function validChild(d) {
+      return d.keys().hasOnly(['name', 'avatar', 'created'])
+        && d.name is string && d.name.size() > 0 && d.name.size() <= 20
+        && d.avatar is string && d.avatar.size() > 0 && d.avatar.size() <= 16
+        && d.created is int;
+    }
+
+    function validProgress(d) {
+      return d.stars is map && d.wordMemory is map && d.events is list
+        && d.xp is int && d.xp >= 0
+        && d.badges is list && d.stickers is list && d.outfits is list;
+    }
+
+    match /parents/{uid} {
+      allow read, delete: if isOwner(uid);
+      // Accounts start on the free plan with a recorded consent.
+      allow create: if isOwner(uid) && validParent(request.resource.data)
+        && request.resource.data.plan == 'free';
+      // The plan is only ever changed by the payment system (server side), never by the app.
+      allow update: if isOwner(uid) && validParent(request.resource.data)
+        && request.resource.data.plan == resource.data.plan;
+
+      match /children/{childId} {
+        allow read, delete: if isOwner(uid);
+        allow create, update: if isOwner(uid) && validChild(request.resource.data);
+
+        match /progress/{docId} {
+          allow read, delete: if isOwner(uid);
+          allow create, update: if isOwner(uid) && docId == 'current' && validProgress(request.resource.data);
+        }
+      }
+    }
+  }
+}

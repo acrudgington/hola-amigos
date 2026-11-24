@@ -262,7 +262,8 @@ export default function App() {
     content = <AuthScreen onLogin={login} />;
     topKey = "auth";
   } else if (nav.view === "dashboard") {
-    content = <ParentDashboard parent={parent} onBack={() => dispatch({ type: "go", view: "family" })} />;
+    content = <ParentDashboard parent={parent} onBack={() => dispatch({ type: "go", view: "family" })}
+      onAccountDeleted={() => { setParent(null); setChild(null); clear(); dispatch({ type: "go", view: "family" }); }} />;
   } else if (!child || !progress || nav.view === "family") {
     content = <FamilyScreen parent={parent} onPickChild={c => void pickChild(c)} onDashboard={() => dispatch({ type: "go", view: "dashboard" })}
       onLogout={() => void logout()} prefs={prefs} onToggle={togglePref} />;

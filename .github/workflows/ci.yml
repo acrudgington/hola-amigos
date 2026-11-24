@@ -1,5 +1,5 @@
-# Runs on every push and pull request: types, content, unit tests, build and
-# real-browser end-to-end tests. A red ✗ on a pull request means don't merge.
+# Runs on every push and pull request: types, content, unit tests, build,
+# Firebase security rules and real-browser end-to-end tests. A red ✗ on a pull request means don't merge.
 name: CI
 
 on:
@@ -31,6 +31,24 @@ jobs:
       - run: npm run content:check
       - run: npm test
       - run: npm run build
+
+  firebase:
+    name: Security rules + cloud accounts (Firebase emulators)
+    runs-on: ubuntu-latest
+    needs: check
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: hola-amigo/package-lock.json
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+      - run: npm ci
+      - run: npm run test:emulators
 
   e2e:
     name: End-to-end (phone + desktop)

@@ -48,6 +48,7 @@ test("sign up → add a child → play lesson 1 → progress is saved", async ({
   await page.getByLabel("Your name").fill("Sam");
   await page.getByLabel("Email").fill(`sam+${Date.now()}@example.com`);
   await page.getByLabel("Password").fill("secret123");
+  await page.getByRole("checkbox", { name: /parent or guardian/ }).check();
   await page.getByRole("button", { name: /Create account/ }).click();
 
   await page.locator(".profile-tile--add").click();
@@ -80,6 +81,7 @@ test("Ask Sol finds and speaks words", async ({ page }) => {
   await page.getByLabel("Your name").fill("Sam");
   await page.getByLabel("Email").fill(`ask+${Date.now()}@example.com`);
   await page.getByLabel("Password").fill("secret123");
+  await page.getByRole("checkbox", { name: /parent or guardian/ }).check();
   await page.getByRole("button", { name: /Create account/ }).click();
   await page.locator(".profile-tile--add").click();
   await page.getByLabel("Child’s name").fill("Leo");

@@ -4,3 +4,9 @@ dist
 *.local
 test-results
 playwright-report
+
+# Local environment files (may hold Firebase config)
+.env
+.env.*
+!.env.example
+*-debug.log

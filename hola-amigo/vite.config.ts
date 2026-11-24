@@ -30,7 +30,7 @@ export default defineConfig({
         ],
       },
       workbox: {
-        globPatterns: ["**/*.{js,css,html,png,svg,ico,webmanifest}"],
+        globPatterns: ["**/*.{js,css,html,png,svg,ico,webmanifest,woff2}"],
         navigateFallback: "/index.html",
         cleanupOutdatedCaches: true,
         runtimeCaching: [
@@ -45,12 +45,6 @@ export default defineConfig({
               rangeRequests: true,   // Safari asks for audio in byte ranges
             },
           },
-          {
-            // Google Fonts stylesheets and font files: cache so the app looks right offline.
-            urlPattern: ({ url }) => url.origin === "https://fonts.googleapis.com" || url.origin === "https://fonts.gstatic.com",
-            handler: "CacheFirst",
-            options: { cacheName: "google-fonts", expiration: { maxEntries: 30, maxAgeSeconds: 60 * 60 * 24 * 365 }, cacheableResponse: { statuses: [0, 200] } },
-          },
         ],
       },
     }),
@@ -64,6 +58,7 @@ export default defineConfig({
         // unchanged course content or libraries.
         manualChunks: id => {
           if (id.includes("/content/")) return "content";
+          if (/node_modules\/(@firebase|firebase)\//.test(id)) return "firebase";
           if (id.includes("node_modules")) return "vendor";
           return undefined;
         },
