@@ -88,6 +88,16 @@ function polish(file: string) {
   execFileSync("mv", [tmp, file]);
 }
 
+// Clip length in seconds (null if ffprobe isn't available); 0 for files with no audio frames.
+const MIN_SECONDS = 0.15;
+function duration(file: string): number | null {
+  if (!hasFfmpeg) return null;
+  try {
+    const out = execFileSync("ffprobe", ["-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", file], { encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] });
+    return Number.parseFloat(out) || 0;
+  } catch { return 0; }
+}
+
 async function synthesize(clip: Clip, voice: string, spec: VoiceSpec): Promise<Buffer> {
   const req = (withRate: boolean) => ({
     input: { text: clip.text },
@@ -132,8 +142,15 @@ async function main() {
       const spec = AUDIO.voices[clip.role] as VoiceSpec;
       try {
         const file = join(OUT, `${clip.id}.mp3`);
-        writeFileSync(file, await synthesize(clip, voices[clip.role], spec));
-        polish(file);
+        // Very short lines ("Sí", "É") sometimes come back near-silent, and the
+        // silence trim then leaves an empty file: synthesise again until it's real.
+        for (let attempt = 1; ; attempt++) {
+          writeFileSync(file, await synthesize(clip, voices[clip.role], spec));
+          polish(file);
+          const secs = duration(file);
+          if (secs === null || secs >= MIN_SECONDS) break;
+          if (attempt >= 4) { rmSync(file); throw new Error(`clip came back empty (${secs.toFixed(2)} s) ${attempt} times`); }
+        }
         manifest.clips[clip.id] = clip.role;
         done++;
         if (done % 100 === 0) { console.log(`  ${done}/${todo.length}`); save(); }
@@ -148,7 +165,8 @@ async function main() {
   // Drop manifest entries (and with --prune, files) the course no longer uses.
   const wanted = new Set(clips.map(c => c.id));
   for (const id of Object.keys(manifest.clips)) if (!wanted.has(id)) delete manifest.clips[id];
-  if (PRUNE) for (const f of readdirSync(OUT)) if (f.endsWith(".mp3") && !wanted.has(f.slice(0, -4))) rmSync(join(OUT, f));
+  // silence.mp3 isn't a clip: the player uses it to unlock audio on iOS.
+  if (PRUNE) for (const f of readdirSync(OUT)) if (f.endsWith(".mp3") && f !== "silence.mp3" && !wanted.has(f.slice(0, -4))) rmSync(join(OUT, f));
   save();
   console.log(`Done: ${done} generated, ${failed} failed. ${hasFfmpeg ? "" : "(ffmpeg not found: clips weren't trimmed)"}`);
   process.exit(failed ? 1 : 0);

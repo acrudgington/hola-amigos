@@ -118,7 +118,8 @@ export function segmentMixed(text: string, speaker: Speaker = "teacher"): Segmen
     else out.push({ role, text: clean });
   };
 
-  const parts = normalizeText(text).split(/('[^']+'|"[^"]+"|¡[^!]+!|¿[^?]+\?)/);
+  // A ' only quotes when it isn't inside a word (it's, Tomás's are apostrophes).
+  const parts = normalizeText(text).split(/((?<!\p{L})'[^']+'(?!\p{L})|"[^"]+"|¡[^!]+!|¿[^?]+\?)/u);
   for (const part of parts) {
     if (!part) continue;
     if (/^['"]/.test(part)) { push(looksSpanish(part) ? "es" : "en", part.slice(1, -1)); continue; }

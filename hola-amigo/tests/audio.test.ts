@@ -21,6 +21,13 @@ describe("mixed English/Spanish narration", () => {
     expect(roles("She paints the sky azul and the sun amarillo.")).toEqual(["en:She paints the sky", "es:azul", "en:and the sun", "es:amarillo."]);
   });
 
+  test("apostrophes inside words are not quotes", () => {
+    expect(roles("She can see the mar — it's azul!")).toEqual(["en:She can see the mar — it's", "es:azul!"]);
+    expect(roles("It's a hot day! María goes to la playa with her familia.")).toEqual([
+      "en:It's a hot day!", "es:María", "en:goes to", "es:la playa", "en:with her", "es:familia.",
+    ]);
+  });
+
   test("plain English stays English; emoji are never spoken", () => {
     expect(roles("Sol is a little sun who lives in Spain.")).toEqual(["en:Sol is a little sun who lives in Spain."]);
     expect(roles("Beautiful work! ✨")).toEqual(["en:Beautiful work!"]);
