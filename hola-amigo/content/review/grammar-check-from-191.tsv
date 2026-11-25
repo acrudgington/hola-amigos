@@ -1,0 +1,5 @@
+Where	Rule	Text	LanguageTool says
+L192 story 2	COMMA_ADVERB	«Normalmente» in «Después del cole, hago los deberes y antes de cenar me ducho. Normalmente cenamos a las nueve.»	Si el adverbio «normalmente» se refiere a toda la frase, y no solo al verbo, es recomendable usar una coma. → Normalmente,
+L195 word	SI_AFIRMACION	«Si» in «Si puedo»	Se escribe con tilde si es una afirmación. Correcto si es una frase condicional. → Sí
+L196 word	ES_INITIAL_QUESTION_MARK	«…» in «¿Hay … cerca?»	Símbolo de interrogación desparejado. → …?
+L198 question	ES_QUESTION_MARK	«Las» in «Las Fallas?»	Símbolo desparejado: Parece que falta un ‘¿’ → ¿Las

@@ -135,5 +135,11 @@
     {"id": "21b", "can": "I can compare people and things.", "es": "Mi hermana es mayor que yo, pero yo soy el más alto.", "lessons": [183, 184]},
     {"id": "21c", "can": "I can say what I like and describe what people are like.", "es": "Lo que más me gusta es nadar. Mi amigo es muy educado.", "lessons": [185, 186]},
     {"id": "21d", "can": "I can give instructions, link my ideas and talk about the environment.", "es": "Por un lado, reciclamos; por otro lado, ahorramos agua.", "lessons": [187, 188, 189, 190]}
+  ] },
+  { "world": 22, "title": "Putting A2 together", "level": "a2", "goals": [
+    {"id": "22a", "can": "I can introduce myself fully and describe my routine.", "es": "Nací en Londres y llevo dos años en España.", "lessons": [191, 192]},
+    {"id": "22b", "can": "I can talk about my weekend and my memories.", "es": "El sábado lo pasé bomba. Me acuerdo de mi primer día de cole.", "lessons": [193, 194]},
+    {"id": "22c", "can": "I can talk about my plans and get things done in town and on the phone.", "es": "Disculpe, ¿me puede decir dónde está la farmacia?", "lessons": [195, 196, 197]},
+    {"id": "22d", "can": "I can talk about Spanish festivals and write a postcard.", "es": "Te escribo desde Valencia. ¡Las Fallas son increíbles!", "lessons": [198, 199, 200]}
   ] }
 ]

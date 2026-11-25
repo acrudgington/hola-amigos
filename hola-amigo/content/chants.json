@@ -125,5 +125,13 @@
     {"who": "luna", "es": "¡A mí tampoco! ¡Qué frío por aquí!", "en": "Me neither! It's so cold around here!"},
     {"who": "sol", "es": "Para mí, el sol es el mejor.", "en": "For me, the sun is the best."},
     {"who": "luna", "es": "¡Qué va! ¡La luna tiene más color!", "en": "No way! The moon has more colour!"}
+  ] },
+  { "id": "ya-hablo", "world": 22, "title": "¡Ya hablo español!", "en": "Now I speak Spanish!", "emoji": "🎆", "bpm": 106, "lines": [
+    {"who": "sol", "es": "Ayer no sabía, hoy ya sé.", "en": "Yesterday I didn't know, today I know."},
+    {"who": "luna", "es": "¡Y mañana sabré más, ya lo verás!", "en": "And tomorrow I'll know more, you'll see!"},
+    {"who": "sol", "es": "He aprendido mucho, lo he pasado bien.", "en": "I've learned a lot, I've had a good time."},
+    {"who": "luna", "es": "¡Hablo del pasado y del futuro también!", "en": "I talk about the past and the future too!"},
+    {"who": "sol", "es": "¿Tú qué opinas? ¿Lo hacemos otra vez?", "en": "What do you think? Shall we do it again?"},
+    {"who": "luna", "es": "¡Claro que sí! ¡Ya hablo español, olé!", "en": "Of course! I speak Spanish now, olé!"}
   ] }
 ]

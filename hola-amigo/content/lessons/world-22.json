@@ -1,0 +1,1830 @@
+{
+  "world": 22,
+  "lessons": [
+    {
+      "id": 191,
+      "title": "Me presento",
+      "subtitle": "Introducing myself",
+      "emoji": "🙋",
+      "milestone": false,
+      "funFact": "To say how long you've been doing something, people in Spain often use 'llevar': 'Llevo dos años en España' means 'I've been in Spain for two years'.",
+      "phrase": {
+        "es": "Nací en Londres, pero llevo dos años en España.",
+        "en": "I was born in London, but I've been in Spain for two years."
+      },
+      "words": [
+        {
+          "es": "Nací en",
+          "en": "I was born in",
+          "say": "nah-THEE en",
+          "emoji": "👶"
+        },
+        {
+          "es": "Me mudé",
+          "en": "I moved (home)",
+          "say": "meh moo-DEH",
+          "emoji": "🚚"
+        },
+        {
+          "es": "Vivo aquí desde hace",
+          "en": "I've lived here for",
+          "say": "BEE-boh ah-KEE DES-deh AH-theh",
+          "emoji": "⏳"
+        },
+        {
+          "es": "Llevo dos años aquí",
+          "en": "I've been here for two years",
+          "say": "YEH-boh dos AH-nyos ah-KEE",
+          "emoji": "📆"
+        },
+        {
+          "es": "Hablo dos idiomas",
+          "en": "I speak two languages",
+          "say": "AH-bloh dos ee-DYOH-mas",
+          "emoji": "🗣️"
+        },
+        {
+          "es": "Mi familia es de",
+          "en": "My family is from",
+          "say": "mee fah-MEE-lyah es deh",
+          "emoji": "🏠"
+        },
+        {
+          "es": "Me gustaría",
+          "en": "I would like",
+          "say": "meh goos-tah-REE-ah",
+          "emoji": "🌠"
+        },
+        {
+          "es": "Mi sueño es",
+          "en": "My dream is",
+          "say": "mee SWEH-nyoh es",
+          "emoji": "💭"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Nací",
+            "en",
+            "Londres",
+            "pero",
+            "vivo",
+            "en",
+            "Valencia"
+          ],
+          "shuffle": [
+            "Nací",
+            "vivo",
+            "pero",
+            "en",
+            "Valencia",
+            "en",
+            "Londres"
+          ],
+          "en": "I was born in London but I live in Valencia."
+        },
+        {
+          "correct": [
+            "Me",
+            "mudé",
+            "a",
+            "España",
+            "hace",
+            "tres",
+            "años"
+          ],
+          "shuffle": [
+            "Me",
+            "años",
+            "hace",
+            "tres",
+            "España",
+            "mudé",
+            "a"
+          ],
+          "en": "I moved to Spain three years ago."
+        },
+        {
+          "correct": [
+            "Me",
+            "gustaría",
+            "ser",
+            "profesora",
+            "de",
+            "idiomas"
+          ],
+          "shuffle": [
+            "idiomas",
+            "profesora",
+            "ser",
+            "Me",
+            "de",
+            "gustaría"
+          ],
+          "en": "I'd like to be a language teacher."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "Vivo en Málaga ___ hace dos años.",
+          "opts": [
+            "desde",
+            "hace",
+            "por"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Me gustaría' means:",
+          "opts": [
+            "I would like",
+            "I used to like",
+            "I liked"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "The New Pen Pal",
+        "paras": [
+          "Luna records a video for a new friend in Mexico.",
+          "'¡Hola! Me llamo Luna. Nací en Inglaterra, pero me mudé a España hace dos años. Hablo dos idiomas: inglés y español.'",
+          "'Mi familia es de Manchester. Me gustaría visitar México. ¡Mi sueño es ver las pirámides!'"
+        ],
+        "qs": [
+          {
+            "q": "Where was Luna born?",
+            "opts": [
+              "England",
+              "Spain",
+              "Mexico"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "When did she move to Spain?",
+            "opts": [
+              "Two years ago",
+              "Last year",
+              "Five years ago"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What is her dream?",
+            "opts": [
+              "To see the pyramids",
+              "To live in London",
+              "To be a singer"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 192,
+      "title": "Mi rutina",
+      "subtitle": "My routine",
+      "emoji": "🕗",
+      "milestone": false,
+      "funFact": "People in Spain often have dinner late, around nine or even ten in the evening!",
+      "phrase": {
+        "es": "Entre semana suelo levantarme a las siete.",
+        "en": "On weekdays I usually get up at seven."
+      },
+      "words": [
+        {
+          "es": "Normalmente",
+          "en": "Usually / Normally",
+          "say": "nor-mal-MEN-teh",
+          "emoji": "🕗"
+        },
+        {
+          "es": "Suelo",
+          "en": "I usually (do)",
+          "say": "SWEH-loh",
+          "emoji": "🔁"
+        },
+        {
+          "es": "Casi nunca",
+          "en": "Hardly ever",
+          "say": "KAH-see NOON-kah",
+          "emoji": "🙈"
+        },
+        {
+          "es": "Entre semana",
+          "en": "On weekdays",
+          "say": "EN-treh seh-MAH-nah",
+          "emoji": "🗓️"
+        },
+        {
+          "es": "Los fines de semana",
+          "en": "At the weekend",
+          "say": "los FEE-nes deh seh-MAH-nah",
+          "emoji": "🎉"
+        },
+        {
+          "es": "Me toca",
+          "en": "It's my turn to",
+          "say": "meh TOH-kah",
+          "emoji": "🎯"
+        },
+        {
+          "es": "Antes de",
+          "en": "Before",
+          "say": "AN-tes deh",
+          "emoji": "⏮️"
+        },
+        {
+          "es": "Después de",
+          "en": "After",
+          "say": "des-PWES deh",
+          "emoji": "⏭️"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Entre",
+            "semana",
+            "suelo",
+            "levantarme",
+            "a",
+            "las",
+            "siete"
+          ],
+          "shuffle": [
+            "suelo",
+            "levantarme",
+            "las",
+            "a",
+            "Entre",
+            "siete",
+            "semana"
+          ],
+          "en": "On weekdays I usually get up at seven."
+        },
+        {
+          "correct": [
+            "Los",
+            "fines",
+            "de",
+            "semana",
+            "casi",
+            "nunca",
+            "veo",
+            "la",
+            "tele"
+          ],
+          "shuffle": [
+            "casi",
+            "fines",
+            "nunca",
+            "veo",
+            "tele",
+            "semana",
+            "la",
+            "Los",
+            "de"
+          ],
+          "en": "At the weekend I hardly ever watch TV."
+        },
+        {
+          "correct": [
+            "Hoy",
+            "me",
+            "toca",
+            "sacar",
+            "la",
+            "basura"
+          ],
+          "shuffle": [
+            "Hoy",
+            "toca",
+            "la",
+            "me",
+            "sacar",
+            "basura"
+          ],
+          "en": "Today it's my turn to take the rubbish out."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Suelo cenar a las nueve' means:",
+          "opts": [
+            "I usually have dinner at nine",
+            "I have dinner on the floor at nine",
+            "I had dinner at nine"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Casi nunca' means:",
+          "opts": [
+            "Hardly ever",
+            "Almost always",
+            "Never ever"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Sol's Week",
+        "paras": [
+          "Sol explains his routine. 'Entre semana suelo levantarme a las siete y media.'",
+          "'Después del cole, hago los deberes y antes de cenar me ducho. Normalmente, cenamos a las nueve.'",
+          "'Los fines de semana casi nunca me levanto temprano… ¡pero los domingos me toca lavar los platos!'"
+        ],
+        "qs": [
+          {
+            "q": "What time does Sol usually get up on weekdays?",
+            "opts": [
+              "Half past seven",
+              "Seven",
+              "Nine"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "When does he have a shower?",
+            "opts": [
+              "Before dinner",
+              "In the morning",
+              "After dinner"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What's his job on Sundays?",
+            "opts": [
+              "Washing the dishes",
+              "Taking the rubbish out",
+              "Walking the dog"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 193,
+      "title": "¿Qué tal el finde?",
+      "subtitle": "How was the weekend?",
+      "emoji": "💬",
+      "milestone": false,
+      "funFact": "'Pasarlo bomba' is a very Spanish, very informal way to say you had an amazing time!",
+      "phrase": {
+        "es": "El sábado quedé con mis primos y lo pasé bomba.",
+        "en": "On Saturday I met up with my cousins and had a fantastic time."
+      },
+      "words": [
+        {
+          "es": "¿Qué tal el finde?",
+          "en": "How was the weekend?",
+          "say": "keh tal el FEEN-deh",
+          "emoji": "💬"
+        },
+        {
+          "es": "Lo pasé bomba",
+          "en": "I had a fantastic time",
+          "say": "loh pah-SEH BOM-bah",
+          "emoji": "💥"
+        },
+        {
+          "es": "Me lo pasé fatal",
+          "en": "I had an awful time",
+          "say": "meh loh pah-SEH fah-TAL",
+          "emoji": "😖"
+        },
+        {
+          "es": "Quedé con",
+          "en": "I met up with",
+          "say": "keh-DEH kon",
+          "emoji": "🤝"
+        },
+        {
+          "es": "Vimos una peli",
+          "en": "We watched a film",
+          "say": "BEE-mos OO-nah PEH-lee",
+          "emoji": "🍿"
+        },
+        {
+          "es": "Dimos un paseo",
+          "en": "We went for a walk",
+          "say": "DEE-mos oon pah-SEH-oh",
+          "emoji": "🌳"
+        },
+        {
+          "es": "Volvimos tarde",
+          "en": "We came back late",
+          "say": "bol-BEE-mos TAR-deh",
+          "emoji": "🌙"
+        },
+        {
+          "es": "Estuvo genial",
+          "en": "It was great",
+          "say": "es-TOO-boh heh-NYAL",
+          "emoji": "🌟"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "El",
+            "sábado",
+            "quedé",
+            "con",
+            "mis",
+            "primos"
+          ],
+          "shuffle": [
+            "El",
+            "quedé",
+            "mis",
+            "primos",
+            "con",
+            "sábado"
+          ],
+          "en": "On Saturday I met up with my cousins."
+        },
+        {
+          "correct": [
+            "Dimos",
+            "un",
+            "paseo",
+            "por",
+            "la",
+            "playa"
+          ],
+          "shuffle": [
+            "por",
+            "playa",
+            "Dimos",
+            "paseo",
+            "un",
+            "la"
+          ],
+          "en": "We went for a walk along the beach."
+        },
+        {
+          "correct": [
+            "Lo",
+            "pasé",
+            "bomba",
+            "en",
+            "el",
+            "cumpleaños",
+            "de",
+            "Marta"
+          ],
+          "shuffle": [
+            "Marta",
+            "de",
+            "en",
+            "el",
+            "Lo",
+            "bomba",
+            "pasé",
+            "cumpleaños"
+          ],
+          "en": "I had a fantastic time at Marta's birthday."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Lo pasé bomba' means:",
+          "opts": [
+            "I had a fantastic time",
+            "I passed a bomb",
+            "I was scared"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Ayer nosotros ___ un paseo. (dar)",
+          "opts": [
+            "dimos",
+            "damos",
+            "dieron"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Monday Morning",
+        "paras": [
+          "'¿Qué tal el finde?' Luna asks Sol on Monday.",
+          "'¡Lo pasé bomba! El sábado quedé con mis primos, vimos una peli y volvimos tarde.'",
+          "'Yo me lo pasé fatal,' says Luna. 'Estuve resfriada todo el fin de semana.' '¡Pobre! El próximo finde, ¡quedamos!'"
+        ],
+        "qs": [
+          {
+            "q": "How was Sol's weekend?",
+            "opts": [
+              "Fantastic",
+              "Awful",
+              "Boring"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What did Sol do with his cousins?",
+            "opts": [
+              "Watched a film",
+              "Played football",
+              "Went shopping"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Why did Luna have an awful time?",
+            "opts": [
+              "She had a cold",
+              "It rained",
+              "She was bored"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 194,
+      "title": "Me acuerdo de…",
+      "subtitle": "I remember…",
+      "emoji": "🕰️",
+      "milestone": false,
+      "funFact": "'Echar de menos' (to miss someone) is how people say it in Spain. In Latin America, you'll also hear 'extrañar'.",
+      "phrase": {
+        "es": "Me acuerdo de mi primer día de cole.",
+        "en": "I remember my first day at school."
+      },
+      "words": [
+        {
+          "es": "Me acuerdo de",
+          "en": "I remember",
+          "say": "meh ah-KWEHR-doh deh",
+          "emoji": "💭"
+        },
+        {
+          "es": "Mi primer día de cole",
+          "en": "My first day at school",
+          "say": "mee pree-MEHR DEE-ah deh KOH-leh",
+          "emoji": "🏫"
+        },
+        {
+          "es": "Echo de menos",
+          "en": "I miss",
+          "say": "EH-choh deh MEH-nos",
+          "emoji": "🥲"
+        },
+        {
+          "es": "Tenía miedo de",
+          "en": "I was scared of",
+          "say": "teh-NEE-ah MYEH-doh deh",
+          "emoji": "😨"
+        },
+        {
+          "es": "Me hacía reír",
+          "en": "He / She used to make me laugh",
+          "say": "meh ah-THEE-ah rreh-EER",
+          "emoji": "😂"
+        },
+        {
+          "es": "Mi mejor amigo era",
+          "en": "My best friend was",
+          "say": "mee meh-HOR ah-MEE-goh EH-rah",
+          "emoji": "👫"
+        },
+        {
+          "es": "Cuando tenía cinco años",
+          "en": "When I was five",
+          "say": "KWAN-doh teh-NEE-ah THEEN-koh AH-nyos",
+          "emoji": "5️⃣"
+        },
+        {
+          "es": "Hace mucho tiempo",
+          "en": "A long time ago",
+          "say": "AH-theh MOO-choh TYEM-poh",
+          "emoji": "🕰️"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Me",
+            "acuerdo",
+            "de",
+            "mi",
+            "primer",
+            "día",
+            "de",
+            "cole"
+          ],
+          "shuffle": [
+            "día",
+            "primer",
+            "mi",
+            "de",
+            "de",
+            "cole",
+            "Me",
+            "acuerdo"
+          ],
+          "en": "I remember my first day at school."
+        },
+        {
+          "correct": [
+            "Echo",
+            "de",
+            "menos",
+            "a",
+            "mis",
+            "abuelos"
+          ],
+          "shuffle": [
+            "menos",
+            "a",
+            "abuelos",
+            "de",
+            "Echo",
+            "mis"
+          ],
+          "en": "I miss my grandparents."
+        },
+        {
+          "correct": [
+            "Cuando",
+            "tenía",
+            "cinco",
+            "años",
+            "tenía",
+            "miedo",
+            "de",
+            "los",
+            "perros"
+          ],
+          "shuffle": [
+            "perros",
+            "Cuando",
+            "años",
+            "de",
+            "los",
+            "miedo",
+            "tenía",
+            "tenía",
+            "cinco"
+          ],
+          "en": "When I was five I was scared of dogs."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Echo de menos' means:",
+          "opts": [
+            "I miss",
+            "I throw less",
+            "I need less"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Cuando ___ seis años, vivía en Londres. (tener)",
+          "opts": [
+            "tenía",
+            "tuve",
+            "tengo"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "First Day",
+        "paras": [
+          "Sol remembers his first day at school in Spain.",
+          "'Me acuerdo muy bien. Tenía seis años y no hablaba español. Tenía miedo de todo.'",
+          "'Pero un niño, Pablo, me hacía reír todo el día. Desde entonces, es mi mejor amigo. ¡Y ahora hablo español!'"
+        ],
+        "qs": [
+          {
+            "q": "How old was Sol on his first day?",
+            "opts": [
+              "Six",
+              "Five",
+              "Eight"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Why was it hard?",
+            "opts": [
+              "He didn't speak Spanish",
+              "He was ill",
+              "He was late"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Who is Pablo?",
+            "opts": [
+              "Sol's best friend",
+              "His teacher",
+              "His cousin"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 195,
+      "title": "Mis planes",
+      "subtitle": "My plans",
+      "emoji": "🌈",
+      "milestone": false,
+      "funFact": "In Spain, the school year is called 'el curso'. It starts in September and ends in June.",
+      "phrase": {
+        "es": "Dentro de un año hablaré español perfectamente.",
+        "en": "In a year's time I'll speak Spanish perfectly."
+      },
+      "words": [
+        {
+          "es": "El curso que viene",
+          "en": "Next school year",
+          "say": "el KOOR-soh keh BYEH-neh",
+          "emoji": "📚"
+        },
+        {
+          "es": "Dentro de un año",
+          "en": "In a year's time",
+          "say": "DEN-troh deh oon AH-nyoh",
+          "emoji": "⏳"
+        },
+        {
+          "es": "Algún día",
+          "en": "One day",
+          "say": "al-GOON DEE-ah",
+          "emoji": "🌈"
+        },
+        {
+          "es": "Me gustaría viajar",
+          "en": "I'd like to travel",
+          "say": "meh goos-tah-REE-ah byah-HAR",
+          "emoji": "✈️"
+        },
+        {
+          "es": "Tengo pensado",
+          "en": "I'm planning to",
+          "say": "TEN-goh pen-SAH-doh",
+          "emoji": "🗺️"
+        },
+        {
+          "es": "Seguramente",
+          "en": "Most likely",
+          "say": "seh-goo-rah-MEN-teh",
+          "emoji": "🎯"
+        },
+        {
+          "es": "Espero",
+          "en": "I hope",
+          "say": "es-PEH-roh",
+          "emoji": "🙏"
+        },
+        {
+          "es": "Si puedo",
+          "en": "If I can",
+          "say": "see PWEH-doh",
+          "emoji": "💪"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "El",
+            "curso",
+            "que",
+            "viene",
+            "iré",
+            "a",
+            "un",
+            "colegio",
+            "nuevo"
+          ],
+          "shuffle": [
+            "El",
+            "que",
+            "a",
+            "curso",
+            "un",
+            "nuevo",
+            "iré",
+            "colegio",
+            "viene"
+          ],
+          "en": "Next school year I'll go to a new school."
+        },
+        {
+          "correct": [
+            "Dentro",
+            "de",
+            "un",
+            "año",
+            "hablaré",
+            "español",
+            "perfectamente"
+          ],
+          "shuffle": [
+            "hablaré",
+            "perfectamente",
+            "año",
+            "español",
+            "un",
+            "de",
+            "Dentro"
+          ],
+          "en": "In a year's time I'll speak Spanish perfectly."
+        },
+        {
+          "correct": [
+            "Tengo",
+            "pensado",
+            "aprender",
+            "a",
+            "tocar",
+            "la",
+            "guitarra"
+          ],
+          "shuffle": [
+            "tocar",
+            "Tengo",
+            "a",
+            "la",
+            "aprender",
+            "guitarra",
+            "pensado"
+          ],
+          "en": "I'm planning to learn to play the guitar."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Dentro de un año' means:",
+          "opts": [
+            "In a year's time",
+            "Inside a year",
+            "A year ago"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Tengo pensado' means:",
+          "opts": [
+            "I'm planning to",
+            "I have thought",
+            "I'm thinking hard"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Luna's Plans",
+        "paras": [
+          "Luna writes her plans in her diary.",
+          "'El curso que viene iré al instituto. Seguramente estaré un poco nerviosa.'",
+          "'Este verano tengo pensado aprender a surfear, si puedo. Y algún día me gustaría viajar a Japón.'"
+        ],
+        "qs": [
+          {
+            "q": "Where will Luna go next school year?",
+            "opts": [
+              "Secondary school",
+              "A new town",
+              "England"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What is she planning to learn this summer?",
+            "opts": [
+              "To surf",
+              "To ski",
+              "To cook"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Where would she like to travel one day?",
+            "opts": [
+              "Japan",
+              "Mexico",
+              "Australia"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 196,
+      "title": "En la ciudad",
+      "subtitle": "In town",
+      "emoji": "🏙️",
+      "milestone": false,
+      "funFact": "Many small shops in Spain close for a few hours in the afternoon, often from about 2 to 5, and open again in the evening.",
+      "phrase": {
+        "es": "Disculpe, ¿me puede decir dónde está la farmacia?",
+        "en": "Excuse me, could you tell me where the chemist's is?"
+      },
+      "words": [
+        {
+          "es": "Disculpe",
+          "en": "Excuse me (polite)",
+          "say": "dees-KOOL-peh",
+          "emoji": "🙋‍♂️"
+        },
+        {
+          "es": "¿Me puede decir…?",
+          "en": "Could you tell me…?",
+          "say": "meh PWEH-deh deh-THEER",
+          "emoji": "💬"
+        },
+        {
+          "es": "¿Hay un banco cerca?",
+          "en": "Is there a bank nearby?",
+          "say": "ay oon BAN-koh THEHR-kah",
+          "emoji": "📍"
+        },
+        {
+          "es": "¿Se puede…?",
+          "en": "Is it allowed to…?",
+          "say": "seh PWEH-deh",
+          "emoji": "❔"
+        },
+        {
+          "es": "Está prohibido",
+          "en": "It's not allowed",
+          "say": "es-TAH proh-ee-BEE-doh",
+          "emoji": "⛔"
+        },
+        {
+          "es": "Abierto",
+          "en": "Open",
+          "say": "ah-BYEHR-toh",
+          "emoji": "🔓"
+        },
+        {
+          "es": "Cerrado",
+          "en": "Closed",
+          "say": "theh-RRAH-doh",
+          "emoji": "🔒"
+        },
+        {
+          "es": "El horario",
+          "en": "Opening hours",
+          "say": "el oh-RAH-ryoh",
+          "emoji": "🕘"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "La",
+            "farmacia",
+            "está",
+            "cerrada",
+            "los",
+            "domingos"
+          ],
+          "shuffle": [
+            "cerrada",
+            "está",
+            "La",
+            "domingos",
+            "los",
+            "farmacia"
+          ],
+          "en": "The chemist's is closed on Sundays."
+        },
+        {
+          "correct": [
+            "Está",
+            "prohibido",
+            "hacer",
+            "fotos",
+            "en",
+            "el",
+            "museo"
+          ],
+          "shuffle": [
+            "fotos",
+            "prohibido",
+            "el",
+            "museo",
+            "en",
+            "hacer",
+            "Está"
+          ],
+          "en": "Taking photos in the museum is not allowed."
+        },
+        {
+          "correct": [
+            "Hay",
+            "un",
+            "supermercado",
+            "muy",
+            "cerca",
+            "de",
+            "aquí"
+          ],
+          "shuffle": [
+            "de",
+            "un",
+            "aquí",
+            "cerca",
+            "muy",
+            "supermercado",
+            "Hay"
+          ],
+          "en": "There's a supermarket very near here."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Está prohibido' means:",
+          "opts": [
+            "It's not allowed",
+            "It's provided",
+            "It's probable"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Cerrado' means:",
+          "opts": [
+            "Closed",
+            "Open",
+            "Close by"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "The Closed Shop",
+        "paras": [
+          "It's three o'clock. Sol and his mum go to the bakery. The door says: 'Cerrado'.",
+          "'Disculpe, ¿me puede decir el horario?' Mamá asks a man. 'Abre a las cinco. Hay otra panadería cerca, en la plaza.'",
+          "In the second shop, Sol takes a photo of the cakes. 'Lo siento, está prohibido hacer fotos.' '¡Ups! Perdone.'"
+        ],
+        "qs": [
+          {
+            "q": "Why can't they buy bread at first?",
+            "opts": [
+              "The shop is closed",
+              "There's no bread",
+              "It's too expensive"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "When does it open?",
+            "opts": [
+              "At five",
+              "At three",
+              "Tomorrow"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What is not allowed in the second shop?",
+            "opts": [
+              "Taking photos",
+              "Eating",
+              "Running"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 197,
+      "title": "Al teléfono",
+      "subtitle": "On the phone",
+      "emoji": "📱",
+      "milestone": false,
+      "funFact": "Spaniards often answer the phone with '¿Diga?' or '¿Sí?', and end calls with 'Venga, un beso' or 'Chao'.",
+      "phrase": {
+        "es": "Ahora no puedo hablar. Te llamo luego.",
+        "en": "I can't talk right now. I'll call you later."
+      },
+      "words": [
+        {
+          "es": "¿Diga?",
+          "en": "Hello? (answering the phone)",
+          "say": "DEE-gah",
+          "emoji": "📱"
+        },
+        {
+          "es": "Soy yo",
+          "en": "It's me",
+          "say": "soy yoh",
+          "emoji": "🙋"
+        },
+        {
+          "es": "¿De parte de quién?",
+          "en": "Who's calling?",
+          "say": "deh PAR-teh deh kyen",
+          "emoji": "☎️"
+        },
+        {
+          "es": "Te llamo luego",
+          "en": "I'll call you later",
+          "say": "teh YAH-moh LWEH-goh",
+          "emoji": "🔁"
+        },
+        {
+          "es": "Un mensaje",
+          "en": "A message",
+          "say": "oon men-SAH-heh",
+          "emoji": "💬"
+        },
+        {
+          "es": "Mándame",
+          "en": "Send me",
+          "say": "MAN-dah-meh",
+          "emoji": "📤"
+        },
+        {
+          "es": "Ahora no puedo",
+          "en": "I can't right now",
+          "say": "ah-OH-rah noh PWEH-doh",
+          "emoji": "⏸️"
+        },
+        {
+          "es": "Un beso",
+          "en": "Love (a kiss, to say bye)",
+          "say": "oon BEH-soh",
+          "emoji": "😘"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Ahora",
+            "no",
+            "puedo",
+            "hablar"
+          ],
+          "shuffle": [
+            "no",
+            "Ahora",
+            "hablar",
+            "puedo"
+          ],
+          "en": "I can't talk right now."
+        },
+        {
+          "correct": [
+            "Mándame",
+            "un",
+            "mensaje",
+            "esta",
+            "tarde"
+          ],
+          "shuffle": [
+            "mensaje",
+            "un",
+            "esta",
+            "Mándame",
+            "tarde"
+          ],
+          "en": "Send me a message this afternoon."
+        },
+        {
+          "correct": [
+            "Mi",
+            "abuela",
+            "me",
+            "llama",
+            "todos",
+            "los",
+            "domingos"
+          ],
+          "shuffle": [
+            "los",
+            "Mi",
+            "me",
+            "domingos",
+            "abuela",
+            "todos",
+            "llama"
+          ],
+          "en": "My grandma calls me every Sunday."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'¿De parte de quién?' means:",
+          "opts": [
+            "Who's calling?",
+            "Which part?",
+            "Whose party?"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Un beso' at the end of a call means:",
+          "opts": [
+            "Bye, love",
+            "A drink",
+            "See you never"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Grandma Calls",
+        "paras": [
+          "The phone rings. '¿Diga?' says Luna. 'Hola, cariño, soy yo, la abuela.'",
+          "'¡Hola, abuela! Ahora no puedo hablar mucho, estoy haciendo los deberes. ¿Te llamo luego?'",
+          "'Vale, cariño. Mándame un mensaje cuando termines. Un beso.' 'Un beso, abuela. ¡Chao!'"
+        ],
+        "qs": [
+          {
+            "q": "Who is calling?",
+            "opts": [
+              "Grandma",
+              "Sol",
+              "Mum"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Why can't Luna talk much?",
+            "opts": [
+              "She's doing homework",
+              "She's eating",
+              "She's going out"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Grandma ask her to do?",
+            "opts": [
+              "Send a message",
+              "Call tomorrow",
+              "Visit her"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 198,
+      "title": "Fiestas de España",
+      "subtitle": "Spanish festivals",
+      "emoji": "🎭",
+      "milestone": false,
+      "funFact": "The Three Kings parade ('la cabalgata') is on the evening of 5 January. On the morning of the 6th, Spanish children open presents from the Kings!",
+      "phrase": {
+        "es": "Las Fallas son en Valencia en marzo.",
+        "en": "Las Fallas take place in Valencia in March."
+      },
+      "words": [
+        {
+          "es": "Las Fallas",
+          "en": "Las Fallas (Valencia)",
+          "say": "las FAH-yas",
+          "emoji": "🔥"
+        },
+        {
+          "es": "La Tomatina",
+          "en": "La Tomatina (tomato fight)",
+          "say": "lah toh-mah-TEE-nah",
+          "emoji": "🍅"
+        },
+        {
+          "es": "San Fermín",
+          "en": "San Fermín (Pamplona)",
+          "say": "san fehr-MEEN",
+          "emoji": "🐂"
+        },
+        {
+          "es": "La Feria de Abril",
+          "en": "The April Fair (Seville)",
+          "say": "lah FEH-ryah deh ah-BREEL",
+          "emoji": "💃"
+        },
+        {
+          "es": "La cabalgata",
+          "en": "The Three Kings parade",
+          "say": "lah kah-bal-GAH-tah",
+          "emoji": "🐪"
+        },
+        {
+          "es": "El Carnaval",
+          "en": "Carnival",
+          "say": "el kar-nah-BAL",
+          "emoji": "🎭"
+        },
+        {
+          "es": "La Semana Santa",
+          "en": "Holy Week (Easter)",
+          "say": "lah seh-MAH-nah SAN-tah",
+          "emoji": "⛪"
+        },
+        {
+          "es": "La Nochevieja",
+          "en": "New Year's Eve",
+          "say": "lah noh-cheh-BYEH-hah",
+          "emoji": "🕛"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Las",
+            "Fallas",
+            "son",
+            "en",
+            "Valencia",
+            "en",
+            "marzo"
+          ],
+          "shuffle": [
+            "son",
+            "en",
+            "Fallas",
+            "marzo",
+            "Valencia",
+            "en",
+            "Las"
+          ],
+          "en": "Las Fallas take place in Valencia in March."
+        },
+        {
+          "correct": [
+            "En",
+            "la",
+            "Tomatina",
+            "la",
+            "gente",
+            "se",
+            "tira",
+            "tomates"
+          ],
+          "shuffle": [
+            "tira",
+            "se",
+            "la",
+            "En",
+            "gente",
+            "Tomatina",
+            "tomates",
+            "la"
+          ],
+          "en": "At the Tomatina people throw tomatoes at each other."
+        },
+        {
+          "correct": [
+            "La",
+            "cabalgata",
+            "de",
+            "Reyes",
+            "es",
+            "el",
+            "cinco",
+            "de",
+            "enero"
+          ],
+          "shuffle": [
+            "Reyes",
+            "enero",
+            "cinco",
+            "cabalgata",
+            "es",
+            "La",
+            "de",
+            "el",
+            "de"
+          ],
+          "en": "The Three Kings parade is on the fifth of January."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "La Tomatina is in ___",
+          "opts": [
+            "Buñol",
+            "Pamplona",
+            "Sevilla"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'La Nochevieja' is:",
+          "opts": [
+            "New Year's Eve",
+            "Christmas Eve",
+            "Halloween"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "A Year of Festivals",
+        "paras": [
+          "Sol makes a calendar of Spanish festivals.",
+          "'En enero, la cabalgata de Reyes. En marzo, las Fallas de Valencia. En abril, la Feria de Sevilla.'",
+          "'En julio, San Fermín. En agosto, ¡la Tomatina! Y en diciembre, las uvas de Nochevieja. ¡Qué país tan divertido!'"
+        ],
+        "qs": [
+          {
+            "q": "When are Las Fallas?",
+            "opts": [
+              "In March",
+              "In August",
+              "In July"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What happens in August?",
+            "opts": [
+              "La Tomatina",
+              "San Fermín",
+              "The April Fair"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What do people eat on New Year's Eve?",
+            "opts": [
+              "Grapes",
+              "Tomatoes",
+              "Turrón"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 199,
+      "title": "Te escribo desde…",
+      "subtitle": "I'm writing to you from…",
+      "emoji": "💌",
+      "milestone": false,
+      "funFact": "In Spanish letters and messages, people often sign off with 'un abrazo' (a hug) or 'besos' (kisses), even to friends and family.",
+      "phrase": {
+        "es": "Te escribo desde la playa. ¡Lo estoy pasando genial!",
+        "en": "I'm writing to you from the beach. I'm having a great time!"
+      },
+      "words": [
+        {
+          "es": "Querida abuela",
+          "en": "Dear Grandma",
+          "say": "keh-REE-dah ah-BWEH-lah",
+          "emoji": "💌"
+        },
+        {
+          "es": "Te escribo desde",
+          "en": "I'm writing to you from",
+          "say": "teh es-KREE-boh DES-deh",
+          "emoji": "✉️"
+        },
+        {
+          "es": "Lo estoy pasando genial",
+          "en": "I'm having a great time",
+          "say": "loh es-TOY pah-SAN-doh heh-NYAL",
+          "emoji": "😄"
+        },
+        {
+          "es": "Hace un tiempo estupendo",
+          "en": "The weather is great",
+          "say": "AH-theh oon TYEM-poh es-too-PEN-doh",
+          "emoji": "🌞"
+        },
+        {
+          "es": "Hasta pronto",
+          "en": "See you soon",
+          "say": "AS-tah PRON-toh",
+          "emoji": "👋"
+        },
+        {
+          "es": "Un abrazo",
+          "en": "A hug (best wishes)",
+          "say": "oon ah-BRAH-thoh",
+          "emoji": "🤗"
+        },
+        {
+          "es": "Muchos besos",
+          "en": "Lots of love",
+          "say": "MOO-chos BEH-sos",
+          "emoji": "😘"
+        },
+        {
+          "es": "La postal",
+          "en": "The postcard",
+          "say": "lah pos-TAL",
+          "emoji": "🖼️"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Te",
+            "escribo",
+            "desde",
+            "la",
+            "playa"
+          ],
+          "shuffle": [
+            "Te",
+            "la",
+            "desde",
+            "escribo",
+            "playa"
+          ],
+          "en": "I'm writing to you from the beach."
+        },
+        {
+          "correct": [
+            "Lo",
+            "estoy",
+            "pasando",
+            "genial",
+            "con",
+            "mis",
+            "primos"
+          ],
+          "shuffle": [
+            "genial",
+            "estoy",
+            "Lo",
+            "mis",
+            "pasando",
+            "primos",
+            "con"
+          ],
+          "en": "I'm having a great time with my cousins."
+        },
+        {
+          "correct": [
+            "Hace",
+            "un",
+            "tiempo",
+            "estupendo"
+          ],
+          "shuffle": [
+            "estupendo",
+            "Hace",
+            "tiempo",
+            "un"
+          ],
+          "en": "The weather is great."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Un abrazo' at the end of a letter means:",
+          "opts": [
+            "A hug (best wishes)",
+            "A contract",
+            "Goodbye forever"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Querida' is used:",
+          "opts": [
+            "To start a letter to a woman or girl",
+            "To end a letter",
+            "To ask a question"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Luna's Postcard",
+        "paras": [
+          "Luna writes una postal from Mallorca.",
+          "'Querida abuela: te escribo desde Mallorca. ¡Lo estoy pasando genial! Hace un tiempo estupendo y ayer nadé con peces de colores.'",
+          "'Mañana vamos a visitar una cueva. Te echo de menos. ¡Hasta pronto! Muchos besos, Luna.'"
+        ],
+        "qs": [
+          {
+            "q": "Where is Luna writing from?",
+            "opts": [
+              "Mallorca",
+              "Madrid",
+              "London"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What did she do yesterday?",
+            "opts": [
+              "Swam with colourful fish",
+              "Visited a cave",
+              "Went shopping"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What will she do tomorrow?",
+            "opts": [
+              "Visit a cave",
+              "Go home",
+              "Go to the beach"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 200,
+      "title": "¡Campeón de A2!",
+      "subtitle": "A2 champion!",
+      "emoji": "🏅",
+      "milestone": true,
+      "funFact": "You've finished all 200 lessons! You can now talk about the past, the present and the future, and get by in everyday life in Spain. ¡Enhorabuena!",
+      "phrase": {
+        "es": "¡Lo he conseguido! Ya hablo mucho español.",
+        "en": "I've done it! I can speak lots of Spanish now."
+      },
+      "words": [
+        {
+          "es": "¿Alguna vez has…?",
+          "en": "Have you ever…?",
+          "say": "al-GOO-nah behth as",
+          "emoji": "🤔"
+        },
+        {
+          "es": "¿Qué hiciste?",
+          "en": "What did you do?",
+          "say": "keh ee-THEES-teh",
+          "emoji": "❓"
+        },
+        {
+          "es": "De pequeño",
+          "en": "As a little boy",
+          "say": "deh peh-KEH-nyoh",
+          "emoji": "👦"
+        },
+        {
+          "es": "Iré",
+          "en": "I will go",
+          "say": "ee-REH",
+          "emoji": "🚀"
+        },
+        {
+          "es": "¿Me pones…?",
+          "en": "Can I have…?",
+          "say": "meh POH-nes",
+          "emoji": "🙋"
+        },
+        {
+          "es": "Gira a la derecha",
+          "en": "Turn right",
+          "say": "HEE-rah ah lah deh-REH-chah",
+          "emoji": "↪️"
+        },
+        {
+          "es": "Me duele la barriga",
+          "en": "My tummy hurts",
+          "say": "meh DWEH-leh lah bah-RREE-gah",
+          "emoji": "🤢"
+        },
+        {
+          "es": "¿Tú qué opinas?",
+          "en": "What do you think?",
+          "say": "too keh oh-PEE-nas",
+          "emoji": "🗨️"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Hoy",
+            "he",
+            "terminado",
+            "el",
+            "curso",
+            "de",
+            "español"
+          ],
+          "shuffle": [
+            "he",
+            "Hoy",
+            "terminado",
+            "español",
+            "de",
+            "el",
+            "curso"
+          ],
+          "en": "Today I have finished the Spanish course."
+        },
+        {
+          "correct": [
+            "El",
+            "año",
+            "que",
+            "viene",
+            "seguiré",
+            "aprendiendo"
+          ],
+          "shuffle": [
+            "año",
+            "seguiré",
+            "aprendiendo",
+            "El",
+            "que",
+            "viene"
+          ],
+          "en": "Next year I'll keep on learning."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "Hoy ___ mucho. (aprender, have)",
+          "opts": [
+            "he aprendido",
+            "aprendí",
+            "aprendía"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Ayer ___ al cine con mis amigos. (ir)",
+          "opts": [
+            "fui",
+            "iba",
+            "iré"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "De pequeño, ___ en un pueblo. (vivir, used to)",
+          "opts": [
+            "vivía",
+            "viví",
+            "viviré"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Mañana ___ a la playa. (ir, will)",
+          "opts": [
+            "iré",
+            "fui",
+            "iba"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "The Graduation",
+        "paras": [
+          "Sol and Luna stand on a stage. Everyone claps. It's their Spanish graduation!",
+          "'Cuando empezamos, solo sabíamos decir hola,' says Luna. 'Ahora hablamos del pasado, del presente y del futuro.'",
+          "'¿Y ahora qué?' asks Sol. '¡Ahora seguiremos aprendiendo! ¡Enhorabuena a todos!' 🏅🎉"
+        ],
+        "qs": [
+          {
+            "q": "What are Sol and Luna celebrating?",
+            "opts": [
+              "Their Spanish graduation",
+              "A birthday",
+              "Christmas"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What could they say when they started?",
+            "opts": [
+              "Only 'hola'",
+              "Everything",
+              "Nothing at all"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What will they do now?",
+            "opts": [
+              "Keep on learning",
+              "Stop learning",
+              "Learn French"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    }
+  ]
+}

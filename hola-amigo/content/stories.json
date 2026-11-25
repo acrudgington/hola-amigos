@@ -294,5 +294,19 @@
     {"q": "What does Sol prefer?", "opts": ["Dogs", "Cats", "Tortoises"], "ans": 0},
     {"q": "Why does Luna prefer cats?", "opts": ["They're calmer and cleaner", "They're bigger", "They need walks"], "ans": 0},
     {"q": "What pet does the teacher have?", "opts": ["A tortoise", "A dog", "A cat"], "ans": 0}
+  ] },
+  { "id": "gran-fiesta", "world": 22, "title": "La gran fiesta", "en": "The big party", "emoji": "🎉", "sentences": [
+    {"es": "Hace dos años, Sol y Luna no hablaban español.", "en": "Two years ago, Sol and Luna didn't speak Spanish."},
+    {"es": "Cuando llegaron a España, tenían un poco de miedo.", "en": "When they arrived in Spain, they were a little scared."},
+    {"es": "Pero cada día aprendían palabras nuevas con sus amigos.", "en": "But every day they learned new words with their friends."},
+    {"es": "Hoy han organizado una gran fiesta para celebrar todo lo que han aprendido.", "en": "Today they have organised a big party to celebrate everything they've learned."},
+    {"es": "Han invitado a sus amigos, a sus profes y a sus familias.", "en": "They have invited their friends, their teachers and their families."},
+    {"es": "—¿Te acuerdas de nuestro primer día? —pregunta Luna—. ¡Solo sabíamos decir hola!", "en": "\"Do you remember our first day?\" asks Luna. \"We could only say hello!\""},
+    {"es": "—Sí, y ahora hablamos del pasado, del presente y del futuro —dice Sol.", "en": "\"Yes, and now we talk about the past, the present and the future,\" says Sol."},
+    {"es": "—¿Y el año que viene? —¡El año que viene aprenderemos todavía más!", "en": "\"And next year?\" \"Next year we'll learn even more!\""}
+  ], "questions": [
+    {"q": "When did Sol and Luna not speak Spanish?", "opts": ["Two years ago", "Last week", "Never"], "ans": 0},
+    {"q": "Who did they invite to the party?", "opts": ["Friends, teachers and families", "Only their friends", "Nobody"], "ans": 0},
+    {"q": "What will they do next year?", "opts": ["Learn even more", "Stop learning", "Move away"], "ans": 0}
   ] }
 ]
