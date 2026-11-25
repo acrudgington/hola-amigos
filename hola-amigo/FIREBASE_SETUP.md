@@ -80,18 +80,27 @@ that file changes.)*
 
 ## 6. Switch the live site over
 
-In **Vercel → your project → Settings → Environment Variables**, add:
+The live site must be built from code that includes Firebase (merged to `main`).
 
-| Name | Value |
-|---|---|
-| `VITE_BACKEND` | `firebase` |
-| `VITE_FIREBASE_API_KEY` | *(from step 4)* |
-| `VITE_FIREBASE_AUTH_DOMAIN` | *(from step 4)* |
-| `VITE_FIREBASE_PROJECT_ID` | *(from step 4)* |
-| `VITE_FIREBASE_APP_ID` | *(from step 4)* |
+1. In **Vercel → your project → Settings → Environment Variables**, add these
+   five. Choose type **Config** (not Secret): `VITE_` values end up inside the
+   website anyway, and Config lets you check them later. Paste the **real
+   values** from step 4, without the quote marks.
 
-Then **Deployments → ⋯ → Redeploy**. These settings are baked in when the site
-is built, so a redeploy is needed every time you change them.
+   | Key | Value (example shape) |
+   |---|---|
+   | `VITE_BACKEND` | `firebase` (literally this word) |
+   | `VITE_FIREBASE_API_KEY` | `AIzaSy…` |
+   | `VITE_FIREBASE_AUTH_DOMAIN` | `your-project.firebaseapp.com` |
+   | `VITE_FIREBASE_PROJECT_ID` | `your-project` |
+   | `VITE_FIREBASE_APP_ID` | `1:1234567890:web:abc…` |
+
+   This is the Firebase key, not the Google text-to-speech key used for voices.
+2. In **Firebase → Authentication → Settings → Authorised domains**, add your
+   site's address exactly as Vercel shows it (no `https://`).
+3. The variables are baked in when the site is built, so they take effect on the
+   next deployment: either merge new code to `main`, or use
+   **Deployments → ⋯ → Redeploy**.
 
 Check it works: open the live site, sign up as a new parent, add a child, play a
 lesson, then log in on a second device. The child and their stars should be
