@@ -1,31 +1,28 @@
 # Content review
 
-The course content (100 lessons, 692 words) has had a first-pass review for
-accurate, natural **Castilian Spanish** and correct facts.
+The course content (100 lessons, 692 words) has been reviewed for accurate,
+natural **Castilian Spanish** and correct facts, in two passes:
 
-- **[changes-2026-11.md](changes-2026-11.md)** — every change made in the
-  November 2026 review (190 changes), with before, after and why.
+1. **A full read-through of every lesson** (190 changes): grammar, Spain-specific
+   vocabulary, natural phrasing, ¡ ¿ marks, story logic, pictures and level labels.
+2. **A check against native Spanish sources** (9 more changes): spellings and
+   meanings against the **RAE** (Real Academia Española: DLE and Diccionario
+   panhispánico de dudas), and fun facts against Spanish government sites
+   (Ministerio de Educación, MITECO, Banco de España), UNESCO and Spanish media.
+
+- **[changes-2026-11.md](changes-2026-11.md)** — every change, with before, after,
+  why and (for the second pass) the source.
 - **[teacher-review.csv](teacher-review.csv)** — every line of Spanish in the
-  course, one row each, with columns for a teacher to mark **OK? (Y/N)** and add
-  corrections. Open it in Excel, Numbers or Google Sheets.
+  course, one row each (regenerate with `npm run content:review-sheet`). Handy if
+  you ever want a teacher or a native-speaking parent to look over it.
 
-## Sign-off (to do before marketing the course as teacher-approved)
+## How to describe the course honestly
 
-A qualified Spanish teacher (ideally a native Castilian speaker, used to teaching
-children aged about 5–11) should go through `teacher-review.csv` and check:
+- ✅ "Castilian Spanish from Spain, checked against the Real Academia Española."
+- ✅ "Covers Pre-A1 to A1, with a first taste of A2 grammar."
+- ❌ Don't say "teacher-approved" or "takes children to A2" unless that becomes true.
 
-- [ ] Spanish is correct, natural and **Castilian** (vosotros; Spain vocabulary such
-      as *zumo, ordenador, coche, móvil, los deberes*; accents and ¿ ¡).
-- [ ] English translations are accurate and in British English.
-- [ ] Pronunciation guides suit English-speaking children (Castilian *th* for c/z).
-- [ ] Fun facts are true and appropriate.
-- [ ] Topics, names and stories are suitable for young children.
-- [ ] The level is described honestly (the course covers Pre-A1 to A1, with
-      tasters of A2 grammar; it does not take children to A2).
+## Changing content later
 
-Reviewer name: ______________________  Qualification: ______________________
-
-Date: ____________  Signature: ______________________
-
-When corrections come back, apply them in `content/lessons/*.json`, run
-`npm run content:check`, then `npm run audio:generate` to record any changed lines.
+Edit `content/lessons/*.json`, then run `npm run content:check` and
+`npm run audio:generate` to record any changed lines.

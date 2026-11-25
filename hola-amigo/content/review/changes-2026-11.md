@@ -197,3 +197,19 @@ A qualified Spanish teacher should still sign off the whole course (see teacher-
 | 100 | fun fact: ¡FELICIDADES! You have completed all 100 lessons! 100 hours of learning, nearly 700 words! You ARE a Spanish superstar! 🎉🌟🏆 | fun fact: ¡FELICIDADES! You've completed all 100 lessons and nearly 700 words! You ARE a Spanish superstar! 🎉🌟🏆 | removed the unsupported '100 hours' claim |
 | 100 | We can speak Spanish like real Spaniards! | We can talk about so many things in Spanish! | overclaim |
 | 100 | Eres un MEGA CAMPEÓN! | ¡Eres un MEGA CAMPEÓN! | missing ¡ |
+
+## Second pass: checked against native Spanish sources
+
+Words, spellings and fun facts were checked against the RAE (Real Academia Española), Spanish government sites and Spanish media. Changes:
+
+| Lesson | Before | After | Why | Source |
+|---|---|---|---|---|
+| 72 | El puzzle | El puzle | the RAE recommends the Spanish spelling «puzle» | RAE, Diccionario panhispánico de dudas: «puzle» (rae.es/dpd/puzle) |
+| 72 | un puzzle de cien piezas | un puzle de cien piezas | same | RAE, Diccionario panhispánico de dudas: «puzle» (rae.es/dpd/puzle) |
+| 11 | Spain has over 5,000 km of beaches! | Spain has about 8,000 km of coastline and around 3,500 beaches! | 'over 5,000 km of beaches' isn't supported | spain.info (coastline); El Debate (about 3,500 beaches) |
+| 55 | Spain has thousands of castles — more than almost any other country in Europe! | Spain has around 10,000 castles — many are ruins, but lots you can visit! | catalogued figure is about 10,000 | Asociación Española de Amigos de los Castillos (about 10,200 catalogued); Turespaña |
+| 41 | In Spain, friends greet each other with two cheek kisses — left, then right! | In Spain, friends and family greet each other with dos besos — a kiss on each cheek! | which cheek comes first isn't reliably documented | The Local Spain; Público |
+| 90 | In many Spanish schools, children start learning English in Infantil, from age 3 or 4! | In Spain, children start learning a foreign language — usually English — in Infantil, by age 5 at the latest! | it's only compulsory in the last year of Infantil (age 5) | Ministerio de Educación (Eurydice España: lenguas extranjeras en Educación Infantil) |
+| 77 | Madrid Zoo is famous for its giant pandas — born there by special arrangement with China! | Madrid Zoo has giant pandas from China — and several panda cubs have been born there! | current pair arrived in 2024; earlier cubs were born in Madrid | Zoo Aquarium de Madrid press releases (2021 twins; new pair 2024) |
+| 7 | Spanish kids sing 'Cabeza, hombros, rodillas, pies'! | Spanish kids sing 'Cabeza, hombros, rodillas y pies'! | the song's usual Spanish title | Guiainfantil.com |
+| 22 | Spanish kids often don't sleep until 10pm! | In Spain, dinner is often at 9pm or later — later than almost anywhere else in Europe! | 'kids don't sleep until 10pm' wasn't supported; late dinners are | Xataka; El Independiente |
