@@ -266,5 +266,19 @@
     {"q": "What time did the train leave?", "opts": ["At nine", "At half past eleven", "At eight"], "ans": 0},
     {"q": "What did Sol see from the window?", "opts": ["Fields, mountains and white villages", "The sea", "Big cities"], "ans": 0},
     {"q": "Where is the hotel?", "opts": ["Opposite the cathedral", "Next to the station", "In the old town"], "ans": 0}
+  ] },
+  { "id": "partido-luna", "world": 20, "title": "El gran partido", "en": "The big match", "emoji": "🏀", "sentences": [
+    {"es": "El sábado, Luna tenía un partido de baloncesto muy importante.", "en": "On Saturday, Luna had a very important basketball match."},
+    {"es": "Pero el viernes por la noche, le dolía mucho la garganta.", "en": "But on Friday night, her throat really hurt."},
+    {"es": "—Bebe agua, abrígate y descansa —le dijo su madre.", "en": "\"Drink water, wrap up warm and rest,\" her mum told her."},
+    {"es": "El sábado por la mañana, Luna se encontraba mucho mejor.", "en": "On Saturday morning, Luna felt much better."},
+    {"es": "En el partido, estaba un poco nerviosa, pero su entrenadora le dijo: —¡Venga, Luna!", "en": "In the match, she was a bit nervous, but her coach said: \"Come on, Luna!\""},
+    {"es": "Luna corrió, saltó y lanzó el balón.", "en": "Luna ran, jumped and threw the ball."},
+    {"es": "¡Canasta! Su equipo ganó el partido por dos puntos.", "en": "Basket! Her team won the match by two points."},
+    {"es": "—¡Hoy estoy de muy buen humor! —dijo Luna—. ¡Somos las campeonas!", "en": "\"I'm in a really good mood today!\" said Luna. \"We're the champions!\""}
+  ], "questions": [
+    {"q": "What was wrong with Luna on Friday?", "opts": ["Her throat hurt", "Her leg hurt", "She had a cut"], "ans": 0},
+    {"q": "What advice did her mum give?", "opts": ["Drink water, wrap up and rest", "Go to the doctor", "Eat sweets"], "ans": 0},
+    {"q": "By how much did her team win?", "opts": ["Two points", "Ten points", "One goal"], "ans": 0}
   ] }
 ]

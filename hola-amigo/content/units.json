@@ -123,5 +123,11 @@
     {"id": "19b", "can": "I can ask for and give directions.", "es": "Sigue todo recto y gira a la derecha. Está al lado del banco.", "lessons": [163, 164]},
     {"id": "19c", "can": "I can stay in a hotel and talk about places in Spain.", "es": "Madrid está en el centro de España.", "lessons": [165, 166, 167]},
     {"id": "19d", "can": "I can get ready for a trip and ask for help if there's a problem.", "es": "Perdone, me he perdido. ¿Me puede ayudar?", "lessons": [168, 169, 170]}
+  ] },
+  { "world": 20, "title": "Health, sport and feelings", "level": "a2", "goals": [
+    {"id": "20a", "can": "I can say what hurts and how I feel when I'm ill.", "es": "Me duele la barriga y me encuentro mal.", "lessons": [171, 172]},
+    {"id": "20b", "can": "I can talk to a doctor and say what has happened.", "es": "Me he torcido el tobillo. Tengo una cita en el centro de salud.", "lessons": [173, 174]},
+    {"id": "20c", "can": "I can give and understand advice about health.", "es": "Bebe agua y descansa. Hay que comer fruta y verdura.", "lessons": [175, 176]},
+    {"id": "20d", "can": "I can talk about sport and how I feel.", "es": "Ayer marqué un gol y hoy estoy de muy buen humor.", "lessons": [177, 178, 179, 180]}
   ] }
 ]

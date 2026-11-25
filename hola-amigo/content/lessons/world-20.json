@@ -1,0 +1,1784 @@
+{
+  "world": 20,
+  "lessons": [
+    {
+      "id": 171,
+      "title": "¿Qué te pasa?",
+      "subtitle": "What's wrong?",
+      "emoji": "🤕",
+      "milestone": false,
+      "funFact": "Use 'me duele' for one thing (la cabeza) and 'me duelen' for more than one (los pies). It works just like 'me gusta' and 'me gustan'!",
+      "phrase": {
+        "es": "Me duele mucho la espalda.",
+        "en": "My back really hurts."
+      },
+      "words": [
+        {
+          "es": "¿Qué te pasa?",
+          "en": "What's wrong?",
+          "say": "keh teh PAH-sah",
+          "emoji": "😟"
+        },
+        {
+          "es": "Me duele la barriga",
+          "en": "My tummy hurts",
+          "say": "meh DWEH-leh lah bah-RREE-gah",
+          "emoji": "🤢"
+        },
+        {
+          "es": "Me duele el oído",
+          "en": "My ear hurts",
+          "say": "meh DWEH-leh el oh-EE-doh",
+          "emoji": "👂"
+        },
+        {
+          "es": "Me duelen los pies",
+          "en": "My feet hurt",
+          "say": "meh DWEH-len los pyes",
+          "emoji": "🦶"
+        },
+        {
+          "es": "Me duelen las muelas",
+          "en": "My teeth hurt",
+          "say": "meh DWEH-len las MWEH-las",
+          "emoji": "🦷"
+        },
+        {
+          "es": "La espalda",
+          "en": "The back",
+          "say": "lah es-PAL-dah",
+          "emoji": "🧍"
+        },
+        {
+          "es": "El brazo",
+          "en": "The arm",
+          "say": "el BRAH-thoh",
+          "emoji": "💪"
+        },
+        {
+          "es": "La pierna",
+          "en": "The leg",
+          "say": "lah PYEHR-nah",
+          "emoji": "🦵"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Me",
+            "duele",
+            "mucho",
+            "la",
+            "espalda"
+          ],
+          "shuffle": [
+            "mucho",
+            "Me",
+            "duele",
+            "espalda",
+            "la"
+          ],
+          "en": "My back really hurts."
+        },
+        {
+          "correct": [
+            "Después",
+            "del",
+            "partido",
+            "me",
+            "duelen",
+            "las",
+            "piernas"
+          ],
+          "shuffle": [
+            "del",
+            "las",
+            "me",
+            "duelen",
+            "partido",
+            "piernas",
+            "Después"
+          ],
+          "en": "After the match my legs hurt."
+        },
+        {
+          "correct": [
+            "A",
+            "mi",
+            "hermano",
+            "le",
+            "duele",
+            "el",
+            "oído"
+          ],
+          "shuffle": [
+            "A",
+            "hermano",
+            "le",
+            "mi",
+            "el",
+            "duele",
+            "oído"
+          ],
+          "en": "My brother's ear hurts."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "Me ___ los pies.",
+          "opts": [
+            "duelen",
+            "duele",
+            "duelo"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "A mi madre ___ duele la cabeza.",
+          "opts": [
+            "le",
+            "me",
+            "te"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Too Many Sweets",
+        "paras": [
+          "Sol looks pale. '¿Qué te pasa, Sol?' asks Luna.",
+          "'Me duele la barriga… y me duelen las muelas.'",
+          "'¿Cuántos caramelos has comido?' Sol looks at the floor. '…Veinte.'"
+        ],
+        "qs": [
+          {
+            "q": "What hurts first?",
+            "opts": [
+              "Sol's tummy",
+              "Sol's head",
+              "Sol's feet"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What else hurts?",
+            "opts": [
+              "His teeth",
+              "His arm",
+              "His ear"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Why?",
+            "opts": [
+              "He ate twenty sweets",
+              "He fell over",
+              "He played football"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 172,
+      "title": "Estoy resfriado",
+      "subtitle": "I've got a cold",
+      "emoji": "🤧",
+      "milestone": false,
+      "funFact": "When someone sneezes in Spain, people say '¡Jesús!' or '¡Salud!', just like 'Bless you!'",
+      "phrase": {
+        "es": "Hoy me encuentro mal y me quedo en la cama.",
+        "en": "Today I feel ill and I'm staying in bed."
+      },
+      "words": [
+        {
+          "es": "Estoy resfriado",
+          "en": "I've got a cold",
+          "say": "es-TOY rres-free-AH-doh",
+          "emoji": "🤧"
+        },
+        {
+          "es": "Tengo gripe",
+          "en": "I've got flu",
+          "say": "TEN-goh GREE-peh",
+          "emoji": "🦠"
+        },
+        {
+          "es": "Estornudar",
+          "en": "To sneeze",
+          "say": "es-tor-noo-DAR",
+          "emoji": "💨"
+        },
+        {
+          "es": "Estoy mareado",
+          "en": "I feel dizzy / sick",
+          "say": "es-TOY mah-reh-AH-doh",
+          "emoji": "😵‍💫"
+        },
+        {
+          "es": "Me encuentro mal",
+          "en": "I feel ill",
+          "say": "meh en-KWEN-troh mal",
+          "emoji": "🤒"
+        },
+        {
+          "es": "Me encuentro mejor",
+          "en": "I feel better",
+          "say": "meh en-KWEN-troh meh-HOR",
+          "emoji": "😊"
+        },
+        {
+          "es": "Tengo mocos",
+          "en": "I've got a runny nose",
+          "say": "TEN-goh MOH-kos",
+          "emoji": "👃"
+        },
+        {
+          "es": "Quedarse en la cama",
+          "en": "To stay in bed",
+          "say": "keh-DAR-seh en lah KAH-mah",
+          "emoji": "🛌"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Hoy",
+            "me",
+            "encuentro",
+            "mal",
+            "y",
+            "me",
+            "quedo",
+            "en",
+            "la",
+            "cama"
+          ],
+          "shuffle": [
+            "la",
+            "me",
+            "cama",
+            "me",
+            "en",
+            "y",
+            "quedo",
+            "Hoy",
+            "encuentro",
+            "mal"
+          ],
+          "en": "Today I feel ill and I'm staying in bed."
+        },
+        {
+          "correct": [
+            "Mi",
+            "hermana",
+            "tiene",
+            "gripe"
+          ],
+          "shuffle": [
+            "tiene",
+            "gripe",
+            "hermana",
+            "Mi"
+          ],
+          "en": "My sister has got flu."
+        },
+        {
+          "correct": [
+            "Ya",
+            "me",
+            "encuentro",
+            "mucho",
+            "mejor"
+          ],
+          "shuffle": [
+            "me",
+            "mejor",
+            "encuentro",
+            "mucho",
+            "Ya"
+          ],
+          "en": "I already feel much better."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Estoy mareado' means:",
+          "opts": [
+            "I feel dizzy",
+            "I'm married",
+            "I'm bored"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Me encuentro mejor' means:",
+          "opts": [
+            "I feel better",
+            "I found it better",
+            "I meet better"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Atchoo!",
+        "paras": [
+          "'¡Achís!' Luna sneezes. '¡Jesús!' says Mamá. '¿Estás resfriada?'",
+          "'Sí. Tengo mocos y me encuentro mal.' 'Pues hoy te quedas en la cama.'",
+          "Two days later: '¡Ya me encuentro mejor! ¿Puedo ir al parque?' 'Mañana, Luna. Mañana.'"
+        ],
+        "qs": [
+          {
+            "q": "What does Mum say when Luna sneezes?",
+            "opts": [
+              "¡Jesús!",
+              "¡Hola!",
+              "¡Adiós!"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Where does Luna have to stay?",
+            "opts": [
+              "In bed",
+              "At school",
+              "At Grandma's"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "When can she go to the park?",
+            "opts": [
+              "Tomorrow",
+              "Today",
+              "Next week"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 173,
+      "title": "En el médico",
+      "subtitle": "At the doctor's",
+      "emoji": "🩺",
+      "milestone": false,
+      "funFact": "'Receta' means both 'prescription' and 'recipe'. In Spain, you'll know a pharmacy by the green cross outside.",
+      "phrase": {
+        "es": "Tengo una cita con el médico a las cinco.",
+        "en": "I've got a doctor's appointment at five."
+      },
+      "words": [
+        {
+          "es": "El centro de salud",
+          "en": "The health centre",
+          "say": "el THEN-troh deh sah-LOOD",
+          "emoji": "🏥"
+        },
+        {
+          "es": "La cita",
+          "en": "The appointment",
+          "say": "lah THEE-tah",
+          "emoji": "📝"
+        },
+        {
+          "es": "La receta",
+          "en": "The prescription",
+          "say": "lah rreh-THEH-tah",
+          "emoji": "📃"
+        },
+        {
+          "es": "El jarabe",
+          "en": "The (cough) syrup",
+          "say": "el hah-RAH-beh",
+          "emoji": "🥄"
+        },
+        {
+          "es": "La pastilla",
+          "en": "The pill / tablet",
+          "say": "lah pas-TEE-yah",
+          "emoji": "💊"
+        },
+        {
+          "es": "El termómetro",
+          "en": "The thermometer",
+          "say": "el tehr-MOH-meh-troh",
+          "emoji": "🌡️"
+        },
+        {
+          "es": "Respira hondo",
+          "en": "Breathe deeply",
+          "say": "rres-PEE-rah ON-doh",
+          "emoji": "🌬️"
+        },
+        {
+          "es": "Abre la boca",
+          "en": "Open your mouth",
+          "say": "AH-breh lah BOH-kah",
+          "emoji": "👄"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Tengo",
+            "una",
+            "cita",
+            "con",
+            "el",
+            "médico",
+            "a",
+            "las",
+            "cinco"
+          ],
+          "shuffle": [
+            "médico",
+            "a",
+            "cinco",
+            "cita",
+            "el",
+            "una",
+            "las",
+            "Tengo",
+            "con"
+          ],
+          "en": "I've got a doctor's appointment at five."
+        },
+        {
+          "correct": [
+            "Toma",
+            "el",
+            "jarabe",
+            "tres",
+            "veces",
+            "al",
+            "día"
+          ],
+          "shuffle": [
+            "el",
+            "Toma",
+            "tres",
+            "al",
+            "veces",
+            "jarabe",
+            "día"
+          ],
+          "en": "Take the syrup three times a day."
+        },
+        {
+          "correct": [
+            "Compramos",
+            "las",
+            "pastillas",
+            "en",
+            "la",
+            "farmacia"
+          ],
+          "shuffle": [
+            "la",
+            "Compramos",
+            "pastillas",
+            "farmacia",
+            "las",
+            "en"
+          ],
+          "en": "We bought the tablets at the chemist's."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'La receta' at the doctor's is:",
+          "opts": [
+            "The prescription",
+            "A recipe card",
+            "The receipt"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'El jarabe' is:",
+          "opts": [
+            "Cough syrup / medicine",
+            "A jar",
+            "A plaster"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Say Aaah!",
+        "paras": [
+          "Sol has a cough. He goes to the centro de salud with his mum.",
+          "'Abre la boca… Respira hondo… Muy bien,' says the doctor. 'Tienes la garganta un poco roja.'",
+          "'Aquí tienes la receta. Toma este jarabe tres veces al día. ¡Y mucha agua!'"
+        ],
+        "qs": [
+          {
+            "q": "Where does Sol go?",
+            "opts": [
+              "To the health centre",
+              "To the hospital",
+              "To school"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does the doctor find?",
+            "opts": [
+              "His throat is a bit red",
+              "He has a broken arm",
+              "He has a temperature"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How often should he take the syrup?",
+            "opts": [
+              "Three times a day",
+              "Once a day",
+              "Every hour"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 174,
+      "title": "¡Ay! Un accidente",
+      "subtitle": "Ouch! An accident",
+      "emoji": "🩹",
+      "milestone": false,
+      "funFact": "In Spain, the emergency number is 112, the same as in the rest of the European Union.",
+      "phrase": {
+        "es": "Me he torcido el tobillo jugando al fútbol.",
+        "en": "I've twisted my ankle playing football."
+      },
+      "words": [
+        {
+          "es": "Me he cortado",
+          "en": "I've cut myself",
+          "say": "meh eh kor-TAH-doh",
+          "emoji": "✂️"
+        },
+        {
+          "es": "Me he quemado",
+          "en": "I've burnt myself",
+          "say": "meh eh keh-MAH-doh",
+          "emoji": "🔥"
+        },
+        {
+          "es": "Me he roto el brazo",
+          "en": "I've broken my arm",
+          "say": "meh eh RROH-toh el BRAH-thoh",
+          "emoji": "🦴"
+        },
+        {
+          "es": "Me he torcido el tobillo",
+          "en": "I've twisted my ankle",
+          "say": "meh eh tor-THEE-doh el toh-BEE-yoh",
+          "emoji": "🦶"
+        },
+        {
+          "es": "La herida",
+          "en": "The cut / wound",
+          "say": "lah eh-REE-dah",
+          "emoji": "🩹"
+        },
+        {
+          "es": "La venda",
+          "en": "The bandage",
+          "say": "lah BEN-dah",
+          "emoji": "🤕"
+        },
+        {
+          "es": "La escayola",
+          "en": "The plaster cast",
+          "say": "lah es-kah-YOH-lah",
+          "emoji": "🦾"
+        },
+        {
+          "es": "Urgencias",
+          "en": "Accident and emergency",
+          "say": "oor-HEN-thyas",
+          "emoji": "🚑"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Me",
+            "he",
+            "cortado",
+            "con",
+            "un",
+            "papel"
+          ],
+          "shuffle": [
+            "un",
+            "con",
+            "he",
+            "Me",
+            "cortado",
+            "papel"
+          ],
+          "en": "I've cut myself on a piece of paper."
+        },
+        {
+          "correct": [
+            "Mi",
+            "primo",
+            "se",
+            "ha",
+            "roto",
+            "el",
+            "brazo"
+          ],
+          "shuffle": [
+            "se",
+            "roto",
+            "Mi",
+            "primo",
+            "brazo",
+            "ha",
+            "el"
+          ],
+          "en": "My cousin has broken his arm."
+        },
+        {
+          "correct": [
+            "Fuimos",
+            "a",
+            "urgencias",
+            "en",
+            "ambulancia"
+          ],
+          "shuffle": [
+            "Fuimos",
+            "a",
+            "ambulancia",
+            "urgencias",
+            "en"
+          ],
+          "en": "We went to A&E in an ambulance."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Me he torcido el tobillo' means:",
+          "opts": [
+            "I've twisted my ankle",
+            "I've broken my toe",
+            "I've hurt my knee"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Mi hermano ___ ha roto la pierna.",
+          "opts": [
+            "se",
+            "me",
+            "le"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "The Brave Patient",
+        "paras": [
+          "Luna fell off her bike. 'Me he roto el brazo,' she cries.",
+          "They go to urgencias. The doctor says: 'Sí, está roto. Te vamos a poner una escayola.'",
+          "At school, everyone writes their name on Luna's escayola. 'Me duele un poco, ¡pero es muy bonita!'"
+        ],
+        "qs": [
+          {
+            "q": "How did Luna get hurt?",
+            "opts": [
+              "She fell off her bike",
+              "She fell down the stairs",
+              "Playing football"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What did the doctor put on her arm?",
+            "opts": [
+              "A plaster cast",
+              "A bandage",
+              "A plaster"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What do her classmates do?",
+            "opts": [
+              "Write their names on it",
+              "Bring her sweets",
+              "Carry her bag"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 175,
+      "title": "Consejos",
+      "subtitle": "Advice",
+      "emoji": "💧",
+      "milestone": false,
+      "funFact": "Spanish grandmas are famous for saying '¡Abrígate, que hace frío!' (Wrap up warm, it's cold!).",
+      "phrase": {
+        "es": "Si estás resfriado, bebe mucha agua y descansa.",
+        "en": "If you've got a cold, drink lots of water and rest."
+      },
+      "words": [
+        {
+          "es": "Hay que",
+          "en": "You have to / One must",
+          "say": "ay keh",
+          "emoji": "📏"
+        },
+        {
+          "es": "Es importante",
+          "en": "It's important",
+          "say": "es eem-por-TAN-teh",
+          "emoji": "⭐"
+        },
+        {
+          "es": "Bebe agua",
+          "en": "Drink water",
+          "say": "BEH-beh AH-gwah",
+          "emoji": "💧"
+        },
+        {
+          "es": "Descansa",
+          "en": "Rest",
+          "say": "des-KAN-sah",
+          "emoji": "😌"
+        },
+        {
+          "es": "Ve al médico",
+          "en": "Go to the doctor",
+          "say": "beh al MEH-dee-koh",
+          "emoji": "🩺"
+        },
+        {
+          "es": "No comas tanto",
+          "en": "Don't eat so much",
+          "say": "noh KOH-mas TAN-toh",
+          "emoji": "🍰"
+        },
+        {
+          "es": "Abrígate",
+          "en": "Wrap up warm",
+          "say": "ah-BREE-gah-teh",
+          "emoji": "🧣"
+        },
+        {
+          "es": "Lávate las manos",
+          "en": "Wash your hands",
+          "say": "LAH-bah-teh las MAH-nos",
+          "emoji": "🧼"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Hay",
+            "que",
+            "dormir",
+            "nueve",
+            "horas"
+          ],
+          "shuffle": [
+            "nueve",
+            "dormir",
+            "horas",
+            "que",
+            "Hay"
+          ],
+          "en": "You have to sleep nine hours."
+        },
+        {
+          "correct": [
+            "Si",
+            "estás",
+            "resfriado",
+            "bebe",
+            "mucha",
+            "agua"
+          ],
+          "shuffle": [
+            "bebe",
+            "agua",
+            "resfriado",
+            "mucha",
+            "Si",
+            "estás"
+          ],
+          "en": "If you've got a cold, drink lots of water."
+        },
+        {
+          "correct": [
+            "Es",
+            "importante",
+            "lavarse",
+            "las",
+            "manos"
+          ],
+          "shuffle": [
+            "importante",
+            "las",
+            "manos",
+            "Es",
+            "lavarse"
+          ],
+          "en": "It's important to wash your hands."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Abrígate' means:",
+          "opts": [
+            "Wrap up warm",
+            "Open up",
+            "Hug me"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Si te duele la cabeza, ¡___! (rest)",
+          "opts": [
+            "descansa",
+            "descansar",
+            "descansé"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Grandma Knows Best",
+        "paras": [
+          "Sol is going out. Abuela stops him. '¡Abrígate, que hace frío!'",
+          "'Y lávate las manos antes de comer. ¡Es importante!'",
+          "'Y no comas tantos dulces. Hay que comer fruta.' Sol laughs. 'Sí, abuela. ¡Te quiero!'"
+        ],
+        "qs": [
+          {
+            "q": "Why should Sol wrap up?",
+            "opts": [
+              "It's cold",
+              "It's raining",
+              "It's late"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "When should he wash his hands?",
+            "opts": [
+              "Before eating",
+              "After school",
+              "At night"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What should he eat instead of sweets?",
+            "opts": [
+              "Fruit",
+              "Bread",
+              "Cheese"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 176,
+      "title": "Vida sana",
+      "subtitle": "Healthy living",
+      "emoji": "🥦",
+      "milestone": false,
+      "funFact": "The Mediterranean diet, with lots of olive oil, vegetables, fruit and fish, is on UNESCO's list of the world's cultural heritage.",
+      "phrase": {
+        "es": "Hay que comer fruta y verdura todos los días.",
+        "en": "You have to eat fruit and vegetables every day."
+      },
+      "words": [
+        {
+          "es": "La fruta y la verdura",
+          "en": "Fruit and vegetables",
+          "say": "lah FROO-tah ee lah behr-DOO-rah",
+          "emoji": "🥦"
+        },
+        {
+          "es": "Dormir bien",
+          "en": "To sleep well",
+          "say": "dor-MEER byen",
+          "emoji": "😴"
+        },
+        {
+          "es": "La comida basura",
+          "en": "Junk food",
+          "say": "lah koh-MEE-dah bah-SOO-rah",
+          "emoji": "🍟"
+        },
+        {
+          "es": "El azúcar",
+          "en": "Sugar",
+          "say": "el ah-THOO-kar",
+          "emoji": "🍭"
+        },
+        {
+          "es": "Sano",
+          "en": "Healthy",
+          "say": "SAH-noh",
+          "emoji": "🥕"
+        },
+        {
+          "es": "Hacer ejercicio",
+          "en": "To exercise",
+          "say": "ah-THEHR eh-hehr-THEE-thyoh",
+          "emoji": "🤸"
+        },
+        {
+          "es": "Las vitaminas",
+          "en": "Vitamins",
+          "say": "las bee-tah-MEE-nas",
+          "emoji": "🍊"
+        },
+        {
+          "es": "Merendar fruta",
+          "en": "To have fruit as a snack",
+          "say": "meh-ren-DAR FROO-tah",
+          "emoji": "🍎"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "La",
+            "comida",
+            "basura",
+            "no",
+            "es",
+            "sana"
+          ],
+          "shuffle": [
+            "sana",
+            "es",
+            "comida",
+            "no",
+            "La",
+            "basura"
+          ],
+          "en": "Junk food isn't healthy."
+        },
+        {
+          "correct": [
+            "Hay",
+            "que",
+            "comer",
+            "fruta",
+            "y",
+            "verdura",
+            "todos",
+            "los",
+            "días"
+          ],
+          "shuffle": [
+            "todos",
+            "comer",
+            "verdura",
+            "y",
+            "los",
+            "que",
+            "fruta",
+            "días",
+            "Hay"
+          ],
+          "en": "You have to eat fruit and vegetables every day."
+        },
+        {
+          "correct": [
+            "Mi",
+            "padre",
+            "hace",
+            "ejercicio",
+            "por",
+            "la",
+            "mañana"
+          ],
+          "shuffle": [
+            "la",
+            "hace",
+            "por",
+            "ejercicio",
+            "mañana",
+            "Mi",
+            "padre"
+          ],
+          "en": "My dad exercises in the morning."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'La comida basura' is:",
+          "opts": [
+            "Junk food",
+            "A rubbish bin",
+            "Fast service"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Sano' means:",
+          "opts": [
+            "Healthy",
+            "Sad",
+            "Saint"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "The Healthy Week",
+        "paras": [
+          "Sol and Luna's class has a 'Semana sana' (healthy week).",
+          "'Esta semana vamos a merendar fruta, beber agua y hacer ejercicio todos los días.'",
+          "'¿Y la comida basura?' asks Sol. 'Nada de comida basura… ¡ni de azúcar!' Sol sighs. 'Uf, qué semana tan larga.'"
+        ],
+        "qs": [
+          {
+            "q": "What's the special week called?",
+            "opts": [
+              "Healthy week",
+              "Sports week",
+              "Food week"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What will they have as a snack?",
+            "opts": [
+              "Fruit",
+              "Biscuits",
+              "Crisps"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How does Sol feel about it?",
+            "opts": [
+              "It will be a long week",
+              "He's excited",
+              "He doesn't care"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 177,
+      "title": "El deporte",
+      "subtitle": "Sport",
+      "emoji": "⚽",
+      "milestone": false,
+      "funFact": "Football is huge in Spain, but basketball, handball, tennis and cycling are very popular too.",
+      "phrase": {
+        "es": "Ayer marqué dos goles.",
+        "en": "Yesterday I scored two goals."
+      },
+      "words": [
+        {
+          "es": "Entrenar",
+          "en": "To train",
+          "say": "en-treh-NAR",
+          "emoji": "🏋️‍♀️"
+        },
+        {
+          "es": "El partido",
+          "en": "The match",
+          "say": "el par-TEE-doh",
+          "emoji": "🏟️"
+        },
+        {
+          "es": "El equipo",
+          "en": "The team",
+          "say": "el eh-KEE-poh",
+          "emoji": "👕"
+        },
+        {
+          "es": "El entrenador",
+          "en": "The coach",
+          "say": "el en-treh-nah-DOR",
+          "emoji": "📣"
+        },
+        {
+          "es": "Marcar un gol",
+          "en": "To score a goal",
+          "say": "mar-KAR oon gol",
+          "emoji": "⚽"
+        },
+        {
+          "es": "Empatar",
+          "en": "To draw (a match)",
+          "say": "em-pah-TAR",
+          "emoji": "🤝"
+        },
+        {
+          "es": "El campeonato",
+          "en": "The championship",
+          "say": "el kam-peh-oh-NAH-toh",
+          "emoji": "🏆"
+        },
+        {
+          "es": "El árbitro",
+          "en": "The referee",
+          "say": "el AR-bee-troh",
+          "emoji": "🟨"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Entreno",
+            "con",
+            "mi",
+            "equipo",
+            "los",
+            "martes"
+          ],
+          "shuffle": [
+            "equipo",
+            "los",
+            "con",
+            "Entreno",
+            "mi",
+            "martes"
+          ],
+          "en": "I train with my team on Tuesdays."
+        },
+        {
+          "correct": [
+            "Ayer",
+            "marqué",
+            "dos",
+            "goles"
+          ],
+          "shuffle": [
+            "dos",
+            "Ayer",
+            "goles",
+            "marqué"
+          ],
+          "en": "Yesterday I scored two goals."
+        },
+        {
+          "correct": [
+            "El",
+            "partido",
+            "terminó",
+            "en",
+            "empate"
+          ],
+          "shuffle": [
+            "partido",
+            "en",
+            "empate",
+            "terminó",
+            "El"
+          ],
+          "en": "The match ended in a draw."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Empatar' means:",
+          "opts": [
+            "To draw (a match)",
+            "To win",
+            "To lose"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'El árbitro' is:",
+          "opts": [
+            "The referee",
+            "The goalkeeper",
+            "The fan"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "The Big Final",
+        "paras": [
+          "Luna's basketball team is in the final of the campeonato.",
+          "The entrenador says: '¡Venga, equipo! Hemos entrenado mucho.' The partido is very close.",
+          "Last second: Luna throws… ¡canasta! 'We've won the championship!' '¡Somos campeonas!'"
+        ],
+        "qs": [
+          {
+            "q": "Which sport does Luna play?",
+            "opts": [
+              "Basketball",
+              "Football",
+              "Tennis"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does the coach say?",
+            "opts": [
+              "We've trained a lot",
+              "We're going to lose",
+              "Go home"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What happens at the end?",
+            "opts": [
+              "Luna scores and they win",
+              "They draw",
+              "They lose"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 178,
+      "title": "¡Venga, más rápido!",
+      "subtitle": "Come on, faster!",
+      "emoji": "🏃‍♀️",
+      "milestone": false,
+      "funFact": "'¡Venga!' is everywhere in Spain. It can mean 'Come on!', 'OK!' or even 'Bye!' at the end of a phone call.",
+      "phrase": {
+        "es": "¡Corre más rápido! ¡Venga!",
+        "en": "Run faster! Come on!"
+      },
+      "words": [
+        {
+          "es": "¡Corre!",
+          "en": "Run!",
+          "say": "KOH-rreh",
+          "emoji": "🏃‍♀️"
+        },
+        {
+          "es": "¡Salta!",
+          "en": "Jump!",
+          "say": "SAL-tah",
+          "emoji": "🦘"
+        },
+        {
+          "es": "¡Lanza!",
+          "en": "Throw!",
+          "say": "LAN-thah",
+          "emoji": "🥏"
+        },
+        {
+          "es": "¡Para!",
+          "en": "Stop!",
+          "say": "PAH-rah",
+          "emoji": "✋"
+        },
+        {
+          "es": "¡Pasa el balón!",
+          "en": "Pass the ball!",
+          "say": "PAH-sah el bah-LON",
+          "emoji": "🏀"
+        },
+        {
+          "es": "¡Venga!",
+          "en": "Come on!",
+          "say": "BEN-gah",
+          "emoji": "💪"
+        },
+        {
+          "es": "¡Más rápido!",
+          "en": "Faster!",
+          "say": "mas RRAH-pee-doh",
+          "emoji": "⚡"
+        },
+        {
+          "es": "¡Estírate!",
+          "en": "Stretch!",
+          "say": "es-TEE-rah-teh",
+          "emoji": "🧘"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Salta",
+            "y",
+            "lanza",
+            "la",
+            "pelota"
+          ],
+          "shuffle": [
+            "la",
+            "lanza",
+            "pelota",
+            "y",
+            "Salta"
+          ],
+          "en": "Jump and throw the ball."
+        },
+        {
+          "correct": [
+            "Pasa",
+            "el",
+            "balón",
+            "a",
+            "Luna"
+          ],
+          "shuffle": [
+            "balón",
+            "a",
+            "Pasa",
+            "Luna",
+            "el"
+          ],
+          "en": "Pass the ball to Luna."
+        },
+        {
+          "correct": [
+            "Corre",
+            "hasta",
+            "la",
+            "portería"
+          ],
+          "shuffle": [
+            "la",
+            "hasta",
+            "portería",
+            "Corre"
+          ],
+          "en": "Run to the goal."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'¡Venga!' means:",
+          "opts": [
+            "Come on!",
+            "Come here!",
+            "Sell it!"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Correr → ¡___! (command)",
+          "opts": [
+            "Corre",
+            "Corra",
+            "Corro"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "PE Class",
+        "paras": [
+          "The PE teacher blows the whistle. '¡Primero, estiraos! Ahora, ¡corred!'",
+          "'Sol, ¡pasa el balón! Luna, ¡salta y lanza!' '¡Venga, más rápido!'",
+          "'¡Para! ¡Para!' Sol has run into the wall. '¡Estoy bien, profe!'"
+        ],
+        "qs": [
+          {
+            "q": "What do they do first?",
+            "opts": [
+              "Stretch",
+              "Run",
+              "Throw"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What should Luna do?",
+            "opts": [
+              "Jump and throw",
+              "Pass the ball",
+              "Stop"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What happened to Sol?",
+            "opts": [
+              "He ran into the wall",
+              "He scored",
+              "He fell asleep"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 179,
+      "title": "¿Cómo te sientes?",
+      "subtitle": "How do you feel?",
+      "emoji": "😁",
+      "milestone": false,
+      "funFact": "'Me pone' plus a feeling says what something makes you feel: 'La música me pone contento' means 'Music makes me happy'.",
+      "phrase": {
+        "es": "Hoy estoy de muy buen humor.",
+        "en": "Today I'm in a really good mood."
+      },
+      "words": [
+        {
+          "es": "Estoy de buen humor",
+          "en": "I'm in a good mood",
+          "say": "es-TOY deh bwen oo-MOR",
+          "emoji": "😁"
+        },
+        {
+          "es": "Estoy de mal humor",
+          "en": "I'm in a bad mood",
+          "say": "es-TOY deh mal oo-MOR",
+          "emoji": "😠"
+        },
+        {
+          "es": "Estoy preocupado",
+          "en": "I'm worried",
+          "say": "es-TOY preh-oh-koo-PAH-doh",
+          "emoji": "😟"
+        },
+        {
+          "es": "Estoy agobiado",
+          "en": "I'm stressed",
+          "say": "es-TOY ah-goh-BYAH-doh",
+          "emoji": "😫"
+        },
+        {
+          "es": "Me siento solo",
+          "en": "I feel lonely",
+          "say": "meh SYEN-toh SOH-loh",
+          "emoji": "🥺"
+        },
+        {
+          "es": "Me da vergüenza",
+          "en": "I feel embarrassed",
+          "say": "meh dah behr-GWEN-thah",
+          "emoji": "😳"
+        },
+        {
+          "es": "Me pone contento",
+          "en": "It makes me happy",
+          "say": "meh POH-neh kon-TEN-toh",
+          "emoji": "🥳"
+        },
+        {
+          "es": "Me pone triste",
+          "en": "It makes me sad",
+          "say": "meh POH-neh TREES-teh",
+          "emoji": "😢"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Hoy",
+            "estoy",
+            "de",
+            "muy",
+            "buen",
+            "humor"
+          ],
+          "shuffle": [
+            "humor",
+            "de",
+            "buen",
+            "muy",
+            "estoy",
+            "Hoy"
+          ],
+          "en": "Today I'm in a really good mood."
+        },
+        {
+          "correct": [
+            "Me",
+            "da",
+            "vergüenza",
+            "hablar",
+            "en",
+            "público"
+          ],
+          "shuffle": [
+            "da",
+            "hablar",
+            "Me",
+            "público",
+            "vergüenza",
+            "en"
+          ],
+          "en": "I feel embarrassed speaking in public."
+        },
+        {
+          "correct": [
+            "La",
+            "lluvia",
+            "me",
+            "pone",
+            "triste"
+          ],
+          "shuffle": [
+            "triste",
+            "lluvia",
+            "pone",
+            "La",
+            "me"
+          ],
+          "en": "Rain makes me sad."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Estoy agobiado' means:",
+          "opts": [
+            "I'm stressed",
+            "I'm bored",
+            "I'm angry"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Me da vergüenza' means:",
+          "opts": [
+            "I feel embarrassed",
+            "It gives me money",
+            "I feel proud"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Feelings Diary",
+        "paras": [
+          "Luna writes in her diary.",
+          "'Lunes: estoy agobiada porque tengo muchos deberes. Martes: me da vergüenza, ¡tengo que cantar en clase!'",
+          "'Viernes: ¡estoy de muy buen humor! Es mi cumpleaños y el sol me pone contenta.'"
+        ],
+        "qs": [
+          {
+            "q": "Why was Luna stressed on Monday?",
+            "opts": [
+              "She had lots of homework",
+              "She was ill",
+              "She lost her bag"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What embarrassed her on Tuesday?",
+            "opts": [
+              "Singing in class",
+              "Falling over",
+              "Being late"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Why is she happy on Friday?",
+            "opts": [
+              "It's her birthday",
+              "It's the holidays",
+              "She got a puppy"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 180,
+      "title": "¡Campeón de la salud!",
+      "subtitle": "Health champion",
+      "emoji": "🏆",
+      "milestone": true,
+      "funFact": "You can now explain what hurts, visit the doctor, give advice and talk about sport and feelings in Spanish!",
+      "phrase": {
+        "es": "Me encuentro mejor y hoy voy a entrenar.",
+        "en": "I feel better and today I'm going to train."
+      },
+      "words": [
+        {
+          "es": "Me duele la barriga",
+          "en": "My tummy hurts",
+          "say": "meh DWEH-leh lah bah-RREE-gah",
+          "emoji": "🤢"
+        },
+        {
+          "es": "Me encuentro mal",
+          "en": "I feel ill",
+          "say": "meh en-KWEN-troh mal",
+          "emoji": "🤒"
+        },
+        {
+          "es": "La receta",
+          "en": "The prescription",
+          "say": "lah rreh-THEH-tah",
+          "emoji": "📃"
+        },
+        {
+          "es": "Me he roto el brazo",
+          "en": "I've broken my arm",
+          "say": "meh eh RROH-toh el BRAH-thoh",
+          "emoji": "🦴"
+        },
+        {
+          "es": "Bebe agua",
+          "en": "Drink water",
+          "say": "BEH-beh AH-gwah",
+          "emoji": "💧"
+        },
+        {
+          "es": "Marcar un gol",
+          "en": "To score a goal",
+          "say": "mar-KAR oon gol",
+          "emoji": "⚽"
+        },
+        {
+          "es": "¡Venga!",
+          "en": "Come on!",
+          "say": "BEN-gah",
+          "emoji": "💪"
+        },
+        {
+          "es": "Estoy de buen humor",
+          "en": "I'm in a good mood",
+          "say": "es-TOY deh bwen oo-MOR",
+          "emoji": "😁"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Me",
+            "duelen",
+            "las",
+            "piernas",
+            "después",
+            "de",
+            "entrenar"
+          ],
+          "shuffle": [
+            "duelen",
+            "Me",
+            "las",
+            "entrenar",
+            "de",
+            "después",
+            "piernas"
+          ],
+          "en": "My legs hurt after training."
+        },
+        {
+          "correct": [
+            "Hay",
+            "que",
+            "beber",
+            "mucha",
+            "agua"
+          ],
+          "shuffle": [
+            "mucha",
+            "que",
+            "Hay",
+            "agua",
+            "beber"
+          ],
+          "en": "You have to drink lots of water."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "Me ___ la cabeza.",
+          "opts": [
+            "duele",
+            "duelen",
+            "dolor"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'El centro de salud' is:",
+          "opts": [
+            "The health centre",
+            "The sports centre",
+            "The town centre"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Lávate las manos' means:",
+          "opts": [
+            "Wash your hands",
+            "Raise your hands",
+            "Clap your hands"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Me pone triste' means:",
+          "opts": [
+            "It makes me sad",
+            "It puts me to bed",
+            "I'm sad about it"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Back on the Team",
+        "paras": [
+          "Sol was ill all week. 'Tenía gripe y me encontraba fatal.'",
+          "'Fui al médico, tomé el jarabe, bebí mucha agua y descansé.'",
+          "'Hoy ya me encuentro mejor. ¡Y en el partido marqué un gol! Estoy de muy buen humor.'"
+        ],
+        "qs": [
+          {
+            "q": "What did Sol have?",
+            "opts": [
+              "Flu",
+              "A broken arm",
+              "A twisted ankle"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What did he do to get better?",
+            "opts": [
+              "Took syrup, drank water and rested",
+              "Played football",
+              "Ate sweets"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What happened in the match?",
+            "opts": [
+              "He scored a goal",
+              "He got hurt",
+              "He didn't play"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    }
+  ]
+}

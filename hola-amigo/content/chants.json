@@ -109,5 +109,13 @@
     {"who": "luna", "es": "¡A la derecha, al lado de la tienda!", "en": "To the right, next to the shop!"},
     {"who": "sol", "es": "¿Y la estación? ¿Está muy lejos?", "en": "And the station? Is it very far?"},
     {"who": "luna", "es": "¡No, está cerca, enfrente del parque viejo!", "en": "No, it's close, opposite the old park!"}
+  ] },
+  { "id": "que-te-pasa", "world": 20, "title": "¿Qué te pasa?", "en": "What's wrong?", "emoji": "🩺", "bpm": 96, "lines": [
+    {"who": "sol", "es": "¿Qué te pasa, qué te pasa? ¿Qué te duele hoy?", "en": "What's wrong, what's wrong? What hurts today?"},
+    {"who": "luna", "es": "¡Me duele la cabeza, qué malita estoy!", "en": "My head hurts, I'm so poorly!"},
+    {"who": "sol", "es": "Bebe mucha agua y descansa, ya verás.", "en": "Drink lots of water and rest, you'll see."},
+    {"who": "luna", "es": "¡Y con un abrazo me curo mucho más!", "en": "And with a hug I'll get better even faster!"},
+    {"who": "sol", "es": "¿Y ahora qué tal? ¿Cómo estás ahora?", "en": "And now how are you? How are you now?"},
+    {"who": "luna", "es": "¡Mucho mejor! ¡Vamos a jugar sin demora!", "en": "Much better! Let's go and play right now!"}
   ] }
 ]
