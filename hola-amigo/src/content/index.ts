@@ -4,19 +4,21 @@
 import worldsJson from "../../content/worlds.json";
 import surprisesJson from "../../content/surprises.json";
 import unitsJson from "../../content/units.json";
-import type { Lesson, LessonFile, Surprise, Unit, Word, World } from "./schema.ts";
+import storiesJson from "../../content/stories.json";
+import type { Book, Lesson, LessonFile, Surprise, Unit, Word, World } from "./schema.ts";
 
-export type { Gap, Goal, Lesson, Sentence, Story, StoryQuestion, Surprise, Unit, Word, World } from "./schema.ts";
+export type { Book, Gap, Goal, Lesson, Sentence, Story, StoryQuestion, Surprise, Unit, Word, World } from "./schema.ts";
 
 const lessonFiles = Object.values(
   import.meta.glob<LessonFile>("../../content/lessons/*.json", { eager: true, import: "default" }),
 );
 
-export const RAW_CONTENT = { worlds: worldsJson as unknown, lessonFiles: lessonFiles as unknown[], surprises: surprisesJson as unknown, units: unitsJson as unknown };
+export const RAW_CONTENT = { worlds: worldsJson as unknown, lessonFiles: lessonFiles as unknown[], surprises: surprisesJson as unknown, units: unitsJson as unknown, books: storiesJson as unknown };
 
 export const WORLDS = worldsJson as World[];
 export const SURPRISES = surprisesJson as Surprise[];
 export const UNITS = unitsJson as Unit[];
+export const BOOKS = storiesJson as Book[];
 export const LESSONS: Lesson[] = lessonFiles.flatMap(f => f.lessons).sort((a, b) => a.id - b.id);
 export const MILESTONES = LESSONS.filter(l => l.milestone).map(l => l.id);
 

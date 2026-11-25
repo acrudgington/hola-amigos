@@ -40,8 +40,10 @@ import { ProfileScreen } from "./screens/ProfileScreen.tsx";
 import { TrophyScreen } from "./screens/TrophyScreen.tsx";
 import { PlacementScreen } from "./screens/PlacementScreen.tsx";
 import { lastLessonOf } from "./domain/placement.ts";
+import { StoriesScreen } from "./screens/StoriesScreen.tsx";
+import type { Book } from "./content/index.ts";
 
-const SHELL_VIEWS = new Set(["home", "review", "trophies", "profile", "lesson"]);
+const SHELL_VIEWS = new Set(["home", "review", "stories", "trophies", "profile", "lesson"]);
 const pageMotion = {
   // Opacity + y only: a lingering filter/transform would break position:fixed children.
   initial: { opacity: 0, y: 18 },
@@ -235,6 +237,13 @@ export default function App() {
     sfx.complete();
   };
 
+  const finishStory = (book: Book, s: number, t: number) => {
+    update(p => logEvent(addXP(addStat(addStat({ ...p, storyBest: { ...p.storyBest, [book.id]: Math.max(p.storyBest?.[book.id] ?? 0, s) } }, "storiesRead", 1), "correctAnswers", s), XP.review),
+      { type: "story", emoji: book.emoji, text: `Read “${book.title}”: ${s} of ${t} right` }));
+    sfx.complete();
+    if (s === t) celebrate();
+  };
+
   const finishReview = (s: number, t: number) => {
     let goalMet = false;
     update(p => {
@@ -278,6 +287,7 @@ export default function App() {
     if (nav.view === "home") inner = <HomeScreen child={child} progress={progress} onStartLesson={startLesson} onOpenLesson={openLesson}
       onClaim={openChest} onSearch={() => setPalette(true)} onMission={onMission} />;
     if (nav.view === "profile") inner = <ProfileScreen child={child} parent={parent} progress={progress} onTrophies={() => dispatch({ type: "go", view: "trophies" })} onSwitchChild={() => void switchChild()} onPlacement={() => dispatch({ type: "go", view: "placement" })} />;
+    if (nav.view === "stories") inner = <StoriesScreen progress={progress} onFinish={finishStory} />;
     if (nav.view === "trophies") inner = <TrophyScreen progress={progress} onEquip={equip} />;
     if (nav.view === "review") inner = <ReviewScreen progress={progress} onBack={() => dispatch({ type: "go", view: "home" })} onFinish={finishReview} onWord={onWord} />;
     if (nav.view === "lesson") inner = <LessonScreen lesson={lesson} stars={progress.stars[lesson.id] || 0} onBack={() => dispatch({ type: "go", view: "home" })}

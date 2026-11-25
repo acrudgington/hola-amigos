@@ -115,6 +115,16 @@ past lessons they need. Placement unlocks lessons up to their level **without** 
 stars or claiming "I can…" goals. It can be retaken from the child's "Me" page, and
 parents see the result in the dashboard.
 
+## Spanish stories
+
+`content/stories.json` has one story per unit (12), written in Castilian Spanish with
+the vocabulary that unit teaches, each with an English translation per sentence and
+3 questions. The **Stories** tab is a bookshelf; a story unlocks when its world is
+finished (or placed past). The reader reads aloud in the Castilian voice, highlighting
+each sentence, with an English switch. `npm run content:story-vocab` shows how much of
+each story the child already knows by then (77–97%) and lists the new words;
+`npm run content:grammar` checks every story sentence.
+
 ## Editing lessons
 
 All course content lives in `content/` as plain JSON, so it can be edited without touching code:

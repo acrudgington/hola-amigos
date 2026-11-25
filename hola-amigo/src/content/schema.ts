@@ -93,6 +93,17 @@ export const UnitSchema = z.object({
   goals: z.array(GoalSchema).min(1),
 });
 
+// Spanish stories: one per unit, read aloud sentence by sentence.
+export const BookSchema = z.object({
+  id: z.string().regex(/^[a-z0-9-]+$/),
+  world: z.number().int().positive(),
+  title: text,
+  en: text,
+  emoji: text,
+  sentences: z.array(z.object({ es: text, en: text })).min(5).max(12),
+  questions: z.array(StoryQuestionSchema).min(2),
+});
+
 export type Word = z.infer<typeof WordSchema>;
 export type Sentence = z.infer<typeof SentenceSchema>;
 export type Gap = z.infer<typeof GapSchema>;
@@ -104,6 +115,7 @@ export type World = z.infer<typeof WorldSchema>;
 export type Surprise = z.infer<typeof SurpriseSchema>;
 export type Goal = z.infer<typeof GoalSchema>;
 export type Unit = z.infer<typeof UnitSchema>;
+export type Book = z.infer<typeof BookSchema>;
 
 export interface ContentIssue { level: "error" | "warning"; where: string; message: string }
 
@@ -112,7 +124,7 @@ const dupes = <T,>(xs: T[]) => xs.filter((x, i) => xs.indexOf(x) !== i);
 
 // Rules that a schema alone can't express: cross-file consistency and
 // teaching-quality checks. Errors fail the build; warnings are reported.
-export function checkCourse(worlds: unknown, lessonFiles: unknown[], surprises: unknown, units?: unknown): ContentIssue[] {
+export function checkCourse(worlds: unknown, lessonFiles: unknown[], surprises: unknown, units?: unknown, books?: unknown): ContentIssue[] {
   const issues: ContentIssue[] = [];
   const err = (where: string, message: string) => issues.push({ level: "error", where, message });
   const warn = (where: string, message: string) => issues.push({ level: "warning", where, message });
@@ -178,6 +190,19 @@ export function checkCourse(worlds: unknown, lessonFiles: unknown[], surprises: 
         }
       }
       for (const l of lessons) if (!covered.has(l.id)) err(`lesson ${l.id}`, "isn't part of any \"I can…\" goal");
+    }
+  }
+
+  // Spanish stories: valid, one per world at most, answers in range.
+  if (books !== undefined) {
+    const b = z.array(BookSchema).safeParse(books);
+    if (!b.success) b.error.issues.forEach(i => err(`stories.json:${i.path.join(".")}`, i.message));
+    else {
+      dupes(b.data.map(x => x.id)).forEach(id => err("stories.json", `story id "${id}" is used twice`));
+      for (const book of b.data) {
+        if (!w.data.some(x => x.id === book.world)) err(`story ${book.id}`, `world ${book.world} doesn't exist`);
+        book.questions.forEach((q, i) => { if (q.ans >= q.opts.length) err(`story ${book.id} question ${i + 1}`, "answer index is out of range"); });
+      }
     }
   }
 

@@ -219,7 +219,7 @@ export function AgentPanel({ progress, onAction }: P & { onAction: (step: Missio
   </Card>;
 }
 
-const FEED_ICONS: Record<EventType, string> = { lesson: "📘", review: "🔁", badge: "🏆", sticker: "✨", outfit: "🎩", level: "⬆️", chest: "🎁", combo: "🔥", start: "👋" };
+const FEED_ICONS: Record<EventType, string> = { story: "📖", lesson: "📘", review: "🔁", badge: "🏆", sticker: "✨", outfit: "🎩", level: "⬆️", chest: "🎁", combo: "🔥", start: "👋" };
 
 export function ActivityFeed({ progress, limit = 6 }: P & { limit?: number }) {
   const events = progress.events.slice(0, limit);

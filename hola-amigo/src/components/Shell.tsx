@@ -15,6 +15,7 @@ export type NavKey = ShellView | "family";
 const NAV: { key: ShellView; icon: string; label: string }[] = [
   { key: "home", icon: "map", label: "Learn" },
   { key: "review", icon: "review", label: "Practise" },
+  { key: "stories", icon: "book", label: "Stories" },
   { key: "trophies", icon: "trophy", label: "Trophies" },
   { key: "profile", icon: "chart", label: "Me" },
 ];

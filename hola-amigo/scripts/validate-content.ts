@@ -7,7 +7,7 @@ import { checkCourse } from "../src/content/schema.ts";
 const dir = join(import.meta.dirname, "..", "content");
 const read = (p: string) => JSON.parse(readFileSync(join(dir, p), "utf8"));
 const lessonFiles = readdirSync(join(dir, "lessons")).filter(f => f.endsWith(".json")).sort().map(f => read(join("lessons", f)));
-const issues = checkCourse(read("worlds.json"), lessonFiles, read("surprises.json"), read("units.json"));
+const issues = checkCourse(read("worlds.json"), lessonFiles, read("surprises.json"), read("units.json"), read("stories.json"));
 
 const errors = issues.filter(i => i.level === "error");
 const warnings = issues.filter(i => i.level === "warning");

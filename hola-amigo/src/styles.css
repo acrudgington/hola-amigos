@@ -956,3 +956,24 @@ li:last-child > .step .step__rail { display: none; }
 .placement-dot.is-now { background: var(--wc); transform: scale(1.5); }
 .placement-start { display: flex; align-items: center; gap: 14px; padding: 16px; border-color: color-mix(in srgb, var(--wc) 50%, transparent);
   background: linear-gradient(90deg, color-mix(in srgb, var(--wc) 16%, transparent), transparent 80%), var(--glass); }
+
+/* Spanish stories */
+.shelf { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; }
+.book { display: flex; flex-direction: column; gap: 6px; padding: 10px; border-radius: 18px; text-align: left; cursor: pointer; color: var(--text); font: inherit;
+  background: linear-gradient(180deg, var(--sheen), transparent 40%), var(--glass); border: 1px solid var(--hairline); box-shadow: var(--card-shadow);
+  transition: transform 0.2s var(--ease-spring), border-color 0.15s; }
+.book:hover:not(:disabled) { transform: translateY(-4px) rotate(-1deg); border-color: var(--wc); }
+.book__cover { position: relative; aspect-ratio: 3 / 4; border-radius: 12px; display: grid; place-items: center; overflow: hidden;
+  background: radial-gradient(90% 70% at 30% 20%, color-mix(in srgb, var(--wc) 70%, #fff 10%), color-mix(in srgb, var(--wc) 55%, #000)); color: rgba(255,255,255,0.8);
+  box-shadow: inset 6px 0 0 rgba(0, 0, 0, 0.18), inset 8px 0 0 rgba(255, 255, 255, 0.12); }
+.book__badge { position: absolute; top: 8px; right: 8px; font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: #fff; padding: 2px 7px; border-radius: 999px; background: rgba(0, 0, 0, 0.35); }
+.book__title { font-family: var(--font-display); font-weight: 600; font-size: 15px; line-height: 1.15; }
+.book__sub { font-size: 12px; font-weight: 700; color: var(--muted); }
+.book.is-locked { cursor: default; opacity: 0.55; }
+.book.is-locked .book__cover { filter: grayscale(0.7); }
+.reader__head { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; padding-bottom: 14px; border-bottom: 1px solid var(--hairline); }
+.reader__text { display: flex; flex-direction: column; gap: 6px; }
+.reader__line { font-size: 19px; line-height: 1.55; font-weight: 700; padding: 6px 10px; border-radius: 12px; transition: background 0.2s; }
+.reader__line.is-active { background: color-mix(in srgb, var(--wc) 18%, transparent); box-shadow: inset 3px 0 0 var(--wc); }
+.reader__en { display: block; font-size: 14px; font-weight: 700; color: var(--muted); margin-top: 2px; }
+@media (max-width: 480px) { .shelf { grid-template-columns: repeat(2, minmax(0, 1fr)); } .reader__line { font-size: 17px; } }

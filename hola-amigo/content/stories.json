@@ -1,0 +1,196 @@
+[
+  { "id": "hola-lucia", "world": 1, "title": "¡Hola, Lucía!", "en": "Hello, Lucía!", "emoji": "👧",
+    "sentences": [
+      { "es": "¡Hola! Me llamo Lucía.", "en": "Hello! My name is Lucía." },
+      { "es": "Mi perro se llama Coco.", "en": "My dog is called Coco." },
+      { "es": "Coco es blanco y negro.", "en": "Coco is white and black." },
+      { "es": "Mi mamá se llama Ana y mi papá se llama Juan.", "en": "My mum's name is Ana and my dad's name is Juan." },
+      { "es": "—¡Hola, Lucía! ¿Qué tal? —dice Sol.", "en": "\"Hello, Lucía! How are you?\" says Sol." },
+      { "es": "—¡Bien, gracias! Estoy feliz —dice Lucía.", "en": "\"Good, thank you! I'm happy,\" says Lucía." },
+      { "es": "En el jardín hay pájaros: uno, dos, tres, cuatro, cinco.", "en": "In the garden there are birds: one, two, three, four, five." },
+      { "es": "Un pájaro es rojo y un pájaro es azul.", "en": "One bird is red and one bird is blue." },
+      { "es": "Por la noche, Lucía dice: —¡Buenas noches, Coco!", "en": "At night, Lucía says: \"Good night, Coco!\"" }
+    ],
+    "questions": [
+      { "q": "What is Lucía's dog called?", "opts": ["Coco", "Sol", "Juan"], "ans": 0 },
+      { "q": "How does Lucía feel?", "opts": ["Happy", "Sad", "Tired"], "ans": 0 },
+      { "q": "How many birds are in the garden?", "opts": ["Five", "Three", "Ten"], "ans": 0 }
+    ] },
+  { "id": "sabado-playa", "world": 2, "title": "Un sábado en la playa", "en": "A Saturday at the beach", "emoji": "🏖️",
+    "sentences": [
+      { "es": "Hoy es sábado y hace sol.", "en": "Today is Saturday and it's sunny." },
+      { "es": "—¡Vamos a la playa! —dice papá.", "en": "\"Let's go to the beach!\" says Dad." },
+      { "es": "Lucía lleva una camiseta roja y un sombrero.", "en": "Lucía is wearing a red T-shirt and a hat." },
+      { "es": "En la mochila hay agua, pan y queso.", "en": "In the backpack there is water, bread and cheese." },
+      { "es": "El mar es azul y la arena es amarilla.", "en": "The sea is blue and the sand is yellow." },
+      { "es": "Lucía nada en el mar con su hermano.", "en": "Lucía swims in the sea with her brother." },
+      { "es": "Después, comen fresas y sandía. ¡Qué rico!", "en": "Afterwards, they eat strawberries and watermelon. How tasty!" },
+      { "es": "El domingo llueve y hace frío.", "en": "On Sunday it rains and it's cold." },
+      { "es": "Lucía está en casa con un libro. ¡Está muy contenta!", "en": "Lucía is at home with a book. She's very happy!" }
+    ],
+    "questions": [
+      { "q": "What day do they go to the beach?", "opts": ["Saturday", "Sunday", "Monday"], "ans": 0 },
+      { "q": "What is Lucía wearing?", "opts": ["A red T-shirt and a hat", "A blue dress", "A coat and gloves"], "ans": 0 },
+      { "q": "What is the weather like on Sunday?", "opts": ["Rainy and cold", "Sunny and hot", "Snowy"], "ans": 0 }
+    ] },
+  { "id": "dia-marco", "world": 3, "title": "El día de Marco", "en": "Marco's day", "emoji": "⏰",
+    "sentences": [
+      { "es": "Me llamo Marco y tengo ocho años.", "en": "My name is Marco and I'm eight years old." },
+      { "es": "Soy alto y simpático.", "en": "I'm tall and friendly." },
+      { "es": "Me despierto a las siete y desayuno pan con chocolate.", "en": "I wake up at seven and I have bread with chocolate for breakfast." },
+      { "es": "Voy al cole a las nueve.", "en": "I go to school at nine." },
+      { "es": "En el recreo, juego al fútbol con mis amigos.", "en": "At break time, I play football with my friends." },
+      { "es": "No me gusta la sopa, pero me gustan las frutas.", "en": "I don't like soup, but I like fruit." },
+      { "es": "Por la tarde, quiero ir al parque. ¡Puedo correr muy rápido!", "en": "In the afternoon, I want to go to the park. I can run really fast!" },
+      { "es": "A las nueve de la noche, me acuesto. ¡Buenas noches!", "en": "At nine at night, I go to bed. Good night!" }
+    ],
+    "questions": [
+      { "q": "How old is Marco?", "opts": ["Eight", "Ten", "Six"], "ans": 0 },
+      { "q": "What does Marco play at break time?", "opts": ["Football", "Tennis", "Hide and seek"], "ans": 0 },
+      { "q": "What time does Marco go to bed?", "opts": ["Nine at night", "Seven in the morning", "Ten at night"], "ans": 0 }
+    ] },
+  { "id": "dragon-pepe", "world": 4, "title": "Había una vez un dragón", "en": "Once upon a time there was a dragon", "emoji": "🐉",
+    "sentences": [
+      { "es": "Había una vez un dragón pequeño y verde.", "en": "Once upon a time there was a small green dragon." },
+      { "es": "El dragón se llamaba Pepe.", "en": "The dragon was called Pepe." },
+      { "es": "Un día, Pepe fue a la tienda del pueblo.", "en": "One day, Pepe went to the village shop." },
+      { "es": "—¿Cuánto cuesta el helado? —preguntó.", "en": "\"How much is the ice cream?\" he asked." },
+      { "es": "—Dos euros —dijo la señora.", "en": "\"Two euros,\" said the lady." },
+      { "es": "Pepe comió el helado muy, muy rápido.", "en": "Pepe ate the ice cream very, very fast." },
+      { "es": "—¡Ay! ¡Me duele la cabeza! —dijo Pepe.", "en": "\"Ow! My head hurts!\" said Pepe." },
+      { "es": "—Tranquilo, el helado está muy frío —dijo la señora.", "en": "\"Don't worry, the ice cream is very cold,\" said the lady." },
+      { "es": "—Mañana voy a comer el helado despacio —dijo Pepe. Fin.", "en": "\"Tomorrow I'm going to eat my ice cream slowly,\" said Pepe. The end." }
+    ],
+    "questions": [
+      { "q": "What was the dragon called?", "opts": ["Pepe", "Pablo", "Coco"], "ans": 0 },
+      { "q": "How much was the ice cream?", "opts": ["Two euros", "Ten euros", "Five euros"], "ans": 0 },
+      { "q": "Why did Pepe's head hurt?", "opts": ["He ate the ice cream too fast", "He fell over", "He was tired"], "ans": 0 }
+    ] },
+  { "id": "supermercado-bici", "world": 5, "title": "En bicicleta al supermercado", "en": "To the supermarket by bike", "emoji": "🚲",
+    "sentences": [
+      { "es": "El sábado, Sol y Luna van al supermercado en bicicleta.", "en": "On Saturday, Sol and Luna go to the supermarket by bike." },
+      { "es": "Tienen una lista: tomates, patatas, una lechuga y una botella de leche.", "en": "They have a list: tomatoes, potatoes, a lettuce and a bottle of milk." },
+      { "es": "En el supermercado, Luna coge un carrito.", "en": "At the supermarket, Luna takes a trolley." },
+      { "es": "Sol quiere chocolate, pero no está en la lista.", "en": "Sol wants chocolate, but it isn't on the list." },
+      { "es": "—¡Sol! Primero, las verduras —dice Luna.", "en": "\"Sol! Vegetables first,\" says Luna." },
+      { "es": "Después, van al parque. Sol juega al fútbol y Luna lee un libro.", "en": "Afterwards, they go to the park. Sol plays football and Luna reads a book." },
+      { "es": "Por la tarde, visitan una granja. Hay gallinas, patos y una vaca.", "en": "In the afternoon, they visit a farm. There are hens, ducks and a cow." },
+      { "es": "—¡Qué día tan bonito! —dice Sol.", "en": "\"What a lovely day!\" says Sol." }
+    ],
+    "questions": [
+      { "q": "How do Sol and Luna get to the supermarket?", "opts": ["By bike", "By bus", "On foot"], "ans": 0 },
+      { "q": "What does Sol want that isn't on the list?", "opts": ["Chocolate", "Milk", "Tomatoes"], "ans": 0 },
+      { "q": "Which animals are on the farm?", "opts": ["Hens, ducks and a cow", "Lions and tigers", "Fish and crabs"], "ans": 0 }
+    ] },
+  { "id": "fiesta-luna", "world": 6, "title": "La fiesta de Luna", "en": "Luna's party", "emoji": "🎂",
+    "sentences": [
+      { "es": "Hoy es el cumpleaños de Luna. ¡Hay una fiesta!", "en": "Today is Luna's birthday. There's a party!" },
+      { "es": "Hay globos, una tarta y muchos regalos.", "en": "There are balloons, a cake and lots of presents." },
+      { "es": "Su mejor amiga, Estrella, toca la guitarra.", "en": "Her best friend, Estrella, plays the guitar." },
+      { "es": "Sol canta una canción, pero canta muy mal. ¡Todos se ríen!", "en": "Sol sings a song, but he sings very badly. Everyone laughs!" },
+      { "es": "—En mi opinión, Sol canta mejor que un gato —dice Estrella.", "en": "\"In my opinion, Sol sings better than a cat,\" says Estrella." },
+      { "es": "Luna sopla las velas. —¡Felicidades! —dicen sus amigos.", "en": "Luna blows out the candles. \"Happy birthday!\" say her friends." },
+      { "es": "Luna está muy contenta.", "en": "Luna is very happy." },
+      { "es": "—¡Es el mejor cumpleaños del mundo! —dice.", "en": "\"It's the best birthday in the world!\" she says." }
+    ],
+    "questions": [
+      { "q": "Whose birthday is it?", "opts": ["Luna's", "Sol's", "Estrella's"], "ans": 0 },
+      { "q": "What does Estrella play?", "opts": ["The guitar", "The piano", "Football"], "ans": 0 },
+      { "q": "What does Estrella say about Sol's singing?", "opts": ["He sings better than a cat", "He sings beautifully", "He sings too quietly"], "ans": 0 }
+    ] },
+  { "id": "sol-pequeno", "world": 7, "title": "Cuando Sol era pequeño", "en": "When Sol was little", "emoji": "☀️",
+    "sentences": [
+      { "es": "Cuando Sol era pequeño, era muy tímido.", "en": "When Sol was little, he was very shy." },
+      { "es": "No hablaba mucho porque tenía miedo.", "en": "He didn't talk much because he was scared." },
+      { "es": "Todos los días, miraba el mar desde el cielo.", "en": "Every day, he looked at the sea from the sky." },
+      { "es": "Un día, una estrella le dijo: —¡Hola! ¿Quieres jugar?", "en": "One day, a star said to him: \"Hello! Do you want to play?\"" },
+      { "es": "Sol estaba nervioso, pero dijo que sí.", "en": "Sol was nervous, but he said yes." },
+      { "es": "Jugaron toda la noche y se rieron mucho.", "en": "They played all night and laughed a lot." },
+      { "es": "Por eso, ahora Sol es valiente y tiene muchos amigos.", "en": "That's why Sol is brave now and has lots of friends." },
+      { "es": "—Tienes razón —dice Luna—. ¡La amistad es lo mejor!", "en": "\"You're right,\" says Luna. \"Friendship is the best!\"" }
+    ],
+    "questions": [
+      { "q": "What was Sol like when he was little?", "opts": ["Very shy", "Very loud", "Very naughty"], "ans": 0 },
+      { "q": "Who asked Sol to play?", "opts": ["A star", "Luna", "A bird"], "ans": 0 },
+      { "q": "What is Sol like now?", "opts": ["Brave, with lots of friends", "Still shy", "Sad and alone"], "ans": 0 }
+    ] },
+  { "id": "sabado-casa", "world": 8, "title": "Un sábado en casa", "en": "A Saturday at home", "emoji": "🧹",
+    "sentences": [
+      { "es": "Es sábado por la mañana. Mamá dice: —¡Hoy limpiamos la casa!", "en": "It's Saturday morning. Mum says: \"Today we're cleaning the house!\"" },
+      { "es": "Pablo hace la cama y ordena su dormitorio.", "en": "Pablo makes his bed and tidies his bedroom." },
+      { "es": "Su hermana pone la mesa y su papá lava los platos.", "en": "His sister sets the table and his dad washes the dishes." },
+      { "es": "El perro también ayuda… ¡pero coge un calcetín y corre!", "en": "The dog helps too… but he grabs a sock and runs!" },
+      { "es": "Después, mamá le da cinco euros a Pablo.", "en": "Afterwards, Mum gives Pablo five euros." },
+      { "es": "—¡Gracias, mamá! Voy a comprar un libro —dice Pablo.", "en": "\"Thank you, Mum! I'm going to buy a book,\" says Pablo." },
+      { "es": "La casa está limpia y todos están contentos.", "en": "The house is clean and everyone is happy." }
+    ],
+    "questions": [
+      { "q": "What does Pablo do?", "opts": ["Makes his bed and tidies his room", "Washes the dishes", "Walks the dog"], "ans": 0 },
+      { "q": "What does the dog grab?", "opts": ["A sock", "A plate", "A book"], "ans": 0 },
+      { "q": "How much money does Mum give Pablo?", "opts": ["Five euros", "Ten euros", "Two euros"], "ans": 0 }
+    ] },
+  { "id": "tarde-juegos", "world": 9, "title": "Una tarde de juegos", "en": "An afternoon of games", "emoji": "🛝",
+    "sentences": [
+      { "es": "Después del cole, Luna y Sol van al patio.", "en": "After school, Luna and Sol go to the playground." },
+      { "es": "Luna sube al tobogán y baja muy rápido.", "en": "Luna climbs up the slide and comes down really fast." },
+      { "es": "Sol prefiere el columpio. ¡Sube muy alto!", "en": "Sol prefers the swing. He goes really high!" },
+      { "es": "Luego juegan al escondite. Sol se esconde detrás de un árbol.", "en": "Then they play hide and seek. Sol hides behind a tree." },
+      { "es": "Luna cuenta hasta diez y lo busca. —¡Te encontré! —dice.", "en": "Luna counts to ten and looks for him. \"Found you!\" she says." },
+      { "es": "En casa, construyen una casa con bloques.", "en": "At home, they build a house with blocks." },
+      { "es": "Por la noche, ven una película muy divertida.", "en": "In the evening, they watch a really funny film." },
+      { "es": "—¡Qué tarde tan divertida! —dice Luna.", "en": "\"What a fun afternoon!\" says Luna." }
+    ],
+    "questions": [
+      { "q": "Where do they go after school?", "opts": ["The playground", "The beach", "The supermarket"], "ans": 0 },
+      { "q": "Where does Sol hide?", "opts": ["Behind a tree", "Under the slide", "In the house"], "ans": 0 },
+      { "q": "What do they build at home?", "opts": ["A house with blocks", "A kite", "A robot"], "ans": 0 }
+    ] },
+  { "id": "estaciones-luna", "world": 10, "title": "Las estaciones de Luna", "en": "Luna's seasons", "emoji": "🍂",
+    "sentences": [
+      { "es": "En primavera, hay flores y mariposas en el jardín.", "en": "In spring, there are flowers and butterflies in the garden." },
+      { "es": "En verano, hace mucho calor. Luna nada en el mar con los delfines.", "en": "In summer, it's very hot. Luna swims in the sea with the dolphins." },
+      { "es": "En otoño, las hojas caen de los árboles. Son rojas, naranjas y amarillas.", "en": "In autumn, the leaves fall from the trees. They are red, orange and yellow." },
+      { "es": "En invierno, hace frío y hay nieve en las montañas.", "en": "In winter, it's cold and there's snow in the mountains." },
+      { "es": "Por la noche, Luna mira el cielo y ve las estrellas.", "en": "At night, Luna looks at the sky and sees the stars." },
+      { "es": "—Mi estación favorita es el verano —dice Sol.", "en": "\"My favourite season is summer,\" says Sol." },
+      { "es": "—Pues la mía es el invierno —dice Luna—. ¡Las noches son más largas!", "en": "\"Well, mine is winter,\" says Luna. \"The nights are longer!\"" }
+    ],
+    "questions": [
+      { "q": "What is in the garden in spring?", "opts": ["Flowers and butterflies", "Snow", "Dolphins"], "ans": 0 },
+      { "q": "Who does Luna swim with in summer?", "opts": ["Dolphins", "Sharks", "Ducks"], "ans": 0 },
+      { "q": "Why does Luna like winter best?", "opts": ["The nights are longer", "It's hot", "There are flowers"], "ans": 0 }
+    ] },
+  { "id": "prima-sara", "world": 11, "title": "Mi prima Sara", "en": "My cousin Sara", "emoji": "👓",
+    "sentences": [
+      { "es": "Mi prima se llama Sara y tiene diez años.", "en": "My cousin is called Sara and she's ten years old." },
+      { "es": "Tiene el pelo largo y rubio, y lleva gafas.", "en": "She has long blonde hair, and she wears glasses." },
+      { "es": "Sara es muy simpática y un poco graciosa.", "en": "Sara is very friendly and a bit funny." },
+      { "es": "Le encantan las matemáticas, pero no le gusta la educación física.", "en": "She loves maths, but she doesn't like PE." },
+      { "es": "Vive en un piso con sus padres, en el tercer piso.", "en": "She lives in a flat with her parents, on the third floor." },
+      { "es": "Su vecino tiene un perro grande y muy amable.", "en": "Her neighbour has a big, very friendly dog." },
+      { "es": "El sábado hay una fiesta en su casa y nos disfrazamos de superhéroes.", "en": "On Saturday there's a party at her house and we dress up as superheroes." },
+      { "es": "¡Me encanta estar con mi prima!", "en": "I love being with my cousin!" }
+    ],
+    "questions": [
+      { "q": "How old is Sara?", "opts": ["Ten", "Eight", "Twelve"], "ans": 0 },
+      { "q": "What does Sara love at school?", "opts": ["Maths", "PE", "Music"], "ans": 0 },
+      { "q": "What do they dress up as at the party?", "opts": ["Superheroes", "Princesses", "Animals"], "ans": 0 }
+    ] },
+  { "id": "dia-madrid", "world": 12, "title": "Un día en Madrid", "en": "A day in Madrid", "emoji": "🏙️",
+    "sentences": [
+      { "es": "Hoy la familia de Lucía visita Madrid. Hace buen tiempo.", "en": "Today Lucía's family is visiting Madrid. The weather is nice." },
+      { "es": "Primero, van de compras. Lucía quiere un vestido azul.", "en": "First, they go shopping. Lucía wants a blue dress." },
+      { "es": "—¿Puedo probar la talla mediana? —pregunta Lucía.", "en": "\"Can I try the medium size?\" asks Lucía." },
+      { "es": "¡Le queda perfecto! Está de rebajas y cuesta veinte euros.", "en": "It fits perfectly! It's on sale and it costs twenty euros." },
+      { "es": "A las dos, comen en un restaurante.", "en": "At two o'clock, they eat at a restaurant." },
+      { "es": "De primero, ensalada; de segundo, pollo; y de postre, helado.", "en": "To start, salad; for the main course, chicken; and for dessert, ice cream." },
+      { "es": "Papá dice: —La cuenta, por favor.", "en": "Dad says: \"The bill, please.\"" },
+      { "es": "Por la tarde, pasean por el parque del Retiro.", "en": "In the afternoon, they walk in the Retiro park." },
+      { "es": "—¡Qué día tan bonito! ¡Hasta luego, Madrid! —dice Lucía.", "en": "\"What a lovely day! See you later, Madrid!\" says Lucía." }
+    ],
+    "questions": [
+      { "q": "What does Lucía want to buy?", "opts": ["A blue dress", "A red T-shirt", "Some trainers"], "ans": 0 },
+      { "q": "How much does it cost?", "opts": ["Twenty euros", "Two euros", "Fifty euros"], "ans": 0 },
+      { "q": "What do they have for dessert?", "opts": ["Ice cream", "Cake", "Fruit"], "ans": 0 }
+    ] }
+]

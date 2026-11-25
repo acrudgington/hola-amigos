@@ -10,7 +10,7 @@
 export interface WordMemory { box: number; seen: number; en: string; last: number; recall?: number; wrong?: number }
 export type Direction = "recognise" | "recall";
 
-export type EventType = "lesson" | "review" | "badge" | "sticker" | "outfit" | "level" | "chest" | "combo" | "start";
+export type EventType = "lesson" | "review" | "badge" | "sticker" | "outfit" | "level" | "chest" | "combo" | "start" | "story";
 export interface ActivityEvent { t: number; type: EventType; text: string; emoji?: string; title?: string }
 
 export interface Progress {
@@ -44,6 +44,7 @@ export interface Progress {
   placedUpTo: number;
   placement: { world: number; at: number; asked: number; right: number } | null;
   placementOffered: boolean;
+  storyBest: Record<string, number>;   // Spanish story id → best number of questions right
 }
 
 export type NumericStat = "correctAnswers" | "micUses" | "storiesRead" | "reviewsDone" | "lessonsDone";
@@ -54,7 +55,7 @@ export const DEFAULT_PROGRESS: Readonly<Progress> = Object.freeze({
   lessonsDone: 0, correctAnswers: 0, micUses: 0, storiesRead: 0, reviewsDone: 0,
   wordMemory: {}, dailyGoal: 3, dailyDate: null, dailyCount: 0,
   xp: 0, xpByDay: {}, bestCombo: 0, comboDay: null, comboToday: 0, chestDay: null, events: [],
-  placedUpTo: 0, placement: null, placementOffered: false,
+  placedUpTo: 0, placement: null, placementOffered: false, storyBest: {},
 });
 
 export const XP = { correct: 10, activity: 15, lesson: 50, perStar: 20, review: 25, combo5: 15, chest: 50 } as const;

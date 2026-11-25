@@ -6,7 +6,7 @@
 // ============================================================
 import type { ActivityType } from "../lib/journey.ts";
 
-export type ShellView = "home" | "review" | "trophies" | "profile";
+export type ShellView = "home" | "review" | "stories" | "trophies" | "profile";
 export type View = "family" | "dashboard" | ShellView | "lesson" | "activity" | "done" | "placement";
 
 export interface Journey {
