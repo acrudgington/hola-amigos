@@ -7,7 +7,7 @@
 // ============================================================
 import manifestJson from "../../content/audio-manifest.json";
 import { AUDIO } from "../config.ts";
-import { narration, spanish } from "./catalog.ts";
+import { narration, spanish, spanishBy } from "./catalog.ts";
 import { clipId, type Segment, type Speaker } from "./text.ts";
 
 const manifest = manifestJson as { voices: Record<string, string>; clips: Record<string, string> };
@@ -185,6 +185,8 @@ const player = new VoicePlayer();
 export const voice = {
   // A Spanish word, phrase or sentence (Castilian teacher voice).
   spanish: (text: string, opts?: PlayOptions) => player.play(spanish(text), opts),
+  // Spanish in Sol's or Luna's own voice (their mouths move while it plays).
+  spanishBy: (who: "sol" | "luna", text: string, opts?: PlayOptions) => player.play(spanishBy(who, text), opts),
   // English narration that may contain Spanish: stories, questions, instructions.
   narrate: (text: string, opts?: PlayOptions & { speaker?: Speaker }) => player.play(narration(text, opts?.speaker), opts),
   stop: () => player.stop(),

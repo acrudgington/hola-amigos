@@ -2,13 +2,15 @@
 // What can be said, and how. The player and the clip generator both use
 // these helpers, so a line always maps to the same clips.
 // ============================================================
-import { ALL_WORDS, BOOKS, LESSONS, SURPRISES } from "../content/index.ts";
+import { ALL_WORDS, BOOKS, CHANTS, LESSONS, SURPRISES } from "../content/index.ts";
 import { REACTION_LINES } from "../lib/reactions.ts";
 import { BOSS_HIT, DONE_LINES, INSTRUCTIONS, LEVEL_UP_LINE, PLACEMENT_LINES, PRAISE, REMEMBERED, REVIEW_INSTRUCTION } from "./lines.ts";
 import { clipId, segmentMixed, single, splitSentences, type Segment, type Speaker, type VoiceRole } from "./text.ts";
 
 // A Spanish word, phrase or sentence, said by the Castilian teacher voice.
 export const spanish = (text: string): Segment[] => single("es", text);
+// Spanish said by Sol or Luna in their own voice (chants).
+export const spanishBy = (who: "sol" | "luna", text: string): Segment[] => single(`${who}-es`, text);
 // English narration that may contain Spanish (stories, questions, instructions).
 export const narration = (text: string, speaker: Speaker = "teacher"): Segment[] => segmentMixed(text, speaker);
 
@@ -34,6 +36,7 @@ export function collectClips(): Clip[] {
     for (const s of b.sentences) add(spanish(s.es));
     for (const q of b.questions) add(narration(q.q));
   }
+  for (const c of CHANTS) { add(spanish(c.title)); for (const l of c.lines) add(spanishBy(l.who, l.es)); }
   for (const t of [...Object.values(INSTRUCTIONS), REVIEW_INSTRUCTION]) add(narration(t));
   for (const p of [...PRAISE, BOSS_HIT]) add(single("sol-es", p));
   for (const t of [REMEMBERED, LEVEL_UP_LINE, ...Object.values(DONE_LINES), ...Object.values(PLACEMENT_LINES)]) add(narration(t, "sol"));

@@ -6,8 +6,9 @@ import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { voice } from "../audio/player.ts";
 import { useGuide } from "../audio/guide.ts";
-import { BOOKS, WORLDS, type Book } from "../content/index.ts";
-import { learnedUpTo, type Progress } from "../domain/progress.ts";
+import { BOOKS, CHANTS, WORLDS, type Book, type Chant } from "../content/index.ts";
+import { ChantPlayer } from "./ChantPlayer.tsx";
+import { learnedUpTo, unlockedUpTo, type Progress } from "../domain/progress.ts";
 import { shuffle } from "../lib/utils.ts";
 import { useLater } from "../games/hooks.ts";
 import { Button, Card, Choices, Feedback, SpeakButton } from "../components/ui.tsx";
@@ -17,19 +18,36 @@ import { Icon } from "../components/Icon.tsx";
 const worldOfBook = (b: Book) => WORLDS.find(w => w.id === b.world)!;
 export const isBookUnlocked = (p: Progress, b: Book) => learnedUpTo(p) >= worldOfBook(b).range[1];
 
-export function StoriesScreen({ progress, onFinish }: { progress: Progress; onFinish: (b: Book, right: number, total: number) => void }) {
+export function StoriesScreen({ progress, onFinish, onChant }: { progress: Progress; onFinish: (b: Book, right: number, total: number) => void; onChant: (c: Chant) => void }) {
   const [open, setOpen] = useState<Book | null>(null);
+  const [chant, setChant] = useState<Chant | null>(null);
   if (open) return <BookReader book={open} onClose={() => setOpen(null)} onFinish={(s, t) => onFinish(open, s, t)} />;
+  if (chant) return <ChantPlayer chant={chant} onClose={() => setChant(null)} onFinish={() => onChant(chant)} />;
+  // Chants open as soon as the child reaches their world (stories wait until it's finished).
+  const chantOpen = (c: Chant) => unlockedUpTo(progress) >= WORLDS.find(w => w.id === c.world)!.range[0];
   const unlocked = BOOKS.filter(b => isBookUnlocked(progress, b));
   const next = BOOKS.find(b => !isBookUnlocked(progress, b));
   return <div style={{ paddingTop: 4 }}>
     <div className="dash-head" style={{ marginBottom: 14 }}>
       <div>
         <div className="eyebrow">Spanish stories · {unlocked.length} of {BOOKS.length} unlocked</div>
-        <h1 className="h1" style={{ marginTop: 4 }}>Story shelf</h1>
-        <p className="small muted" style={{ marginTop: 4 }}>Real stories in Spanish, read aloud. Each one unlocks when you finish its world.</p>
+        <h1 className="h1" style={{ marginTop: 4 }}>Stories &amp; chants</h1>
+        <p className="small muted" style={{ marginTop: 4 }}>Rhymes to chant along with Sol and Luna, and real stories in Spanish, read aloud.</p>
       </div>
     </div>
+    <h2 className="h3" style={{ margin: "4px 0 10px" }}>🎵 Chants &amp; rhymes</h2>
+    <div className="chant-shelf">
+      {CHANTS.map(c => {
+        const w = WORLDS.find(x => x.id === c.world)!;
+        const ok = chantOpen(c);
+        return <button key={c.id} type="button" className={`chant-card ${ok ? "" : "is-locked"}`} style={{ "--wc": w.color }} disabled={!ok} onClick={() => setChant(c)}
+          aria-label={ok ? `${c.title}: ${c.en}` : `${c.title}, unlocks in ${w.name}`}>
+          <span className="chant-card__disc">{ok ? <Art e={c.emoji} size={34} /> : <Icon name="lock" size={18} />}</span>
+          <span className="chant-card__title" lang="es">{c.title}</span>
+        </button>;
+      })}
+    </div>
+    <h2 className="h3" style={{ margin: "22px 0 10px" }}>📚 Stories</h2>
     <div className="shelf">
       {BOOKS.map((b, i) => {
         const w = worldOfBook(b);

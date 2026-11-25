@@ -3,7 +3,7 @@
 // Mixed English/Spanish lines are split with the same splitter the voices use,
 // so only the Spanish parts are checked. Run: npm run content:grammar
 import { writeFileSync } from "node:fs";
-import { BOOKS, LESSONS, UNITS } from "../src/content/index.ts";
+import { BOOKS, CHANTS, LESSONS, UNITS } from "../src/content/index.ts";
 import { segmentMixed, splitSentences } from "../src/audio/text.ts";
 
 interface Item { where: string; text: string }
@@ -24,6 +24,7 @@ for (const l of LESSONS) {
 }
 
 for (const u of UNITS) for (const g of u.goals) add(`goal ${g.id}`, g.es);
+for (const c of CHANTS) { add(`chant ${c.id} title`, c.title); c.lines.forEach((l, i) => add(`chant ${c.id} ${i + 1}`, l.es)); }
 for (const b of BOOKS) { add(`story ${b.id} title`, b.title); b.sentences.forEach((x, i) => add(`story ${b.id} ${i + 1}`, x.es)); }
 
 // Rules that only flag the course's deliberate style (sentence-building tiles have

@@ -32,7 +32,26 @@ function note(freq: number, start: number, dur: number, { type = "sine", gain = 
 
 const C5 = 523.25, E5 = 659.25, G5 = 783.99, C6 = 1046.5, A4 = 440, F4 = 349.23, D5 = 587.33, B5 = 987.77;
 
+// A soft beat for chants: a low thump on beats 1 and 3, a light tick on 2 and 4.
+function thump(start = 0) {
+  const a = audio();
+  if (!a) return;
+  const t = a.currentTime + start;
+  const osc = a.createOscillator();
+  const g = a.createGain();
+  osc.type = "sine";
+  osc.frequency.setValueAtTime(140, t);
+  osc.frequency.exponentialRampToValueAtTime(55, t + 0.12);
+  g.gain.setValueAtTime(0.0001, t);
+  g.gain.exponentialRampToValueAtTime(0.16, t + 0.01);
+  g.gain.exponentialRampToValueAtTime(0.0001, t + 0.18);
+  osc.connect(g).connect(a.destination);
+  osc.start(t);
+  osc.stop(t + 0.22);
+}
+
 export const sfx = {
+  beat: (n: number) => (n % 2 === 0 ? thump() : note(1760, 0, 0.04, { type: "triangle", gain: 0.025 })),
   tap: () => note(880, 0, 0.06, { type: "triangle", gain: 0.05 }),
   correct: () => { note(E5, 0, 0.14, { type: "triangle" }); note(B5, 0.08, 0.22, { type: "triangle" }); },
   wrong: () => { note(A4, 0, 0.16, { type: "sine", gain: 0.08 }); note(F4, 0.1, 0.24, { type: "sine", gain: 0.07 }); },

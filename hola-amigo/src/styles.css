@@ -977,3 +977,32 @@ li:last-child > .step .step__rail { display: none; }
 .reader__line.is-active { background: color-mix(in srgb, var(--wc) 18%, transparent); box-shadow: inset 3px 0 0 var(--wc); }
 .reader__en { display: block; font-size: 14px; font-weight: 700; color: var(--muted); margin-top: 2px; }
 @media (max-width: 480px) { .shelf { grid-template-columns: repeat(2, minmax(0, 1fr)); } .reader__line { font-size: 17px; } }
+
+/* Chants */
+.chant-shelf { display: flex; gap: 12px; overflow-x: auto; padding: 4px 2px 10px; scrollbar-width: none; }
+.chant-shelf::-webkit-scrollbar { display: none; }
+.chant-card { flex: 0 0 auto; width: 118px; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 12px 8px; border-radius: 18px; cursor: pointer; font: inherit; color: var(--text);
+  background: linear-gradient(180deg, var(--sheen), transparent 40%), var(--glass); border: 1px solid var(--hairline); transition: transform 0.2s var(--ease-spring), border-color 0.15s; }
+.chant-card:hover:not(:disabled) { transform: translateY(-3px); border-color: var(--wc); }
+.chant-card__disc { width: 64px; height: 64px; border-radius: 50%; display: grid; place-items: center; color: rgba(255,255,255,0.8);
+  background: radial-gradient(circle at 50% 50%, #111 0 12%, transparent 13%), repeating-radial-gradient(circle, color-mix(in srgb, var(--wc) 75%, #000) 0 3px, color-mix(in srgb, var(--wc) 60%, #000) 3px 6px);
+  box-shadow: 0 6px 14px -6px rgba(0, 0, 0, 0.6); }
+.chant-card__title { font-family: var(--font-display); font-weight: 600; font-size: 13px; line-height: 1.15; text-align: center; }
+.chant-card.is-locked { opacity: 0.5; cursor: default; }
+.chant__stage { display: flex; align-items: center; justify-content: center; gap: 18px; margin: 6px 0 10px; }
+.chant__who { transition: transform 0.25s var(--ease-spring), filter 0.2s; filter: saturate(0.85); }
+.chant__who.is-on { transform: scale(1.12) translateY(-4px); filter: none; }
+.chant__stage.is-beat .chant__who { transform: translateY(-3px); }
+.chant__stage.is-beat .chant__who.is-on { transform: scale(1.14) translateY(-7px); }
+.chant__beat { display: flex; gap: 6px; }
+.chant__beat span { width: 10px; height: 10px; border-radius: 50%; background: var(--track); transition: background 0.08s, transform 0.08s; }
+.chant__beat span.on { background: var(--wc); transform: scale(1.4); }
+.chant__turn { text-align: center; font-weight: 900; color: var(--luna); margin-bottom: 8px; animation: pop-in 0.3s var(--ease-spring); }
+.chant__lines { display: flex; flex-direction: column; gap: 6px; }
+.chant__line { font-size: 20px; line-height: 1.45; font-weight: 800; padding: 7px 12px; border-radius: 12px; cursor: pointer; transition: background 0.2s, opacity 0.2s; }
+.chant__line--sol { box-shadow: inset 3px 0 0 color-mix(in srgb, var(--sun) 45%, transparent); }
+.chant__line--luna { box-shadow: inset 3px 0 0 color-mix(in srgb, var(--luna) 45%, transparent); margin-left: 18px; }
+.chant__line.is-active.chant__line--sol { background: color-mix(in srgb, var(--sun) 20%, transparent); box-shadow: inset 4px 0 0 var(--sun); }
+.chant__line.is-active.chant__line--luna { background: color-mix(in srgb, var(--luna) 22%, transparent); box-shadow: inset 4px 0 0 var(--luna); }
+.chant__line.is-said { opacity: 0.6; }
+@media (max-width: 480px) { .chant__line { font-size: 17px; } }

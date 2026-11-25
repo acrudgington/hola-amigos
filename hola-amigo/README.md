@@ -125,6 +125,16 @@ each sentence, with an English switch. `npm run content:story-vocab` shows how m
 each story the child already knows by then (77–97%) and lists the new words;
 `npm run content:grammar` checks every story sentence.
 
+## Chants and rhymes
+
+`content/chants.json` has 8 short rhyming chants (greetings, counting to ten, colours,
+"Cabeza, hombros, rodillas y pies", the days of the week, the weather, bedtime and the
+seasons). Sol and Luna take turns saying each line in their own Spanish voices over a
+soft synthesised beat, with the line lit up on screen; **Your turn** mode pauses after
+each line so the child can say it back. They're spoken in rhythm, not sung (the AI voices
+can't sing); real recordings could replace the voices later without changing the screen.
+A chant opens as soon as the child reaches its world.
+
 ## Editing lessons
 
 All course content lives in `content/` as plain JSON, so it can be edited without touching code:
