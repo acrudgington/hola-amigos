@@ -252,5 +252,19 @@
     {"q": "What do they buy at the greengrocer's?", "opts": ["Oranges and strawberries", "Bread", "Fish"], "ans": 0},
     {"q": "How much does everything cost?", "opts": ["Fifteen euros fifty", "Fifty euros", "Five euros"], "ans": 0},
     {"q": "What do they have at the café?", "opts": ["Churros and hot chocolate", "Coffee and toast", "Ice cream"], "ans": 0}
+  ] },
+  { "id": "viaje-ave", "world": 19, "title": "El viaje en AVE", "en": "The high-speed train trip", "emoji": "🚄", "sentences": [
+    {"es": "El viernes, Sol y su familia fueron a Sevilla en el AVE.", "en": "On Friday, Sol and his family went to Seville on the high-speed train."},
+    {"es": "En la estación, su padre compró los billetes de ida y vuelta.", "en": "At the station, his dad bought the return tickets."},
+    {"es": "El tren salió del andén ocho a las nueve en punto.", "en": "The train left from platform eight at nine o'clock sharp."},
+    {"es": "Sol miraba por la ventana: campos, montañas y pueblos blancos.", "en": "Sol looked out of the window: fields, mountains and white villages."},
+    {"es": "Llegaron a Sevilla a las once y media y fueron al hotel andando.", "en": "They arrived in Seville at half past eleven and walked to the hotel."},
+    {"es": "—Perdone, ¿dónde está el hotel Sol? —preguntó su madre.", "en": "\"Excuse me, where is the Hotel Sol?\" his mum asked."},
+    {"es": "—Siga todo recto y gire a la izquierda. Está enfrente de la catedral.", "en": "\"Go straight on and turn left. It's opposite the cathedral.\""},
+    {"es": "—¡Un hotel con mi nombre! —dijo Sol—. ¡Este viaje va a ser genial!", "en": "\"A hotel with my name!\" said Sol. \"This trip is going to be great!\""}
+  ], "questions": [
+    {"q": "What time did the train leave?", "opts": ["At nine", "At half past eleven", "At eight"], "ans": 0},
+    {"q": "What did Sol see from the window?", "opts": ["Fields, mountains and white villages", "The sea", "Big cities"], "ans": 0},
+    {"q": "Where is the hotel?", "opts": ["Opposite the cathedral", "Next to the station", "In the old town"], "ans": 0}
   ] }
 ]

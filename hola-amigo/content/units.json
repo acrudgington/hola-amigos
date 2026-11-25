@@ -117,5 +117,11 @@
     {"id": "18b", "can": "I can buy clothes and say if they fit.", "es": "¿Me lo puedo probar? Me queda pequeño.", "lessons": [153, 154]},
     {"id": "18c", "can": "I can shop at the market and order in a café or restaurant.", "es": "¿Me pones un zumo de naranja, por favor?", "lessons": [155, 156, 157]},
     {"id": "18d", "can": "I can talk about Spanish food and about money.", "es": "Me encanta la tortilla de patatas. Guardo mi paga en la hucha.", "lessons": [158, 159, 160]}
+  ] },
+  { "world": 19, "title": "Travelling around Spain", "level": "a2", "goals": [
+    {"id": "19a", "can": "I can talk about transport and buy a ticket.", "es": "Quería un billete de ida y vuelta a Sevilla.", "lessons": [161, 162]},
+    {"id": "19b", "can": "I can ask for and give directions.", "es": "Sigue todo recto y gira a la derecha. Está al lado del banco.", "lessons": [163, 164]},
+    {"id": "19c", "can": "I can stay in a hotel and talk about places in Spain.", "es": "Madrid está en el centro de España.", "lessons": [165, 166, 167]},
+    {"id": "19d", "can": "I can get ready for a trip and ask for help if there's a problem.", "es": "Perdone, me he perdido. ¿Me puede ayudar?", "lessons": [168, 169, 170]}
   ] }
 ]

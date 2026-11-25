@@ -1,0 +1,1812 @@
+{
+  "world": 19,
+  "lessons": [
+    {
+      "id": 161,
+      "title": "¿Cómo vamos?",
+      "subtitle": "How shall we travel?",
+      "emoji": "🚆",
+      "milestone": false,
+      "funFact": "Spain's high-speed train is called the AVE. It can take you from Madrid to Seville in about two and a half hours!",
+      "phrase": {
+        "es": "Vamos a Madrid en tren.",
+        "en": "We're going to Madrid by train."
+      },
+      "words": [
+        {
+          "es": "En tren",
+          "en": "By train",
+          "say": "en tren",
+          "emoji": "🚆"
+        },
+        {
+          "es": "En avión",
+          "en": "By plane",
+          "say": "en ah-BYON",
+          "emoji": "✈️"
+        },
+        {
+          "es": "En metro",
+          "en": "By metro",
+          "say": "en MEH-troh",
+          "emoji": "🚇"
+        },
+        {
+          "es": "En coche",
+          "en": "By car",
+          "say": "en KOH-cheh",
+          "emoji": "🚗"
+        },
+        {
+          "es": "Andando",
+          "en": "On foot",
+          "say": "an-DAN-doh",
+          "emoji": "🚶‍♂️"
+        },
+        {
+          "es": "El aeropuerto",
+          "en": "The airport",
+          "say": "el ah-eh-roh-PWEHR-toh",
+          "emoji": "🛫"
+        },
+        {
+          "es": "La estación",
+          "en": "The station",
+          "say": "lah es-tah-THYON",
+          "emoji": "🚉"
+        },
+        {
+          "es": "El puerto",
+          "en": "The port",
+          "say": "el PWEHR-toh",
+          "emoji": "⚓"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Vamos",
+            "a",
+            "Madrid",
+            "en",
+            "tren"
+          ],
+          "shuffle": [
+            "en",
+            "Madrid",
+            "tren",
+            "a",
+            "Vamos"
+          ],
+          "en": "We're going to Madrid by train."
+        },
+        {
+          "correct": [
+            "Voy",
+            "al",
+            "colegio",
+            "andando"
+          ],
+          "shuffle": [
+            "andando",
+            "colegio",
+            "al",
+            "Voy"
+          ],
+          "en": "I walk to school."
+        },
+        {
+          "correct": [
+            "El",
+            "aeropuerto",
+            "está",
+            "lejos",
+            "de",
+            "mi",
+            "casa"
+          ],
+          "shuffle": [
+            "aeropuerto",
+            "lejos",
+            "mi",
+            "de",
+            "está",
+            "casa",
+            "El"
+          ],
+          "en": "The airport is far from my house."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "Vamos ___ avión.",
+          "opts": [
+            "en",
+            "con",
+            "por"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Andando' means:",
+          "opts": [
+            "On foot",
+            "Running",
+            "By bike"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "How Do You Get to School?",
+        "paras": [
+          "The teacher asks: '¿Cómo venís al colegio?'",
+          "'Yo vengo andando,' says Luna. 'Vivo muy cerca.' 'Yo vengo en coche con mi padre,' says Sol.",
+          "'¿Y tú, Estrella?' 'Yo vengo en metro… ¡pero un día vendré en avión!'"
+        ],
+        "qs": [
+          {
+            "q": "How does Luna get to school?",
+            "opts": [
+              "On foot",
+              "By car",
+              "By metro"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Why?",
+            "opts": [
+              "She lives very close",
+              "She likes walking",
+              "Her car broke"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How does Estrella come to school?",
+            "opts": [
+              "By metro",
+              "By plane",
+              "By bike"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 162,
+      "title": "En la estación",
+      "subtitle": "At the station",
+      "emoji": "🎫",
+      "milestone": false,
+      "funFact": "In Spanish stations, signs say 'Salida' for the way out. 'Salida' also means 'departure', and 'Llegada' means 'arrival'.",
+      "phrase": {
+        "es": "Quería un billete de ida y vuelta a Sevilla.",
+        "en": "I'd like a return ticket to Seville."
+      },
+      "words": [
+        {
+          "es": "Un billete de ida y vuelta",
+          "en": "A return ticket",
+          "say": "oon bee-YEH-teh deh EE-dah ee BWEL-tah",
+          "emoji": "🎫"
+        },
+        {
+          "es": "Solo ida",
+          "en": "One way",
+          "say": "SOH-loh EE-dah",
+          "emoji": "➡️"
+        },
+        {
+          "es": "El andén",
+          "en": "The platform",
+          "say": "el an-DEN",
+          "emoji": "🚏"
+        },
+        {
+          "es": "La salida",
+          "en": "The exit / The departure",
+          "say": "lah sah-LEE-dah",
+          "emoji": "🟢"
+        },
+        {
+          "es": "La llegada",
+          "en": "The arrival",
+          "say": "lah yeh-GAH-dah",
+          "emoji": "🏁"
+        },
+        {
+          "es": "Sale a las",
+          "en": "It leaves at",
+          "say": "SAH-leh ah las",
+          "emoji": "🕘"
+        },
+        {
+          "es": "Llega a las",
+          "en": "It arrives at",
+          "say": "YEH-gah ah las",
+          "emoji": "🕛"
+        },
+        {
+          "es": "El retraso",
+          "en": "The delay",
+          "say": "el rreh-TRAH-soh",
+          "emoji": "🐌"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "El",
+            "tren",
+            "sale",
+            "a",
+            "las",
+            "nueve"
+          ],
+          "shuffle": [
+            "tren",
+            "las",
+            "nueve",
+            "sale",
+            "El",
+            "a"
+          ],
+          "en": "The train leaves at nine."
+        },
+        {
+          "correct": [
+            "Quería",
+            "un",
+            "billete",
+            "de",
+            "ida",
+            "y",
+            "vuelta"
+          ],
+          "shuffle": [
+            "ida",
+            "Quería",
+            "y",
+            "un",
+            "vuelta",
+            "billete",
+            "de"
+          ],
+          "en": "I'd like a return ticket."
+        },
+        {
+          "correct": [
+            "El",
+            "tren",
+            "tiene",
+            "un",
+            "retraso",
+            "de",
+            "diez",
+            "minutos"
+          ],
+          "shuffle": [
+            "un",
+            "de",
+            "tren",
+            "retraso",
+            "tiene",
+            "El",
+            "diez",
+            "minutos"
+          ],
+          "en": "The train is ten minutes late."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Ida y vuelta' means:",
+          "opts": [
+            "Return (there and back)",
+            "One way",
+            "First class"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "El tren ___ a las diez. (leaves)",
+          "opts": [
+            "sale",
+            "llega",
+            "sube"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "The Train to Seville",
+        "paras": [
+          "Sol's dad buys tickets. 'Tres billetes de ida y vuelta a Sevilla, por favor.'",
+          "'El tren sale a las nueve del andén cinco y llega a las once y media.'",
+          "But there is a problem: el tren tiene un retraso de veinte minutos. 'No pasa nada,' says Papá. '¡Vamos a desayunar!'"
+        ],
+        "qs": [
+          {
+            "q": "How many tickets does Dad buy?",
+            "opts": [
+              "Three",
+              "Two",
+              "Four"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Which platform does the train leave from?",
+            "opts": [
+              "Platform five",
+              "Platform two",
+              "Platform nine"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How late is the train?",
+            "opts": [
+              "Twenty minutes",
+              "Ten minutes",
+              "An hour"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 163,
+      "title": "¿Por dónde se va?",
+      "subtitle": "Which way is it?",
+      "emoji": "↪️",
+      "milestone": false,
+      "funFact": "Directions use command forms: 'gira', 'sigue', 'cruza'. When talking politely to strangers, people say 'gire', 'siga', 'cruce' instead.",
+      "phrase": {
+        "es": "Sigue todo recto y gira a la derecha.",
+        "en": "Keep going straight on and turn right."
+      },
+      "words": [
+        {
+          "es": "Gira a la derecha",
+          "en": "Turn right",
+          "say": "HEE-rah ah lah deh-REH-chah",
+          "emoji": "↪️"
+        },
+        {
+          "es": "Gira a la izquierda",
+          "en": "Turn left",
+          "say": "HEE-rah ah lah eeth-KYEHR-dah",
+          "emoji": "↩️"
+        },
+        {
+          "es": "Sigue todo recto",
+          "en": "Keep going straight on",
+          "say": "SEE-geh TOH-doh RREK-toh",
+          "emoji": "⬆️"
+        },
+        {
+          "es": "Cruza la calle",
+          "en": "Cross the street",
+          "say": "KROO-thah lah KAH-yeh",
+          "emoji": "🚸"
+        },
+        {
+          "es": "La primera calle",
+          "en": "The first street",
+          "say": "lah pree-MEH-rah KAH-yeh",
+          "emoji": "1️⃣"
+        },
+        {
+          "es": "La segunda calle",
+          "en": "The second street",
+          "say": "lah seh-GOON-dah KAH-yeh",
+          "emoji": "2️⃣"
+        },
+        {
+          "es": "Al final de la calle",
+          "en": "At the end of the street",
+          "say": "al fee-NAL deh lah KAH-yeh",
+          "emoji": "🔚"
+        },
+        {
+          "es": "La esquina",
+          "en": "The corner",
+          "say": "lah es-KEE-nah",
+          "emoji": "📐"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Gira",
+            "a",
+            "la",
+            "derecha",
+            "en",
+            "la",
+            "esquina"
+          ],
+          "shuffle": [
+            "esquina",
+            "Gira",
+            "en",
+            "derecha",
+            "a",
+            "la",
+            "la"
+          ],
+          "en": "Turn right at the corner."
+        },
+        {
+          "correct": [
+            "Cruza",
+            "la",
+            "calle",
+            "y",
+            "sigue",
+            "todo",
+            "recto"
+          ],
+          "shuffle": [
+            "sigue",
+            "todo",
+            "la",
+            "y",
+            "calle",
+            "recto",
+            "Cruza"
+          ],
+          "en": "Cross the street and keep going straight on."
+        },
+        {
+          "correct": [
+            "El",
+            "museo",
+            "está",
+            "al",
+            "final",
+            "de",
+            "la",
+            "calle"
+          ],
+          "shuffle": [
+            "está",
+            "El",
+            "de",
+            "final",
+            "calle",
+            "la",
+            "museo",
+            "al"
+          ],
+          "en": "The museum is at the end of the street."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Gira a la izquierda' means:",
+          "opts": [
+            "Turn left",
+            "Turn right",
+            "Go straight on"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'La esquina' is:",
+          "opts": [
+            "The corner",
+            "The square",
+            "The crossing"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "To the Ice Cream Shop",
+        "paras": [
+          "'¿Dónde está la heladería?' asks Luna. Sol knows the way.",
+          "'Sigue todo recto. Cruza la calle y gira a la izquierda en la primera calle.'",
+          "'La heladería está al final de la calle, en la esquina. ¡Corre, que cierra a las ocho!'"
+        ],
+        "qs": [
+          {
+            "q": "Where does Luna want to go?",
+            "opts": [
+              "The ice cream shop",
+              "The museum",
+              "The station"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Which way should she turn?",
+            "opts": [
+              "Left",
+              "Right",
+              "She shouldn't turn"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Where exactly is the shop?",
+            "opts": [
+              "On the corner at the end of the street",
+              "Next to the school",
+              "Behind the park"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 164,
+      "title": "¿Dónde está?",
+      "subtitle": "Where is it?",
+      "emoji": "📦",
+      "milestone": false,
+      "funFact": "'De' and 'el' join together to make 'del': you say 'al lado del banco', never 'de el banco'.",
+      "phrase": {
+        "es": "La farmacia está al lado del banco.",
+        "en": "The chemist's is next to the bank."
+      },
+      "words": [
+        {
+          "es": "Al lado de",
+          "en": "Next to",
+          "say": "al LAH-doh deh",
+          "emoji": "↔️"
+        },
+        {
+          "es": "Enfrente de",
+          "en": "Opposite",
+          "say": "en-FREN-teh deh",
+          "emoji": "🪞"
+        },
+        {
+          "es": "Detrás de",
+          "en": "Behind",
+          "say": "deh-TRAS deh",
+          "emoji": "🫣"
+        },
+        {
+          "es": "Delante de",
+          "en": "In front of",
+          "say": "deh-LAN-teh deh",
+          "emoji": "🧍"
+        },
+        {
+          "es": "Entre",
+          "en": "Between",
+          "say": "EN-treh",
+          "emoji": "↕️"
+        },
+        {
+          "es": "Encima de",
+          "en": "On top of",
+          "say": "en-THEE-mah deh",
+          "emoji": "🔝"
+        },
+        {
+          "es": "Debajo de",
+          "en": "Under",
+          "say": "deh-BAH-hoh deh",
+          "emoji": "⬇️"
+        },
+        {
+          "es": "Dentro de",
+          "en": "Inside",
+          "say": "DEN-troh deh",
+          "emoji": "📦"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "La",
+            "farmacia",
+            "está",
+            "al",
+            "lado",
+            "del",
+            "banco"
+          ],
+          "shuffle": [
+            "banco",
+            "lado",
+            "al",
+            "farmacia",
+            "está",
+            "La",
+            "del"
+          ],
+          "en": "The chemist's is next to the bank."
+        },
+        {
+          "correct": [
+            "El",
+            "gato",
+            "está",
+            "debajo",
+            "de",
+            "la",
+            "mesa"
+          ],
+          "shuffle": [
+            "la",
+            "gato",
+            "está",
+            "debajo",
+            "El",
+            "de",
+            "mesa"
+          ],
+          "en": "The cat is under the table."
+        },
+        {
+          "correct": [
+            "Mi",
+            "casa",
+            "está",
+            "enfrente",
+            "del",
+            "parque"
+          ],
+          "shuffle": [
+            "está",
+            "casa",
+            "parque",
+            "enfrente",
+            "del",
+            "Mi"
+          ],
+          "en": "My house is opposite the park."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Detrás de' means:",
+          "opts": [
+            "Behind",
+            "In front of",
+            "Next to"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "La farmacia está al lado ___ banco.",
+          "opts": [
+            "del",
+            "de el",
+            "al"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Where's the Cat?",
+        "paras": [
+          "Luna can't find her cat. '¿Está debajo de la cama?' 'No.'",
+          "'¿Está detrás del sofá? ¿Dentro del armario?' 'No, no…'",
+          "Then Sol points up. '¡Mira! Está encima de la nevera, entre las cajas.' '¡Gato travieso!'"
+        ],
+        "qs": [
+          {
+            "q": "What has Luna lost?",
+            "opts": [
+              "Her cat",
+              "Her dog",
+              "Her keys"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Was it under the bed?",
+            "opts": [
+              "No",
+              "Yes",
+              "Sometimes"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Where was it?",
+            "opts": [
+              "On top of the fridge",
+              "In the wardrobe",
+              "Behind the sofa"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 165,
+      "title": "En el hotel",
+      "subtitle": "At the hotel",
+      "emoji": "🏨",
+      "milestone": false,
+      "funFact": "In Spain, the ground floor is 'la planta baja', and the floor above it is 'la primera planta'.",
+      "phrase": {
+        "es": "Tenemos una habitación doble con vistas al mar.",
+        "en": "We have a double room with a sea view."
+      },
+      "words": [
+        {
+          "es": "El hotel",
+          "en": "The hotel",
+          "say": "el oh-TEL",
+          "emoji": "🏨"
+        },
+        {
+          "es": "La habitación doble",
+          "en": "The double room",
+          "say": "lah ah-bee-tah-THYON DOH-bleh",
+          "emoji": "🛏️"
+        },
+        {
+          "es": "La llave",
+          "en": "The key",
+          "say": "lah YAH-beh",
+          "emoji": "🔑"
+        },
+        {
+          "es": "La recepción",
+          "en": "Reception",
+          "say": "lah rreh-thep-THYON",
+          "emoji": "🛎️"
+        },
+        {
+          "es": "Reservar",
+          "en": "To book",
+          "say": "rreh-sehr-BAR",
+          "emoji": "📲"
+        },
+        {
+          "es": "El desayuno incluido",
+          "en": "Breakfast included",
+          "say": "el deh-sah-YOO-noh een-kloo-EE-doh",
+          "emoji": "🥞"
+        },
+        {
+          "es": "La planta",
+          "en": "The floor (storey)",
+          "say": "lah PLAN-tah",
+          "emoji": "🏢"
+        },
+        {
+          "es": "Las vistas al mar",
+          "en": "Sea views",
+          "say": "las BEES-tas al mar",
+          "emoji": "🌅"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Tenemos",
+            "una",
+            "habitación",
+            "doble",
+            "con",
+            "vistas",
+            "al",
+            "mar"
+          ],
+          "shuffle": [
+            "doble",
+            "habitación",
+            "Tenemos",
+            "una",
+            "mar",
+            "al",
+            "vistas",
+            "con"
+          ],
+          "en": "We have a double room with a sea view."
+        },
+        {
+          "correct": [
+            "La",
+            "recepción",
+            "está",
+            "en",
+            "la",
+            "planta",
+            "baja"
+          ],
+          "shuffle": [
+            "la",
+            "La",
+            "está",
+            "en",
+            "planta",
+            "baja",
+            "recepción"
+          ],
+          "en": "Reception is on the ground floor."
+        },
+        {
+          "correct": [
+            "Mis",
+            "padres",
+            "reservaron",
+            "el",
+            "hotel",
+            "por",
+            "internet"
+          ],
+          "shuffle": [
+            "internet",
+            "padres",
+            "el",
+            "por",
+            "hotel",
+            "Mis",
+            "reservaron"
+          ],
+          "en": "My parents booked the hotel online."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Reservar' means:",
+          "opts": [
+            "To book",
+            "To reserve a seat only",
+            "To save"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'La llave' is:",
+          "opts": [
+            "The key",
+            "The lift",
+            "The bill"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Room 305",
+        "paras": [
+          "At reception: 'Buenas tardes. Tenemos una reserva a nombre de García.'",
+          "'Sí. Una habitación doble y una individual, con el desayuno incluido. Aquí tienen las llaves. Están en la tercera planta.'",
+          "Luna opens the window. '¡Qué vistas al mar tan bonitas! ¡Me encanta este hotel!'"
+        ],
+        "qs": [
+          {
+            "q": "Whose name is the booking under?",
+            "opts": [
+              "García",
+              "Sol",
+              "Luna"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Which floor are the rooms on?",
+            "opts": [
+              "The third floor",
+              "The ground floor",
+              "The first floor"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What can Luna see from the window?",
+            "opts": [
+              "The sea",
+              "The mountains",
+              "The city"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 166,
+      "title": "El mapa de España",
+      "subtitle": "The map of Spain",
+      "emoji": "🧭",
+      "milestone": false,
+      "funFact": "Spain has two groups of islands: the Balearic Islands in the Mediterranean Sea, and the Canary Islands in the Atlantic Ocean, near Africa.",
+      "phrase": {
+        "es": "Madrid está en el centro de España.",
+        "en": "Madrid is in the centre of Spain."
+      },
+      "words": [
+        {
+          "es": "La capital",
+          "en": "The capital",
+          "say": "lah kah-pee-TAL",
+          "emoji": "🏛️"
+        },
+        {
+          "es": "La costa",
+          "en": "The coast",
+          "say": "lah KOS-tah",
+          "emoji": "🌊"
+        },
+        {
+          "es": "La isla",
+          "en": "The island",
+          "say": "lah EES-lah",
+          "emoji": "🏝️"
+        },
+        {
+          "es": "El norte",
+          "en": "The north",
+          "say": "el NOR-teh",
+          "emoji": "⬆️"
+        },
+        {
+          "es": "El sur",
+          "en": "The south",
+          "say": "el soor",
+          "emoji": "⬇️"
+        },
+        {
+          "es": "El este",
+          "en": "The east",
+          "say": "el ES-teh",
+          "emoji": "➡️"
+        },
+        {
+          "es": "El oeste",
+          "en": "The west",
+          "say": "el oh-ES-teh",
+          "emoji": "⬅️"
+        },
+        {
+          "es": "El centro",
+          "en": "The centre",
+          "say": "el THEN-troh",
+          "emoji": "🎯"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Madrid",
+            "está",
+            "en",
+            "el",
+            "centro",
+            "de",
+            "España"
+          ],
+          "shuffle": [
+            "en",
+            "centro",
+            "de",
+            "Madrid",
+            "España",
+            "está",
+            "el"
+          ],
+          "en": "Madrid is in the centre of Spain."
+        },
+        {
+          "correct": [
+            "Galicia",
+            "está",
+            "en",
+            "el",
+            "norte"
+          ],
+          "shuffle": [
+            "está",
+            "en",
+            "Galicia",
+            "norte",
+            "el"
+          ],
+          "en": "Galicia is in the north."
+        },
+        {
+          "correct": [
+            "Las",
+            "islas",
+            "Canarias",
+            "están",
+            "en",
+            "el",
+            "océano",
+            "Atlántico"
+          ],
+          "shuffle": [
+            "Canarias",
+            "Las",
+            "Atlántico",
+            "en",
+            "islas",
+            "océano",
+            "están",
+            "el"
+          ],
+          "en": "The Canary Islands are in the Atlantic Ocean."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'El sur' means:",
+          "opts": [
+            "The south",
+            "The north",
+            "The sun"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "The capital of Spain is ___",
+          "opts": [
+            "Madrid",
+            "Barcelona",
+            "Sevilla"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Sol's Map",
+        "paras": [
+          "Sol draws a map of Spain for school.",
+          "'Madrid es la capital y está en el centro. En el norte está Galicia, con mucha lluvia.'",
+          "'En el sur está Andalucía, con mucho sol. Y en el este, en el mar Mediterráneo, están las islas Baleares.'"
+        ],
+        "qs": [
+          {
+            "q": "Where is Madrid?",
+            "opts": [
+              "In the centre",
+              "In the north",
+              "On the coast"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What is Galicia known for here?",
+            "opts": [
+              "Lots of rain",
+              "Lots of sun",
+              "Islands"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Where are the Balearic Islands?",
+            "opts": [
+              "In the Mediterranean",
+              "In the Atlantic",
+              "In the north"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 167,
+      "title": "Visitando la ciudad",
+      "subtitle": "Sightseeing",
+      "emoji": "📸",
+      "milestone": false,
+      "funFact": "The Alhambra in Granada is a famous palace and fortress built by the Nasrid sultans. It's one of the most visited monuments in Spain.",
+      "phrase": {
+        "es": "Hice muchas fotos desde el mirador.",
+        "en": "I took lots of photos from the viewpoint."
+      },
+      "words": [
+        {
+          "es": "La catedral",
+          "en": "The cathedral",
+          "say": "lah kah-teh-DRAL",
+          "emoji": "⛪"
+        },
+        {
+          "es": "El palacio",
+          "en": "The palace",
+          "say": "el pah-LAH-thyoh",
+          "emoji": "🏰"
+        },
+        {
+          "es": "El monumento",
+          "en": "The monument",
+          "say": "el moh-noo-MEN-toh",
+          "emoji": "🗽"
+        },
+        {
+          "es": "Hacer fotos",
+          "en": "To take photos",
+          "say": "ah-THEHR FOH-tos",
+          "emoji": "📸"
+        },
+        {
+          "es": "El mirador",
+          "en": "The viewpoint",
+          "say": "el mee-rah-DOR",
+          "emoji": "🔭"
+        },
+        {
+          "es": "El recuerdo",
+          "en": "The souvenir",
+          "say": "el rreh-KWEHR-doh",
+          "emoji": "🧲"
+        },
+        {
+          "es": "La visita guiada",
+          "en": "The guided tour",
+          "say": "lah bee-SEE-tah gee-AH-dah",
+          "emoji": "🎧"
+        },
+        {
+          "es": "El casco antiguo",
+          "en": "The old town",
+          "say": "el KAS-koh an-TEE-gwoh",
+          "emoji": "🏘️"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Visitamos",
+            "la",
+            "catedral",
+            "de",
+            "Santiago"
+          ],
+          "shuffle": [
+            "de",
+            "Santiago",
+            "Visitamos",
+            "catedral",
+            "la"
+          ],
+          "en": "We visited Santiago Cathedral."
+        },
+        {
+          "correct": [
+            "Hice",
+            "muchas",
+            "fotos",
+            "desde",
+            "el",
+            "mirador"
+          ],
+          "shuffle": [
+            "Hice",
+            "muchas",
+            "desde",
+            "mirador",
+            "fotos",
+            "el"
+          ],
+          "en": "I took lots of photos from the viewpoint."
+        },
+        {
+          "correct": [
+            "Compré",
+            "un",
+            "recuerdo",
+            "para",
+            "mi",
+            "abuela"
+          ],
+          "shuffle": [
+            "abuela",
+            "mi",
+            "Compré",
+            "recuerdo",
+            "un",
+            "para"
+          ],
+          "en": "I bought a souvenir for my grandma."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Un recuerdo' can be:",
+          "opts": [
+            "A souvenir",
+            "A record",
+            "A recipe"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'El casco antiguo' is:",
+          "opts": [
+            "The old town",
+            "An old helmet",
+            "An old castle"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "A Day in Granada",
+        "paras": [
+          "Luna's family is in Granada. 'Por la mañana hicimos una visita guiada por la Alhambra.'",
+          "'Después paseamos por el casco antiguo y subimos a un mirador. ¡Hice cien fotos!'",
+          "'Al final, compré un recuerdo para mi abuela: un imán con un dibujo del palacio.'"
+        ],
+        "qs": [
+          {
+            "q": "What did they visit in the morning?",
+            "opts": [
+              "The Alhambra",
+              "A cathedral",
+              "A museum"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How many photos did Luna take?",
+            "opts": [
+              "A hundred",
+              "Ten",
+              "A thousand"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What souvenir did she buy?",
+            "opts": [
+              "A magnet",
+              "A T-shirt",
+              "A postcard"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 168,
+      "title": "Hacer la maleta",
+      "subtitle": "Packing the suitcase",
+      "emoji": "🧳",
+      "milestone": false,
+      "funFact": "In Spain, everyone aged 14 or over must have an ID card called the 'DNI'. Younger children can have one too.",
+      "phrase": {
+        "es": "Mañana voy a hacer la maleta.",
+        "en": "Tomorrow I'm going to pack my suitcase."
+      },
+      "words": [
+        {
+          "es": "Hacer la maleta",
+          "en": "To pack the suitcase",
+          "say": "ah-THEHR lah mah-LEH-tah",
+          "emoji": "🧳"
+        },
+        {
+          "es": "El pasaporte",
+          "en": "The passport",
+          "say": "el pah-sah-POR-teh",
+          "emoji": "🛂"
+        },
+        {
+          "es": "El DNI",
+          "en": "The ID card",
+          "say": "el deh-eh-neh-EE",
+          "emoji": "🪪"
+        },
+        {
+          "es": "La gorra",
+          "en": "The cap",
+          "say": "lah GOH-rrah",
+          "emoji": "🧢"
+        },
+        {
+          "es": "Las chanclas",
+          "en": "Flip-flops",
+          "say": "las CHAN-klas",
+          "emoji": "🩴"
+        },
+        {
+          "es": "El cargador",
+          "en": "The charger",
+          "say": "el kar-gah-DOR",
+          "emoji": "🔌"
+        },
+        {
+          "es": "El neceser",
+          "en": "The washbag",
+          "say": "el neh-theh-SEHR",
+          "emoji": "🧴"
+        },
+        {
+          "es": "No te olvides de",
+          "en": "Don't forget",
+          "say": "noh teh ol-BEE-des deh",
+          "emoji": "❗"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Mañana",
+            "voy",
+            "a",
+            "hacer",
+            "la",
+            "maleta"
+          ],
+          "shuffle": [
+            "Mañana",
+            "a",
+            "voy",
+            "la",
+            "hacer",
+            "maleta"
+          ],
+          "en": "Tomorrow I'm going to pack my suitcase."
+        },
+        {
+          "correct": [
+            "No",
+            "te",
+            "olvides",
+            "del",
+            "pasaporte"
+          ],
+          "shuffle": [
+            "te",
+            "pasaporte",
+            "No",
+            "olvides",
+            "del"
+          ],
+          "en": "Don't forget your passport."
+        },
+        {
+          "correct": [
+            "Mis",
+            "chanclas",
+            "están",
+            "en",
+            "la",
+            "maleta"
+          ],
+          "shuffle": [
+            "en",
+            "Mis",
+            "maleta",
+            "la",
+            "están",
+            "chanclas"
+          ],
+          "en": "My flip-flops are in the suitcase."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Las chanclas' are:",
+          "opts": [
+            "Flip-flops",
+            "Slippers",
+            "Trainers"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'No te olvides de' means:",
+          "opts": [
+            "Don't forget",
+            "Don't worry",
+            "Don't leave"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Ready to Go?",
+        "paras": [
+          "Sol is packing for the holidays. 'Bañador, chanclas, gorra… ¡listo!'",
+          "Mamá checks: '¿Y el neceser? ¿Y el cargador del móvil?' '¡Ay, se me olvidó!'",
+          "'Y no te olvides del pasaporte. ¡Sin pasaporte no hay viaje!'"
+        ],
+        "qs": [
+          {
+            "q": "What had Sol forgotten?",
+            "opts": [
+              "His washbag and charger",
+              "His flip-flops",
+              "His cap"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Mum say is essential?",
+            "opts": [
+              "The passport",
+              "The swimsuit",
+              "The cap"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Where is Sol going?",
+            "opts": [
+              "On holiday",
+              "To school",
+              "To his grandma's"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 169,
+      "title": "¿Me puede ayudar?",
+      "subtitle": "Can you help me?",
+      "emoji": "🆘",
+      "milestone": false,
+      "funFact": "Say 'perdona' to friends and 'perdone' to adults you don't know. Both mean 'excuse me'.",
+      "phrase": {
+        "es": "Perdone, me he perdido. ¿Me puede ayudar?",
+        "en": "Excuse me, I'm lost. Can you help me?"
+      },
+      "words": [
+        {
+          "es": "Me he perdido",
+          "en": "I'm lost",
+          "say": "meh eh pehr-DEE-doh",
+          "emoji": "😟"
+        },
+        {
+          "es": "¿Me puede ayudar?",
+          "en": "Can you help me? (polite)",
+          "say": "meh PWEH-deh ah-yoo-DAR",
+          "emoji": "🆘"
+        },
+        {
+          "es": "Perdone",
+          "en": "Excuse me (polite)",
+          "say": "pehr-DOH-neh",
+          "emoji": "🙇"
+        },
+        {
+          "es": "La oficina de turismo",
+          "en": "The tourist office",
+          "say": "lah oh-fee-THEE-nah deh too-REES-moh",
+          "emoji": "ℹ️"
+        },
+        {
+          "es": "¿Me lo repite?",
+          "en": "Could you repeat that?",
+          "say": "meh loh rreh-PEE-teh",
+          "emoji": "🔁"
+        },
+        {
+          "es": "Más despacio, por favor",
+          "en": "More slowly, please",
+          "say": "mas des-PAH-thyoh por fah-BOR",
+          "emoji": "🐢"
+        },
+        {
+          "es": "No entiendo",
+          "en": "I don't understand",
+          "say": "noh en-TYEN-doh",
+          "emoji": "❓"
+        },
+        {
+          "es": "La comisaría",
+          "en": "The police station",
+          "say": "lah koh-mee-sah-REE-ah",
+          "emoji": "👮"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "No",
+            "entiendo",
+            "la",
+            "pregunta"
+          ],
+          "shuffle": [
+            "No",
+            "pregunta",
+            "la",
+            "entiendo"
+          ],
+          "en": "I don't understand the question."
+        },
+        {
+          "correct": [
+            "La",
+            "oficina",
+            "de",
+            "turismo",
+            "está",
+            "en",
+            "la",
+            "plaza"
+          ],
+          "shuffle": [
+            "de",
+            "la",
+            "plaza",
+            "turismo",
+            "La",
+            "en",
+            "está",
+            "oficina"
+          ],
+          "en": "The tourist office is in the square."
+        },
+        {
+          "correct": [
+            "Mi",
+            "hermano",
+            "se",
+            "ha",
+            "perdido",
+            "en",
+            "el",
+            "parque"
+          ],
+          "shuffle": [
+            "Mi",
+            "hermano",
+            "perdido",
+            "en",
+            "ha",
+            "parque",
+            "se",
+            "el"
+          ],
+          "en": "My brother has got lost in the park."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'No entiendo' means:",
+          "opts": [
+            "I don't understand",
+            "I don't hear",
+            "I don't agree"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Perdone' is used to:",
+          "opts": [
+            "Politely get someone's attention",
+            "Say goodbye",
+            "Say thank you"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Lost in Madrid",
+        "paras": [
+          "Luna can't see her parents. She asks a lady: 'Perdone, me he perdido. ¿Me puede ayudar?'",
+          "The lady talks very fast. 'Lo siento, no entiendo. Más despacio, por favor.'",
+          "'Vamos a la oficina de turismo. Está ahí, al lado del museo.' And there are her parents! '¡Luna!'"
+        ],
+        "qs": [
+          {
+            "q": "Who does Luna ask for help?",
+            "opts": [
+              "A lady",
+              "A police officer",
+              "A child"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Luna ask the lady to do?",
+            "opts": [
+              "Speak more slowly",
+              "Speak in English",
+              "Call her mum"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Where does Luna find her parents?",
+            "opts": [
+              "At the tourist office",
+              "In the museum",
+              "At the hotel"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 170,
+      "title": "¡Campeón de viajes!",
+      "subtitle": "Travel champion",
+      "emoji": "🏆",
+      "milestone": true,
+      "funFact": "You can now travel around Spain in Spanish: buy tickets, find your way, check into a hotel and ask for help!",
+      "phrase": {
+        "es": "Quería un billete de ida y vuelta a Barcelona, por favor.",
+        "en": "I'd like a return ticket to Barcelona, please."
+      },
+      "words": [
+        {
+          "es": "En tren",
+          "en": "By train",
+          "say": "en tren",
+          "emoji": "🚆"
+        },
+        {
+          "es": "Un billete de ida y vuelta",
+          "en": "A return ticket",
+          "say": "oon bee-YEH-teh deh EE-dah ee BWEL-tah",
+          "emoji": "🎫"
+        },
+        {
+          "es": "Gira a la derecha",
+          "en": "Turn right",
+          "say": "HEE-rah ah lah deh-REH-chah",
+          "emoji": "↪️"
+        },
+        {
+          "es": "Al lado de",
+          "en": "Next to",
+          "say": "al LAH-doh deh",
+          "emoji": "↔️"
+        },
+        {
+          "es": "La habitación doble",
+          "en": "The double room",
+          "say": "lah ah-bee-tah-THYON DOH-bleh",
+          "emoji": "🛏️"
+        },
+        {
+          "es": "El norte",
+          "en": "The north",
+          "say": "el NOR-teh",
+          "emoji": "⬆️"
+        },
+        {
+          "es": "Hacer la maleta",
+          "en": "To pack the suitcase",
+          "say": "ah-THEHR lah mah-LEH-tah",
+          "emoji": "🧳"
+        },
+        {
+          "es": "Me he perdido",
+          "en": "I'm lost",
+          "say": "meh eh pehr-DEE-doh",
+          "emoji": "😟"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "El",
+            "tren",
+            "sale",
+            "del",
+            "andén",
+            "tres"
+          ],
+          "shuffle": [
+            "El",
+            "andén",
+            "sale",
+            "del",
+            "tren",
+            "tres"
+          ],
+          "en": "The train leaves from platform three."
+        },
+        {
+          "correct": [
+            "El",
+            "hotel",
+            "está",
+            "enfrente",
+            "de",
+            "la",
+            "estación"
+          ],
+          "shuffle": [
+            "estación",
+            "enfrente",
+            "está",
+            "hotel",
+            "El",
+            "la",
+            "de"
+          ],
+          "en": "The hotel is opposite the station."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'La llegada' means:",
+          "opts": [
+            "The arrival",
+            "The departure",
+            "The delay"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "El banco está ___ de la farmacia. (next to)",
+          "opts": [
+            "al lado",
+            "encima",
+            "dentro"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Sigue todo recto' means:",
+          "opts": [
+            "Keep going straight on",
+            "Turn round",
+            "Stop here"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'¿Me lo repite?' means:",
+          "opts": [
+            "Could you repeat that?",
+            "Could you return it?",
+            "Could you reply?"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "The Great Trip",
+        "paras": [
+          "Sol and Luna plan a trip around Spain.",
+          "'Primero iremos a Barcelona en tren. Después a Granada para ver la Alhambra.'",
+          "'Y al final, ¡a las islas Canarias en avión! Voy a hacer la maleta ahora mismo,' says Luna."
+        ],
+        "qs": [
+          {
+            "q": "Where will they go first?",
+            "opts": [
+              "Barcelona",
+              "Granada",
+              "The Canary Islands"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What will they see in Granada?",
+            "opts": [
+              "The Alhambra",
+              "The beach",
+              "A football match"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How will they get to the Canary Islands?",
+            "opts": [
+              "By plane",
+              "By boat",
+              "By train"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    }
+  ]
+}

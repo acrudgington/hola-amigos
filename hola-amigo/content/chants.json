@@ -101,5 +101,13 @@
     {"who": "luna", "es": "¡Claro que sí! ¡Aquí tienes tu plato!", "en": "Of course! Here's your plate!"},
     {"who": "sol", "es": "¿Cuánto es todo? ¿Cuánto es?", "en": "How much is everything? How much is it?"},
     {"who": "luna", "es": "¡Son cinco euros! ¡Gracias, y hasta otra vez!", "en": "That's five euros! Thank you, and see you again!"}
+  ] },
+  { "id": "por-donde", "world": 19, "title": "¿Por dónde se va?", "en": "Which way is it?", "emoji": "🗺️", "bpm": 104, "lines": [
+    {"who": "sol", "es": "¿Por dónde se va? ¿Por dónde se va?", "en": "Which way is it? Which way is it?"},
+    {"who": "luna", "es": "¡Todo recto, todo recto, y ya está!", "en": "Straight on, straight on, and that's it!"},
+    {"who": "sol", "es": "¿A la derecha? ¿A la izquierda?", "en": "To the right? To the left?"},
+    {"who": "luna", "es": "¡A la derecha, al lado de la tienda!", "en": "To the right, next to the shop!"},
+    {"who": "sol", "es": "¿Y la estación? ¿Está muy lejos?", "en": "And the station? Is it very far?"},
+    {"who": "luna", "es": "¡No, está cerca, enfrente del parque viejo!", "en": "No, it's close, opposite the old park!"}
   ] }
 ]
