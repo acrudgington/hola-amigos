@@ -381,7 +381,7 @@
             "ans": 0
           },
           {
-            "q": "What does Luna need after the chili?",
+            "q": "What does Luna need after the chilli?",
             "opts": [
               "Water",
               "Milk",
@@ -939,13 +939,13 @@
     },
     {
       "id": 100,
-      "title": "¡MEGA CAMPEÓN!",
+      "title": "¡MEGACAMPEÓN!",
       "subtitle": "Final Mega Champion",
       "emoji": "🏆",
       "milestone": true,
       "funFact": "¡FELICIDADES! You've completed all 100 lessons and nearly 700 words! You ARE a Spanish superstar! 🎉🌟🏆",
       "phrase": {
-        "es": "¡Soy un mega campeón del español!",
+        "es": "¡Soy un megacampeón de español!",
         "en": "I am a mega Spanish champion!"
       },
       "words": [
@@ -1099,7 +1099,7 @@
         "paras": [
           "Sol and Luna stand on top of the mountain. 'We did it!' they shout to the sky.",
           "'100 lessons! ¡Casi 700 palabras! We can talk about so many things in Spanish!'",
-          "They look down at their journey — from ¡Hola! to today. ¡Qué viaje increíble! ¡Eres un MEGA CAMPEÓN! 🏆🌟"
+          "They look down at their journey — from ¡Hola! to today. ¡Qué viaje increíble! ¡Eres un MEGACAMPEÓN! 🏆🌟"
         ],
         "qs": [
           {

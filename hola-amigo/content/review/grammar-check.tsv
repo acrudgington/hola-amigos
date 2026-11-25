@@ -1,0 +1,7 @@
+Where	Rule	Text	LanguageTool says
+L19 story 3	ESPACIO_DESPUES_DE_PUNTO	«...Me» in «...Me gusta la pizza con verduras. Mamá»	Falta un espacio después del punto. → ... Me
+L28 story 2	CAPITALIZATION_AFTER_QUESTION_MARK	« says» in «That's quite barato!' says mamá»	Falta una mayúscula o un signo de puntuación. → , says /  Says
+L28 story 2	A_PARTICIPIO	«a» in «a vestido.»	El v. ‘haber’ se escribe con hache. → ha
+L28 story 2	ES_QUESTION_MARK	«80» in «80 euros!»	Símbolo desparejado: Parece que falta un ‘¡’ → ¡80
+L54 word	COMMA_MARCADOR_DISCURSIVO	«embargo» in «Sin embargo»	Esta locución se escribe normalmente entre comas. Use un punto y coma para empezar una nueva frase que contrasta con la anterior. → embargo,
+L100 story 2	ES_QUESTION_MARK	«100» in «100 lessons! ¡Casi 700 palabras! We can talk about so many things in Spanish!»	Símbolo desparejado: Parece que falta un ‘¡’ → ¡100

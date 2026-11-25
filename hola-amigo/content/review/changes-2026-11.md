@@ -213,3 +213,33 @@ Words, spellings and fun facts were checked against the RAE (Real Academia Espa�
 | 77 | Madrid Zoo is famous for its giant pandas — born there by special arrangement with China! | Madrid Zoo has giant pandas from China — and several panda cubs have been born there! | current pair arrived in 2024; earlier cubs were born in Madrid | Zoo Aquarium de Madrid press releases (2021 twins; new pair 2024) |
 | 7 | Spanish kids sing 'Cabeza, hombros, rodillas, pies'! | Spanish kids sing 'Cabeza, hombros, rodillas y pies'! | the song's usual Spanish title | Guiainfantil.com |
 | 22 | Spanish kids often don't sleep until 10pm! | In Spain, dinner is often at 9pm or later — later than almost anywhere else in Europe! | 'kids don't sleep until 10pm' wasn't supported; late dinners are | Xataka; El Independiente |
+
+## Third pass: spelling check of every Spanish word
+
+All Spanish text (words, phrases, sentences, stories, questions) was spell-checked against the RLA-ES Spanish dictionary (as used by LibreOffice and Firefox). No misspellings or missing accents were found. Changes:
+
+| Before | After | Why | Source |
+|---|---|---|---|
+| "title": "¡Super Campeón!" | "title": "¡Supercampeón!" | prefixes super- and mega- are written joined to the word | RAE, Ortografía (prefijos) and Diccionario panhispánico de dudas «super-» |
+| ¡Soy un super campeón del español! | ¡Soy un supercampeón de español! | prefixes super- and mega- are written joined to the word | RAE, Ortografía (prefijos) and Diccionario panhispánico de dudas «super-» |
+| You are a SUPER CAMPEÓN! | You are a SUPERCAMPEÓN! | prefixes super- and mega- are written joined to the word | RAE, Ortografía (prefijos) and Diccionario panhispánico de dudas «super-» |
+| for 30 mins! | for about 30 minutes! | British English | — |
+| after the chili? | after the chilli? | British English | — |
+| "title": "¡MEGA CAMPEÓN!" | "title": "¡MEGACAMPEÓN!" | prefixes super- and mega- are written joined to the word | RAE, Ortografía (prefijos) and Diccionario panhispánico de dudas «super-» |
+| ¡Soy un mega campeón del español! | ¡Soy un megacampeón de español! | prefixes super- and mega- are written joined to the word | RAE, Ortografía (prefijos) and Diccionario panhispánico de dudas «super-» |
+| ¡Eres un MEGA CAMPEÓN! | ¡Eres un MEGACAMPEÓN! | prefixes super- and mega- are written joined to the word | RAE, Ortografía (prefijos) and Diccionario panhispánico de dudas «super-» |
+
+## Fourth pass: grammar check of every Spanish line
+
+All 1,393 Spanish lines (words, phrases, sentences, and the Spanish parts of stories, facts and questions) were checked with LanguageTool (`npm run content:grammar`). It flagged 14; 6 were false alarms (English words in mixed lines, a single listed word, and a leading ellipsis the RAE allows). Changes:
+
+| Lesson | Before | After | Why |
+|---|---|---|---|
+| 2 | Sí, sí, sí! | ¡Sí, sí, sí! | missing ¡ |
+| 3 | Nueve, diez! | ¡Nueve, diez! | missing ¡ |
+| 19 | Me gusta la pizza pero no me gusta el pescado. | Me gusta la pizza, pero no me gusta el pescado. | a comma goes before 'pero' |
+| 19 | 'Y me gusta la tarta también!' | '¡Y me gusta la tarta también!' | missing ¡ |
+| 57 | 'Las dos son ricas. Sí, claro, yes, yes, both are great!' | 'Las dos son ricas. ¡Sí, claro! Both are great!' | missing ¡ |
+| 87 | Me encanta el chocolate pero odio las verduras. | Me encanta el chocolate, pero odio las verduras. | a comma goes before 'pero' |
+| 90 | Primero matemáticas with | Primero, matemáticas, with | 'primero' introducing a list item takes a comma |
+| 54 | Es tarde sin embargo no tengo sueño | Estoy cansado y por eso me acuesto | 'sin embargo' needs commas the sentence tiles can't show; this uses 'por eso' from the same lesson |

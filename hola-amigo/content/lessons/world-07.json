@@ -490,24 +490,24 @@
         },
         {
           "correct": [
-            "Es",
-            "tarde",
-            "sin",
-            "embargo",
-            "no",
-            "tengo",
-            "sueño"
+            "Estoy",
+            "cansado",
+            "y",
+            "por",
+            "eso",
+            "me",
+            "acuesto"
           ],
           "shuffle": [
-            "tengo",
-            "tarde",
-            "Es",
-            "embargo",
-            "no",
-            "sueño",
-            "sin"
+            "acuesto",
+            "cansado",
+            "Estoy",
+            "por",
+            "eso",
+            "y",
+            "me"
           ],
-          "en": "It's late however I'm not sleepy."
+          "en": "I'm tired and that's why I go to bed."
         }
       ],
       "gaps": [],
@@ -924,7 +924,7 @@
         "paras": [
           "'¡Las galletas son lo mejor!' says Sol. '¡Tienes razón!' replies Luna. 'Yo también pienso así.'",
           "But Estrella says 'Yo no estoy de acuerdo. ¡La fruta es mejor!'",
-          "'Más o menos,' laughs Sol. 'Las dos son ricas. Sí, claro, yes, yes, both are great!'"
+          "'Más o menos,' laughs Sol. 'Las dos son ricas. ¡Sí, claro! Both are great!'"
         ],
         "qs": [
           {

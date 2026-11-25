@@ -273,7 +273,7 @@
       "milestone": false,
       "funFact": "In Spanish, 'me gusta' literally means 'it pleases me' — the food likes YOU, not the other way!",
       "phrase": {
-        "es": "Me encanta el chocolate pero odio las verduras.",
+        "es": "Me encanta el chocolate, pero odio las verduras.",
         "en": "I love chocolate but I hate vegetables."
       },
       "words": [
@@ -772,7 +772,7 @@
       "story": {
         "title": "My School Day",
         "paras": [
-          "Today is a busy school day. Primero matemáticas with números difíciles. Then la educación física — ¡corremos!",
+          "Today is a busy school day. Primero, matemáticas, with números difíciles. Then la educación física — ¡corremos!",
           "Después el arte — Luna paints una flor. Música — Sol sings una canción nueva.",
           "Mañana hay un examen de inglés. They have to estudiar a lot tonight!"
         ],
