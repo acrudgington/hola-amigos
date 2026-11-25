@@ -104,7 +104,7 @@ src/
 - **Screens never touch storage directly.** They go through `services` (`src/services/types.ts`), whose methods are all async. That lets a cloud backend replace on-device storage without changing any screen.
 - **Progress changes are pure functions** (`src/domain/progress.ts`) applied through one store (`src/state/useProgress.ts`). The store awards rewards, renders immediately, and queues saves so they always land in order.
 - **Navigation is a pure state machine** (`src/state/nav.ts`). Every transition (start lesson, finish activity, exit…) is unit tested.
-- **Product settings live in `src/config.ts`:** Castilian Spanish, pricing (£5/month or £40/year), the free tier and which backend to use.
+- **Product settings live in `src/config.ts`:** Castilian Spanish, pricing (€4/month or €40/year), the free tier and which backend to use.
 
 ## Deploy to Vercel (Recommended — Free)
 

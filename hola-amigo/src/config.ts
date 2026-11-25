@@ -29,23 +29,23 @@ export const PRIVACY = {
     address: "[Postal address in Spain]",
   },
   // Where Cloud Firestore keeps families' data (chosen when the database was created).
-  dataLocation: "Madrid, Spain",
+  dataLocation: { en: "Madrid, Spain", es: "Madrid (España)" },
   authority: { name: "Agencia Española de Protección de Datos (AEPD)", site: "www.aepd.es" },
 } as const;
 
 // Subscription plans (wired to payments in step 5).
 export const PRICING = {
-  currency: "GBP",
+  currency: "EUR",
   plans: [
-    { id: "monthly", label: "Monthly", price: 5, interval: "month" as const },
-    { id: "yearly", label: "Yearly", price: 40, interval: "year" as const, note: "Save £20 — 4 months free" },
+    { id: "monthly", label: "Monthly", price: 4, interval: "month" as const },
+    { id: "yearly", label: "Yearly", price: 40, interval: "year" as const, note: "Save €8 — 2 months free" },
   ],
   // The first world is free; everything else needs a subscription.
   freeLessonsUpTo: 8,
 } as const;
 
-export const formatPrice = (amount: number) =>
-  new Intl.NumberFormat(LANGUAGE.ui, { style: "currency", currency: PRICING.currency, maximumFractionDigits: amount % 1 ? 2 : 0 }).format(amount);
+export const formatPrice = (amount: number, locale: string = LANGUAGE.ui) =>
+  new Intl.NumberFormat(locale, { style: "currency", currency: PRICING.currency, maximumFractionDigits: amount % 1 ? 2 : 0 }).format(amount);
 
 // Which storage/auth backend to use. "local" keeps everything on this device;
 // "firebase" is added in step 2 and switched on with VITE_BACKEND=firebase.

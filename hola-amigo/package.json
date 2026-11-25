@@ -17,7 +17,8 @@
     "audio:check": "vite-node scripts/check-audio.ts --",
     "test:emulators": "firebase emulators:exec --only auth,firestore --project demo-hola-amigos \"vitest run --config vitest.emulators.config.ts\"",
     "emulators": "firebase emulators:start --only auth,firestore --project demo-hola-amigos",
-    "firebase:deploy-rules": "firebase deploy --only firestore:rules,firestore:indexes"
+    "firebase:deploy-rules": "firebase deploy --only firestore:rules,firestore:indexes",
+    "legal:export": "vite-node scripts/export-legal.ts"
   },
   "dependencies": {
     "@fontsource/fredoka": "5.3.0",
