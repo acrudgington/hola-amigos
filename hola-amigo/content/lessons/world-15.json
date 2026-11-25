@@ -1,0 +1,1742 @@
+{
+  "world": 15,
+  "lessons": [
+    {
+      "id": 121,
+      "title": "¿Adónde fuiste?",
+      "subtitle": "Where did you go?",
+      "emoji": "🗺️",
+      "milestone": false,
+      "funFact": "'Fui' means both 'I went' and 'I was'. In the past, the verbs 'ir' (to go) and 'ser' (to be) share the same forms!",
+      "phrase": {
+        "es": "El verano pasado fuimos a Galicia.",
+        "en": "Last summer we went to Galicia."
+      },
+      "words": [
+        {
+          "es": "Fuiste",
+          "en": "You went",
+          "say": "FWEES-teh",
+          "emoji": "🚶‍♀️"
+        },
+        {
+          "es": "Fuimos",
+          "en": "We went",
+          "say": "FWEE-mos",
+          "emoji": "🚗"
+        },
+        {
+          "es": "Fueron",
+          "en": "They went",
+          "say": "FWEH-ron",
+          "emoji": "🚌"
+        },
+        {
+          "es": "¿Adónde fuiste?",
+          "en": "Where did you go?",
+          "say": "ah-DON-deh FWEES-teh",
+          "emoji": "🗺️"
+        },
+        {
+          "es": "Fue genial",
+          "en": "It was great",
+          "say": "fweh heh-NYAL",
+          "emoji": "🌟"
+        },
+        {
+          "es": "Fue un desastre",
+          "en": "It was a disaster",
+          "say": "fweh oon deh-SAS-treh",
+          "emoji": "💥"
+        },
+        {
+          "es": "Fui de excursión",
+          "en": "I went on a trip",
+          "say": "fwee deh es-koor-SYON",
+          "emoji": "🎒"
+        },
+        {
+          "es": "El viaje fue largo",
+          "en": "The journey was long",
+          "say": "el BYAH-heh fweh LAR-goh",
+          "emoji": "🛤️"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "El",
+            "verano",
+            "pasado",
+            "fuimos",
+            "a",
+            "Galicia"
+          ],
+          "shuffle": [
+            "verano",
+            "El",
+            "a",
+            "pasado",
+            "fuimos",
+            "Galicia"
+          ],
+          "en": "Last summer we went to Galicia."
+        },
+        {
+          "correct": [
+            "La",
+            "fiesta",
+            "fue",
+            "genial"
+          ],
+          "shuffle": [
+            "fue",
+            "genial",
+            "fiesta",
+            "La"
+          ],
+          "en": "The party was great."
+        },
+        {
+          "correct": [
+            "Mis",
+            "primos",
+            "fueron",
+            "al",
+            "zoo"
+          ],
+          "shuffle": [
+            "fueron",
+            "primos",
+            "Mis",
+            "zoo",
+            "al"
+          ],
+          "en": "My cousins went to the zoo."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "Ayer yo ___ al cine.",
+          "opts": [
+            "fui",
+            "fue",
+            "fuiste"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "La película ___ muy divertida.",
+          "opts": [
+            "fue",
+            "fui",
+            "fueron"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Two Trips",
+        "paras": [
+          "'¿Adónde fuiste en verano, Luna?' asks Sol.",
+          "'Fui de excursión a la montaña con mi clase. ¡Fue genial! ¿Y tú?'",
+          "'Mi familia y yo fuimos a Londres. El viaje fue largo y llovió todos los días. ¡Fue un desastre!'"
+        ],
+        "qs": [
+          {
+            "q": "Where did Luna go?",
+            "opts": [
+              "To the mountains",
+              "To London",
+              "To the beach"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Who did Sol go with?",
+            "opts": [
+              "His family",
+              "His class",
+              "Luna"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How was Sol's trip?",
+            "opts": [
+              "A disaster",
+              "Great",
+              "Boring"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 122,
+      "title": "Hice, hizo, hicimos",
+      "subtitle": "I did, he did, we did",
+      "emoji": "🧁",
+      "milestone": false,
+      "funFact": "'Hizo' is spelt with a z, not a c, to keep the same 'th' sound as 'hice' and 'hiciste'.",
+      "phrase": {
+        "es": "Ayer hizo mucho calor.",
+        "en": "Yesterday it was very hot."
+      },
+      "words": [
+        {
+          "es": "Hice",
+          "en": "I did / I made",
+          "say": "EE-theh",
+          "emoji": "🧁"
+        },
+        {
+          "es": "Hizo",
+          "en": "He / She did",
+          "say": "EE-thoh",
+          "emoji": "🙋"
+        },
+        {
+          "es": "Hicimos",
+          "en": "We did / We made",
+          "say": "ee-THEE-mos",
+          "emoji": "🏗️"
+        },
+        {
+          "es": "Hicieron",
+          "en": "They did / They made",
+          "say": "ee-THYEH-ron",
+          "emoji": "🎨"
+        },
+        {
+          "es": "Hizo frío",
+          "en": "It was cold",
+          "say": "EE-thoh FREE-oh",
+          "emoji": "🥶"
+        },
+        {
+          "es": "Hizo calor",
+          "en": "It was hot",
+          "say": "EE-thoh kah-LOR",
+          "emoji": "🥵"
+        },
+        {
+          "es": "Hizo buen tiempo",
+          "en": "The weather was good",
+          "say": "EE-thoh bwen TYEM-poh",
+          "emoji": "🌤️"
+        },
+        {
+          "es": "Hice los deberes",
+          "en": "I did my homework",
+          "say": "EE-theh los deh-BEH-res",
+          "emoji": "📓"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Ayer",
+            "hizo",
+            "mucho",
+            "calor"
+          ],
+          "shuffle": [
+            "calor",
+            "Ayer",
+            "mucho",
+            "hizo"
+          ],
+          "en": "Yesterday it was very hot."
+        },
+        {
+          "correct": [
+            "Hicimos",
+            "una",
+            "tarta",
+            "de",
+            "chocolate"
+          ],
+          "shuffle": [
+            "tarta",
+            "chocolate",
+            "Hicimos",
+            "una",
+            "de"
+          ],
+          "en": "We made a chocolate cake."
+        },
+        {
+          "correct": [
+            "Mi",
+            "hermano",
+            "hizo",
+            "un",
+            "dibujo",
+            "precioso"
+          ],
+          "shuffle": [
+            "hizo",
+            "un",
+            "dibujo",
+            "hermano",
+            "Mi",
+            "precioso"
+          ],
+          "en": "My brother made a beautiful drawing."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "Ayer ___ frío. (hacer)",
+          "opts": [
+            "hizo",
+            "hice",
+            "hace"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Nosotros ___ los deberes.",
+          "opts": [
+            "hicimos",
+            "hicieron",
+            "hice"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "The Chocolate Cake",
+        "paras": [
+          "On Sunday, it was cold. 'Hizo mucho frío, así que hicimos una tarta en casa,' says Luna.",
+          "'Yo hice la mezcla y mi padre hizo el chocolate.'",
+          "'¿Y qué hizo tu hermano?' asks Sol. 'Se comió la mitad de la tarta. ¡Ja, ja!'"
+        ],
+        "qs": [
+          {
+            "q": "What was the weather like on Sunday?",
+            "opts": [
+              "Cold",
+              "Hot",
+              "Sunny"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What did Luna's dad make?",
+            "opts": [
+              "The chocolate",
+              "The mixture",
+              "The candles"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What did Luna's brother do?",
+            "opts": [
+              "He ate half the cake",
+              "He made the cake",
+              "He washed up"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 123,
+      "title": "Tuve y estuve",
+      "subtitle": "I had and I was",
+      "emoji": "🤒",
+      "milestone": false,
+      "funFact": "'Tuve' and 'estuve' are cousins: tener becomes 'tuve' and estar becomes 'estuve'. Learn one and you get the other free!",
+      "phrase": {
+        "es": "La semana pasada estuve enfermo.",
+        "en": "Last week I was ill."
+      },
+      "words": [
+        {
+          "es": "Tuve",
+          "en": "I had",
+          "say": "TOO-beh",
+          "emoji": "🎒"
+        },
+        {
+          "es": "Tuve que",
+          "en": "I had to",
+          "say": "TOO-beh keh",
+          "emoji": "⚠️"
+        },
+        {
+          "es": "Tuvo",
+          "en": "He / She had",
+          "say": "TOO-boh",
+          "emoji": "🐶"
+        },
+        {
+          "es": "Tuvimos",
+          "en": "We had",
+          "say": "too-BEE-mos",
+          "emoji": "🏠"
+        },
+        {
+          "es": "Estuve",
+          "en": "I was (somewhere)",
+          "say": "es-TOO-beh",
+          "emoji": "📍"
+        },
+        {
+          "es": "Estuvo",
+          "en": "He / She was",
+          "say": "es-TOO-boh",
+          "emoji": "🛋️"
+        },
+        {
+          "es": "Estuvimos",
+          "en": "We were",
+          "say": "es-too-BEE-mos",
+          "emoji": "🏕️"
+        },
+        {
+          "es": "Estuve enfermo",
+          "en": "I was ill",
+          "say": "es-TOO-beh en-FEHR-moh",
+          "emoji": "🤒"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Ayer",
+            "tuve",
+            "que",
+            "estudiar",
+            "mucho"
+          ],
+          "shuffle": [
+            "Ayer",
+            "estudiar",
+            "tuve",
+            "mucho",
+            "que"
+          ],
+          "en": "Yesterday I had to study a lot."
+        },
+        {
+          "correct": [
+            "Estuve",
+            "en",
+            "casa",
+            "de",
+            "mi",
+            "abuela"
+          ],
+          "shuffle": [
+            "abuela",
+            "mi",
+            "casa",
+            "de",
+            "en",
+            "Estuve"
+          ],
+          "en": "I was at my grandma's house."
+        },
+        {
+          "correct": [
+            "La",
+            "semana",
+            "pasada",
+            "estuve",
+            "enfermo"
+          ],
+          "shuffle": [
+            "estuve",
+            "La",
+            "enfermo",
+            "pasada",
+            "semana"
+          ],
+          "en": "Last week I was ill."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "Ayer ___ que limpiar mi habitación. (tener, I)",
+          "opts": [
+            "tuve",
+            "tuvo",
+            "tengo"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Nosotros ___ en la playa. (estar)",
+          "opts": [
+            "estuvimos",
+            "estuvieron",
+            "estuve"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Sol Was Ill",
+        "paras": [
+          "'¿Dónde estuviste el lunes, Sol?' asks the teacher.",
+          "'Estuve enfermo. Tuve fiebre y tuve que estar en la cama todo el día.'",
+          "'¡Pobrecito! ¿Y tu perro?' 'Mi perro estuvo conmigo todo el día. ¡Es el mejor enfermero!'"
+        ],
+        "qs": [
+          {
+            "q": "Why was Sol absent on Monday?",
+            "opts": [
+              "He was ill",
+              "He was on holiday",
+              "He was late"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Where did Sol have to stay?",
+            "opts": [
+              "In bed",
+              "At his grandma's",
+              "At school"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Who stayed with Sol?",
+            "opts": [
+              "His dog",
+              "Luna",
+              "His teacher"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 124,
+      "title": "Dije, puse, traje",
+      "subtitle": "I said, I put, I brought",
+      "emoji": "🎁",
+      "milestone": false,
+      "funFact": "'Traje' means 'I brought', but 'un traje' is also 'a suit'. Spanish loves words with two meanings!",
+      "phrase": {
+        "es": "Traje un regalo para mi amiga.",
+        "en": "I brought a present for my friend."
+      },
+      "words": [
+        {
+          "es": "Dije",
+          "en": "I said",
+          "say": "DEE-heh",
+          "emoji": "💬"
+        },
+        {
+          "es": "Vine",
+          "en": "I came",
+          "say": "BEE-neh",
+          "emoji": "🚶"
+        },
+        {
+          "es": "Puse",
+          "en": "I put",
+          "say": "POO-seh",
+          "emoji": "📦"
+        },
+        {
+          "es": "Pude",
+          "en": "I could / I managed to",
+          "say": "POO-deh",
+          "emoji": "💪"
+        },
+        {
+          "es": "Quise",
+          "en": "I wanted / I tried",
+          "say": "KEE-seh",
+          "emoji": "🙏"
+        },
+        {
+          "es": "Supe",
+          "en": "I found out",
+          "say": "SOO-peh",
+          "emoji": "💡"
+        },
+        {
+          "es": "Traje",
+          "en": "I brought",
+          "say": "TRAH-heh",
+          "emoji": "🎁"
+        },
+        {
+          "es": "Di",
+          "en": "I gave",
+          "say": "dee",
+          "emoji": "🤲"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Traje",
+            "un",
+            "regalo",
+            "para",
+            "mi",
+            "amiga"
+          ],
+          "shuffle": [
+            "regalo",
+            "para",
+            "Traje",
+            "amiga",
+            "mi",
+            "un"
+          ],
+          "en": "I brought a present for my friend."
+        },
+        {
+          "correct": [
+            "No",
+            "pude",
+            "ir",
+            "a",
+            "la",
+            "fiesta"
+          ],
+          "shuffle": [
+            "la",
+            "No",
+            "pude",
+            "fiesta",
+            "a",
+            "ir"
+          ],
+          "en": "I couldn't go to the party."
+        },
+        {
+          "correct": [
+            "Puse",
+            "los",
+            "libros",
+            "en",
+            "la",
+            "mochila"
+          ],
+          "shuffle": [
+            "libros",
+            "mochila",
+            "en",
+            "la",
+            "Puse",
+            "los"
+          ],
+          "en": "I put the books in my school bag."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "Poner → yo ___",
+          "opts": [
+            "puse",
+            "poní",
+            "pusí"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Ayer no ___ dormir. (poder, I)",
+          "opts": [
+            "pude",
+            "podí",
+            "puedo"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "The Secret",
+        "paras": [
+          "'Ayer supe un secreto,' says Sol. 'Es el cumpleaños de Luna.'",
+          "'Vine a su casa y traje un regalo. Puse el regalo en la mesa y le di un abrazo.'",
+          "'Le dije: ¡Feliz cumpleaños! Ella quiso abrir el regalo… ¡pero no pudo! Tenía mucho papel.'"
+        ],
+        "qs": [
+          {
+            "q": "What did Sol find out?",
+            "opts": [
+              "It was Luna's birthday",
+              "Luna was ill",
+              "There was a party"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Where did Sol put the present?",
+            "opts": [
+              "On the table",
+              "Under the bed",
+              "In the bag"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Why couldn't Luna open it?",
+            "opts": [
+              "It had lots of paper",
+              "It was locked",
+              "It was too big"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 125,
+      "title": "La excursión",
+      "subtitle": "The school trip",
+      "emoji": "🚌",
+      "milestone": false,
+      "funFact": "In Spain, a coach for trips and long journeys is often called 'el autocar', while 'el autobús' usually means the city bus.",
+      "phrase": {
+        "es": "Fuimos al museo en autocar.",
+        "en": "We went to the museum by coach."
+      },
+      "words": [
+        {
+          "es": "El autocar",
+          "en": "The coach",
+          "say": "el ow-toh-KAR",
+          "emoji": "🚍"
+        },
+        {
+          "es": "El guía",
+          "en": "The guide",
+          "say": "el GEE-ah",
+          "emoji": "🧑‍🏫"
+        },
+        {
+          "es": "La entrada",
+          "en": "The ticket / The entrance",
+          "say": "lah en-TRAH-dah",
+          "emoji": "🎟️"
+        },
+        {
+          "es": "El mapa",
+          "en": "The map",
+          "say": "el MAH-pah",
+          "emoji": "🗺️"
+        },
+        {
+          "es": "Nos perdimos",
+          "en": "We got lost",
+          "say": "nos pehr-DEE-mos",
+          "emoji": "😵"
+        },
+        {
+          "es": "Encontramos",
+          "en": "We found",
+          "say": "en-kon-TRAH-mos",
+          "emoji": "🔎"
+        },
+        {
+          "es": "El grupo",
+          "en": "The group",
+          "say": "el GROO-poh",
+          "emoji": "👥"
+        },
+        {
+          "es": "La visita",
+          "en": "The visit",
+          "say": "lah bee-SEE-tah",
+          "emoji": "🏛️"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Fuimos",
+            "al",
+            "museo",
+            "en",
+            "autocar"
+          ],
+          "shuffle": [
+            "Fuimos",
+            "autocar",
+            "museo",
+            "al",
+            "en"
+          ],
+          "en": "We went to the museum by coach."
+        },
+        {
+          "correct": [
+            "Nos",
+            "perdimos",
+            "en",
+            "la",
+            "ciudad"
+          ],
+          "shuffle": [
+            "ciudad",
+            "la",
+            "en",
+            "Nos",
+            "perdimos"
+          ],
+          "en": "We got lost in the city."
+        },
+        {
+          "correct": [
+            "Al",
+            "final",
+            "encontramos",
+            "al",
+            "guía"
+          ],
+          "shuffle": [
+            "al",
+            "final",
+            "Al",
+            "guía",
+            "encontramos"
+          ],
+          "en": "In the end we found the guide."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Nos perdimos' means:",
+          "opts": [
+            "We got lost",
+            "We lost the match",
+            "We were late"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'El autocar' is:",
+          "opts": [
+            "A coach",
+            "A car",
+            "A taxi"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Lost in the City",
+        "paras": [
+          "Last Friday, Luna's class went to Toledo by coach.",
+          "'La visita fue muy interesante. Pero Sol y yo miramos el mapa y… ¡nos perdimos!'",
+          "'Por suerte, encontramos al guía en la plaza. ¡Qué susto!'"
+        ],
+        "qs": [
+          {
+            "q": "Where did the class go?",
+            "opts": [
+              "Toledo",
+              "Madrid",
+              "Seville"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What happened to Sol and Luna?",
+            "opts": [
+              "They got lost",
+              "They missed the coach",
+              "They lost their tickets"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Where did they find the guide?",
+            "opts": [
+              "In the square",
+              "In the museum",
+              "On the coach"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 126,
+      "title": "Una noche en la montaña",
+      "subtitle": "A night in the mountains",
+      "emoji": "⛺",
+      "milestone": false,
+      "funFact": "A popular story says the Picos de Europa, in northern Spain, got their name because sailors coming home from America saw them first.",
+      "phrase": {
+        "es": "Acampamos cerca del río.",
+        "en": "We camped near the river."
+      },
+      "words": [
+        {
+          "es": "El río",
+          "en": "The river",
+          "say": "el RREE-oh",
+          "emoji": "🏞️"
+        },
+        {
+          "es": "La tienda de campaña",
+          "en": "The tent",
+          "say": "lah TYEN-dah deh kam-PAH-nyah",
+          "emoji": "⛺"
+        },
+        {
+          "es": "El saco de dormir",
+          "en": "The sleeping bag",
+          "say": "el SAH-koh deh dor-MEER",
+          "emoji": "🛌"
+        },
+        {
+          "es": "La linterna",
+          "en": "The torch",
+          "say": "lah leen-TEHR-nah",
+          "emoji": "🔦"
+        },
+        {
+          "es": "Subimos",
+          "en": "We climbed / We went up",
+          "say": "soo-BEE-mos",
+          "emoji": "🧗"
+        },
+        {
+          "es": "Acampamos",
+          "en": "We camped",
+          "say": "ah-kam-PAH-mos",
+          "emoji": "🏕️"
+        },
+        {
+          "es": "La hoguera",
+          "en": "The campfire",
+          "say": "lah oh-GEH-rah",
+          "emoji": "🔥"
+        },
+        {
+          "es": "El camino",
+          "en": "The path",
+          "say": "el kah-MEE-noh",
+          "emoji": "🥾"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Acampamos",
+            "cerca",
+            "del",
+            "río"
+          ],
+          "shuffle": [
+            "del",
+            "río",
+            "Acampamos",
+            "cerca"
+          ],
+          "en": "We camped near the river."
+        },
+        {
+          "correct": [
+            "Subimos",
+            "la",
+            "montaña",
+            "por",
+            "el",
+            "camino"
+          ],
+          "shuffle": [
+            "por",
+            "montaña",
+            "camino",
+            "la",
+            "el",
+            "Subimos"
+          ],
+          "en": "We climbed the mountain along the path."
+        },
+        {
+          "correct": [
+            "Por",
+            "la",
+            "noche",
+            "usamos",
+            "la",
+            "linterna"
+          ],
+          "shuffle": [
+            "la",
+            "Por",
+            "noche",
+            "usamos",
+            "la",
+            "linterna"
+          ],
+          "en": "At night we used the torch."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'La linterna' is:",
+          "opts": [
+            "A torch",
+            "A lantern festival",
+            "A window"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Acampamos' means:",
+          "opts": [
+            "We camped",
+            "We climbed",
+            "We shouted"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Under the Stars",
+        "paras": [
+          "Sol's family went camping in the Picos de Europa.",
+          "'Subimos por un camino muy largo. Acampamos cerca de un río y montamos la tienda de campaña.'",
+          "'Por la noche, hicimos una hoguera y miramos las estrellas. Dormí en mi saco de dormir con la linterna.'"
+        ],
+        "qs": [
+          {
+            "q": "Where did they camp?",
+            "opts": [
+              "Near a river",
+              "On the beach",
+              "In a garden"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What did they make at night?",
+            "opts": [
+              "A campfire",
+              "A cake",
+              "A snowman"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What did they look at?",
+            "opts": [
+              "The stars",
+              "The sea",
+              "A film"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 127,
+      "title": "¡Qué susto!",
+      "subtitle": "What a fright!",
+      "emoji": "😱",
+      "milestone": false,
+      "funFact": "When something scares them, people in Spain say '¡Qué susto!' (What a fright!) or '¡Me has asustado!' (You scared me!).",
+      "phrase": {
+        "es": "Tuve mucho miedo, pero era solo el gato.",
+        "en": "I was really scared, but it was only the cat."
+      },
+      "words": [
+        {
+          "es": "Un ruido",
+          "en": "A noise",
+          "say": "oon RRWEE-doh",
+          "emoji": "🔊"
+        },
+        {
+          "es": "Un susto",
+          "en": "A fright",
+          "say": "oon SOOS-toh",
+          "emoji": "😱"
+        },
+        {
+          "es": "Tuve miedo",
+          "en": "I was scared",
+          "say": "TOO-beh MYEH-doh",
+          "emoji": "😨"
+        },
+        {
+          "es": "Grité",
+          "en": "I shouted",
+          "say": "gree-TEH",
+          "emoji": "📢"
+        },
+        {
+          "es": "Me escondí",
+          "en": "I hid",
+          "say": "meh es-kon-DEE",
+          "emoji": "🙈"
+        },
+        {
+          "es": "Por suerte",
+          "en": "Luckily",
+          "say": "por SWEHR-teh",
+          "emoji": "🍀"
+        },
+        {
+          "es": "Entonces",
+          "en": "Then / So",
+          "say": "en-TON-thes",
+          "emoji": "➡️"
+        },
+        {
+          "es": "Era solo",
+          "en": "It was only",
+          "say": "EH-rah SOH-loh",
+          "emoji": "😅"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "De",
+            "repente",
+            "oí",
+            "un",
+            "ruido"
+          ],
+          "shuffle": [
+            "oí",
+            "ruido",
+            "De",
+            "repente",
+            "un"
+          ],
+          "en": "Suddenly I heard a noise."
+        },
+        {
+          "correct": [
+            "Tuve",
+            "mucho",
+            "miedo",
+            "y",
+            "grité"
+          ],
+          "shuffle": [
+            "y",
+            "mucho",
+            "Tuve",
+            "miedo",
+            "grité"
+          ],
+          "en": "I was very scared and I shouted."
+        },
+        {
+          "correct": [
+            "Por",
+            "suerte",
+            "era",
+            "solo",
+            "el",
+            "gato"
+          ],
+          "shuffle": [
+            "suerte",
+            "gato",
+            "solo",
+            "Por",
+            "era",
+            "el"
+          ],
+          "en": "Luckily it was only the cat."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Por suerte' means:",
+          "opts": [
+            "Luckily",
+            "Suddenly",
+            "Surely"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Grité' means:",
+          "opts": [
+            "I shouted",
+            "I cried",
+            "I laughed"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "The Noise in the Night",
+        "paras": [
+          "It was dark. Luna was in bed. De repente, she heard un ruido in the kitchen.",
+          "'Tuve mucho miedo. Me escondí debajo de la manta y grité: ¡Papá!'",
+          "'Entonces Papá encendió la luz… ¡y era solo el gato! ¡Qué susto!'"
+        ],
+        "qs": [
+          {
+            "q": "Where was the noise?",
+            "opts": [
+              "In the kitchen",
+              "In the garden",
+              "In the bathroom"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Where did Luna hide?",
+            "opts": [
+              "Under the blanket",
+              "In the wardrobe",
+              "Behind the door"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What made the noise?",
+            "opts": [
+              "The cat",
+              "A burglar",
+              "The wind"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 128,
+      "title": "Personas famosas",
+      "subtitle": "Famous people from Spain",
+      "emoji": "🖼️",
+      "milestone": false,
+      "funFact": "The Chupa Chups lollipop was invented in Barcelona in 1958, and the artist Salvador Dalí designed its famous flower logo!",
+      "phrase": {
+        "es": "Picasso nació en Málaga hace muchos años.",
+        "en": "Picasso was born in Málaga many years ago."
+      },
+      "words": [
+        {
+          "es": "Nació",
+          "en": "He / She was born",
+          "say": "nah-THYOH",
+          "emoji": "👶"
+        },
+        {
+          "es": "Murió",
+          "en": "He / She died",
+          "say": "moo-RYOH",
+          "emoji": "🕊️"
+        },
+        {
+          "es": "Vivió",
+          "en": "He / She lived",
+          "say": "bee-BYOH",
+          "emoji": "🏡"
+        },
+        {
+          "es": "Pintó",
+          "en": "He / She painted",
+          "say": "peen-TOH",
+          "emoji": "🖼️"
+        },
+        {
+          "es": "Construyó",
+          "en": "He / She built",
+          "say": "kons-troo-YOH",
+          "emoji": "🏗️"
+        },
+        {
+          "es": "Inventó",
+          "en": "He / She invented",
+          "say": "een-ben-TOH",
+          "emoji": "💡"
+        },
+        {
+          "es": "Hace muchos años",
+          "en": "Many years ago",
+          "say": "AH-theh MOO-chos AH-nyos",
+          "emoji": "⏳"
+        },
+        {
+          "es": "El siglo",
+          "en": "The century",
+          "say": "el SEE-gloh",
+          "emoji": "💯"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Picasso",
+            "nació",
+            "en",
+            "Málaga"
+          ],
+          "shuffle": [
+            "Picasso",
+            "Málaga",
+            "en",
+            "nació"
+          ],
+          "en": "Picasso was born in Málaga."
+        },
+        {
+          "correct": [
+            "Velázquez",
+            "pintó",
+            "Las",
+            "meninas"
+          ],
+          "shuffle": [
+            "pintó",
+            "meninas",
+            "Las",
+            "Velázquez"
+          ],
+          "en": "Velázquez painted Las meninas."
+        },
+        {
+          "correct": [
+            "Cervantes",
+            "escribió",
+            "el",
+            "Quijote"
+          ],
+          "shuffle": [
+            "el",
+            "Quijote",
+            "Cervantes",
+            "escribió"
+          ],
+          "en": "Cervantes wrote Don Quixote."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "Picasso ___ en Málaga. (nacer)",
+          "opts": [
+            "nació",
+            "nací",
+            "nace"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'El siglo' means:",
+          "opts": [
+            "The century",
+            "The sky",
+            "The seal"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Sol's History Project",
+        "paras": [
+          "Sol makes a poster about famous people from Spain.",
+          "'Picasso nació en Málaga en 1881. Velázquez pintó Las meninas hace casi cuatrocientos años.'",
+          "'Y en 1958, un señor de Barcelona inventó el Chupa Chups. ¡Mi persona favorita!' says Sol."
+        ],
+        "qs": [
+          {
+            "q": "Where was Picasso born?",
+            "opts": [
+              "Málaga",
+              "Madrid",
+              "Barcelona"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What did Velázquez paint?",
+            "opts": [
+              "Las meninas",
+              "Guernica",
+              "The Mona Lisa"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What was invented in Barcelona in 1958?",
+            "opts": [
+              "The Chupa Chups lollipop",
+              "The bicycle",
+              "Chocolate"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 129,
+      "title": "Érase una vez…",
+      "subtitle": "Once upon a time…",
+      "emoji": "📜",
+      "milestone": false,
+      "funFact": "Many Spanish fairy tales end with a rhyme: 'Y colorín colorado, este cuento se ha acabado.' It means 'And that's the end of the story!'",
+      "phrase": {
+        "es": "Al día siguiente, el dragón encontró un amigo.",
+        "en": "The next day, the dragon found a friend."
+      },
+      "words": [
+        {
+          "es": "Al principio",
+          "en": "At the beginning",
+          "say": "al preen-THEE-pyoh",
+          "emoji": "▶️"
+        },
+        {
+          "es": "Un día",
+          "en": "One day",
+          "say": "oon DEE-ah",
+          "emoji": "1️⃣"
+        },
+        {
+          "es": "Al día siguiente",
+          "en": "The next day",
+          "say": "al DEE-ah see-GYEN-teh",
+          "emoji": "📅"
+        },
+        {
+          "es": "Esa noche",
+          "en": "That night",
+          "say": "EH-sah NOH-cheh",
+          "emoji": "🌃"
+        },
+        {
+          "es": "Mientras tanto",
+          "en": "Meanwhile",
+          "say": "MYEN-tras TAN-toh",
+          "emoji": "⏳"
+        },
+        {
+          "es": "Finalmente",
+          "en": "Finally",
+          "say": "fee-nal-MEN-teh",
+          "emoji": "🔚"
+        },
+        {
+          "es": "Desde entonces",
+          "en": "Since then",
+          "say": "DES-deh en-TON-thes",
+          "emoji": "♾️"
+        },
+        {
+          "es": "Y vivieron felices",
+          "en": "And they lived happily",
+          "say": "ee bee-BYEH-ron feh-LEE-thes",
+          "emoji": "💞"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Al",
+            "principio",
+            "el",
+            "dragón",
+            "estaba",
+            "triste"
+          ],
+          "shuffle": [
+            "principio",
+            "triste",
+            "Al",
+            "el",
+            "dragón",
+            "estaba"
+          ],
+          "en": "At the beginning the dragon was sad."
+        },
+        {
+          "correct": [
+            "Al",
+            "día",
+            "siguiente",
+            "encontró",
+            "un",
+            "amigo"
+          ],
+          "shuffle": [
+            "encontró",
+            "un",
+            "siguiente",
+            "amigo",
+            "día",
+            "Al"
+          ],
+          "en": "The next day he found a friend."
+        },
+        {
+          "correct": [
+            "Desde",
+            "entonces",
+            "son",
+            "muy",
+            "amigos"
+          ],
+          "shuffle": [
+            "muy",
+            "entonces",
+            "son",
+            "amigos",
+            "Desde"
+          ],
+          "en": "Since then they have been great friends."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Al día siguiente' means:",
+          "opts": [
+            "The next day",
+            "Every day",
+            "The day before"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Mientras tanto' means:",
+          "opts": [
+            "Meanwhile",
+            "Never mind",
+            "Many times"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "The Lonely Dragon",
+        "paras": [
+          "Érase una vez un dragón. Al principio, estaba muy triste porque no tenía amigos.",
+          "Un día, conoció a una niña valiente. Esa noche, hablaron y rieron mucho.",
+          "Desde entonces, son los mejores amigos. Y colorín colorado, este cuento se ha acabado."
+        ],
+        "qs": [
+          {
+            "q": "Why was the dragon sad?",
+            "opts": [
+              "He had no friends",
+              "He was hungry",
+              "He was lost"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Who did the dragon meet?",
+            "opts": [
+              "A brave girl",
+              "A king",
+              "Another dragon"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How does the story end?",
+            "opts": [
+              "They are best friends",
+              "The dragon flies away",
+              "The girl goes home"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 130,
+      "title": "¡Campeón de aventuras!",
+      "subtitle": "Adventure champion",
+      "emoji": "🏆",
+      "milestone": true,
+      "funFact": "You can now tell real stories in Spanish: where you went, what happened and how it ended!",
+      "phrase": {
+        "es": "Fuimos a la montaña y fue una aventura genial.",
+        "en": "We went to the mountains and it was a great adventure."
+      },
+      "words": [
+        {
+          "es": "Fuimos",
+          "en": "We went",
+          "say": "FWEE-mos",
+          "emoji": "🚗"
+        },
+        {
+          "es": "Hizo frío",
+          "en": "It was cold",
+          "say": "EE-thoh FREE-oh",
+          "emoji": "🥶"
+        },
+        {
+          "es": "Tuve que",
+          "en": "I had to",
+          "say": "TOO-beh keh",
+          "emoji": "⚠️"
+        },
+        {
+          "es": "Traje",
+          "en": "I brought",
+          "say": "TRAH-heh",
+          "emoji": "🎁"
+        },
+        {
+          "es": "Nos perdimos",
+          "en": "We got lost",
+          "say": "nos pehr-DEE-mos",
+          "emoji": "😵"
+        },
+        {
+          "es": "Acampamos",
+          "en": "We camped",
+          "say": "ah-kam-PAH-mos",
+          "emoji": "🏕️"
+        },
+        {
+          "es": "Un susto",
+          "en": "A fright",
+          "say": "oon SOOS-toh",
+          "emoji": "😱"
+        },
+        {
+          "es": "Al día siguiente",
+          "en": "The next day",
+          "say": "al DEE-ah see-GYEN-teh",
+          "emoji": "📅"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Fuimos",
+            "a",
+            "la",
+            "montaña",
+            "en",
+            "autocar"
+          ],
+          "shuffle": [
+            "en",
+            "montaña",
+            "autocar",
+            "Fuimos",
+            "la",
+            "a"
+          ],
+          "en": "We went to the mountains by coach."
+        },
+        {
+          "correct": [
+            "Tuve",
+            "que",
+            "llevar",
+            "mi",
+            "saco",
+            "de",
+            "dormir"
+          ],
+          "shuffle": [
+            "llevar",
+            "que",
+            "Tuve",
+            "de",
+            "dormir",
+            "saco",
+            "mi"
+          ],
+          "en": "I had to take my sleeping bag."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "Ir → nosotros ___",
+          "opts": [
+            "fuimos",
+            "fueron",
+            "fui"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Hacer → yo ___",
+          "opts": [
+            "hice",
+            "hací",
+            "hizo"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Estar → yo ___",
+          "opts": [
+            "estuve",
+            "estaba",
+            "estí"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Por suerte' means:",
+          "opts": [
+            "Luckily",
+            "Suddenly",
+            "Finally"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "The Great Adventure",
+        "paras": [
+          "Sol and Luna write about their best adventure.",
+          "'Fuimos a la montaña. Hizo frío, nos perdimos y tuvimos un susto con un ruido en el bosque.'",
+          "'Al día siguiente, encontramos el camino. ¡Fue la mejor aventura del mundo!'"
+        ],
+        "qs": [
+          {
+            "q": "Where did they go?",
+            "opts": [
+              "To the mountains",
+              "To the beach",
+              "To the city"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What was the weather like?",
+            "opts": [
+              "Cold",
+              "Hot",
+              "Rainy"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "When did they find the path?",
+            "opts": [
+              "The next day",
+              "That night",
+              "Never"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    }
+  ]
+}

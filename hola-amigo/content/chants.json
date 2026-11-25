@@ -69,5 +69,13 @@
     {"who": "luna", "es": "Bailé y canté y salí en coche.", "en": "I danced and I sang and I went out in the car."},
     {"who": "sol", "es": "¿Y el domingo? ¿Qué pasó?", "en": "And on Sunday? What happened?"},
     {"who": "luna", "es": "¡Me bañé en el mar y el sol brilló!", "en": "I swam in the sea and the sun shone!"}
+  ] },
+  { "id": "fui-fuiste", "world": 15, "title": "Fui, fuiste, fue", "en": "I went, you went, he went", "emoji": "⛰️", "bpm": 98, "lines": [
+    {"who": "sol", "es": "Fui, fuiste, fue: ¡a la montaña fue!", "en": "I went, you went, he went: to the mountains he went!"},
+    {"who": "luna", "es": "Fuimos, fuisteis, fueron: ¡todos se fueron!", "en": "We went, you all went, they went: they all went away!"},
+    {"who": "sol", "es": "Hice, hiciste, hizo: ¡qué frío hizo!", "en": "I did, you did, he did: how cold it was!"},
+    {"who": "luna", "es": "Tuve, tuviste, tuvo: ¡un susto tuvo!", "en": "I had, you had, he had: he had a fright!"},
+    {"who": "sol", "es": "Dije, traje, puse: ¡todo lo hice!", "en": "I said, I brought, I put: I did it all!"},
+    {"who": "luna", "es": "¡Y colorín colorado, este cuento se ha acabado!", "en": "And that's the end of the story!"}
   ] }
 ]

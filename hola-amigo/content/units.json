@@ -93,5 +93,11 @@
     {"id": "14b", "can": "I can say what other people did.", "es": "Mi hermana ganó la carrera y mis padres bailaron.", "lessons": [114, 115]},
     {"id": "14c", "can": "I can tell what happened in order, using time words.", "es": "Primero nadé, más tarde comí y al final volví a casa.", "lessons": [116, 117, 118]},
     {"id": "14d", "can": "I can choose between «he comido» and «comí».", "es": "Hoy he nadado, y ayer también nadé.", "lessons": [119, 120]}
+  ] },
+  { "world": 15, "title": "Past adventures", "level": "a2", "goals": [
+    {"id": "15a", "can": "I can say where I went and what it was like.", "es": "El verano pasado fuimos a Galicia. ¡Fue genial!", "lessons": [121, 122]},
+    {"id": "15b", "can": "I can use the most common irregular past verbs.", "es": "Tuve que estudiar y no pude ir a la fiesta.", "lessons": [123, 124]},
+    {"id": "15c", "can": "I can tell someone about a trip or an adventure.", "es": "Nos perdimos en la montaña, pero por suerte encontramos el camino.", "lessons": [125, 126, 127]},
+    {"id": "15d", "can": "I can tell a story and talk about famous people from the past.", "es": "Picasso nació en Málaga hace muchos años.", "lessons": [128, 129, 130]}
   ] }
 ]

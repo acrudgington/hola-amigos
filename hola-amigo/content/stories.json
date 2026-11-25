@@ -196,5 +196,19 @@
     {"q": "What time did they arrive at the beach?", "opts": ["At ten", "At two", "At eight"], "ans": 0},
     {"q": "What did they eat at two o'clock?", "opts": ["Sandwiches", "Paella", "Ice cream"], "ans": 0},
     {"q": "Who won at volleyball?", "opts": ["Sol", "His dad", "His mum"], "ans": 0}
+  ] },
+  { "id": "noche-montana", "world": 15, "title": "Una noche en la montaña", "en": "A night in the mountains", "emoji": "⛺", "sentences": [
+    {"es": "El verano pasado, Luna fue de excursión a la montaña con su clase.", "en": "Last summer, Luna went on a trip to the mountains with her class."},
+    {"es": "Fueron en autocar y el viaje fue muy largo.", "en": "They went by coach and the journey was very long."},
+    {"es": "Subieron por un camino al lado de un río y acamparon en el bosque.", "en": "They walked up a path beside a river and camped in the forest."},
+    {"es": "Esa noche, hicieron una hoguera y cantaron canciones.", "en": "That night, they made a campfire and sang songs."},
+    {"es": "De repente, oyeron un ruido muy fuerte detrás de un árbol.", "en": "Suddenly, they heard a very loud noise behind a tree."},
+    {"es": "Luna tuvo mucho miedo y se escondió en su saco de dormir.", "en": "Luna was very scared and hid in her sleeping bag."},
+    {"es": "El guía encendió su linterna y… ¡era solo un erizo!", "en": "The guide switched on his torch and… it was only a hedgehog!"},
+    {"es": "Todos se rieron y, al final, durmieron muy bien.", "en": "Everyone laughed and, in the end, they slept very well."}
+  ], "questions": [
+    {"q": "How did the class travel?", "opts": ["By coach", "By train", "On foot"], "ans": 0},
+    {"q": "Where did Luna hide?", "opts": ["In her sleeping bag", "Behind a tree", "In the tent"], "ans": 0},
+    {"q": "What made the noise?", "opts": ["A hedgehog", "A bear", "The wind"], "ans": 0}
   ] }
 ]
