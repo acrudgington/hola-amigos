@@ -28,6 +28,6 @@
 ## Settled
 
 - Contact email: help@hola-amigos.es
-- Prices: €4 a month or €40 a year
+- Prices: €2 a month or €20 a year
 - Data location: Firestore in Madrid
 - Spanish version: done (Castilian, informal "tú")

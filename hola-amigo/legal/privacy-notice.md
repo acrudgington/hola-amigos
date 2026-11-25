@@ -56,7 +56,7 @@ For as long as you have an account. When you delete your account (or a child’s
 
 ## Plans
 
-The first world is free. Full access costs €4 a month or €40 a year; you can cancel any time.
+The first world is free. Full access costs €2 a month or €20 a year; you can cancel any time.
 
 ## Terms in short
 

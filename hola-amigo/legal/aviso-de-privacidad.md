@@ -56,7 +56,7 @@ Mientras tengas una cuenta. Cuando eliminas tu cuenta (o el perfil de un niño),
 
 ## Planes
 
-El primer mundo es gratuito. El acceso completo cuesta 4 € al mes o 40 € al año; puedes cancelarlo cuando quieras.
+El primer mundo es gratuito. El acceso completo cuesta 2 € al mes o 20 € al año; puedes cancelarlo cuando quieras.
 
 ## Condiciones en resumen
 

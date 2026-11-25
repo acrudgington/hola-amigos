@@ -37,8 +37,8 @@ export const PRIVACY = {
 export const PRICING = {
   currency: "EUR",
   plans: [
-    { id: "monthly", label: "Monthly", price: 4, interval: "month" as const },
-    { id: "yearly", label: "Yearly", price: 40, interval: "year" as const, note: "Save €8 — 2 months free" },
+    { id: "monthly", label: "Monthly", price: 2, interval: "month" as const },
+    { id: "yearly", label: "Yearly", price: 20, interval: "year" as const, note: "Save €4 — 2 months free" },
   ],
   // The first world is free; everything else needs a subscription.
   freeLessonsUpTo: 8,

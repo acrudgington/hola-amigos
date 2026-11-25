@@ -12,8 +12,8 @@ describe("privacy notice", () => {
   });
   it("shows euro prices in each language's style", () => {
     const text = (lang: "en" | "es") => JSON.stringify(privacyNotice(lang, { cloud: true }));
-    expect(text("en")).toContain("€4 a month or €40 a year");
-    expect(text("es").replace(/\u00a0/g, " ")).toContain("4 € al mes o 40 € al año");
+    expect(text("en")).toContain("€2 a month or €20 a year");
+    expect(text("es").replace(/\u00a0/g, " ")).toContain("2 € al mes o 20 € al año");
   });
   it("has balanced bold markup", () => {
     for (const lang of ["en", "es"] as const) {
