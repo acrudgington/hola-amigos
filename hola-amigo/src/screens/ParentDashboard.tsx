@@ -9,6 +9,7 @@ import { trickyWords } from "../domain/memory.ts";
 import { LEVEL_INFO, allGoals, levelSummary, nextGoal, type GoalProgress, type Level, type UnitProgress } from "../domain/goals.ts";
 import { Button, Card, Modal } from "../components/ui.tsx";
 import { Art } from "../components/Art.tsx";
+import { Avatar } from "../components/Avatar.tsx";
 
 const rangeLabel = (ids: number[]) => ids.length === 1 ? `Lesson ${ids[0]}` : `Lessons ${ids[0]}–${ids[ids.length - 1]}`;
 const STATE_TEXT = { "achieved": "Can do", "practising": "Practising", "not-started": "Not started" } as const;
@@ -86,7 +87,7 @@ function ChildReport({ child, progress: p, onRemove }: { child: Child; progress:
 
   return <Card style={{ marginBottom: 16 }}>
     <div className="row" style={{ marginBottom: 16 }}>
-      <div className="profile-tile__avatar" style={{ width: 56, height: 56, margin: 0 }}><Art e={child.avatar} size={40} /></div>
+      <Avatar value={child.avatar} size={56} />
       <div className="grow">
         <div className="h3">{child.name}</div>
         <div className="small muted">{active} · 🔥 {liveStreak(p)}-day streak</div>
@@ -130,17 +131,17 @@ export function ParentDashboard({ parent, onBack, onAccountDeleted }: { parent: 
     <div className="page">
       <Button size="sm" onClick={onBack} style={{ marginBottom: 14 }}>← Back</Button>
       <div className="text-center" style={{ marginBottom: 22 }}>
-        <div style={{ fontSize: 44 }}>📊</div>
+        <Art e="📊" size={60} eager />
         <h1 className="h2">Grown-up dashboard</h1>
         <p className="muted small" style={{ marginTop: 4 }}>{children.length} {children.length === 1 ? "learner" : "learners"} · {parent.name}</p>
       </div>
-      {children.length === 0 && <Card className="text-center"><div style={{ fontSize: 44 }}>👶</div><p className="muted">No learners yet — add one to start tracking progress.</p></Card>}
+      {children.length === 0 && <Card className="text-center"><Art e="👶" size={60} /><p className="muted">No learners yet — add one to start tracking progress.</p></Card>}
       {children.map(({ child, progress }) => <ChildReport key={child.id} child={child} progress={progress} onRemove={setToRemove} />)}
       <AccountPanel parent={parent} onDeleted={onAccountDeleted} />
     </div>
     {toRemove && <Modal onClose={() => setToRemove(null)} labelledBy="rm-title">
       <div className="text-center">
-        <div style={{ fontSize: 44, marginBottom: 6 }}>⚠️</div>
+        <div style={{ marginBottom: 6 }}><Art e="⚠️" size={56} /></div>
         <h3 id="rm-title" className="h2" style={{ marginBottom: 8 }}>Remove {toRemove.name}?</h3>
         <p className="muted small" style={{ marginBottom: 18 }}>All of {toRemove.name}’s stars and progress will be deleted. This can’t be undone.</p>
         <div className="row" style={{ gap: 10 }}>

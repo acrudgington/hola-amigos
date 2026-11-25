@@ -107,7 +107,7 @@ function WorldPath({ world, stars, unlockedUpTo, currentId, onStart }: MapProps 
         </div>;
       })}
       {locked && <div className="locked-note">
-        <div style={{ fontSize: 30 }}>🔒</div>
+        <Art e="🔒" size={44} />
         <div style={{ fontWeight: 900 }}>Finish {worldOf(world.range[0] - 1)?.name || "the world before"} to unlock</div>
       </div>}
     </div>

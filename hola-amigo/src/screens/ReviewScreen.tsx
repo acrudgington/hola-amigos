@@ -9,6 +9,7 @@ import type { OnWord } from "../games/types.ts";
 import { Button, Card } from "../components/ui.tsx";
 import { Luna, Sol } from "../components/Mascots.tsx";
 import { MixGame } from "../games/ChoiceGames.tsx";
+import { Art } from "../components/Art.tsx";
 
 // Sol's mix — daily personal practice: words that are fading, tricky words,
 // and recall challenges for words they already recognise (domain/memory.ts).
@@ -32,12 +33,12 @@ export function ReviewScreen({ progress, onBack, onFinish, onWord }: { progress:
       </div>
       <Card className="card--pad-lg" style={{ padding: "22px 16px" }}>
         {list.length === 0 ? <div className="text-center">
-          <div style={{ fontSize: 50 }}>🌱</div>
+          <Art e="🌱" size={64} />
           <div className="h3" style={{ margin: "6px 0" }}>Nothing to review yet!</div>
           <p className="small muted" style={{ marginBottom: 18 }}>Finish a lesson or two, then come back to keep your words strong.</p>
           <Button variant="sun" onClick={onBack}>Back to the map</Button>
         </div> : result ? <div className="text-center">
-          <div style={{ fontSize: 56, animation: "bounce-in .5s var(--ease-spring)" }}>{result.s / result.t >= 0.8 ? "🧠" : "💪"}</div>
+          <Art e={result.s / result.t >= 0.8 ? "🧠" : "💪"} size={72} eager />
           <div className="display" style={{ fontSize: 40 }}>{result.s}<span className="muted" style={{ fontSize: 26 }}> / {result.t}</span></div>
           <p className="h3" style={{ margin: "6px 0 20px" }}>{result.s / result.t >= 0.8 ? "Super memory!" : "Every review makes words stick!"}</p>
           <div className="row row--center row--wrap" style={{ gap: 10 }}>

@@ -135,6 +135,14 @@ each line so the child can say it back. They're spoken in rhythm, not sung (the 
 can't sing); real recordings could replace the voices later without changing the screen.
 A chant opens as soon as the child reaches its world.
 
+## Avatars
+
+Children make their own avatar (`src/domain/avatar.ts`, `components/AvatarMaker.tsx`):
+24 characters in 3D (children and superheroes in five skin tones, animals, a robot, a
+dinosaur…), 8 background colours and 10 extras (crown, cap, bow, headphones…). It's
+saved as a short code like `av1:0a3c2`, which fits the existing database rules, and
+older single-emoji avatars still display. Change it any time from the ✏️ on the "Me" page.
+
 ## Editing lessons
 
 All course content lives in `content/` as plain JSON, so it can be edited without touching code:

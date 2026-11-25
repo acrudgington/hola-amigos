@@ -39,6 +39,7 @@ export interface FamilyService {
   listChildren(parentId: string): Promise<Child[]>;
   addChild(parentId: string, name: string, avatar: string): Promise<Child>;
   removeChild(childId: string): Promise<void>;
+  updateChild(childId: string, changes: { name?: string; avatar?: string }): Promise<Child | null>;
   getChild(childId: string): Promise<Child | null>;
   exportData(parentId: string): Promise<FamilyExport>;
 }

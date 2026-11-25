@@ -8,13 +8,14 @@ import { motion } from "framer-motion";
 import { Button, Card, Field, Modal } from "../components/ui.tsx";
 import { PrefToggles } from "../components/Shell.tsx";
 import { Luna, Sol } from "../components/Mascots.tsx";
-import { Art } from "../components/Art.tsx";
+import { randomAvatar } from "../domain/avatar.ts";
+import { AvatarMaker } from "../components/AvatarMaker.tsx";
+import { Avatar } from "../components/Avatar.tsx";
 
-export const AVATARS = ["🦊", "🐼", "🦄", "🐯", "🐶", "🐱", "🐰", "🐸", "🦁", "🐻", "🐨", "🐵", "🦉", "🐢", "🐙", "🦋"];
 
 function AddChildModal({ onClose, onAdd }: { onClose: () => void; onAdd: (name: string, avatar: string) => void }) {
   const [name, setName] = useState("");
-  const [avatar, setAvatar] = useState(AVATARS[0]);
+  const [avatar, setAvatar] = useState(randomAvatar);
   const [error, setError] = useState("");
   const submit = (e: FormEvent) => {
     e.preventDefault();
@@ -23,13 +24,10 @@ function AddChildModal({ onClose, onAdd }: { onClose: () => void; onAdd: (name: 
   };
   return <Modal onClose={onClose} labelledBy="add-child-title">
     <form onSubmit={submit}>
-      <div className="text-center" style={{ fontSize: 56, marginBottom: 4 }}>{avatar}</div>
-      <h3 id="add-child-title" className="h2 text-center" style={{ marginBottom: 16 }}>Add a learner</h3>
+      <h3 id="add-child-title" className="h2 text-center" style={{ marginBottom: 12 }}>Add a learner</h3>
       <Field label="Child’s name" placeholder="e.g. Mia" value={name} onChange={e => setName(e.target.value)} autoFocus maxLength={20} />
-      <span className="field__label">Pick an animal friend</span>
-      <div className="grid-4" style={{ marginBottom: 18 }}>
-        {AVATARS.map(a => <button key={a} type="button" className="avatar-pick" aria-pressed={avatar === a} onClick={() => setAvatar(a)} aria-label={`Animal ${a}`}><Art e={a} size={40} /></button>)}
-      </div>
+      <span className="field__label">Make your avatar</span>
+      <div style={{ marginBottom: 18 }}><AvatarMaker value={avatar} onChange={setAvatar} /></div>
       {error && <div className="form-error" role="alert">{error}</div>}
       <div className="row" style={{ gap: 10 }}>
         <Button block onClick={onClose}>Cancel</Button>
@@ -66,7 +64,7 @@ export function FamilyScreen({ parent, onPickChild, onDashboard, onLogout, prefs
       </div>
 
       {deviceKids.length > 0 && <div className="notice notice--warn" style={{ marginBottom: 18 }}>
-        <div style={{ marginBottom: 8 }}>We found {deviceKids.map(k => `${k.avatar} ${k.name}`).join(", ")} saved on this device. Bring their progress into your account so it’s safe and syncs everywhere?</div>
+        <div style={{ marginBottom: 8 }}>We found {deviceKids.map(k => k.name).join(", ")} saved on this device. Bring their progress into your account so it’s safe and syncs everywhere?</div>
         <div className="row" style={{ gap: 8 }}>
           <Button size="sm" variant="sun" disabled={importing} onClick={() => void doImport()}>{importing ? "Bringing them in…" : "Yes, bring them in"}</Button>
           <Button size="sm" variant="ghost" onClick={() => { dismissDeviceLearners(parent.email); setDeviceKids([]); }}>Not now</Button>
@@ -77,7 +75,7 @@ export function FamilyScreen({ parent, onPickChild, onDashboard, onLogout, prefs
           const streak = liveStreak(p);
           return <motion.div key={c.id} initial={{ opacity: 0, y: 24, scale: 0.9 }} animate={{ opacity: 1, y: 0, scale: 1 }} transition={{ delay: i * 0.07, type: "spring", stiffness: 260, damping: 20 }}>
           <Card as="button" type="button" pad={false} className="profile-tile" onClick={() => onPickChild(c)}>
-            <div className="profile-tile__avatar"><Art e={c.avatar} size={64} eager /></div>
+            <Avatar value={c.avatar} size={84} style={{ marginBottom: 8 }} />
             <div className="h3">{c.name}</div>
             <div className="small muted">⭐ {sumStars(p)} · {countLessons(p)} lessons</div>
             {streak > 0 && <div className="small" style={{ color: "var(--fire)", fontWeight: 900 }}>🔥 {streak}-day streak</div>}

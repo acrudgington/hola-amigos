@@ -1006,3 +1006,26 @@ li:last-child > .step .step__rail { display: none; }
 .chant__line.is-active.chant__line--luna { background: color-mix(in srgb, var(--luna) 22%, transparent); box-shadow: inset 4px 0 0 var(--luna); }
 .chant__line.is-said { opacity: 0.6; }
 @media (max-width: 480px) { .chant__line { font-size: 17px; } }
+
+/* Avatars */
+.avatar { position: relative; display: inline-grid; place-items: center; flex-shrink: 0; border-radius: 50%;
+  background: radial-gradient(circle at 32% 26%, color-mix(in srgb, var(--a1) 80%, #fff), var(--a1) 45%, var(--a2)); box-shadow: inset 0 -6px 12px rgba(0,0,0,0.18), inset 0 3px 6px rgba(255,255,255,0.35); }
+.avatar--ring { box-shadow: 0 0 0 3px var(--bg), 0 0 0 5px color-mix(in srgb, var(--a1) 70%, #fff 10%), inset 0 -6px 12px rgba(0,0,0,0.18), inset 0 3px 6px rgba(255,255,255,0.35); }
+.avatar__char { display: grid; place-items: center; transform: translateY(6%); }
+.avatar__char .art { filter: drop-shadow(0 4px 6px rgba(0,0,0,0.25)); }
+.avatar__acc { position: absolute; display: grid; place-items: center; pointer-events: none; }
+.avatar__acc--top { top: -16%; left: 50%; transform: translateX(-50%) rotate(-8deg); }
+.avatar__acc--side { top: -4%; left: -4%; transform: rotate(-18deg); }
+.avatar__acc--corner { top: -6%; right: -8%; }
+.maker { display: flex; flex-direction: column; gap: 12px; }
+.maker__preview { display: grid; place-items: center; padding: 18px 0 6px; }
+.maker__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(56px, 1fr)); gap: 8px; max-height: 236px; overflow-y: auto; padding: 2px; }
+.maker__grid--colours { grid-template-columns: repeat(4, 1fr); }
+.maker__opt { display: grid; place-items: center; aspect-ratio: 1; border-radius: 14px; cursor: pointer; background: var(--glass-2); border: 1px solid var(--hairline-hi); transition: transform 0.15s var(--ease-spring); }
+.maker__opt:hover { transform: scale(1.06); }
+.maker__opt[aria-pressed="true"], .maker__swatch[aria-pressed="true"] { border-color: var(--sun); box-shadow: 0 0 0 2px var(--sun); }
+.maker__swatch { aspect-ratio: 1; border-radius: 50%; border: 2px solid transparent; cursor: pointer; }
+.maker__tones { display: flex; justify-content: center; gap: 10px; }
+.tone { width: 30px; height: 30px; border-radius: 50%; border: 2px solid var(--hairline-hi); cursor: pointer; }
+.tone[aria-checked="true"] { box-shadow: 0 0 0 3px var(--bg), 0 0 0 5px var(--sun); }
+.avatar-edit { position: absolute; right: -6px; bottom: -4px; width: 34px; height: 34px; border-radius: 50%; font-size: 15px; }

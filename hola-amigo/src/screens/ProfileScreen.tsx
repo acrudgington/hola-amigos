@@ -8,9 +8,15 @@ import { Art } from "../components/Art.tsx";
 import { Icon } from "../components/Icon.tsx";
 import { UNITS, WORLDS } from "../content/index.ts";
 import { achievedGoals } from "../domain/goals.ts";
+import { Modal } from "../components/ui.tsx";
+import { useState } from "react";
+import { AvatarMaker } from "../components/AvatarMaker.tsx";
+import { Avatar } from "../components/Avatar.tsx";
 
 // "Me" — the child's personal stats dashboard.
-export function ProfileScreen({ child, parent, progress, onTrophies, onSwitchChild, onPlacement }: { child: Child; parent: Parent; progress: Progress; onTrophies: () => void; onSwitchChild: () => void; onPlacement: () => void }) {
+export function ProfileScreen({ child, parent, progress, onTrophies, onSwitchChild, onPlacement, onAvatar }: { child: Child; parent: Parent; progress: Progress; onTrophies: () => void; onSwitchChild: () => void; onPlacement: () => void; onAvatar: (code: string) => void }) {
+  const [editing, setEditing] = useState(false);
+  const [look, setLook] = useState(child.avatar);
   const lessons = countLessons(progress);
   const words = Object.keys(progress.wordMemory || {}).length;
   const pct = lessons / LESSONS.length;
@@ -28,7 +34,10 @@ export function ProfileScreen({ child, parent, progress, onTrophies, onSwitchChi
   return <div className="stack" style={{ "--gap": "16px", paddingTop: 6 }}>
     <Card className="card--pad-lg">
       <div className="row" style={{ gap: 18, flexWrap: "wrap" }}>
-        <div className="profile-tile__avatar" style={{ width: 96, height: 96, margin: 0 }}><Art e={child.avatar} size={72} eager /></div>
+        <div style={{ position: "relative" }}>
+          <Avatar value={child.avatar} size={96} />
+          <button type="button" className="icon-btn avatar-edit" onClick={() => { setLook(child.avatar); setEditing(true); }} aria-label="Change my look" title="Change my look">✏️</button>
+        </div>
         <div className="grow">
           <div className="eyebrow">{levelTitle(info.level)}</div>
           <h1 className="h1" style={{ fontSize: 34 }}>{child.name}</h1>
@@ -82,5 +91,13 @@ export function ProfileScreen({ child, parent, progress, onTrophies, onSwitchChi
       </div>
       <Button size="sm" variant="luna" onClick={onPlacement}>Find my level</Button>
     </Card>
+    {editing && <Modal onClose={() => setEditing(false)} labelledBy="look-title">
+      <h3 id="look-title" className="h2 text-center" style={{ marginBottom: 6 }}>Change my look</h3>
+      <AvatarMaker value={look} onChange={setLook} />
+      <div className="row" style={{ gap: 10, marginTop: 16 }}>
+        <Button block onClick={() => setEditing(false)}>Cancel</Button>
+        <Button block variant="sun" onClick={() => { onAvatar(look); setEditing(false); }}>Save ✓</Button>
+      </div>
+    </Modal>}
   </div>;
 }

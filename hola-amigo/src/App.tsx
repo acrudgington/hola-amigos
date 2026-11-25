@@ -286,7 +286,8 @@ export default function App() {
     let inner: JSX.Element | null = null;
     if (nav.view === "home") inner = <HomeScreen child={child} progress={progress} onStartLesson={startLesson} onOpenLesson={openLesson}
       onClaim={openChest} onSearch={() => setPalette(true)} onMission={onMission} />;
-    if (nav.view === "profile") inner = <ProfileScreen child={child} parent={parent} progress={progress} onTrophies={() => dispatch({ type: "go", view: "trophies" })} onSwitchChild={() => void switchChild()} onPlacement={() => dispatch({ type: "go", view: "placement" })} />;
+    if (nav.view === "profile") inner = <ProfileScreen child={child} parent={parent} progress={progress} onTrophies={() => dispatch({ type: "go", view: "trophies" })} onSwitchChild={() => void switchChild()} onPlacement={() => dispatch({ type: "go", view: "placement" })}
+      onAvatar={code => void services.family.updateChild(child.id, { avatar: code }).then(c => { if (c) setChild(c); })} />;
     if (nav.view === "stories") inner = <StoriesScreen progress={progress} onFinish={finishStory}
       onChant={c => update(p => logEvent(addXP(p, XP.activity), { type: "story", emoji: "🎵", text: `Chanted “${c.title}”` }))} />;
     if (nav.view === "trophies") inner = <TrophyScreen progress={progress} onEquip={equip} />;

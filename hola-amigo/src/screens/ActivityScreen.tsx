@@ -39,7 +39,7 @@ function FreeResult({ score, total, onRetry, onBack }: { score: number; total: n
   const tier: { e: string; t: string; m: Mood } = pct >= 0.8 ? { e: "🏆", t: "Amazing! Superstar!", m: "celebrate" } : pct >= 0.6 ? { e: "⭐", t: "Great job!", m: "happy" } : { e: "💪", t: "Keep practising!", m: "encourage" };
   return <div className="text-center" style={{ padding: "8px 0" }}>
     <div className="row row--center" style={{ gap: 6, marginBottom: 6 }}><Sol size={60} mood={tier.m === "happy" ? "wink" : tier.m} /><Luna size={56} mood={tier.m} /></div>
-    <div style={{ fontSize: 54, animation: "bounce-in .5s var(--ease-spring)" }}>{tier.e}</div>
+    <Art e={tier.e} size={72} eager />
     {total > 0 && <div className="display" style={{ fontSize: 40 }}>{score}<span className="muted" style={{ fontSize: 26 }}> / {total}</span></div>}
     <p className="h3" style={{ margin: "6px 0 20px" }}>{tier.t}</p>
     <div className="row row--center row--wrap" style={{ gap: 10 }}>

@@ -220,6 +220,16 @@ export function createFirebaseServices(settings: FirebaseSettings = firebaseSett
         await setDoc(progressRef(parentId, ref.id), plain(normalizeProgress(null)));
         return toChild(parentId, ref.id, data);
       },
+      async updateChild(childId, changes) {
+        const parentId = uid();
+        const ref = childRef(parentId, childId);
+        const snap = await getDoc(ref);
+        if (!snap.exists()) return null;
+        const cur = snap.data() as { name: string; avatar: string; created: number };
+        const next = { ...cur, ...(changes.name ? { name: changes.name.trim() } : {}), ...(changes.avatar ? { avatar: changes.avatar } : {}) };
+        await setDoc(ref, next);
+        return toChild(parentId, childId, next);
+      },
       async removeChild(childId) {
         const parentId = uid();
         pending.delete(childId);

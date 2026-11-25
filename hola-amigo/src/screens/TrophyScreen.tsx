@@ -20,7 +20,7 @@ export function TrophyScreen({ progress, onEquip }: { progress: Progress; onEqui
   return <div>
     <div>
       <div className="text-center" style={{ marginBottom: 16 }}>
-        <div style={{ fontSize: 50 }} className="float">🏆</div>
+        <div className="float"><Art e="🏆" size={72} eager /></div>
         <h1 className="h2">Trophy shelf</h1>
       </div>
       <div style={{ marginBottom: 18 }}><Segmented id="trophy-tabs" options={TABS} value={tab} onChange={setTab} /></div>

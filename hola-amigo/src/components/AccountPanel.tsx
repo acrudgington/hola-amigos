@@ -5,6 +5,7 @@ import { services, type Parent } from "../services/index.ts";
 import { Button, Card, Field, Modal } from "./ui.tsx";
 import { Icon } from "./Icon.tsx";
 import { PrivacyNotice } from "./PrivacyNotice.tsx";
+import { Art } from "./Art.tsx";
 
 export function AccountPanel({ parent, onDeleted }: { parent: Parent; onDeleted: () => void }) {
   const [showPrivacy, setShowPrivacy] = useState(false);
@@ -63,7 +64,7 @@ export function AccountPanel({ parent, onDeleted }: { parent: Parent; onDeleted:
     </div>
     {showPrivacy && <PrivacyNotice onClose={() => setShowPrivacy(false)} />}
     {confirmDelete && <Modal onClose={() => setConfirmDelete(false)} labelledBy="del-title">
-      <div className="text-center" style={{ fontSize: 44 }}>⚠️</div>
+      <div className="text-center"><Art e="⚠️" size={56} /></div>
       <h3 id="del-title" className="h2 text-center" style={{ margin: "4px 0 8px" }}>Delete your account?</h3>
       <p className="muted small text-center" style={{ marginBottom: 16 }}>This permanently deletes your login and every child’s progress, stars and rewards. It can’t be undone. You might like to download your data first.</p>
       <Field label="Type your password to confirm" type="password" value={password} onChange={e => setPassword(e.target.value)} autoComplete="current-password" />

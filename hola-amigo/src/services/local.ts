@@ -120,6 +120,14 @@ export function createLocalServices(): Services {
         write(KEYS.progress(id), normalizeProgress(null));
         return toChild(c);
       },
+      async updateChild(childId, changes) {
+        const all = children();
+        const c = all[childId];
+        if (!c) return null;
+        const next: StoredChild = { ...c, ...(changes.name ? { name: changes.name.trim() } : {}), ...(changes.avatar ? { avatar: changes.avatar } : {}) };
+        write(KEYS.children, { ...all, [childId]: next });
+        return toChild(next);
+      },
       async removeChild(childId) {
         const all = children();
         const c = all[childId];

@@ -7,6 +7,7 @@ import { Button, Choices, Feedback } from "../components/ui.tsx";
 import { useLater } from "./hooks.ts";
 import type { Story } from "../content/index.ts";
 import type { OnDone } from "./types.ts";
+import { Art } from "../components/Art.tsx";
 
 interface Opt { text: string; correct: boolean }
 
@@ -65,7 +66,7 @@ export function StoryReader({ story, onDone }: { story: Story; onDone: OnDone })
     };
     const last = page === story.paras.length - 1;
     return <div className="text-center">
-      <div style={{ fontSize: 40 }} aria-hidden="true">📖</div>
+      <Art e="📖" size={56} eager />
       <h3 className="h2" style={{ margin: "4px 0 6px" }}>{story.title}</h3>
       <div className="page-dots" aria-label={`Page ${page + 1} of ${story.paras.length}`}>
         {story.paras.map((_, i) => <span key={i} className={i === page ? "is-on" : ""} />)}
