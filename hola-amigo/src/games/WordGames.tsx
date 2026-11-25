@@ -9,6 +9,7 @@ import type { GameProps } from "./types.ts";
 type LearnStep = { kind: "show"; w: Word; i: number; n: number } | { kind: "check"; w: Word; i: number; n: number; label: string; options: Word[] };
 import { Button, Choices, Feedback, SpeakButton } from "../components/ui.tsx";
 import { useLater } from "./hooks.ts";
+import { Art } from "../components/Art.tsx";
 
 // ------------------------------------------------------------
 // LEARN — meet words in batches of 4, check each batch, then a mixed round
@@ -53,7 +54,7 @@ export function LearnIntro({ words, onDone, onWord }: { words: Word[]; onDone: (
     return <div className="text-center" key={at}>
       <div className="counter" style={{ marginBottom: 12 }}>New word {step.i + 1} / {step.n}</div>
       <div className="card card--pad-lg" style={{ marginBottom: 18, animation: "bounce-in .4s var(--ease-spring)" }}>
-        <div className="big-emoji float">{w.emoji}</div>
+        <div className="big-emoji float"><Art e={w.emoji} size={140} eager /></div>
         <div className="big-word" style={{ marginTop: 6 }}>{w.es}</div>
         <div className="h3 muted" style={{ marginTop: 4 }}>{w.en}</div>
         <div className="say-hint" style={{ marginTop: 6 }}>🗣️ say: <b>{w.say}</b></div>
@@ -75,7 +76,7 @@ export function LearnIntro({ words, onDone, onWord }: { words: Word[]; onDone: (
   return <div className="text-center" key={at}>
     <div className="counter">{step.label}</div>
     <div className="tiny muted" style={{ margin: "4px 0 12px" }}>{step.i + 1} / {step.n}</div>
-    <div className="big-emoji" style={{ fontSize: 52 }}>{w.emoji}</div>
+    <div className="big-emoji"><Art e={w.emoji} size={84} eager /></div>
     <div className="row row--center" style={{ gap: 10, margin: "6px 0 16px" }}>
       <div className="big-word">{w.es}</div><SpeakButton text={w.es} />
     </div>
@@ -94,7 +95,7 @@ function FlashCard({ word, index }: { word: Word; index: number }) {
     <button type="button" className="flash__inner" onClick={() => { if (!flipped) voice.spanish(word.es); setFlipped(f => !f); }}
       aria-label={flipped ? `${word.es} means ${word.en}` : `${word.es}. Tap to see the meaning`}>
       <div className="flash__face flash__front">
-        <div style={{ fontSize: 40 }}>{word.emoji}</div>
+        <Art e={word.emoji} size={56} />
         <div className="display" style={{ fontSize: 19, textAlign: "center" }}>{word.es}</div>
         <div className="tiny muted">tap to flip</div>
       </div>
@@ -159,7 +160,7 @@ export function MatchGame({ words, onDone, onWord }: GameProps & { words: Word[]
       {([["es", left], ["en", right]] as [Side, Word[]][]).map(([side, list]) => <div key={side} className="stack" style={{ "--gap": "10px" }}>
         {list.map(w => <button key={w.es} type="button" className={`choice ${cls(side, w)}`} style={{ minHeight: 56, fontSize: 15 }}
           disabled={matched.includes(w.es)} onClick={() => click(side, w)}>
-          {side === "es" ? <span><span aria-hidden="true">{w.emoji}</span> {w.es}</span> : <span>{w.en}</span>}
+          {side === "es" ? <span><Art e={w.emoji} size={26} /> {w.es}</span> : <span>{w.en}</span>}
         </button>)}
       </div>)}
     </div>
@@ -229,7 +230,7 @@ export function DragMatch({ words, onDone, onWord }: GameProps & { words: Word[]
     <div className="grid-2" style={{ maxWidth: 360, margin: "0 auto 20px" }}>
       {targets.map(w => <div key={w.es} ref={el => { refs.current[w.es] = el; }}
         className={`drop-target ${placed[w.es] ? "is-done" : ""} ${hover === w.es ? "is-hover" : ""}`}>
-        <div style={{ fontSize: 46 }}>{w.emoji}</div>
+        <Art e={w.emoji} size={64} />
         {placed[w.es] && <div style={{ fontWeight: 900, color: "var(--mint-d)", animation: "bounce-in .4s var(--ease-spring)" }}>{w.es} ✓</div>}
       </div>)}
     </div>
@@ -285,7 +286,7 @@ export function OddOneOut({ words, onDone, onWord }: GameProps & { words: Word[]
     <p className="say-hint" style={{ marginBottom: 4 }}>Which one doesn’t belong in this lesson? 🤔</p>
     <div className="counter" style={{ marginBottom: 14 }}>{idx + 1} / {rounds.length}</div>
     <Choices options={round.items} getKey={o => o.es} answerKey={round.odd.es} picked={picked} onPick={pick}
-      render={o => <><span className="choice__emoji">{o.emoji}</span><span>{o.es}</span>{picked != null && <span className="choice__sub">{o.en}</span>}</>} />
+      render={o => <><Art e={o.emoji} size={48} className="choice__emoji" /><span>{o.es}</span>{picked != null && <span className="choice__sub">{o.en}</span>}</>} />
     <Feedback show={picked != null} good={good}>{good ? "⭐ ¡Correcto!" : <>The stranger was <b>{round.odd.es}</b></>}</Feedback>
   </div>;
 }

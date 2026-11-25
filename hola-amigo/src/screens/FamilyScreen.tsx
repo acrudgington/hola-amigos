@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import { Button, Card, Field, Modal } from "../components/ui.tsx";
 import { PrefToggles } from "../components/Shell.tsx";
 import { Luna, Sol } from "../components/Mascots.tsx";
+import { Art } from "../components/Art.tsx";
 
 export const AVATARS = ["🦊", "🐼", "🦄", "🐯", "🐶", "🐱", "🐰", "🐸", "🦁", "🐻", "🐨", "🐵", "🦉", "🐢", "🐙", "🦋"];
 
@@ -27,7 +28,7 @@ function AddChildModal({ onClose, onAdd }: { onClose: () => void; onAdd: (name: 
       <Field label="Child’s name" placeholder="e.g. Mia" value={name} onChange={e => setName(e.target.value)} autoFocus maxLength={20} />
       <span className="field__label">Pick an animal friend</span>
       <div className="grid-4" style={{ marginBottom: 18 }}>
-        {AVATARS.map(a => <button key={a} type="button" className="avatar-pick" aria-pressed={avatar === a} onClick={() => setAvatar(a)}>{a}</button>)}
+        {AVATARS.map(a => <button key={a} type="button" className="avatar-pick" aria-pressed={avatar === a} onClick={() => setAvatar(a)} aria-label={`Animal ${a}`}><Art e={a} size={40} /></button>)}
       </div>
       {error && <div className="form-error" role="alert">{error}</div>}
       <div className="row" style={{ gap: 10 }}>
@@ -76,7 +77,7 @@ export function FamilyScreen({ parent, onPickChild, onDashboard, onLogout, prefs
           const streak = liveStreak(p);
           return <motion.div key={c.id} initial={{ opacity: 0, y: 24, scale: 0.9 }} animate={{ opacity: 1, y: 0, scale: 1 }} transition={{ delay: i * 0.07, type: "spring", stiffness: 260, damping: 20 }}>
           <Card as="button" type="button" pad={false} className="profile-tile" onClick={() => onPickChild(c)}>
-            <div className="profile-tile__avatar">{c.avatar}</div>
+            <div className="profile-tile__avatar"><Art e={c.avatar} size={64} eager /></div>
             <div className="h3">{c.name}</div>
             <div className="small muted">⭐ {sumStars(p)} · {countLessons(p)} lessons</div>
             {streak > 0 && <div className="small" style={{ color: "var(--fire)", fontWeight: 900 }}>🔥 {streak}-day streak</div>}

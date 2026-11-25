@@ -12,6 +12,8 @@ import "@fontsource/nunito/latin-600.css";
 import "@fontsource/nunito/latin-700.css";
 import "@fontsource/nunito/latin-800.css";
 import "@fontsource/nunito/latin-900.css";
+import "@fontsource/jetbrains-mono/latin-500.css";
+import "@fontsource/jetbrains-mono/latin-700.css";
 import "./styles.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(

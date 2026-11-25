@@ -7,6 +7,7 @@ import type { GameProps } from "./types.ts";
 import { Button, SpeakButton } from "../components/ui.tsx";
 import { Unsupported } from "./ChoiceGames.tsx";
 import { useLater } from "./hooks.ts";
+import { Art } from "../components/Art.tsx";
 
 type Outcome = "pass" | "close" | "fail";
 const RESULTS: Record<Outcome, { emoji: string; title: string; color: string }> = {
@@ -84,7 +85,7 @@ export function SayItGame({ words, onDone, onWord }: GameProps & { words: Word[]
   return <div className="text-center">
     <div className="counter" style={{ marginBottom: 10 }}>Word {idx + 1} / {pool.length}</div>
     <div key={idx} style={{ animation: "bounce-in .4s var(--ease-spring)" }}>
-      <div className="big-emoji">{word.emoji}</div>
+      <div className="big-emoji"><Art e={word.emoji} size={120} eager /></div>
       <div className="big-word" style={{ marginTop: 4 }}>{word.es}</div>
       <div className="say-hint" style={{ marginTop: 6 }}>🗣️ say: <b>{word.say}</b> · <i>{word.en}</i></div>
     </div>
@@ -101,7 +102,7 @@ export function SayItGame({ words, onDone, onWord }: GameProps & { words: Word[]
     </>}
 
     {r && <div style={{ animation: "bounce-in .4s var(--ease-spring)" }}>
-      <div style={{ fontSize: 68 }}>{r.emoji}</div>
+      <Art e={r.emoji} size={80} eager />
       <div className="h2" style={{ color: r.color }}>{r.title}</div>
       {heard && <p className="small muted" style={{ marginTop: 4 }}>I heard: “{heard}”</p>}
     </div>}

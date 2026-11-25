@@ -5,6 +5,7 @@ import { useFamily } from "../state/useFamily.ts";
 import { AccountPanel } from "../components/AccountPanel.tsx";
 import { LESSONS, WORLDS } from "../content/index.ts";
 import { Button, Card, Modal, ProgressBar } from "../components/ui.tsx";
+import { Art } from "../components/Art.tsx";
 
 function ChildReport({ child, progress: p, onRemove }: { child: Child; progress: Progress; onRemove: (c: Child) => void }) {
   const stars = p.stars || {};
@@ -18,7 +19,7 @@ function ChildReport({ child, progress: p, onRemove }: { child: Child; progress:
 
   return <Card style={{ marginBottom: 16 }}>
     <div className="row" style={{ marginBottom: 16 }}>
-      <div className="profile-tile__avatar" style={{ width: 56, height: 56, fontSize: 34, margin: 0 }}>{child.avatar}</div>
+      <div className="profile-tile__avatar" style={{ width: 56, height: 56, margin: 0 }}><Art e={child.avatar} size={40} /></div>
       <div className="grow">
         <div className="h3">{child.name}</div>
         <div className="small muted">{active} · 🔥 {liveStreak(p)}-day streak</div>
@@ -46,7 +47,7 @@ function ChildReport({ child, progress: p, onRemove }: { child: Child; progress:
         const max = (w.range[1] - w.range[0] + 1) * 3;
         return <div key={w.id}>
           <div className="row row--between small" style={{ fontWeight: 800, marginBottom: 4 }}>
-            <span>{w.emoji} {w.name}</span><span className="muted">{s}/{max} ⭐</span>
+            <span className="row" style={{ gap: 8 }}><Art e={w.emoji} size={22} />{w.name}</span><span className="muted">{s}/{max} ⭐</span>
           </div>
           <ProgressBar thin value={s / max} color={w.color} label={`${w.name} progress`} />
         </div>;

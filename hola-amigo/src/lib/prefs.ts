@@ -16,5 +16,5 @@ export function savePrefs(p: Prefs) {
 
 export function applyTheme(theme: Theme) {
   document.documentElement.dataset.theme = theme;
-  document.querySelector('meta[name="theme-color"]')?.setAttribute("content", theme === "daylight" ? "#F4F5FA" : "#0B0C14");
+  document.querySelector('meta[name="theme-color"]')?.setAttribute("content", theme === "daylight" ? "#F2F3F8" : "#06070D");
 }

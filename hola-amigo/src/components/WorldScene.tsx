@@ -1,4 +1,14 @@
 import { darken } from "../lib/utils.ts";
+import { artUrl } from "./Art.tsx";
+
+// A 3D illustration placed like an SVG text glyph (x, baseline y, font size s).
+function SvgArt({ e, x, y, s, o = 1 }: { e: string; x: number; y: number; s: number; o?: number }) {
+  const url = artUrl(e);
+  const size = s * 1.25;
+  return url
+    ? <image href={url} x={x} y={y - size * 0.9} width={size} height={size} opacity={o} />
+    : <text x={x} y={y} fontSize={s} opacity={o}>{e}</text>;
+}
 import type { World } from "../content/index.ts";
 
 // A themed horizon behind each world banner. Pure SVG: crisp and light.
@@ -11,8 +21,8 @@ export function WorldScene({ world, height = 60 }: { world: World; height?: numb
       <path d={`M0 ${height} Q 60 ${height-14} 120 ${height} T 240 ${height} T 360 ${height} T 480 ${height} V ${height} H0 Z`} fill={c} opacity="0.25" />
       <ellipse cx="70" cy={height} rx="34" ry="14" fill={c} opacity="0.5" />
       <ellipse cx="300" cy={height} rx="40" ry="12" fill={c} opacity="0.4" />
-      <text x="66" y={height-8} fontSize="20">🌴</text>
-      <text x="290" y={height-6} fontSize="16">🌴</text>
+      <SvgArt e={"🌴"} x={66} y={height-8} s={20} />
+      <SvgArt e={"🌴"} x={290} y={height-6} s={16} />
     </>,
     town: <>
       {[20, 70, 120, 175, 230, 290, 340].map((x, i) => <rect key={i} x={x} y={height - (18 + (i % 3) * 10)} width="34" height={18 + (i % 3) * 10} rx="4" fill={c} opacity={0.3 + (i % 3) * 0.12} />)}
@@ -24,13 +34,13 @@ export function WorldScene({ world, height = 60 }: { world: World; height?: numb
     </>,
     story: <>
       <path d={`M0 ${height} Q 120 ${height-24} 240 ${height} T 480 ${height} V ${height} H0 Z`} fill={c} opacity="0.22" />
-      {[40, 110, 180, 260, 330].map((x, i) => <text key={i} x={x} y={height - 12 - (i % 2) * 8} fontSize="13" opacity="0.5">✨</text>)}
-      <text x="200" y={height-18} fontSize="20">🌙</text>
+      {[40, 110, 180, 260, 330].map((x, i) => <SvgArt key={i} e={"✨"} x={x} y={height - 12 - (i % 2) * 8} s={13} o={0.5} />)}
+      <SvgArt e={"🌙"} x={200} y={height-18} s={20} />
     </>,
     plaza: <>
       <path d={`M0 ${height} Q 120 ${height-16} 240 ${height} T 480 ${height} V ${height} H0 Z`} fill={c} opacity="0.22" />
-      <text x="180" y={height-6} fontSize="26">⛲</text>
-      {[60, 300].map((x, i) => <text key={i} x={x} y={height-8} fontSize="16" opacity="0.7">🌺</text>)}
+      <SvgArt e={"⛲"} x={180} y={height-6} s={26} />
+      {[60, 300].map((x, i) => <SvgArt key={i} e={"🌺"} x={x} y={height-8} s={16} o={0.7} />)}
     </>,
     bridge: <>
       <path d={`M10 ${height} Q 190 ${height-40} 370 ${height}`} stroke={c} strokeWidth="6" fill="none" opacity="0.4" />
@@ -42,30 +52,30 @@ export function WorldScene({ world, height = 60 }: { world: World; height?: numb
       {[150, 185, 220, 255].map((x, i) => <rect key={i} x={x} y={height - 48} width="16" height="12" fill={c} opacity="0.4" />)}
       <polygon points={`180,${height-40} 195,${height-58} 210,${height-40}`} fill={dk} opacity="0.4" />
       <polygon points={`225,${height-40} 240,${height-58} 255,${height-40}`} fill={dk} opacity="0.4" />
-      <text x="196" y={height-44} fontSize="10">🚩</text>
+      <SvgArt e={"🚩"} x={196} y={height-44} s={10} />
     </>,
     home: <>
       <path d={`M0 ${height} Q 60 ${height-12} 120 ${height} T 240 ${height} T 360 ${height} V ${height} H0 Z`} fill={c} opacity="0.22" />
       <rect x="150" y={height - 30} width="60" height="30" rx="3" fill={c} opacity="0.4" />
       <polygon points={`145,${height-30} 180,${height-50} 215,${height-30}`} fill={dk} opacity="0.4" />
       <rect x="172" y={height - 20} width="16" height="20" fill={dk} opacity="0.5" />
-      {[70, 300].map((x, i) => <text key={i} x={x} y={height-6} fontSize="16" opacity="0.7">🌻</text>)}
+      {[70, 300].map((x, i) => <SvgArt key={i} e={"🌻"} x={x} y={height-6} s={16} o={0.7} />)}
     </>,
     play: <>
       <path d={`M0 ${height} Q 120 ${height-14} 240 ${height} T 480 ${height} V ${height} H0 Z`} fill={c} opacity="0.22" />
-      {["⚽", "🎨", "🪁", "🎮", "🧩"].map((e, i) => <text key={i} x={40 + i * 70} y={height - 8 - (i % 2) * 10} fontSize="16" opacity="0.75">{e}</text>)}
+      {["⚽", "🎨", "🪁", "🎮", "🧩"].map((e, i) => <SvgArt key={i} e={e} x={40 + i * 70} y={height - 8 - (i % 2) * 10} s={16} o={0.75} />)}
     </>,
     nature: <>
       <path d={`M0 ${height} Q 90 ${height-20} 180 ${height} T 360 ${height} T 480 ${height} V ${height} H0 Z`} fill={c} opacity="0.25" />
-      {[40, 90, 150, 210, 280, 340].map((x, i) => <text key={i} x={x} y={height-6} fontSize={14 + (i % 3) * 3} opacity="0.7">{["🌲","🌳","🌲","🍄","🌳","🌲"][i]}</text>)}
+      {[40, 90, 150, 210, 280, 340].map((x, i) => <SvgArt key={i} e={["🌲","🌳","🌲","🍄","🌳","🌲"][i]} x={x} y={height-6} s={14 + (i % 3) * 3} o={0.7} />)}
     </>,
     self: <>
       <path d={`M0 ${height} Q 120 ${height-16} 240 ${height} T 480 ${height} V ${height} H0 Z`} fill={c} opacity="0.22" />
-      {["🎒", "👤", "💜", "📚", "🎈"].map((e, i) => <text key={i} x={45 + i * 70} y={height - 8 - (i % 2) * 8} fontSize="15" opacity="0.75">{e}</text>)}
+      {["🎒", "👤", "💜", "📚", "🎈"].map((e, i) => <SvgArt key={i} e={e} x={45 + i * 70} y={height - 8 - (i % 2) * 8} s={15} o={0.75} />)}
     </>,
     stars: <>
-      {Array.from({ length: 14 }).map((_, i) => <text key={i} x={(i * 53) % 460 + 10} y={12 + ((i * 29) % (height - 20))} fontSize={10 + (i % 3) * 4} opacity="0.6">{["⭐","🌟","✨"][i % 3]}</text>)}
-      <text x="200" y={height-10} fontSize="24">🌈</text>
+      {Array.from({ length: 14 }).map((_, i) => <SvgArt key={i} e={["⭐","🌟","✨"][i % 3]} x={(i * 53) % 460 + 10} y={12 + ((i * 29) % (height - 20))} s={10 + (i % 3) * 4} o={0.6} />)}
+      <SvgArt e={"🌈"} x={200} y={height-10} s={24} />
     </>,
   };
   return <svg width="100%" height={height} viewBox={`0 0 400 ${height}`} preserveAspectRatio="xMidYMax slice" style={{ display: "block" }}>

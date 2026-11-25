@@ -6,6 +6,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { LESSONS, type Lesson, type Word } from "../content/index.ts";
 import { Icon } from "./Icon.tsx";
+import { Art } from "./Art.tsx";
 
 const norm = (s: string) => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[¿?¡!.,…]/g, "").trim();
 
@@ -63,14 +64,14 @@ export function CommandPalette({ onClose, onOpenLesson, unlockedUpTo }: { onClos
   const lessons = results.filter(r => r.kind === "lesson");
   const item = (r: Result, i: number) => <button key={r.id} type="button" className={`palette__item ${i === active ? "is-active" : ""}`} onMouseEnter={() => setActive(i)} onClick={() => run(r)}>
     {r.kind === "word" ? <>
-      <span className="palette__emoji">{r.w.emoji}</span>
+      <Art e={r.w.emoji} size={30} className="palette__emoji" />
       <span className="grow">
         <span style={{ display: "block", fontWeight: 900 }}>{r.w.es} <span className="muted">· {r.w.en}</span></span>
         <span className="tiny muted">say “{r.w.say}” · lesson {r.w.lessonId}</span>
       </span>
       <Icon name="volume" size={18} style={{ color: "var(--luna)" }} />
     </> : <>
-      <span className="palette__emoji">{r.l.emoji}</span>
+      <Art e={r.l.emoji} size={30} className="palette__emoji" />
       <span className="grow">
         <span style={{ display: "block", fontWeight: 900 }}>Lesson {r.l.id}: {r.l.title}</span>
         <span className="tiny muted">{r.l.subtitle}</span>

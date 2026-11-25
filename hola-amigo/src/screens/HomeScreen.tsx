@@ -10,6 +10,7 @@ import { Stars } from "../components/ui.tsx";
 import { Icon } from "../components/Icon.tsx";
 import { WorldScene } from "../components/WorldScene.tsx";
 import { ActivityFeed, AgentPanel, KpiTile, MasteryCard, QuestsCard, WeeklyChart } from "../components/Widgets.tsx";
+import { Art } from "../components/Art.tsx";
 
 const EASE = [0.22, 1, 0.36, 1];
 
@@ -28,7 +29,7 @@ function NextCard({ lesson, label, onClick }: { lesson: Lesson; label: string; o
     <div className="next-card__top"><span className="next-card__tag">{label}</span></div>
     <div className="row" style={{ position: "relative", gap: 14 }}>
       <motion.div className="next-card__emoji" aria-hidden="true" animate={{ rotate: [0, -6, 6, 0], y: [0, -3, 0] }} transition={{ duration: 2.6, repeat: Infinity, repeatDelay: 1.2 }}>
-        {isMilestone(lesson.id) ? "🏆" : lesson.emoji}
+        <Art e={isMilestone(lesson.id) ? "🏆" : lesson.emoji} size={78} eager />
       </motion.div>
       <div className="grow">
         <div className="display" style={{ fontSize: 28 }}>{lesson.title}</div>
@@ -36,7 +37,7 @@ function NextCard({ lesson, label, onClick }: { lesson: Lesson; label: string; o
       </div>
     </div>
     <div className="next-card__words" aria-label="Words in this lesson">
-      {lesson.words.slice(0, 4).map((w, i) => <motion.span key={w.es} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 + i * 0.08 }}>{w.emoji} {w.es}</motion.span>)}
+      {lesson.words.slice(0, 4).map((w, i) => <motion.span key={w.es} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 + i * 0.08 }}><Art e={w.emoji} size={20} />{w.es}</motion.span>)}
       {lesson.words.length > 4 && <span>+{lesson.words.length - 4}</span>}
     </div>
     <span className="next-card__play"><Icon name="play" size={16} fill />Play lesson</span>
@@ -65,7 +66,7 @@ function WorldPath({ world, stars, unlockedUpTo, currentId, onStart }: MapProps 
     <div className="world__banner">
       <div className="world__banner-scene"><WorldScene world={world} height={150} /></div>
       <div className="world__banner-info">
-        <div className="world__emoji" aria-hidden="true">{world.emoji}</div>
+        <div className="world__emoji" aria-hidden="true"><Art e={world.emoji} size={46} eager /></div>
         <div className="grow">
           <div className="world__name">{world.name}</div>
           <div className="world__desc">{world.desc}</div>
@@ -76,7 +77,7 @@ function WorldPath({ world, stars, unlockedUpTo, currentId, onStart }: MapProps 
     </div>
     <div className="world__path" style={{ height }}>
       {(world.deco || []).map((e, i) => <div key={i} className="world__deco" aria-hidden="true"
-        style={{ left: `${[4, 86, 8, 82][i % 4]}%`, top: 40 + ((i * 151) % Math.max(1, height - 90)), animationDelay: `${-i * 1.1}s` }}>{e}</div>)}
+        style={{ left: `${[4, 86, 8, 82][i % 4]}%`, top: 40 + ((i * 151) % Math.max(1, height - 90)), animationDelay: `${-i * 1.1}s` }}><Art e={e} size={40} /></div>)}
       <svg viewBox={`0 0 100 ${height}`} preserveAspectRatio="none" width="100%" height={height} style={{ position: "absolute", inset: 0 }} aria-hidden="true">
         <path d={pathTo(stones.length)} fill="none" stroke="var(--track)" strokeWidth="16" strokeLinecap="round" vectorEffect="non-scaling-stroke" />
         {reached > 1 && <>
@@ -98,7 +99,7 @@ function WorldPath({ world, stars, unlockedUpTo, currentId, onStart }: MapProps 
             disabled={!unlocked} onClick={() => onStart(l)}
             aria-label={unlocked ? `Lesson ${l.id}: ${l.subtitle}. ${s} of 3 stars` : `Lesson ${l.id}, locked`}>
             {current && <span className="stone__orbit" />}
-            {unlocked ? <span className="stone__emoji" aria-hidden="true">{ms ? "🏆" : l.emoji}</span> : <Icon name="lock" size={24} />}
+            {unlocked ? <span className="stone__emoji" aria-hidden="true"><Art e={ms ? "🏆" : l.emoji} size={40} /></span> : <Icon name="lock" size={24} />}
             {unlocked && s > 0 && <span className="stone__check" aria-hidden="true"><Icon name="check" size={14} stroke={3.5} /></span>}
           </motion.button>
           <div className="stone__label">{l.id}. {l.subtitle}</div>
@@ -118,7 +119,13 @@ function Journey({ stars, unlockedUpTo, currentId, onStart }: MapProps) {
   const [wid, setWid] = useState(currentWorld.id);
   const world = WORLDS.find(w => w.id === wid) ?? WORLDS[0];
   const tabs = useRef<HTMLDivElement>(null);
-  useEffect(() => { tabs.current?.querySelector('[aria-selected="true"]')?.scrollIntoView({ inline: "center", block: "nearest" }); }, [wid]);
+  // Centre the chosen world's tab by scrolling the tab strip sideways only.
+  // (scrollIntoView also scrolled the whole page down to the map on phones.)
+  useEffect(() => {
+    const strip = tabs.current;
+    const tab = strip?.querySelector<HTMLElement>('[aria-selected="true"]');
+    if (strip && tab) strip.scrollTo({ left: tab.offsetLeft - (strip.clientWidth - tab.offsetWidth) / 2, behavior: "smooth" });
+  }, [wid]);
   const go = (d: number) => setWid(id => Math.min(WORLDS.length, Math.max(1, id + d)));
 
   return <section className="card journey" aria-label="Journey map">
@@ -141,7 +148,7 @@ function Journey({ stars, unlockedUpTo, currentId, onStart }: MapProps) {
               <circle cx="15" cy="15" r="13" fill="none" stroke="var(--track)" strokeWidth="3" />
               <circle cx="15" cy="15" r="13" fill="none" stroke={w.color} strokeWidth="3" strokeLinecap="round" strokeDasharray={C} strokeDashoffset={C * (1 - pct)} transform="rotate(-90 15 15)" />
             </svg>
-            {locked ? "🔒" : w.emoji}
+            <Art e={locked ? "🔒" : w.emoji} size={24} />
           </span>
           {w.name}
         </button>;
@@ -189,12 +196,12 @@ export function HomeScreen({ child, progress, onStartLesson, onOpenLesson, onCla
       <div className="l-7"><AgentPanel progress={progress} onAction={onMission} /></div>
       <div className="l-5"><NextCard lesson={current} label={label} onClick={() => onStartLesson(current)} /></div>
 
-      <div className="xs-6 l-3"><KpiTile icon="bolt" color="var(--gold)" label="XP today" value={today} sub={`${week.reduce((a, d) => a + d.xp, 0)} XP this week`} spark={week.map(d => d.xp)} delay={0.05} /></div>
-      <div className="xs-6 l-3"><KpiTile icon="flame" color="var(--fire)" label="Day streak" value={streak} sub={`Best combo: ${progress.bestCombo || 0} in a row`} delay={0.1}
+      <div className="xs-6 l-3"><KpiTile icon="bolt" art="⚡" color="var(--gold)" label="XP today" value={today} sub={`${week.reduce((a, d) => a + d.xp, 0)} XP this week`} spark={week.map(d => d.xp)} delay={0.05} /></div>
+      <div className="xs-6 l-3"><KpiTile icon="flame" art="🔥" color="var(--fire)" label="Day streak" value={streak} sub={`Best combo: ${progress.bestCombo || 0} in a row`} delay={0.1}
         footer={<div className="kpi-week">{week.map((d, i) => <span key={d.key} className={`${d.xp ? "on" : ""} ${i === 6 ? "today" : ""}`} title={`${d.date.toLocaleDateString(undefined, { weekday: "long" })}: ${d.xp} XP`} />)}</div>} /></div>
-      <div className="xs-6 l-3"><KpiTile icon="brain" color="var(--luna)" label="Words met" value={words.length} sub={`${strong} strong · ${daily.count}/${daily.goal} activities today`} delay={0.15}
+      <div className="xs-6 l-3"><KpiTile icon="brain" art="🧠" color="var(--luna)" label="Words met" value={words.length} sub={`${strong} strong · ${daily.count}/${daily.goal} activities today`} delay={0.15}
         footer={<div className="kpi-meter"><div style={{ width: `${words.length ? (strong / words.length) * 100 : 0}%`, background: "var(--luna)" }} /></div>} /></div>
-      <div className="xs-6 l-3"><KpiTile icon="star" color="var(--sun)" label="Stars" value={sumStars(progress)} sub={`of ${LESSONS.length * 3} · ${Object.keys(stars).length} lessons done`} delay={0.2}
+      <div className="xs-6 l-3"><KpiTile icon="star" art="⭐" color="var(--sun)" label="Stars" value={sumStars(progress)} sub={`of ${LESSONS.length * 3} · ${Object.keys(stars).length} lessons done`} delay={0.2}
         footer={<div className="kpi-meter"><div style={{ width: `${(sumStars(progress) / (LESSONS.length * 3)) * 100}%`, background: "var(--sun)" }} /></div>} /></div>
 
       <div className="l-8"><Journey stars={stars} unlockedUpTo={unlockedUpTo} currentId={allDone ? null : current.id} onStart={l => (stars[l.id] ? onOpenLesson(l) : onStartLesson(l))} /></div>

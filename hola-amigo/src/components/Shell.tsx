@@ -9,6 +9,7 @@ import { sumStars } from "../domain/progress.ts";
 import { Sol } from "./Mascots.tsx";
 import { Icon } from "./Icon.tsx";
 import { AnimatedNumber } from "./Widgets.tsx";
+import { Art } from "./Art.tsx";
 
 export type NavKey = ShellView | "family";
 const NAV: { key: ShellView; icon: string; label: string }[] = [
@@ -58,7 +59,7 @@ function Sidebar({ child, progress, active, onNav, prefs, onToggle, due, onSearc
     <div className="sidebar__foot">
       <PrefToggles prefs={prefs} onToggle={onToggle} />
       <button type="button" className="card avatar-btn" style={{ padding: 12, width: "100%" }} onClick={() => onNav("family")} title="Switch learner">
-        <span className="avatar-bubble">{child.avatar}</span>
+        <span className="avatar-bubble"><Art e={child.avatar} size={30} eager /></span>
         <span className="grow">
           <span className="avatar-name" style={{ display: "block" }}>{child.name}</span>
           <span className="tiny muted">Level {info.level}</span>
@@ -74,7 +75,7 @@ function MobileTop({ child, progress, onNav, onSearch }: Pick<ShellProps, "child
   return <div className="mobile-top">
     <div className="mobile-top__inner">
       <button type="button" className="avatar-btn grow" onClick={() => onNav("family")} aria-label="Switch learner">
-        <span className="avatar-bubble">{child.avatar}</span>
+        <span className="avatar-bubble"><Art e={child.avatar} size={30} eager /></span>
         <span className="avatar-name">{child.name}</span>
       </button>
       <span className={`pill pill--fire ${streak ? "" : "pill--dim"}`} aria-label={`${streak}-day streak`}><Icon name="flame" size={15} fill />{streak}</span>

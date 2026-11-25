@@ -18,11 +18,12 @@ import { DragMatch, FlashCards, LearnIntro, MatchGame, OddOneOut } from "../game
 import { SentenceGame } from "../games/SentenceGame.tsx";
 import { StoryReader } from "../games/StoryReader.tsx";
 import { SayItGame } from "../games/SayItGame.tsx";
+import { Art } from "../components/Art.tsx";
 
 function SurpriseCard({ surprise, onDone }: { surprise: Surprise; onDone: () => void }) {
   useSayOnShow(surprise.lines.join(" "), { delay: 450 });
   return <div className="text-center" style={{ animation: "bounce-in .4s var(--ease-spring)" }}>
-    <div className="float" style={{ fontSize: 70 }}>{surprise.emoji}</div>
+    <div className="float"><Art e={surprise.emoji} size={96} eager /></div>
     <h3 className="h2" style={{ margin: "6px 0 14px" }}>{surprise.title}</h3>
     <div className="card card--sun card--pad" style={{ marginBottom: 20 }}>
       {surprise.lines.map((line, i) => <p key={i} style={{ fontSize: i ? 15 : 19, fontWeight: i ? 700 : 800, fontFamily: i ? undefined : "var(--font-display)", color: i ? "var(--text-2)" : "var(--text)", lineHeight: 1.45, marginTop: i ? 8 : 0 }}>{line}</p>)}
@@ -118,7 +119,7 @@ export function ActivityScreen({ lesson, type, journey, combo = 0, sessionXp = 0
       {journey && <div className="counter text-center" style={{ marginTop: -10, marginBottom: 12 }}>Step {journey.step + 1} of {journey.steps.length}</div>}
 
       <div className="activity-title">
-        <h2 className="h2"><span aria-hidden="true">{meta.emoji}</span>{meta.title}
+        <h2 className="h2"><Art e={meta.emoji} size={34} eager />{meta.title}
           {type !== "surprise" && <button type="button" className={`hear-btn ${guide ? "" : "hear-btn--quiet"}`} onClick={() => voice.narrate(INSTRUCTIONS[type])}
             aria-label="Hear the instructions" title="Hear the instructions"><Icon name="volume" size={16} /></button>}
         </h2>

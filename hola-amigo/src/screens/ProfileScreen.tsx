@@ -4,6 +4,7 @@ import { countLessons, levelInfo, levelTitle, liveStreak, sumStars, type Progres
 import type { Child, Parent } from "../services/index.ts";
 import { Button, Card, ProgressBar } from "../components/ui.tsx";
 import { AnimatedNumber, LevelRing, MasteryCard, StreakCard, WeeklyChart } from "../components/Widgets.tsx";
+import { Art } from "../components/Art.tsx";
 
 // "Me" — the child's personal stats dashboard.
 export function ProfileScreen({ child, parent, progress, onTrophies, onSwitchChild }: { child: Child; parent: Parent; progress: Progress; onTrophies: () => void; onSwitchChild: () => void }) {
@@ -22,7 +23,7 @@ export function ProfileScreen({ child, parent, progress, onTrophies, onSwitchChi
   return <div className="stack" style={{ "--gap": "16px", paddingTop: 6 }}>
     <Card className="card--pad-lg">
       <div className="row" style={{ gap: 18, flexWrap: "wrap" }}>
-        <div className="profile-tile__avatar" style={{ width: 96, height: 96, fontSize: 60, margin: 0 }}>{child.avatar}</div>
+        <div className="profile-tile__avatar" style={{ width: 96, height: 96, margin: 0 }}><Art e={child.avatar} size={72} eager /></div>
         <div className="grow">
           <div className="eyebrow">{levelTitle(info.level)}</div>
           <h1 className="h1" style={{ fontSize: 34 }}>{child.name}</h1>

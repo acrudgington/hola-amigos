@@ -20,8 +20,8 @@ export default defineConfig({
         scope: "/",
         display: "standalone",
         orientation: "portrait",
-        background_color: "#0B0C14",
-        theme_color: "#0B0C14",
+        background_color: "#06070D",
+        theme_color: "#06070D",
         categories: ["education", "kids"],
         icons: [
           { src: "/icon-192.png", sizes: "192x192", type: "image/png", purpose: "any" },
@@ -43,6 +43,16 @@ export default defineConfig({
               expiration: { maxEntries: 4000 },
               cacheableResponse: { statuses: [200] },
               rangeRequests: true,   // Safari asks for audio in byte ranges
+            },
+          },
+          {
+            // 3D illustrations: kept once seen, so lessons look right offline.
+            urlPattern: ({ url }) => url.pathname.startsWith("/art/") && url.pathname.endsWith(".webp"),
+            handler: "CacheFirst",
+            options: {
+              cacheName: "art",
+              expiration: { maxEntries: 1000 },
+              cacheableResponse: { statuses: [200] },
             },
           },
         ],

@@ -11,6 +11,7 @@ import { Choices, Feedback, SpeakButton } from "../components/ui.tsx";
 import { useLater, useRounds } from "./hooks.ts";
 import { useGuide } from "../audio/guide.ts";
 import { BOSS_HIT, PRAISE, REMEMBERED } from "../audio/lines.ts";
+import { Art } from "../components/Art.tsx";
 
 const praise = () => PRAISE[Math.floor(Math.random() * PRAISE.length)];
 const emojiFor = (es: string) => ALL_WORDS.find(w => w.es === es)?.emoji || "";
@@ -90,7 +91,7 @@ const wordPrompt = (w: Word, sub?: string) => <>
   </div>
 </>;
 
-const withEmoji = (o: Opt) => <>{o.emoji && <span className="choice__emoji" style={{ fontSize: 30 }}>{o.emoji}</span>}<span>{o.en}</span></>;
+const withEmoji = (o: Opt) => <>{o.emoji && <Art e={o.emoji} size={40} className="choice__emoji" />}<span>{o.en}</span></>;
 const textOnly = (o: Opt) => <span>{o.en}</span>;
 
 // Turn a word into a "what does it mean?" round.
@@ -129,7 +130,7 @@ export function Quiz({ words, gaps = [], onDone, onWord }: GameProps & { words: 
 export function ListenGame({ words, onDone, onWord }: GameProps & { words: Word[] }) {
   const [rounds] = useState(() => shuffle(words.slice(0, 8)).slice(0, 6).map(w => ({
     ...meaningRound(w, words, { listen: true }),
-    render: (o: Opt) => <><span className="choice__emoji">{o.emoji}</span><span className="choice__sub" style={{ color: "var(--text)" }}>{o.en}</span></>,
+    render: (o: Opt) => <>{o.emoji && <Art e={o.emoji} size={48} className="choice__emoji" />}<span className="choice__sub" style={{ color: "var(--text)" }}>{o.en}</span></>,
   })));
   if (!voice.available()) return <Unsupported emoji="🔊" title="Audio not supported" text="The Listen game needs speech, which works best in Chrome, Edge or Safari." onSkip={() => onDone(0, 0)} />;
   return <RoundGame rounds={rounds} onDone={onDone} onWord={onWord} counterLabel="Sound" />;
@@ -170,7 +171,7 @@ export function BossBattle({ words, world, onDone, onWord }: GameProps & { words
   const hp = Math.max(0, 1 - hits / rounds.length);
   return <RoundGame rounds={rounds} onDone={onDone} onWord={onWordHit} goodText={() => BOSS_HIT} delay={900}
     header={() => <div style={{ marginBottom: 14 }}>
-      <div key={hitFx} className={`boss-emoji ${hitFx ? "is-hit" : ""}`}>{world?.emoji || "🐉"}</div>
+      <div key={hitFx} className={`boss-emoji ${hitFx ? "is-hit" : ""}`}><Art e={world?.emoji || "🐉"} size={120} eager /></div>
       <div className="h3" style={{ marginTop: 4 }}>{world?.name || "Boss"} Challenge!</div>
       <div className="boss-hp" aria-label="Boss health"><div className="boss-hp__fill" style={{ width: `${hp * 100}%` }} /></div>
       <p className="tiny muted">Every right answer is a hit!</p>

@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { findReward, RARITY, type EarnedReward, type Sticker } from "../domain/rewards.ts";
 export type SpeakLang = "es" | "en";
 import { darken } from "../lib/utils.ts";
+import { Art } from "./Art.tsx";
 
 export type ButtonVariant = "white" | "sun" | "luna" | "mint" | "coral" | "sky" | "ghost";
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> { variant?: ButtonVariant; size?: "sm" | "lg"; block?: boolean }
@@ -104,7 +105,7 @@ export function RewardToast({ reward, onClose }: { reward: EarnedReward; onClose
   if (reward.type === "sticker") { const r = RARITY[(item as Sticker).rarity]; col = r?.c || col; kicker = `NEW ${(r?.label || "Sticker").toUpperCase()}!`; }
   if (reward.type === "outfit") { col = "#7C6CF2"; kicker = "NEW OUTFIT!"; }
   return <button type="button" className="toast" onClick={onClose} role="status" style={{ "--toast": col, "--toast-d": darken(col) }}>
-    <div className="toast__icon">{item.emoji}</div>
+    <div className="toast__icon"><Art e={item.emoji} size={34} eager /></div>
     <div>
       <div className="toast__kicker">{kicker}</div>
       <div className="toast__title">{item.name}</div>

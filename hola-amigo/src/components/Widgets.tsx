@@ -7,6 +7,7 @@ import { planMission, type MissionStep } from "../lib/mission.ts";
 import { Card } from "./ui.tsx";
 import { Icon } from "./Icon.tsx";
 import { Sol } from "./Mascots.tsx";
+import { Art } from "./Art.tsx";
 
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
 type P = { progress: Progress };
@@ -133,7 +134,7 @@ export function QuestsCard({ progress, onClaim }: P & { onClaim?: () => void }) 
     {quests.map(q => {
       const done = q.value >= q.goal;
       return <div key={q.id} className={`quest ${done ? "is-done" : ""}`}>
-        <div className="quest__icon">{done ? <Icon name="check" size={18} stroke={3} /> : q.emoji}</div>
+        <div className="quest__icon">{done ? <Icon name="check" size={18} stroke={3} /> : <Art e={q.emoji} size={26} />}</div>
         <div className="grow">
           <div className="small" style={{ fontWeight: 800, marginBottom: 6 }}>{q.label}</div>
           <div className="progress progress--thin"><div className="progress__fill" style={{ width: `${(q.value / q.goal) * 100}%`, "--fill": done ? "var(--mint)" : "var(--sun)" }} /></div>
@@ -159,9 +160,9 @@ export function Sparkline({ values, color = "var(--luna)", height = 34 }: { valu
   </svg>;
 }
 
-export function KpiTile({ icon, color, label, value, sub, spark, footer, delay = 0 }: { icon: string; color: string; label: string; value: number; sub: ReactNode; spark?: number[]; footer?: ReactNode; delay?: number }) {
-  return <motion.div className="card kpi" initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ delay, duration: 0.45, ease: EASE }}>
-    <div className="kpi__head"><span className="kpi__icon" style={{ background: color }}><Icon name={icon} size={17} fill /></span>{label}</div>
+export function KpiTile({ icon, art, color, label, value, sub, spark, footer, delay = 0 }: { icon: string; art?: string; color: string; label: string; value: number; sub: ReactNode; spark?: number[]; footer?: ReactNode; delay?: number }) {
+  return <motion.div className="card kpi" style={{ "--kc": color }} initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ delay, duration: 0.45, ease: EASE }}>
+    <div className="kpi__head"><span className="kpi__icon" style={{ background: color }}>{art ? <Art e={art} size={22} eager /> : <Icon name={icon} size={17} fill />}</span>{label}</div>
     <div className="kpi__value"><AnimatedNumber value={value} /></div>
     <div className="kpi__sub">{sub}</div>
     <div style={{ marginTop: "auto" }}>{spark ? <Sparkline values={spark} color={color} /> : footer}</div>
@@ -190,7 +191,10 @@ export function AgentPanel({ progress, onAction }: P & { onAction: (step: Missio
       <div className="agent__avatar"><Sol size={46} mood={plan.completed === plan.total ? "celebrate" : "happy"} outfit={progress.solOutfit} /></div>
       <div className="grow">
         <div className="h3">Sol · study buddy</div>
-        <div className="status"><span className="status__dot" />{typing ? "Planning your day…" : "Ready"}</div>
+        <div className="row" style={{ gap: 8, marginTop: 4 }}>
+          <span className="chip-live"><span className="status__dot" />{typing ? "Planning" : "Online"}</span>
+          <span className="tiny muted mono">today’s mission</span>
+        </div>
       </div>
       <div className="small muted" style={{ textAlign: "right" }}>
         <div className="display" style={{ fontSize: 22, color: "var(--text)" }}>{plan.completed}/{plan.total}</div>steps done
@@ -224,7 +228,7 @@ export function ActivityFeed({ progress, limit = 6 }: P & { limit?: number }) {
     {events.length ? <ul className="feed">
       <AnimatePresence initial={false}>
         {events.map(e => <motion.li key={e.t + e.type} className="feed__item" layout initial={{ opacity: 0, y: -8 }} animate={{ opacity: 1, y: 0 }}>
-          <span className="feed__icon" aria-hidden="true">{e.emoji || FEED_ICONS[e.type] || "⭐"}</span>
+          <span className="feed__icon" aria-hidden="true"><Art e={e.emoji || FEED_ICONS[e.type] || "⭐"} size={22} /></span>
           <div className="grow">
             <div className="feed__text">{e.text}</div>
             <div className="feed__time">{timeAgo(e.t)}</div>

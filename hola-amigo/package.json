@@ -18,10 +18,12 @@
     "test:emulators": "firebase emulators:exec --only auth,firestore --project demo-hola-amigos \"vitest run --config vitest.emulators.config.ts\"",
     "emulators": "firebase emulators:start --only auth,firestore --project demo-hola-amigos",
     "firebase:deploy-rules": "firebase deploy --only firestore:rules,firestore:indexes",
-    "legal:export": "vite-node scripts/export-legal.ts"
+    "legal:export": "vite-node scripts/export-legal.ts",
+    "art:sync": "vite-node scripts/sync-art.ts"
   },
   "dependencies": {
     "@fontsource/fredoka": "5.3.0",
+    "@fontsource/jetbrains-mono": "5.2.8",
     "@fontsource/nunito": "5.3.0",
     "firebase": "13.1.0",
     "framer-motion": "^11.11.17",
@@ -31,6 +33,7 @@
   },
   "devDependencies": {
     "@firebase/rules-unit-testing": "6.0.0",
+    "@lobehub/fluent-emoji-3d": "1.1.0",
     "@playwright/test": "1.63.0",
     "@types/node": "22.10.2",
     "@types/react": "18.3.12",

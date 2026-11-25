@@ -4,6 +4,7 @@ import type { Progress } from "../domain/progress.ts";
 import { darken } from "../lib/utils.ts";
 import { Card, Segmented } from "../components/ui.tsx";
 import { Luna, Sol } from "../components/Mascots.tsx";
+import { Art } from "../components/Art.tsx";
 
 type Tab = "badges" | "stickers" | "outfits";
 const TABS = [["badges", "🏆 Badges"], ["stickers", "✨ Stickers"], ["outfits", "🎩 Dress up"]] as const;
@@ -30,7 +31,7 @@ export function TrophyScreen({ progress, onEquip }: { progress: Progress; onEqui
           {sortedBadges.map(b => {
             const has = badges.has(b.id);
             return <Card key={b.id} pad={false} className={`trophy ${has ? "trophy--earned" : "trophy--locked"}`}>
-              <div className="trophy__emoji">{b.emoji}</div>
+              <div className="trophy__emoji"><Art e={b.emoji} size={48} /></div>
               <div className="trophy__name">{has ? b.name : `🔒 ${b.name}`}</div>
               <div className="trophy__desc">{b.desc}</div>
             </Card>;
@@ -46,7 +47,7 @@ export function TrophyScreen({ progress, onEquip }: { progress: Progress; onEqui
             const rc = RARITY[s.rarity]?.c;
             return <div key={s.id} className={`sticker ${has ? "" : "sticker--locked"}`} title={has ? s.desc : `Locked: ${s.desc}`}
               style={{ "--rc": rc, "--rc-d": darken(rc), animationDelay: `${Math.min(i, 12) * 0.03}s` }}>
-              <div style={{ fontSize: 36 }}>{has ? s.emoji : "❓"}</div>
+              <Art e={has ? s.emoji : "❓"} size={48} />
               <div style={{ fontSize: 11, fontWeight: 900, lineHeight: 1.15, marginTop: 4 }}>{has ? s.name : "???"}</div>
               <div style={{ fontSize: 10, color: "var(--muted)", fontWeight: 700, marginTop: 2, lineHeight: 1.2 }}>{has ? (s.rarity !== "common" ? <span style={{ color: rc, fontWeight: 900, textTransform: "uppercase" }}>{s.rarity}</span> : "") : s.desc}</div>
             </div>;
@@ -67,7 +68,7 @@ export function TrophyScreen({ progress, onEquip }: { progress: Progress; onEqui
               const on = current[who] === o.id;
               return <button key={o.id} type="button" className="avatar-pick" aria-pressed={on} disabled={!has} onClick={() => onEquip(who, o.id)}
                 title={has ? o.name : `Locked: ${o.desc}`} style={{ opacity: has ? 1 : 0.45, cursor: has ? "pointer" : "not-allowed", padding: "8px 2px" }}>
-                <div style={{ fontSize: 24 }}>{has ? o.emoji : "🔒"}</div>
+                <Art e={has ? o.emoji : "🔒"} size={34} />
                 <div style={{ fontSize: 10, fontWeight: 900, marginTop: 2 }}>{o.name}</div>
               </button>;
             })}
