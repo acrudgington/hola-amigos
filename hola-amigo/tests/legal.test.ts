@@ -10,10 +10,11 @@ describe("privacy notice", () => {
       expect(shape("es")).toEqual(shape("en"));
     }
   });
-  it("shows euro prices in each language's style", () => {
-    const text = (lang: "en" | "es") => JSON.stringify(privacyNotice(lang, { cloud: true }));
-    expect(text("en")).toContain("€2 a month or €20 a year");
-    expect(text("es").replace(/\u00a0/g, " ")).toContain("2 € al mes o 20 € al año");
+  it("states the €20 yearly price in each language's style", () => {
+    const text = (lang: "en" | "es") => JSON.stringify(privacyNotice(lang, { cloud: true })).replace(/\u00a0/g, " ");
+    expect(text("en")).toContain("€20 a year");
+    expect(text("es")).toContain("20 € al año");
+    expect(text("en")).not.toMatch(/a month/);
   });
   it("has balanced bold markup", () => {
     for (const lang of ["en", "es"] as const) {

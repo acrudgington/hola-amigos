@@ -56,7 +56,7 @@ Mientras tengas una cuenta. Cuando eliminas tu cuenta (o el perfil de un niño),
 
 ## Planes
 
-El primer mundo es gratuito. El acceso completo cuesta 2 € al mes o 20 € al año; puedes cancelarlo cuando quieras.
+Durante este periodo de acceso anticipado, ¡Hola, Amigo! es completamente gratuito. Más adelante habrá un plan familiar de 20 € al año; te avisaremos antes y nunca te cobraremos nada sin que lo contrates tú.
 
 ## Condiciones en resumen
 

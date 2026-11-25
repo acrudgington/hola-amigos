@@ -36,11 +36,12 @@ export const PRIVACY = {
 // Subscription plans (wired to payments in step 5).
 export const PRICING = {
   currency: "EUR",
-  plans: [
-    { id: "monthly", label: "Monthly", price: 2, interval: "month" as const },
-    { id: "yearly", label: "Yearly", price: 20, interval: "year" as const, note: "Save €4 — 2 months free" },
-  ],
-  // The first world is free; everything else needs a subscription.
+  // One plan: a yearly family subscription that renews each year until cancelled.
+  plan: { id: "yearly", label: "Family · yearly", price: 20, interval: "year" as const },
+  // false = everything is free (launch / early access): no paywall, nothing to pay.
+  // Switch on in step 5, once Stripe payments are wired in.
+  paymentsLive: false,
+  // With payments on: the first world stays free; the rest needs the plan.
   freeLessonsUpTo: 8,
 } as const;
 

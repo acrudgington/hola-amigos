@@ -25,8 +25,7 @@ export function privacyNotice(lang: LegalLang, { cloud }: { cloud: boolean }): N
   const app = APP.name;
 
   if (lang === "es") {
-    const monthly = formatPrice(PRICING.plans[0].price, "es-ES");
-    const yearly = formatPrice(PRICING.plans[1].price, "es-ES");
+    const price = formatPrice(PRICING.plan.price, "es-ES");
     return {
       title: "Aviso de privacidad y condiciones",
       version: `Versión ${PRIVACY.version}`,
@@ -77,7 +76,9 @@ export function privacyNotice(lang: LegalLang, { cloud }: { cloud: boolean }): N
           `Si no estás conforme con cómo tratamos tus datos, puedes presentar una reclamación ante la ${PRIVACY.authority.name}, ${PRIVACY.authority.site}.`,
         ]] },
         { title: "Planes", blocks: [
-          `El primer mundo es gratuito. El acceso completo cuesta ${monthly} al mes o ${yearly} al año; puedes cancelarlo cuando quieras.`,
+          PRICING.paymentsLive
+            ? `El primer mundo es gratuito. El acceso completo cuesta ${price} al año y se renueva automáticamente cada año. Puedes cancelar la renovación cuando quieras y seguirás teniendo acceso hasta el final del año que hayas pagado.`
+            : `Durante este periodo de acceso anticipado, ${app} es completamente gratuito. Más adelante habrá un plan familiar de ${price} al año; te avisaremos antes y nunca te cobraremos nada sin que lo contrates tú.`,
         ] },
         { title: "Condiciones en resumen", blocks: [
           `Usa ${app} para el aprendizaje de tu propia familia, mantén tu contraseña en privado y sé la persona adulta responsable del uso que haga tu hijo o hija. Podemos actualizar este aviso; si cambia algo importante, te lo diremos y te pediremos que lo aceptes de nuevo.`,
@@ -86,8 +87,7 @@ export function privacyNotice(lang: LegalLang, { cloud }: { cloud: boolean }): N
     };
   }
 
-  const monthly = formatPrice(PRICING.plans[0].price, "en-GB");
-  const yearly = formatPrice(PRICING.plans[1].price, "en-GB");
+  const price = formatPrice(PRICING.plan.price, "en-GB");
   return {
     title: "Privacy notice & terms",
     version: `Version ${PRIVACY.version}`,
@@ -138,7 +138,9 @@ export function privacyNotice(lang: LegalLang, { cloud }: { cloud: boolean }): N
         `If you’re unhappy with how we handle your data, you can complain to the ${PRIVACY.authority.name}, ${PRIVACY.authority.site}.`,
       ]] },
       { title: "Plans", blocks: [
-        `The first world is free. Full access costs ${monthly} a month or ${yearly} a year; you can cancel any time.`,
+        PRICING.paymentsLive
+          ? `The first world is free. Full access costs ${price} a year and renews automatically each year. You can cancel the renewal any time and keep access until the end of the year you’ve paid for.`
+          : `During early access, ${app} is completely free. Later there will be a family plan at ${price} a year; we’ll let you know first, and you’ll never be charged unless you choose to sign up.`,
       ] },
       { title: "Terms in short", blocks: [
         `Please use ${app} for your own family’s learning, keep your password private, and be the grown-up in charge of your child’s use. We may update this notice; if anything important changes we’ll tell you and ask you to agree again.`,

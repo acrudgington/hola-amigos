@@ -56,7 +56,7 @@ For as long as you have an account. When you delete your account (or a child’s
 
 ## Plans
 
-The first world is free. Full access costs €2 a month or €20 a year; you can cancel any time.
+During early access, ¡Hola, Amigo! is completely free. Later there will be a family plan at €20 a year; we’ll let you know first, and you’ll never be charged unless you choose to sign up.
 
 ## Terms in short
 
