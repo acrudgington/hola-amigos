@@ -93,5 +93,13 @@
     {"who": "luna", "es": "¡Iré a la playa con mi hermana!", "en": "I'll go to the beach with my sister!"},
     {"who": "sol", "es": "¿Y de mayor? ¿Qué serás? ¡Dímelo ya!", "en": "And when you grow up? What will you be? Tell me now!"},
     {"who": "luna", "es": "¡Seré astronauta y viajaré allá!", "en": "I'll be an astronaut and I'll travel up there!"}
+  ] },
+  { "id": "me-pones", "world": 18, "title": "¿Me pones…?", "en": "Can I have…?", "emoji": "☕", "bpm": 102, "lines": [
+    {"who": "sol", "es": "¿Me pones un zumo? ¿Me pones un pan?", "en": "Can I have a juice? Can I have some bread?"},
+    {"who": "luna", "es": "¡Marchando, marchando, ahora mismo van!", "en": "Coming right up, coming right up, they're on their way!"},
+    {"who": "sol", "es": "¿Me pones churros con chocolate?", "en": "Can I have churros with chocolate?"},
+    {"who": "luna", "es": "¡Claro que sí! ¡Aquí tienes tu plato!", "en": "Of course! Here's your plate!"},
+    {"who": "sol", "es": "¿Cuánto es todo? ¿Cuánto es?", "en": "How much is everything? How much is it?"},
+    {"who": "luna", "es": "¡Son cinco euros! ¡Gracias, y hasta otra vez!", "en": "That's five euros! Thank you, and see you again!"}
   ] }
 ]

@@ -111,5 +111,11 @@
     {"id": "17b", "can": "I can invite someone, and say yes or no politely.", "es": "¿Te apetece venir al cine? ¡Me encantaría!", "lessons": [143, 144]},
     {"id": "17c", "can": "I can talk about the future and what I want to be.", "es": "Cuando sea mayor, seré veterinaria.", "lessons": [145, 146]},
     {"id": "17d", "can": "I can understand a weather forecast and make promises.", "es": "Mañana lloverá. Te prometo que te ayudaré.", "lessons": [147, 148, 149, 150]}
+  ] },
+  { "world": 18, "title": "Shopping, cafés and money", "level": "a2", "goals": [
+    {"id": "18a", "can": "I can understand big numbers and prices.", "es": "Esta bici cuesta doscientos euros.", "lessons": [151, 152]},
+    {"id": "18b", "can": "I can buy clothes and say if they fit.", "es": "¿Me lo puedo probar? Me queda pequeño.", "lessons": [153, 154]},
+    {"id": "18c", "can": "I can shop at the market and order in a café or restaurant.", "es": "¿Me pones un zumo de naranja, por favor?", "lessons": [155, 156, 157]},
+    {"id": "18d", "can": "I can talk about Spanish food and about money.", "es": "Me encanta la tortilla de patatas. Guardo mi paga en la hucha.", "lessons": [158, 159, 160]}
   ] }
 ]

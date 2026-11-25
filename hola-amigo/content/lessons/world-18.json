@@ -1,0 +1,1760 @@
+{
+  "world": 18,
+  "lessons": [
+    {
+      "id": 151,
+      "title": "Números hasta mil",
+      "subtitle": "Numbers up to 1,000",
+      "emoji": "💯",
+      "milestone": false,
+      "funFact": "Say 'cien' for exactly 100, but 'ciento' when more numbers follow: 'ciento uno' is 101.",
+      "phrase": {
+        "es": "Mi abuela tiene ochenta años.",
+        "en": "My grandma is eighty years old."
+      },
+      "words": [
+        {
+          "es": "Sesenta",
+          "en": "Sixty",
+          "say": "seh-SEN-tah",
+          "emoji": "6️⃣0️⃣"
+        },
+        {
+          "es": "Setenta",
+          "en": "Seventy",
+          "say": "seh-TEN-tah",
+          "emoji": "7️⃣0️⃣"
+        },
+        {
+          "es": "Ochenta",
+          "en": "Eighty",
+          "say": "oh-CHEN-tah",
+          "emoji": "8️⃣0️⃣"
+        },
+        {
+          "es": "Noventa",
+          "en": "Ninety",
+          "say": "noh-BEN-tah",
+          "emoji": "9️⃣0️⃣"
+        },
+        {
+          "es": "Cien",
+          "en": "One hundred",
+          "say": "thyen",
+          "emoji": "💯"
+        },
+        {
+          "es": "Doscientos",
+          "en": "Two hundred",
+          "say": "dos-THYEN-tos",
+          "emoji": "2️⃣0️⃣0️⃣"
+        },
+        {
+          "es": "Quinientos",
+          "en": "Five hundred",
+          "say": "kee-NYEN-tos",
+          "emoji": "5️⃣0️⃣0️⃣"
+        },
+        {
+          "es": "Mil",
+          "en": "One thousand",
+          "say": "meel",
+          "emoji": "1️⃣0️⃣0️⃣0️⃣"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Mi",
+            "abuela",
+            "tiene",
+            "ochenta",
+            "años"
+          ],
+          "shuffle": [
+            "abuela",
+            "años",
+            "Mi",
+            "ochenta",
+            "tiene"
+          ],
+          "en": "My grandma is eighty years old."
+        },
+        {
+          "correct": [
+            "En",
+            "mi",
+            "colegio",
+            "hay",
+            "quinientos",
+            "alumnos"
+          ],
+          "shuffle": [
+            "hay",
+            "alumnos",
+            "colegio",
+            "mi",
+            "quinientos",
+            "En"
+          ],
+          "en": "There are five hundred pupils at my school."
+        },
+        {
+          "correct": [
+            "Esta",
+            "bici",
+            "cuesta",
+            "doscientos",
+            "euros"
+          ],
+          "shuffle": [
+            "cuesta",
+            "doscientos",
+            "euros",
+            "Esta",
+            "bici"
+          ],
+          "en": "This bike costs two hundred euros."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "100 = ___",
+          "opts": [
+            "cien",
+            "ciento",
+            "cientos"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "500 = ___",
+          "opts": [
+            "quinientos",
+            "cincocientos",
+            "cinco cien"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Big Numbers",
+        "paras": [
+          "Sol and Luna play a number game.",
+          "'¿Cuántos años tiene tu abuelo?' 'Noventa. ¡Y mi bisabuela tiene cien!'",
+          "'¿Y cuántos libros hay en la biblioteca?' '¡Más de mil!'"
+        ],
+        "qs": [
+          {
+            "q": "How old is Luna's grandad?",
+            "opts": [
+              "Ninety",
+              "Eighty",
+              "Sixty"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Who is one hundred?",
+            "opts": [
+              "Her great-grandmother",
+              "Her grandad",
+              "Her teacher"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How many books are in the library?",
+            "opts": [
+              "More than a thousand",
+              "Five hundred",
+              "One hundred"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 152,
+      "title": "¿Cuánto es?",
+      "subtitle": "How much is it?",
+      "emoji": "🏷️",
+      "milestone": false,
+      "funFact": "Prices in Spain are written with a comma: €2,50 is two euros fifty, and you say 'dos euros con cincuenta'.",
+      "phrase": {
+        "es": "Las fresas cuestan tres euros.",
+        "en": "The strawberries cost three euros."
+      },
+      "words": [
+        {
+          "es": "¿Cuánto es?",
+          "en": "How much is it?",
+          "say": "KWAN-toh es",
+          "emoji": "🧾"
+        },
+        {
+          "es": "Cuesta",
+          "en": "It costs",
+          "say": "KWES-tah",
+          "emoji": "🏷️"
+        },
+        {
+          "es": "Cuestan",
+          "en": "They cost",
+          "say": "KWES-tan",
+          "emoji": "💶"
+        },
+        {
+          "es": "Un euro con cincuenta",
+          "en": "One euro fifty",
+          "say": "oon EW-roh kon theen-KWEN-tah",
+          "emoji": "🪙"
+        },
+        {
+          "es": "Demasiado caro",
+          "en": "Too expensive",
+          "say": "deh-mah-SYAH-doh KAH-roh",
+          "emoji": "😬"
+        },
+        {
+          "es": "Una ganga",
+          "en": "A bargain",
+          "say": "OO-nah GAN-gah",
+          "emoji": "🤑"
+        },
+        {
+          "es": "¿Tiene…?",
+          "en": "Do you have…?",
+          "say": "TYEH-neh",
+          "emoji": "🙋‍♂️"
+        },
+        {
+          "es": "Aquí tiene",
+          "en": "Here you are",
+          "say": "ah-KEE TYEH-neh",
+          "emoji": "🫴"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Las",
+            "fresas",
+            "cuestan",
+            "tres",
+            "euros"
+          ],
+          "shuffle": [
+            "euros",
+            "Las",
+            "cuestan",
+            "tres",
+            "fresas"
+          ],
+          "en": "The strawberries cost three euros."
+        },
+        {
+          "correct": [
+            "Este",
+            "juego",
+            "es",
+            "demasiado",
+            "caro"
+          ],
+          "shuffle": [
+            "demasiado",
+            "juego",
+            "Este",
+            "es",
+            "caro"
+          ],
+          "en": "This game is too expensive."
+        },
+        {
+          "correct": [
+            "Aquí",
+            "tiene",
+            "diez",
+            "euros"
+          ],
+          "shuffle": [
+            "tiene",
+            "euros",
+            "Aquí",
+            "diez"
+          ],
+          "en": "Here you are, ten euros."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "Los zapatos ___ cuarenta euros.",
+          "opts": [
+            "cuestan",
+            "cuesta",
+            "cuestas"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Una ganga' is:",
+          "opts": [
+            "A bargain",
+            "A gang",
+            "A shop"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "The Bargain",
+        "paras": [
+          "Luna wants a new book. '¿Cuánto cuesta este libro?' 'Veinte euros.'",
+          "'¡Uf, es demasiado caro!' Then she sees another one. '¿Y este?' 'Cuesta un euro con cincuenta.'",
+          "'¡Qué ganga! Me lo llevo. Aquí tiene.'"
+        ],
+        "qs": [
+          {
+            "q": "How much was the first book?",
+            "opts": [
+              "Twenty euros",
+              "Ten euros",
+              "Fifty euros"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Luna think of that price?",
+            "opts": [
+              "Too expensive",
+              "Cheap",
+              "Fair"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How much was the second book?",
+            "opts": [
+              "One euro fifty",
+              "Five euros",
+              "Fifteen euros"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 153,
+      "title": "En la tienda de ropa",
+      "subtitle": "In the clothes shop",
+      "emoji": "👖",
+      "milestone": false,
+      "funFact": "In Spain, jeans are called 'vaqueros', like the cowboys who first wore them!",
+      "phrase": {
+        "es": "Estos vaqueros me quedan grandes.",
+        "en": "These jeans are too big for me."
+      },
+      "words": [
+        {
+          "es": "Me queda grande",
+          "en": "It's too big for me",
+          "say": "meh KEH-dah GRAN-deh",
+          "emoji": "🐘"
+        },
+        {
+          "es": "Me queda pequeño",
+          "en": "It's too small for me",
+          "say": "meh KEH-dah peh-KEH-nyoh",
+          "emoji": "🤏"
+        },
+        {
+          "es": "Me queda bien",
+          "en": "It fits me well",
+          "say": "meh KEH-dah byen",
+          "emoji": "👌"
+        },
+        {
+          "es": "¿Me lo puedo probar?",
+          "en": "Can I try it on?",
+          "say": "meh loh PWEH-doh proh-BAR",
+          "emoji": "🪞"
+        },
+        {
+          "es": "¿Tiene otro color?",
+          "en": "Have you got another colour?",
+          "say": "TYEH-neh OH-troh koh-LOR",
+          "emoji": "🎨"
+        },
+        {
+          "es": "Los vaqueros",
+          "en": "Jeans",
+          "say": "los bah-KEH-ros",
+          "emoji": "👖"
+        },
+        {
+          "es": "La sudadera",
+          "en": "The sweatshirt / hoodie",
+          "say": "lah soo-dah-DEH-rah",
+          "emoji": "🧥"
+        },
+        {
+          "es": "Las botas",
+          "en": "Boots",
+          "say": "las BOH-tas",
+          "emoji": "👢"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Estos",
+            "vaqueros",
+            "me",
+            "quedan",
+            "grandes"
+          ],
+          "shuffle": [
+            "grandes",
+            "vaqueros",
+            "Estos",
+            "quedan",
+            "me"
+          ],
+          "en": "These jeans are too big for me."
+        },
+        {
+          "correct": [
+            "La",
+            "sudadera",
+            "me",
+            "queda",
+            "muy",
+            "bien"
+          ],
+          "shuffle": [
+            "me",
+            "sudadera",
+            "queda",
+            "La",
+            "muy",
+            "bien"
+          ],
+          "en": "The hoodie fits me really well."
+        },
+        {
+          "correct": [
+            "Quiero",
+            "unas",
+            "botas",
+            "negras"
+          ],
+          "shuffle": [
+            "Quiero",
+            "botas",
+            "negras",
+            "unas"
+          ],
+          "en": "I want some black boots."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Me queda pequeño' means:",
+          "opts": [
+            "It's too small for me",
+            "I'm staying small",
+            "It's a bit small here"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "¿Me lo puedo ___? (try on)",
+          "opts": [
+            "probar",
+            "probador",
+            "prueba"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Shopping with Mum",
+        "paras": [
+          "Sol needs new clothes. '¿Me puedo probar estos vaqueros?' 'Sí, el probador está allí.'",
+          "'Mamá, me quedan grandes.' 'Vale, prueba una talla más pequeña.'",
+          "'¡Estos me quedan bien! ¿Y tienen esta sudadera en otro color?' 'Sí, en azul.' '¡Me la llevo!'"
+        ],
+        "qs": [
+          {
+            "q": "What does Sol try on first?",
+            "opts": [
+              "Jeans",
+              "A hoodie",
+              "Boots"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What's the problem?",
+            "opts": [
+              "They're too big",
+              "They're too small",
+              "They're the wrong colour"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What colour hoodie does Sol take?",
+            "opts": [
+              "Blue",
+              "Red",
+              "Black"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 154,
+      "title": "Lo, la, los, las",
+      "subtitle": "It and them",
+      "emoji": "🤲",
+      "milestone": false,
+      "funFact": "'Lo', 'la', 'los' and 'las' replace a word so you don't have to repeat it: '¿El pan? Lo compro yo.'",
+      "phrase": {
+        "es": "Me gusta esta camiseta y la compro.",
+        "en": "I like this T-shirt and I'll buy it."
+      },
+      "words": [
+        {
+          "es": "Lo quiero",
+          "en": "I want it",
+          "say": "loh KYEH-roh",
+          "emoji": "😍"
+        },
+        {
+          "es": "La compro",
+          "en": "I'll buy it",
+          "say": "lah KOM-proh",
+          "emoji": "🛒"
+        },
+        {
+          "es": "Los necesito",
+          "en": "I need them",
+          "say": "los neh-theh-SEE-toh",
+          "emoji": "🧦"
+        },
+        {
+          "es": "Las busco",
+          "en": "I'm looking for them",
+          "say": "las BOOS-koh",
+          "emoji": "🔎"
+        },
+        {
+          "es": "¿Lo tienes?",
+          "en": "Have you got it?",
+          "say": "loh TYEH-nes",
+          "emoji": "🤲"
+        },
+        {
+          "es": "No lo encuentro",
+          "en": "I can't find it",
+          "say": "noh loh en-KWEN-troh",
+          "emoji": "😩"
+        },
+        {
+          "es": "Ya la tengo",
+          "en": "I've already got it",
+          "say": "yah lah TEN-goh",
+          "emoji": "✋"
+        },
+        {
+          "es": "Te lo dejo",
+          "en": "I'll lend it to you",
+          "say": "teh loh DEH-hoh",
+          "emoji": "🤝"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Me",
+            "gusta",
+            "esta",
+            "camiseta",
+            "y",
+            "la",
+            "compro"
+          ],
+          "shuffle": [
+            "esta",
+            "Me",
+            "la",
+            "compro",
+            "camiseta",
+            "y",
+            "gusta"
+          ],
+          "en": "I like this T-shirt and I'll buy it."
+        },
+        {
+          "correct": [
+            "Busco",
+            "mis",
+            "gafas",
+            "pero",
+            "no",
+            "las",
+            "encuentro"
+          ],
+          "shuffle": [
+            "no",
+            "mis",
+            "las",
+            "pero",
+            "encuentro",
+            "Busco",
+            "gafas"
+          ],
+          "en": "I'm looking for my glasses but I can't find them."
+        },
+        {
+          "correct": [
+            "Tengo",
+            "un",
+            "cómic",
+            "nuevo",
+            "y",
+            "te",
+            "lo",
+            "dejo"
+          ],
+          "shuffle": [
+            "lo",
+            "te",
+            "Tengo",
+            "un",
+            "cómic",
+            "y",
+            "nuevo",
+            "dejo"
+          ],
+          "en": "I've got a new comic and I'll lend it to you."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "¿El libro? Sí, ___ tengo.",
+          "opts": [
+            "lo",
+            "la",
+            "los"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "¿Las fresas? ___ compro yo.",
+          "opts": [
+            "Las",
+            "Los",
+            "La"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "The Lost Keys",
+        "paras": [
+          "'¿Dónde están mis llaves? Las busco y no las encuentro,' says Mamá.",
+          "'¿Y tu móvil? ¿Lo tienes?' asks Sol. 'Sí, ya lo tengo.'",
+          "Luna laughs. '¡Mamá, las llaves están en tu mano!'"
+        ],
+        "qs": [
+          {
+            "q": "What is Mum looking for?",
+            "opts": [
+              "Her keys",
+              "Her phone",
+              "Her glasses"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Has Mum got her phone?",
+            "opts": [
+              "Yes",
+              "No",
+              "She lost it"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Where are the keys?",
+            "opts": [
+              "In her hand",
+              "In the car",
+              "In her bag"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 155,
+      "title": "En el mercado",
+      "subtitle": "At the market",
+      "emoji": "⚖️",
+      "milestone": false,
+      "funFact": "Many Spanish towns have a covered 'mercado' full of little shops: the frutería, the carnicería, the pescadería… Lots of shop names end in -ería!",
+      "phrase": {
+        "es": "Quiero un kilo de naranjas, por favor.",
+        "en": "I'd like a kilo of oranges, please."
+      },
+      "words": [
+        {
+          "es": "La frutería",
+          "en": "The greengrocer's",
+          "say": "lah froo-teh-REE-ah",
+          "emoji": "🍏"
+        },
+        {
+          "es": "La panadería",
+          "en": "The bakery",
+          "say": "lah pah-nah-deh-REE-ah",
+          "emoji": "🥖"
+        },
+        {
+          "es": "La carnicería",
+          "en": "The butcher's",
+          "say": "lah kar-nee-theh-REE-ah",
+          "emoji": "🥩"
+        },
+        {
+          "es": "La pescadería",
+          "en": "The fishmonger's",
+          "say": "lah pes-kah-deh-REE-ah",
+          "emoji": "🐟"
+        },
+        {
+          "es": "Un kilo de",
+          "en": "A kilo of",
+          "say": "oon KEE-loh deh",
+          "emoji": "⚖️"
+        },
+        {
+          "es": "Medio kilo",
+          "en": "Half a kilo",
+          "say": "MEH-dyoh KEE-loh",
+          "emoji": "🌓"
+        },
+        {
+          "es": "Una docena de huevos",
+          "en": "A dozen eggs",
+          "say": "OO-nah doh-THEH-nah deh WEH-bos",
+          "emoji": "🥚"
+        },
+        {
+          "es": "¿Algo más?",
+          "en": "Anything else?",
+          "say": "AL-goh mas",
+          "emoji": "➕"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Quiero",
+            "un",
+            "kilo",
+            "de",
+            "naranjas"
+          ],
+          "shuffle": [
+            "naranjas",
+            "un",
+            "de",
+            "kilo",
+            "Quiero"
+          ],
+          "en": "I'd like a kilo of oranges."
+        },
+        {
+          "correct": [
+            "Compramos",
+            "el",
+            "pan",
+            "en",
+            "la",
+            "panadería"
+          ],
+          "shuffle": [
+            "el",
+            "Compramos",
+            "pan",
+            "en",
+            "panadería",
+            "la"
+          ],
+          "en": "We buy bread at the bakery."
+        },
+        {
+          "correct": [
+            "Mi",
+            "padre",
+            "compra",
+            "el",
+            "pescado",
+            "en",
+            "el",
+            "mercado"
+          ],
+          "shuffle": [
+            "Mi",
+            "padre",
+            "en",
+            "el",
+            "el",
+            "pescado",
+            "compra",
+            "mercado"
+          ],
+          "en": "My dad buys fish at the market."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "You buy bread at la ___",
+          "opts": [
+            "panadería",
+            "carnicería",
+            "frutería"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'¿Algo más?' means:",
+          "opts": [
+            "Anything else?",
+            "Something more expensive?",
+            "Some more time?"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Market Day",
+        "paras": [
+          "On Saturday, Luna goes to the market with her grandma.",
+          "In la frutería: 'Un kilo de naranjas y medio kilo de fresas, por favor.' '¿Algo más?' 'No, gracias.'",
+          "Then la panadería for bread, and una docena de huevos. 'Abuela, ¡la bolsa pesa mucho!'"
+        ],
+        "qs": [
+          {
+            "q": "Who does Luna go to the market with?",
+            "opts": [
+              "Her grandma",
+              "Her mum",
+              "Sol"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How many strawberries do they buy?",
+            "opts": [
+              "Half a kilo",
+              "A kilo",
+              "Two kilos"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Luna say about the bag?",
+            "opts": [
+              "It's very heavy",
+              "It's broken",
+              "It's empty"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 156,
+      "title": "En la cafetería",
+      "subtitle": "At the café",
+      "emoji": "☕",
+      "milestone": false,
+      "funFact": "In Spanish cafés you will often hear '¿Me pones un café?' It may sound bossy in English, but in Spain it's normal and friendly!",
+      "phrase": {
+        "es": "¿Me pones un zumo de naranja, por favor?",
+        "en": "Can I have an orange juice, please?"
+      },
+      "words": [
+        {
+          "es": "¿Qué te pongo?",
+          "en": "What can I get you?",
+          "say": "keh teh PON-goh",
+          "emoji": "☕"
+        },
+        {
+          "es": "¿Me pones…?",
+          "en": "Can I have…?",
+          "say": "meh POH-nes",
+          "emoji": "🙋"
+        },
+        {
+          "es": "Quería",
+          "en": "I'd like (polite)",
+          "say": "keh-REE-ah",
+          "emoji": "🫶"
+        },
+        {
+          "es": "Un zumo de naranja",
+          "en": "An orange juice",
+          "say": "oon THOO-moh deh nah-RAN-hah",
+          "emoji": "🧃"
+        },
+        {
+          "es": "Un bocadillo",
+          "en": "A sandwich (baguette)",
+          "say": "oon boh-kah-DEE-yoh",
+          "emoji": "🥪"
+        },
+        {
+          "es": "Un cruasán",
+          "en": "A croissant",
+          "say": "oon krwah-SAN",
+          "emoji": "🥐"
+        },
+        {
+          "es": "Un chocolate caliente",
+          "en": "A hot chocolate",
+          "say": "oon choh-koh-LAH-teh kah-LYEN-teh",
+          "emoji": "🍫"
+        },
+        {
+          "es": "Para llevar",
+          "en": "To take away",
+          "say": "PAH-rah yeh-BAR",
+          "emoji": "🥡"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Para",
+            "mí",
+            "un",
+            "chocolate",
+            "caliente"
+          ],
+          "shuffle": [
+            "mí",
+            "caliente",
+            "chocolate",
+            "Para",
+            "un"
+          ],
+          "en": "A hot chocolate for me."
+        },
+        {
+          "correct": [
+            "Quería",
+            "un",
+            "bocadillo",
+            "de",
+            "queso"
+          ],
+          "shuffle": [
+            "queso",
+            "bocadillo",
+            "un",
+            "de",
+            "Quería"
+          ],
+          "en": "I'd like a cheese sandwich."
+        },
+        {
+          "correct": [
+            "Un",
+            "cruasán",
+            "para",
+            "llevar"
+          ],
+          "shuffle": [
+            "llevar",
+            "cruasán",
+            "Un",
+            "para"
+          ],
+          "en": "A croissant to take away."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'¿Me pones…?' means:",
+          "opts": [
+            "Can I have…?",
+            "Can you put me…?",
+            "Do you put…?"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Para llevar' means:",
+          "opts": [
+            "To take away",
+            "To carry",
+            "To eat here"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Breakfast Out",
+        "paras": [
+          "Sol and his dad have breakfast at a café. '¡Buenos días! ¿Qué os pongo?'",
+          "'¿Me pones un café con leche y un cruasán?' says Papá. 'Y para mí un zumo de naranja,' says Sol.",
+          "'¿Y quería un bocadillo para llevar, para el cole?' '¡Claro! Aquí tenéis.'"
+        ],
+        "qs": [
+          {
+            "q": "What does Dad order?",
+            "opts": [
+              "A white coffee and a croissant",
+              "A hot chocolate",
+              "An orange juice"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Sol drink?",
+            "opts": [
+              "Orange juice",
+              "Milk",
+              "Hot chocolate"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Sol take to school?",
+            "opts": [
+              "A sandwich",
+              "A croissant",
+              "Fruit"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 157,
+      "title": "En el restaurante",
+      "subtitle": "At the restaurant",
+      "emoji": "🍽️",
+      "milestone": false,
+      "funFact": "Many Spanish restaurants offer a 'menú del día' at lunchtime: a first course, a second course, a drink and a dessert for one price!",
+      "phrase": {
+        "es": "El menú del día cuesta doce euros.",
+        "en": "The set menu costs twelve euros."
+      },
+      "words": [
+        {
+          "es": "Una mesa para cuatro",
+          "en": "A table for four",
+          "say": "OO-nah MEH-sah PAH-rah KWAH-troh",
+          "emoji": "🪑"
+        },
+        {
+          "es": "El menú del día",
+          "en": "The set menu of the day",
+          "say": "el meh-NOO del DEE-ah",
+          "emoji": "📋"
+        },
+        {
+          "es": "¿Qué me recomienda?",
+          "en": "What do you recommend?",
+          "say": "keh meh rreh-koh-MYEN-dah",
+          "emoji": "💁"
+        },
+        {
+          "es": "Está buenísimo",
+          "en": "It's delicious",
+          "say": "es-TAH bweh-NEE-see-moh",
+          "emoji": "😋"
+        },
+        {
+          "es": "Soy alérgico a",
+          "en": "I'm allergic to",
+          "say": "soy ah-LEHR-hee-koh ah",
+          "emoji": "⚠️"
+        },
+        {
+          "es": "Sin gluten",
+          "en": "Gluten-free",
+          "say": "seen GLOO-ten",
+          "emoji": "🌾"
+        },
+        {
+          "es": "La ración",
+          "en": "The portion (to share)",
+          "say": "lah rrah-THYON",
+          "emoji": "🍤"
+        },
+        {
+          "es": "Para compartir",
+          "en": "To share",
+          "say": "PAH-rah kom-par-TEER",
+          "emoji": "👐"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "El",
+            "menú",
+            "del",
+            "día",
+            "cuesta",
+            "doce",
+            "euros"
+          ],
+          "shuffle": [
+            "día",
+            "menú",
+            "cuesta",
+            "El",
+            "euros",
+            "del",
+            "doce"
+          ],
+          "en": "The set menu costs twelve euros."
+        },
+        {
+          "correct": [
+            "Soy",
+            "alérgica",
+            "a",
+            "los",
+            "frutos",
+            "secos"
+          ],
+          "shuffle": [
+            "alérgica",
+            "los",
+            "Soy",
+            "frutos",
+            "a",
+            "secos"
+          ],
+          "en": "I'm allergic to nuts."
+        },
+        {
+          "correct": [
+            "Esta",
+            "tortilla",
+            "está",
+            "buenísima"
+          ],
+          "shuffle": [
+            "está",
+            "Esta",
+            "tortilla",
+            "buenísima"
+          ],
+          "en": "This omelette is delicious."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'¿Qué me recomienda?' means:",
+          "opts": [
+            "What do you recommend?",
+            "What do you remember?",
+            "What do you recognise?"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Soy ___ a los huevos. (allergic, boy)",
+          "opts": [
+            "alérgico",
+            "alergia",
+            "alérgica"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Lunch Out",
+        "paras": [
+          "'Una mesa para cuatro, por favor.' The family sits down.",
+          "'¿Qué me recomienda?' asks Mamá. 'El menú del día. Hoy hay gazpacho y merluza.' 'Mi hijo es alérgico al pescado.' 'Pues para él, pollo.'",
+          "They also order una ración de croquetas para compartir. '¡Están buenísimas!' says Sol."
+        ],
+        "qs": [
+          {
+            "q": "What does the waiter recommend?",
+            "opts": [
+              "The set menu",
+              "The paella",
+              "The steak"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What is Sol allergic to?",
+            "opts": [
+              "Fish",
+              "Nuts",
+              "Eggs"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What do they share?",
+            "opts": [
+              "Croquettes",
+              "Chips",
+              "Bread"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 158,
+      "title": "Comida española",
+      "subtitle": "Spanish food",
+      "emoji": "🥘",
+      "milestone": false,
+      "funFact": "Paella comes from Valencia, where it was traditionally cooked outdoors in a wide, flat pan over a wood fire.",
+      "phrase": {
+        "es": "La paella es de Valencia.",
+        "en": "Paella comes from Valencia."
+      },
+      "words": [
+        {
+          "es": "La tortilla de patatas",
+          "en": "Spanish omelette",
+          "say": "lah tor-TEE-yah deh pah-TAH-tas",
+          "emoji": "🍳"
+        },
+        {
+          "es": "La paella",
+          "en": "Paella",
+          "say": "lah pah-EH-yah",
+          "emoji": "🥘"
+        },
+        {
+          "es": "El gazpacho",
+          "en": "Cold tomato soup",
+          "say": "el gath-PAH-choh",
+          "emoji": "🍅"
+        },
+        {
+          "es": "Los churros",
+          "en": "Churros",
+          "say": "los CHOO-rros",
+          "emoji": "🍩"
+        },
+        {
+          "es": "El jamón",
+          "en": "Cured ham",
+          "say": "el hah-MON",
+          "emoji": "🍖"
+        },
+        {
+          "es": "Las croquetas",
+          "en": "Croquettes",
+          "say": "las kroh-KEH-tas",
+          "emoji": "🧆"
+        },
+        {
+          "es": "Las tapas",
+          "en": "Tapas (small dishes)",
+          "say": "las TAH-pas",
+          "emoji": "🍢"
+        },
+        {
+          "es": "El turrón",
+          "en": "Turrón (Christmas nougat)",
+          "say": "el too-RRON",
+          "emoji": "🍬"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "La",
+            "paella",
+            "es",
+            "de",
+            "Valencia"
+          ],
+          "shuffle": [
+            "paella",
+            "Valencia",
+            "de",
+            "es",
+            "La"
+          ],
+          "en": "Paella comes from Valencia."
+        },
+        {
+          "correct": [
+            "Los",
+            "domingos",
+            "comemos",
+            "churros",
+            "con",
+            "chocolate"
+          ],
+          "shuffle": [
+            "chocolate",
+            "con",
+            "domingos",
+            "churros",
+            "comemos",
+            "Los"
+          ],
+          "en": "On Sundays we eat churros with chocolate."
+        },
+        {
+          "correct": [
+            "Mi",
+            "abuela",
+            "hace",
+            "unas",
+            "croquetas",
+            "buenísimas"
+          ],
+          "shuffle": [
+            "buenísimas",
+            "croquetas",
+            "unas",
+            "Mi",
+            "abuela",
+            "hace"
+          ],
+          "en": "My grandma makes amazing croquettes."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'El gazpacho' is:",
+          "opts": [
+            "A cold tomato soup",
+            "A hot stew",
+            "A cake"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "La paella es de ___",
+          "opts": [
+            "Valencia",
+            "Madrid",
+            "Galicia"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "A Tasty Tour",
+        "paras": [
+          "Sol makes a list of his favourite Spanish food.",
+          "'Me encanta la tortilla de patatas y el jamón. En verano tomo gazpacho porque está fresquito.'",
+          "'Los domingos comemos churros con chocolate. ¡Y en Navidad, turrón!'"
+        ],
+        "qs": [
+          {
+            "q": "What does Sol have in summer?",
+            "opts": [
+              "Gazpacho",
+              "Churros",
+              "Turrón"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "When do they eat churros?",
+            "opts": [
+              "On Sundays",
+              "At Christmas",
+              "Every day"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Sol eat at Christmas?",
+            "opts": [
+              "Turrón",
+              "Paella",
+              "Ham"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 159,
+      "title": "El dinero",
+      "subtitle": "Money",
+      "emoji": "🐖",
+      "milestone": false,
+      "funFact": "In Spain, children's pocket money is called 'la paga'. Some kids put part of it in 'la hucha', the piggy bank.",
+      "phrase": {
+        "es": "Guardo mi paga en la hucha.",
+        "en": "I keep my pocket money in my piggy bank."
+      },
+      "words": [
+        {
+          "es": "Pagar con tarjeta",
+          "en": "To pay by card",
+          "say": "pah-GAR kon tar-HEH-tah",
+          "emoji": "💳"
+        },
+        {
+          "es": "En efectivo",
+          "en": "In cash",
+          "say": "en eh-fek-TEE-boh",
+          "emoji": "💵"
+        },
+        {
+          "es": "La vuelta",
+          "en": "The change (money back)",
+          "say": "lah BWEL-tah",
+          "emoji": "🔄"
+        },
+        {
+          "es": "La hucha",
+          "en": "The piggy bank",
+          "say": "lah OO-chah",
+          "emoji": "🐖"
+        },
+        {
+          "es": "Gastar",
+          "en": "To spend",
+          "say": "gas-TAR",
+          "emoji": "💸"
+        },
+        {
+          "es": "La paga",
+          "en": "Pocket money",
+          "say": "lah PAH-gah",
+          "emoji": "👛"
+        },
+        {
+          "es": "El cajero automático",
+          "en": "The cash machine",
+          "say": "el kah-HEH-roh ow-toh-MAH-tee-koh",
+          "emoji": "🏧"
+        },
+        {
+          "es": "El monedero",
+          "en": "The purse",
+          "say": "el moh-neh-DEH-roh",
+          "emoji": "🪙"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Mis",
+            "padres",
+            "me",
+            "dan",
+            "la",
+            "paga",
+            "los",
+            "sábados"
+          ],
+          "shuffle": [
+            "dan",
+            "los",
+            "padres",
+            "paga",
+            "me",
+            "sábados",
+            "Mis",
+            "la"
+          ],
+          "en": "My parents give me my pocket money on Saturdays."
+        },
+        {
+          "correct": [
+            "Guardo",
+            "el",
+            "dinero",
+            "en",
+            "mi",
+            "hucha"
+          ],
+          "shuffle": [
+            "hucha",
+            "dinero",
+            "Guardo",
+            "en",
+            "el",
+            "mi"
+          ],
+          "en": "I keep my money in my piggy bank."
+        },
+        {
+          "correct": [
+            "Prefiero",
+            "pagar",
+            "en",
+            "efectivo"
+          ],
+          "shuffle": [
+            "Prefiero",
+            "en",
+            "pagar",
+            "efectivo"
+          ],
+          "en": "I prefer to pay in cash."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'La paga' is:",
+          "opts": [
+            "Pocket money",
+            "A page",
+            "A bank card"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Gastar' means:",
+          "opts": [
+            "To spend",
+            "To save",
+            "To earn"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Luna's Piggy Bank",
+        "paras": [
+          "Luna opens her hucha. 'Tengo treinta euros. ¡Voy a comprar un juego!'",
+          "At the shop: 'Son veinticinco euros. ¿Paga con tarjeta o en efectivo?' 'En efectivo.'",
+          "'Aquí tiene la vuelta: cinco euros.' Luna puts it in her monedero. 'No lo voy a gastar. ¡Lo voy a ahorrar!'"
+        ],
+        "qs": [
+          {
+            "q": "How much money does Luna have?",
+            "opts": [
+              "Thirty euros",
+              "Twenty euros",
+              "Five euros"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How does she pay?",
+            "opts": [
+              "In cash",
+              "By card",
+              "With her phone"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What will she do with the change?",
+            "opts": [
+              "Save it",
+              "Spend it",
+              "Give it away"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 160,
+      "title": "¡Campeón de compras!",
+      "subtitle": "Shopping champion",
+      "emoji": "🏆",
+      "milestone": true,
+      "funFact": "You can now shop, order food and pay in Spanish, so you're ready for any market, café or restaurant in Spain!",
+      "phrase": {
+        "es": "¿Me pones una tortilla de patatas, por favor? ¿Cuánto es?",
+        "en": "Can I have a Spanish omelette, please? How much is it?"
+      },
+      "words": [
+        {
+          "es": "Mil",
+          "en": "One thousand",
+          "say": "meel",
+          "emoji": "1️⃣0️⃣0️⃣0️⃣"
+        },
+        {
+          "es": "¿Cuánto es?",
+          "en": "How much is it?",
+          "say": "KWAN-toh es",
+          "emoji": "🧾"
+        },
+        {
+          "es": "Me queda pequeño",
+          "en": "It's too small for me",
+          "say": "meh KEH-dah peh-KEH-nyoh",
+          "emoji": "🤏"
+        },
+        {
+          "es": "Lo quiero",
+          "en": "I want it",
+          "say": "loh KYEH-roh",
+          "emoji": "😍"
+        },
+        {
+          "es": "Un kilo de",
+          "en": "A kilo of",
+          "say": "oon KEE-loh deh",
+          "emoji": "⚖️"
+        },
+        {
+          "es": "¿Me pones…?",
+          "en": "Can I have…?",
+          "say": "meh POH-nes",
+          "emoji": "🙋"
+        },
+        {
+          "es": "La tortilla de patatas",
+          "en": "Spanish omelette",
+          "say": "lah tor-TEE-yah deh pah-TAH-tas",
+          "emoji": "🍳"
+        },
+        {
+          "es": "La paga",
+          "en": "Pocket money",
+          "say": "lah PAH-gah",
+          "emoji": "👛"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Quiero",
+            "un",
+            "kilo",
+            "de",
+            "tomates"
+          ],
+          "shuffle": [
+            "de",
+            "Quiero",
+            "kilo",
+            "un",
+            "tomates"
+          ],
+          "en": "I'd like a kilo of tomatoes."
+        },
+        {
+          "correct": [
+            "Esta",
+            "camiseta",
+            "me",
+            "queda",
+            "pequeña"
+          ],
+          "shuffle": [
+            "me",
+            "camiseta",
+            "Esta",
+            "queda",
+            "pequeña"
+          ],
+          "en": "This T-shirt is too small for me."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "300 = ___",
+          "opts": [
+            "trescientos",
+            "tres cien",
+            "treinta"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "¿La camiseta? Sí, ___ compro.",
+          "opts": [
+            "la",
+            "lo",
+            "las"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'En efectivo' means:",
+          "opts": [
+            "In cash",
+            "Effectively",
+            "By card"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'¿Qué te pongo?' means:",
+          "opts": [
+            "What can I get you?",
+            "Where shall I put you?",
+            "What are you wearing?"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "The Big Shopping Day",
+        "paras": [
+          "Sol and Luna have ten euros each to spend at the market.",
+          "Sol buys un kilo de fresas and Luna buys a T-shirt. 'Me queda bien. ¡La compro!'",
+          "Then they go to a café. '¿Me pones dos chocolates calientes?' '¿Cuánto es?' 'Cuatro euros.' '¡Perfecto!'"
+        ],
+        "qs": [
+          {
+            "q": "How much money does each of them have?",
+            "opts": [
+              "Ten euros",
+              "Five euros",
+              "Twenty euros"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Sol buy?",
+            "opts": [
+              "A kilo of strawberries",
+              "A T-shirt",
+              "A book"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How much are the two hot chocolates?",
+            "opts": [
+              "Four euros",
+              "Two euros",
+              "Ten euros"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    }
+  ]
+}

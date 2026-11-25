@@ -238,5 +238,19 @@
     {"q": "Whose birthday is it?", "opts": ["Grandma's", "Sol's", "Luna's"], "ans": 0},
     {"q": "What will Sol buy?", "opts": ["The balloons", "The cake", "The presents"], "ans": 0},
     {"q": "Where will the party be?", "opts": ["In the garden", "At a restaurant", "At school"], "ans": 0}
+  ] },
+  { "id": "mercado-abuela", "world": 18, "title": "En el mercado con la abuela", "en": "At the market with Grandma", "emoji": "🧺", "sentences": [
+    {"es": "Todos los sábados, Luna va al mercado con su abuela.", "en": "Every Saturday, Luna goes to the market with her grandma."},
+    {"es": "Primero van a la frutería y compran un kilo de naranjas.", "en": "First they go to the greengrocer's and buy a kilo of oranges."},
+    {"es": "—¿Algo más? —pregunta el frutero. —Sí, medio kilo de fresas, por favor.", "en": "\"Anything else?\" asks the greengrocer. \"Yes, half a kilo of strawberries, please.\""},
+    {"es": "Después compran pan en la panadería y pescado en la pescadería.", "en": "Then they buy bread at the bakery and fish at the fishmonger's."},
+    {"es": "—¿Cuánto es todo? —Son quince euros con cincuenta.", "en": "\"How much is everything?\" \"That's fifteen euros fifty.\""},
+    {"es": "La abuela paga en efectivo y le dan la vuelta.", "en": "Grandma pays in cash and they give her the change."},
+    {"es": "Al final, van a la cafetería. —¿Me pones dos churros y un chocolate caliente?", "en": "In the end, they go to the café. \"Can I have two churros and a hot chocolate?\""},
+    {"es": "—¡Están buenísimos! —dice Luna. ¡El sábado es su día favorito!", "en": "\"They're delicious!\" says Luna. Saturday is her favourite day!"}
+  ], "questions": [
+    {"q": "What do they buy at the greengrocer's?", "opts": ["Oranges and strawberries", "Bread", "Fish"], "ans": 0},
+    {"q": "How much does everything cost?", "opts": ["Fifteen euros fifty", "Fifty euros", "Five euros"], "ans": 0},
+    {"q": "What do they have at the café?", "opts": ["Churros and hot chocolate", "Coffee and toast", "Ice cream"], "ans": 0}
   ] }
 ]
