@@ -105,5 +105,11 @@
     {"id": "16b", "can": "I can describe the past and compare it with now.", "es": "Antes no había móviles; ahora todo el mundo tiene uno.", "lessons": [134, 135, 136]},
     {"id": "16c", "can": "I can say what was happening when something else happened.", "es": "Estaba cenando cuando sonó el teléfono.", "lessons": [137]},
     {"id": "16d", "can": "I can tell a fairy tale and talk about holidays in the old days.", "es": "Érase una vez un lobo que vivía en el bosque.", "lessons": [138, 139, 140]}
+  ] },
+  { "world": 17, "title": "Plans and the future", "level": "a2", "goals": [
+    {"id": "17a", "can": "I can talk about my plans for the weekend and next week.", "es": "El próximo sábado voy a quedar con mis amigos.", "lessons": [141, 142]},
+    {"id": "17b", "can": "I can invite someone, and say yes or no politely.", "es": "¿Te apetece venir al cine? ¡Me encantaría!", "lessons": [143, 144]},
+    {"id": "17c", "can": "I can talk about the future and what I want to be.", "es": "Cuando sea mayor, seré veterinaria.", "lessons": [145, 146]},
+    {"id": "17d", "can": "I can understand a weather forecast and make promises.", "es": "Mañana lloverá. Te prometo que te ayudaré.", "lessons": [147, 148, 149, 150]}
   ] }
 ]

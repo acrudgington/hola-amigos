@@ -224,5 +224,19 @@
     {"q": "Where did Grandad live as a boy?", "opts": ["In a village in Castile", "In Madrid", "By the sea"], "ans": 0},
     {"q": "What did the family listen to at night?", "opts": ["The radio", "Records", "The TV"], "ans": 0},
     {"q": "What happened one day?", "opts": ["It started to snow", "He got lost", "He found a dog"], "ans": 0}
+  ] },
+  { "id": "plan-sorpresa", "world": 17, "title": "El plan secreto", "en": "The secret plan", "emoji": "🎂", "sentences": [
+    {"es": "El sábado que viene es el cumpleaños de la abuela.", "en": "Next Saturday is Grandma's birthday."},
+    {"es": "Sol y Luna van a preparar una fiesta sorpresa.", "en": "Sol and Luna are going to prepare a surprise party."},
+    {"es": "—¿Quién va a hacer la tarta? —pregunta Sol.", "en": "\"Who's going to make the cake?\" asks Sol."},
+    {"es": "—Yo haré la tarta y tú comprarás los globos —dice Luna.", "en": "\"I'll make the cake and you'll buy the balloons,\" says Luna."},
+    {"es": "—¡Vale! ¿Y a qué hora quedamos con la familia?", "en": "\"OK! And what time shall we meet the family?\""},
+    {"es": "—A las cinco, en el jardín. Seguro que hará sol.", "en": "\"At five, in the garden. I'm sure it will be sunny.\""},
+    {"es": "—¿Y si llueve? —A lo mejor llueve, pero tendremos una sombrilla.", "en": "\"And what if it rains?\" \"Maybe it will, but we'll have an umbrella.\""},
+    {"es": "—¡La abuela se pondrá muy contenta! —dice Sol.", "en": "\"Grandma will be so happy!\" says Sol."}
+  ], "questions": [
+    {"q": "Whose birthday is it?", "opts": ["Grandma's", "Sol's", "Luna's"], "ans": 0},
+    {"q": "What will Sol buy?", "opts": ["The balloons", "The cake", "The presents"], "ans": 0},
+    {"q": "Where will the party be?", "opts": ["In the garden", "At a restaurant", "At school"], "ans": 0}
   ] }
 ]

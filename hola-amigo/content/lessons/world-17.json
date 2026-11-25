@@ -1,0 +1,1796 @@
+{
+  "world": 17,
+  "lessons": [
+    {
+      "id": 141,
+      "title": "¿Qué vamos a hacer?",
+      "subtitle": "What are we going to do?",
+      "emoji": "📆",
+      "milestone": false,
+      "funFact": "'Mañana' means 'tomorrow', and 'pasado mañana' means 'the day after tomorrow'. Spanish even has 'anteayer' for the day before yesterday!",
+      "phrase": {
+        "es": "El próximo sábado vamos a ir al cine.",
+        "en": "Next Saturday we're going to go to the cinema."
+      },
+      "words": [
+        {
+          "es": "Vas a",
+          "en": "You are going to",
+          "say": "bas ah",
+          "emoji": "👉"
+        },
+        {
+          "es": "Va a",
+          "en": "He / She is going to",
+          "say": "bah ah",
+          "emoji": "🙋‍♀️"
+        },
+        {
+          "es": "Vamos a",
+          "en": "We are going to",
+          "say": "BAH-mos ah",
+          "emoji": "🙌"
+        },
+        {
+          "es": "Van a",
+          "en": "They are going to",
+          "say": "ban ah",
+          "emoji": "👥"
+        },
+        {
+          "es": "Esta noche",
+          "en": "Tonight",
+          "say": "ES-tah NOH-cheh",
+          "emoji": "🌃"
+        },
+        {
+          "es": "El próximo sábado",
+          "en": "Next Saturday",
+          "say": "el PROK-see-moh SAH-bah-doh",
+          "emoji": "📆"
+        },
+        {
+          "es": "La semana que viene",
+          "en": "Next week",
+          "say": "lah seh-MAH-nah keh BYEH-neh",
+          "emoji": "⏭️"
+        },
+        {
+          "es": "Pasado mañana",
+          "en": "The day after tomorrow",
+          "say": "pah-SAH-doh mah-NYAH-nah",
+          "emoji": "📅"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "El",
+            "próximo",
+            "sábado",
+            "vamos",
+            "a",
+            "ir",
+            "al",
+            "cine"
+          ],
+          "shuffle": [
+            "sábado",
+            "El",
+            "cine",
+            "al",
+            "vamos",
+            "próximo",
+            "a",
+            "ir"
+          ],
+          "en": "Next Saturday we're going to go to the cinema."
+        },
+        {
+          "correct": [
+            "Mi",
+            "hermano",
+            "va",
+            "a",
+            "jugar",
+            "un",
+            "partido"
+          ],
+          "shuffle": [
+            "jugar",
+            "partido",
+            "Mi",
+            "hermano",
+            "un",
+            "va",
+            "a"
+          ],
+          "en": "My brother is going to play a match."
+        },
+        {
+          "correct": [
+            "La",
+            "semana",
+            "que",
+            "viene",
+            "van",
+            "a",
+            "venir",
+            "mis",
+            "primos"
+          ],
+          "shuffle": [
+            "viene",
+            "venir",
+            "mis",
+            "La",
+            "primos",
+            "a",
+            "semana",
+            "van",
+            "que"
+          ],
+          "en": "Next week my cousins are going to come."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "Nosotros ___ a nadar.",
+          "opts": [
+            "vamos",
+            "van",
+            "voy"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Pasado mañana' means:",
+          "opts": [
+            "The day after tomorrow",
+            "The day before yesterday",
+            "Tomorrow morning"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "A Busy Week",
+        "paras": [
+          "Luna looks at her calendar.",
+          "'Esta noche voy a cenar con mis abuelos. Pasado mañana mi hermano va a jugar un partido.'",
+          "'Y el próximo sábado vamos a ir al cine con Sol. ¡Qué semana tan divertida!'"
+        ],
+        "qs": [
+          {
+            "q": "Who is Luna having dinner with tonight?",
+            "opts": [
+              "Her grandparents",
+              "Sol",
+              "Her cousins"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What is her brother going to do?",
+            "opts": [
+              "Play a match",
+              "Go to the cinema",
+              "Visit friends"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "When are they going to the cinema?",
+            "opts": [
+              "Next Saturday",
+              "Tonight",
+              "The day after tomorrow"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 142,
+      "title": "Planes para el finde",
+      "subtitle": "Weekend plans",
+      "emoji": "🍿",
+      "milestone": false,
+      "funFact": "In Spain, 'quedar' is the word for meeting up with friends: '¿Quedamos?' means 'Shall we meet up?'",
+      "phrase": {
+        "es": "Este fin de semana voy a quedar con mis amigos.",
+        "en": "This weekend I'm going to meet up with my friends."
+      },
+      "words": [
+        {
+          "es": "¿Qué vas a hacer?",
+          "en": "What are you going to do?",
+          "say": "keh bas ah ah-THEHR",
+          "emoji": "🤔"
+        },
+        {
+          "es": "Quedar con amigos",
+          "en": "To meet up with friends",
+          "say": "keh-DAR kon ah-MEE-gos",
+          "emoji": "🤝"
+        },
+        {
+          "es": "Ver una peli",
+          "en": "To watch a film",
+          "say": "behr OO-nah PEH-lee",
+          "emoji": "🍿"
+        },
+        {
+          "es": "Ir de compras",
+          "en": "To go shopping",
+          "say": "eer deh KOM-pras",
+          "emoji": "🛍️"
+        },
+        {
+          "es": "Hacer una barbacoa",
+          "en": "To have a barbecue",
+          "say": "ah-THEHR OO-nah bar-bah-KOH-ah",
+          "emoji": "🍖"
+        },
+        {
+          "es": "Ir a la piscina",
+          "en": "To go to the swimming pool",
+          "say": "eer ah lah pees-THEE-nah",
+          "emoji": "🏊‍♀️"
+        },
+        {
+          "es": "No hacer nada",
+          "en": "To do nothing",
+          "say": "noh ah-THEHR NAH-dah",
+          "emoji": "🛋️"
+        },
+        {
+          "es": "El plan",
+          "en": "The plan",
+          "say": "el plan",
+          "emoji": "📝"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Este",
+            "fin",
+            "de",
+            "semana",
+            "voy",
+            "a",
+            "quedar",
+            "con",
+            "mis",
+            "amigos"
+          ],
+          "shuffle": [
+            "Este",
+            "fin",
+            "semana",
+            "con",
+            "voy",
+            "de",
+            "amigos",
+            "quedar",
+            "a",
+            "mis"
+          ],
+          "en": "This weekend I'm going to meet up with my friends."
+        },
+        {
+          "correct": [
+            "El",
+            "domingo",
+            "vamos",
+            "a",
+            "hacer",
+            "una",
+            "barbacoa"
+          ],
+          "shuffle": [
+            "vamos",
+            "una",
+            "hacer",
+            "El",
+            "barbacoa",
+            "a",
+            "domingo"
+          ],
+          "en": "On Sunday we're going to have a barbecue."
+        },
+        {
+          "correct": [
+            "Esta",
+            "tarde",
+            "voy",
+            "a",
+            "ver",
+            "una",
+            "peli"
+          ],
+          "shuffle": [
+            "una",
+            "peli",
+            "voy",
+            "ver",
+            "tarde",
+            "a",
+            "Esta"
+          ],
+          "en": "This afternoon I'm going to watch a film."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Quedar con amigos' means:",
+          "opts": [
+            "To meet up with friends",
+            "To stay with friends",
+            "To leave friends"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "¿Qué ___ a hacer mañana? (you)",
+          "opts": [
+            "vas",
+            "va",
+            "voy"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Sol's Lazy Plan",
+        "paras": [
+          "'¿Qué vas a hacer este fin de semana?' asks Luna.",
+          "'El sábado voy a ir de compras con mi madre y el domingo vamos a hacer una barbacoa.'",
+          "'¿Y tú?' 'Yo voy a ir a la piscina… ¡y después no voy a hacer nada!'"
+        ],
+        "qs": [
+          {
+            "q": "Who is Sol going shopping with?",
+            "opts": [
+              "His mum",
+              "Luna",
+              "His dad"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What is happening on Sunday?",
+            "opts": [
+              "A barbecue",
+              "A party",
+              "A match"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What is Luna going to do after the pool?",
+            "opts": [
+              "Nothing",
+              "Homework",
+              "Shopping"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 143,
+      "title": "¿Quieres venir?",
+      "subtitle": "Do you want to come?",
+      "emoji": "💌",
+      "milestone": false,
+      "funFact": "In Spain, '¡Vale!' is the most common way to say 'OK!' You will hear it everywhere, all day long.",
+      "phrase": {
+        "es": "¿Te apetece venir al cine? ¡Me encantaría!",
+        "en": "Do you fancy coming to the cinema? I'd love to!"
+      },
+      "words": [
+        {
+          "es": "¿Quieres venir?",
+          "en": "Do you want to come?",
+          "say": "KYEH-res beh-NEER",
+          "emoji": "💌"
+        },
+        {
+          "es": "¿Te apetece…?",
+          "en": "Do you fancy…?",
+          "say": "teh ah-peh-TEH-theh",
+          "emoji": "😋"
+        },
+        {
+          "es": "¡Vale!",
+          "en": "OK!",
+          "say": "BAH-leh",
+          "emoji": "👌"
+        },
+        {
+          "es": "Me encantaría",
+          "en": "I'd love to",
+          "say": "meh en-kan-tah-REE-ah",
+          "emoji": "🥰"
+        },
+        {
+          "es": "Lo siento, no puedo",
+          "en": "Sorry, I can't",
+          "say": "loh SYEN-toh noh PWEH-doh",
+          "emoji": "😔"
+        },
+        {
+          "es": "Otro día",
+          "en": "Another day",
+          "say": "OH-troh DEE-ah",
+          "emoji": "🔜"
+        },
+        {
+          "es": "¿Por qué no…?",
+          "en": "Why don't we…?",
+          "say": "por KEH noh",
+          "emoji": "💡"
+        },
+        {
+          "es": "¡Qué buena idea!",
+          "en": "What a good idea!",
+          "say": "keh BWEH-nah ee-DEH-ah",
+          "emoji": "🌟"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Me",
+            "encantaría",
+            "ir",
+            "a",
+            "tu",
+            "casa"
+          ],
+          "shuffle": [
+            "ir",
+            "Me",
+            "a",
+            "tu",
+            "encantaría",
+            "casa"
+          ],
+          "en": "I'd love to go to your house."
+        },
+        {
+          "correct": [
+            "Hoy",
+            "no",
+            "puedo",
+            "pero",
+            "otro",
+            "día",
+            "sí"
+          ],
+          "shuffle": [
+            "sí",
+            "Hoy",
+            "no",
+            "pero",
+            "día",
+            "otro",
+            "puedo"
+          ],
+          "en": "I can't today, but another day, yes."
+        },
+        {
+          "correct": [
+            "Me",
+            "apetece",
+            "ir",
+            "a",
+            "la",
+            "playa"
+          ],
+          "shuffle": [
+            "apetece",
+            "ir",
+            "playa",
+            "a",
+            "la",
+            "Me"
+          ],
+          "en": "I fancy going to the beach."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'¿Te apetece?' means:",
+          "opts": [
+            "Do you fancy it?",
+            "Are you hungry?",
+            "Do you like it?"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Lo siento, no ___ ir. (poder)",
+          "opts": [
+            "puedo",
+            "quiero",
+            "voy"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "The Invitation",
+        "paras": [
+          "Sol calls Luna. '¿Quieres venir a mi casa esta tarde? Vamos a hacer pizza.'",
+          "'Lo siento, no puedo. Tengo que estudiar.' 'Vale. ¿Y mañana? ¿Te apetece ir al parque?'",
+          "'¡Me encantaría! ¿Por qué no llevamos la pelota?' '¡Qué buena idea!'"
+        ],
+        "qs": [
+          {
+            "q": "What is Sol making this afternoon?",
+            "opts": [
+              "Pizza",
+              "A cake",
+              "A kite"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Why can't Luna come today?",
+            "opts": [
+              "She has to study",
+              "She is ill",
+              "She is busy shopping"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What are they taking to the park?",
+            "opts": [
+              "A ball",
+              "A kite",
+              "A picnic"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 144,
+      "title": "¿Dónde quedamos?",
+      "subtitle": "Where shall we meet?",
+      "emoji": "🕠",
+      "milestone": false,
+      "funFact": "In Spain, 'la tarde' (the afternoon) lasts a long time: people often say 'buenas tardes' until 8 or 9 in the evening!",
+      "phrase": {
+        "es": "Quedamos a las cinco en la plaza.",
+        "en": "Let's meet at five in the square."
+      },
+      "words": [
+        {
+          "es": "¿A qué hora quedamos?",
+          "en": "What time shall we meet?",
+          "say": "ah keh OH-rah keh-DAH-mos",
+          "emoji": "🕓"
+        },
+        {
+          "es": "¿Dónde quedamos?",
+          "en": "Where shall we meet?",
+          "say": "DON-deh keh-DAH-mos",
+          "emoji": "📍"
+        },
+        {
+          "es": "En la puerta del cine",
+          "en": "At the cinema entrance",
+          "say": "en lah PWEHR-tah del THEE-neh",
+          "emoji": "🎬"
+        },
+        {
+          "es": "A las cinco y media",
+          "en": "At half past five",
+          "say": "ah las THEEN-koh ee MEH-dyah",
+          "emoji": "🕠"
+        },
+        {
+          "es": "Llego tarde",
+          "en": "I'm late",
+          "say": "YEH-goh TAR-deh",
+          "emoji": "🏃‍♂️"
+        },
+        {
+          "es": "Te espero",
+          "en": "I'll wait for you",
+          "say": "teh es-PEH-roh",
+          "emoji": "⏱️"
+        },
+        {
+          "es": "¡Nos vemos!",
+          "en": "See you!",
+          "say": "nos BEH-mos",
+          "emoji": "👋"
+        },
+        {
+          "es": "¡Hasta el sábado!",
+          "en": "See you on Saturday!",
+          "say": "AS-tah el SAH-bah-doh",
+          "emoji": "📅"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Quedamos",
+            "a",
+            "las",
+            "cinco",
+            "en",
+            "la",
+            "plaza"
+          ],
+          "shuffle": [
+            "la",
+            "a",
+            "Quedamos",
+            "las",
+            "plaza",
+            "en",
+            "cinco"
+          ],
+          "en": "Let's meet at five in the square."
+        },
+        {
+          "correct": [
+            "Te",
+            "espero",
+            "en",
+            "la",
+            "puerta",
+            "del",
+            "cine"
+          ],
+          "shuffle": [
+            "espero",
+            "Te",
+            "del",
+            "cine",
+            "en",
+            "la",
+            "puerta"
+          ],
+          "en": "I'll wait for you at the cinema entrance."
+        },
+        {
+          "correct": [
+            "Hoy",
+            "llego",
+            "tarde",
+            "a",
+            "clase"
+          ],
+          "shuffle": [
+            "tarde",
+            "a",
+            "llego",
+            "Hoy",
+            "clase"
+          ],
+          "en": "Today I'm late for class."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Te espero' means:",
+          "opts": [
+            "I'll wait for you",
+            "I hope for you",
+            "I miss you"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "¿A qué hora ___? (shall we meet)",
+          "opts": [
+            "quedamos",
+            "quedan",
+            "quedo"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Where Is Sol?",
+        "paras": [
+          "'¿A qué hora quedamos?' asks Luna. 'A las cinco y media, en la puerta del cine,' says Sol.",
+          "At five thirty, Luna is there. But no Sol! Her phone rings: 'Lo siento, ¡llego tarde! Me he dormido.'",
+          "'Vale, te espero. ¡Pero corre!' Ten minutes later: '¡Ya estoy aquí! ¡Vamos!'"
+        ],
+        "qs": [
+          {
+            "q": "Where do they meet?",
+            "opts": [
+              "At the cinema entrance",
+              "In the park",
+              "At school"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Why is Sol late?",
+            "opts": [
+              "He overslept",
+              "He missed the bus",
+              "He forgot"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Luna do?",
+            "opts": [
+              "She waits for him",
+              "She goes home",
+              "She goes in alone"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 145,
+      "title": "Iré, seré, tendré",
+      "subtitle": "I will go, be, have",
+      "emoji": "🔮",
+      "milestone": false,
+      "funFact": "The future is easy: you add -é to the whole verb, so 'viajar' becomes 'viajaré'. A few, like 'tener' and 'tendré', are special.",
+      "phrase": {
+        "es": "Algún día viajaré por todo el mundo.",
+        "en": "One day I will travel all over the world."
+      },
+      "words": [
+        {
+          "es": "Iré",
+          "en": "I will go",
+          "say": "ee-REH",
+          "emoji": "🚀"
+        },
+        {
+          "es": "Haré",
+          "en": "I will do / make",
+          "say": "ah-REH",
+          "emoji": "✔️"
+        },
+        {
+          "es": "Tendré",
+          "en": "I will have",
+          "say": "ten-DREH",
+          "emoji": "🎁"
+        },
+        {
+          "es": "Podré",
+          "en": "I will be able to",
+          "say": "poh-DREH",
+          "emoji": "💪"
+        },
+        {
+          "es": "Seré",
+          "en": "I will be",
+          "say": "seh-REH",
+          "emoji": "🌟"
+        },
+        {
+          "es": "Viviré",
+          "en": "I will live",
+          "say": "bee-bee-REH",
+          "emoji": "🏝️"
+        },
+        {
+          "es": "Viajaré",
+          "en": "I will travel",
+          "say": "byah-hah-REH",
+          "emoji": "🌍"
+        },
+        {
+          "es": "Será",
+          "en": "It will be",
+          "say": "seh-RAH",
+          "emoji": "🔮"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Mañana",
+            "iré",
+            "a",
+            "casa",
+            "de",
+            "mi",
+            "abuela"
+          ],
+          "shuffle": [
+            "iré",
+            "a",
+            "Mañana",
+            "mi",
+            "casa",
+            "de",
+            "abuela"
+          ],
+          "en": "Tomorrow I will go to my grandma's house."
+        },
+        {
+          "correct": [
+            "Algún",
+            "día",
+            "viviré",
+            "en",
+            "una",
+            "isla"
+          ],
+          "shuffle": [
+            "en",
+            "Algún",
+            "viviré",
+            "día",
+            "isla",
+            "una"
+          ],
+          "en": "One day I will live on an island."
+        },
+        {
+          "correct": [
+            "El",
+            "examen",
+            "será",
+            "fácil"
+          ],
+          "shuffle": [
+            "examen",
+            "será",
+            "fácil",
+            "El"
+          ],
+          "en": "The exam will be easy."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "Viajar → yo ___ (will)",
+          "opts": [
+            "viajaré",
+            "viajaba",
+            "viajé"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Tener → yo ___ (will)",
+          "opts": [
+            "tendré",
+            "teneré",
+            "tuve"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Luna's Crystal Ball",
+        "paras": [
+          "Luna plays fortune teller with a crystal ball.",
+          "'Sol, en el futuro serás muy famoso. Vivirás en una casa enorme y tendrás diez perros.'",
+          "'¿Y tú?' asks Sol. 'Yo viajaré por todo el mundo… ¡y te visitaré en tu casa enorme!'"
+        ],
+        "qs": [
+          {
+            "q": "What does Luna say about Sol's future?",
+            "opts": [
+              "He will be famous",
+              "He will be a teacher",
+              "He will be sad"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How many dogs will Sol have?",
+            "opts": [
+              "Ten",
+              "Two",
+              "None"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What will Luna do?",
+            "opts": [
+              "Travel the world",
+              "Live with Sol",
+              "Stay at home"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 146,
+      "title": "Cuando sea mayor",
+      "subtitle": "When I grow up",
+      "emoji": "🧑‍🎓",
+      "milestone": false,
+      "funFact": "In Spanish, many jobs have a boy form and a girl form: 'el veterinario', 'la veterinaria'. Some, like 'el piloto' and 'la piloto', stay the same.",
+      "phrase": {
+        "es": "Cuando sea mayor, seré veterinaria.",
+        "en": "When I grow up, I'll be a vet."
+      },
+      "words": [
+        {
+          "es": "Cuando sea mayor",
+          "en": "When I grow up",
+          "say": "KWAN-doh SEH-ah mah-YOR",
+          "emoji": "🧑‍🎓"
+        },
+        {
+          "es": "La veterinaria",
+          "en": "The vet (woman)",
+          "say": "lah beh-teh-ree-NAH-ryah",
+          "emoji": "🐕‍🦺"
+        },
+        {
+          "es": "El científico",
+          "en": "The scientist (man)",
+          "say": "el thyen-TEE-fee-koh",
+          "emoji": "🔬"
+        },
+        {
+          "es": "La piloto",
+          "en": "The pilot (woman)",
+          "say": "lah pee-LOH-toh",
+          "emoji": "🛩️"
+        },
+        {
+          "es": "El cantante",
+          "en": "The singer (man)",
+          "say": "el kan-TAN-teh",
+          "emoji": "🎙️"
+        },
+        {
+          "es": "La enfermera",
+          "en": "The nurse (woman)",
+          "say": "lah en-fehr-MEH-rah",
+          "emoji": "🧑‍⚕️"
+        },
+        {
+          "es": "El programador",
+          "en": "The programmer (man)",
+          "say": "el proh-grah-mah-DOR",
+          "emoji": "💻"
+        },
+        {
+          "es": "Trabajaré de",
+          "en": "I will work as",
+          "say": "trah-bah-hah-REH deh",
+          "emoji": "🏢"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Cuando",
+            "sea",
+            "mayor",
+            "seré",
+            "veterinaria"
+          ],
+          "shuffle": [
+            "mayor",
+            "sea",
+            "veterinaria",
+            "Cuando",
+            "seré"
+          ],
+          "en": "When I grow up I'll be a vet."
+        },
+        {
+          "correct": [
+            "Mi",
+            "hermano",
+            "quiere",
+            "ser",
+            "piloto"
+          ],
+          "shuffle": [
+            "ser",
+            "quiere",
+            "piloto",
+            "Mi",
+            "hermano"
+          ],
+          "en": "My brother wants to be a pilot."
+        },
+        {
+          "correct": [
+            "Trabajaré",
+            "en",
+            "un",
+            "hospital"
+          ],
+          "shuffle": [
+            "Trabajaré",
+            "hospital",
+            "un",
+            "en"
+          ],
+          "en": "I will work in a hospital."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Cuando sea mayor' means:",
+          "opts": [
+            "When I grow up",
+            "When I was older",
+            "When I'm tired"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'La enfermera' is:",
+          "opts": [
+            "The nurse",
+            "The nursery",
+            "The patient"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Dream Jobs",
+        "paras": [
+          "At school, the teacher asks: '¿Qué queréis ser cuando seáis mayores?'",
+          "Luna says: 'Cuando sea mayor, seré veterinaria. ¡Me encantan los animales!'",
+          "Sol says: 'Yo trabajaré de científico… ¡o de cantante! Todavía no lo sé.'"
+        ],
+        "qs": [
+          {
+            "q": "What does Luna want to be?",
+            "opts": [
+              "A vet",
+              "A pilot",
+              "A nurse"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Why?",
+            "opts": [
+              "She loves animals",
+              "She loves planes",
+              "She loves science"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Sol want to be?",
+            "opts": [
+              "A scientist or a singer",
+              "A vet",
+              "A programmer"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 147,
+      "title": "El tiempo de mañana",
+      "subtitle": "Tomorrow's weather",
+      "emoji": "🌡️",
+      "milestone": false,
+      "funFact": "Spain's weather service is called AEMET. In summer, Seville and Córdoba are often among the hottest cities in Europe!",
+      "phrase": {
+        "es": "Mañana lloverá en el norte y hará sol en el sur.",
+        "en": "Tomorrow it will rain in the north and be sunny in the south."
+      },
+      "words": [
+        {
+          "es": "El tiempo de mañana",
+          "en": "Tomorrow's weather",
+          "say": "el TYEM-poh deh mah-NYAH-nah",
+          "emoji": "🗞️"
+        },
+        {
+          "es": "Lloverá",
+          "en": "It will rain",
+          "say": "yoh-beh-RAH",
+          "emoji": "☔"
+        },
+        {
+          "es": "Hará sol",
+          "en": "It will be sunny",
+          "say": "ah-RAH sol",
+          "emoji": "☀️"
+        },
+        {
+          "es": "Hará frío",
+          "en": "It will be cold",
+          "say": "ah-RAH FREE-oh",
+          "emoji": "🧣"
+        },
+        {
+          "es": "Nevará",
+          "en": "It will snow",
+          "say": "neh-bah-RAH",
+          "emoji": "☃️"
+        },
+        {
+          "es": "Habrá tormenta",
+          "en": "There will be a storm",
+          "say": "ah-BRAH tor-MEN-tah",
+          "emoji": "⛈️"
+        },
+        {
+          "es": "Habrá niebla",
+          "en": "It will be foggy",
+          "say": "ah-BRAH NYEH-blah",
+          "emoji": "🌫️"
+        },
+        {
+          "es": "Los grados",
+          "en": "Degrees",
+          "say": "los GRAH-dos",
+          "emoji": "🌡️"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Mañana",
+            "lloverá",
+            "en",
+            "el",
+            "norte"
+          ],
+          "shuffle": [
+            "Mañana",
+            "en",
+            "lloverá",
+            "el",
+            "norte"
+          ],
+          "en": "Tomorrow it will rain in the north."
+        },
+        {
+          "correct": [
+            "El",
+            "sábado",
+            "hará",
+            "mucho",
+            "sol"
+          ],
+          "shuffle": [
+            "mucho",
+            "hará",
+            "sol",
+            "El",
+            "sábado"
+          ],
+          "en": "On Saturday it will be very sunny."
+        },
+        {
+          "correct": [
+            "Habrá",
+            "treinta",
+            "grados",
+            "en",
+            "Sevilla"
+          ],
+          "shuffle": [
+            "en",
+            "Habrá",
+            "Sevilla",
+            "grados",
+            "treinta"
+          ],
+          "en": "It will be thirty degrees in Seville."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "Mañana ___ frío. (hacer, will)",
+          "opts": [
+            "hará",
+            "hizo",
+            "hace"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Nevará' means:",
+          "opts": [
+            "It will snow",
+            "It snowed",
+            "It is snowing"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Sol the Weatherman",
+        "paras": [
+          "Sol pretends to read the weather on TV.",
+          "'¡Buenas tardes! El tiempo de mañana: en el norte lloverá y habrá niebla. En los Pirineos nevará.'",
+          "'En el sur hará sol y habrá treinta y cinco grados. ¡No olvidéis la crema solar!'"
+        ],
+        "qs": [
+          {
+            "q": "What will the weather be like in the north?",
+            "opts": [
+              "Rain and fog",
+              "Sunny",
+              "Snowy"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Where will it snow?",
+            "opts": [
+              "In the Pyrenees",
+              "In the south",
+              "In Madrid"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How hot will it be in the south?",
+            "opts": [
+              "35 degrees",
+              "25 degrees",
+              "15 degrees"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 148,
+      "title": "Te lo prometo",
+      "subtitle": "I promise",
+      "emoji": "🤞",
+      "milestone": false,
+      "funFact": "'A lo mejor' looks like 'to the best', but it means 'maybe'. People in Spain use it all the time!",
+      "phrase": {
+        "es": "Te prometo que limpiaré mi habitación.",
+        "en": "I promise I'll tidy my room."
+      },
+      "words": [
+        {
+          "es": "Te prometo",
+          "en": "I promise you",
+          "say": "teh proh-MEH-toh",
+          "emoji": "🤞"
+        },
+        {
+          "es": "Seguro que",
+          "en": "I'm sure that",
+          "say": "seh-GOO-roh keh",
+          "emoji": "✅"
+        },
+        {
+          "es": "A lo mejor",
+          "en": "Maybe",
+          "say": "ah loh meh-HOR",
+          "emoji": "🤷‍♀️"
+        },
+        {
+          "es": "Probablemente",
+          "en": "Probably",
+          "say": "proh-bah-bleh-MEN-teh",
+          "emoji": "🎯"
+        },
+        {
+          "es": "Nunca más",
+          "en": "Never again",
+          "say": "NOON-kah mas",
+          "emoji": "🙅‍♂️"
+        },
+        {
+          "es": "Te ayudaré",
+          "en": "I'll help you",
+          "say": "teh ah-yoo-dah-REH",
+          "emoji": "🤝"
+        },
+        {
+          "es": "Ya verás",
+          "en": "You'll see",
+          "say": "yah beh-RAS",
+          "emoji": "👀"
+        },
+        {
+          "es": "Mañana será otro día",
+          "en": "Tomorrow is another day",
+          "say": "mah-NYAH-nah seh-RAH OH-troh DEE-ah",
+          "emoji": "🌅"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Te",
+            "prometo",
+            "que",
+            "limpiaré",
+            "mi",
+            "habitación"
+          ],
+          "shuffle": [
+            "Te",
+            "habitación",
+            "limpiaré",
+            "prometo",
+            "mi",
+            "que"
+          ],
+          "en": "I promise I'll tidy my room."
+        },
+        {
+          "correct": [
+            "A",
+            "lo",
+            "mejor",
+            "vamos",
+            "a",
+            "la",
+            "playa"
+          ],
+          "shuffle": [
+            "vamos",
+            "mejor",
+            "la",
+            "playa",
+            "lo",
+            "A",
+            "a"
+          ],
+          "en": "Maybe we'll go to the beach."
+        },
+        {
+          "correct": [
+            "Seguro",
+            "que",
+            "mañana",
+            "hará",
+            "sol"
+          ],
+          "shuffle": [
+            "hará",
+            "mañana",
+            "sol",
+            "que",
+            "Seguro"
+          ],
+          "en": "I'm sure it will be sunny tomorrow."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'A lo mejor' means:",
+          "opts": [
+            "Maybe",
+            "The best",
+            "Even better"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Te ___ con los deberes. (ayudar, will)",
+          "opts": [
+            "ayudaré",
+            "ayudé",
+            "ayudo"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "The Broken Vase",
+        "paras": [
+          "Sol has broken a vase. 'Lo siento, mamá. Nunca más jugaré al fútbol en casa. ¡Te lo prometo!'",
+          "'Y te ayudaré a limpiar. Seguro que encontramos otro jarrón bonito.'",
+          "Mamá smiles. 'Vale. A lo mejor lo arreglamos con pegamento. ¡Ya verás!'"
+        ],
+        "qs": [
+          {
+            "q": "What has Sol broken?",
+            "opts": [
+              "A vase",
+              "A window",
+              "A glass"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Sol promise?",
+            "opts": [
+              "Never to play football indoors again",
+              "To buy a new vase",
+              "To go to bed early"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How might they fix it?",
+            "opts": [
+              "With glue",
+              "With tape",
+              "They can't"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 149,
+      "title": "Propósitos de Año Nuevo",
+      "subtitle": "New Year's resolutions",
+      "emoji": "🍇",
+      "milestone": false,
+      "funFact": "On New Year's Eve in Spain, people eat 12 grapes at midnight, one on each chime of the clock, for good luck in the new year!",
+      "phrase": {
+        "es": "Este año voy a comer más fruta y leer más.",
+        "en": "This year I'm going to eat more fruit and read more."
+      },
+      "words": [
+        {
+          "es": "Este año voy a",
+          "en": "This year I'm going to",
+          "say": "ES-teh AH-nyoh boy ah",
+          "emoji": "🗒️"
+        },
+        {
+          "es": "Los propósitos",
+          "en": "Resolutions",
+          "say": "los proh-POH-see-tos",
+          "emoji": "📋"
+        },
+        {
+          "es": "Comer sano",
+          "en": "To eat healthily",
+          "say": "koh-MEHR SAH-noh",
+          "emoji": "🥗"
+        },
+        {
+          "es": "Hacer deporte",
+          "en": "To do sport",
+          "say": "ah-THEHR deh-POR-teh",
+          "emoji": "🏋️"
+        },
+        {
+          "es": "Ahorrar",
+          "en": "To save (money)",
+          "say": "ah-oh-RRAR",
+          "emoji": "🐷"
+        },
+        {
+          "es": "Ser más ordenado",
+          "en": "To be tidier",
+          "say": "sehr mas or-deh-NAH-doh",
+          "emoji": "🧺"
+        },
+        {
+          "es": "Aprender a tocar",
+          "en": "To learn to play (an instrument)",
+          "say": "ah-pren-DEHR ah toh-KAR",
+          "emoji": "🎻"
+        },
+        {
+          "es": "Leer más",
+          "en": "To read more",
+          "say": "leh-EHR mas",
+          "emoji": "📖"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Este",
+            "año",
+            "voy",
+            "a",
+            "comer",
+            "más",
+            "sano"
+          ],
+          "shuffle": [
+            "a",
+            "comer",
+            "más",
+            "Este",
+            "sano",
+            "voy",
+            "año"
+          ],
+          "en": "This year I'm going to eat more healthily."
+        },
+        {
+          "correct": [
+            "Voy",
+            "a",
+            "ahorrar",
+            "para",
+            "una",
+            "bici"
+          ],
+          "shuffle": [
+            "Voy",
+            "para",
+            "ahorrar",
+            "bici",
+            "una",
+            "a"
+          ],
+          "en": "I'm going to save up for a bike."
+        },
+        {
+          "correct": [
+            "Mi",
+            "propósito",
+            "es",
+            "leer",
+            "más"
+          ],
+          "shuffle": [
+            "leer",
+            "es",
+            "propósito",
+            "más",
+            "Mi"
+          ],
+          "en": "My resolution is to read more."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Ahorrar' means:",
+          "opts": [
+            "To save money",
+            "To spend money",
+            "To borrow"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Los propósitos' are:",
+          "opts": [
+            "Resolutions",
+            "Purposes",
+            "Proposals"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Twelve Grapes",
+        "paras": [
+          "It's New Year's Eve. Sol and Luna have their twelve grapes ready.",
+          "'Mis propósitos: voy a hacer deporte, ahorrar y ser más ordenado,' says Sol.",
+          "'Yo voy a aprender a tocar el violín,' says Luna. ¡Dong! ¡Dong! They eat the grapes. '¡Feliz Año Nuevo!'"
+        ],
+        "qs": [
+          {
+            "q": "What do they eat at midnight?",
+            "opts": [
+              "Twelve grapes",
+              "Twelve sweets",
+              "A cake"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What is one of Sol's resolutions?",
+            "opts": [
+              "To be tidier",
+              "To learn the violin",
+              "To read more"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Luna want to learn?",
+            "opts": [
+              "The violin",
+              "The piano",
+              "Football"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 150,
+      "title": "¡Campeón del futuro!",
+      "subtitle": "Future champion",
+      "emoji": "🏆",
+      "milestone": true,
+      "funFact": "You can now make plans, invite friends, talk about the weather and dream about the future, all in Spanish!",
+      "phrase": {
+        "es": "Mañana iré al parque y quedaré con mis amigos.",
+        "en": "Tomorrow I'll go to the park and meet up with my friends."
+      },
+      "words": [
+        {
+          "es": "Vamos a",
+          "en": "We are going to",
+          "say": "BAH-mos ah",
+          "emoji": "🙌"
+        },
+        {
+          "es": "Quedar con amigos",
+          "en": "To meet up with friends",
+          "say": "keh-DAR kon ah-MEE-gos",
+          "emoji": "🤝"
+        },
+        {
+          "es": "¿Te apetece…?",
+          "en": "Do you fancy…?",
+          "say": "teh ah-peh-TEH-theh",
+          "emoji": "😋"
+        },
+        {
+          "es": "¡Nos vemos!",
+          "en": "See you!",
+          "say": "nos BEH-mos",
+          "emoji": "👋"
+        },
+        {
+          "es": "Iré",
+          "en": "I will go",
+          "say": "ee-REH",
+          "emoji": "🚀"
+        },
+        {
+          "es": "Cuando sea mayor",
+          "en": "When I grow up",
+          "say": "KWAN-doh SEH-ah mah-YOR",
+          "emoji": "🧑‍🎓"
+        },
+        {
+          "es": "Lloverá",
+          "en": "It will rain",
+          "say": "yoh-beh-RAH",
+          "emoji": "☔"
+        },
+        {
+          "es": "A lo mejor",
+          "en": "Maybe",
+          "say": "ah loh meh-HOR",
+          "emoji": "🤷‍♀️"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "El",
+            "sábado",
+            "vamos",
+            "a",
+            "hacer",
+            "una",
+            "barbacoa"
+          ],
+          "shuffle": [
+            "a",
+            "sábado",
+            "vamos",
+            "El",
+            "hacer",
+            "barbacoa",
+            "una"
+          ],
+          "en": "On Saturday we're going to have a barbecue."
+        },
+        {
+          "correct": [
+            "Cuando",
+            "sea",
+            "mayor",
+            "viajaré",
+            "mucho"
+          ],
+          "shuffle": [
+            "mayor",
+            "mucho",
+            "sea",
+            "viajaré",
+            "Cuando"
+          ],
+          "en": "When I grow up I'll travel a lot."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "Ellos ___ a jugar. (going to)",
+          "opts": [
+            "van",
+            "vamos",
+            "vas"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Hacer → yo ___ (will)",
+          "opts": [
+            "haré",
+            "haceré",
+            "hice"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Lo siento, no puedo' means:",
+          "opts": [
+            "Sorry, I can't",
+            "Sorry, I don't want to",
+            "Sorry, I'm late"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'La semana que viene' means:",
+          "opts": [
+            "Next week",
+            "Last week",
+            "This week"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Plans for the Summer",
+        "paras": [
+          "The school year is ending. Sol and Luna make plans.",
+          "'Este verano iré al pueblo de mis abuelos. ¿Te apetece venir?' asks Sol.",
+          "'¡Me encantaría! A lo mejor lloverá un día, pero seguro que será genial. ¡Nos vemos en julio!'"
+        ],
+        "qs": [
+          {
+            "q": "Where is Sol going this summer?",
+            "opts": [
+              "To his grandparents' village",
+              "To London",
+              "To the mountains"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Does Luna want to go?",
+            "opts": [
+              "Yes, she'd love to",
+              "No, she's busy",
+              "She doesn't know"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "When will they see each other?",
+            "opts": [
+              "In July",
+              "In August",
+              "Tomorrow"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    }
+  ]
+}

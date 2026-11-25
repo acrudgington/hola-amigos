@@ -85,5 +85,13 @@
     {"who": "luna", "es": "¡Saltar a la comba y la tele no miraba!", "en": "Skipping, and I didn't watch TV!"},
     {"who": "sol", "es": "Antes era pequeño, ahora soy mayor.", "en": "Before I was little, now I'm big."},
     {"who": "luna", "es": "¡Y todavía me gusta jugar con el sol!", "en": "And I still like playing in the sun!"}
+  ] },
+  { "id": "que-vas-a-hacer", "world": 17, "title": "¿Qué vas a hacer?", "en": "What are you going to do?", "emoji": "🎡", "bpm": 100, "lines": [
+    {"who": "sol", "es": "¿Qué vas a hacer, qué vas a hacer?", "en": "What are you going to do, what are you going to do?"},
+    {"who": "luna", "es": "¡Voy a nadar y voy a correr!", "en": "I'm going to swim and I'm going to run!"},
+    {"who": "sol", "es": "¿Y mañana? ¿Qué harás mañana?", "en": "And tomorrow? What will you do tomorrow?"},
+    {"who": "luna", "es": "¡Iré a la playa con mi hermana!", "en": "I'll go to the beach with my sister!"},
+    {"who": "sol", "es": "¿Y de mayor? ¿Qué serás? ¡Dímelo ya!", "en": "And when you grow up? What will you be? Tell me now!"},
+    {"who": "luna", "es": "¡Seré astronauta y viajaré allá!", "en": "I'll be an astronaut and I'll travel up there!"}
   ] }
 ]
