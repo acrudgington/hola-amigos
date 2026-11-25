@@ -77,5 +77,13 @@
     {"who": "luna", "es": "Tuve, tuviste, tuvo: ¡un susto tuvo!", "en": "I had, you had, he had: he had a fright!"},
     {"who": "sol", "es": "Dije, traje, puse: ¡todo lo hice!", "en": "I said, I brought, I put: I did it all!"},
     {"who": "luna", "es": "¡Y colorín colorado, este cuento se ha acabado!", "en": "And that's the end of the story!"}
+  ] },
+  { "id": "cuando-era", "world": 16, "title": "Cuando era pequeño", "en": "When I was little", "emoji": "🧸", "bpm": 90, "lines": [
+    {"who": "sol", "es": "Cuando era pequeño, ¿sabes qué hacía?", "en": "When I was little, do you know what I did?"},
+    {"who": "luna", "es": "¡Jugaba en el parque y la sandía comía!", "en": "I played in the park and I ate watermelon!"},
+    {"who": "sol", "es": "Cuando era pequeña, ¿qué te gustaba?", "en": "When you were little, what did you like?"},
+    {"who": "luna", "es": "¡Saltar a la comba y la tele no miraba!", "en": "Skipping, and I didn't watch TV!"},
+    {"who": "sol", "es": "Antes era pequeño, ahora soy mayor.", "en": "Before I was little, now I'm big."},
+    {"who": "luna", "es": "¡Y todavía me gusta jugar con el sol!", "en": "And I still like playing in the sun!"}
   ] }
 ]

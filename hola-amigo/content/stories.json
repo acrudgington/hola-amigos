@@ -210,5 +210,19 @@
     {"q": "How did the class travel?", "opts": ["By coach", "By train", "On foot"], "ans": 0},
     {"q": "Where did Luna hide?", "opts": ["In her sleeping bag", "Behind a tree", "In the tent"], "ans": 0},
     {"q": "What made the noise?", "opts": ["A hedgehog", "A bear", "The wind"], "ans": 0}
+  ] },
+  { "id": "abuelo-pequeno", "world": 16, "title": "Cuando el abuelo era pequeño", "en": "When Grandad was little", "emoji": "📻", "sentences": [
+    {"es": "Cuando el abuelo de Sol era pequeño, vivía en un pueblo de Castilla.", "en": "When Sol's grandad was little, he lived in a village in Castile."},
+    {"es": "Su casa era pequeña y no había tele ni teléfono.", "en": "His house was small and there was no TV or telephone."},
+    {"es": "Todas las mañanas, iba al colegio andando con sus hermanos.", "en": "Every morning, he walked to school with his brothers and sisters."},
+    {"es": "Por la tarde, jugaba a las canicas en la plaza.", "en": "In the afternoon, he used to play marbles in the square."},
+    {"es": "Por la noche, toda la familia escuchaba la radio en la cocina.", "en": "At night, the whole family listened to the radio in the kitchen."},
+    {"es": "Un día, estaba jugando en la calle cuando empezó a nevar.", "en": "One day, he was playing in the street when it started to snow."},
+    {"es": "¡Era la primera vez que veía la nieve!", "en": "It was the first time he had seen snow!"},
+    {"es": "—Ahora todo ha cambiado —dice el abuelo—, pero me encanta recordar.", "en": "\"Everything has changed now,\" says Grandad, \"but I love remembering.\""}
+  ], "questions": [
+    {"q": "Where did Grandad live as a boy?", "opts": ["In a village in Castile", "In Madrid", "By the sea"], "ans": 0},
+    {"q": "What did the family listen to at night?", "opts": ["The radio", "Records", "The TV"], "ans": 0},
+    {"q": "What happened one day?", "opts": ["It started to snow", "He got lost", "He found a dog"], "ans": 0}
   ] }
 ]

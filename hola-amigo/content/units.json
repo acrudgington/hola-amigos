@@ -99,5 +99,11 @@
     {"id": "15b", "can": "I can use the most common irregular past verbs.", "es": "Tuve que estudiar y no pude ir a la fiesta.", "lessons": [123, 124]},
     {"id": "15c", "can": "I can tell someone about a trip or an adventure.", "es": "Nos perdimos en la montaña, pero por suerte encontramos el camino.", "lessons": [125, 126, 127]},
     {"id": "15d", "can": "I can tell a story and talk about famous people from the past.", "es": "Picasso nació en Málaga hace muchos años.", "lessons": [128, 129, 130]}
+  ] },
+  { "world": 16, "title": "When I was little", "level": "a2", "goals": [
+    {"id": "16a", "can": "I can say what I was like and what I used to do when I was little.", "es": "De pequeño era tímido y jugaba con mi osito.", "lessons": [131, 132, 133]},
+    {"id": "16b", "can": "I can describe the past and compare it with now.", "es": "Antes no había móviles; ahora todo el mundo tiene uno.", "lessons": [134, 135, 136]},
+    {"id": "16c", "can": "I can say what was happening when something else happened.", "es": "Estaba cenando cuando sonó el teléfono.", "lessons": [137]},
+    {"id": "16d", "can": "I can tell a fairy tale and talk about holidays in the old days.", "es": "Érase una vez un lobo que vivía en el bosque.", "lessons": [138, 139, 140]}
   ] }
 ]

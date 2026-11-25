@@ -1,0 +1,1804 @@
+{
+  "world": 16,
+  "lessons": [
+    {
+      "id": 131,
+      "title": "De pequeño",
+      "subtitle": "When I was little",
+      "emoji": "👶",
+      "milestone": false,
+      "funFact": "'De pequeño' and 'cuando era pequeño' mean the same thing: 'when I was little'. Girls say 'de pequeña'.",
+      "phrase": {
+        "es": "De pequeña me daba miedo la oscuridad.",
+        "en": "When I was little I was scared of the dark."
+      },
+      "words": [
+        {
+          "es": "De pequeño",
+          "en": "As a little boy",
+          "say": "deh peh-KEH-nyoh",
+          "emoji": "👦"
+        },
+        {
+          "es": "De pequeña",
+          "en": "As a little girl",
+          "say": "deh peh-KEH-nyah",
+          "emoji": "👧"
+        },
+        {
+          "es": "Me gustaba",
+          "en": "I used to like",
+          "say": "meh goos-TAH-bah",
+          "emoji": "💗"
+        },
+        {
+          "es": "Me daba miedo",
+          "en": "I used to be scared of",
+          "say": "meh DAH-bah MYEH-doh",
+          "emoji": "👻"
+        },
+        {
+          "es": "Llevaba gafas",
+          "en": "I used to wear glasses",
+          "say": "yeh-BAH-bah GAH-fas",
+          "emoji": "👓"
+        },
+        {
+          "es": "Sabía",
+          "en": "I knew / I could (do)",
+          "say": "sah-BEE-ah",
+          "emoji": "🧠"
+        },
+        {
+          "es": "No sabía",
+          "en": "I didn't know how",
+          "say": "noh sah-BEE-ah",
+          "emoji": "🤷"
+        },
+        {
+          "es": "Podía",
+          "en": "I was able to",
+          "say": "poh-DEE-ah",
+          "emoji": "🦸"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "De",
+            "pequeño",
+            "me",
+            "gustaba",
+            "mucho",
+            "el",
+            "chocolate"
+          ],
+          "shuffle": [
+            "De",
+            "el",
+            "me",
+            "chocolate",
+            "pequeño",
+            "gustaba",
+            "mucho"
+          ],
+          "en": "When I was little I really liked chocolate."
+        },
+        {
+          "correct": [
+            "De",
+            "pequeña",
+            "me",
+            "daba",
+            "miedo",
+            "la",
+            "oscuridad"
+          ],
+          "shuffle": [
+            "la",
+            "daba",
+            "oscuridad",
+            "me",
+            "miedo",
+            "De",
+            "pequeña"
+          ],
+          "en": "When I was little I was scared of the dark."
+        },
+        {
+          "correct": [
+            "Antes",
+            "no",
+            "sabía",
+            "nadar"
+          ],
+          "shuffle": [
+            "nadar",
+            "sabía",
+            "no",
+            "Antes"
+          ],
+          "en": "Before, I couldn't swim."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "De pequeño me ___ los dinosaurios. (gustar)",
+          "opts": [
+            "gustaban",
+            "gustaba",
+            "gustó"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'No sabía' means:",
+          "opts": [
+            "I didn't know how",
+            "I don't know",
+            "I won't know"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Old Photos",
+        "paras": [
+          "Luna and Sol look at old photos.",
+          "'¡Mira! De pequeña llevaba gafas y me daba miedo el agua. No sabía nadar.'",
+          "'Yo de pequeño era muy travieso,' laughs Sol. 'Me gustaba pintar en las paredes.'"
+        ],
+        "qs": [
+          {
+            "q": "What did Luna use to wear?",
+            "opts": [
+              "Glasses",
+              "A hat",
+              "A bow"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What was Luna scared of?",
+            "opts": [
+              "Water",
+              "Dogs",
+              "The dark"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What did Sol like doing?",
+            "opts": [
+              "Drawing on the walls",
+              "Swimming",
+              "Reading"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 132,
+      "title": "Lo que hacía",
+      "subtitle": "What I used to do",
+      "emoji": "🧸",
+      "milestone": false,
+      "funFact": "This tense is the 'used to' tense: 'jugar' becomes 'jugaba' and 'comer' becomes 'comía'.",
+      "phrase": {
+        "es": "De pequeña jugaba con muñecas.",
+        "en": "When I was little I used to play with dolls."
+      },
+      "words": [
+        {
+          "es": "Jugaba",
+          "en": "I used to play",
+          "say": "hoo-GAH-bah",
+          "emoji": "🪀"
+        },
+        {
+          "es": "Comía",
+          "en": "I used to eat",
+          "say": "koh-MEE-ah",
+          "emoji": "🥣"
+        },
+        {
+          "es": "Veía",
+          "en": "I used to watch",
+          "say": "beh-EE-ah",
+          "emoji": "📺"
+        },
+        {
+          "es": "Dormía",
+          "en": "I used to sleep",
+          "say": "dor-MEE-ah",
+          "emoji": "🛌"
+        },
+        {
+          "es": "Leía",
+          "en": "I used to read",
+          "say": "leh-EE-ah",
+          "emoji": "📚"
+        },
+        {
+          "es": "A menudo",
+          "en": "Often",
+          "say": "ah meh-NOO-doh",
+          "emoji": "🔁"
+        },
+        {
+          "es": "De vez en cuando",
+          "en": "From time to time",
+          "say": "deh behth en KWAN-doh",
+          "emoji": "🎲"
+        },
+        {
+          "es": "Casi siempre",
+          "en": "Almost always",
+          "say": "KAH-see SYEM-preh",
+          "emoji": "🔂"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "De",
+            "pequeña",
+            "jugaba",
+            "con",
+            "muñecas"
+          ],
+          "shuffle": [
+            "De",
+            "pequeña",
+            "con",
+            "muñecas",
+            "jugaba"
+          ],
+          "en": "When I was little I used to play with dolls."
+        },
+        {
+          "correct": [
+            "Veía",
+            "los",
+            "dibujos",
+            "por",
+            "la",
+            "mañana"
+          ],
+          "shuffle": [
+            "mañana",
+            "la",
+            "dibujos",
+            "Veía",
+            "los",
+            "por"
+          ],
+          "en": "I used to watch cartoons in the morning."
+        },
+        {
+          "correct": [
+            "A",
+            "menudo",
+            "dormía",
+            "con",
+            "mi",
+            "peluche"
+          ],
+          "shuffle": [
+            "mi",
+            "A",
+            "con",
+            "menudo",
+            "dormía",
+            "peluche"
+          ],
+          "en": "I often used to sleep with my cuddly toy."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "Comer → yo ___ (used to)",
+          "opts": [
+            "comía",
+            "comí",
+            "como"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Jugar → yo ___ (used to)",
+          "opts": [
+            "jugaba",
+            "jugué",
+            "juego"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Little Sol",
+        "paras": [
+          "Sol's mum tells Luna about him as a baby.",
+          "'Sol casi siempre dormía con su peluche. Comía mucha fruta y veía los dibujos todas las mañanas.'",
+          "'Y de vez en cuando leía cuentos con su abuelo. ¡Era un niño muy feliz!'"
+        ],
+        "qs": [
+          {
+            "q": "What did Sol sleep with?",
+            "opts": [
+              "His cuddly toy",
+              "A blanket",
+              "His dog"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What did he watch every morning?",
+            "opts": [
+              "Cartoons",
+              "Football",
+              "The news"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Who did he read stories with?",
+            "opts": [
+              "His grandad",
+              "His mum",
+              "Luna"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 133,
+      "title": "Juegos de antes",
+      "subtitle": "Games from the old days",
+      "emoji": "🌀",
+      "milestone": false,
+      "funFact": "'La rayuela' (hopscotch), 'la comba' (skipping rope) and 'las canicas' (marbles) are still played in Spanish playgrounds. Grandparents played them too!",
+      "phrase": {
+        "es": "Me encantaba saltar a la comba.",
+        "en": "I used to love skipping."
+      },
+      "words": [
+        {
+          "es": "La peonza",
+          "en": "The spinning top",
+          "say": "lah peh-ON-thah",
+          "emoji": "🌀"
+        },
+        {
+          "es": "Las canicas",
+          "en": "Marbles",
+          "say": "las kah-NEE-kas",
+          "emoji": "🔮"
+        },
+        {
+          "es": "La comba",
+          "en": "The skipping rope",
+          "say": "lah KOM-bah",
+          "emoji": "🪢"
+        },
+        {
+          "es": "La rayuela",
+          "en": "Hopscotch",
+          "say": "lah rrah-YWEH-lah",
+          "emoji": "🔢"
+        },
+        {
+          "es": "El osito",
+          "en": "The teddy bear",
+          "say": "el oh-SEE-toh",
+          "emoji": "🧸"
+        },
+        {
+          "es": "El triciclo",
+          "en": "The tricycle",
+          "say": "el tree-THEE-kloh",
+          "emoji": "🚲"
+        },
+        {
+          "es": "El tren de juguete",
+          "en": "The toy train",
+          "say": "el tren deh hoo-GEH-teh",
+          "emoji": "🚂"
+        },
+        {
+          "es": "Me encantaba",
+          "en": "I used to love",
+          "say": "meh en-kan-TAH-bah",
+          "emoji": "😍"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Mi",
+            "abuelo",
+            "jugaba",
+            "a",
+            "las",
+            "canicas"
+          ],
+          "shuffle": [
+            "canicas",
+            "abuelo",
+            "las",
+            "jugaba",
+            "a",
+            "Mi"
+          ],
+          "en": "My grandad used to play marbles."
+        },
+        {
+          "correct": [
+            "Me",
+            "encantaba",
+            "saltar",
+            "a",
+            "la",
+            "comba"
+          ],
+          "shuffle": [
+            "encantaba",
+            "Me",
+            "la",
+            "saltar",
+            "a",
+            "comba"
+          ],
+          "en": "I used to love skipping."
+        },
+        {
+          "correct": [
+            "Tenía",
+            "un",
+            "osito",
+            "muy",
+            "suave"
+          ],
+          "shuffle": [
+            "muy",
+            "Tenía",
+            "suave",
+            "un",
+            "osito"
+          ],
+          "en": "I had a very soft teddy bear."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Las canicas' are:",
+          "opts": [
+            "Marbles",
+            "Candles",
+            "Cans"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Me ___ el tren de juguete. (encantar)",
+          "opts": [
+            "encantaba",
+            "encantaban",
+            "encanté"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Grandad's Games",
+        "paras": [
+          "Sol asks his grandad: '¿A qué jugabas tú de pequeño?'",
+          "'Jugaba a las canicas y con la peonza. Mi hermana saltaba a la comba y jugaba a la rayuela.'",
+          "'¿No tenías videojuegos?' '¡No! Pero me encantaba mi tren de juguete.'"
+        ],
+        "qs": [
+          {
+            "q": "What did Grandad play with?",
+            "opts": [
+              "Marbles and a spinning top",
+              "Video games",
+              "A tablet"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What did his sister do?",
+            "opts": [
+              "Skipping and hopscotch",
+              "Football",
+              "Puzzles"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What toy did Grandad love?",
+            "opts": [
+              "His toy train",
+              "His teddy",
+              "His bike"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 134,
+      "title": "Llovía y hacía frío",
+      "subtitle": "It was raining and cold",
+      "emoji": "🌧️",
+      "milestone": false,
+      "funFact": "To describe the background of a story (the weather, how people looked or felt), Spanish uses this tense: 'llovía', 'estaba cansada'.",
+      "phrase": {
+        "es": "Cuando salí de casa, llovía mucho.",
+        "en": "When I left home, it was raining a lot."
+      },
+      "words": [
+        {
+          "es": "Llovía",
+          "en": "It was raining",
+          "say": "yoh-BEE-ah",
+          "emoji": "🌧️"
+        },
+        {
+          "es": "Nevaba",
+          "en": "It was snowing",
+          "say": "neh-BAH-bah",
+          "emoji": "🌨️"
+        },
+        {
+          "es": "Hacía sol",
+          "en": "It was sunny",
+          "say": "ah-THEE-ah sol",
+          "emoji": "🌞"
+        },
+        {
+          "es": "Estaba nublado",
+          "en": "It was cloudy",
+          "say": "es-TAH-bah noo-BLAH-doh",
+          "emoji": "☁️"
+        },
+        {
+          "es": "Tenía el pelo largo",
+          "en": "He / She had long hair",
+          "say": "teh-NEE-ah el PEH-loh LAR-goh",
+          "emoji": "💇‍♀️"
+        },
+        {
+          "es": "Era muy alto",
+          "en": "He was very tall",
+          "say": "EH-rah mooy AL-toh",
+          "emoji": "🦒"
+        },
+        {
+          "es": "Había mucha gente",
+          "en": "There were lots of people",
+          "say": "ah-BEE-ah MOO-chah HEN-teh",
+          "emoji": "👥"
+        },
+        {
+          "es": "Estaba cansada",
+          "en": "She was tired",
+          "say": "es-TAH-bah kan-SAH-dah",
+          "emoji": "😩"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Cuando",
+            "salí",
+            "de",
+            "casa",
+            "llovía",
+            "mucho"
+          ],
+          "shuffle": [
+            "Cuando",
+            "llovía",
+            "salí",
+            "casa",
+            "mucho",
+            "de"
+          ],
+          "en": "When I left home it was raining a lot."
+        },
+        {
+          "correct": [
+            "Había",
+            "mucha",
+            "gente",
+            "en",
+            "la",
+            "playa"
+          ],
+          "shuffle": [
+            "Había",
+            "la",
+            "gente",
+            "playa",
+            "en",
+            "mucha"
+          ],
+          "en": "There were lots of people on the beach."
+        },
+        {
+          "correct": [
+            "Mi",
+            "abuela",
+            "tenía",
+            "el",
+            "pelo",
+            "largo"
+          ],
+          "shuffle": [
+            "tenía",
+            "pelo",
+            "el",
+            "Mi",
+            "largo",
+            "abuela"
+          ],
+          "en": "My grandma had long hair."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "Cuando salí, ___ mucho. (llover)",
+          "opts": [
+            "llovía",
+            "llovió",
+            "llueve"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "En la fiesta ___ mucha gente.",
+          "opts": [
+            "había",
+            "hay",
+            "habrá"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "The Mystery Visitor",
+        "paras": [
+          "Luna tells a story: 'Era domingo. Estaba nublado y hacía frío.'",
+          "'Había mucha gente en la plaza. De repente, vi a un hombre. Era muy alto y tenía el pelo largo.'",
+          "'Estaba cansada, pero lo miré otra vez… ¡Era mi tío Pedro, que vive en Australia!'"
+        ],
+        "qs": [
+          {
+            "q": "What was the weather like?",
+            "opts": [
+              "Cloudy and cold",
+              "Sunny and hot",
+              "Snowy"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What did the man look like?",
+            "opts": [
+              "Very tall with long hair",
+              "Short and bald",
+              "Old with glasses"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Who was the man?",
+            "opts": [
+              "Luna's uncle Pedro",
+              "Her teacher",
+              "A stranger"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 135,
+      "title": "Cuando los abuelos eran pequeños",
+      "subtitle": "When grandparents were little",
+      "emoji": "📻",
+      "milestone": false,
+      "funFact": "Spanish television started in 1956, with just one black-and-white channel!",
+      "phrase": {
+        "es": "Antes no había móviles ni ordenadores.",
+        "en": "Before, there were no mobile phones or computers."
+      },
+      "words": [
+        {
+          "es": "No había",
+          "en": "There wasn't / There weren't",
+          "say": "noh ah-BEE-ah",
+          "emoji": "🚫"
+        },
+        {
+          "es": "La radio",
+          "en": "The radio",
+          "say": "lah RRAH-dyoh",
+          "emoji": "📻"
+        },
+        {
+          "es": "El tocadiscos",
+          "en": "The record player",
+          "say": "el toh-kah-DEES-kos",
+          "emoji": "💿"
+        },
+        {
+          "es": "La máquina de escribir",
+          "en": "The typewriter",
+          "say": "lah MAH-kee-nah deh es-kree-BEER",
+          "emoji": "⌨️"
+        },
+        {
+          "es": "El teléfono fijo",
+          "en": "The landline phone",
+          "say": "el teh-LEH-foh-noh FEE-hoh",
+          "emoji": "☎️"
+        },
+        {
+          "es": "La tele en blanco y negro",
+          "en": "Black-and-white TV",
+          "say": "lah TEH-leh en BLAN-koh ee NEH-groh",
+          "emoji": "📺"
+        },
+        {
+          "es": "El pueblo",
+          "en": "The village",
+          "say": "el PWEH-bloh",
+          "emoji": "🏘️"
+        },
+        {
+          "es": "Trabajaban",
+          "en": "They used to work",
+          "say": "trah-bah-HAH-ban",
+          "emoji": "👨‍🌾"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Mis",
+            "abuelos",
+            "vivían",
+            "en",
+            "un",
+            "pueblo"
+          ],
+          "shuffle": [
+            "abuelos",
+            "un",
+            "pueblo",
+            "en",
+            "vivían",
+            "Mis"
+          ],
+          "en": "My grandparents lived in a village."
+        },
+        {
+          "correct": [
+            "No",
+            "había",
+            "móviles",
+            "ni",
+            "ordenadores"
+          ],
+          "shuffle": [
+            "ordenadores",
+            "ni",
+            "móviles",
+            "había",
+            "No"
+          ],
+          "en": "There were no mobile phones or computers."
+        },
+        {
+          "correct": [
+            "Escuchaban",
+            "la",
+            "radio",
+            "por",
+            "la",
+            "noche"
+          ],
+          "shuffle": [
+            "la",
+            "la",
+            "por",
+            "Escuchaban",
+            "noche",
+            "radio"
+          ],
+          "en": "They used to listen to the radio at night."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "Antes no ___ internet.",
+          "opts": [
+            "había",
+            "hay",
+            "hubo"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Mis abuelos ___ en el campo. (trabajar)",
+          "opts": [
+            "trabajaban",
+            "trabajaron",
+            "trabajan"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Grandma's Old House",
+        "paras": [
+          "Luna visits her grandma in the village.",
+          "'De pequeña, no había tele en mi casa. Escuchábamos la radio y mi padre tenía un tocadiscos.'",
+          "'¿Y cómo llamabas a tus amigas?' 'Con el teléfono fijo… ¡o iba a su casa andando!'"
+        ],
+        "qs": [
+          {
+            "q": "What did Grandma's family listen to?",
+            "opts": [
+              "The radio",
+              "The TV",
+              "A phone"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What did her dad have?",
+            "opts": [
+              "A record player",
+              "A computer",
+              "A car"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How did Grandma call her friends?",
+            "opts": [
+              "On the landline",
+              "On a mobile",
+              "By email"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 136,
+      "title": "Antes y ahora",
+      "subtitle": "Then and now",
+      "emoji": "🔄",
+      "milestone": false,
+      "funFact": "A simple way to compare: 'antes' with the 'used to' tense, and 'ahora' with the present. 'Antes era tímido; ahora soy valiente.'",
+      "phrase": {
+        "es": "Antes vivía en Londres y ahora vivo en Málaga.",
+        "en": "I used to live in London and now I live in Málaga."
+      },
+      "words": [
+        {
+          "es": "Antes vivía",
+          "en": "I used to live",
+          "say": "AN-tes bee-BEE-ah",
+          "emoji": "🏚️"
+        },
+        {
+          "es": "Ahora vivo",
+          "en": "Now I live",
+          "say": "ah-OH-rah BEE-boh",
+          "emoji": "🏡"
+        },
+        {
+          "es": "Ya no",
+          "en": "Not any more",
+          "say": "yah noh",
+          "emoji": "🙅"
+        },
+        {
+          "es": "Todavía",
+          "en": "Still",
+          "say": "toh-dah-BEE-ah",
+          "emoji": "⏳"
+        },
+        {
+          "es": "Ha cambiado",
+          "en": "It has changed",
+          "say": "ah kam-BYAH-doh",
+          "emoji": "🔄"
+        },
+        {
+          "es": "He crecido",
+          "en": "I have grown",
+          "say": "eh kreh-THEE-doh",
+          "emoji": "📏"
+        },
+        {
+          "es": "Antes era",
+          "en": "I used to be",
+          "say": "AN-tes EH-rah",
+          "emoji": "🐣"
+        },
+        {
+          "es": "Ahora soy",
+          "en": "Now I am",
+          "say": "ah-OH-rah soy",
+          "emoji": "🦋"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Antes",
+            "vivía",
+            "en",
+            "Londres",
+            "y",
+            "ahora",
+            "vivo",
+            "en",
+            "Málaga"
+          ],
+          "shuffle": [
+            "y",
+            "Londres",
+            "en",
+            "vivo",
+            "Antes",
+            "vivía",
+            "ahora",
+            "en",
+            "Málaga"
+          ],
+          "en": "I used to live in London and now I live in Málaga."
+        },
+        {
+          "correct": [
+            "Ya",
+            "no",
+            "tengo",
+            "miedo",
+            "de",
+            "los",
+            "perros"
+          ],
+          "shuffle": [
+            "Ya",
+            "tengo",
+            "miedo",
+            "perros",
+            "no",
+            "los",
+            "de"
+          ],
+          "en": "I'm not scared of dogs any more."
+        },
+        {
+          "correct": [
+            "Mi",
+            "barrio",
+            "ha",
+            "cambiado",
+            "mucho"
+          ],
+          "shuffle": [
+            "barrio",
+            "mucho",
+            "cambiado",
+            "Mi",
+            "ha"
+          ],
+          "en": "My neighbourhood has changed a lot."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Ya no' means:",
+          "opts": [
+            "Not any more",
+            "Not yet",
+            "Already"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Antes ___ tímido; ahora soy valiente. (ser)",
+          "opts": [
+            "era",
+            "soy",
+            "fui"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Luna Then and Now",
+        "paras": [
+          "Luna writes about herself for school.",
+          "'Antes vivía en Inglaterra. Ahora vivo en España con mi familia. Antes era tímida y no hablaba español.'",
+          "'Ahora soy valiente y ya no tengo miedo de hablar. ¡He crecido mucho! Pero todavía me encanta el chocolate.'"
+        ],
+        "qs": [
+          {
+            "q": "Where did Luna use to live?",
+            "opts": [
+              "England",
+              "France",
+              "Italy"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What was Luna like before?",
+            "opts": [
+              "Shy",
+              "Noisy",
+              "Grumpy"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Luna still love?",
+            "opts": [
+              "Chocolate",
+              "Her old house",
+              "Rain"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 137,
+      "title": "Estaba cenando cuando…",
+      "subtitle": "I was having dinner when…",
+      "emoji": "☎️",
+      "milestone": false,
+      "funFact": "This tense sets the scene ('estaba cenando'), and the other past tense tells you what happened next ('sonó el teléfono').",
+      "phrase": {
+        "es": "Estaba cenando cuando sonó el teléfono.",
+        "en": "I was having dinner when the phone rang."
+      },
+      "words": [
+        {
+          "es": "Estaba viendo la tele",
+          "en": "I was watching TV",
+          "say": "es-TAH-bah BYEN-doh lah TEH-leh",
+          "emoji": "📺"
+        },
+        {
+          "es": "Estaba cenando",
+          "en": "I was having dinner",
+          "say": "es-TAH-bah theh-NAN-doh",
+          "emoji": "🍲"
+        },
+        {
+          "es": "Estaba duchándome",
+          "en": "I was having a shower",
+          "say": "es-TAH-bah doo-CHAN-doh-meh",
+          "emoji": "🚿"
+        },
+        {
+          "es": "Sonó el teléfono",
+          "en": "The phone rang",
+          "say": "soh-NOH el teh-LEH-foh-noh",
+          "emoji": "☎️"
+        },
+        {
+          "es": "Llamaron a la puerta",
+          "en": "Someone knocked at the door",
+          "say": "yah-MAH-ron ah lah PWEHR-tah",
+          "emoji": "🚪"
+        },
+        {
+          "es": "Empezó a llover",
+          "en": "It started to rain",
+          "say": "em-peh-THOH ah yoh-BEHR",
+          "emoji": "🌦️"
+        },
+        {
+          "es": "Se fue la luz",
+          "en": "There was a power cut",
+          "say": "seh fweh lah looth",
+          "emoji": "💡"
+        },
+        {
+          "es": "Llegó mi padre",
+          "en": "My dad arrived",
+          "say": "yeh-GOH mee PAH-dreh",
+          "emoji": "🧔"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Estaba",
+            "cenando",
+            "cuando",
+            "sonó",
+            "el",
+            "teléfono"
+          ],
+          "shuffle": [
+            "sonó",
+            "Estaba",
+            "el",
+            "cenando",
+            "cuando",
+            "teléfono"
+          ],
+          "en": "I was having dinner when the phone rang."
+        },
+        {
+          "correct": [
+            "Estábamos",
+            "en",
+            "el",
+            "parque",
+            "cuando",
+            "empezó",
+            "a",
+            "llover"
+          ],
+          "shuffle": [
+            "llover",
+            "empezó",
+            "a",
+            "cuando",
+            "el",
+            "Estábamos",
+            "en",
+            "parque"
+          ],
+          "en": "We were in the park when it started to rain."
+        },
+        {
+          "correct": [
+            "Estaba",
+            "viendo",
+            "la",
+            "tele",
+            "y",
+            "se",
+            "fue",
+            "la",
+            "luz"
+          ],
+          "shuffle": [
+            "Estaba",
+            "la",
+            "se",
+            "la",
+            "fue",
+            "luz",
+            "tele",
+            "viendo",
+            "y"
+          ],
+          "en": "I was watching TV and there was a power cut."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "Estaba leyendo cuando ___ el teléfono.",
+          "opts": [
+            "sonó",
+            "sonaba",
+            "suena"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Cuando llegó papá, yo ___. (dormir, was sleeping)",
+          "opts": [
+            "dormía",
+            "dormí",
+            "duermo"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "What a Night!",
+        "paras": [
+          "'¡Qué noche!' says Sol. 'Estaba viendo la tele cuando se fue la luz.'",
+          "'Mi madre estaba duchándose y gritó. Entonces llamaron a la puerta.'",
+          "'¡Era el vecino con una linterna! Y en ese momento, volvió la luz.'"
+        ],
+        "qs": [
+          {
+            "q": "What was Sol doing?",
+            "opts": [
+              "Watching TV",
+              "Having dinner",
+              "Sleeping"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What happened first?",
+            "opts": [
+              "The lights went out",
+              "The phone rang",
+              "It started raining"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Who knocked at the door?",
+            "opts": [
+              "The neighbour",
+              "Sol's dad",
+              "Luna"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 138,
+      "title": "Cuentos clásicos",
+      "subtitle": "Classic fairy tales",
+      "emoji": "🧚",
+      "milestone": false,
+      "funFact": "'El hada' uses 'el' even though 'hada' is a girl's word, because it starts with a stressed 'a' sound, just like 'el agua'.",
+      "phrase": {
+        "es": "Érase una vez una niña muy valiente.",
+        "en": "Once upon a time there was a very brave girl."
+      },
+      "words": [
+        {
+          "es": "Érase una vez",
+          "en": "Once upon a time",
+          "say": "EH-rah-seh OO-nah behth",
+          "emoji": "📜"
+        },
+        {
+          "es": "El lobo",
+          "en": "The wolf",
+          "say": "el LOH-boh",
+          "emoji": "🐺"
+        },
+        {
+          "es": "La bruja",
+          "en": "The witch",
+          "say": "lah BROO-hah",
+          "emoji": "🧙‍♀️"
+        },
+        {
+          "es": "El rey",
+          "en": "The king",
+          "say": "el rrey",
+          "emoji": "🤴"
+        },
+        {
+          "es": "La reina",
+          "en": "The queen",
+          "say": "lah RREY-nah",
+          "emoji": "👸"
+        },
+        {
+          "es": "El hada",
+          "en": "The fairy",
+          "say": "el AH-dah",
+          "emoji": "🧚"
+        },
+        {
+          "es": "Caperucita Roja",
+          "en": "Little Red Riding Hood",
+          "say": "kah-peh-roo-THEE-tah RROH-hah",
+          "emoji": "🧺"
+        },
+        {
+          "es": "Colorín colorado",
+          "en": "And that's the end",
+          "say": "koh-loh-REEN koh-loh-RAH-doh",
+          "emoji": "🎀"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Érase",
+            "una",
+            "vez",
+            "una",
+            "niña",
+            "muy",
+            "valiente"
+          ],
+          "shuffle": [
+            "una",
+            "valiente",
+            "Érase",
+            "una",
+            "vez",
+            "muy",
+            "niña"
+          ],
+          "en": "Once upon a time there was a very brave girl."
+        },
+        {
+          "correct": [
+            "El",
+            "lobo",
+            "vivía",
+            "en",
+            "el",
+            "bosque"
+          ],
+          "shuffle": [
+            "en",
+            "bosque",
+            "El",
+            "el",
+            "vivía",
+            "lobo"
+          ],
+          "en": "The wolf lived in the forest."
+        },
+        {
+          "correct": [
+            "La",
+            "reina",
+            "tenía",
+            "un",
+            "castillo",
+            "enorme"
+          ],
+          "shuffle": [
+            "reina",
+            "tenía",
+            "un",
+            "enorme",
+            "La",
+            "castillo"
+          ],
+          "en": "The queen had a huge castle."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'El hada' is:",
+          "opts": [
+            "The fairy",
+            "The witch",
+            "The queen"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Caperucita Roja' is:",
+          "opts": [
+            "Little Red Riding Hood",
+            "Snow White",
+            "Cinderella"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Luna's Fairy Tale",
+        "paras": [
+          "Luna writes her own fairy tale.",
+          "'Érase una vez una reina que vivía en un castillo. Un día, una bruja le robó su corona.'",
+          "'Un hada buena la ayudó y encontraron la corona en la casa del lobo. Y colorín colorado, este cuento se ha acabado.'"
+        ],
+        "qs": [
+          {
+            "q": "Where did the queen live?",
+            "opts": [
+              "In a castle",
+              "In a forest",
+              "In a village"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What did the witch steal?",
+            "opts": [
+              "Her crown",
+              "Her horse",
+              "Her book"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Where was the crown?",
+            "opts": [
+              "At the wolf's house",
+              "In the river",
+              "In a tree"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 139,
+      "title": "Los veranos de antes",
+      "subtitle": "Summers gone by",
+      "emoji": "⛱️",
+      "milestone": false,
+      "funFact": "The 'siesta' is a short nap after lunch. Most people in Spain don't have one on work days, but many enjoy one in the summer holidays!",
+      "phrase": {
+        "es": "Todos los veranos íbamos al pueblo.",
+        "en": "Every summer we used to go to the village."
+      },
+      "words": [
+        {
+          "es": "Todos los veranos",
+          "en": "Every summer",
+          "say": "TOH-dos los beh-RAH-nos",
+          "emoji": "🌻"
+        },
+        {
+          "es": "Íbamos",
+          "en": "We used to go",
+          "say": "EE-bah-mos",
+          "emoji": "🚙"
+        },
+        {
+          "es": "Pasábamos",
+          "en": "We used to spend (time)",
+          "say": "pah-SAH-bah-mos",
+          "emoji": "⛱️"
+        },
+        {
+          "es": "Nos bañábamos",
+          "en": "We used to swim",
+          "say": "nos bah-NYAH-bah-mos",
+          "emoji": "🏊"
+        },
+        {
+          "es": "Jugábamos",
+          "en": "We used to play",
+          "say": "hoo-GAH-bah-mos",
+          "emoji": "🏐"
+        },
+        {
+          "es": "Comíamos",
+          "en": "We used to eat",
+          "say": "koh-MEE-ah-mos",
+          "emoji": "🍉"
+        },
+        {
+          "es": "Dormíamos la siesta",
+          "en": "We used to have a nap",
+          "say": "dor-MEE-ah-mos lah SYES-tah",
+          "emoji": "😴"
+        },
+        {
+          "es": "La casa de mis abuelos",
+          "en": "My grandparents' house",
+          "say": "lah KAH-sah deh mees ah-BWEH-los",
+          "emoji": "🏡"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Todos",
+            "los",
+            "veranos",
+            "íbamos",
+            "al",
+            "pueblo"
+          ],
+          "shuffle": [
+            "pueblo",
+            "Todos",
+            "al",
+            "veranos",
+            "los",
+            "íbamos"
+          ],
+          "en": "Every summer we used to go to the village."
+        },
+        {
+          "correct": [
+            "Nos",
+            "bañábamos",
+            "en",
+            "el",
+            "río",
+            "con",
+            "mis",
+            "primos"
+          ],
+          "shuffle": [
+            "bañábamos",
+            "río",
+            "con",
+            "Nos",
+            "mis",
+            "primos",
+            "el",
+            "en"
+          ],
+          "en": "We used to swim in the river with my cousins."
+        },
+        {
+          "correct": [
+            "Por",
+            "la",
+            "tarde",
+            "dormíamos",
+            "la",
+            "siesta"
+          ],
+          "shuffle": [
+            "tarde",
+            "siesta",
+            "dormíamos",
+            "la",
+            "la",
+            "Por"
+          ],
+          "en": "In the afternoon we used to have a nap."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "Todos los veranos ___ a la playa. (ir, we)",
+          "opts": [
+            "íbamos",
+            "fuimos",
+            "vamos"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Pasábamos' means:",
+          "opts": [
+            "We used to spend",
+            "We passed",
+            "We will spend"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Mum's Summers",
+        "paras": [
+          "Sol's mum remembers her summers as a girl.",
+          "'Todos los veranos íbamos a la casa de mis abuelos. Pasábamos dos meses allí.'",
+          "'Nos bañábamos en el río, comíamos sandía y por la tarde dormíamos la siesta. ¡Qué tiempos!'"
+        ],
+        "qs": [
+          {
+            "q": "Where did Sol's mum go every summer?",
+            "opts": [
+              "Her grandparents' house",
+              "The beach",
+              "Abroad"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How long did they stay?",
+            "opts": [
+              "Two months",
+              "Two weeks",
+              "One week"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What fruit did they eat?",
+            "opts": [
+              "Watermelon",
+              "Apples",
+              "Cherries"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 140,
+      "title": "¡Campeón de recuerdos!",
+      "subtitle": "Memories champion",
+      "emoji": "🏆",
+      "milestone": true,
+      "funFact": "You can now describe the past, say what you used to do and tell fairy tales. That's a big step towards A2!",
+      "phrase": {
+        "es": "Cuando era pequeño, jugaba en la calle con mis amigos.",
+        "en": "When I was little, I used to play in the street with my friends."
+      },
+      "words": [
+        {
+          "es": "De pequeño",
+          "en": "As a little boy",
+          "say": "deh peh-KEH-nyoh",
+          "emoji": "👦"
+        },
+        {
+          "es": "Jugaba",
+          "en": "I used to play",
+          "say": "hoo-GAH-bah",
+          "emoji": "🪀"
+        },
+        {
+          "es": "Me encantaba",
+          "en": "I used to love",
+          "say": "meh en-kan-TAH-bah",
+          "emoji": "😍"
+        },
+        {
+          "es": "Llovía",
+          "en": "It was raining",
+          "say": "yoh-BEE-ah",
+          "emoji": "🌧️"
+        },
+        {
+          "es": "No había",
+          "en": "There wasn't / There weren't",
+          "say": "noh ah-BEE-ah",
+          "emoji": "🚫"
+        },
+        {
+          "es": "Ya no",
+          "en": "Not any more",
+          "say": "yah noh",
+          "emoji": "🙅"
+        },
+        {
+          "es": "Sonó el teléfono",
+          "en": "The phone rang",
+          "say": "soh-NOH el teh-LEH-foh-noh",
+          "emoji": "☎️"
+        },
+        {
+          "es": "Íbamos",
+          "en": "We used to go",
+          "say": "EE-bah-mos",
+          "emoji": "🚙"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "De",
+            "pequeño",
+            "me",
+            "encantaba",
+            "el",
+            "tren",
+            "de",
+            "juguete"
+          ],
+          "shuffle": [
+            "el",
+            "pequeño",
+            "de",
+            "De",
+            "tren",
+            "juguete",
+            "me",
+            "encantaba"
+          ],
+          "en": "When I was little I loved my toy train."
+        },
+        {
+          "correct": [
+            "Estaba",
+            "durmiendo",
+            "cuando",
+            "sonó",
+            "el",
+            "teléfono"
+          ],
+          "shuffle": [
+            "cuando",
+            "el",
+            "sonó",
+            "teléfono",
+            "durmiendo",
+            "Estaba"
+          ],
+          "en": "I was sleeping when the phone rang."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "Vivir → yo ___ (used to)",
+          "opts": [
+            "vivía",
+            "viví",
+            "vivo"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Ir → nosotros ___ (used to)",
+          "opts": [
+            "íbamos",
+            "fuimos",
+            "vamos"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Estaba jugando cuando ___ a llover.",
+          "opts": [
+            "empezó",
+            "empezaba",
+            "empieza"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'De vez en cuando' means:",
+          "opts": [
+            "From time to time",
+            "Every time",
+            "Never"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Memory Box",
+        "paras": [
+          "Sol and Luna find a box of old things in the attic.",
+          "'¡Mi osito! De pequeño dormía con él todas las noches,' says Sol.",
+          "'Y aquí está mi comba. Me encantaba saltar,' says Luna. 'Ya no la uso… ¡pero todavía sé saltar!'"
+        ],
+        "qs": [
+          {
+            "q": "Where do they find the box?",
+            "opts": [
+              "In the attic",
+              "In the garden",
+              "At school"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What did Sol use to sleep with?",
+            "opts": [
+              "His teddy bear",
+              "His train",
+              "A torch"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What can Luna still do?",
+            "opts": [
+              "Skip",
+              "Swim",
+              "Ride a tricycle"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    }
+  ]
+}
