@@ -280,5 +280,19 @@
     {"q": "What was wrong with Luna on Friday?", "opts": ["Her throat hurt", "Her leg hurt", "She had a cut"], "ans": 0},
     {"q": "What advice did her mum give?", "opts": ["Drink water, wrap up and rest", "Go to the doctor", "Eat sweets"], "ans": 0},
     {"q": "By how much did her team win?", "opts": ["Two points", "Ten points", "One goal"], "ans": 0}
+  ] },
+  { "id": "debate-mascotas", "world": 21, "title": "¿Perro o gato?", "en": "Dog or cat?", "emoji": "🐶", "sentences": [
+    {"es": "En la clase de Sol y Luna hay un debate: ¿es mejor tener un perro o un gato?", "en": "In Sol and Luna's class there is a debate: is it better to have a dog or a cat?"},
+    {"es": "—Para mí, el perro es el mejor animal del mundo —dice Sol—. Es fiel y divertidísimo.", "en": "\"For me, the dog is the best animal in the world,\" says Sol. \"It's loyal and really fun.\""},
+    {"es": "—No estoy de acuerdo —dice Luna—. El gato es más tranquilo y más limpio que el perro.", "en": "\"I don't agree,\" says Luna. \"The cat is calmer and cleaner than the dog.\""},
+    {"es": "—Pero los perros necesitan pasear, así que haces más ejercicio.", "en": "\"But dogs need walks, so you get more exercise.\""},
+    {"es": "—En cambio, los gatos no necesitan pasear. ¡Son perfectos para los vagos! —ríe Luna.", "en": "\"Whereas cats don't need walks. They're perfect for lazy people!\" laughs Luna."},
+    {"es": "—¿Y tú qué opinas? —le preguntan a la profe.", "en": "\"And what do you think?\" they ask the teacher."},
+    {"es": "—Pues… a mí me da igual. ¡Yo tengo una tortuga!", "en": "\"Well… I don't mind. I've got a tortoise!\""},
+    {"es": "Todos se ríen. En resumen, ¡todos los animales son geniales!", "en": "Everyone laughs. In short, all animals are great!"}
+  ], "questions": [
+    {"q": "What does Sol prefer?", "opts": ["Dogs", "Cats", "Tortoises"], "ans": 0},
+    {"q": "Why does Luna prefer cats?", "opts": ["They're calmer and cleaner", "They're bigger", "They need walks"], "ans": 0},
+    {"q": "What pet does the teacher have?", "opts": ["A tortoise", "A dog", "A cat"], "ans": 0}
   ] }
 ]

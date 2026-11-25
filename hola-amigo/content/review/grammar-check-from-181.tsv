@@ -1,0 +1,9 @@
+Where	Rule	Text	LanguageTool says
+L184 word	EL_TILDE	«El» in «El menos»	El pronombre personal «él» lleva tilde. → Él
+L188 word	COMMA_MARCADOR_DISCURSIVO	«lado» in «Por un lado»	Esta locución se escribe normalmente entre comas. → lado,
+L188 word	COMMA_MARCADOR_DISCURSIVO	«lado» in «Por otro lado»	Esta locución se escribe normalmente entre comas. → lado,
+L188 word	COMMA_MARCADOR_DISCURSIVO	«cambio» in «En cambio»	Esta locución se escribe normalmente entre comas. → cambio,
+L188 sentence	COMMA_MARCADOR_DISCURSIVO	« en cambio» in «A mí me gusta el mar en cambio a mi hermano le gusta la montaña»	Esta locución se escribe normalmente entre comas. → , en cambio,
+L188 gap	COMMA_MARCADOR_DISCURSIVO	«lado» in «Por un lado… por otro lado»	Esta locución se escribe normalmente entre comas. → lado,
+L190 gap	COMMA_MARCADOR_DISCURSIVO	«cambio» in «En cambio»	Esta locución se escribe normalmente entre comas. → cambio,
+goal 21d	COMMA_MARCADOR_DISCURSIVO	«lado» in «Por un lado reciclamos; por otro lado, hay que ahorrar agua.»	Esta locución se escribe normalmente entre comas. → lado,

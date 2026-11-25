@@ -117,5 +117,13 @@
     {"who": "luna", "es": "¡Y con un abrazo me curo mucho más!", "en": "And with a hug I'll get better even faster!"},
     {"who": "sol", "es": "¿Y ahora qué tal? ¿Cómo estás ahora?", "en": "And now how are you? How are you now?"},
     {"who": "luna", "es": "¡Mucho mejor! ¡Vamos a jugar sin demora!", "en": "Much better! Let's go and play right now!"}
+  ] },
+  { "id": "tu-que-opinas", "world": 21, "title": "¿Tú qué opinas?", "en": "What do you think?", "emoji": "💬", "bpm": 98, "lines": [
+    {"who": "sol", "es": "Me gusta el verano, ¿tú qué opinas?", "en": "I like summer, what do you think?"},
+    {"who": "luna", "es": "¡A mí también, con playas y piscinas!", "en": "Me too, with beaches and swimming pools!"},
+    {"who": "sol", "es": "No me gusta el frío, ¿y a ti?", "en": "I don't like the cold, and you?"},
+    {"who": "luna", "es": "¡A mí tampoco! ¡Qué frío por aquí!", "en": "Me neither! It's so cold around here!"},
+    {"who": "sol", "es": "Para mí, el sol es el mejor.", "en": "For me, the sun is the best."},
+    {"who": "luna", "es": "¡Qué va! ¡La luna tiene más color!", "en": "No way! The moon has more colour!"}
   ] }
 ]

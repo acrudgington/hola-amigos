@@ -129,5 +129,11 @@
     {"id": "20b", "can": "I can talk to a doctor and say what has happened.", "es": "Me he torcido el tobillo. Tengo una cita en el centro de salud.", "lessons": [173, 174]},
     {"id": "20c", "can": "I can give and understand advice about health.", "es": "Bebe agua y descansa. Hay que comer fruta y verdura.", "lessons": [175, 176]},
     {"id": "20d", "can": "I can talk about sport and how I feel.", "es": "Ayer marqué un gol y hoy estoy de muy buen humor.", "lessons": [177, 178, 179, 180]}
+  ] },
+  { "world": 21, "title": "Opinions and comparisons", "level": "a2", "goals": [
+    {"id": "21a", "can": "I can give my opinion and ask for other people's.", "es": "Me parece que el fútbol es divertido. ¿Tú qué opinas?", "lessons": [181, 182]},
+    {"id": "21b", "can": "I can compare people and things.", "es": "Mi hermana es mayor que yo, pero yo soy el más alto.", "lessons": [183, 184]},
+    {"id": "21c", "can": "I can say what I like and describe what people are like.", "es": "Lo que más me gusta es nadar. Mi amigo es muy educado.", "lessons": [185, 186]},
+    {"id": "21d", "can": "I can give instructions, link my ideas and talk about the environment.", "es": "Por un lado, reciclamos; por otro lado, ahorramos agua.", "lessons": [187, 188, 189, 190]}
   ] }
 ]

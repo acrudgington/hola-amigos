@@ -1,0 +1,1802 @@
+{
+  "world": 21,
+  "lessons": [
+    {
+      "id": 181,
+      "title": "¿Tú qué opinas?",
+      "subtitle": "What do you think?",
+      "emoji": "🗨️",
+      "milestone": false,
+      "funFact": "'Me parece fatal' is a very Spanish way to say you really don't like something. Here, 'fatal' just means 'awful'!",
+      "phrase": {
+        "es": "Me parece que el fútbol es muy divertido.",
+        "en": "I think football is really fun."
+      },
+      "words": [
+        {
+          "es": "Me parece que",
+          "en": "I think that / It seems to me",
+          "say": "meh pah-REH-theh keh",
+          "emoji": "🤔"
+        },
+        {
+          "es": "Para mí",
+          "en": "For me / In my view",
+          "say": "PAH-rah mee",
+          "emoji": "🙋‍♀️"
+        },
+        {
+          "es": "¿Tú qué opinas?",
+          "en": "What do you think?",
+          "say": "too keh oh-PEE-nas",
+          "emoji": "🗨️"
+        },
+        {
+          "es": "No estoy seguro",
+          "en": "I'm not sure",
+          "say": "noh es-TOY seh-GOO-roh",
+          "emoji": "🤷"
+        },
+        {
+          "es": "Puede ser",
+          "en": "Maybe / It could be",
+          "say": "PWEH-deh sehr",
+          "emoji": "🎲"
+        },
+        {
+          "es": "Desde mi punto de vista",
+          "en": "From my point of view",
+          "say": "DES-deh mee POON-toh deh BEES-tah",
+          "emoji": "👁️"
+        },
+        {
+          "es": "Me parece bien",
+          "en": "I think it's fine",
+          "say": "meh pah-REH-theh byen",
+          "emoji": "👍"
+        },
+        {
+          "es": "Me parece fatal",
+          "en": "I think it's awful",
+          "say": "meh pah-REH-theh fah-TAL",
+          "emoji": "👎"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Me",
+            "parece",
+            "que",
+            "va",
+            "a",
+            "llover"
+          ],
+          "shuffle": [
+            "va",
+            "que",
+            "a",
+            "parece",
+            "llover",
+            "Me"
+          ],
+          "en": "I think it's going to rain."
+        },
+        {
+          "correct": [
+            "Para",
+            "mí",
+            "el",
+            "fútbol",
+            "es",
+            "aburrido"
+          ],
+          "shuffle": [
+            "mí",
+            "fútbol",
+            "aburrido",
+            "es",
+            "Para",
+            "el"
+          ],
+          "en": "For me, football is boring."
+        },
+        {
+          "correct": [
+            "Me",
+            "parece",
+            "fatal",
+            "tirar",
+            "basura",
+            "al",
+            "suelo"
+          ],
+          "shuffle": [
+            "basura",
+            "fatal",
+            "tirar",
+            "suelo",
+            "al",
+            "Me",
+            "parece"
+          ],
+          "en": "I think dropping litter is awful."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'¿Tú qué opinas?' means:",
+          "opts": [
+            "What do you think?",
+            "What's your name?",
+            "What do you want?"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Puede ser' means:",
+          "opts": [
+            "Maybe",
+            "It can't be",
+            "It must be"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "The New Park",
+        "paras": [
+          "The town is building a new park. Sol and Luna talk about it.",
+          "'Me parece bien. Para mí, es importante tener más árboles,' says Luna. '¿Tú qué opinas?'",
+          "'No estoy seguro. Puede ser bonito… ¡pero me parece fatal que no tenga una pista de skate!'"
+        ],
+        "qs": [
+          {
+            "q": "What is the town building?",
+            "opts": [
+              "A new park",
+              "A new school",
+              "A pool"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Luna think is important?",
+            "opts": [
+              "More trees",
+              "More shops",
+              "More roads"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What's missing for Sol?",
+            "opts": [
+              "A skate park",
+              "A football pitch",
+              "A café"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 182,
+      "title": "¡A mí también!",
+      "subtitle": "Me too!",
+      "emoji": "🙌",
+      "milestone": false,
+      "funFact": "With 'gustar', say 'a mí también' or 'a mí tampoco', not 'yo también': '—Me gusta el sol. —¡A mí también!'",
+      "phrase": {
+        "es": "A Luna le gustan los gatos y a mí también.",
+        "en": "Luna likes cats and so do I."
+      },
+      "words": [
+        {
+          "es": "Tienes toda la razón",
+          "en": "You're absolutely right",
+          "say": "TYEH-nes TOH-dah lah rrah-THON",
+          "emoji": "✔️"
+        },
+        {
+          "es": "Claro que no",
+          "en": "Of course not",
+          "say": "KLAH-roh keh noh",
+          "emoji": "❌"
+        },
+        {
+          "es": "A mí también",
+          "en": "Me too (I like it too)",
+          "say": "ah mee tam-BYEN",
+          "emoji": "🙌"
+        },
+        {
+          "es": "A mí tampoco",
+          "en": "Me neither",
+          "say": "ah mee tam-POH-koh",
+          "emoji": "🙅"
+        },
+        {
+          "es": "A mí sí",
+          "en": "I do",
+          "say": "ah mee see",
+          "emoji": "👍"
+        },
+        {
+          "es": "A mí no",
+          "en": "I don't",
+          "say": "ah mee noh",
+          "emoji": "👎"
+        },
+        {
+          "es": "Al contrario",
+          "en": "On the contrary",
+          "say": "al kon-TRAH-ryoh",
+          "emoji": "↔️"
+        },
+        {
+          "es": "¡Qué va!",
+          "en": "No way! / Not at all!",
+          "say": "keh bah",
+          "emoji": "🙄"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "A",
+            "Luna",
+            "le",
+            "gustan",
+            "los",
+            "gatos",
+            "y",
+            "a",
+            "mí",
+            "también"
+          ],
+          "shuffle": [
+            "y",
+            "también",
+            "gustan",
+            "mí",
+            "Luna",
+            "gatos",
+            "A",
+            "le",
+            "los",
+            "a"
+          ],
+          "en": "Luna likes cats and so do I."
+        },
+        {
+          "correct": [
+            "A",
+            "mi",
+            "hermano",
+            "no",
+            "le",
+            "gusta",
+            "el",
+            "pescado",
+            "y",
+            "a",
+            "mí",
+            "tampoco"
+          ],
+          "shuffle": [
+            "A",
+            "no",
+            "pescado",
+            "y",
+            "el",
+            "mi",
+            "mí",
+            "le",
+            "hermano",
+            "a",
+            "tampoco",
+            "gusta"
+          ],
+          "en": "My brother doesn't like fish and neither do I."
+        },
+        {
+          "correct": [
+            "Tienes",
+            "toda",
+            "la",
+            "razón",
+            "sobre",
+            "el",
+            "examen"
+          ],
+          "shuffle": [
+            "sobre",
+            "el",
+            "razón",
+            "examen",
+            "toda",
+            "la",
+            "Tienes"
+          ],
+          "en": "You're absolutely right about the exam."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "—No me gusta el frío. —A mí ___.",
+          "opts": [
+            "tampoco",
+            "también",
+            "sí también"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'¡Qué va!' means:",
+          "opts": [
+            "No way!",
+            "What goes!",
+            "Let's go!"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Likes and Dislikes",
+        "paras": [
+          "Sol and Luna play a game. 'Me gusta el chocolate.' '¡A mí también!'",
+          "'No me gustan las arañas.' 'A mí tampoco.' 'Me gusta la lluvia.' 'A mí no. ¡Al contrario, la odio!'",
+          "'¿Eres aburrida?' laughs Sol. '¡Qué va! ¡Soy la más divertida!'"
+        ],
+        "qs": [
+          {
+            "q": "Do they both like chocolate?",
+            "opts": [
+              "Yes",
+              "No",
+              "Only Sol"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Luna think about rain?",
+            "opts": [
+              "She hates it",
+              "She loves it",
+              "She doesn't mind"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Does Luna think she's boring?",
+            "opts": [
+              "No way",
+              "Yes",
+              "A bit"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 183,
+      "title": "Mayor, menor, mejor, peor",
+      "subtitle": "Older, younger, better, worse",
+      "emoji": "⚖️",
+      "milestone": false,
+      "funFact": "Before a number, Spanish uses 'más de', not 'más que': 'más de cien personas' means 'more than a hundred people'.",
+      "phrase": {
+        "es": "Mi hermana es mayor que yo.",
+        "en": "My sister is older than me."
+      },
+      "words": [
+        {
+          "es": "Mayor que",
+          "en": "Older than",
+          "say": "mah-YOR keh",
+          "emoji": "👴"
+        },
+        {
+          "es": "Menor que",
+          "en": "Younger than",
+          "say": "meh-NOR keh",
+          "emoji": "👶"
+        },
+        {
+          "es": "Mejor que",
+          "en": "Better than",
+          "say": "meh-HOR keh",
+          "emoji": "🥇"
+        },
+        {
+          "es": "Peor que",
+          "en": "Worse than",
+          "say": "peh-OR keh",
+          "emoji": "🥉"
+        },
+        {
+          "es": "Igual que",
+          "en": "The same as",
+          "say": "ee-GWAL keh",
+          "emoji": "🟰"
+        },
+        {
+          "es": "Tanto como",
+          "en": "As much as",
+          "say": "TAN-toh KOH-moh",
+          "emoji": "⚖️"
+        },
+        {
+          "es": "Más de",
+          "en": "More than (with numbers)",
+          "say": "mas deh",
+          "emoji": "🔢"
+        },
+        {
+          "es": "Parecido a",
+          "en": "Similar to",
+          "say": "pah-reh-THEE-doh ah",
+          "emoji": "👯"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Mi",
+            "hermana",
+            "es",
+            "mayor",
+            "que",
+            "yo"
+          ],
+          "shuffle": [
+            "hermana",
+            "yo",
+            "que",
+            "mayor",
+            "Mi",
+            "es"
+          ],
+          "en": "My sister is older than me."
+        },
+        {
+          "correct": [
+            "Este",
+            "libro",
+            "es",
+            "mejor",
+            "que",
+            "la",
+            "película"
+          ],
+          "shuffle": [
+            "es",
+            "Este",
+            "mejor",
+            "que",
+            "película",
+            "la",
+            "libro"
+          ],
+          "en": "This book is better than the film."
+        },
+        {
+          "correct": [
+            "Tengo",
+            "más",
+            "de",
+            "cien",
+            "cómics"
+          ],
+          "shuffle": [
+            "Tengo",
+            "cómics",
+            "más",
+            "cien",
+            "de"
+          ],
+          "en": "I have more than a hundred comics."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "Mi abuelo es ___ que mi padre. (older)",
+          "opts": [
+            "mayor",
+            "menor",
+            "peor"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Tengo más ___ diez euros.",
+          "opts": [
+            "de",
+            "que",
+            "como"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Twins?",
+        "paras": [
+          "People say Sol and his cousin Leo are very parecidos.",
+          "'Leo es menor que yo, pero es tan alto como yo,' says Sol. 'Y juega al fútbol mejor que yo.'",
+          "'¿Y tú en qué eres mejor?' asks Luna. '¡En comer! Como más que nadie.'"
+        ],
+        "qs": [
+          {
+            "q": "Who is younger?",
+            "opts": [
+              "Leo",
+              "Sol",
+              "They're the same age"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Who is better at football?",
+            "opts": [
+              "Leo",
+              "Sol",
+              "Luna"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What is Sol best at?",
+            "opts": [
+              "Eating",
+              "Running",
+              "Swimming"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 184,
+      "title": "¡El mejor del mundo!",
+      "subtitle": "The best in the world!",
+      "emoji": "🌐",
+      "milestone": false,
+      "funFact": "Add -ísimo to make a word extra strong: 'grande' becomes 'grandísimo' and 'rico' becomes 'riquísimo'. People in Spain use it all the time!",
+      "phrase": {
+        "es": "Luna es la más rápida de la clase.",
+        "en": "Luna is the fastest in the class."
+      },
+      "words": [
+        {
+          "es": "El más alto",
+          "en": "The tallest",
+          "say": "el mas AL-toh",
+          "emoji": "🗼"
+        },
+        {
+          "es": "La más rápida",
+          "en": "The fastest (girl)",
+          "say": "lah mas RRAH-pee-dah",
+          "emoji": "🐆"
+        },
+        {
+          "es": "El más divertido",
+          "en": "The most fun",
+          "say": "el mas dee-behr-TEE-doh",
+          "emoji": "🤪"
+        },
+        {
+          "es": "El menos",
+          "en": "The least",
+          "say": "el MEH-nos",
+          "emoji": "📉"
+        },
+        {
+          "es": "Buenísimo",
+          "en": "Really good",
+          "say": "bweh-NEE-see-moh",
+          "emoji": "🤩"
+        },
+        {
+          "es": "Altísimo",
+          "en": "Really tall",
+          "say": "al-TEE-see-moh",
+          "emoji": "🦒"
+        },
+        {
+          "es": "Facilísimo",
+          "en": "Really easy",
+          "say": "fah-thee-LEE-see-moh",
+          "emoji": "😎"
+        },
+        {
+          "es": "Del mundo",
+          "en": "In the world",
+          "say": "del MOON-doh",
+          "emoji": "🌐"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Luna",
+            "es",
+            "la",
+            "más",
+            "rápida",
+            "de",
+            "la",
+            "clase"
+          ],
+          "shuffle": [
+            "la",
+            "de",
+            "rápida",
+            "Luna",
+            "clase",
+            "más",
+            "es",
+            "la"
+          ],
+          "en": "Luna is the fastest in the class."
+        },
+        {
+          "correct": [
+            "Este",
+            "es",
+            "el",
+            "mejor",
+            "día",
+            "del",
+            "mundo"
+          ],
+          "shuffle": [
+            "día",
+            "es",
+            "mundo",
+            "mejor",
+            "del",
+            "Este",
+            "el"
+          ],
+          "en": "This is the best day in the world."
+        },
+        {
+          "correct": [
+            "El",
+            "examen",
+            "fue",
+            "facilísimo"
+          ],
+          "shuffle": [
+            "examen",
+            "fue",
+            "El",
+            "facilísimo"
+          ],
+          "en": "The exam was really easy."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "Es la montaña más alta ___ España.",
+          "opts": [
+            "de",
+            "en",
+            "que"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Buenísimo' means:",
+          "opts": [
+            "Really good",
+            "Quite good",
+            "Not good"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Record Breakers",
+        "paras": [
+          "Sol reads a book of records. '¿Sabes cuál es el animal más alto del mundo? ¡La jirafa! Es altísima.'",
+          "'¿Y el más rápido?' asks Luna. 'El guepardo. ¡Corre rapidísimo!'",
+          "'Y la niña más rápida de la clase soy yo,' says Luna. '¡Y la más modesta!' laughs Sol."
+        ],
+        "qs": [
+          {
+            "q": "What is the tallest animal?",
+            "opts": [
+              "The giraffe",
+              "The elephant",
+              "The camel"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What is the fastest animal?",
+            "opts": [
+              "The cheetah",
+              "The horse",
+              "The lion"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Who is the fastest in the class?",
+            "opts": [
+              "Luna",
+              "Sol",
+              "Leo"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 185,
+      "title": "Lo que más me gusta",
+      "subtitle": "What I like most",
+      "emoji": "❤️",
+      "milestone": false,
+      "funFact": "'Me da igual' means 'I don't mind'. But careful: said in a grumpy voice, it can sound like 'I don't care!'",
+      "phrase": {
+        "es": "Lo que más me gusta es nadar.",
+        "en": "What I like most is swimming."
+      },
+      "words": [
+        {
+          "es": "Me interesa",
+          "en": "It interests me",
+          "say": "meh een-teh-REH-sah",
+          "emoji": "🧐"
+        },
+        {
+          "es": "Me aburre",
+          "en": "It bores me",
+          "say": "meh ah-BOO-rreh",
+          "emoji": "🥱"
+        },
+        {
+          "es": "Me molesta",
+          "en": "It annoys me",
+          "say": "meh moh-LES-tah",
+          "emoji": "😤"
+        },
+        {
+          "es": "Me da igual",
+          "en": "I don't mind",
+          "say": "meh dah ee-GWAL",
+          "emoji": "🤷‍♂️"
+        },
+        {
+          "es": "Me fascina",
+          "en": "I'm fascinated by",
+          "say": "meh fas-THEE-nah",
+          "emoji": "✨"
+        },
+        {
+          "es": "Lo que más me gusta",
+          "en": "What I like most",
+          "say": "loh keh mas meh GOOS-tah",
+          "emoji": "❤️"
+        },
+        {
+          "es": "Lo que menos me gusta",
+          "en": "What I like least",
+          "say": "loh keh MEH-nos meh GOOS-tah",
+          "emoji": "💔"
+        },
+        {
+          "es": "No soporto",
+          "en": "I can't stand",
+          "say": "noh soh-POR-toh",
+          "emoji": "🙉"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Me",
+            "interesa",
+            "mucho",
+            "la",
+            "historia"
+          ],
+          "shuffle": [
+            "interesa",
+            "mucho",
+            "historia",
+            "Me",
+            "la"
+          ],
+          "en": "I'm really interested in history."
+        },
+        {
+          "correct": [
+            "Lo",
+            "que",
+            "más",
+            "me",
+            "gusta",
+            "es",
+            "nadar"
+          ],
+          "shuffle": [
+            "gusta",
+            "es",
+            "Lo",
+            "más",
+            "me",
+            "que",
+            "nadar"
+          ],
+          "en": "What I like most is swimming."
+        },
+        {
+          "correct": [
+            "No",
+            "soporto",
+            "el",
+            "ruido"
+          ],
+          "shuffle": [
+            "No",
+            "el",
+            "soporto",
+            "ruido"
+          ],
+          "en": "I can't stand noise."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Me da igual' means:",
+          "opts": [
+            "I don't mind",
+            "It's equal to me",
+            "Give me the same"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Me ___ las matemáticas. (interest)",
+          "opts": [
+            "interesan",
+            "interesa",
+            "intereso"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "All About Me",
+        "paras": [
+          "Luna fills in a questionnaire for her new pen pal.",
+          "'Lo que más me gusta es leer. Me fascinan los libros de misterio. Lo que menos me gusta es madrugar.'",
+          "'No soporto el ruido de las motos. ¿La comida? Me da igual, ¡me gusta todo!'"
+        ],
+        "qs": [
+          {
+            "q": "What does Luna like most?",
+            "opts": [
+              "Reading",
+              "Swimming",
+              "Football"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does she like least?",
+            "opts": [
+              "Getting up early",
+              "Reading",
+              "Noise"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does she say about food?",
+            "opts": [
+              "She likes everything",
+              "She's very fussy",
+              "She hates fish"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 186,
+      "title": "¿Cómo es?",
+      "subtitle": "What is he or she like?",
+      "emoji": "🎩",
+      "milestone": false,
+      "funFact": "'Educado' means 'polite', not 'educated'. Someone who knows a lot is 'culto'.",
+      "phrase": {
+        "es": "Mi hermano es muy hablador.",
+        "en": "My brother is very chatty."
+      },
+      "words": [
+        {
+          "es": "Antipático",
+          "en": "Unfriendly",
+          "say": "an-tee-PAH-tee-koh",
+          "emoji": "😒"
+        },
+        {
+          "es": "Egoísta",
+          "en": "Selfish",
+          "say": "eh-goh-EES-tah",
+          "emoji": "🙄"
+        },
+        {
+          "es": "Vago",
+          "en": "Lazy",
+          "say": "BAH-goh",
+          "emoji": "🦥"
+        },
+        {
+          "es": "Educado",
+          "en": "Polite",
+          "say": "eh-doo-KAH-doh",
+          "emoji": "🎩"
+        },
+        {
+          "es": "Maleducado",
+          "en": "Rude",
+          "say": "mal-eh-doo-KAH-doh",
+          "emoji": "😛"
+        },
+        {
+          "es": "Desordenado",
+          "en": "Messy",
+          "say": "des-or-deh-NAH-doh",
+          "emoji": "🌪️"
+        },
+        {
+          "es": "Hablador",
+          "en": "Chatty",
+          "say": "ah-blah-DOR",
+          "emoji": "🗣️"
+        },
+        {
+          "es": "Sincero",
+          "en": "Honest",
+          "say": "seen-THEH-roh",
+          "emoji": "😇"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Mi",
+            "hermano",
+            "es",
+            "muy",
+            "hablador"
+          ],
+          "shuffle": [
+            "hermano",
+            "hablador",
+            "Mi",
+            "es",
+            "muy"
+          ],
+          "en": "My brother is very chatty."
+        },
+        {
+          "correct": [
+            "Es",
+            "importante",
+            "ser",
+            "educado"
+          ],
+          "shuffle": [
+            "importante",
+            "educado",
+            "ser",
+            "Es"
+          ],
+          "en": "It's important to be polite."
+        },
+        {
+          "correct": [
+            "Mi",
+            "primo",
+            "es",
+            "un",
+            "poco",
+            "vago"
+          ],
+          "shuffle": [
+            "es",
+            "vago",
+            "primo",
+            "poco",
+            "Mi",
+            "un"
+          ],
+          "en": "My cousin is a bit lazy."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Vago' means:",
+          "opts": [
+            "Lazy",
+            "Vague",
+            "Brave"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "The opposite of 'educado' is:",
+          "opts": [
+            "maleducado",
+            "simpático",
+            "ordenado"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "The Perfect Friend",
+        "paras": [
+          "Sol and Luna describe the perfect friend.",
+          "'Tiene que ser sincero y educado. ¡Y nada egoísta!' says Luna.",
+          "'Y un poco hablador, pero no antipático,' says Sol. 'Y si es un poco desordenado… ¡me da igual!'"
+        ],
+        "qs": [
+          {
+            "q": "What must the perfect friend be, for Luna?",
+            "opts": [
+              "Honest and polite",
+              "Rich and tall",
+              "Funny and lazy"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What must the friend NOT be?",
+            "opts": [
+              "Selfish",
+              "Chatty",
+              "Messy"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What doesn't Sol mind?",
+            "opts": [
+              "A bit of mess",
+              "Rudeness",
+              "Selfishness"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 187,
+      "title": "¡Ven aquí! ¡No corras!",
+      "subtitle": "Come here! Don't run!",
+      "emoji": "🛑",
+      "milestone": false,
+      "funFact": "Negative commands change their ending: 'corre' means 'run!', but 'no corras' means 'don't run!'.",
+      "phrase": {
+        "es": "Ten cuidado y no corras.",
+        "en": "Be careful and don't run."
+      },
+      "words": [
+        {
+          "es": "Ven aquí",
+          "en": "Come here",
+          "say": "ben ah-KEE",
+          "emoji": "🫵"
+        },
+        {
+          "es": "Siéntate",
+          "en": "Sit down",
+          "say": "SYEN-tah-teh",
+          "emoji": "🪑"
+        },
+        {
+          "es": "Escucha",
+          "en": "Listen",
+          "say": "es-KOO-chah",
+          "emoji": "👂"
+        },
+        {
+          "es": "Mira",
+          "en": "Look",
+          "say": "MEE-rah",
+          "emoji": "👀"
+        },
+        {
+          "es": "No toques",
+          "en": "Don't touch",
+          "say": "noh TOH-kes",
+          "emoji": "🚫"
+        },
+        {
+          "es": "No corras",
+          "en": "Don't run",
+          "say": "noh KOH-rras",
+          "emoji": "🐢"
+        },
+        {
+          "es": "No grites",
+          "en": "Don't shout",
+          "say": "noh GREE-tes",
+          "emoji": "🤫"
+        },
+        {
+          "es": "Ten cuidado",
+          "en": "Be careful",
+          "say": "ten kwee-DAH-doh",
+          "emoji": "⚠️"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Ven",
+            "aquí",
+            "y",
+            "siéntate"
+          ],
+          "shuffle": [
+            "siéntate",
+            "aquí",
+            "Ven",
+            "y"
+          ],
+          "en": "Come here and sit down."
+        },
+        {
+          "correct": [
+            "No",
+            "toques",
+            "el",
+            "horno"
+          ],
+          "shuffle": [
+            "horno",
+            "toques",
+            "el",
+            "No"
+          ],
+          "en": "Don't touch the oven."
+        },
+        {
+          "correct": [
+            "Ten",
+            "cuidado",
+            "con",
+            "el",
+            "perro"
+          ],
+          "shuffle": [
+            "con",
+            "perro",
+            "cuidado",
+            "el",
+            "Ten"
+          ],
+          "en": "Be careful with the dog."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'No corras' means:",
+          "opts": [
+            "Don't run",
+            "Don't hurry me",
+            "You don't run"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Venir → ¡___ aquí! (command)",
+          "opts": [
+            "Ven",
+            "Viene",
+            "Venga"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "At the Museum",
+        "paras": [
+          "The teacher gives instructions at the museum.",
+          "'Escuchad, por favor. Sol, ¡no toques el cuadro! Luna, ¡no corras!'",
+          "'Mirad este dinosaurio.' Sol shouts: '¡Hala, qué grande!' '¡Sol, no grites!'"
+        ],
+        "qs": [
+          {
+            "q": "Where are they?",
+            "opts": [
+              "At a museum",
+              "At the zoo",
+              "At school"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What shouldn't Sol touch?",
+            "opts": [
+              "The painting",
+              "The dinosaur",
+              "The door"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Sol do wrong at the end?",
+            "opts": [
+              "He shouts",
+              "He runs",
+              "He eats"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 188,
+      "title": "Así que, en cambio, o sea",
+      "subtitle": "Linking words",
+      "emoji": "🔗",
+      "milestone": false,
+      "funFact": "'O sea' is a very common filler in Spain, a bit like 'I mean…' or 'like…' in English.",
+      "phrase": {
+        "es": "Llovía, así que nos quedamos en casa.",
+        "en": "It was raining, so we stayed at home."
+      },
+      "words": [
+        {
+          "es": "Así que",
+          "en": "So (as a result)",
+          "say": "ah-SEE keh",
+          "emoji": "🔗"
+        },
+        {
+          "es": "Por un lado",
+          "en": "On the one hand",
+          "say": "por oon LAH-doh",
+          "emoji": "👈"
+        },
+        {
+          "es": "Por otro lado",
+          "en": "On the other hand",
+          "say": "por OH-troh LAH-doh",
+          "emoji": "👉"
+        },
+        {
+          "es": "En cambio",
+          "en": "Whereas / However",
+          "say": "en KAM-byoh",
+          "emoji": "🔀"
+        },
+        {
+          "es": "O sea",
+          "en": "I mean",
+          "say": "oh SEH-ah",
+          "emoji": "💭"
+        },
+        {
+          "es": "Sobre todo",
+          "en": "Above all / Especially",
+          "say": "SOH-breh TOH-doh",
+          "emoji": "🌟"
+        },
+        {
+          "es": "En resumen",
+          "en": "In short",
+          "say": "en rreh-SOO-men",
+          "emoji": "📝"
+        },
+        {
+          "es": "Pues",
+          "en": "Well…",
+          "say": "pwes",
+          "emoji": "🤔"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Llovía",
+            "así",
+            "que",
+            "nos",
+            "quedamos",
+            "en",
+            "casa"
+          ],
+          "shuffle": [
+            "en",
+            "quedamos",
+            "casa",
+            "nos",
+            "así",
+            "Llovía",
+            "que"
+          ],
+          "en": "It was raining so we stayed at home."
+        },
+        {
+          "correct": [
+            "Anoche",
+            "llovió",
+            "así",
+            "que",
+            "no",
+            "salimos"
+          ],
+          "shuffle": [
+            "Anoche",
+            "llovió",
+            "no",
+            "que",
+            "salimos",
+            "así"
+          ],
+          "en": "Last night it rained, so we didn't go out."
+        },
+        {
+          "correct": [
+            "Me",
+            "gustan",
+            "los",
+            "animales",
+            "sobre",
+            "todo",
+            "los",
+            "perros"
+          ],
+          "shuffle": [
+            "perros",
+            "sobre",
+            "los",
+            "Me",
+            "animales",
+            "gustan",
+            "los",
+            "todo"
+          ],
+          "en": "I like animals, especially dogs."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Así que' means:",
+          "opts": [
+            "So (as a result)",
+            "Like that",
+            "Like this"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Por un lado… por otro lado' means:",
+          "opts": [
+            "On the one hand… on the other hand",
+            "On one side of the road",
+            "First… last"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "City or Village?",
+        "paras": [
+          "Luna writes an essay: '¿Ciudad o pueblo?'",
+          "'Por un lado, en la ciudad hay muchas cosas que hacer, sobre todo museos y cines. Por otro lado, hay mucho ruido.'",
+          "'En el pueblo, en cambio, hay mucha tranquilidad. En resumen… pues, ¡me gustan los dos!'"
+        ],
+        "qs": [
+          {
+            "q": "What does the city have a lot of?",
+            "opts": [
+              "Things to do",
+              "Peace and quiet",
+              "Animals"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What's the problem with the city?",
+            "opts": [
+              "Lots of noise",
+              "No shops",
+              "No parks"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Luna decide?",
+            "opts": [
+              "She likes both",
+              "The city is better",
+              "The village is better"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 189,
+      "title": "Cuidamos el planeta",
+      "subtitle": "We look after the planet",
+      "emoji": "♻️",
+      "milestone": false,
+      "funFact": "In Spain, recycling bins have colours: yellow for plastic and cans, blue for paper and cardboard, and green for glass.",
+      "phrase": {
+        "es": "En casa reciclamos el plástico y el papel.",
+        "en": "At home we recycle plastic and paper."
+      },
+      "words": [
+        {
+          "es": "Reciclar",
+          "en": "To recycle",
+          "say": "rreh-thee-KLAR",
+          "emoji": "♻️"
+        },
+        {
+          "es": "El plástico",
+          "en": "Plastic",
+          "say": "el PLAS-tee-koh",
+          "emoji": "🧴"
+        },
+        {
+          "es": "Contaminar",
+          "en": "To pollute",
+          "say": "kon-tah-mee-NAR",
+          "emoji": "🏭"
+        },
+        {
+          "es": "Ahorrar agua",
+          "en": "To save water",
+          "say": "ah-oh-RRAR AH-gwah",
+          "emoji": "🚰"
+        },
+        {
+          "es": "Apagar la luz",
+          "en": "To switch off the light",
+          "say": "ah-pah-GAR lah looth",
+          "emoji": "💡"
+        },
+        {
+          "es": "El contenedor",
+          "en": "The recycling bin",
+          "say": "el kon-teh-neh-DOR",
+          "emoji": "🗑️"
+        },
+        {
+          "es": "El medio ambiente",
+          "en": "The environment",
+          "say": "el MEH-dyoh am-BYEN-teh",
+          "emoji": "🌳"
+        },
+        {
+          "es": "El cambio climático",
+          "en": "Climate change",
+          "say": "el KAM-byoh klee-MAH-tee-koh",
+          "emoji": "🌡️"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "En",
+            "casa",
+            "reciclamos",
+            "el",
+            "plástico",
+            "y",
+            "el",
+            "papel"
+          ],
+          "shuffle": [
+            "el",
+            "y",
+            "casa",
+            "plástico",
+            "reciclamos",
+            "En",
+            "el",
+            "papel"
+          ],
+          "en": "At home we recycle plastic and paper."
+        },
+        {
+          "correct": [
+            "Hay",
+            "que",
+            "apagar",
+            "la",
+            "luz",
+            "al",
+            "salir"
+          ],
+          "shuffle": [
+            "Hay",
+            "salir",
+            "que",
+            "luz",
+            "apagar",
+            "la",
+            "al"
+          ],
+          "en": "You have to switch off the light when you leave."
+        },
+        {
+          "correct": [
+            "Los",
+            "coches",
+            "contaminan",
+            "mucho"
+          ],
+          "shuffle": [
+            "contaminan",
+            "coches",
+            "Los",
+            "mucho"
+          ],
+          "en": "Cars pollute a lot."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'El medio ambiente' is:",
+          "opts": [
+            "The environment",
+            "The middle of the room",
+            "The weather"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "In Spain, plastic goes in the ___ bin.",
+          "opts": [
+            "amarillo",
+            "azul",
+            "verde"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Planet Heroes",
+        "paras": [
+          "Sol and Luna's class makes a poster: '¡Cuidamos el medio ambiente!'",
+          "'Reciclamos el plástico en el contenedor amarillo y el papel en el azul. Apagamos la luz y ahorramos agua.'",
+          "'Y venimos al cole andando o en bici, así que no contaminamos. ¡Somos héroes del planeta!'"
+        ],
+        "qs": [
+          {
+            "q": "Which bin is for plastic?",
+            "opts": [
+              "Yellow",
+              "Blue",
+              "Green"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How do they come to school?",
+            "opts": [
+              "On foot or by bike",
+              "By car",
+              "By bus"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What do they call themselves?",
+            "opts": [
+              "Planet heroes",
+              "Recycling kings",
+              "Green team"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 190,
+      "title": "¡Campeón de opiniones!",
+      "subtitle": "Opinions champion",
+      "emoji": "🏆",
+      "milestone": true,
+      "funFact": "You can now give your opinion, agree and disagree, compare things and link your ideas, just like in a real conversation!",
+      "phrase": {
+        "es": "Me parece que reciclar es lo más importante.",
+        "en": "I think recycling is the most important thing."
+      },
+      "words": [
+        {
+          "es": "Me parece que",
+          "en": "I think that / It seems to me",
+          "say": "meh pah-REH-theh keh",
+          "emoji": "🤔"
+        },
+        {
+          "es": "A mí también",
+          "en": "Me too (I like it too)",
+          "say": "ah mee tam-BYEN",
+          "emoji": "🙌"
+        },
+        {
+          "es": "Mayor que",
+          "en": "Older than",
+          "say": "mah-YOR keh",
+          "emoji": "👴"
+        },
+        {
+          "es": "Buenísimo",
+          "en": "Really good",
+          "say": "bweh-NEE-see-moh",
+          "emoji": "🤩"
+        },
+        {
+          "es": "Me da igual",
+          "en": "I don't mind",
+          "say": "meh dah ee-GWAL",
+          "emoji": "🤷‍♂️"
+        },
+        {
+          "es": "Educado",
+          "en": "Polite",
+          "say": "eh-doo-KAH-doh",
+          "emoji": "🎩"
+        },
+        {
+          "es": "No corras",
+          "en": "Don't run",
+          "say": "noh KOH-rras",
+          "emoji": "🐢"
+        },
+        {
+          "es": "Así que",
+          "en": "So (as a result)",
+          "say": "ah-SEE keh",
+          "emoji": "🔗"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Para",
+            "mí",
+            "el",
+            "mejor",
+            "deporte",
+            "es",
+            "el",
+            "baloncesto"
+          ],
+          "shuffle": [
+            "es",
+            "Para",
+            "deporte",
+            "el",
+            "baloncesto",
+            "mejor",
+            "mí",
+            "el"
+          ],
+          "en": "For me, the best sport is basketball."
+        },
+        {
+          "correct": [
+            "Mi",
+            "hermano",
+            "es",
+            "mayor",
+            "que",
+            "yo"
+          ],
+          "shuffle": [
+            "Mi",
+            "es",
+            "yo",
+            "que",
+            "mayor",
+            "hermano"
+          ],
+          "en": "My brother is older than me."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "—Me encanta bailar. —¡A mí ___!",
+          "opts": [
+            "también",
+            "tampoco",
+            "sí también"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Es el chico más alto ___ la clase.",
+          "opts": [
+            "de",
+            "que",
+            "en"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'En cambio' means:",
+          "opts": [
+            "Whereas",
+            "In change",
+            "Instead of money"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Tocar → ¡No ___! (command)",
+          "opts": [
+            "toques",
+            "tocas",
+            "toca"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "The Class Debate",
+        "paras": [
+          "The class has a debate: '¿Es mejor el verano o el invierno?'",
+          "Sol: 'Me parece que el verano es mejor, porque hace calor y no hay cole.' Luna: '¡Qué va! El invierno es mejor, sobre todo en Navidad.'",
+          "The teacher: 'Por un lado, Sol tiene razón; por otro lado, Luna también. En resumen… ¡los dos sois buenísimos!'"
+        ],
+        "qs": [
+          {
+            "q": "What is the debate about?",
+            "opts": [
+              "Summer or winter",
+              "Cats or dogs",
+              "City or village"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Why does Luna prefer winter?",
+            "opts": [
+              "Because of Christmas",
+              "Because of the snow",
+              "Because of school"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does the teacher decide?",
+            "opts": [
+              "They're both great",
+              "Sol wins",
+              "Luna wins"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    }
+  ]
+}
