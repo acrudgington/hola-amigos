@@ -1,7 +1,7 @@
 import type React from "react";
 import { voice } from "../audio/player.ts";
 // Vocabulary games: Learn intro, Flashcards, Matching, Drag & Match, Odd One Out.
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { buildOptions, shuffle, uniqueBy } from "../lib/utils.ts";
 import { ALL_WORDS, type Word } from "../content/index.ts";
 import type { GameProps } from "./types.ts";
@@ -36,6 +36,16 @@ export function LearnIntro({ words, onDone, onWord }: { words: Word[]; onDone: (
   const step = steps[at];
   const next = () => (at + 1 < steps.length ? setAt(at + 1) : onDone());
 
+  // Say each new word as it appears. (This used to happen on the "Next word"
+  // tap, so children heard the word they'd just learned instead of the new one.)
+  // The first word waits for the activity's spoken introduction to finish.
+  const showing = step?.kind === "show" ? step.w.es : null;
+  useEffect(() => {
+    if (!showing) return;
+    const t = setTimeout(() => voice.spanish(showing, { mode: at === 0 ? "queue" : "interrupt" }), 350);
+    return () => clearTimeout(t);
+  }, [at, showing]);
+
   if (!step) return null;
   const { w } = step;
 
@@ -49,7 +59,7 @@ export function LearnIntro({ words, onDone, onWord }: { words: Word[]; onDone: (
         <div className="say-hint" style={{ marginTop: 6 }}>🗣️ say: <b>{w.say}</b></div>
         <div className="row row--center" style={{ marginTop: 14 }}><SpeakButton text={w.es} size={52} /></div>
       </div>
-      <Button variant="sun" size="lg" block onClick={() => { voice.spanish(w.es); next(); }}>
+      <Button variant="sun" size="lg" block onClick={next}>
         {steps[at + 1]?.kind === "show" ? "Next word →" : "Let’s practise! →"}
       </Button>
     </div>;
