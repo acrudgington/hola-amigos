@@ -182,5 +182,19 @@
     {"q": "Which exam did Luna pass?", "opts": ["English", "Maths", "Science"], "ans": 0},
     {"q": "Who did Luna play football with?", "opts": ["Sol", "Her teacher", "Her mum"], "ans": 0},
     {"q": "How was Luna's day?", "opts": ["Great", "Boring", "Bad"], "ans": 0}
+  ] },
+  { "id": "finde-de-sol", "world": 14, "title": "El fin de semana de Sol", "en": "Sol's weekend", "emoji": "🏖️", "sentences": [
+    {"es": "El sábado pasado, Sol se levantó muy temprano.", "en": "Last Saturday, Sol got up very early."},
+    {"es": "Desayunó con su familia y después salieron hacia la playa.", "en": "He had breakfast with his family and then they set off for the beach."},
+    {"es": "Llegaron a las diez de la mañana.", "en": "They arrived at ten in the morning."},
+    {"es": "Sol se bañó en el mar y construyó un castillo de arena.", "en": "Sol went for a swim in the sea and built a sandcastle."},
+    {"es": "Su padre tomó el sol debajo de la sombrilla.", "en": "His dad sunbathed under the beach umbrella."},
+    {"es": "A las dos, comieron bocadillos y bebieron zumo de naranja.", "en": "At two, they ate sandwiches and drank orange juice."},
+    {"es": "Por la tarde, jugaron al voleibol y Sol ganó.", "en": "In the afternoon, they played volleyball and Sol won."},
+    {"es": "Al final, volvieron a casa muy cansados, pero muy contentos.", "en": "In the end, they went home very tired, but very happy."}
+  ], "questions": [
+    {"q": "What time did they arrive at the beach?", "opts": ["At ten", "At two", "At eight"], "ans": 0},
+    {"q": "What did they eat at two o'clock?", "opts": ["Sandwiches", "Paella", "Ice cream"], "ans": 0},
+    {"q": "Who won at volleyball?", "opts": ["Sol", "His dad", "His mum"], "ans": 0}
   ] }
 ]

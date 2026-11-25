@@ -61,5 +61,13 @@
     {"who": "luna", "es": "He comido paella y he visto el mar.", "en": "I've eaten paella and I've seen the sea."},
     {"who": "sol", "es": "¿Y los deberes? ¿Los has terminado?", "en": "And your homework? Have you finished it?"},
     {"who": "luna", "es": "¡Todavía no! ¡Ay, se me ha olvidado!", "en": "Not yet! Oh, I've forgotten!"}
+  ] },
+  { "id": "ayer-ayer", "world": 14, "title": "Ayer, ayer", "en": "Yesterday, yesterday", "emoji": "🏖️", "bpm": 96, "lines": [
+    {"who": "sol", "es": "Ayer, ayer, ¿qué hiciste ayer?", "en": "Yesterday, yesterday, what did you do yesterday?"},
+    {"who": "luna", "es": "Monté en bici y comí puré.", "en": "I rode my bike and I ate mash."},
+    {"who": "sol", "es": "Anoche, anoche, ¿qué hiciste anoche?", "en": "Last night, last night, what did you do last night?"},
+    {"who": "luna", "es": "Bailé y canté y salí en coche.", "en": "I danced and I sang and I went out in the car."},
+    {"who": "sol", "es": "¿Y el domingo? ¿Qué pasó?", "en": "And on Sunday? What happened?"},
+    {"who": "luna", "es": "¡Me bañé en el mar y el sol brilló!", "en": "I swam in the sea and the sun shone!"}
   ] }
 ]

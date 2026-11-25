@@ -1,0 +1,1772 @@
+{
+  "world": 14,
+  "lessons": [
+    {
+      "id": 111,
+      "title": "Anoche y ayer",
+      "subtitle": "Last night and yesterday",
+      "emoji": "🌙",
+      "milestone": false,
+      "funFact": "In Spain, there are two main past tenses. 'He cenado' is for today, and 'cené' is for yesterday or before.",
+      "phrase": {
+        "es": "Anoche cené con mis abuelos.",
+        "en": "Last night I had dinner with my grandparents."
+      },
+      "words": [
+        {
+          "es": "Anoche",
+          "en": "Last night",
+          "say": "ah-NOH-cheh",
+          "emoji": "🌙"
+        },
+        {
+          "es": "Anteayer",
+          "en": "The day before yesterday",
+          "say": "an-teh-ah-YEHR",
+          "emoji": "📆"
+        },
+        {
+          "es": "La semana pasada",
+          "en": "Last week",
+          "say": "lah seh-MAH-nah pah-SAH-dah",
+          "emoji": "⏮️"
+        },
+        {
+          "es": "El sábado pasado",
+          "en": "Last Saturday",
+          "say": "el SAH-bah-doh pah-SAH-doh",
+          "emoji": "🗓️"
+        },
+        {
+          "es": "Cené",
+          "en": "I had dinner",
+          "say": "theh-NEH",
+          "emoji": "🍝"
+        },
+        {
+          "es": "Llamé",
+          "en": "I called",
+          "say": "yah-MEH",
+          "emoji": "📞"
+        },
+        {
+          "es": "Escuché",
+          "en": "I listened",
+          "say": "es-koo-CHEH",
+          "emoji": "🎧"
+        },
+        {
+          "es": "Estudié",
+          "en": "I studied",
+          "say": "es-too-DYEH",
+          "emoji": "✏️"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Anoche",
+            "cené",
+            "con",
+            "mis",
+            "abuelos"
+          ],
+          "shuffle": [
+            "con",
+            "abuelos",
+            "Anoche",
+            "cené",
+            "mis"
+          ],
+          "en": "Last night I had dinner with my grandparents."
+        },
+        {
+          "correct": [
+            "Ayer",
+            "llamé",
+            "a",
+            "mi",
+            "prima"
+          ],
+          "shuffle": [
+            "prima",
+            "a",
+            "Ayer",
+            "mi",
+            "llamé"
+          ],
+          "en": "Yesterday I called my cousin."
+        },
+        {
+          "correct": [
+            "La",
+            "semana",
+            "pasada",
+            "estudié",
+            "mucho"
+          ],
+          "shuffle": [
+            "mucho",
+            "La",
+            "semana",
+            "estudié",
+            "pasada"
+          ],
+          "en": "Last week I studied a lot."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "Ayer yo ___ música. (escuchar)",
+          "opts": [
+            "escuché",
+            "escucho",
+            "escuchó"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Anoche' means:",
+          "opts": [
+            "Last night",
+            "Tonight",
+            "Tomorrow night"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Luna's Yesterday",
+        "paras": [
+          "Sol asks: '¿Qué tal ayer, Luna?'",
+          "'Bien. Por la tarde estudié y llamé a mi abuela.'",
+          "'Y anoche cené pizza y escuché música en mi habitación. ¡Fue un día tranquilo!'"
+        ],
+        "qs": [
+          {
+            "q": "Who did Luna call?",
+            "opts": [
+              "Her grandma",
+              "Sol",
+              "Her teacher"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What did Luna have for dinner?",
+            "opts": [
+              "Pizza",
+              "Soup",
+              "Paella"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What did Luna do last night?",
+            "opts": [
+              "She listened to music",
+              "She went out",
+              "She played football"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 112,
+      "title": "Verbos en -ar",
+      "subtitle": "-ar verbs in the past",
+      "emoji": "💃",
+      "milestone": false,
+      "funFact": "Watch the accent! 'Bailé' means 'I danced', but 'baile' means 'a dance'. In Spanish, one little accent can change the meaning.",
+      "phrase": {
+        "es": "El sábado bailé mucho en la fiesta.",
+        "en": "On Saturday I danced a lot at the party."
+      },
+      "words": [
+        {
+          "es": "Visité",
+          "en": "I visited",
+          "say": "bee-see-TEH",
+          "emoji": "🏛️"
+        },
+        {
+          "es": "Bailé",
+          "en": "I danced",
+          "say": "bay-LEH",
+          "emoji": "💃"
+        },
+        {
+          "es": "Cociné",
+          "en": "I cooked",
+          "say": "koh-thee-NEH",
+          "emoji": "🍳"
+        },
+        {
+          "es": "Monté en bici",
+          "en": "I rode my bike",
+          "say": "mon-TEH en BEE-thee",
+          "emoji": "🚲"
+        },
+        {
+          "es": "Paseé",
+          "en": "I went for a walk",
+          "say": "pah-seh-EH",
+          "emoji": "🚶"
+        },
+        {
+          "es": "Ayudé",
+          "en": "I helped",
+          "say": "ah-yoo-DEH",
+          "emoji": "🤝"
+        },
+        {
+          "es": "Dibujé",
+          "en": "I drew",
+          "say": "dee-boo-HEH",
+          "emoji": "🖍️"
+        },
+        {
+          "es": "Canté",
+          "en": "I sang",
+          "say": "kan-TEH",
+          "emoji": "🎤"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "El",
+            "sábado",
+            "visité",
+            "a",
+            "mi",
+            "tía"
+          ],
+          "shuffle": [
+            "visité",
+            "tía",
+            "a",
+            "mi",
+            "sábado",
+            "El"
+          ],
+          "en": "On Saturday I visited my aunt."
+        },
+        {
+          "correct": [
+            "Anoche",
+            "bailé",
+            "en",
+            "la",
+            "fiesta"
+          ],
+          "shuffle": [
+            "la",
+            "en",
+            "bailé",
+            "Anoche",
+            "fiesta"
+          ],
+          "en": "Last night I danced at the party."
+        },
+        {
+          "correct": [
+            "Ayer",
+            "ayudé",
+            "a",
+            "mi",
+            "padre",
+            "en",
+            "la",
+            "cocina"
+          ],
+          "shuffle": [
+            "cocina",
+            "la",
+            "a",
+            "Ayer",
+            "en",
+            "mi",
+            "ayudé",
+            "padre"
+          ],
+          "en": "Yesterday I helped my dad in the kitchen."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "Cocinar → yo ___",
+          "opts": [
+            "cociné",
+            "cocinó",
+            "cocino"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Ayer ___ en bici. (montar, I)",
+          "opts": [
+            "monté",
+            "montó",
+            "monto"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Saturday Fun",
+        "paras": [
+          "On Saturday, Sol had a busy day.",
+          "'Por la mañana monté en bici y paseé por el parque. Después ayudé a mi madre y cociné una tortilla.'",
+          "'Por la noche canté y bailé en la fiesta de mi primo. ¡Uf, qué cansado!'"
+        ],
+        "qs": [
+          {
+            "q": "What did Sol cook?",
+            "opts": [
+              "A Spanish omelette",
+              "A cake",
+              "Pasta"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Who did Sol help?",
+            "opts": [
+              "His mum",
+              "His teacher",
+              "Luna"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Where did Sol sing and dance?",
+            "opts": [
+              "At his cousin's party",
+              "At school",
+              "In the park"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 113,
+      "title": "Verbos en -er y -ir",
+      "subtitle": "-er and -ir verbs in the past",
+      "emoji": "🏃",
+      "milestone": false,
+      "funFact": "Verbs ending in -er and -ir share the same past endings: 'comí', 'bebí', 'salí' and 'viví' all end in -í.",
+      "phrase": {
+        "es": "Ayer salí con mis amigos.",
+        "en": "Yesterday I went out with my friends."
+      },
+      "words": [
+        {
+          "es": "Bebí",
+          "en": "I drank",
+          "say": "beh-BEE",
+          "emoji": "🥛"
+        },
+        {
+          "es": "Aprendí",
+          "en": "I learned",
+          "say": "ah-pren-DEE",
+          "emoji": "🎓"
+        },
+        {
+          "es": "Escribí",
+          "en": "I wrote",
+          "say": "es-kree-BEE",
+          "emoji": "📝"
+        },
+        {
+          "es": "Salí",
+          "en": "I went out",
+          "say": "sah-LEE",
+          "emoji": "🌃"
+        },
+        {
+          "es": "Abrí",
+          "en": "I opened",
+          "say": "ah-BREE",
+          "emoji": "🎁"
+        },
+        {
+          "es": "Corrí",
+          "en": "I ran",
+          "say": "koh-RREE",
+          "emoji": "🏃"
+        },
+        {
+          "es": "Subí",
+          "en": "I went up",
+          "say": "soo-BEE",
+          "emoji": "🧗"
+        },
+        {
+          "es": "Viví",
+          "en": "I lived",
+          "say": "bee-BEE",
+          "emoji": "🏠"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Ayer",
+            "salí",
+            "con",
+            "mis",
+            "amigos"
+          ],
+          "shuffle": [
+            "salí",
+            "mis",
+            "amigos",
+            "Ayer",
+            "con"
+          ],
+          "en": "Yesterday I went out with my friends."
+        },
+        {
+          "correct": [
+            "El",
+            "año",
+            "pasado",
+            "viví",
+            "en",
+            "Inglaterra"
+          ],
+          "shuffle": [
+            "El",
+            "Inglaterra",
+            "año",
+            "viví",
+            "pasado",
+            "en"
+          ],
+          "en": "Last year I lived in England."
+        },
+        {
+          "correct": [
+            "Corrí",
+            "muy",
+            "rápido",
+            "en",
+            "el",
+            "parque"
+          ],
+          "shuffle": [
+            "en",
+            "Corrí",
+            "rápido",
+            "parque",
+            "muy",
+            "el"
+          ],
+          "en": "I ran very fast in the park."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "Escribir → yo ___",
+          "opts": [
+            "escribí",
+            "escribió",
+            "escribo"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Correr → yo ___",
+          "opts": [
+            "corrí",
+            "corró",
+            "corro"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Up the Hill",
+        "paras": [
+          "Luna tells Sol about her Sunday.",
+          "'Salí con mi familia al campo. Subí una colina muy alta y corrí hasta arriba.'",
+          "'Bebí mucha agua y escribí una postal a mi abuela. ¡Aprendí el nombre de diez flores!'"
+        ],
+        "qs": [
+          {
+            "q": "Where did Luna go?",
+            "opts": [
+              "To the countryside",
+              "To the beach",
+              "To the city"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What did Luna write?",
+            "opts": [
+              "A postcard to her grandma",
+              "A story",
+              "A list"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What did Luna learn?",
+            "opts": [
+              "The names of ten flowers",
+              "To swim",
+              "A song"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 114,
+      "title": "¿Qué hiciste?",
+      "subtitle": "What did you do?",
+      "emoji": "❓",
+      "milestone": false,
+      "funFact": "Careful with accents: 'jugo' means 'juice' in Latin America (in Spain it's 'zumo'), but 'jugó' means 'he played'!",
+      "phrase": {
+        "es": "¿Qué hiciste el fin de semana?",
+        "en": "What did you do at the weekend?"
+      },
+      "words": [
+        {
+          "es": "¿Qué hiciste?",
+          "en": "What did you do?",
+          "say": "keh ee-THEES-teh",
+          "emoji": "❓"
+        },
+        {
+          "es": "Jugaste",
+          "en": "You played",
+          "say": "hoo-GAS-teh",
+          "emoji": "🎮"
+        },
+        {
+          "es": "Comiste",
+          "en": "You ate",
+          "say": "koh-MEES-teh",
+          "emoji": "🍔"
+        },
+        {
+          "es": "Saliste",
+          "en": "You went out",
+          "say": "sah-LEES-teh",
+          "emoji": "🚪"
+        },
+        {
+          "es": "Llegó",
+          "en": "He / She arrived",
+          "say": "yeh-GOH",
+          "emoji": "🏁"
+        },
+        {
+          "es": "Comió",
+          "en": "He / She ate",
+          "say": "koh-MYOH",
+          "emoji": "🍽️"
+        },
+        {
+          "es": "Escribió",
+          "en": "He / She wrote",
+          "say": "es-kree-BYOH",
+          "emoji": "✉️"
+        },
+        {
+          "es": "Ganó",
+          "en": "He / She won",
+          "say": "gah-NOH",
+          "emoji": "🥇"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Mi",
+            "hermana",
+            "ganó",
+            "la",
+            "carrera"
+          ],
+          "shuffle": [
+            "Mi",
+            "la",
+            "carrera",
+            "hermana",
+            "ganó"
+          ],
+          "en": "My sister won the race."
+        },
+        {
+          "correct": [
+            "El",
+            "perro",
+            "comió",
+            "mi",
+            "bocadillo"
+          ],
+          "shuffle": [
+            "bocadillo",
+            "mi",
+            "El",
+            "perro",
+            "comió"
+          ],
+          "en": "The dog ate my sandwich."
+        },
+        {
+          "correct": [
+            "Mi",
+            "abuelo",
+            "llegó",
+            "a",
+            "las",
+            "ocho"
+          ],
+          "shuffle": [
+            "abuelo",
+            "a",
+            "las",
+            "Mi",
+            "llegó",
+            "ocho"
+          ],
+          "en": "My grandad arrived at eight."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "Tú ___ al fútbol ayer. (jugar)",
+          "opts": [
+            "jugaste",
+            "jugó",
+            "jugué"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Ella ___ una carta. (escribir)",
+          "opts": [
+            "escribió",
+            "escribí",
+            "escribiste"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "The Hungry Dog",
+        "paras": [
+          "'¿Qué hiciste ayer, Sol?' asks Luna.",
+          "'Jugué en el jardín con mi perro, Coco. Pero Coco comió mi bocadillo.'",
+          "Luna laughs. '¿Y tú qué comiste?' 'Nada. ¡Coco ganó!'"
+        ],
+        "qs": [
+          {
+            "q": "Where did Sol play?",
+            "opts": [
+              "In the garden",
+              "At school",
+              "At the beach"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What did Coco eat?",
+            "opts": [
+              "Sol's sandwich",
+              "His dog food",
+              "A cake"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What did Sol eat?",
+            "opts": [
+              "Nothing",
+              "A sandwich",
+              "Pizza"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 115,
+      "title": "Nosotros y ellos",
+      "subtitle": "We and they",
+      "emoji": "🕺",
+      "milestone": false,
+      "funFact": "'Jugamos' can mean 'we play' or 'we played'. A time word like 'ayer' tells you which one!",
+      "phrase": {
+        "es": "El domingo comimos en casa de los abuelos.",
+        "en": "On Sunday we had lunch at our grandparents' house."
+      },
+      "words": [
+        {
+          "es": "Jugamos",
+          "en": "We played",
+          "say": "hoo-GAH-mos",
+          "emoji": "⚽"
+        },
+        {
+          "es": "Comimos",
+          "en": "We ate",
+          "say": "koh-MEE-mos",
+          "emoji": "🍕"
+        },
+        {
+          "es": "Salimos",
+          "en": "We went out",
+          "say": "sah-LEE-mos",
+          "emoji": "🎆"
+        },
+        {
+          "es": "Visitaron",
+          "en": "They visited",
+          "say": "bee-see-TAH-ron",
+          "emoji": "🗺️"
+        },
+        {
+          "es": "Bailaron",
+          "en": "They danced",
+          "say": "bay-LAH-ron",
+          "emoji": "🕺"
+        },
+        {
+          "es": "Llegaron",
+          "en": "They arrived",
+          "say": "yeh-GAH-ron",
+          "emoji": "🛬"
+        },
+        {
+          "es": "Ganaron",
+          "en": "They won",
+          "say": "gah-NAH-ron",
+          "emoji": "🏅"
+        },
+        {
+          "es": "Vivieron",
+          "en": "They lived",
+          "say": "bee-BYEH-ron",
+          "emoji": "🏰"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "El",
+            "domingo",
+            "comimos",
+            "en",
+            "casa",
+            "de",
+            "los",
+            "abuelos"
+          ],
+          "shuffle": [
+            "casa",
+            "los",
+            "abuelos",
+            "comimos",
+            "El",
+            "en",
+            "de",
+            "domingo"
+          ],
+          "en": "On Sunday we had lunch at our grandparents' house."
+        },
+        {
+          "correct": [
+            "Mis",
+            "padres",
+            "bailaron",
+            "toda",
+            "la",
+            "noche"
+          ],
+          "shuffle": [
+            "toda",
+            "bailaron",
+            "Mis",
+            "padres",
+            "la",
+            "noche"
+          ],
+          "en": "My parents danced all night."
+        },
+        {
+          "correct": [
+            "Mis",
+            "tíos",
+            "llegaron",
+            "en",
+            "avión"
+          ],
+          "shuffle": [
+            "en",
+            "avión",
+            "tíos",
+            "llegaron",
+            "Mis"
+          ],
+          "en": "My aunt and uncle arrived by plane."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "Ellos ___ el partido. (ganar)",
+          "opts": [
+            "ganaron",
+            "ganamos",
+            "ganó"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Ayer nosotros ___ pizza. (comer)",
+          "opts": [
+            "comimos",
+            "comieron",
+            "comí"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "The Family Wedding",
+        "paras": [
+          "Last summer, Luna's cousins got married. Everyone was there!",
+          "'Mis tíos llegaron de Londres. Comimos paella y bailamos mucho.'",
+          "'Mis abuelos bailaron toda la noche. ¡Ganaron el concurso de baile!'"
+        ],
+        "qs": [
+          {
+            "q": "Where did Luna's aunt and uncle come from?",
+            "opts": [
+              "London",
+              "Madrid",
+              "Paris"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What did they eat?",
+            "opts": [
+              "Paella",
+              "Pizza",
+              "Sandwiches"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Who won the dance competition?",
+            "opts": [
+              "Luna's grandparents",
+              "Luna",
+              "Sol"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 116,
+      "title": "Hace dos días",
+      "subtitle": "Two days ago",
+      "emoji": "⏪",
+      "milestone": false,
+      "funFact": "To say 'ago' in Spanish, put 'hace' first: 'hace dos días' means 'two days ago'.",
+      "phrase": {
+        "es": "Hace dos días visité el museo.",
+        "en": "Two days ago I visited the museum."
+      },
+      "words": [
+        {
+          "es": "Hace dos días",
+          "en": "Two days ago",
+          "say": "AH-theh dos DEE-as",
+          "emoji": "⏪"
+        },
+        {
+          "es": "Hace una semana",
+          "en": "A week ago",
+          "say": "AH-theh OO-nah seh-MAH-nah",
+          "emoji": "7️⃣"
+        },
+        {
+          "es": "El año pasado",
+          "en": "Last year",
+          "say": "el AH-nyoh pah-SAH-doh",
+          "emoji": "📅"
+        },
+        {
+          "es": "El verano pasado",
+          "en": "Last summer",
+          "say": "el beh-RAH-noh pah-SAH-doh",
+          "emoji": "☀️"
+        },
+        {
+          "es": "Más tarde",
+          "en": "Later",
+          "say": "mas TAR-deh",
+          "emoji": "🕒"
+        },
+        {
+          "es": "Al final",
+          "en": "In the end",
+          "say": "al fee-NAL",
+          "emoji": "🏁"
+        },
+        {
+          "es": "A las ocho",
+          "en": "At eight o'clock",
+          "say": "ah las OH-choh",
+          "emoji": "🕗"
+        },
+        {
+          "es": "Durante",
+          "en": "During / For",
+          "say": "doo-RAN-teh",
+          "emoji": "⏱️"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Hace",
+            "dos",
+            "días",
+            "visité",
+            "el",
+            "museo"
+          ],
+          "shuffle": [
+            "días",
+            "el",
+            "dos",
+            "visité",
+            "museo",
+            "Hace"
+          ],
+          "en": "Two days ago I visited the museum."
+        },
+        {
+          "correct": [
+            "El",
+            "verano",
+            "pasado",
+            "nadé",
+            "en",
+            "el",
+            "mar"
+          ],
+          "shuffle": [
+            "verano",
+            "el",
+            "mar",
+            "El",
+            "nadé",
+            "en",
+            "pasado"
+          ],
+          "en": "Last summer I swam in the sea."
+        },
+        {
+          "correct": [
+            "Al",
+            "final",
+            "llegamos",
+            "a",
+            "casa",
+            "muy",
+            "tarde"
+          ],
+          "shuffle": [
+            "muy",
+            "Al",
+            "a",
+            "casa",
+            "tarde",
+            "llegamos",
+            "final"
+          ],
+          "en": "In the end we got home very late."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Hace una semana' means:",
+          "opts": [
+            "A week ago",
+            "In a week",
+            "Every week"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'El año pasado' means:",
+          "opts": [
+            "Last year",
+            "Next year",
+            "This year"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "A Long Day Out",
+        "paras": [
+          "Hace una semana, Sol and his family went to the city.",
+          "'Primero visitamos el museo durante dos horas. Más tarde comimos en un restaurante.'",
+          "'Al final llegamos a casa a las ocho. ¡Qué día tan largo!'"
+        ],
+        "qs": [
+          {
+            "q": "When did they go to the city?",
+            "opts": [
+              "A week ago",
+              "Yesterday",
+              "Last year"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How long were they in the museum?",
+            "opts": [
+              "Two hours",
+              "One hour",
+              "All day"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What time did they get home?",
+            "opts": [
+              "At eight",
+              "At six",
+              "At ten"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 117,
+      "title": "Un día en la playa",
+      "subtitle": "A day at the beach",
+      "emoji": "🏖️",
+      "milestone": false,
+      "funFact": "In Spain, 'bañarse' at the beach means going for a swim. '¿Nos bañamos?' means 'Shall we go in the water?'",
+      "phrase": {
+        "es": "Ayer me bañé en el mar.",
+        "en": "Yesterday I went for a swim in the sea."
+      },
+      "words": [
+        {
+          "es": "La crema solar",
+          "en": "Sun cream",
+          "say": "lah KREH-mah soh-LAR",
+          "emoji": "🧴"
+        },
+        {
+          "es": "El castillo de arena",
+          "en": "The sandcastle",
+          "say": "el kas-TEE-yoh deh ah-REH-nah",
+          "emoji": "🏰"
+        },
+        {
+          "es": "Tomar el sol",
+          "en": "To sunbathe",
+          "say": "toh-MAR el sol",
+          "emoji": "😎"
+        },
+        {
+          "es": "La ola",
+          "en": "The wave",
+          "say": "lah OH-lah",
+          "emoji": "🌊"
+        },
+        {
+          "es": "Las gafas de sol",
+          "en": "Sunglasses",
+          "say": "las GAH-fas deh sol",
+          "emoji": "🕶️"
+        },
+        {
+          "es": "Me bañé",
+          "en": "I went for a swim",
+          "say": "meh bah-NYEH",
+          "emoji": "🏊"
+        },
+        {
+          "es": "La sombrilla",
+          "en": "The beach umbrella",
+          "say": "lah som-BREE-yah",
+          "emoji": "⛱️"
+        },
+        {
+          "es": "El bañador",
+          "en": "The swimsuit",
+          "say": "el bah-nyah-DOR",
+          "emoji": "🩱"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Ayer",
+            "me",
+            "bañé",
+            "en",
+            "el",
+            "mar"
+          ],
+          "shuffle": [
+            "en",
+            "mar",
+            "el",
+            "Ayer",
+            "me",
+            "bañé"
+          ],
+          "en": "Yesterday I went for a swim in the sea."
+        },
+        {
+          "correct": [
+            "Mi",
+            "padre",
+            "tomó",
+            "el",
+            "sol",
+            "toda",
+            "la",
+            "tarde"
+          ],
+          "shuffle": [
+            "sol",
+            "la",
+            "padre",
+            "toda",
+            "Mi",
+            "el",
+            "tarde",
+            "tomó"
+          ],
+          "en": "My dad sunbathed all afternoon."
+        },
+        {
+          "correct": [
+            "Usé",
+            "mucha",
+            "crema",
+            "solar"
+          ],
+          "shuffle": [
+            "crema",
+            "Usé",
+            "solar",
+            "mucha"
+          ],
+          "en": "I used lots of sun cream."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'La sombrilla' is:",
+          "opts": [
+            "A beach umbrella",
+            "A shadow",
+            "A sun hat"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Ayer yo ___ en el mar. (bañarse)",
+          "opts": [
+            "me bañé",
+            "me baño",
+            "se bañó"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "The Big Wave",
+        "paras": [
+          "On Sunday, Luna went to the beach with her family.",
+          "'Me puse el bañador, las gafas de sol y mucha crema solar. Mi madre tomó el sol debajo de la sombrilla.'",
+          "'Construí un castillo de arena enorme, pero llegó una ola y… ¡adiós, castillo!'"
+        ],
+        "qs": [
+          {
+            "q": "Where did Luna's mum sunbathe?",
+            "opts": [
+              "Under the beach umbrella",
+              "In the water",
+              "In the car"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What did Luna build?",
+            "opts": [
+              "A huge sandcastle",
+              "A boat",
+              "A tower of shells"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What happened to it?",
+            "opts": [
+              "A wave knocked it down",
+              "Her brother broke it",
+              "It got bigger"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 118,
+      "title": "Mi cumpleaños",
+      "subtitle": "My birthday",
+      "emoji": "🥳",
+      "milestone": false,
+      "funFact": "In Spain, people often gently pull the birthday child's ears: once for each year! It's called 'tirar de las orejas'.",
+      "phrase": {
+        "es": "Cumplí nueve años el sábado.",
+        "en": "I turned nine on Saturday."
+      },
+      "words": [
+        {
+          "es": "Celebré",
+          "en": "I celebrated",
+          "say": "theh-leh-BREH",
+          "emoji": "🥳"
+        },
+        {
+          "es": "Invité",
+          "en": "I invited",
+          "say": "een-bee-TEH",
+          "emoji": "💌"
+        },
+        {
+          "es": "Recibí",
+          "en": "I received",
+          "say": "rreh-thee-BEE",
+          "emoji": "📬"
+        },
+        {
+          "es": "Soplé las velas",
+          "en": "I blew out the candles",
+          "say": "soh-PLEH las BEH-las",
+          "emoji": "🕯️"
+        },
+        {
+          "es": "Los invitados",
+          "en": "The guests",
+          "say": "los een-bee-TAH-dos",
+          "emoji": "👫"
+        },
+        {
+          "es": "La sorpresa",
+          "en": "The surprise",
+          "say": "lah sor-PREH-sah",
+          "emoji": "🎁"
+        },
+        {
+          "es": "Cumplí",
+          "en": "I turned (an age)",
+          "say": "koom-PLEE",
+          "emoji": "🔟"
+        },
+        {
+          "es": "La merienda",
+          "en": "Afternoon snack",
+          "say": "lah meh-RYEN-dah",
+          "emoji": "🥪"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Cumplí",
+            "nueve",
+            "años",
+            "el",
+            "sábado"
+          ],
+          "shuffle": [
+            "sábado",
+            "el",
+            "nueve",
+            "Cumplí",
+            "años"
+          ],
+          "en": "I turned nine on Saturday."
+        },
+        {
+          "correct": [
+            "Invité",
+            "a",
+            "toda",
+            "mi",
+            "clase"
+          ],
+          "shuffle": [
+            "Invité",
+            "toda",
+            "mi",
+            "clase",
+            "a"
+          ],
+          "en": "I invited my whole class."
+        },
+        {
+          "correct": [
+            "Recibí",
+            "muchos",
+            "regalos"
+          ],
+          "shuffle": [
+            "muchos",
+            "regalos",
+            "Recibí"
+          ],
+          "en": "I received lots of presents."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Cumplí ocho años' means:",
+          "opts": [
+            "I turned eight",
+            "I bought eight",
+            "I counted eight"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Recibir → yo ___",
+          "opts": [
+            "recibí",
+            "recibió",
+            "recibo"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Sol's Surprise Party",
+        "paras": [
+          "Last Saturday, Sol turned ten. He celebrated with a party in the park.",
+          "'Invité a mis amigos del cole. Mi madre preparó una merienda riquísima.'",
+          "'Soplé las velas y… ¡sorpresa! Recibí un perrito. ¡El mejor regalo del mundo!'"
+        ],
+        "qs": [
+          {
+            "q": "How old did Sol turn?",
+            "opts": [
+              "Ten",
+              "Nine",
+              "Eight"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Who made the snack?",
+            "opts": [
+              "Sol's mum",
+              "Sol's dad",
+              "Luna"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What was the best present?",
+            "opts": [
+              "A puppy",
+              "A bike",
+              "A game"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 119,
+      "title": "¿He comido o comí?",
+      "subtitle": "Two past tenses",
+      "emoji": "⚖️",
+      "milestone": false,
+      "funFact": "In Spain: 'hoy', 'esta semana' and 'este año' usually go with 'he…' (he nadado), while 'ayer', 'el lunes' and 'el año pasado' go with 'nadé'.",
+      "phrase": {
+        "es": "Hoy he nadado, y ayer también nadé.",
+        "en": "Today I have swum, and yesterday I swam too."
+      },
+      "words": [
+        {
+          "es": "Hoy he nadado",
+          "en": "Today I have swum",
+          "say": "oy eh nah-DAH-doh",
+          "emoji": "🏊‍♀️"
+        },
+        {
+          "es": "Ayer nadé",
+          "en": "Yesterday I swam",
+          "say": "ah-YEHR nah-DEH",
+          "emoji": "🏊‍♂️"
+        },
+        {
+          "es": "Este año he viajado",
+          "en": "This year I have travelled",
+          "say": "ES-teh AH-nyoh eh byah-HAH-doh",
+          "emoji": "✈️"
+        },
+        {
+          "es": "El año pasado viajé",
+          "en": "Last year I travelled",
+          "say": "el AH-nyoh pah-SAH-doh byah-HEH",
+          "emoji": "🧳"
+        },
+        {
+          "es": "Esta semana he visto",
+          "en": "This week I have seen",
+          "say": "ES-tah seh-MAH-nah eh BEES-toh",
+          "emoji": "📺"
+        },
+        {
+          "es": "La semana pasada vi",
+          "en": "Last week I saw",
+          "say": "lah seh-MAH-nah pah-SAH-dah bee",
+          "emoji": "🎬"
+        },
+        {
+          "es": "Ya he comido",
+          "en": "I've already eaten",
+          "say": "yah eh koh-MEE-doh",
+          "emoji": "😋"
+        },
+        {
+          "es": "Comí a las dos",
+          "en": "I ate at two",
+          "say": "koh-MEE ah las dos",
+          "emoji": "🕑"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Hoy",
+            "he",
+            "nadado",
+            "y",
+            "ayer",
+            "también",
+            "nadé"
+          ],
+          "shuffle": [
+            "también",
+            "y",
+            "he",
+            "nadado",
+            "Hoy",
+            "nadé",
+            "ayer"
+          ],
+          "en": "Today I have swum and yesterday I swam too."
+        },
+        {
+          "correct": [
+            "El",
+            "año",
+            "pasado",
+            "viajé",
+            "a",
+            "Francia"
+          ],
+          "shuffle": [
+            "pasado",
+            "viajé",
+            "año",
+            "El",
+            "Francia",
+            "a"
+          ],
+          "en": "Last year I travelled to France."
+        },
+        {
+          "correct": [
+            "Esta",
+            "semana",
+            "he",
+            "visto",
+            "a",
+            "mis",
+            "abuelos"
+          ],
+          "shuffle": [
+            "a",
+            "abuelos",
+            "mis",
+            "Esta",
+            "visto",
+            "semana",
+            "he"
+          ],
+          "en": "This week I have seen my grandparents."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "Ayer ___ en la piscina. (nadar)",
+          "opts": [
+            "nadé",
+            "he nadado",
+            "nado"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Hoy ___ mucho. (aprender)",
+          "opts": [
+            "he aprendido",
+            "aprendí",
+            "aprendo"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Sol's Travel Diary",
+        "paras": [
+          "Sol loves travelling. 'El año pasado viajé a Francia con mis padres.'",
+          "'Y este año he viajado a Portugal. Ayer nadé en el mar y hoy he visitado un castillo.'",
+          "Luna asks: '¿Y ya has comido?' 'Sí, ya he comido. Comí sardinas a las dos.'"
+        ],
+        "qs": [
+          {
+            "q": "Where did Sol travel last year?",
+            "opts": [
+              "France",
+              "Portugal",
+              "Italy"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Where has Sol travelled this year?",
+            "opts": [
+              "Portugal",
+              "France",
+              "England"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What did Sol eat at two o'clock?",
+            "opts": [
+              "Sardines",
+              "Paella",
+              "Pizza"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 120,
+      "title": "¡Campeón del finde!",
+      "subtitle": "Weekend champion",
+      "emoji": "🏆",
+      "milestone": true,
+      "funFact": "You can now tell people what you did yesterday, last weekend and last summer, in proper Spanish past tense!",
+      "phrase": {
+        "es": "El fin de semana pasado me lo pasé genial.",
+        "en": "Last weekend I had a great time."
+      },
+      "words": [
+        {
+          "es": "Anoche",
+          "en": "Last night",
+          "say": "ah-NOH-cheh",
+          "emoji": "🌙"
+        },
+        {
+          "es": "Bailé",
+          "en": "I danced",
+          "say": "bay-LEH",
+          "emoji": "💃"
+        },
+        {
+          "es": "Salí",
+          "en": "I went out",
+          "say": "sah-LEE",
+          "emoji": "🌃"
+        },
+        {
+          "es": "¿Qué hiciste?",
+          "en": "What did you do?",
+          "say": "keh ee-THEES-teh",
+          "emoji": "❓"
+        },
+        {
+          "es": "Comimos",
+          "en": "We ate",
+          "say": "koh-MEE-mos",
+          "emoji": "🍕"
+        },
+        {
+          "es": "Hace dos días",
+          "en": "Two days ago",
+          "say": "AH-theh dos DEE-as",
+          "emoji": "⏪"
+        },
+        {
+          "es": "Me bañé",
+          "en": "I went for a swim",
+          "say": "meh bah-NYEH",
+          "emoji": "🏊"
+        },
+        {
+          "es": "Cumplí",
+          "en": "I turned (an age)",
+          "say": "koom-PLEE",
+          "emoji": "🔟"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "El",
+            "sábado",
+            "salí",
+            "con",
+            "mis",
+            "amigos"
+          ],
+          "shuffle": [
+            "amigos",
+            "con",
+            "sábado",
+            "El",
+            "salí",
+            "mis"
+          ],
+          "en": "On Saturday I went out with my friends."
+        },
+        {
+          "correct": [
+            "Anoche",
+            "comimos",
+            "en",
+            "un",
+            "restaurante"
+          ],
+          "shuffle": [
+            "restaurante",
+            "en",
+            "un",
+            "comimos",
+            "Anoche"
+          ],
+          "en": "Last night we ate in a restaurant."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "Bailar → yo ___",
+          "opts": [
+            "bailé",
+            "bailó",
+            "bailo"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Vivir → ellos ___",
+          "opts": [
+            "vivieron",
+            "vivimos",
+            "vivió"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'La semana pasada' means:",
+          "opts": [
+            "Last week",
+            "Next week",
+            "This week"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Hoy ___ en la piscina. (nadar)",
+          "opts": [
+            "he nadado",
+            "nadé",
+            "nadaron"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "The Weekend Report",
+        "paras": [
+          "On Monday at school, the teacher asks: '¿Qué hicisteis el fin de semana?'",
+          "Sol says: 'El sábado monté en bici y anoche cené con mis abuelos.'",
+          "Luna says: 'Yo me bañé en el mar y bailé en una fiesta. ¡Me lo pasé genial!'"
+        ],
+        "qs": [
+          {
+            "q": "When did Sol ride his bike?",
+            "opts": [
+              "On Saturday",
+              "On Sunday",
+              "Last night"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Who did Sol have dinner with?",
+            "opts": [
+              "His grandparents",
+              "Luna",
+              "His teacher"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Where did Luna swim?",
+            "opts": [
+              "In the sea",
+              "In a pool",
+              "In a lake"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    }
+  ]
+}

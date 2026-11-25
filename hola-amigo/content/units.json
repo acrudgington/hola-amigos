@@ -87,5 +87,11 @@
     {"id": "13b", "can": "I can ask and say if I have ever done something.", "es": "¿Alguna vez has estado en Madrid? Sí, una vez.", "lessons": [104, 105]},
     {"id": "13c", "can": "I can say how my day has gone at school and at home.", "es": "Hoy me ha ido bien. ¡Me lo he pasado genial!", "lessons": [106, 107, 108]},
     {"id": "13d", "can": "I can share news and react to it.", "es": "¿Sabes qué? Ha nacido mi primo. ¡Enhorabuena!", "lessons": [109, 110]}
+  ] },
+  { "world": 14, "title": "Yesterday and last weekend", "level": "a2", "goals": [
+    {"id": "14a", "can": "I can say what I did yesterday and last weekend.", "es": "Anoche cené con mis abuelos y el sábado bailé.", "lessons": [111, 112, 113]},
+    {"id": "14b", "can": "I can say what other people did.", "es": "Mi hermana ganó la carrera y mis padres bailaron.", "lessons": [114, 115]},
+    {"id": "14c", "can": "I can tell what happened in order, using time words.", "es": "Primero nadé, más tarde comí y al final volví a casa.", "lessons": [116, 117, 118]},
+    {"id": "14d", "can": "I can choose between «he comido» and «comí».", "es": "Hoy he nadado, y ayer también nadé.", "lessons": [119, 120]}
   ] }
 ]
