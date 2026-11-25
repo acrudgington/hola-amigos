@@ -55,6 +55,15 @@ Written to the same standard and checked the same way:
 - **Voices:** `npm run content:voice-split` shows how every mixed English/Spanish
   line is split between the English and Castilian voices.
 
+## Conversations (added November 2026)
+
+200 role-play conversations (one per lesson, about 2,400 Spanish lines counting
+questions, answers, replies and tap options), checked like the lessons:
+spelling against the RLA-ES dictionary (flags were only sound effects like «mmm»
+and valid words such as «puzle», «golazo», «finde»), grammar with LanguageTool
+(`ONLY_TALK=1 npm run content:grammar`; 3 punctuation fixes) and a scan for
+Latin-American-only vocabulary (none).
+
 ## Changing content later
 
 Edit `content/lessons/*.json`, then run `npm run content:check` and

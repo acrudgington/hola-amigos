@@ -7,7 +7,7 @@ An interactive Spanish learning app for kids aged 6+, taking them from absolute 
 ### Learning content
 - **200 lessons** across 22 themed worlds: lessons 1–100 (Starter Island to Repaso Total) cover Pre-A1 to A1, and lessons 101–200 (Lo que he hecho to ¡Fiesta A2!) cover the A2 curriculum
 - **1,412 Spanish words and phrases** across vocabulary, grammar, the three past tenses, the future, and everyday situations (shopping, travel, health, opinions)
-- **14 activity types**: Learn, Flashcards, Listen, Matching, Drag & Match, Odd One Out, Quiz, Say It! (speaking), Sentences, Word Order, Stories, Warm-ups, Surprises and end-of-world Boss Battles
+- **15 activity types**: Learn, Flashcards, Listen, Matching, Drag & Match, Odd One Out, Quiz, Say It! (speaking), **Let's Talk! (conversations)**, Sentences, Word Order, Stories, Warm-ups, Surprises and end-of-world Boss Battles
 - **Guided lessons** that mix the activities differently in each lesson, scored 1–3 stars
 - **Daily review** with spaced repetition (Leitner boxes) so words stick
 - **Interactive stories** on every lesson, written around that lesson's vocabulary
@@ -239,3 +239,22 @@ Built for personal/educational use.
   device, and their partner checks each answer. Grown-ups get Castilian
   pronunciation tips worked out from the spelling (`src/domain/pronunciation.ts`).
   Only the child's answers count towards their word memory.
+
+## Conversations ("Let's talk!")
+
+Every one of the 200 lessons ends its practice with a short role-play
+(`content/conversations/world-XX.json`, 3–5 turns each): Sol or Luna asks a
+question in their own voice, as a waiter, a doctor, a ticket seller, Grandma on
+the phone… The child answers **out loud** or taps an answer.
+
+- Spoken answers are judged for a *sensible reply*, not an exact match
+  (`src/domain/conversation.ts`): a reply counts if it uses one of the turn's key
+  words (so personal answers like "Me llamo Tomás" work) or is close to a model
+  answer. After two tries the model answer is shown and spoken, and the chat goes on.
+- Tap options are the model answer plus replies that don't fit the question, so
+  tapping also practises *what makes sense in a conversation*.
+- The content check makes sure every lesson has exactly one conversation; the
+  authoring rules (every answer contains a key word, no wrong option does) keep
+  the judging fair.
+- **Learn together → Chat cards** shows the same questions to a grown-up, with an
+  example answer and its English, so families can have the conversation at home.

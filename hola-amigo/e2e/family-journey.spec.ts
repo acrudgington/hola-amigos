@@ -115,7 +115,7 @@ test("learn together → the weekly report shows it", async ({ page }, info) => 
   await page.getByRole("button", { name: /Practise/ }).first().click();
   await page.getByRole("button", { name: /Learn together/ }).click();
   await page.getByRole("button", { name: "Dad", exact: true }).click();
-  await page.getByRole("button", { name: /Let’s play/ }).click();
+  await page.getByRole("button", { name: /Word game/ }).click();
   for (let i = 0; i < 8; i++) {
     await expect(page.getByText(i % 2 === 0 ? /Mia’s turn/ : /Dad’s turn/)).toBeVisible();
     await page.getByRole("button", { name: /Check/ }).click();
@@ -165,5 +165,60 @@ test("an A2 lesson (101) plays from start to finish", async ({ page }) => {
   await page.locator(".next-card").click();
   await playThrough(page);
   await expect(page.getByText("Lesson complete!")).toBeVisible();
+  expect(errors).toEqual([]);
+});
+
+test("Let's talk: a full conversation, then chat cards in Learn together", async ({ page }, info) => {
+  const shots = process.env.SHOTS;
+  const errors: string[] = [];
+  page.on("pageerror", e => errors.push(e.message));
+  await page.goto("/");
+  await page.getByRole("tab", { name: /Sign up/i }).click();
+  await page.getByLabel("Your name").fill("Sam");
+  await page.getByLabel("Email").fill(`sam+${Date.now()}@example.com`);
+  await page.getByLabel("Password").fill("secret123");
+  await page.getByRole("checkbox", { name: /parent or guardian/ }).check();
+  await page.getByRole("button", { name: /Create account/ }).click();
+  await page.locator(".profile-tile--add").click();
+  await page.getByLabel("Child’s name").fill("Mia");
+  await page.getByRole("button", { name: "Add ✓" }).click();
+  await page.locator(".profile-tile").first().click();
+  await page.getByRole("button", { name: /new to Spanish/ }).click();
+
+  // Pretend lesson 1 is done, then practise its conversation on its own.
+  await expect(page.getByText(/Sol · study buddy/)).toBeVisible();
+  await page.evaluate(() => {
+    const key = Object.keys(localStorage).find(k => k.startsWith("hola_progress_"))!;
+    const p = JSON.parse(localStorage.getItem(key)!);
+    localStorage.setItem(key, JSON.stringify({ ...p, stars: { 1: 1 } }));
+  });
+  await page.reload();
+  await page.getByRole("button", { name: /^Lesson 1:/ }).click();
+  await page.getByRole("button", { name: /Let’s Talk/ }).click();
+  await expect(page.locator(".talk__bubble--them").first()).toContainText("¡Hola!");
+  for (let turn = 0; turn < 3; turn++) {
+    // Tap the right answer: it's the option the hint would show, so try each until one is accepted.
+    await expect(page.locator(".talk .choice").first()).toBeEnabled({ timeout: 10_000 });
+    const before = await page.locator(".talk__bubble--me").count();
+    for (let k = 0; k < 3 && (await page.locator(".talk__bubble--me").count()) === before; k++) {
+      const opts = page.locator(".talk .choice");
+      if (!(await opts.nth(k).isEnabled())) break;
+      await opts.nth(k).click();
+      await page.waitForTimeout(400);
+    }
+    if (turn === 1 && shots) await page.screenshot({ path: `${shots}/talk-${info.project.name}.png` });
+    await page.getByRole("button", { name: /Continue →|Finish ✓/ }).click();
+  }
+  await expect(page.locator(".talk")).toHaveCount(0);
+
+  // Chat cards in Learn together.
+  await page.goto("/");
+  await page.getByRole("button", { name: /Practise/ }).first().click();
+  await page.getByRole("button", { name: /Learn together/ }).click();
+  await page.getByRole("button", { name: /Chat cards/ }).click();
+  await expect(page.getByText(/ask Mia/)).toBeVisible();
+  await page.getByRole("button", { name: /Show an example answer/ }).click();
+  if (shots) await page.screenshot({ path: `${shots}/chatcards-${info.project.name}.png` });
+  await page.getByRole("button", { name: /¡Sí!/ }).click();
   expect(errors).toEqual([]);
 });
