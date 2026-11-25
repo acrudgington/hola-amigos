@@ -1,0 +1,1392 @@
+{
+  "world": 7,
+  "lessons": [
+    {
+      "id": 51,
+      "title": "Estaba haciendo",
+      "subtitle": "I was doing (imperfect)",
+      "emoji": "📚",
+      "milestone": false,
+      "funFact": "The imperfect tense in Spanish describes ongoing actions in the past — like 'I was doing'!",
+      "phrase": {
+        "es": "Estaba comiendo cuando llegó papá.",
+        "en": "I was eating when dad arrived."
+      },
+      "words": [
+        {
+          "es": "Estaba",
+          "en": "I was",
+          "say": "es-TAH-bah",
+          "emoji": "⏳"
+        },
+        {
+          "es": "Estaba comiendo",
+          "en": "I was eating",
+          "say": "es-TAH-bah ko-MYEN-do",
+          "emoji": "🍽️"
+        },
+        {
+          "es": "Estaba jugando",
+          "en": "I was playing",
+          "say": "es-TAH-bah hoo-GAHN-do",
+          "emoji": "⚽"
+        },
+        {
+          "es": "Estaba leyendo",
+          "en": "I was reading",
+          "say": "es-TAH-bah leh-YEN-do",
+          "emoji": "📖"
+        },
+        {
+          "es": "Estaba durmiendo",
+          "en": "I was sleeping",
+          "say": "es-TAH-bah door-MYEN-do",
+          "emoji": "😴"
+        },
+        {
+          "es": "De repente",
+          "en": "Suddenly",
+          "say": "deh reh-PEN-teh",
+          "emoji": "⚡"
+        },
+        {
+          "es": "Mientras",
+          "en": "While",
+          "say": "MYEN-tras",
+          "emoji": "⏰"
+        },
+        {
+          "es": "Antes",
+          "en": "Before",
+          "say": "AHN-tes",
+          "emoji": "⏪"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Estaba",
+            "leyendo",
+            "un",
+            "libro"
+          ],
+          "shuffle": [
+            "libro",
+            "un",
+            "Estaba",
+            "leyendo"
+          ],
+          "en": "I was reading a book."
+        },
+        {
+          "correct": [
+            "Mientras",
+            "jugaba",
+            "sonó",
+            "el",
+            "teléfono"
+          ],
+          "shuffle": [
+            "teléfono",
+            "sonó",
+            "Mientras",
+            "jugaba",
+            "el"
+          ],
+          "en": "While I was playing the phone rang."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "Yesterday's Surprise",
+        "paras": [
+          "Sol estaba leyendo un libro tranquilamente. De repente, hubo un ruido fuerte!",
+          "Era Luna! Estaba jugando con un nuevo juguete. Sol estaba sorprendido.",
+          "'¿Qué hacías?' asked Sol. 'Estaba descubriendo cosas nuevas!' Luna laughed."
+        ],
+        "qs": [
+          {
+            "q": "What was Sol doing?",
+            "opts": [
+              "Reading a book",
+              "Playing",
+              "Sleeping"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What was Luna doing?",
+            "opts": [
+              "Playing with a new toy",
+              "Reading",
+              "Singing"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How did Sol feel?",
+            "opts": [
+              "Surprised",
+              "Sad",
+              "Tired"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 52,
+      "title": "Cuando era pequeño",
+      "subtitle": "When I was little",
+      "emoji": "👶",
+      "milestone": false,
+      "funFact": "In Spain, school doesn't start until kids are 6 — they go to 'guardería' (nursery) before that!",
+      "phrase": {
+        "es": "Cuando era pequeño, vivía en Inglaterra.",
+        "en": "When I was little, I lived in England."
+      },
+      "words": [
+        {
+          "es": "Cuando era pequeño",
+          "en": "When I was little (m)",
+          "say": "KWAN-do EH-rah peh-KEH-nyo",
+          "emoji": "👶"
+        },
+        {
+          "es": "Cuando era pequeña",
+          "en": "When I was little (f)",
+          "say": "KWAN-do EH-rah peh-KEH-nyah",
+          "emoji": "👧"
+        },
+        {
+          "es": "Era",
+          "en": "I was / it was",
+          "say": "EH-rah",
+          "emoji": "⏳"
+        },
+        {
+          "es": "Tenía",
+          "en": "I had",
+          "say": "teh-NEE-ah",
+          "emoji": "🎁"
+        },
+        {
+          "es": "Vivía",
+          "en": "I lived",
+          "say": "bee-BEE-ah",
+          "emoji": "🏠"
+        },
+        {
+          "es": "Iba",
+          "en": "I used to go",
+          "say": "EE-bah",
+          "emoji": "🚶"
+        },
+        {
+          "es": "Hacía",
+          "en": "I used to do/make",
+          "say": "ah-THEE-ah",
+          "emoji": "🛠️"
+        },
+        {
+          "es": "Recuerdo",
+          "en": "I remember",
+          "say": "reh-KWEHR-do",
+          "emoji": "💭"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Cuando",
+            "era",
+            "pequeño",
+            "tenía",
+            "un",
+            "perro"
+          ],
+          "shuffle": [
+            "perro",
+            "Cuando",
+            "tenía",
+            "pequeño",
+            "era",
+            "un"
+          ],
+          "en": "When I was little I had a dog."
+        },
+        {
+          "correct": [
+            "Iba",
+            "al",
+            "colegio",
+            "en",
+            "autobús"
+          ],
+          "shuffle": [
+            "autobús",
+            "Iba",
+            "colegio",
+            "al",
+            "en"
+          ],
+          "en": "I used to go to school by bus."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "When I Was Little",
+        "paras": [
+          "Luna remembers: 'Cuando era pequeña, vivía en una nube. Tenía muchos amigos.'",
+          "'Yo también!' says Sol. 'Cuando era pequeño, era muy tímido. Pero ahora soy más valiente.'",
+          "Memories make them sonreír. ¡Cómo crece el tiempo!"
+        ],
+        "qs": [
+          {
+            "q": "Where did Luna live when little?",
+            "opts": [
+              "On a cloud",
+              "In space",
+              "On Earth"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How was Sol when little?",
+            "opts": [
+              "Shy",
+              "Brave",
+              "Sad"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What do their memories make them do?",
+            "opts": [
+              "Smile",
+              "Cry",
+              "Sleep"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 53,
+      "title": "Mi rutina antigua",
+      "subtitle": "My old routine",
+      "emoji": "🌅",
+      "milestone": false,
+      "funFact": "Spaniards say 'siempre' a lot — it sounds like 'syempre' and means 'always'!",
+      "phrase": {
+        "es": "Siempre comía pasta los domingos.",
+        "en": "I always used to eat pasta on Sundays."
+      },
+      "words": [
+        {
+          "es": "Siempre",
+          "en": "Always",
+          "say": "SYEM-preh",
+          "emoji": "♾️"
+        },
+        {
+          "es": "Nunca",
+          "en": "Never",
+          "say": "NOON-kah",
+          "emoji": "🚫"
+        },
+        {
+          "es": "A veces",
+          "en": "Sometimes",
+          "say": "ah BEH-thes",
+          "emoji": "🤷"
+        },
+        {
+          "es": "Todos los días",
+          "en": "Every day",
+          "say": "TOH-dos los DEE-as",
+          "emoji": "📅"
+        },
+        {
+          "es": "Cada semana",
+          "en": "Each week",
+          "say": "KAH-dah seh-MAH-nah",
+          "emoji": "📆"
+        },
+        {
+          "es": "Por la mañana",
+          "en": "In the morning",
+          "say": "por la ma-NYAH-nah",
+          "emoji": "🌅"
+        },
+        {
+          "es": "Por la noche",
+          "en": "At night",
+          "say": "por la NOH-cheh",
+          "emoji": "🌙"
+        },
+        {
+          "es": "Ya",
+          "en": "Already",
+          "say": "yah",
+          "emoji": "✅"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Nunca",
+            "iba",
+            "al",
+            "cine"
+          ],
+          "shuffle": [
+            "cine",
+            "Nunca",
+            "al",
+            "iba"
+          ],
+          "en": "I never used to go to the cinema."
+        },
+        {
+          "correct": [
+            "A",
+            "veces",
+            "jugaba",
+            "fútbol"
+          ],
+          "shuffle": [
+            "fútbol",
+            "A",
+            "jugaba",
+            "veces"
+          ],
+          "en": "Sometimes I used to play football."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "My Old Routine",
+        "paras": [
+          "Cuando era pequeño, Sol siempre se levantaba a las cinco. Por la mañana, comía cereales.",
+          "A veces iba al colegio en bicicleta. Por la noche leía cuentos with mamá.",
+          "Nunca se aburría. Todos los días eran una aventura."
+        ],
+        "qs": [
+          {
+            "q": "When did Sol get up when he was little?",
+            "opts": [
+              "At five",
+              "At seven",
+              "At ten"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How did he sometimes go to school?",
+            "opts": [
+              "By bike",
+              "By bus",
+              "On foot"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What did he do at night?",
+            "opts": [
+              "Read stories",
+              "Played",
+              "Slept"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 54,
+      "title": "Conectando ideas",
+      "subtitle": "Connecting ideas",
+      "emoji": "🔗",
+      "milestone": false,
+      "funFact": "In Spanish, 'porque' is one word for 'because', but '¿por qué?' (two words) is 'why?'!",
+      "phrase": {
+        "es": "Estoy contento porque hace sol.",
+        "en": "I'm happy because it's sunny."
+      },
+      "words": [
+        {
+          "es": "Porque",
+          "en": "Because",
+          "say": "POR-keh",
+          "emoji": "💡"
+        },
+        {
+          "es": "Aunque",
+          "en": "Although",
+          "say": "OWN-keh",
+          "emoji": "🤔"
+        },
+        {
+          "es": "Sin embargo",
+          "en": "However",
+          "say": "seen em-BAR-go",
+          "emoji": "🔄"
+        },
+        {
+          "es": "Por eso",
+          "en": "That's why",
+          "say": "por EH-soh",
+          "emoji": "➡️"
+        },
+        {
+          "es": "Además",
+          "en": "Also/besides",
+          "say": "ah-deh-MAS",
+          "emoji": "➕"
+        },
+        {
+          "es": "Por ejemplo",
+          "en": "For example",
+          "say": "por eh-HEM-plo",
+          "emoji": "🔍"
+        },
+        {
+          "es": "Es decir",
+          "en": "That is to say",
+          "say": "es deh-THEER",
+          "emoji": "💬"
+        },
+        {
+          "es": "Por fin",
+          "en": "Finally",
+          "say": "por FEEN",
+          "emoji": "🏁"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "No",
+            "como",
+            "carne",
+            "porque",
+            "soy",
+            "vegetariano"
+          ],
+          "shuffle": [
+            "vegetariano",
+            "carne",
+            "No",
+            "porque",
+            "soy",
+            "como"
+          ],
+          "en": "I don't eat meat because I'm vegetarian."
+        },
+        {
+          "correct": [
+            "Es",
+            "tarde",
+            "sin",
+            "embargo",
+            "no",
+            "tengo",
+            "sueño"
+          ],
+          "shuffle": [
+            "tengo",
+            "tarde",
+            "Es",
+            "embargo",
+            "no",
+            "sueño",
+            "sin"
+          ],
+          "en": "It's late however I'm not sleepy."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "Why I Love Friends",
+        "paras": [
+          "Sol explains: 'Quiero a Luna porque es divertida.' But aunque ella es más pequeña, es muy fuerte!",
+          "'Sin embargo,' says Estrella, 'no son hermanas.' 'Por eso somos amigas — by choice!' replies Luna.",
+          "Además, they share everything. Por ejemplo, sus libros, sus sueños, y su tiempo."
+        ],
+        "qs": [
+          {
+            "q": "Why does Sol love Luna?",
+            "opts": [
+              "She is fun",
+              "She is small",
+              "She is strong"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Estrella point out?",
+            "opts": [
+              "They are not sisters",
+              "They are sisters",
+              "They are old"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What do they share?",
+            "opts": [
+              "Everything",
+              "Just books",
+              "Just food"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 55,
+      "title": "Mi casa ideal",
+      "subtitle": "My dream house",
+      "emoji": "🏰",
+      "milestone": false,
+      "funFact": "Spain has lots of beautiful old castles — over 2,500 of them across the country!",
+      "phrase": {
+        "es": "Mi casa ideal tendría una piscina grande.",
+        "en": "My dream house would have a big swimming pool."
+      },
+      "words": [
+        {
+          "es": "Ideal",
+          "en": "Ideal/dream",
+          "say": "ee-deh-AL",
+          "emoji": "✨"
+        },
+        {
+          "es": "Soñar",
+          "en": "To dream",
+          "say": "so-NYAR",
+          "emoji": "💭"
+        },
+        {
+          "es": "Imaginar",
+          "en": "To imagine",
+          "say": "ee-mah-hee-NAR",
+          "emoji": "🌈"
+        },
+        {
+          "es": "Tendría",
+          "en": "It would have",
+          "say": "ten-DREE-ah",
+          "emoji": "🎁"
+        },
+        {
+          "es": "Una piscina",
+          "en": "A swimming pool",
+          "say": "oo-nah pees-THEE-nah",
+          "emoji": "🏊"
+        },
+        {
+          "es": "Un castillo",
+          "en": "A castle",
+          "say": "oon kahs-TEE-yo",
+          "emoji": "🏰"
+        },
+        {
+          "es": "Un tobogán",
+          "en": "A slide",
+          "say": "oon to-bo-GAHN",
+          "emoji": "🛝"
+        },
+        {
+          "es": "Una habitación enorme",
+          "en": "A huge room",
+          "say": "oo-nah ah-bee-tah-THYON eh-NOR-meh",
+          "emoji": "🛏️"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Mi",
+            "casa",
+            "ideal",
+            "sería",
+            "grande"
+          ],
+          "shuffle": [
+            "sería",
+            "casa",
+            "Mi",
+            "ideal",
+            "grande"
+          ],
+          "en": "My dream house would be big."
+        },
+        {
+          "correct": [
+            "Tendría",
+            "un",
+            "tobogán",
+            "y",
+            "una",
+            "piscina"
+          ],
+          "shuffle": [
+            "piscina",
+            "tobogán",
+            "una",
+            "Tendría",
+            "un",
+            "y"
+          ],
+          "en": "It would have a slide and a pool."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "My Dream House",
+        "paras": [
+          "Sol imagina su casa ideal: un castillo enorme with una piscina de chocolate!",
+          "Tendría un tobogán from his bedroom to the kitchen. ¡Sería divertidísimo!",
+          "Luna's casa ideal would have a library with a million books and a comfy nube to sleep on. ¡Qué sueños!"
+        ],
+        "qs": [
+          {
+            "q": "What would Sol's pool be made of?",
+            "opts": [
+              "Chocolate",
+              "Water",
+              "Juice"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Where would the slide go?",
+            "opts": [
+              "From bedroom to kitchen",
+              "To the garden",
+              "Outside"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What would Luna's library have?",
+            "opts": [
+              "A million books",
+              "A computer",
+              "A piano"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 56,
+      "title": "Mi viaje soñado",
+      "subtitle": "My dream trip",
+      "emoji": "🌍",
+      "milestone": false,
+      "funFact": "Spain is in Europe, but it has rainforests, deserts, beaches and mountains all in one country!",
+      "phrase": {
+        "es": "Quiero viajar a las montañas.",
+        "en": "I want to travel to the mountains."
+      },
+      "words": [
+        {
+          "es": "El viaje",
+          "en": "The trip",
+          "say": "el BYAH-heh",
+          "emoji": "✈️"
+        },
+        {
+          "es": "Viajar",
+          "en": "To travel",
+          "say": "byah-HAR",
+          "emoji": "🌍"
+        },
+        {
+          "es": "Visitar",
+          "en": "To visit",
+          "say": "bee-see-TAR",
+          "emoji": "🗺️"
+        },
+        {
+          "es": "La playa",
+          "en": "Beach",
+          "say": "la PLAH-yah",
+          "emoji": "🏖️"
+        },
+        {
+          "es": "Las montañas",
+          "en": "Mountains",
+          "say": "las mon-TAH-nyas",
+          "emoji": "⛰️"
+        },
+        {
+          "es": "El desierto",
+          "en": "Desert",
+          "say": "el deh-SYEHR-toh",
+          "emoji": "🏜️"
+        },
+        {
+          "es": "La selva",
+          "en": "Jungle",
+          "say": "la SEHL-bah",
+          "emoji": "🌴"
+        },
+        {
+          "es": "La maleta",
+          "en": "Suitcase",
+          "say": "la mah-LEH-tah",
+          "emoji": "🧳"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Voy",
+            "a",
+            "visitar",
+            "la",
+            "selva"
+          ],
+          "shuffle": [
+            "selva",
+            "visitar",
+            "Voy",
+            "la",
+            "a"
+          ],
+          "en": "I'm going to visit the jungle."
+        },
+        {
+          "correct": [
+            "Mi",
+            "maleta",
+            "es",
+            "muy",
+            "grande"
+          ],
+          "shuffle": [
+            "grande",
+            "maleta",
+            "Mi",
+            "muy",
+            "es"
+          ],
+          "en": "My suitcase is very big."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "Around the World",
+        "paras": [
+          "Sol sueña con viajar around the world. He wants to visitar la playa in Spain.",
+          "Then las montañas in Switzerland, el desierto in Egypt, and la selva in Brazil!",
+          "'Pero primero, necesito una maleta grande,' he laughs. ¡A viajar!"
+        ],
+        "qs": [
+          {
+            "q": "Where does Sol want to go first?",
+            "opts": [
+              "The beach in Spain",
+              "The mountains",
+              "The desert"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Sol want to visit in Brazil?",
+            "opts": [
+              "The jungle",
+              "The beach",
+              "The desert"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does he need first?",
+            "opts": [
+              "A big suitcase",
+              "A friend",
+              "Money"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 57,
+      "title": "Estoy de acuerdo",
+      "subtitle": "Agreeing & disagreeing",
+      "emoji": "💬",
+      "milestone": false,
+      "funFact": "Spanish kids say 'vale' all the time — it means 'OK' or 'I agree'!",
+      "phrase": {
+        "es": "Sí, claro, tienes razón.",
+        "en": "Yes, of course, you're right."
+      },
+      "words": [
+        {
+          "es": "Tienes razón",
+          "en": "You're right",
+          "say": "TYEH-nes rah-THON",
+          "emoji": "✅"
+        },
+        {
+          "es": "No tienes razón",
+          "en": "You're wrong",
+          "say": "no TYEH-nes rah-THON",
+          "emoji": "❌"
+        },
+        {
+          "es": "Yo también",
+          "en": "Me too",
+          "say": "yo tahm-BYEN",
+          "emoji": "👍"
+        },
+        {
+          "es": "Yo tampoco",
+          "en": "Me neither",
+          "say": "yo tahm-POH-ko",
+          "emoji": "👎"
+        },
+        {
+          "es": "Sí, claro",
+          "en": "Yes, of course",
+          "say": "see KLAH-ro",
+          "emoji": "✔️"
+        },
+        {
+          "es": "De ninguna manera",
+          "en": "No way",
+          "say": "deh neen-GOO-nah ma-NEH-rah",
+          "emoji": "🚫"
+        },
+        {
+          "es": "Más o menos",
+          "en": "More or less",
+          "say": "mahs oh MEH-nos",
+          "emoji": "🤷"
+        },
+        {
+          "es": "Exacto",
+          "en": "Exactly",
+          "say": "ek-SAK-toh",
+          "emoji": "💯"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Yo",
+            "también",
+            "quiero",
+            "helado"
+          ],
+          "shuffle": [
+            "helado",
+            "quiero",
+            "Yo",
+            "también"
+          ],
+          "en": "I want ice cream too."
+        },
+        {
+          "correct": [
+            "No",
+            "tienes",
+            "razón",
+            "es",
+            "verde"
+          ],
+          "shuffle": [
+            "verde",
+            "razón",
+            "No",
+            "es",
+            "tienes"
+          ],
+          "en": "You're wrong, it's green."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "The Big Debate",
+        "paras": [
+          "'Las galletas son lo mejor!' says Sol. 'Tienes razón!' replies Luna. 'Yo también pienso así.'",
+          "But Estrella says 'Yo no estoy de acuerdo. La fruta es mejor!'",
+          "'Más o menos,' laughs Sol. 'Las dos son ricas. Sí, claro, yes, yes, both are great!'"
+        ],
+        "qs": [
+          {
+            "q": "What does Sol love?",
+            "opts": [
+              "Cookies",
+              "Fruit",
+              "Cake"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Who disagrees?",
+            "opts": [
+              "Estrella",
+              "Luna",
+              "Nobody"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Sol decide?",
+            "opts": [
+              "Both are great",
+              "Cookies are best",
+              "Fruit is best"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 58,
+      "title": "Dando instrucciones",
+      "subtitle": "Giving instructions",
+      "emoji": "📋",
+      "milestone": false,
+      "funFact": "In Spanish, you can give instructions just by using the verb without 'you' — like 'Mezcla!' for 'Mix!'",
+      "phrase": {
+        "es": "Primero coge un huevo, luego mezcla.",
+        "en": "First take an egg, then mix."
+      },
+      "words": [
+        {
+          "es": "Primero",
+          "en": "First",
+          "say": "pree-MEH-ro",
+          "emoji": "1️⃣"
+        },
+        {
+          "es": "Luego",
+          "en": "Then",
+          "say": "LWEH-go",
+          "emoji": "2️⃣"
+        },
+        {
+          "es": "Después",
+          "en": "Afterwards",
+          "say": "des-PWES",
+          "emoji": "3️⃣"
+        },
+        {
+          "es": "Por último",
+          "en": "Finally",
+          "say": "por OOL-tee-mo",
+          "emoji": "🏁"
+        },
+        {
+          "es": "Coge",
+          "en": "Take/grab (you)",
+          "say": "KOH-heh",
+          "emoji": "✋"
+        },
+        {
+          "es": "Pon",
+          "en": "Put (you)",
+          "say": "pon",
+          "emoji": "📥"
+        },
+        {
+          "es": "Mezcla",
+          "en": "Mix (you)",
+          "say": "METH-klah",
+          "emoji": "🥄"
+        },
+        {
+          "es": "Espera",
+          "en": "Wait (you)",
+          "say": "es-PEH-rah",
+          "emoji": "⏰"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Primero",
+            "pon",
+            "el",
+            "agua"
+          ],
+          "shuffle": [
+            "agua",
+            "Primero",
+            "el",
+            "pon"
+          ],
+          "en": "First put the water."
+        },
+        {
+          "correct": [
+            "Luego",
+            "mezcla",
+            "todo",
+            "junto"
+          ],
+          "shuffle": [
+            "junto",
+            "todo",
+            "Luego",
+            "mezcla"
+          ],
+          "en": "Then mix everything together."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "How to Make a Sandwich",
+        "paras": [
+          "Sol teaches Luna: 'Primero, coge dos rebanadas de pan. Luego pon mantequilla.'",
+          "'Después mezcla queso y jamón. Por último, junta las dos rebanadas. ¡Listo!'",
+          "Luna prueba and says '¡Qué rico! Eres el mejor profesor de cocina!'"
+        ],
+        "qs": [
+          {
+            "q": "What do you take first?",
+            "opts": [
+              "Two slices of bread",
+              "Butter",
+              "Cheese"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What goes on next?",
+            "opts": [
+              "Butter",
+              "Bread",
+              "Ham"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How does Luna describe Sol?",
+            "opts": [
+              "The best cooking teacher",
+              "A bad cook",
+              "A friend"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 59,
+      "title": "Pidiendo consejos",
+      "subtitle": "Asking for advice",
+      "emoji": "🤔",
+      "milestone": false,
+      "funFact": "Spaniards often say 'tranqui' (short for 'tranquilo') to friends — it means 'chill out!'",
+      "phrase": {
+        "es": "¿Puedes ayudarme con la tarea?",
+        "en": "Can you help me with the homework?"
+      },
+      "words": [
+        {
+          "es": "¿Qué hago?",
+          "en": "What do I do?",
+          "say": "keh AH-go",
+          "emoji": "❓"
+        },
+        {
+          "es": "¿Puedes ayudarme?",
+          "en": "Can you help me?",
+          "say": "PWEH-des ah-yoo-DAR-meh",
+          "emoji": "🆘"
+        },
+        {
+          "es": "Deberías",
+          "en": "You should",
+          "say": "deh-beh-REE-as",
+          "emoji": "💡"
+        },
+        {
+          "es": "No deberías",
+          "en": "You shouldn't",
+          "say": "no deh-beh-REE-as",
+          "emoji": "⚠️"
+        },
+        {
+          "es": "Es mejor",
+          "en": "It's better",
+          "say": "es meh-HOR",
+          "emoji": "👍"
+        },
+        {
+          "es": "Tienes que",
+          "en": "You have to",
+          "say": "TYEH-nes keh",
+          "emoji": "❗"
+        },
+        {
+          "es": "Cuidado",
+          "en": "Be careful",
+          "say": "kwee-DAH-do",
+          "emoji": "⚠️"
+        },
+        {
+          "es": "Tranquilo",
+          "en": "Don't worry",
+          "say": "trahn-KEE-loh",
+          "emoji": "😌"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Deberías",
+            "descansar",
+            "más"
+          ],
+          "shuffle": [
+            "más",
+            "Deberías",
+            "descansar"
+          ],
+          "en": "You should rest more."
+        },
+        {
+          "correct": [
+            "Tienes",
+            "que",
+            "estudiar",
+            "mucho"
+          ],
+          "shuffle": [
+            "mucho",
+            "estudiar",
+            "Tienes",
+            "que"
+          ],
+          "en": "You have to study a lot."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "What Should I Do?",
+        "paras": [
+          "Sol is worried. '¿Qué hago, Luna? Tengo miedo del concierto.'",
+          "Luna gives advice: 'Tranquilo. Deberías respirar profundo. No deberías preocuparte tanto.'",
+          "'Tienes que practicar y disfrutar. Es mejor divertirse!' Sol smiles. ¡Buena consejera!"
+        ],
+        "qs": [
+          {
+            "q": "What is Sol scared of?",
+            "opts": [
+              "The concert",
+              "The school",
+              "Travel"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What should Sol do according to Luna?",
+            "opts": [
+              "Breathe deeply",
+              "Run away",
+              "Cry"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What is Luna good at?",
+            "opts": [
+              "Giving advice",
+              "Cooking",
+              "Singing"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 60,
+      "title": "¡Maestro narrador!",
+      "subtitle": "Storyteller Champion",
+      "emoji": "🏆",
+      "milestone": true,
+      "funFact": "You can now tell stories about the past, share opinions, give advice, and connect ideas! ¡Eres un maestro narrador! 🌟",
+      "phrase": {
+        "es": "Cuando era pequeño, soñaba con viajar a las montañas.",
+        "en": "When I was little, I dreamed of travelling to the mountains."
+      },
+      "words": [
+        {
+          "es": "Estaba haciendo",
+          "en": "I was doing",
+          "say": "es-TAH-bah ah-THYEN-do",
+          "emoji": "⏳"
+        },
+        {
+          "es": "Cuando era pequeño",
+          "en": "When I was little",
+          "say": "KWAN-do EH-rah peh-KEH-nyo",
+          "emoji": "👶"
+        },
+        {
+          "es": "Porque",
+          "en": "Because",
+          "say": "POR-keh",
+          "emoji": "💡"
+        },
+        {
+          "es": "Mi casa ideal",
+          "en": "My dream house",
+          "say": "mee KAH-sah ee-deh-AL",
+          "emoji": "🏰"
+        },
+        {
+          "es": "Quiero viajar",
+          "en": "I want to travel",
+          "say": "KYEH-ro byah-HAR",
+          "emoji": "✈️"
+        },
+        {
+          "es": "Tienes razón",
+          "en": "You're right",
+          "say": "TYEH-nes rah-THON",
+          "emoji": "✅"
+        },
+        {
+          "es": "Primero, luego",
+          "en": "First, then",
+          "say": "pree-MEH-ro, LWEH-go",
+          "emoji": "📋"
+        },
+        {
+          "es": "Deberías",
+          "en": "You should",
+          "say": "deh-beh-REE-as",
+          "emoji": "💡"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Cuando",
+            "era",
+            "pequeño",
+            "estaba",
+            "feliz"
+          ],
+          "shuffle": [
+            "feliz",
+            "Cuando",
+            "estaba",
+            "era",
+            "pequeño"
+          ],
+          "en": "When I was little I was happy."
+        },
+        {
+          "correct": [
+            "Primero",
+            "tienes",
+            "que",
+            "escuchar"
+          ],
+          "shuffle": [
+            "escuchar",
+            "tienes",
+            "Primero",
+            "que"
+          ],
+          "en": "First you have to listen."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Estaba comiendo' means:",
+          "opts": [
+            "I was eating",
+            "I will eat",
+            "I eat"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Cuando era pequeño' means:",
+          "opts": [
+            "When I was little",
+            "When I'm bigger",
+            "When I was sick"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Tienes razón' means:",
+          "opts": [
+            "You're right",
+            "You're tired",
+            "You're nice"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Deberías descansar' means:",
+          "opts": [
+            "You should rest",
+            "You can rest",
+            "You don't rest"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "The Master Storyteller",
+        "paras": [
+          "Sol and Luna sit under the stars. 'Cuando éramos pequeños,' says Sol, 'no sabíamos tantas palabras.'",
+          "'Ahora podemos contar historias del pasado y del futuro!' Luna replies. They are muy orgullosos.",
+          "Sol smiles: 'Eres mi mejor amiga, Luna.' '¡Y tú el mío!' replies Luna. ¡Qué aventura tan increíble!"
+        ],
+        "qs": [
+          {
+            "q": "What do they reflect on?",
+            "opts": [
+              "When they were little",
+              "The future",
+              "Other planets"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What can they do now?",
+            "opts": [
+              "Tell stories of past and future",
+              "Travel",
+              "Sing"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How do they feel about each other?",
+            "opts": [
+              "Best friends",
+              "Enemies",
+              "Strangers"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    }
+  ]
+}

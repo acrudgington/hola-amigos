@@ -1,0 +1,1068 @@
+{
+  "world": 4,
+  "lessons": [
+    {
+      "id": 25,
+      "title": "Ayer…",
+      "subtitle": "Yesterday (past)",
+      "emoji": "⏪",
+      "milestone": false,
+      "funFact": "Past tense words often end in -É or -Í!",
+      "phrase": {
+        "es": "Ayer fui a la playa.",
+        "en": "Yesterday I went to the beach."
+      },
+      "words": [
+        {
+          "es": "Ayer",
+          "en": "Yesterday",
+          "say": "ah-YEHR",
+          "emoji": "⏪"
+        },
+        {
+          "es": "Fui",
+          "en": "I went",
+          "say": "fwee",
+          "emoji": "🚶"
+        },
+        {
+          "es": "Comí",
+          "en": "I ate",
+          "say": "ko-MEE",
+          "emoji": "🍽️"
+        },
+        {
+          "es": "Jugué",
+          "en": "I played",
+          "say": "hoo-GEH",
+          "emoji": "⚽"
+        },
+        {
+          "es": "Vi",
+          "en": "I saw",
+          "say": "bee",
+          "emoji": "👀"
+        },
+        {
+          "es": "Compré",
+          "en": "I bought",
+          "say": "kom-PREH",
+          "emoji": "🛒"
+        },
+        {
+          "es": "Hablé",
+          "en": "I spoke",
+          "say": "ah-BLEH",
+          "emoji": "🗣️"
+        },
+        {
+          "es": "Nadé",
+          "en": "I swam",
+          "say": "na-DEH",
+          "emoji": "🏊"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Ayer",
+            "comí",
+            "pizza"
+          ],
+          "shuffle": [
+            "pizza",
+            "comí",
+            "Ayer"
+          ],
+          "en": "Yesterday I ate pizza."
+        },
+        {
+          "correct": [
+            "Ayer",
+            "jugué",
+            "al",
+            "fútbol"
+          ],
+          "shuffle": [
+            "al",
+            "jugué",
+            "fútbol",
+            "Ayer"
+          ],
+          "en": "Yesterday I played football."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "Ayer ___ al parque.",
+          "opts": [
+            "fui",
+            "voy",
+            "ir"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Ayer ___ una pizza.",
+          "opts": [
+            "como",
+            "comí",
+            "comer"
+          ],
+          "ans": 1
+        }
+      ],
+      "story": {
+        "title": "Yesterday's Adventure",
+        "paras": [
+          "Ayer, Pablo fui al parque con su perro. They walked, ran, and played all morning.",
+          "Después, Pablo comí un bocadillo and drank water. He saw a pájaro — it was azul and very bonito.",
+          "He jugó fútbol with his friends and then compró a helado. 'Ayer was the best day!' said Pablo."
+        ],
+        "qs": [
+          {
+            "q": "Where did Pablo go yesterday?",
+            "opts": [
+              "The park",
+              "The beach",
+              "School"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What did Pablo eat?",
+            "opts": [
+              "A bocadillo (sandwich)",
+              "Pizza",
+              "Pasta"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What did Pablo buy?",
+            "opts": [
+              "Ice cream",
+              "A book",
+              "A ball"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 26,
+      "title": "Mañana…",
+      "subtitle": "Tomorrow (future)",
+      "emoji": "⏩",
+      "milestone": false,
+      "funFact": "Say 'Voy a' + any action word for the future!",
+      "phrase": {
+        "es": "Mañana voy a ir a la playa.",
+        "en": "Tomorrow I'm going to the beach."
+      },
+      "words": [
+        {
+          "es": "Mañana",
+          "en": "Tomorrow",
+          "say": "ma-NYAH-na",
+          "emoji": "⏩"
+        },
+        {
+          "es": "Voy a",
+          "en": "I'm going to",
+          "say": "boy ah",
+          "emoji": "🚀"
+        },
+        {
+          "es": "Voy a ir",
+          "en": "I'm going to go",
+          "say": "boy ah EER",
+          "emoji": "🚶"
+        },
+        {
+          "es": "Voy a comer",
+          "en": "I'm going to eat",
+          "say": "boy ah ko-MEHR",
+          "emoji": "🍽️"
+        },
+        {
+          "es": "Voy a jugar",
+          "en": "I'm going to play",
+          "say": "boy ah hoo-GAR",
+          "emoji": "⚽"
+        },
+        {
+          "es": "Voy a nadar",
+          "en": "I'm going to swim",
+          "say": "boy ah na-DAR",
+          "emoji": "🏊"
+        },
+        {
+          "es": "Esta tarde",
+          "en": "This afternoon",
+          "say": "ES-ta TAR-deh",
+          "emoji": "🌤️"
+        },
+        {
+          "es": "El fin de semana",
+          "en": "The weekend",
+          "say": "el feen deh seh-MAH-na",
+          "emoji": "🎉"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Voy",
+            "a",
+            "jugar",
+            "al",
+            "fútbol"
+          ],
+          "shuffle": [
+            "al",
+            "jugar",
+            "Voy",
+            "fútbol",
+            "a"
+          ],
+          "en": "I'm going to play football."
+        },
+        {
+          "correct": [
+            "Mañana",
+            "voy",
+            "a",
+            "nadar"
+          ],
+          "shuffle": [
+            "nadar",
+            "Mañana",
+            "a",
+            "voy"
+          ],
+          "en": "Tomorrow I'm going to swim."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Voy a comer' means:",
+          "opts": [
+            "I'm going to eat",
+            "I ate",
+            "I'm eating"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Big Plans",
+        "paras": [
+          "'Mañana voy a ir a la playa,' says Sofía. 'Voy a nadar in the sea and build a castillo de arena!'",
+          "Her hermano says 'Voy a jugar al fútbol on the sand.' Mamá says 'Voy a comer paella!'",
+          "'This weekend is going to be amazing,' says Sofía. '¡Vamos a la playa!'"
+        ],
+        "qs": [
+          {
+            "q": "When are they going to the beach?",
+            "opts": [
+              "Tomorrow",
+              "Yesterday",
+              "Today"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What is Sofía going to build?",
+            "opts": [
+              "A sand castle",
+              "A boat",
+              "A house"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What is mamá going to eat?",
+            "opts": [
+              "Paella",
+              "Pizza",
+              "Pasta"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 27,
+      "title": "En el restaurante",
+      "subtitle": "At the restaurant",
+      "emoji": "🍽️",
+      "milestone": false,
+      "funFact": "'Menú del día' = 3 courses for under €12!",
+      "phrase": {
+        "es": "Quiero la sopa, por favor.",
+        "en": "I'd like the soup, please."
+      },
+      "words": [
+        {
+          "es": "La carta",
+          "en": "The menu",
+          "say": "la KAR-ta",
+          "emoji": "📋"
+        },
+        {
+          "es": "Quiero",
+          "en": "I'd like",
+          "say": "KYEH-ro",
+          "emoji": "🙏"
+        },
+        {
+          "es": "La cuenta",
+          "en": "The bill",
+          "say": "la KWEN-ta",
+          "emoji": "💰"
+        },
+        {
+          "es": "La carne",
+          "en": "Meat",
+          "say": "la KAR-neh",
+          "emoji": "🥩"
+        },
+        {
+          "es": "El pescado",
+          "en": "Fish",
+          "say": "el pes-KAH-do",
+          "emoji": "🐟"
+        },
+        {
+          "es": "La sopa",
+          "en": "Soup",
+          "say": "la SOH-pa",
+          "emoji": "🍲"
+        },
+        {
+          "es": "De postre",
+          "en": "For dessert",
+          "say": "deh POS-treh",
+          "emoji": "🍰"
+        },
+        {
+          "es": "¿Me trae…?",
+          "en": "Can you bring me…?",
+          "say": "meh TRAH-eh",
+          "emoji": "🙋"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Quiero",
+            "el",
+            "pollo",
+            "por",
+            "favor"
+          ],
+          "shuffle": [
+            "favor",
+            "pollo",
+            "Quiero",
+            "por",
+            "el"
+          ],
+          "en": "I'd like chicken please."
+        },
+        {
+          "correct": [
+            "La",
+            "cuenta",
+            "por",
+            "favor"
+          ],
+          "shuffle": [
+            "cuenta",
+            "favor",
+            "La",
+            "por"
+          ],
+          "en": "The bill please."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "Dinner at the Restaurant",
+        "paras": [
+          "The García family goes to a restaurant. The waiter brings la carta. 'Quiero la sopa,' says mamá. 'Quiero el pollo,' says papá.",
+          "The children order pescado and patatas fritas. 'De postre, quiero helado, por favor,' says Lucía.",
+          "After the meal, papá says 'La cuenta, por favor.' The food was delicious. '¡Qué rico!' says everyone."
+        ],
+        "qs": [
+          {
+            "q": "What does mamá order?",
+            "opts": [
+              "Soup",
+              "Chicken",
+              "Fish"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Lucía want for dessert?",
+            "opts": [
+              "Ice cream",
+              "Cake",
+              "Fruit"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does papá ask for at the end?",
+            "opts": [
+              "The bill (la cuenta)",
+              "More food",
+              "The menu"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 28,
+      "title": "De compras",
+      "subtitle": "Shopping",
+      "emoji": "🛍️",
+      "milestone": false,
+      "funFact": "Most shops close from 2pm to 5pm for lunch!",
+      "phrase": {
+        "es": "¿Cuánto cuesta la camiseta?",
+        "en": "How much does the T-shirt cost?"
+      },
+      "words": [
+        {
+          "es": "¿Cuánto cuesta?",
+          "en": "How much?",
+          "say": "KWAN-to KWES-ta",
+          "emoji": "💰"
+        },
+        {
+          "es": "Barato",
+          "en": "Cheap",
+          "say": "ba-RAH-to",
+          "emoji": "👍"
+        },
+        {
+          "es": "Caro",
+          "en": "Expensive",
+          "say": "KAH-ro",
+          "emoji": "💎"
+        },
+        {
+          "es": "La tienda",
+          "en": "Shop",
+          "say": "la TYEN-da",
+          "emoji": "🏪"
+        },
+        {
+          "es": "Comprar",
+          "en": "To buy",
+          "say": "kom-PRAR",
+          "emoji": "🛒"
+        },
+        {
+          "es": "El dinero",
+          "en": "Money",
+          "say": "el dee-NEH-ro",
+          "emoji": "💰"
+        },
+        {
+          "es": "La talla",
+          "en": "Size",
+          "say": "la TAH-ya",
+          "emoji": "📏"
+        },
+        {
+          "es": "Me lo llevo",
+          "en": "I'll take it",
+          "say": "meh lo YEH-bo",
+          "emoji": "🛍️"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "¿Cuánto",
+            "cuesta",
+            "el",
+            "libro?"
+          ],
+          "shuffle": [
+            "libro?",
+            "cuesta",
+            "¿Cuánto",
+            "el"
+          ],
+          "en": "How much does the book cost?"
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "Shopping Day",
+        "paras": [
+          "Ana goes to la tienda with mamá. She sees a camiseta azul. '¿Cuánto cuesta?' asks mamá. 'Quince euros,' says the shop lady.",
+          "'That's quite barato!' says mamá. But then Ana sees a vestido. It costs 80 euros! 'That's very caro,' says mamá.",
+          "In the end, Ana buys the camiseta. 'Me lo llevo!' she says. She uses her birthday dinero to pay. She is very feliz!"
+        ],
+        "qs": [
+          {
+            "q": "How much is the camiseta?",
+            "opts": [
+              "Quince (15) euros",
+              "Ochenta (80) euros",
+              "Cinco (5) euros"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Why don't they buy the dress?",
+            "opts": [
+              "It's too expensive (caro)",
+              "It's ugly",
+              "It's too small"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How does Ana pay?",
+            "opts": [
+              "With birthday money",
+              "With a card",
+              "Mamá pays"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 29,
+      "title": "¿Dónde está?",
+      "subtitle": "Directions",
+      "emoji": "🗺️",
+      "milestone": false,
+      "funFact": "Spaniards love using roundabouts for directions!",
+      "phrase": {
+        "es": "¿Dónde está la playa?",
+        "en": "Where is the beach?"
+      },
+      "words": [
+        {
+          "es": "¿Dónde está?",
+          "en": "Where is it?",
+          "say": "DON-deh es-TAH",
+          "emoji": "❓"
+        },
+        {
+          "es": "A la derecha",
+          "en": "On the right",
+          "say": "a la deh-REH-cha",
+          "emoji": "👉"
+        },
+        {
+          "es": "A la izquierda",
+          "en": "On the left",
+          "say": "a la eeth-KYEHR-da",
+          "emoji": "👈"
+        },
+        {
+          "es": "Todo recto",
+          "en": "Straight on",
+          "say": "TOH-do RREK-to",
+          "emoji": "⬆️"
+        },
+        {
+          "es": "Cerca",
+          "en": "Near",
+          "say": "THEHR-ka",
+          "emoji": "📍"
+        },
+        {
+          "es": "Lejos",
+          "en": "Far",
+          "say": "LEH-hos",
+          "emoji": "🔭"
+        },
+        {
+          "es": "Aquí",
+          "en": "Here",
+          "say": "ah-KEE",
+          "emoji": "📌"
+        },
+        {
+          "es": "Allí",
+          "en": "There",
+          "say": "ah-YEE",
+          "emoji": "👉"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "La",
+            "playa",
+            "está",
+            "cerca"
+          ],
+          "shuffle": [
+            "cerca",
+            "La",
+            "está",
+            "playa"
+          ],
+          "en": "The beach is near."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "The Lost Dog",
+        "paras": [
+          "Pedro's perro Coco is lost! '¿Dónde está Coco?' Pedro asks a lady. 'I don't know,' she says. Pedro is triste.",
+          "Pedro asks a man: '¿Dónde está el parque?' The man says 'Todo recto and then a la derecha.' The park is cerca!",
+          "Pedro runs to the park. And there is Coco! He's playing with other perros! '¡Aquí estás!' says Pedro. He is very feliz."
+        ],
+        "qs": [
+          {
+            "q": "What is lost?",
+            "opts": [
+              "Pedro's dog",
+              "Pedro's ball",
+              "Pedro's book"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Where is the park?",
+            "opts": [
+              "Straight on then right",
+              "On the left",
+              "Very far away"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Where does Pedro find Coco?",
+            "opts": [
+              "In the park",
+              "At school",
+              "At home"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 30,
+      "title": "Me duele…",
+      "subtitle": "Health",
+      "emoji": "🏥",
+      "milestone": false,
+      "funFact": "Pharmacists in Spain help with many small problems!",
+      "phrase": {
+        "es": "Me duele la cabeza.",
+        "en": "My head hurts."
+      },
+      "words": [
+        {
+          "es": "Me duele",
+          "en": "It hurts",
+          "say": "meh DWEH-leh",
+          "emoji": "🤕"
+        },
+        {
+          "es": "La cabeza",
+          "en": "Head",
+          "say": "la ka-BEH-tha",
+          "emoji": "🤯"
+        },
+        {
+          "es": "El estómago",
+          "en": "Stomach",
+          "say": "el es-TOH-ma-go",
+          "emoji": "🤢"
+        },
+        {
+          "es": "La garganta",
+          "en": "Throat",
+          "say": "la gar-GAN-ta",
+          "emoji": "😷"
+        },
+        {
+          "es": "Estoy enfermo",
+          "en": "I'm sick",
+          "say": "es-TOY en-FEHR-mo",
+          "emoji": "🤒"
+        },
+        {
+          "es": "La farmacia",
+          "en": "Pharmacy",
+          "say": "la far-MAH-thya",
+          "emoji": "💊"
+        },
+        {
+          "es": "El médico",
+          "en": "Doctor",
+          "say": "el MEH-dee-ko",
+          "emoji": "👨‍⚕️"
+        },
+        {
+          "es": "Necesito",
+          "en": "I need",
+          "say": "neh-theh-SEE-to",
+          "emoji": "❗"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Me",
+            "duele",
+            "el",
+            "estómago"
+          ],
+          "shuffle": [
+            "estómago",
+            "Me",
+            "el",
+            "duele"
+          ],
+          "en": "My stomach hurts."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "The School Nurse",
+        "paras": [
+          "Marta feels terrible at school. 'Me duele la cabeza,' she tells la profe. The profe sends her to the nurse.",
+          "The nurse asks: '¿Te duele el estómago?' Marta says 'No, me duele la garganta también.' She is enfermo.",
+          "The nurse says 'Necesitas ir a la farmacia con tu mamá.' Mamá comes and takes her to el médico. After some medicine, Marta feels much better!"
+        ],
+        "qs": [
+          {
+            "q": "What hurts first?",
+            "opts": [
+              "La cabeza (head)",
+              "El estómago (stomach)",
+              "Los pies (feet)"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What else hurts?",
+            "opts": [
+              "La garganta (throat)",
+              "Las manos (hands)",
+              "Los ojos (eyes)"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Where does mamá take Marta?",
+            "opts": [
+              "To the doctor",
+              "To the beach",
+              "To school"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 31,
+      "title": "Un cuento",
+      "subtitle": "Story time",
+      "emoji": "📖",
+      "milestone": false,
+      "funFact": "Spanish stories begin with 'Había una vez'!",
+      "phrase": {
+        "es": "Había una vez un niño muy valiente.",
+        "en": "Once upon a time a very brave boy."
+      },
+      "words": [
+        {
+          "es": "Había una vez",
+          "en": "Once upon a time",
+          "say": "ah-BEE-a OO-na beth",
+          "emoji": "📖"
+        },
+        {
+          "es": "El niño",
+          "en": "The boy",
+          "say": "el NEE-nyo",
+          "emoji": "👦"
+        },
+        {
+          "es": "La niña",
+          "en": "The girl",
+          "say": "la NEE-nya",
+          "emoji": "👧"
+        },
+        {
+          "es": "Fue",
+          "en": "He/she went",
+          "say": "fweh",
+          "emoji": "🚶"
+        },
+        {
+          "es": "Encontró",
+          "en": "Found",
+          "say": "en-kon-TRO",
+          "emoji": "🔍"
+        },
+        {
+          "es": "Dijo",
+          "en": "Said",
+          "say": "DEE-ho",
+          "emoji": "💬"
+        },
+        {
+          "es": "Muy contento",
+          "en": "Very happy",
+          "say": "mooy kon-TEN-to",
+          "emoji": "😊"
+        },
+        {
+          "es": "Fin",
+          "en": "The end",
+          "say": "feen",
+          "emoji": "🔚"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "El",
+            "niño",
+            "fue",
+            "a",
+            "la",
+            "playa"
+          ],
+          "shuffle": [
+            "playa",
+            "fue",
+            "El",
+            "la",
+            "a",
+            "niño"
+          ],
+          "en": "The boy went to the beach."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "The Boy and the Shell",
+        "paras": [
+          "Había una vez un niño. Se llamaba Pablo. Pablo fue a la playa con su familia.",
+          "En la playa, Pablo encontró una concha muy bonita. Era grande y rosa.",
+          "Pablo dijo: '¡Mira, mamá!' Su mamá dijo: '¡Qué bonita!' Pablo estaba muy contento. Fin."
+        ],
+        "qs": [
+          {
+            "q": "Where did Pablo go?",
+            "opts": [
+              "The beach",
+              "School",
+              "The shop"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What did he find?",
+            "opts": [
+              "A shell",
+              "A fish",
+              "A book"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How did Pablo feel?",
+            "opts": [
+              "Very happy",
+              "Sad",
+              "Scared"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 32,
+      "title": "¡Super Campeón!",
+      "subtitle": "A2 Final Challenge",
+      "emoji": "🏆",
+      "milestone": true,
+      "funFact": "You finished EVERYTHING! 300+ words, sentences, past, future, stories! 🎉🏆",
+      "phrase": {
+        "es": "¡Soy un super campeón del español!",
+        "en": "I'm a super Spanish champion!"
+      },
+      "words": [
+        {
+          "es": "Me gusta",
+          "en": "I like",
+          "say": "meh GOOS-ta",
+          "emoji": "❤️"
+        },
+        {
+          "es": "Quiero",
+          "en": "I want",
+          "say": "KYEH-ro",
+          "emoji": "🙏"
+        },
+        {
+          "es": "Ayer fui",
+          "en": "Yesterday I went",
+          "say": "ah-YEHR fwee",
+          "emoji": "⏪"
+        },
+        {
+          "es": "Voy a ir",
+          "en": "I'm going to go",
+          "say": "boy ah EER",
+          "emoji": "⏩"
+        },
+        {
+          "es": "Me duele",
+          "en": "It hurts",
+          "say": "meh DWEH-leh",
+          "emoji": "🤕"
+        },
+        {
+          "es": "¿Cuánto cuesta?",
+          "en": "How much?",
+          "say": "KWAN-to KWES-ta",
+          "emoji": "💰"
+        },
+        {
+          "es": "Tengo",
+          "en": "I have",
+          "say": "TEN-go",
+          "emoji": "🎁"
+        },
+        {
+          "es": "¡Soy un campeón!",
+          "en": "I'm a champion!",
+          "say": "soy oon kam-peh-ON",
+          "emoji": "🏆"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Ayer",
+            "fui",
+            "a",
+            "la",
+            "playa"
+          ],
+          "shuffle": [
+            "playa",
+            "fui",
+            "Ayer",
+            "la",
+            "a"
+          ],
+          "en": "Yesterday I went to the beach."
+        },
+        {
+          "correct": [
+            "Me",
+            "gusta",
+            "mucho",
+            "el",
+            "chocolate"
+          ],
+          "shuffle": [
+            "chocolate",
+            "mucho",
+            "Me",
+            "el",
+            "gusta"
+          ],
+          "en": "I really like chocolate."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Ayer comí pizza' means:",
+          "opts": [
+            "Yesterday I ate pizza",
+            "Tomorrow I'll eat pizza",
+            "I eat pizza"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Voy a nadar' means:",
+          "opts": [
+            "I'm going to swim",
+            "I swam",
+            "I like swimming"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Me duele la cabeza' means:",
+          "opts": [
+            "My head hurts",
+            "I have a head",
+            "I like my head"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "The Super Champion",
+        "paras": [
+          "You started with just 'Hola!' Now you can say SO much more! You can talk about the past: 'Ayer fui a la playa.'",
+          "You can talk about the future: 'Mañana voy a jugar.' You can order food, go shopping, give directions, and tell stories!",
+          "You know over 300 Spanish words. You are a SUPER CAMPEÓN! ¡Felicidades! (Congratulations!) 🏆🌟"
+        ],
+        "qs": [
+          {
+            "q": "'Ayer fui a la playa' talks about:",
+            "opts": [
+              "The past (yesterday)",
+              "The future (tomorrow)",
+              "Right now"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "'Mañana voy a jugar' talks about:",
+            "opts": [
+              "The future (tomorrow)",
+              "The past (yesterday)",
+              "Right now"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How many words have you learned?",
+            "opts": [
+              "Over 300",
+              "Over 50",
+              "Over 10"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    }
+  ]
+}

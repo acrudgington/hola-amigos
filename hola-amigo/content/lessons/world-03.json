@@ -1,0 +1,1097 @@
+{
+  "world": 3,
+  "lessons": [
+    {
+      "id": 17,
+      "title": "Yo soy…",
+      "subtitle": "I am…",
+      "emoji": "🙋",
+      "milestone": false,
+      "funFact": "Drop 'yo' — 'soy' already means 'I am'!",
+      "phrase": {
+        "es": "Yo soy alto y simpático.",
+        "en": "I am tall and friendly."
+      },
+      "words": [
+        {
+          "es": "Yo soy",
+          "en": "I am",
+          "say": "yo SOY",
+          "emoji": "🙋"
+        },
+        {
+          "es": "Tú eres",
+          "en": "You are",
+          "say": "too EH-res",
+          "emoji": "👉"
+        },
+        {
+          "es": "Él es",
+          "en": "He is",
+          "say": "el es",
+          "emoji": "👦"
+        },
+        {
+          "es": "Ella es",
+          "en": "She is",
+          "say": "EH-ya es",
+          "emoji": "👧"
+        },
+        {
+          "es": "Grande",
+          "en": "Big",
+          "say": "GRAHN-deh",
+          "emoji": "🐘"
+        },
+        {
+          "es": "Pequeño",
+          "en": "Small",
+          "say": "peh-KEH-nyo",
+          "emoji": "🐜"
+        },
+        {
+          "es": "Alto",
+          "en": "Tall",
+          "say": "AHL-to",
+          "emoji": "🦒"
+        },
+        {
+          "es": "Simpático",
+          "en": "Nice",
+          "say": "seem-PAH-tee-ko",
+          "emoji": "😊"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Yo",
+            "soy",
+            "alto"
+          ],
+          "shuffle": [
+            "alto",
+            "Yo",
+            "soy"
+          ],
+          "en": "I am tall."
+        },
+        {
+          "correct": [
+            "Ella",
+            "es",
+            "simpática"
+          ],
+          "shuffle": [
+            "es",
+            "simpática",
+            "Ella"
+          ],
+          "en": "She is friendly."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "Who Am I?",
+        "paras": [
+          "'Yo soy grande,' says the elefante. 'Yo soy pequeño,' says the ratón (mouse). 'Yo soy alto,' says the jirafa (giraffe).",
+          "'¿Y tú? ¿Quién eres?' asks the elefante to a child. The child thinks...",
+          "'Yo soy simpático y un poco pequeño... ¡pero soy muy valiente!' Everyone laughs. Tú eres fantástico!"
+        ],
+        "qs": [
+          {
+            "q": "Who says 'Yo soy grande'?",
+            "opts": [
+              "The elephant",
+              "The mouse",
+              "The giraffe"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Who is 'alto' (tall)?",
+            "opts": [
+              "The giraffe",
+              "The elephant",
+              "The mouse"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does the child say about themselves?",
+            "opts": [
+              "Simpático and valiente",
+              "Grande and alto",
+              "Pequeño and triste"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 18,
+      "title": "Yo tengo…",
+      "subtitle": "I have…",
+      "emoji": "🎁",
+      "milestone": false,
+      "funFact": "You 'have' years: 'Tengo diez años'!",
+      "phrase": {
+        "es": "Tengo un perro y dos gatos.",
+        "en": "I have a dog and two cats."
+      },
+      "words": [
+        {
+          "es": "Yo tengo",
+          "en": "I have",
+          "say": "yo TEN-go",
+          "emoji": "🎁"
+        },
+        {
+          "es": "Tú tienes",
+          "en": "You have",
+          "say": "too TYEH-nes",
+          "emoji": "👉"
+        },
+        {
+          "es": "Un",
+          "en": "A (boy word)",
+          "say": "oon",
+          "emoji": "🔵"
+        },
+        {
+          "es": "Una",
+          "en": "A (girl word)",
+          "say": "OO-na",
+          "emoji": "🔴"
+        },
+        {
+          "es": "Años",
+          "en": "Years old",
+          "say": "AH-nyos",
+          "emoji": "🎂"
+        },
+        {
+          "es": "Perro",
+          "en": "Dog",
+          "say": "PEH-rro",
+          "emoji": "🐕"
+        },
+        {
+          "es": "Gatos",
+          "en": "Cats",
+          "say": "GAH-tos",
+          "emoji": "🐱"
+        },
+        {
+          "es": "Hermanos",
+          "en": "Siblings",
+          "say": "er-MAH-nos",
+          "emoji": "👧👦"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Tengo",
+            "un",
+            "perro"
+          ],
+          "shuffle": [
+            "un",
+            "Tengo",
+            "perro"
+          ],
+          "en": "I have a dog."
+        },
+        {
+          "correct": [
+            "Tengo",
+            "diez",
+            "años"
+          ],
+          "shuffle": [
+            "años",
+            "Tengo",
+            "diez"
+          ],
+          "en": "I am ten years old."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "The Birthday Party",
+        "paras": [
+          "Marta has a birthday party. 'Tengo ocho años!' she says. She has un perro and dos gatos at home.",
+          "Her amigo Luis says 'Tengo un regalo para ti!' It is a libro about animales. Marta has many regalos.",
+          "'Tengo un hermano and una hermana,' says Marta. 'We are a big familia!' Everyone eats tarta and is feliz."
+        ],
+        "qs": [
+          {
+            "q": "How old is Marta?",
+            "opts": [
+              "Ocho (eight)",
+              "Seis (six)",
+              "Diez (ten)"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How many cats does Marta have?",
+            "opts": [
+              "Dos (two)",
+              "Uno (one)",
+              "Tres (three)"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What present does Luis give?",
+            "opts": [
+              "A book about animals",
+              "A ball",
+              "Chocolate"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 19,
+      "title": "Me gusta",
+      "subtitle": "I like…",
+      "emoji": "❤️",
+      "milestone": false,
+      "funFact": "'Me gusta' means 'it pleases me' — backwards!",
+      "phrase": {
+        "es": "Me gusta la pizza pero no me gusta el pescado.",
+        "en": "I like pizza but not fish."
+      },
+      "words": [
+        {
+          "es": "Me gusta",
+          "en": "I like (one thing)",
+          "say": "meh GOOS-ta",
+          "emoji": "❤️"
+        },
+        {
+          "es": "Me gustan",
+          "en": "I like (many)",
+          "say": "meh GOOS-tan",
+          "emoji": "❤️"
+        },
+        {
+          "es": "No me gusta",
+          "en": "I don't like",
+          "say": "no meh GOOS-ta",
+          "emoji": "👎"
+        },
+        {
+          "es": "Me encanta",
+          "en": "I love",
+          "say": "meh en-KAHN-ta",
+          "emoji": "😍"
+        },
+        {
+          "es": "Mucho",
+          "en": "A lot",
+          "say": "MOO-cho",
+          "emoji": "💯"
+        },
+        {
+          "es": "También",
+          "en": "Also",
+          "say": "tam-BYEN",
+          "emoji": "➕"
+        },
+        {
+          "es": "Pero",
+          "en": "But",
+          "say": "PEH-ro",
+          "emoji": "🔄"
+        },
+        {
+          "es": "Y",
+          "en": "And",
+          "say": "ee",
+          "emoji": "➕"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Me",
+            "gusta",
+            "el",
+            "chocolate"
+          ],
+          "shuffle": [
+            "chocolate",
+            "Me",
+            "el",
+            "gusta"
+          ],
+          "en": "I like chocolate."
+        },
+        {
+          "correct": [
+            "No",
+            "me",
+            "gustan",
+            "las",
+            "verduras"
+          ],
+          "shuffle": [
+            "verduras",
+            "No",
+            "las",
+            "me",
+            "gustan"
+          ],
+          "en": "I don't like vegetables."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "The Picky Eater",
+        "paras": [
+          "Jaime is picky. 'No me gusta la sopa. No me gustan las verduras. No me gusta el pescado,' he says every day.",
+          "But then mamá makes chocolate cake. '¡Me encanta el chocolate!' says Jaime. 'Y me gusta la tarta también!'",
+          "Mamá laughs. 'OK, but you need to eat vegetables too.' Jaime thinks. '...Me gusta la pizza con verduras.' Mamá is happy!"
+        ],
+        "qs": [
+          {
+            "q": "What does Jaime NOT like?",
+            "opts": [
+              "Soup, vegetables, fish",
+              "Pizza, chocolate, cake",
+              "Bread, cheese, milk"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Jaime love?",
+            "opts": [
+              "Chocolate",
+              "Fish",
+              "Soup"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What compromise does Jaime make?",
+            "opts": [
+              "Pizza with vegetables",
+              "Soup with chocolate",
+              "Fish with cake"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 20,
+      "title": "Quiero y puedo",
+      "subtitle": "I want / I can",
+      "emoji": "💪",
+      "milestone": false,
+      "funFact": "'Quiero' + any action word works!",
+      "phrase": {
+        "es": "Quiero jugar al fútbol.",
+        "en": "I want to play football."
+      },
+      "words": [
+        {
+          "es": "Quiero",
+          "en": "I want",
+          "say": "KYEH-ro",
+          "emoji": "🙏"
+        },
+        {
+          "es": "Puedo",
+          "en": "I can",
+          "say": "PWEH-do",
+          "emoji": "💪"
+        },
+        {
+          "es": "Necesito",
+          "en": "I need",
+          "say": "neh-theh-SEE-to",
+          "emoji": "❗"
+        },
+        {
+          "es": "Ir",
+          "en": "To go",
+          "say": "eer",
+          "emoji": "🚶"
+        },
+        {
+          "es": "Comprar",
+          "en": "To buy",
+          "say": "kom-PRAR",
+          "emoji": "🛒"
+        },
+        {
+          "es": "Jugar",
+          "en": "To play",
+          "say": "hoo-GAR",
+          "emoji": "⚽"
+        },
+        {
+          "es": "Comer",
+          "en": "To eat",
+          "say": "ko-MEHR",
+          "emoji": "🍽️"
+        },
+        {
+          "es": "Estudiar",
+          "en": "To study",
+          "say": "es-too-DYAR",
+          "emoji": "📖"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Quiero",
+            "ir",
+            "a",
+            "la",
+            "playa"
+          ],
+          "shuffle": [
+            "la",
+            "Quiero",
+            "playa",
+            "a",
+            "ir"
+          ],
+          "en": "I want to go to the beach."
+        },
+        {
+          "correct": [
+            "Puedo",
+            "nadar",
+            "muy",
+            "bien"
+          ],
+          "shuffle": [
+            "bien",
+            "Puedo",
+            "muy",
+            "nadar"
+          ],
+          "en": "I can swim very well."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "The Adventure Plan",
+        "paras": [
+          "'Quiero ir a la playa,' says Ana. 'Puedo nadar muy bien!' Her hermano says 'Quiero jugar al fútbol.'",
+          "Mamá says 'Necesito comprar comida primero.' They go to the tienda. Ana wants to buy helado.",
+          "After the tienda, they go to the playa. Ana can swim, hermano can play, and they all eat helado. ¡Perfecto!"
+        ],
+        "qs": [
+          {
+            "q": "Where does Ana want to go?",
+            "opts": [
+              "The beach",
+              "School",
+              "The park"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does mamá need to do first?",
+            "opts": [
+              "Buy food",
+              "Cook dinner",
+              "Clean the house"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Ana want to buy?",
+            "opts": [
+              "Ice cream",
+              "A book",
+              "Trainers"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 21,
+      "title": "¿Qué hora es?",
+      "subtitle": "Telling the time",
+      "emoji": "🕐",
+      "milestone": false,
+      "funFact": "Spain uses the 24-hour clock a lot!",
+      "phrase": {
+        "es": "Son las tres de la tarde.",
+        "en": "It's 3pm."
+      },
+      "words": [
+        {
+          "es": "¿Qué hora es?",
+          "en": "What time is it?",
+          "say": "keh OH-ra es",
+          "emoji": "🕐"
+        },
+        {
+          "es": "Es la una",
+          "en": "It's 1 o'clock",
+          "say": "es la OO-na",
+          "emoji": "🕐"
+        },
+        {
+          "es": "Son las dos",
+          "en": "It's 2 o'clock",
+          "say": "son las DOS",
+          "emoji": "🕑"
+        },
+        {
+          "es": "Y media",
+          "en": "Half past",
+          "say": "ee MEH-dya",
+          "emoji": "🕧"
+        },
+        {
+          "es": "Y cuarto",
+          "en": "Quarter past",
+          "say": "ee KWAR-to",
+          "emoji": "🕐"
+        },
+        {
+          "es": "De la mañana",
+          "en": "In the morning",
+          "say": "deh la ma-NYAH-na",
+          "emoji": "🌅"
+        },
+        {
+          "es": "De la tarde",
+          "en": "In the afternoon",
+          "say": "deh la TAR-deh",
+          "emoji": "🌤️"
+        },
+        {
+          "es": "De la noche",
+          "en": "At night",
+          "say": "deh la NOH-cheh",
+          "emoji": "🌙"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Son",
+            "las",
+            "dos",
+            "y",
+            "media"
+          ],
+          "shuffle": [
+            "media",
+            "Son",
+            "y",
+            "las",
+            "dos"
+          ],
+          "en": "It's half past two."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "The Clock Tower",
+        "paras": [
+          "In the middle of the town there is a big clock tower. At es la una it rings ONCE. BONG! At son las dos it rings TWICE. BONG BONG!",
+          "School starts at son las nueve de la mañana. Lunch is at son las dos y media. Home time is at son las cuatro.",
+          "At night, son las diez de la noche, the clock rings TEN times! All the children are in bed. ¡Buenas noches!"
+        ],
+        "qs": [
+          {
+            "q": "How many times does the clock ring at 'es la una'?",
+            "opts": [
+              "Once",
+              "Twice",
+              "Three times"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What time is lunch?",
+            "opts": [
+              "Son las dos y media (2:30)",
+              "Son las tres (3:00)",
+              "Es la una (1:00)"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What time do children go to bed?",
+            "opts": [
+              "Son las diez de la noche (10pm)",
+              "Son las ocho (8pm)",
+              "Son las seis (6pm)"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 22,
+      "title": "Mi día",
+      "subtitle": "My daily routine",
+      "emoji": "🌅",
+      "milestone": false,
+      "funFact": "Spanish kids often don't sleep until 10pm!",
+      "phrase": {
+        "es": "Me despierto a las siete.",
+        "en": "I wake up at seven."
+      },
+      "words": [
+        {
+          "es": "Me despierto",
+          "en": "I wake up",
+          "say": "meh des-PYEHR-to",
+          "emoji": "⏰"
+        },
+        {
+          "es": "Me ducho",
+          "en": "I shower",
+          "say": "meh DOO-cho",
+          "emoji": "🚿"
+        },
+        {
+          "es": "Desayuno",
+          "en": "I have breakfast",
+          "say": "deh-sa-YOO-no",
+          "emoji": "🥐"
+        },
+        {
+          "es": "Voy al cole",
+          "en": "I go to school",
+          "say": "boy al KOH-leh",
+          "emoji": "🏫"
+        },
+        {
+          "es": "Como",
+          "en": "I eat lunch",
+          "say": "KOH-mo",
+          "emoji": "🍽️"
+        },
+        {
+          "es": "Juego",
+          "en": "I play",
+          "say": "HWEH-go",
+          "emoji": "⚽"
+        },
+        {
+          "es": "Ceno",
+          "en": "I have dinner",
+          "say": "THEH-no",
+          "emoji": "🍲"
+        },
+        {
+          "es": "Me acuesto",
+          "en": "I go to bed",
+          "say": "meh ah-KWES-to",
+          "emoji": "🛏️"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Me",
+            "despierto",
+            "a",
+            "las",
+            "siete"
+          ],
+          "shuffle": [
+            "siete",
+            "Me",
+            "a",
+            "despierto",
+            "las"
+          ],
+          "en": "I wake up at 7."
+        },
+        {
+          "correct": [
+            "Voy",
+            "al",
+            "cole",
+            "a",
+            "las",
+            "nueve"
+          ],
+          "shuffle": [
+            "nueve",
+            "las",
+            "Voy",
+            "a",
+            "cole",
+            "al"
+          ],
+          "en": "I go to school at 9."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "Carlos's Day",
+        "paras": [
+          "Carlos se despierta at seven. He se ducha and then desayuna cereal with leche. At half past eight, he va al cole.",
+          "At two o'clock, Carlos comes home and como pasta. In the afternoon, he juega football with his amigos.",
+          "At nine, Carlos cena with his familia. At ten, me acuesto. '¡Buenas noches!' Carlos has had a great day!"
+        ],
+        "qs": [
+          {
+            "q": "What time does Carlos wake up?",
+            "opts": [
+              "Seven",
+              "Six",
+              "Eight"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does he have for breakfast?",
+            "opts": [
+              "Cereal with milk",
+              "Toast",
+              "Pizza"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Carlos do in the afternoon?",
+            "opts": [
+              "Plays football",
+              "Studies",
+              "Sleeps"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 23,
+      "title": "Es grande",
+      "subtitle": "Describing things",
+      "emoji": "📏",
+      "milestone": false,
+      "funFact": "Adjectives change: 'bonito' for boy, 'bonita' for girl!",
+      "phrase": {
+        "es": "El perro es grande y rápido.",
+        "en": "The dog is big and fast."
+      },
+      "words": [
+        {
+          "es": "Grande",
+          "en": "Big",
+          "say": "GRAHN-deh",
+          "emoji": "🐘"
+        },
+        {
+          "es": "Pequeño",
+          "en": "Small",
+          "say": "peh-KEH-nyo",
+          "emoji": "🐜"
+        },
+        {
+          "es": "Bonito",
+          "en": "Pretty",
+          "say": "bo-NEE-to",
+          "emoji": "🌸"
+        },
+        {
+          "es": "Feo",
+          "en": "Ugly",
+          "say": "FEH-o",
+          "emoji": "👹"
+        },
+        {
+          "es": "Nuevo",
+          "en": "New",
+          "say": "NWEH-bo",
+          "emoji": "✨"
+        },
+        {
+          "es": "Viejo",
+          "en": "Old",
+          "say": "BYEH-ho",
+          "emoji": "🏚️"
+        },
+        {
+          "es": "Rápido",
+          "en": "Fast",
+          "say": "RAH-pee-do",
+          "emoji": "🏎️"
+        },
+        {
+          "es": "Lento",
+          "en": "Slow",
+          "say": "LEN-to",
+          "emoji": "🐌"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "La",
+            "casa",
+            "es",
+            "bonita"
+          ],
+          "shuffle": [
+            "es",
+            "bonita",
+            "La",
+            "casa"
+          ],
+          "en": "The house is pretty."
+        },
+        {
+          "correct": [
+            "El",
+            "gato",
+            "es",
+            "pequeño"
+          ],
+          "shuffle": [
+            "pequeño",
+            "El",
+            "es",
+            "gato"
+          ],
+          "en": "The cat is small."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "The Opposite Animals",
+        "paras": [
+          "In the zoo, the elefante is grande and the ratón is pequeño. The caballo is rápido but the tortuga (tortoise) is lento.",
+          "The flamingo is bonito and rosa. The spider is feo but interesante! The bebé panda is nuevo — he was born today!",
+          "'This zoo is fantástico!' say the children. Some animals are viejos, some are new, some are fast, some are slow — but they are all wonderful!"
+        ],
+        "qs": [
+          {
+            "q": "Which animal is grande?",
+            "opts": [
+              "The elephant",
+              "The mouse",
+              "The flamingo"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Which animal is lento (slow)?",
+            "opts": [
+              "The tortoise",
+              "The horse",
+              "The panda"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What colour is the flamingo?",
+            "opts": [
+              "Rosa (pink)",
+              "Azul (blue)",
+              "Verde (green)"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 24,
+      "title": "Sentence Champion!",
+      "subtitle": "Grammar challenge!",
+      "emoji": "🧩",
+      "milestone": true,
+      "funFact": "You've finished Sentence City! 🚀",
+      "phrase": {
+        "es": "Soy inteligente y me gusta España.",
+        "en": "I'm clever and I like Spain."
+      },
+      "words": [
+        {
+          "es": "Yo soy",
+          "en": "I am",
+          "say": "yo SOY",
+          "emoji": "🙋"
+        },
+        {
+          "es": "Tengo",
+          "en": "I have",
+          "say": "TEN-go",
+          "emoji": "🎁"
+        },
+        {
+          "es": "Me gusta",
+          "en": "I like",
+          "say": "meh GOOS-ta",
+          "emoji": "❤️"
+        },
+        {
+          "es": "Quiero",
+          "en": "I want",
+          "say": "KYEH-ro",
+          "emoji": "🙏"
+        },
+        {
+          "es": "Puedo",
+          "en": "I can",
+          "say": "PWEH-do",
+          "emoji": "💪"
+        },
+        {
+          "es": "Grande",
+          "en": "Big",
+          "say": "GRAHN-deh",
+          "emoji": "🐘"
+        },
+        {
+          "es": "Bonito",
+          "en": "Pretty",
+          "say": "bo-NEE-to",
+          "emoji": "🌸"
+        },
+        {
+          "es": "Son las dos",
+          "en": "It's 2 o'clock",
+          "say": "son las DOS",
+          "emoji": "🕑"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Me",
+            "gusta",
+            "mucho",
+            "el",
+            "chocolate"
+          ],
+          "shuffle": [
+            "chocolate",
+            "mucho",
+            "Me",
+            "el",
+            "gusta"
+          ],
+          "en": "I really like chocolate."
+        },
+        {
+          "correct": [
+            "Tengo",
+            "una",
+            "hermana",
+            "pequeña"
+          ],
+          "shuffle": [
+            "pequeña",
+            "hermana",
+            "Tengo",
+            "una"
+          ],
+          "en": "I have a little sister."
+        },
+        {
+          "correct": [
+            "Quiero",
+            "ir",
+            "a",
+            "la",
+            "playa"
+          ],
+          "shuffle": [
+            "playa",
+            "la",
+            "Quiero",
+            "a",
+            "ir"
+          ],
+          "en": "I want to go to the beach."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Tengo un perro' means:",
+          "opts": [
+            "I have a dog",
+            "I am a dog",
+            "I like dogs"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'La casa es bonita' means:",
+          "opts": [
+            "The house is pretty",
+            "The house is big",
+            "The house is old"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Puedo nadar' means:",
+          "opts": [
+            "I can swim",
+            "I want to swim",
+            "I like swimming"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "The Sentence Champion",
+        "paras": [
+          "You can now build sentences! 'Yo soy alto.' 'Tengo un perro.' 'Me gusta el chocolate.' 'Quiero ir a la playa.'",
+          "You know how to describe things: 'La casa es bonita.' 'El gato es pequeño.' 'Mi perro es rápido.'",
+          "You can tell the time and describe your day. ¡Eres un campeón de Sentence City! 🏆"
+        ],
+        "qs": [
+          {
+            "q": "'Yo soy alto' means:",
+            "opts": [
+              "I am tall",
+              "I have a dog",
+              "I like chocolate"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "'La casa es bonita' means:",
+            "opts": [
+              "The house is pretty",
+              "The cat is small",
+              "I want to go"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What level have you completed?",
+            "opts": [
+              "Sentence City",
+              "Starter Island",
+              "Story Land"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    }
+  ]
+}

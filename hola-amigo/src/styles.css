@@ -608,3 +608,28 @@ li:last-child > .step .step__rail { display: none; }
 .bento-col > .card { height: auto; }
 .big-stars { font-size: 46px; }
 .btn--ghost, .btn--ghost.btn--sm { box-shadow: none; }
+
+/* PWA update banner */
+.update-banner { position: fixed; left: 12px; right: 12px; bottom: calc(max(12px, env(safe-area-inset-bottom)) + 84px); z-index: 1200; max-width: 520px; margin: 0 auto;
+  display: flex; align-items: center; gap: 10px; padding: 10px 10px 10px 14px; border-radius: 16px; background: var(--surface); border: 1px solid var(--border-2);
+  box-shadow: var(--shadow-lift); font-weight: 800; font-size: 14px; animation: pop-up 0.35s var(--ease-spring); }
+@media (min-width: 900px) { .update-banner { bottom: 20px; } }
+.toggle--on { color: var(--sun); border-color: color-mix(in srgb, var(--sun) 45%, transparent); }
+.hear-btn { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; margin-left: 4px; border: 1px solid color-mix(in srgb, var(--luna) 35%, transparent);
+  background: var(--tint-luna); color: var(--luna); cursor: pointer; vertical-align: middle; transition: transform 0.15s var(--ease-spring); }
+.hear-btn:hover { transform: scale(1.08); }
+.hear-btn--quiet { opacity: 0.6; }
+
+/* Legal / privacy text */
+.legal { font-size: 14px; line-height: 1.55; color: var(--text-2); }
+.legal h3 { font-size: 15px; font-weight: 900; color: var(--text); margin: 14px 0 4px; }
+.legal ul { padding-left: 18px; }
+.legal li { margin: 4px 0; }
+.legal b { color: var(--text); }
+.legal__draft { display: inline-block; font-size: 12px; font-weight: 900; color: var(--sun); background: var(--sel2-bg); border-radius: 8px; padding: 3px 8px; margin-bottom: 4px; }
+.modal.card { max-width: 520px; }
+.consent { display: flex; gap: 10px; align-items: flex-start; margin: 4px 0 14px; font-size: 13px; font-weight: 700; color: var(--text-2); line-height: 1.45; cursor: pointer; }
+.consent input { width: 20px; height: 20px; margin-top: 1px; accent-color: var(--sun); flex-shrink: 0; }
+.notice { padding: 12px 14px; border-radius: 14px; background: var(--sel-bg); color: var(--text); font-size: 14px; font-weight: 700; margin-bottom: 14px; }
+.notice--good { background: var(--good-bg); }
+.notice--warn { background: var(--sel2-bg); }

@@ -1,0 +1,880 @@
+{
+  "world": 2,
+  "lessons": [
+    {
+      "id": 9,
+      "title": "La comida",
+      "subtitle": "Food",
+      "emoji": "🍕",
+      "milestone": false,
+      "funFact": "Lunch in Spain isn't until 2pm!",
+      "phrase": {
+        "es": "Me gusta la pizza.",
+        "en": "I like pizza."
+      },
+      "words": [
+        {
+          "es": "El pan",
+          "en": "Bread",
+          "say": "el PAHN",
+          "emoji": "🍞"
+        },
+        {
+          "es": "El queso",
+          "en": "Cheese",
+          "say": "el KEH-so",
+          "emoji": "🧀"
+        },
+        {
+          "es": "La leche",
+          "en": "Milk",
+          "say": "la LEH-cheh",
+          "emoji": "🥛"
+        },
+        {
+          "es": "El agua",
+          "en": "Water",
+          "say": "el AH-gwa",
+          "emoji": "💧"
+        },
+        {
+          "es": "La pizza",
+          "en": "Pizza",
+          "say": "la PEET-sa",
+          "emoji": "🍕"
+        },
+        {
+          "es": "El pollo",
+          "en": "Chicken",
+          "say": "el POH-yo",
+          "emoji": "🍗"
+        },
+        {
+          "es": "Los huevos",
+          "en": "Eggs",
+          "say": "los WEH-bos",
+          "emoji": "🥚"
+        },
+        {
+          "es": "El chocolate",
+          "en": "Chocolate",
+          "say": "el cho-ko-LAH-teh",
+          "emoji": "🍫"
+        }
+      ],
+      "sentences": [],
+      "gaps": [],
+      "story": {
+        "title": "The Picnic",
+        "paras": [
+          "Sofía makes a picnic. She takes pan, queso, and agua. '¡Vamos al parque!' she says.",
+          "Her amigo Carlos brings pollo and chocolate. '¡Me gusta mucho el chocolate!' says Carlos.",
+          "They eat everything! Pan with queso, pollo, and chocolate for dessert. They drink leche and agua. '¡Qué rico!' (How tasty!)"
+        ],
+        "qs": [
+          {
+            "q": "What does Sofía bring?",
+            "opts": [
+              "Pan, queso, agua",
+              "Pizza, pollo",
+              "Chocolate, leche"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Who brings the chocolate?",
+            "opts": [
+              "Carlos",
+              "Sofía",
+              "Mamá"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does '¡Qué rico!' mean?",
+            "opts": [
+              "How tasty!",
+              "How big!",
+              "How funny!"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "title": "Las frutas",
+      "subtitle": "Fruit",
+      "emoji": "🍎",
+      "milestone": false,
+      "funFact": "Spain grows loads of oranges near Valencia! 🍊",
+      "phrase": {
+        "es": "Mi fruta favorita es la fresa.",
+        "en": "My favourite fruit is the strawberry."
+      },
+      "words": [
+        {
+          "es": "La manzana",
+          "en": "Apple",
+          "say": "la man-THAH-na",
+          "emoji": "🍎"
+        },
+        {
+          "es": "El plátano",
+          "en": "Banana",
+          "say": "el PLAH-ta-no",
+          "emoji": "🍌"
+        },
+        {
+          "es": "La naranja",
+          "en": "Orange",
+          "say": "la na-RAHN-ha",
+          "emoji": "🍊"
+        },
+        {
+          "es": "La fresa",
+          "en": "Strawberry",
+          "say": "la FREH-sa",
+          "emoji": "🍓"
+        },
+        {
+          "es": "Las uvas",
+          "en": "Grapes",
+          "say": "las OO-bas",
+          "emoji": "🍇"
+        },
+        {
+          "es": "La sandía",
+          "en": "Watermelon",
+          "say": "la san-DEE-a",
+          "emoji": "🍉"
+        },
+        {
+          "es": "El limón",
+          "en": "Lemon",
+          "say": "el lee-MON",
+          "emoji": "🍋"
+        },
+        {
+          "es": "La pera",
+          "en": "Pear",
+          "say": "la PEH-ra",
+          "emoji": "🍐"
+        }
+      ],
+      "sentences": [],
+      "gaps": [],
+      "story": {
+        "title": "The Fruit Market",
+        "paras": [
+          "Every Saturday, Pedro goes to the fruit market with his abuela. They buy manzanas, plátanos, and naranjas.",
+          "Pedro sees fresas! '¡Me gustan las fresas!' he says. Abuela buys a big box.",
+          "At home, they make a fruit salad with manzana, plátano, fresa, and pera. Pedro's favourite fruit is la sandía, but it's too big for the salad!"
+        ],
+        "qs": [
+          {
+            "q": "Who does Pedro go to the market with?",
+            "opts": [
+              "His abuela (grandma)",
+              "His mamá (mum)",
+              "His amigo (friend)"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Which fruit does Pedro love?",
+            "opts": [
+              "Fresas (strawberries)",
+              "Limones (lemons)",
+              "Uvas (grapes)"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What is Pedro's favourite fruit?",
+            "opts": [
+              "La sandía (watermelon)",
+              "La pera (pear)",
+              "La naranja (orange)"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "title": "La playa",
+      "subtitle": "At the beach",
+      "emoji": "🏖️",
+      "milestone": false,
+      "funFact": "Spain has over 5,000 km of beaches!",
+      "phrase": {
+        "es": "¡Vamos a la playa!",
+        "en": "Let's go to the beach!"
+      },
+      "words": [
+        {
+          "es": "La playa",
+          "en": "Beach",
+          "say": "la PLAH-ya",
+          "emoji": "🏖️"
+        },
+        {
+          "es": "El mar",
+          "en": "Sea",
+          "say": "el MAR",
+          "emoji": "🌊"
+        },
+        {
+          "es": "El sol",
+          "en": "Sun",
+          "say": "el SOL",
+          "emoji": "☀️"
+        },
+        {
+          "es": "La arena",
+          "en": "Sand",
+          "say": "la ah-REH-na",
+          "emoji": "⏳"
+        },
+        {
+          "es": "Nadar",
+          "en": "To swim",
+          "say": "na-DAR",
+          "emoji": "🏊"
+        },
+        {
+          "es": "El barco",
+          "en": "Boat",
+          "say": "el BAR-ko",
+          "emoji": "⛵"
+        },
+        {
+          "es": "La concha",
+          "en": "Shell",
+          "say": "la KON-cha",
+          "emoji": "🐚"
+        },
+        {
+          "es": "El helado",
+          "en": "Ice cream",
+          "say": "el eh-LAH-do",
+          "emoji": "🍦"
+        }
+      ],
+      "sentences": [],
+      "gaps": [],
+      "story": {
+        "title": "A Day at the Beach",
+        "paras": [
+          "It's a hot day! María goes to la playa with her familia. The sol is very bright. She can see the mar — it's azul!",
+          "María builds a big castillo de arena. She finds three conchas on the sand — one is rosa, one is blanca, and one is naranja.",
+          "Then she goes to nadar in the mar. After swimming, she eats un helado. '¡Me encanta la playa!' she says."
+        ],
+        "qs": [
+          {
+            "q": "What does María build?",
+            "opts": [
+              "A sand castle",
+              "A boat",
+              "A house"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How many shells does she find?",
+            "opts": [
+              "Three",
+              "Five",
+              "One"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does she eat after swimming?",
+            "opts": [
+              "Ice cream",
+              "Pizza",
+              "Bread"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "title": "El colegio",
+      "subtitle": "At school",
+      "emoji": "🏫",
+      "milestone": false,
+      "funFact": "Spanish kids call school 'el cole' for short!",
+      "phrase": {
+        "es": "Me gusta el colegio.",
+        "en": "I like school."
+      },
+      "words": [
+        {
+          "es": "El colegio",
+          "en": "School",
+          "say": "el ko-LEH-hyo",
+          "emoji": "🏫"
+        },
+        {
+          "es": "El libro",
+          "en": "Book",
+          "say": "el LEE-bro",
+          "emoji": "📚"
+        },
+        {
+          "es": "El lápiz",
+          "en": "Pencil",
+          "say": "el LAH-peeth",
+          "emoji": "✏️"
+        },
+        {
+          "es": "La mochila",
+          "en": "Backpack",
+          "say": "la mo-CHEE-la",
+          "emoji": "🎒"
+        },
+        {
+          "es": "La profe",
+          "en": "Teacher (f)",
+          "say": "la PROH-feh",
+          "emoji": "👩‍🏫"
+        },
+        {
+          "es": "El profe",
+          "en": "Teacher (m)",
+          "say": "el PROH-feh",
+          "emoji": "👨‍🏫"
+        },
+        {
+          "es": "La clase",
+          "en": "Class",
+          "say": "la KLAH-seh",
+          "emoji": "🏫"
+        },
+        {
+          "es": "El recreo",
+          "en": "Break time",
+          "say": "el reh-KREH-o",
+          "emoji": "⚽"
+        }
+      ],
+      "sentences": [],
+      "gaps": [],
+      "story": {
+        "title": "The New School",
+        "paras": [
+          "Today is Tomás's first day at his new colegio. He puts his libro and lápiz in his mochila.",
+          "The profe says '¡Buenos días, clase!' Tomás sits down. He meets a new amigo called Diego.",
+          "At el recreo, they play football. '¡Me gusta este colegio!' says Tomás. He is feliz."
+        ],
+        "qs": [
+          {
+            "q": "What does Tomás put in his mochila?",
+            "opts": [
+              "A libro and lápiz",
+              "Food and water",
+              "Toys"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Who is Tomás's new friend?",
+            "opts": [
+              "Diego",
+              "Carlos",
+              "Pablo"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What do they do at el recreo?",
+            "opts": [
+              "Play football",
+              "Read books",
+              "Sleep"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "title": "La ropa",
+      "subtitle": "Clothes",
+      "emoji": "👕",
+      "milestone": false,
+      "funFact": "'Sombrero' means 'shade-maker'! 🎩",
+      "phrase": {
+        "es": "Llevo una camiseta roja.",
+        "en": "I'm wearing a red T-shirt."
+      },
+      "words": [
+        {
+          "es": "La camiseta",
+          "en": "T-shirt",
+          "say": "la ka-mee-SEH-ta",
+          "emoji": "👕"
+        },
+        {
+          "es": "Los pantalones",
+          "en": "Trousers",
+          "say": "los pan-ta-LOH-nes",
+          "emoji": "👖"
+        },
+        {
+          "es": "Las zapatillas",
+          "en": "Trainers",
+          "say": "las tha-pa-TEE-yas",
+          "emoji": "👟"
+        },
+        {
+          "es": "El vestido",
+          "en": "Dress",
+          "say": "el bes-TEE-do",
+          "emoji": "👗"
+        },
+        {
+          "es": "El abrigo",
+          "en": "Coat",
+          "say": "el ah-BREE-go",
+          "emoji": "🧥"
+        },
+        {
+          "es": "Los calcetines",
+          "en": "Socks",
+          "say": "los kal-theh-TEE-nes",
+          "emoji": "🧦"
+        },
+        {
+          "es": "El sombrero",
+          "en": "Hat",
+          "say": "el som-BREH-ro",
+          "emoji": "🎩"
+        },
+        {
+          "es": "Los guantes",
+          "en": "Gloves",
+          "say": "los GWAN-tes",
+          "emoji": "🧤"
+        }
+      ],
+      "sentences": [],
+      "gaps": [],
+      "story": {
+        "title": "The Fashion Show",
+        "paras": [
+          "Clara and her hermana play 'fashion show' at home. Clara wears a camiseta roja and pantalones azules.",
+          "Her hermana wears a vestido morado and a sombrero grande. '¡Qué bonito!' says mamá.",
+          "Then the perro runs in wearing calcetines on his ears! Everyone laughs. '¡El perro es el mejor modelo!' (The dog is the best model!)"
+        ],
+        "qs": [
+          {
+            "q": "What colour is Clara's camiseta?",
+            "opts": [
+              "Roja (red)",
+              "Azul (blue)",
+              "Verde (green)"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does the hermana wear?",
+            "opts": [
+              "A vestido and sombrero",
+              "Pantalones and zapatillas",
+              "An abrigo and guantes"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Who is the best 'model'?",
+            "opts": [
+              "The dog",
+              "Clara",
+              "Hermana"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "title": "Mi casa",
+      "subtitle": "My house",
+      "emoji": "🏠",
+      "milestone": false,
+      "funFact": "Spanish houses have a 'terraza' for dinner under the stars!",
+      "phrase": {
+        "es": "Mi casa es grande.",
+        "en": "My house is big."
+      },
+      "words": [
+        {
+          "es": "La casa",
+          "en": "House",
+          "say": "la KAH-sa",
+          "emoji": "🏠"
+        },
+        {
+          "es": "El dormitorio",
+          "en": "Bedroom",
+          "say": "el dor-mee-TOH-ryo",
+          "emoji": "🛏️"
+        },
+        {
+          "es": "La cocina",
+          "en": "Kitchen",
+          "say": "la ko-THEE-na",
+          "emoji": "🍳"
+        },
+        {
+          "es": "El salón",
+          "en": "Living room",
+          "say": "el sa-LON",
+          "emoji": "🛋️"
+        },
+        {
+          "es": "El baño",
+          "en": "Bathroom",
+          "say": "el BAH-nyo",
+          "emoji": "🛁"
+        },
+        {
+          "es": "El jardín",
+          "en": "Garden",
+          "say": "el har-DEEN",
+          "emoji": "🌳"
+        },
+        {
+          "es": "La puerta",
+          "en": "Door",
+          "say": "la PWEHR-ta",
+          "emoji": "🚪"
+        },
+        {
+          "es": "La ventana",
+          "en": "Window",
+          "say": "la ben-TAH-na",
+          "emoji": "🪟"
+        }
+      ],
+      "sentences": [],
+      "gaps": [],
+      "story": {
+        "title": "The New House",
+        "paras": [
+          "The García family moves to a new casa in Spain. It has four rooms: a big salón, a cocina, a baño, and two dormitorios.",
+          "The children love the jardín — it has a big tree and flowers. '¡Mira, una puerta azul!' (Look, a blue door!) says Pablo.",
+          "From the ventana, they can see the mountains. '¡Esta casa es muy bonita!' says mamá. Everyone is feliz."
+        ],
+        "qs": [
+          {
+            "q": "How many dormitorios does the house have?",
+            "opts": [
+              "Two",
+              "Three",
+              "One"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What colour is the door?",
+            "opts": [
+              "Azul (blue)",
+              "Roja (red)",
+              "Blanca (white)"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What can they see from the ventana?",
+            "opts": [
+              "Mountains",
+              "The sea",
+              "A park"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "title": "El tiempo",
+      "subtitle": "Days & Weather",
+      "emoji": "📅",
+      "milestone": false,
+      "funFact": "The Costa Blanca has 300+ sunny days! ☀️",
+      "phrase": {
+        "es": "Hoy es lunes y hace sol.",
+        "en": "Today is Monday and it's sunny."
+      },
+      "words": [
+        {
+          "es": "Lunes",
+          "en": "Monday",
+          "say": "LOO-nes",
+          "emoji": "📅"
+        },
+        {
+          "es": "Martes",
+          "en": "Tuesday",
+          "say": "MAR-tes",
+          "emoji": "📅"
+        },
+        {
+          "es": "Miércoles",
+          "en": "Wednesday",
+          "say": "MYEHR-ko-les",
+          "emoji": "📅"
+        },
+        {
+          "es": "Sábado",
+          "en": "Saturday",
+          "say": "SAH-ba-do",
+          "emoji": "🎉"
+        },
+        {
+          "es": "Domingo",
+          "en": "Sunday",
+          "say": "do-MEEN-go",
+          "emoji": "🎉"
+        },
+        {
+          "es": "Hace sol",
+          "en": "It's sunny",
+          "say": "AH-theh SOL",
+          "emoji": "☀️"
+        },
+        {
+          "es": "Llueve",
+          "en": "It's raining",
+          "say": "YWEH-beh",
+          "emoji": "🌧️"
+        },
+        {
+          "es": "Hace frío",
+          "en": "It's cold",
+          "say": "AH-theh FREE-o",
+          "emoji": "🥶"
+        }
+      ],
+      "sentences": [],
+      "gaps": [],
+      "story": {
+        "title": "The Weather Week",
+        "paras": [
+          "On lunes, it's sunny — hace sol! On martes, it's cloudy. On miércoles, llueve all day. The children stay inside.",
+          "On sábado, hace sol again! The children go to the park. But hace frío — they need their abrigos.",
+          "On domingo, the whole family goes to the beach. '¡Qué buen tiempo!' (What nice weather!) says papá."
+        ],
+        "qs": [
+          {
+            "q": "What's the weather on lunes?",
+            "opts": [
+              "Sunny (hace sol)",
+              "Rainy (llueve)",
+              "Cold (hace frío)"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What day does it rain?",
+            "opts": [
+              "Miércoles (Wednesday)",
+              "Sábado (Saturday)",
+              "Domingo (Sunday)"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Where do they go on domingo?",
+            "opts": [
+              "The beach",
+              "The park",
+              "School"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 16,
+      "title": "A1 Final Challenge!",
+      "subtitle": "Test everything!",
+      "emoji": "🏆",
+      "milestone": true,
+      "funFact": "You've finished A1! 150+ words! Next: sentences and stories! 🎉🏆",
+      "phrase": {
+        "es": "¡Soy un campeón de español!",
+        "en": "I'm a Spanish champion!"
+      },
+      "words": [
+        {
+          "es": "Hola",
+          "en": "Hello",
+          "say": "OH-la",
+          "emoji": "👋"
+        },
+        {
+          "es": "Cinco",
+          "en": "Five",
+          "say": "SEEN-ko",
+          "emoji": "5️⃣"
+        },
+        {
+          "es": "Azul",
+          "en": "Blue",
+          "say": "ah-THOOL",
+          "emoji": "🔵"
+        },
+        {
+          "es": "El gato",
+          "en": "Cat",
+          "say": "el GAH-to",
+          "emoji": "🐈"
+        },
+        {
+          "es": "Hermana",
+          "en": "Sister",
+          "say": "er-MAH-na",
+          "emoji": "👧"
+        },
+        {
+          "es": "Triste",
+          "en": "Sad",
+          "say": "TREES-teh",
+          "emoji": "😢"
+        },
+        {
+          "es": "El pan",
+          "en": "Bread",
+          "say": "el PAHN",
+          "emoji": "🍞"
+        },
+        {
+          "es": "La manzana",
+          "en": "Apple",
+          "say": "la man-THAH-na",
+          "emoji": "🍎"
+        },
+        {
+          "es": "Nadar",
+          "en": "To swim",
+          "say": "na-DAR",
+          "emoji": "🏊"
+        },
+        {
+          "es": "Hace sol",
+          "en": "It's sunny",
+          "say": "AH-theh SOL",
+          "emoji": "☀️"
+        }
+      ],
+      "sentences": [],
+      "gaps": [
+        {
+          "q": "How do you say 'Hello'?",
+          "opts": [
+            "Hola",
+            "Adiós",
+            "Gracias"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Azul' means:",
+          "opts": [
+            "Blue",
+            "Red",
+            "Green"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'El gato' is:",
+          "opts": [
+            "Cat",
+            "Dog",
+            "Bird"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Triste' means:",
+          "opts": [
+            "Sad",
+            "Happy",
+            "Tired"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'La manzana' is:",
+          "opts": [
+            "Apple",
+            "Orange",
+            "Banana"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Hace sol' means:",
+          "opts": [
+            "It's sunny",
+            "It's raining",
+            "It's cold"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "The Spanish Champion",
+        "paras": [
+          "You have learned so many words! You know greetings — ¡Hola! ¡Adiós! You know colours — rojo, azul, verde.",
+          "You know animals — el perro, el gato. You know your family — mamá, papá, hermano, hermana.",
+          "You know feelings — feliz, triste. You know food — pan, queso, pizza. ¡Eres un campeón de A1!"
+        ],
+        "qs": [
+          {
+            "q": "What does '¡Hola!' mean?",
+            "opts": [
+              "Hello!",
+              "Goodbye!",
+              "Thank you!"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What is 'el perro'?",
+            "opts": [
+              "Dog",
+              "Cat",
+              "Bird"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does 'feliz' mean?",
+            "opts": [
+              "Happy",
+              "Sad",
+              "Angry"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    }
+  ]
+}

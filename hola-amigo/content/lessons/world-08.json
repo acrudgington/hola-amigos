@@ -1,0 +1,1106 @@
+{
+  "world": 8,
+  "lessons": [
+    {
+      "id": 61,
+      "title": "En mi mochila",
+      "subtitle": "Things in my schoolbag",
+      "emoji": "🎒",
+      "milestone": false,
+      "funFact": "In Spain, kids use 'bolígrafo' but often shorten it to 'boli' — like 'pen' in English!",
+      "phrase": {
+        "es": "En mi mochila tengo cuadernos y bolis.",
+        "en": "In my backpack I have notebooks and pens."
+      },
+      "words": [
+        {
+          "es": "La mochila",
+          "en": "Backpack",
+          "say": "la mo-CHEE-lah",
+          "emoji": "🎒"
+        },
+        {
+          "es": "El cuaderno",
+          "en": "Notebook",
+          "say": "el kwah-DEHR-no",
+          "emoji": "📓"
+        },
+        {
+          "es": "El bolígrafo",
+          "en": "Pen",
+          "say": "el bo-LEE-grah-fo",
+          "emoji": "🖊️"
+        },
+        {
+          "es": "La goma",
+          "en": "Eraser",
+          "say": "la GOH-mah",
+          "emoji": "🪦"
+        },
+        {
+          "es": "El sacapuntas",
+          "en": "Pencil sharpener",
+          "say": "el sah-kah-POON-tas",
+          "emoji": "✏️"
+        },
+        {
+          "es": "La regla",
+          "en": "Ruler",
+          "say": "la REH-glah",
+          "emoji": "📏"
+        },
+        {
+          "es": "Las tijeras",
+          "en": "Scissors",
+          "say": "las tee-HEH-rahs",
+          "emoji": "✂️"
+        },
+        {
+          "es": "El pegamento",
+          "en": "Glue",
+          "say": "el peh-gah-MEN-toh",
+          "emoji": "🧴"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Tengo",
+            "un",
+            "cuaderno",
+            "azul"
+          ],
+          "shuffle": [
+            "azul",
+            "cuaderno",
+            "Tengo",
+            "un"
+          ],
+          "en": "I have a blue notebook."
+        },
+        {
+          "correct": [
+            "Necesito",
+            "las",
+            "tijeras"
+          ],
+          "shuffle": [
+            "tijeras",
+            "las",
+            "Necesito"
+          ],
+          "en": "I need the scissors."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "Sol Packs His Bag",
+        "paras": [
+          "Today Sol packs his mochila for school. He puts in dos cuadernos, un bolígrafo, y una goma.",
+          "Luna comes and adds una regla, unas tijeras, y pegamento for the art class.",
+          "'¿Llevamos también los sacapuntas?' asks Sol. '¡Sí!' replies Luna. Now they are ready for school!"
+        ],
+        "qs": [
+          {
+            "q": "What does Sol pack first?",
+            "opts": [
+              "Notebooks",
+              "Glue",
+              "Scissors"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Luna add for art class?",
+            "opts": [
+              "Ruler, scissors, glue",
+              "Books",
+              "Pens"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Are they ready for school?",
+            "opts": [
+              "Yes",
+              "No",
+              "Maybe"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 62,
+      "title": "La hora del baño",
+      "subtitle": "Bath time",
+      "emoji": "🛁",
+      "milestone": false,
+      "funFact": "Spanish kids brush their teeth at least twice a day — morning and night!",
+      "phrase": {
+        "es": "Me lavo con jabón y champú.",
+        "en": "I wash with soap and shampoo."
+      },
+      "words": [
+        {
+          "es": "El baño",
+          "en": "The bath/bathroom",
+          "say": "el BAH-nyo",
+          "emoji": "🛁"
+        },
+        {
+          "es": "El jabón",
+          "en": "Soap",
+          "say": "el hah-BON",
+          "emoji": "🧼"
+        },
+        {
+          "es": "El champú",
+          "en": "Shampoo",
+          "say": "el cham-POO",
+          "emoji": "🧴"
+        },
+        {
+          "es": "La toalla",
+          "en": "Towel",
+          "say": "la toh-AH-yah",
+          "emoji": "🏖️"
+        },
+        {
+          "es": "El cepillo de dientes",
+          "en": "Toothbrush",
+          "say": "el theh-PEE-yo deh DYEN-tes",
+          "emoji": "🪥"
+        },
+        {
+          "es": "La pasta de dientes",
+          "en": "Toothpaste",
+          "say": "la PAHS-tah deh DYEN-tes",
+          "emoji": "🦷"
+        },
+        {
+          "es": "Lavarse",
+          "en": "To wash oneself",
+          "say": "lah-BAR-seh",
+          "emoji": "🚿"
+        },
+        {
+          "es": "Limpio",
+          "en": "Clean",
+          "say": "LEEM-pyo",
+          "emoji": "✨"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Tengo",
+            "una",
+            "toalla",
+            "grande"
+          ],
+          "shuffle": [
+            "grande",
+            "toalla",
+            "Tengo",
+            "una"
+          ],
+          "en": "I have a big towel."
+        },
+        {
+          "correct": [
+            "Me",
+            "lavo",
+            "los",
+            "dientes"
+          ],
+          "shuffle": [
+            "dientes",
+            "Me",
+            "los",
+            "lavo"
+          ],
+          "en": "I brush my teeth."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "Luna's Bath Time",
+        "paras": [
+          "After playing, Luna is muy sucia. 'Necesito un baño!' she says. She turns on the water.",
+          "She uses jabón to wash her arms, champú in her hair, and pasta de dientes to clean her teeth.",
+          "Finally, she uses una toalla suave to dry off. '¡Estoy limpia y feliz!' Luna shines bright."
+        ],
+        "qs": [
+          {
+            "q": "How is Luna before her bath?",
+            "opts": [
+              "Dirty",
+              "Clean",
+              "Tired"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does she use on her hair?",
+            "opts": [
+              "Shampoo",
+              "Soap",
+              "Toothpaste"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How does Luna feel at the end?",
+            "opts": [
+              "Clean and happy",
+              "Tired",
+              "Hungry"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 63,
+      "title": "En la cocina",
+      "subtitle": "In the kitchen",
+      "emoji": "🍳",
+      "milestone": false,
+      "funFact": "In Spain, lunch is the biggest meal — and families often eat together at 2pm!",
+      "phrase": {
+        "es": "Pongo los platos y los vasos.",
+        "en": "I put out the plates and the glasses."
+      },
+      "words": [
+        {
+          "es": "La nevera",
+          "en": "Fridge",
+          "say": "la neh-BEH-rah",
+          "emoji": "❄️"
+        },
+        {
+          "es": "El horno",
+          "en": "Oven",
+          "say": "el OR-no",
+          "emoji": "🔥"
+        },
+        {
+          "es": "El plato",
+          "en": "Plate",
+          "say": "el PLAH-toh",
+          "emoji": "🍽️"
+        },
+        {
+          "es": "El vaso",
+          "en": "Glass",
+          "say": "el BAH-so",
+          "emoji": "🥛"
+        },
+        {
+          "es": "El tenedor",
+          "en": "Fork",
+          "say": "el teh-neh-DOR",
+          "emoji": "🍴"
+        },
+        {
+          "es": "La cuchara",
+          "en": "Spoon",
+          "say": "la koo-CHAH-rah",
+          "emoji": "🥄"
+        },
+        {
+          "es": "El cuchillo",
+          "en": "Knife",
+          "say": "el koo-CHEE-yo",
+          "emoji": "🔪"
+        },
+        {
+          "es": "La servilleta",
+          "en": "Napkin",
+          "say": "la sehr-bee-YEH-tah",
+          "emoji": "🧻"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Necesito",
+            "un",
+            "tenedor"
+          ],
+          "shuffle": [
+            "tenedor",
+            "un",
+            "Necesito"
+          ],
+          "en": "I need a fork."
+        },
+        {
+          "correct": [
+            "El",
+            "vaso",
+            "está",
+            "en",
+            "la",
+            "mesa"
+          ],
+          "shuffle": [
+            "mesa",
+            "la",
+            "El",
+            "vaso",
+            "en",
+            "está"
+          ],
+          "en": "The glass is on the table."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "Cooking with Sol",
+        "paras": [
+          "Sol opens la nevera. Inside there are huevos and leche. He takes a plato and un vaso.",
+          "He uses una cuchara to mix and pone everything en el horno. The smell is amazing!",
+          "Luna comes, takes un tenedor, and they eat juntos. '¡Qué rico!'"
+        ],
+        "qs": [
+          {
+            "q": "Where does Sol find the eggs?",
+            "opts": [
+              "In the fridge",
+              "In the oven",
+              "On the table"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Sol use to mix?",
+            "opts": [
+              "A spoon",
+              "A fork",
+              "A knife"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What do Sol and Luna do at the end?",
+            "opts": [
+              "Eat together",
+              "Wash dishes",
+              "Go to bed"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 64,
+      "title": "Mi dormitorio",
+      "subtitle": "My bedroom",
+      "emoji": "🛏️",
+      "milestone": false,
+      "funFact": "Spanish kids often have their clothes in 'el armario' — a big wardrobe instead of dresser drawers!",
+      "phrase": {
+        "es": "Mi cama tiene dos almohadas.",
+        "en": "My bed has two pillows."
+      },
+      "words": [
+        {
+          "es": "La cama",
+          "en": "Bed",
+          "say": "la KAH-mah",
+          "emoji": "🛏️"
+        },
+        {
+          "es": "La almohada",
+          "en": "Pillow",
+          "say": "la al-mo-AH-dah",
+          "emoji": "💤"
+        },
+        {
+          "es": "Las sábanas",
+          "en": "Sheets",
+          "say": "las SAH-bah-nas",
+          "emoji": "🛏️"
+        },
+        {
+          "es": "La manta",
+          "en": "Blanket",
+          "say": "la MAHN-tah",
+          "emoji": "🧺"
+        },
+        {
+          "es": "La lámpara",
+          "en": "Lamp",
+          "say": "la LAHM-pah-rah",
+          "emoji": "💡"
+        },
+        {
+          "es": "El armario",
+          "en": "Wardrobe",
+          "say": "el ar-MAH-ryo",
+          "emoji": "🚪"
+        },
+        {
+          "es": "El cajón",
+          "en": "Drawer",
+          "say": "el kah-HON",
+          "emoji": "📦"
+        },
+        {
+          "es": "El espejo",
+          "en": "Mirror",
+          "say": "el es-PEH-ho",
+          "emoji": "🪞"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Mi",
+            "lámpara",
+            "es",
+            "amarilla"
+          ],
+          "shuffle": [
+            "amarilla",
+            "lámpara",
+            "Mi",
+            "es"
+          ],
+          "en": "My lamp is yellow."
+        },
+        {
+          "correct": [
+            "Hay",
+            "ropa",
+            "en",
+            "el",
+            "armario"
+          ],
+          "shuffle": [
+            "armario",
+            "ropa",
+            "Hay",
+            "en",
+            "el"
+          ],
+          "en": "There are clothes in the wardrobe."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "Luna's New Bedroom",
+        "paras": [
+          "Luna has a new dormitorio! Hay una cama grande con dos almohadas suaves.",
+          "Las sábanas are blue and las mantas are warm. There's una lámpara amarilla on the table.",
+          "Luna puts her ropa in el armario. She looks in el espejo and smiles. '¡Qué bonito!'"
+        ],
+        "qs": [
+          {
+            "q": "How many pillows does Luna's bed have?",
+            "opts": [
+              "Two",
+              "One",
+              "Three"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What colour are the sheets?",
+            "opts": [
+              "Blue",
+              "Yellow",
+              "Red"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Where does Luna put her clothes?",
+            "opts": [
+              "In the wardrobe",
+              "In a drawer",
+              "On the bed"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 65,
+      "title": "Limpiando la casa",
+      "subtitle": "Cleaning the house",
+      "emoji": "🧹",
+      "milestone": false,
+      "funFact": "In Spain, Saturday morning is when many families clean the whole house together!",
+      "phrase": {
+        "es": "Tengo que limpiar mi habitación.",
+        "en": "I have to clean my room."
+      },
+      "words": [
+        {
+          "es": "Limpiar",
+          "en": "To clean",
+          "say": "leem-PYAR",
+          "emoji": "✨"
+        },
+        {
+          "es": "La escoba",
+          "en": "Broom",
+          "say": "la es-KOH-bah",
+          "emoji": "🧹"
+        },
+        {
+          "es": "La aspiradora",
+          "en": "Vacuum cleaner",
+          "say": "la ahs-pee-rah-DOH-rah",
+          "emoji": "🪛"
+        },
+        {
+          "es": "El polvo",
+          "en": "Dust",
+          "say": "el POL-bo",
+          "emoji": "💨"
+        },
+        {
+          "es": "La basura",
+          "en": "Rubbish",
+          "say": "la bah-SOO-rah",
+          "emoji": "🗑️"
+        },
+        {
+          "es": "Ordenar",
+          "en": "To tidy up",
+          "say": "or-deh-NAR",
+          "emoji": "📚"
+        },
+        {
+          "es": "Sucio",
+          "en": "Dirty",
+          "say": "SOO-thyo",
+          "emoji": "💩"
+        },
+        {
+          "es": "Lavar los platos",
+          "en": "Wash the dishes",
+          "say": "lah-BAR los PLAH-tos",
+          "emoji": "🍽️"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Lavamos",
+            "los",
+            "platos"
+          ],
+          "shuffle": [
+            "platos",
+            "los",
+            "Lavamos"
+          ],
+          "en": "We wash the dishes."
+        },
+        {
+          "correct": [
+            "La",
+            "casa",
+            "está",
+            "sucia"
+          ],
+          "shuffle": [
+            "sucia",
+            "casa",
+            "La",
+            "está"
+          ],
+          "en": "The house is dirty."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "Cleaning Day",
+        "paras": [
+          "The house is muy sucia! Sol coge la escoba. Luna usa la aspiradora to clean el polvo.",
+          "Together they sacan la basura and lavan los platos in the kitchen. Sol slips on water — '¡Ay!'",
+          "After two hours, the house is brillante. 'Limpiar es trabajo, pero juntos es divertido!'"
+        ],
+        "qs": [
+          {
+            "q": "What does Sol grab first?",
+            "opts": [
+              "A broom",
+              "A vacuum",
+              "A cloth"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What happens to Sol?",
+            "opts": [
+              "He slips",
+              "He falls",
+              "He cries"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How long do they clean for?",
+            "opts": [
+              "Two hours",
+              "One hour",
+              "All day"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 66,
+      "title": "Las tareas de casa",
+      "subtitle": "Chores",
+      "emoji": "🧺",
+      "milestone": false,
+      "funFact": "Spanish kids often get a small allowance ('la paga') for doing their chores!",
+      "phrase": {
+        "es": "Hago la cama cada día.",
+        "en": "I make the bed every day."
+      },
+      "words": [
+        {
+          "es": "Hacer la cama",
+          "en": "Make the bed",
+          "say": "ah-THEHR la KAH-mah",
+          "emoji": "🛏️"
+        },
+        {
+          "es": "Poner la mesa",
+          "en": "Set the table",
+          "say": "po-NEHR la MEH-sah",
+          "emoji": "🍽️"
+        },
+        {
+          "es": "Sacar la basura",
+          "en": "Take out the rubbish",
+          "say": "sah-KAR la bah-SOO-rah",
+          "emoji": "🗑️"
+        },
+        {
+          "es": "Regar las plantas",
+          "en": "Water the plants",
+          "say": "reh-GAR las PLAHN-tahs",
+          "emoji": "🌱"
+        },
+        {
+          "es": "Pasear al perro",
+          "en": "Walk the dog",
+          "say": "pah-seh-AR ahl PEH-rro",
+          "emoji": "🐕"
+        },
+        {
+          "es": "Doblar la ropa",
+          "en": "Fold clothes",
+          "say": "do-BLAR la ROH-pah",
+          "emoji": "👕"
+        },
+        {
+          "es": "Ayudar en casa",
+          "en": "Help at home",
+          "say": "ah-yoo-DAR en KAH-sah",
+          "emoji": "🤝"
+        },
+        {
+          "es": "Cada día",
+          "en": "Every day",
+          "say": "KAH-dah DEE-ah",
+          "emoji": "📅"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Tengo",
+            "que",
+            "poner",
+            "la",
+            "mesa"
+          ],
+          "shuffle": [
+            "mesa",
+            "la",
+            "Tengo",
+            "poner",
+            "que"
+          ],
+          "en": "I have to set the table."
+        },
+        {
+          "correct": [
+            "Mi",
+            "hermana",
+            "pasea",
+            "al",
+            "perro"
+          ],
+          "shuffle": [
+            "perro",
+            "al",
+            "Mi",
+            "hermana",
+            "pasea"
+          ],
+          "en": "My sister walks the dog."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "Daily Chores",
+        "paras": [
+          "Cada día, Sol hace muchas tareas. Por la mañana, hace su cama y pone la mesa.",
+          "Después del cole, saca la basura y pasea al perro. Luna riega las plantas.",
+          "Mamá says: '¡Qué buenos sois ayudando en casa!' Sol and Luna feel orgullosos."
+        ],
+        "qs": [
+          {
+            "q": "What does Sol do in the morning?",
+            "opts": [
+              "Make bed and set table",
+              "Walk the dog",
+              "Water plants"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Luna do?",
+            "opts": [
+              "Water the plants",
+              "Make the bed",
+              "Walk the dog"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How do they feel?",
+            "opts": [
+              "Proud",
+              "Tired",
+              "Sad"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 67,
+      "title": "De compras",
+      "subtitle": "Going shopping",
+      "emoji": "💰",
+      "milestone": false,
+      "funFact": "Spain uses the euro — and Spanish euro coins have King Felipe VI's face on them!",
+      "phrase": {
+        "es": "Tengo cinco euros para gastar.",
+        "en": "I have five euros to spend."
+      },
+      "words": [
+        {
+          "es": "El dinero",
+          "en": "Money",
+          "say": "el dee-NEH-ro",
+          "emoji": "💵"
+        },
+        {
+          "es": "El euro",
+          "en": "Euro",
+          "say": "el EH-oo-ro",
+          "emoji": "💶"
+        },
+        {
+          "es": "El céntimo",
+          "en": "Cent",
+          "say": "el THEN-tee-mo",
+          "emoji": "🪙"
+        },
+        {
+          "es": "Las monedas",
+          "en": "Coins",
+          "say": "las mo-NEH-dahs",
+          "emoji": "🪙"
+        },
+        {
+          "es": "El billete",
+          "en": "Banknote",
+          "say": "el bee-YEH-teh",
+          "emoji": "💵"
+        },
+        {
+          "es": "El cambio",
+          "en": "Change",
+          "say": "el KAHM-byo",
+          "emoji": "💱"
+        },
+        {
+          "es": "Pagar",
+          "en": "To pay",
+          "say": "pah-GAR",
+          "emoji": "💳"
+        },
+        {
+          "es": "Caro / Barato",
+          "en": "Expensive / cheap",
+          "say": "KAH-ro / bah-RAH-toh",
+          "emoji": "⚖️"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Pago",
+            "con",
+            "monedas"
+          ],
+          "shuffle": [
+            "monedas",
+            "con",
+            "Pago"
+          ],
+          "en": "I pay with coins."
+        },
+        {
+          "correct": [
+            "Esto",
+            "es",
+            "muy",
+            "barato"
+          ],
+          "shuffle": [
+            "barato",
+            "muy",
+            "Esto",
+            "es"
+          ],
+          "en": "This is very cheap."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "Sol's First Shop",
+        "paras": [
+          "Sol has ten euros for the supermarket. He sees una pelota that costs cinco euros — '¡Barato!'",
+          "He also wants chocolate de tres euros. He paga con un billete and gets dos euros de cambio.",
+          "Luna says 'Bien hecho!' Sol gasta his money pero is muy feliz with his pelota nueva."
+        ],
+        "qs": [
+          {
+            "q": "How much does the ball cost?",
+            "opts": [
+              "Five euros",
+              "Ten euros",
+              "Three euros"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How does Sol pay?",
+            "opts": [
+              "With a note",
+              "With coins",
+              "With a card"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How does Sol feel after?",
+            "opts": [
+              "Happy",
+              "Sad",
+              "Worried"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 68,
+      "title": "¡Campeón de casa!",
+      "subtitle": "Casa Champion",
+      "emoji": "🏆",
+      "milestone": true,
+      "funFact": "You can now talk about everything in your home in Spanish! 🏠✨",
+      "phrase": {
+        "es": "Limpio mi habitación y hago la cama.",
+        "en": "I clean my room and make the bed."
+      },
+      "words": [
+        {
+          "es": "La mochila",
+          "en": "Backpack",
+          "say": "la mo-CHEE-lah",
+          "emoji": "🎒"
+        },
+        {
+          "es": "El jabón",
+          "en": "Soap",
+          "say": "el hah-BON",
+          "emoji": "🧼"
+        },
+        {
+          "es": "La nevera",
+          "en": "Fridge",
+          "say": "la neh-BEH-rah",
+          "emoji": "❄️"
+        },
+        {
+          "es": "La cama",
+          "en": "Bed",
+          "say": "la KAH-mah",
+          "emoji": "🛏️"
+        },
+        {
+          "es": "Limpiar",
+          "en": "To clean",
+          "say": "leem-PYAR",
+          "emoji": "✨"
+        },
+        {
+          "es": "Hacer la cama",
+          "en": "Make the bed",
+          "say": "ah-THEHR la KAH-mah",
+          "emoji": "🛏️"
+        },
+        {
+          "es": "El dinero",
+          "en": "Money",
+          "say": "el dee-NEH-ro",
+          "emoji": "💵"
+        },
+        {
+          "es": "Pagar",
+          "en": "To pay",
+          "say": "pah-GAR",
+          "emoji": "💳"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Hago",
+            "la",
+            "cama",
+            "cada",
+            "día"
+          ],
+          "shuffle": [
+            "día",
+            "cama",
+            "Hago",
+            "la",
+            "cada"
+          ],
+          "en": "I make the bed every day."
+        },
+        {
+          "correct": [
+            "Tengo",
+            "tres",
+            "euros",
+            "y",
+            "unas",
+            "monedas"
+          ],
+          "shuffle": [
+            "monedas",
+            "tres",
+            "Tengo",
+            "euros",
+            "unas",
+            "y"
+          ],
+          "en": "I have three euros and some coins."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'La nevera' means:",
+          "opts": [
+            "Fridge",
+            "Oven",
+            "Sink"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Hacer la cama' means:",
+          "opts": [
+            "Make the bed",
+            "Wash the bed",
+            "Lie in bed"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Caro' means:",
+          "opts": [
+            "Expensive",
+            "Cheap",
+            "Easy"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'La almohada' is:",
+          "opts": [
+            "Pillow",
+            "Blanket",
+            "Sheet"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Home Champions",
+        "paras": [
+          "Sol and Luna have learned so much about everyday life. They know all about their casa, baño, and cocina.",
+          "They can clean, do chores, and even go shopping. 'Somos los mejores!' says Sol.",
+          "Mamá gives them un abrazo. 'Estoy muy orgullosa de los dos.' They are home champions! 🏠⭐"
+        ],
+        "qs": [
+          {
+            "q": "What have they learned about?",
+            "opts": [
+              "Everyday home life",
+              "Sports",
+              "Space"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Sol say?",
+            "opts": [
+              "We're the best",
+              "We're tired",
+              "We're hungry"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How does mum feel?",
+            "opts": [
+              "Proud",
+              "Surprised",
+              "Worried"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    }
+  ]
+}

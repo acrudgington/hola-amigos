@@ -1,0 +1,825 @@
+{
+  "world": 1,
+  "lessons": [
+    {
+      "id": 1,
+      "title": "¡Hola!",
+      "subtitle": "Hello & Goodbye",
+      "emoji": "👋",
+      "milestone": false,
+      "funFact": "In Spain, people say ¡Buenas! as a friendly shortcut for hello!",
+      "phrase": {
+        "es": "¡Hola! ¿Qué tal?",
+        "en": "Hello! How are you?"
+      },
+      "words": [
+        {
+          "es": "Hola",
+          "en": "Hello",
+          "say": "OH-la",
+          "emoji": "👋"
+        },
+        {
+          "es": "Adiós",
+          "en": "Goodbye",
+          "say": "ah-DYOS",
+          "emoji": "👋"
+        },
+        {
+          "es": "Buenos días",
+          "en": "Good morning",
+          "say": "BWAY-nos DEE-as",
+          "emoji": "☀️"
+        },
+        {
+          "es": "Buenas tardes",
+          "en": "Good afternoon",
+          "say": "BWAY-nas TAR-des",
+          "emoji": "🌤️"
+        },
+        {
+          "es": "Buenas noches",
+          "en": "Good night",
+          "say": "BWAY-nas NOH-ches",
+          "emoji": "🌙"
+        },
+        {
+          "es": "¿Qué tal?",
+          "en": "How are you?",
+          "say": "keh TAL",
+          "emoji": "😊"
+        },
+        {
+          "es": "Bien",
+          "en": "Good",
+          "say": "byen",
+          "emoji": "👍"
+        },
+        {
+          "es": "Gracias",
+          "en": "Thank you",
+          "say": "GRAH-thyass",
+          "emoji": "🙏"
+        }
+      ],
+      "sentences": [],
+      "gaps": [],
+      "story": {
+        "title": "Sol's Morning",
+        "paras": [
+          "Sol is a little sun who lives in Spain. Every morning, Sol wakes up and says: '¡Buenos días!' to the sky.",
+          "Sol sees a cloud and says '¡Hola! ¿Qué tal?' The cloud says 'Bien, gracias.' They are friends!",
+          "At the end of the day, Sol says '¡Buenas noches!' and '¡Adiós!' to the moon. Then Sol goes to sleep."
+        ],
+        "qs": [
+          {
+            "q": "What does Sol say in the morning?",
+            "opts": [
+              "¡Buenos días!",
+              "¡Buenas noches!",
+              "¡Adiós!"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Who does Sol talk to?",
+            "opts": [
+              "A cloud",
+              "A fish",
+              "A cat"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Sol say at night?",
+            "opts": [
+              "¡Buenas noches!",
+              "¡Buenos días!",
+              "¡Hola!"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "title": "Me llamo…",
+      "subtitle": "My name is…",
+      "emoji": "📛",
+      "milestone": false,
+      "funFact": "Boys say 'Encantado' and girls say 'Encantada'!",
+      "phrase": {
+        "es": "¡Hola! Me llamo Sol.",
+        "en": "Hello! My name is Sol."
+      },
+      "words": [
+        {
+          "es": "Me llamo…",
+          "en": "My name is…",
+          "say": "meh YAH-mo",
+          "emoji": "🙋"
+        },
+        {
+          "es": "¿Cómo te llamas?",
+          "en": "What's your name?",
+          "say": "KOH-mo teh YAH-mas",
+          "emoji": "❓"
+        },
+        {
+          "es": "Mucho gusto",
+          "en": "Nice to meet you",
+          "say": "MOO-cho GOOS-to",
+          "emoji": "🤝"
+        },
+        {
+          "es": "Amigo",
+          "en": "Friend (boy)",
+          "say": "ah-MEE-go",
+          "emoji": "👦"
+        },
+        {
+          "es": "Amiga",
+          "en": "Friend (girl)",
+          "say": "ah-MEE-ga",
+          "emoji": "👧"
+        },
+        {
+          "es": "Sí",
+          "en": "Yes",
+          "say": "see",
+          "emoji": "✅"
+        },
+        {
+          "es": "No",
+          "en": "No",
+          "say": "no",
+          "emoji": "❌"
+        },
+        {
+          "es": "Por favor",
+          "en": "Please",
+          "say": "por fa-BOR",
+          "emoji": "🙏"
+        }
+      ],
+      "sentences": [],
+      "gaps": [],
+      "story": {
+        "title": "Two New Friends",
+        "paras": [
+          "A boy called Marco goes to the park. He sees a girl and says '¡Hola! Me llamo Marco. ¿Cómo te llamas?'",
+          "The girl says 'Me llamo Lucía. Mucho gusto.' Marco says 'Encantado.' They are now amigos!",
+          "Marco says '¡Adiós, amiga!' Lucía says '¡Adiós, amigo!' They are very happy. Sí, sí, sí!"
+        ],
+        "qs": [
+          {
+            "q": "What is the boy's name?",
+            "opts": [
+              "Marco",
+              "Pablo",
+              "Sol"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does 'mucho gusto' mean?",
+            "opts": [
+              "Nice to meet you",
+              "Goodbye",
+              "Thank you"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Are Marco and Lucía friends?",
+            "opts": [
+              "Yes",
+              "No",
+              "Maybe"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "title": "Los números",
+      "subtitle": "Numbers 1–10",
+      "emoji": "🔢",
+      "milestone": false,
+      "funFact": "All numbers from 1 to 15 have their own special word!",
+      "phrase": {
+        "es": "Uno, dos, tres… ¡vamos!",
+        "en": "One, two, three… let's go!"
+      },
+      "words": [
+        {
+          "es": "Uno",
+          "en": "One",
+          "say": "OO-no",
+          "emoji": "1️⃣"
+        },
+        {
+          "es": "Dos",
+          "en": "Two",
+          "say": "dos",
+          "emoji": "2️⃣"
+        },
+        {
+          "es": "Tres",
+          "en": "Three",
+          "say": "tres",
+          "emoji": "3️⃣"
+        },
+        {
+          "es": "Cuatro",
+          "en": "Four",
+          "say": "KWA-tro",
+          "emoji": "4️⃣"
+        },
+        {
+          "es": "Cinco",
+          "en": "Five",
+          "say": "SEEN-ko",
+          "emoji": "5️⃣"
+        },
+        {
+          "es": "Seis",
+          "en": "Six",
+          "say": "says",
+          "emoji": "6️⃣"
+        },
+        {
+          "es": "Siete",
+          "en": "Seven",
+          "say": "SYEH-teh",
+          "emoji": "7️⃣"
+        },
+        {
+          "es": "Ocho",
+          "en": "Eight",
+          "say": "OH-cho",
+          "emoji": "8️⃣"
+        },
+        {
+          "es": "Nueve",
+          "en": "Nine",
+          "say": "NWEH-beh",
+          "emoji": "9️⃣"
+        },
+        {
+          "es": "Diez",
+          "en": "Ten",
+          "say": "dyeth",
+          "emoji": "🔟"
+        }
+      ],
+      "sentences": [],
+      "gaps": [],
+      "story": {
+        "title": "The Counting Race",
+        "paras": [
+          "Five ducks walk to the pond. Uno, dos, tres, cuatro, cinco. They love to swim!",
+          "Three more ducks come. Seis, siete, ocho. Now there are ocho ducks in total!",
+          "Then two more arrive. Nueve, diez! '¡Diez!' shout all the ducks. It's a duck party!"
+        ],
+        "qs": [
+          {
+            "q": "How many ducks were there at first?",
+            "opts": [
+              "Cinco (five)",
+              "Tres (three)",
+              "Diez (ten)"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How many arrived next?",
+            "opts": [
+              "Tres (three)",
+              "Dos (two)",
+              "Cinco (five)"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How many ducks in total at the end?",
+            "opts": [
+              "Diez (ten)",
+              "Ocho (eight)",
+              "Seis (six)"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "title": "Los colores",
+      "subtitle": "Colours",
+      "emoji": "🎨",
+      "milestone": false,
+      "funFact": "'Naranja' means both the fruit AND the colour! 🍊",
+      "phrase": {
+        "es": "Mi color favorito es el azul.",
+        "en": "My favourite colour is blue."
+      },
+      "words": [
+        {
+          "es": "Rojo",
+          "en": "Red",
+          "say": "ROH-ho",
+          "emoji": "🔴"
+        },
+        {
+          "es": "Azul",
+          "en": "Blue",
+          "say": "ah-THOOL",
+          "emoji": "🔵"
+        },
+        {
+          "es": "Amarillo",
+          "en": "Yellow",
+          "say": "ah-ma-REE-yo",
+          "emoji": "🟡"
+        },
+        {
+          "es": "Verde",
+          "en": "Green",
+          "say": "BEHR-deh",
+          "emoji": "🟢"
+        },
+        {
+          "es": "Naranja",
+          "en": "Orange",
+          "say": "na-RAHN-ha",
+          "emoji": "🟠"
+        },
+        {
+          "es": "Morado",
+          "en": "Purple",
+          "say": "mo-RAH-do",
+          "emoji": "🟣"
+        },
+        {
+          "es": "Negro",
+          "en": "Black",
+          "say": "NEH-gro",
+          "emoji": "⚫"
+        },
+        {
+          "es": "Blanco",
+          "en": "White",
+          "say": "BLAHN-ko",
+          "emoji": "⚪"
+        }
+      ],
+      "sentences": [],
+      "gaps": [],
+      "story": {
+        "title": "The Magic Paintbrush",
+        "paras": [
+          "Marta has a magic paintbrush. She paints the sky azul and the sun amarillo.",
+          "She paints the grass verde and the flowers rojo and naranja. '¡Qué bonito!' she says.",
+          "Then she paints a rainbow — rojo, naranja, amarillo, verde, azul, morado! It is the most beautiful painting."
+        ],
+        "qs": [
+          {
+            "q": "What colour is the sky?",
+            "opts": [
+              "Azul (blue)",
+              "Rojo (red)",
+              "Negro (black)"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What colour are the flowers?",
+            "opts": [
+              "Rojo and naranja",
+              "Azul and verde",
+              "Negro and blanco"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Marta paint last?",
+            "opts": [
+              "A rainbow",
+              "A house",
+              "A cat"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "title": "Los animales",
+      "subtitle": "Animals",
+      "emoji": "🐶",
+      "milestone": false,
+      "funFact": "In Spain, dogs say 'guau guau'!",
+      "phrase": {
+        "es": "Me gusta el perro.",
+        "en": "I like the dog."
+      },
+      "words": [
+        {
+          "es": "El perro",
+          "en": "Dog",
+          "say": "el PEH-rro",
+          "emoji": "🐕"
+        },
+        {
+          "es": "El gato",
+          "en": "Cat",
+          "say": "el GAH-to",
+          "emoji": "🐈"
+        },
+        {
+          "es": "El pájaro",
+          "en": "Bird",
+          "say": "el PAH-ha-ro",
+          "emoji": "🐦"
+        },
+        {
+          "es": "El pez",
+          "en": "Fish",
+          "say": "el peth",
+          "emoji": "🐟"
+        },
+        {
+          "es": "El conejo",
+          "en": "Rabbit",
+          "say": "el ko-NEH-ho",
+          "emoji": "🐇"
+        },
+        {
+          "es": "El caballo",
+          "en": "Horse",
+          "say": "el ka-BAH-yo",
+          "emoji": "🐴"
+        },
+        {
+          "es": "La vaca",
+          "en": "Cow",
+          "say": "la BAH-ka",
+          "emoji": "🐮"
+        },
+        {
+          "es": "El cerdo",
+          "en": "Pig",
+          "say": "el THEHR-do",
+          "emoji": "🐷"
+        }
+      ],
+      "sentences": [],
+      "gaps": [],
+      "story": {
+        "title": "The Farm Visit",
+        "paras": [
+          "Lucas visits a farm. He sees un perro, un gato, and un caballo. '¡Hola, animales!' he says.",
+          "A vaca says 'Muuu!' and a cerdo says 'Oink!' Lucas laughs. He sees un pájaro in the sky.",
+          "His favourite animal is el conejo. It is small and white. '¡Me gusta el conejo!' says Lucas."
+        ],
+        "qs": [
+          {
+            "q": "Where does Lucas go?",
+            "opts": [
+              "A farm",
+              "The beach",
+              "School"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Which animal says 'Muuu'?",
+            "opts": [
+              "La vaca (cow)",
+              "El perro (dog)",
+              "El gato (cat)"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What is Lucas's favourite animal?",
+            "opts": [
+              "El conejo (rabbit)",
+              "El caballo (horse)",
+              "El cerdo (pig)"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "title": "Mi familia",
+      "subtitle": "My family",
+      "emoji": "👨‍👩‍👧‍👦",
+      "milestone": false,
+      "funFact": "Sunday lunch in Spain can have 20 people!",
+      "phrase": {
+        "es": "Mi mamá se llama Ana.",
+        "en": "My mum's name is Ana."
+      },
+      "words": [
+        {
+          "es": "Mamá",
+          "en": "Mum",
+          "say": "mah-MAH",
+          "emoji": "👩"
+        },
+        {
+          "es": "Papá",
+          "en": "Dad",
+          "say": "pah-PAH",
+          "emoji": "👨"
+        },
+        {
+          "es": "Hermano",
+          "en": "Brother",
+          "say": "er-MAH-no",
+          "emoji": "👦"
+        },
+        {
+          "es": "Hermana",
+          "en": "Sister",
+          "say": "er-MAH-na",
+          "emoji": "👧"
+        },
+        {
+          "es": "Abuelo",
+          "en": "Grandpa",
+          "say": "ah-BWAY-lo",
+          "emoji": "👴"
+        },
+        {
+          "es": "Abuela",
+          "en": "Grandma",
+          "say": "ah-BWAY-la",
+          "emoji": "👵"
+        },
+        {
+          "es": "Bebé",
+          "en": "Baby",
+          "say": "beh-BEH",
+          "emoji": "👶"
+        },
+        {
+          "es": "Mascota",
+          "en": "Pet",
+          "say": "mas-KOH-ta",
+          "emoji": "🐶"
+        }
+      ],
+      "sentences": [],
+      "gaps": [],
+      "story": {
+        "title": "Grandma's Birthday",
+        "paras": [
+          "Today is abuela's birthday! Mamá makes a big cake. Papá buys flowers. The whole familia is coming!",
+          "Hermano and hermana make a card that says '¡Feliz cumpleaños, abuela!'",
+          "Even the bebé claps and laughs! The mascota, a little perro, eats some cake too! It is a happy día for the familia."
+        ],
+        "qs": [
+          {
+            "q": "Whose birthday is it?",
+            "opts": [
+              "Abuela's (grandma)",
+              "Mamá's (mum)",
+              "Hermano's (brother)"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Who makes the cake?",
+            "opts": [
+              "Mamá",
+              "Papá",
+              "Hermana"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does the mascota eat?",
+            "opts": [
+              "Cake",
+              "Flowers",
+              "The card"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "title": "Mi cuerpo",
+      "subtitle": "My body",
+      "emoji": "🤸",
+      "milestone": false,
+      "funFact": "Spanish kids sing 'Cabeza, hombros, rodillas, pies'!",
+      "phrase": {
+        "es": "¡Toca la cabeza!",
+        "en": "Touch your head!"
+      },
+      "words": [
+        {
+          "es": "La cabeza",
+          "en": "Head",
+          "say": "la ka-BEH-tha",
+          "emoji": "😀"
+        },
+        {
+          "es": "Los ojos",
+          "en": "Eyes",
+          "say": "los OH-hos",
+          "emoji": "👁️"
+        },
+        {
+          "es": "La nariz",
+          "en": "Nose",
+          "say": "la na-REETH",
+          "emoji": "👃"
+        },
+        {
+          "es": "La boca",
+          "en": "Mouth",
+          "say": "la BOH-ka",
+          "emoji": "👄"
+        },
+        {
+          "es": "Las orejas",
+          "en": "Ears",
+          "say": "las oh-REH-has",
+          "emoji": "👂"
+        },
+        {
+          "es": "Las manos",
+          "en": "Hands",
+          "say": "las MAH-nos",
+          "emoji": "🖐️"
+        },
+        {
+          "es": "Los pies",
+          "en": "Feet",
+          "say": "los PYEHS",
+          "emoji": "🦶"
+        },
+        {
+          "es": "El pelo",
+          "en": "Hair",
+          "say": "el PEH-lo",
+          "emoji": "💇"
+        }
+      ],
+      "sentences": [],
+      "gaps": [],
+      "story": {
+        "title": "The Silly Robot",
+        "paras": [
+          "There is a robot in the park. Children shout body parts and the robot touches them! '¡Cabeza!' — the robot touches its head.",
+          "'¡Nariz!' — it touches its nose. '¡Pies!' — it wiggles its feet. Everyone laughs!",
+          "Then someone shouts '¡Orejas!' but the robot touches its boca instead! '¡No, no! ¡Orejas!' The robot is very silly but very fun."
+        ],
+        "qs": [
+          {
+            "q": "Where is the robot?",
+            "opts": [
+              "In the park",
+              "At school",
+              "At home"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does the robot touch when they say 'nariz'?",
+            "opts": [
+              "Its nose",
+              "Its ears",
+              "Its feet"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What mistake does the robot make?",
+            "opts": [
+              "It touches its mouth instead of ears",
+              "It falls over",
+              "It runs away"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "title": "¿Cómo estás?",
+      "subtitle": "Feelings",
+      "emoji": "😊",
+      "milestone": false,
+      "funFact": "Boys say 'contento', girls say 'contenta'!",
+      "phrase": {
+        "es": "Estoy feliz.",
+        "en": "I am happy."
+      },
+      "words": [
+        {
+          "es": "Feliz",
+          "en": "Happy",
+          "say": "feh-LEETH",
+          "emoji": "😊"
+        },
+        {
+          "es": "Triste",
+          "en": "Sad",
+          "say": "TREES-teh",
+          "emoji": "😢"
+        },
+        {
+          "es": "Enfadado",
+          "en": "Angry",
+          "say": "en-fa-DAH-do",
+          "emoji": "😠"
+        },
+        {
+          "es": "Cansado",
+          "en": "Tired",
+          "say": "kan-SAH-do",
+          "emoji": "😴"
+        },
+        {
+          "es": "Asustado",
+          "en": "Scared",
+          "say": "ah-soos-TAH-do",
+          "emoji": "😱"
+        },
+        {
+          "es": "Emocionado",
+          "en": "Excited",
+          "say": "eh-mo-thyo-NAH-do",
+          "emoji": "😆"
+        },
+        {
+          "es": "Enfermo",
+          "en": "Sick",
+          "say": "en-FEHR-mo",
+          "emoji": "🤒"
+        },
+        {
+          "es": "Con hambre",
+          "en": "Hungry",
+          "say": "kon AHM-breh",
+          "emoji": "😋"
+        }
+      ],
+      "sentences": [],
+      "gaps": [],
+      "story": {
+        "title": "The Feelings Day",
+        "paras": [
+          "Monday: Luna is feliz because it's sunny. Tuesday: she is triste because her friend is sick.",
+          "Wednesday: Luna is enfadada because her hermano eats her chocolate! Thursday: she is cansada after a long school day.",
+          "Friday: Luna is emocionada because tomorrow is Saturday! No school! She is very, very feliz."
+        ],
+        "qs": [
+          {
+            "q": "How does Luna feel on Monday?",
+            "opts": [
+              "Feliz (happy)",
+              "Triste (sad)",
+              "Enfadada (angry)"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Why is she enfadada on Wednesday?",
+            "opts": [
+              "Her brother ate her chocolate",
+              "It's raining",
+              "She lost her toy"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Why is she emocionada on Friday?",
+            "opts": [
+              "Tomorrow is Saturday",
+              "She got a present",
+              "Her friend visited"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    }
+  ]
+}

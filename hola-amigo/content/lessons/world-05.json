@@ -1,0 +1,1092 @@
+{
+  "world": 5,
+  "lessons": [
+    {
+      "id": 33,
+      "title": "En la ciudad",
+      "subtitle": "Around town",
+      "emoji": "🏙️",
+      "milestone": false,
+      "funFact": "Most Spanish towns have a 'plaza mayor' — the main square where everyone meets!",
+      "phrase": {
+        "es": "Vamos al parque en la plaza.",
+        "en": "Let's go to the park in the square."
+      },
+      "words": [
+        {
+          "es": "La ciudad",
+          "en": "The city",
+          "say": "la thyoo-DAHD",
+          "emoji": "🏙️"
+        },
+        {
+          "es": "La calle",
+          "en": "The street",
+          "say": "la KAH-yeh",
+          "emoji": "🛣️"
+        },
+        {
+          "es": "La plaza",
+          "en": "The square",
+          "say": "la PLAH-tha",
+          "emoji": "⛲"
+        },
+        {
+          "es": "El parque",
+          "en": "The park",
+          "say": "el PAR-keh",
+          "emoji": "🌳"
+        },
+        {
+          "es": "El banco",
+          "en": "The bank",
+          "say": "el BAHN-ko",
+          "emoji": "🏦"
+        },
+        {
+          "es": "La iglesia",
+          "en": "The church",
+          "say": "la ee-GLEH-syah",
+          "emoji": "⛪"
+        },
+        {
+          "es": "El museo",
+          "en": "The museum",
+          "say": "el moo-SEH-o",
+          "emoji": "🏛️"
+        },
+        {
+          "es": "El cine",
+          "en": "The cinema",
+          "say": "el THEE-neh",
+          "emoji": "🎬"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Vamos",
+            "al",
+            "parque"
+          ],
+          "shuffle": [
+            "parque",
+            "Vamos",
+            "al"
+          ],
+          "en": "Let's go to the park."
+        },
+        {
+          "correct": [
+            "El",
+            "cine",
+            "está",
+            "cerca"
+          ],
+          "shuffle": [
+            "cerca",
+            "cine",
+            "El",
+            "está"
+          ],
+          "en": "The cinema is nearby."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "Sol's Town Tour",
+        "paras": [
+          "Sol the sun visits a Spanish ciudad. He sees una calle bonita and una plaza grande with a fountain.",
+          "First, Sol goes to el parque to relax under a tree. Then he visits el museo to learn about art!",
+          "'¡Qué bonita es la ciudad!' says Sol. He passes el banco and ends his day at el cine. Sol is muy contento!"
+        ],
+        "qs": [
+          {
+            "q": "What does Sol see in the plaza?",
+            "opts": [
+              "A fountain",
+              "A castle",
+              "A train"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Where does Sol go to relax?",
+            "opts": [
+              "The park",
+              "The bank",
+              "The cinema"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Sol visit to learn about art?",
+            "opts": [
+              "The museum",
+              "The church",
+              "The park"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 34,
+      "title": "Los transportes",
+      "subtitle": "Transport",
+      "emoji": "🚌",
+      "milestone": false,
+      "funFact": "Spanish high-speed trains (AVE) zoom along at 300 km/h!",
+      "phrase": {
+        "es": "Voy al cole en bicicleta.",
+        "en": "I go to school by bike."
+      },
+      "words": [
+        {
+          "es": "El coche",
+          "en": "Car",
+          "say": "el KOH-cheh",
+          "emoji": "🚗"
+        },
+        {
+          "es": "El autobús",
+          "en": "Bus",
+          "say": "el ow-toh-BOOS",
+          "emoji": "🚌"
+        },
+        {
+          "es": "El tren",
+          "en": "Train",
+          "say": "el TREN",
+          "emoji": "🚆"
+        },
+        {
+          "es": "El avión",
+          "en": "Plane",
+          "say": "el ah-BYON",
+          "emoji": "✈️"
+        },
+        {
+          "es": "La bicicleta",
+          "en": "Bicycle",
+          "say": "la bee-thee-KLEH-tah",
+          "emoji": "🚲"
+        },
+        {
+          "es": "La moto",
+          "en": "Motorbike",
+          "say": "la MOH-toh",
+          "emoji": "🏍️"
+        },
+        {
+          "es": "El barco",
+          "en": "Boat",
+          "say": "el BAR-ko",
+          "emoji": "🚢"
+        },
+        {
+          "es": "A pie",
+          "en": "On foot",
+          "say": "ah PYEH",
+          "emoji": "🚶"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Voy",
+            "en",
+            "autobús"
+          ],
+          "shuffle": [
+            "autobús",
+            "en",
+            "Voy"
+          ],
+          "en": "I go by bus."
+        },
+        {
+          "correct": [
+            "El",
+            "tren",
+            "es",
+            "rápido"
+          ],
+          "shuffle": [
+            "rápido",
+            "es",
+            "tren",
+            "El"
+          ],
+          "en": "The train is fast."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "Luna's Big Trip",
+        "paras": [
+          "Luna wants to viajar across Spain. First she takes el tren — it's muy rápido!",
+          "Then she rides un autobús to the next town. After that she goes a pie through a forest.",
+          "Finally, Luna takes un avión to the moon… ¡no, un barco al mar! She loves all the transportes!"
+        ],
+        "qs": [
+          {
+            "q": "How does Luna start her trip?",
+            "opts": [
+              "By train",
+              "By bus",
+              "By boat"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How does she go through the forest?",
+            "opts": [
+              "On foot",
+              "By bike",
+              "By plane"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Luna take last?",
+            "opts": [
+              "A boat",
+              "A train",
+              "A motorbike"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 35,
+      "title": "En el supermercado",
+      "subtitle": "At the supermarket",
+      "emoji": "🛒",
+      "milestone": false,
+      "funFact": "In Spain you usually have to pay 5-15 cents for a plastic bag — bring your own!",
+      "phrase": {
+        "es": "Tengo una lista para el supermercado.",
+        "en": "I have a list for the supermarket."
+      },
+      "words": [
+        {
+          "es": "El supermercado",
+          "en": "Supermarket",
+          "say": "el soo-per-mer-KAH-do",
+          "emoji": "🛒"
+        },
+        {
+          "es": "El carrito",
+          "en": "Trolley",
+          "say": "el ka-RREE-toh",
+          "emoji": "🛒"
+        },
+        {
+          "es": "La lista",
+          "en": "The list",
+          "say": "la LEES-tah",
+          "emoji": "📝"
+        },
+        {
+          "es": "El paquete",
+          "en": "Packet",
+          "say": "el pa-KEH-teh",
+          "emoji": "📦"
+        },
+        {
+          "es": "La botella",
+          "en": "Bottle",
+          "say": "la bo-TEH-yah",
+          "emoji": "🍾"
+        },
+        {
+          "es": "La lata",
+          "en": "Tin/can",
+          "say": "la LAH-tah",
+          "emoji": "🥫"
+        },
+        {
+          "es": "La caja",
+          "en": "Box / checkout",
+          "say": "la KAH-hah",
+          "emoji": "📦"
+        },
+        {
+          "es": "La bolsa",
+          "en": "Bag",
+          "say": "la BOL-sah",
+          "emoji": "🛍️"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Tengo",
+            "una",
+            "lista"
+          ],
+          "shuffle": [
+            "lista",
+            "una",
+            "Tengo"
+          ],
+          "en": "I have a list."
+        },
+        {
+          "correct": [
+            "Compro",
+            "una",
+            "botella",
+            "de",
+            "agua"
+          ],
+          "shuffle": [
+            "agua",
+            "botella",
+            "Compro",
+            "de",
+            "una"
+          ],
+          "en": "I buy a bottle of water."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "Shopping with Sol",
+        "paras": [
+          "Sol goes to el supermercado with his lista. He grabs un carrito.",
+          "First una botella de leche, then un paquete de pan, and una lata de tomates.",
+          "At la caja, Sol pays. He fills su bolsa and goes home. ¡Qué buen comprador!"
+        ],
+        "qs": [
+          {
+            "q": "What does Sol bring to the supermarket?",
+            "opts": [
+              "A list",
+              "A bag",
+              "A friend"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Sol buy first?",
+            "opts": [
+              "Milk",
+              "Bread",
+              "Tomatoes"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Where does Sol pay?",
+            "opts": [
+              "At the checkout",
+              "At the door",
+              "Outside"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 36,
+      "title": "Frutas y verduras",
+      "subtitle": "Fruits & vegetables",
+      "emoji": "🥦",
+      "milestone": false,
+      "funFact": "In Latin America 'patata' is called 'papa' — same potato, different word!",
+      "phrase": {
+        "es": "Me gusta la ensalada con tomate.",
+        "en": "I like salad with tomato."
+      },
+      "words": [
+        {
+          "es": "La zanahoria",
+          "en": "Carrot",
+          "say": "la tha-na-OH-ryah",
+          "emoji": "🥕"
+        },
+        {
+          "es": "El tomate",
+          "en": "Tomato",
+          "say": "el toh-MAH-teh",
+          "emoji": "🍅"
+        },
+        {
+          "es": "La patata",
+          "en": "Potato",
+          "say": "la pa-TAH-tah",
+          "emoji": "🥔"
+        },
+        {
+          "es": "La cebolla",
+          "en": "Onion",
+          "say": "la theh-BOH-yah",
+          "emoji": "🧅"
+        },
+        {
+          "es": "La lechuga",
+          "en": "Lettuce",
+          "say": "la leh-CHOO-gah",
+          "emoji": "🥬"
+        },
+        {
+          "es": "El pepino",
+          "en": "Cucumber",
+          "say": "el peh-PEE-no",
+          "emoji": "🥒"
+        },
+        {
+          "es": "El melocotón",
+          "en": "Peach",
+          "say": "el meh-lo-ko-TON",
+          "emoji": "🍑"
+        },
+        {
+          "es": "La piña",
+          "en": "Pineapple",
+          "say": "la PEE-nyah",
+          "emoji": "🍍"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Me",
+            "gusta",
+            "el",
+            "tomate"
+          ],
+          "shuffle": [
+            "tomate",
+            "Me",
+            "el",
+            "gusta"
+          ],
+          "en": "I like tomato."
+        },
+        {
+          "correct": [
+            "Quiero",
+            "una",
+            "zanahoria"
+          ],
+          "shuffle": [
+            "zanahoria",
+            "una",
+            "Quiero"
+          ],
+          "en": "I want a carrot."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "Luna's Salad",
+        "paras": [
+          "Luna makes a salad. She takes una lechuga, dos tomates, and un pepino.",
+          "She also adds una zanahoria small and una cebolla. ¡Qué colorida!",
+          "De postre, Luna eats una piña sweet and un melocotón juicy. ¡Qué delicia!"
+        ],
+        "qs": [
+          {
+            "q": "What does Luna take first?",
+            "opts": [
+              "Lettuce",
+              "Onion",
+              "Tomato"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How many tomatoes does Luna add?",
+            "opts": [
+              "Two",
+              "One",
+              "Three"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Luna eat for dessert?",
+            "opts": [
+              "Pineapple and peach",
+              "Carrot",
+              "Cucumber"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 37,
+      "title": "Los deportes",
+      "subtitle": "Sports",
+      "emoji": "⚽",
+      "milestone": false,
+      "funFact": "Spain's national football team is called 'La Roja' — The Red One!",
+      "phrase": {
+        "es": "Me encanta jugar al fútbol.",
+        "en": "I love to play football."
+      },
+      "words": [
+        {
+          "es": "El fútbol",
+          "en": "Football",
+          "say": "el FOOT-bol",
+          "emoji": "⚽"
+        },
+        {
+          "es": "El baloncesto",
+          "en": "Basketball",
+          "say": "el ba-lon-THES-toh",
+          "emoji": "🏀"
+        },
+        {
+          "es": "El tenis",
+          "en": "Tennis",
+          "say": "el TEH-nees",
+          "emoji": "🎾"
+        },
+        {
+          "es": "La natación",
+          "en": "Swimming",
+          "say": "la na-tah-THYON",
+          "emoji": "🏊"
+        },
+        {
+          "es": "Correr",
+          "en": "To run",
+          "say": "ko-RREHR",
+          "emoji": "🏃"
+        },
+        {
+          "es": "Saltar",
+          "en": "To jump",
+          "say": "sal-TAR",
+          "emoji": "🤸"
+        },
+        {
+          "es": "Ganar",
+          "en": "To win",
+          "say": "gah-NAR",
+          "emoji": "🏆"
+        },
+        {
+          "es": "Perder",
+          "en": "To lose",
+          "say": "pehr-DEHR",
+          "emoji": "😢"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Juego",
+            "al",
+            "fútbol"
+          ],
+          "shuffle": [
+            "fútbol",
+            "al",
+            "Juego"
+          ],
+          "en": "I play football."
+        },
+        {
+          "correct": [
+            "Me",
+            "gusta",
+            "correr"
+          ],
+          "shuffle": [
+            "correr",
+            "Me",
+            "gusta"
+          ],
+          "en": "I like to run."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "Sports Day",
+        "paras": [
+          "Today is sports day! Sol plays al fútbol. Luna plays al baloncesto.",
+          "Sol corre very fast and salta high! 'Voy a ganar!' he shouts.",
+          "Luna gana al tenis. Sol pierde al fútbol but smiles. 'Lo importante es divertirse!'"
+        ],
+        "qs": [
+          {
+            "q": "What sport does Sol play?",
+            "opts": [
+              "Football",
+              "Tennis",
+              "Basketball"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Who wins at tennis?",
+            "opts": [
+              "Luna",
+              "Sol",
+              "Nobody"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Sol say at the end?",
+            "opts": [
+              "The important thing is having fun",
+              "I lost",
+              "I'm sad"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 38,
+      "title": "Mi tiempo libre",
+      "subtitle": "My free time",
+      "emoji": "🎨",
+      "milestone": false,
+      "funFact": "Spanish kids love to dance flamenco — it has been around for over 200 years!",
+      "phrase": {
+        "es": "En mi tiempo libre, me gusta dibujar.",
+        "en": "In my free time, I like to draw."
+      },
+      "words": [
+        {
+          "es": "El tiempo libre",
+          "en": "Free time",
+          "say": "el TYEM-poh LEE-breh",
+          "emoji": "⏰"
+        },
+        {
+          "es": "Leer",
+          "en": "To read",
+          "say": "leh-EHR",
+          "emoji": "📚"
+        },
+        {
+          "es": "Dibujar",
+          "en": "To draw",
+          "say": "dee-boo-HAR",
+          "emoji": "✏️"
+        },
+        {
+          "es": "Pintar",
+          "en": "To paint",
+          "say": "peen-TAR",
+          "emoji": "🎨"
+        },
+        {
+          "es": "Bailar",
+          "en": "To dance",
+          "say": "by-LAR",
+          "emoji": "💃"
+        },
+        {
+          "es": "Cantar",
+          "en": "To sing",
+          "say": "kahn-TAR",
+          "emoji": "🎤"
+        },
+        {
+          "es": "Cocinar",
+          "en": "To cook",
+          "say": "ko-thee-NAR",
+          "emoji": "👨‍🍳"
+        },
+        {
+          "es": "Ver la tele",
+          "en": "To watch TV",
+          "say": "behr la TEH-leh",
+          "emoji": "📺"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Me",
+            "gusta",
+            "leer"
+          ],
+          "shuffle": [
+            "leer",
+            "Me",
+            "gusta"
+          ],
+          "en": "I like to read."
+        },
+        {
+          "correct": [
+            "Bailo",
+            "y",
+            "canto",
+            "mucho"
+          ],
+          "shuffle": [
+            "mucho",
+            "Bailo",
+            "canto",
+            "y"
+          ],
+          "en": "I dance and sing a lot."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "Free Time Friends",
+        "paras": [
+          "In her tiempo libre, Luna le gusta dibujar y pintar. She paints flores rojas and gatos blancos.",
+          "Sol prefers cantar y bailar. He's a fantastic dancer!",
+          "'¿Quieres cocinar conmigo?' Luna asks. They cook chocolate cake and ver la tele juntos. ¡Qué tarde tan bonita!"
+        ],
+        "qs": [
+          {
+            "q": "What does Luna like to do?",
+            "opts": [
+              "Draw and paint",
+              "Sing and dance",
+              "Cook"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Sol prefer?",
+            "opts": [
+              "Sing and dance",
+              "Read",
+              "Watch TV"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What do they cook?",
+            "opts": [
+              "Chocolate cake",
+              "Pizza",
+              "Bread"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 39,
+      "title": "En la granja",
+      "subtitle": "On the farm",
+      "emoji": "🐔",
+      "milestone": false,
+      "funFact": "Spanish roosters say 'kikirikí' — not 'cock-a-doodle-doo'!",
+      "phrase": {
+        "es": "En la granja hay muchas gallinas.",
+        "en": "On the farm there are many hens."
+      },
+      "words": [
+        {
+          "es": "La granja",
+          "en": "Farm",
+          "say": "la GRAHN-hah",
+          "emoji": "🚜"
+        },
+        {
+          "es": "La gallina",
+          "en": "Hen",
+          "say": "la gah-YEE-nah",
+          "emoji": "🐔"
+        },
+        {
+          "es": "El gallo",
+          "en": "Rooster",
+          "say": "el GAH-yo",
+          "emoji": "🐓"
+        },
+        {
+          "es": "La oveja",
+          "en": "Sheep",
+          "say": "la oh-BEH-hah",
+          "emoji": "🐑"
+        },
+        {
+          "es": "La cabra",
+          "en": "Goat",
+          "say": "la KAH-brah",
+          "emoji": "🐐"
+        },
+        {
+          "es": "El pato",
+          "en": "Duck",
+          "say": "el PAH-toh",
+          "emoji": "🦆"
+        },
+        {
+          "es": "El bosque",
+          "en": "Forest",
+          "say": "el BOS-keh",
+          "emoji": "🌲"
+        },
+        {
+          "es": "El árbol",
+          "en": "Tree",
+          "say": "el AR-bol",
+          "emoji": "🌳"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Hay",
+            "una",
+            "oveja"
+          ],
+          "shuffle": [
+            "oveja",
+            "una",
+            "Hay"
+          ],
+          "en": "There is a sheep."
+        },
+        {
+          "correct": [
+            "El",
+            "pato",
+            "nada",
+            "en",
+            "el",
+            "agua"
+          ],
+          "shuffle": [
+            "agua",
+            "nada",
+            "pato",
+            "el",
+            "El",
+            "en"
+          ],
+          "en": "The duck swims in the water."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "At the Farm",
+        "paras": [
+          "Sol and Luna visit una granja. They see una gallina with five baby chicks!",
+          "Un gallo says 'kikirikí!' Una oveja and una cabra eat grass. Un pato swims in the pond.",
+          "Then they walk into el bosque and see a tall árbol with un pájaro singing. ¡La naturaleza es bonita!"
+        ],
+        "qs": [
+          {
+            "q": "How many baby chicks does the hen have?",
+            "opts": [
+              "Five",
+              "Three",
+              "Ten"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does the rooster say?",
+            "opts": [
+              "Kikirikí",
+              "Cock-a-doodle-doo",
+              "Quack"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Where do they walk to?",
+            "opts": [
+              "The forest",
+              "The beach",
+              "The town"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 40,
+      "title": "¡Maestro de las palabras!",
+      "subtitle": "Vocabulary Master Challenge",
+      "emoji": "🏆",
+      "milestone": true,
+      "funFact": "You learned 60+ new words! ¡Eres un maestro de las palabras! 🌟",
+      "phrase": {
+        "es": "¡Sé muchas palabras nuevas!",
+        "en": "I know lots of new words!"
+      },
+      "words": [
+        {
+          "es": "La ciudad",
+          "en": "City",
+          "say": "la thyoo-DAHD",
+          "emoji": "🏙️"
+        },
+        {
+          "es": "El autobús",
+          "en": "Bus",
+          "say": "el ow-toh-BOOS",
+          "emoji": "🚌"
+        },
+        {
+          "es": "El supermercado",
+          "en": "Supermarket",
+          "say": "el soo-per-mer-KAH-do",
+          "emoji": "🛒"
+        },
+        {
+          "es": "La zanahoria",
+          "en": "Carrot",
+          "say": "la tha-na-OH-ryah",
+          "emoji": "🥕"
+        },
+        {
+          "es": "El fútbol",
+          "en": "Football",
+          "say": "el FOOT-bol",
+          "emoji": "⚽"
+        },
+        {
+          "es": "Bailar",
+          "en": "To dance",
+          "say": "by-LAR",
+          "emoji": "💃"
+        },
+        {
+          "es": "La gallina",
+          "en": "Hen",
+          "say": "la gah-YEE-nah",
+          "emoji": "🐔"
+        },
+        {
+          "es": "El bosque",
+          "en": "Forest",
+          "say": "el BOS-keh",
+          "emoji": "🌲"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Voy",
+            "al",
+            "supermercado",
+            "en",
+            "autobús"
+          ],
+          "shuffle": [
+            "autobús",
+            "Voy",
+            "supermercado",
+            "en",
+            "al"
+          ],
+          "en": "I go to the supermarket by bus."
+        },
+        {
+          "correct": [
+            "Me",
+            "gusta",
+            "jugar",
+            "al",
+            "fútbol"
+          ],
+          "shuffle": [
+            "fútbol",
+            "Me",
+            "jugar",
+            "al",
+            "gusta"
+          ],
+          "en": "I like to play football."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'El bosque' means:",
+          "opts": [
+            "The forest",
+            "The bus",
+            "The street"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Cocinar' means:",
+          "opts": [
+            "To cook",
+            "To dance",
+            "To run"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'La piña' is:",
+          "opts": [
+            "Pineapple",
+            "Peach",
+            "Onion"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'En bicicleta' means:",
+          "opts": [
+            "By bike",
+            "On foot",
+            "By car"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "The Word Master",
+        "paras": [
+          "Today, Sol and Luna are very orgullosos. They have learned 60+ new words!",
+          "'¡Eres una maestra de palabras!' Sol tells Luna. 'Y tú también!' Luna replies.",
+          "From cities to farms, transports to sports — they know muchas cosas. ¡Adelante to the next adventure!"
+        ],
+        "qs": [
+          {
+            "q": "How does Sol describe Luna?",
+            "opts": [
+              "A word master",
+              "A teacher",
+              "A friend"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What kinds of words have they learned?",
+            "opts": [
+              "All of these",
+              "Just animals",
+              "Just food"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How do they feel?",
+            "opts": [
+              "Very proud",
+              "Very tired",
+              "Very sad"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    }
+  ]
+}

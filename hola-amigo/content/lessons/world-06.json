@@ -1,0 +1,1362 @@
+{
+  "world": 6,
+  "lessons": [
+    {
+      "id": 41,
+      "title": "Mis amigos",
+      "subtitle": "My friends",
+      "emoji": "🤝",
+      "milestone": false,
+      "funFact": "In Spain, friends greet each other with two cheek kisses — left, then right!",
+      "phrase": {
+        "es": "Mi mejor amigo me ayuda mucho.",
+        "en": "My best friend helps me a lot."
+      },
+      "words": [
+        {
+          "es": "Mejor amigo",
+          "en": "Best friend (m)",
+          "say": "meh-HOR ah-MEE-go",
+          "emoji": "👬"
+        },
+        {
+          "es": "Mejor amiga",
+          "en": "Best friend (f)",
+          "say": "meh-HOR ah-MEE-gah",
+          "emoji": "👭"
+        },
+        {
+          "es": "Conocer",
+          "en": "To meet/know",
+          "say": "ko-no-THEHR",
+          "emoji": "🤝"
+        },
+        {
+          "es": "Compartir",
+          "en": "To share",
+          "say": "kom-par-TEER",
+          "emoji": "🤲"
+        },
+        {
+          "es": "Ayudar",
+          "en": "To help",
+          "say": "ah-yoo-DAR",
+          "emoji": "🦸"
+        },
+        {
+          "es": "Reír",
+          "en": "To laugh",
+          "say": "reh-EER",
+          "emoji": "😂"
+        },
+        {
+          "es": "Llorar",
+          "en": "To cry",
+          "say": "yo-RAR",
+          "emoji": "😢"
+        },
+        {
+          "es": "Abrazar",
+          "en": "To hug",
+          "say": "ah-brah-THAR",
+          "emoji": "🤗"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Mi",
+            "amigo",
+            "es",
+            "muy",
+            "simpático"
+          ],
+          "shuffle": [
+            "simpático",
+            "amigo",
+            "muy",
+            "Mi",
+            "es"
+          ],
+          "en": "My friend is very nice."
+        },
+        {
+          "correct": [
+            "Comparto",
+            "mis",
+            "juguetes"
+          ],
+          "shuffle": [
+            "juguetes",
+            "Comparto",
+            "mis"
+          ],
+          "en": "I share my toys."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "Best Friends",
+        "paras": [
+          "Sol's mejor amigo is a star called Estrella. They love compartir tiempo together.",
+          "One day Estrella was triste. Sol gave her un abrazo. 'Estoy aquí para ayudarte,' he said.",
+          "They reír together and become más amigos than ever. ¡La amistad es lo mejor!"
+        ],
+        "qs": [
+          {
+            "q": "Who is Sol's best friend?",
+            "opts": [
+              "Estrella",
+              "Luna",
+              "A planet"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Sol give Estrella?",
+            "opts": [
+              "A hug",
+              "A gift",
+              "Food"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does friendship feel like?",
+            "opts": [
+              "The best",
+              "Boring",
+              "Sad"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 42,
+      "title": "Las celebraciones",
+      "subtitle": "Celebrations",
+      "emoji": "🎉",
+      "milestone": false,
+      "funFact": "In Spain, kids get presents from the Three Kings on January 6th, not Santa!",
+      "phrase": {
+        "es": "¡Felicidades en tu cumpleaños!",
+        "en": "Happy birthday to you!"
+      },
+      "words": [
+        {
+          "es": "La fiesta",
+          "en": "The party",
+          "say": "la FYES-tah",
+          "emoji": "🎉"
+        },
+        {
+          "es": "Los regalos",
+          "en": "Presents",
+          "say": "los reh-GAH-los",
+          "emoji": "🎁"
+        },
+        {
+          "es": "La tarta",
+          "en": "Cake",
+          "say": "la TAR-tah",
+          "emoji": "🎂"
+        },
+        {
+          "es": "Las velas",
+          "en": "Candles",
+          "say": "las BEH-las",
+          "emoji": "🕯️"
+        },
+        {
+          "es": "Los globos",
+          "en": "Balloons",
+          "say": "los GLO-bos",
+          "emoji": "🎈"
+        },
+        {
+          "es": "Navidad",
+          "en": "Christmas",
+          "say": "na-bee-DAHD",
+          "emoji": "🎄"
+        },
+        {
+          "es": "Reyes Magos",
+          "en": "The Three Kings",
+          "say": "REH-yes MAH-gos",
+          "emoji": "👑"
+        },
+        {
+          "es": "Felicidades",
+          "en": "Congratulations",
+          "say": "feh-lee-thee-DAH-des",
+          "emoji": "🎊"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Hay",
+            "muchos",
+            "globos",
+            "en",
+            "la",
+            "fiesta"
+          ],
+          "shuffle": [
+            "fiesta",
+            "muchos",
+            "globos",
+            "Hay",
+            "la",
+            "en"
+          ],
+          "en": "There are lots of balloons at the party."
+        },
+        {
+          "correct": [
+            "Me",
+            "encantan",
+            "los",
+            "regalos"
+          ],
+          "shuffle": [
+            "regalos",
+            "los",
+            "Me",
+            "encantan"
+          ],
+          "en": "I love the presents."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "Luna's Birthday",
+        "paras": [
+          "¡Es el cumpleaños de Luna! There's una fiesta with muchos globos and una tarta with velas.",
+          "Sol gives her muchos regalos: a book, a guitar, and a hug! 'Felicidades, Luna!'",
+          "They sing 'Cumpleaños feliz' and dance. The best fiesta in the universe!"
+        ],
+        "qs": [
+          {
+            "q": "Whose birthday is it?",
+            "opts": [
+              "Luna's",
+              "Sol's",
+              "Estrella's"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What presents does Sol give?",
+            "opts": [
+              "Book, guitar, hug",
+              "Toys, candy, chocolate",
+              "Flowers, ribbon, doll"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What do they do at the party?",
+            "opts": [
+              "Sing and dance",
+              "Sleep",
+              "Eat only"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 43,
+      "title": "Las profesiones",
+      "subtitle": "Jobs",
+      "emoji": "👨‍⚕️",
+      "milestone": false,
+      "funFact": "Many Spanish words for jobs change between -o (boy) and -a (girl)!",
+      "phrase": {
+        "es": "Quiero ser médica de mayor.",
+        "en": "I want to be a doctor when I grow up."
+      },
+      "words": [
+        {
+          "es": "El médico",
+          "en": "Doctor (m)",
+          "say": "el MEH-dee-ko",
+          "emoji": "👨‍⚕️"
+        },
+        {
+          "es": "La médica",
+          "en": "Doctor (f)",
+          "say": "la MEH-dee-kah",
+          "emoji": "👩‍⚕️"
+        },
+        {
+          "es": "El profesor",
+          "en": "Teacher (m)",
+          "say": "el pro-feh-SOR",
+          "emoji": "👨‍🏫"
+        },
+        {
+          "es": "La profesora",
+          "en": "Teacher (f)",
+          "say": "la pro-feh-SOH-rah",
+          "emoji": "👩‍🏫"
+        },
+        {
+          "es": "El bombero",
+          "en": "Firefighter",
+          "say": "el bom-BEH-ro",
+          "emoji": "👨‍🚒"
+        },
+        {
+          "es": "El policía",
+          "en": "Police officer",
+          "say": "el po-lee-THEE-ah",
+          "emoji": "👮"
+        },
+        {
+          "es": "El cocinero",
+          "en": "Cook (m)",
+          "say": "el ko-thee-NEH-ro",
+          "emoji": "👨‍🍳"
+        },
+        {
+          "es": "El astronauta",
+          "en": "Astronaut",
+          "say": "el ahs-tro-NOW-tah",
+          "emoji": "👨‍🚀"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Mi",
+            "papá",
+            "es",
+            "cocinero"
+          ],
+          "shuffle": [
+            "cocinero",
+            "papá",
+            "Mi",
+            "es"
+          ],
+          "en": "My dad is a cook."
+        },
+        {
+          "correct": [
+            "Quiero",
+            "ser",
+            "astronauta"
+          ],
+          "shuffle": [
+            "astronauta",
+            "ser",
+            "Quiero"
+          ],
+          "en": "I want to be an astronaut."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "What I Want to Be",
+        "paras": [
+          "Sol asks Luna: '¿Qué quieres ser de mayor?' Luna says 'Quiero ser astronauta!'",
+          "'Y yo quiero ser cocinero,' replies Sol. 'Like my abuelo!'",
+          "Both have big sueños. Maybe one day Sol will be el cocinero más famoso, and Luna will travel through space!"
+        ],
+        "qs": [
+          {
+            "q": "What does Luna want to be?",
+            "opts": [
+              "An astronaut",
+              "A doctor",
+              "A teacher"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Sol want to be?",
+            "opts": [
+              "A cook",
+              "A firefighter",
+              "A police officer"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Who inspired Sol?",
+            "opts": [
+              "His grandfather",
+              "His teacher",
+              "His mother"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 44,
+      "title": "Música y arte",
+      "subtitle": "Music & art",
+      "emoji": "🎵",
+      "milestone": false,
+      "funFact": "Spain's most famous painters are Picasso, Goya, Velázquez, and Dalí!",
+      "phrase": {
+        "es": "Toco la guitarra y canto.",
+        "en": "I play the guitar and sing."
+      },
+      "words": [
+        {
+          "es": "La música",
+          "en": "Music",
+          "say": "la MOO-see-kah",
+          "emoji": "🎵"
+        },
+        {
+          "es": "La canción",
+          "en": "Song",
+          "say": "la kahn-THYON",
+          "emoji": "🎶"
+        },
+        {
+          "es": "La guitarra",
+          "en": "Guitar",
+          "say": "la gee-TAH-rrah",
+          "emoji": "🎸"
+        },
+        {
+          "es": "El piano",
+          "en": "Piano",
+          "say": "el PYAH-no",
+          "emoji": "🎹"
+        },
+        {
+          "es": "La pintura",
+          "en": "Painting",
+          "say": "la peen-TOO-rah",
+          "emoji": "🖼️"
+        },
+        {
+          "es": "El cuadro",
+          "en": "Picture/painting",
+          "say": "el KWAH-dro",
+          "emoji": "🖼️"
+        },
+        {
+          "es": "El concierto",
+          "en": "Concert",
+          "say": "el kon-THYEHR-toh",
+          "emoji": "🎤"
+        },
+        {
+          "es": "Tocar",
+          "en": "To play (instrument)",
+          "say": "toh-KAR",
+          "emoji": "🎼"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Toco",
+            "el",
+            "piano"
+          ],
+          "shuffle": [
+            "piano",
+            "Toco",
+            "el"
+          ],
+          "en": "I play the piano."
+        },
+        {
+          "correct": [
+            "Me",
+            "gusta",
+            "esta",
+            "canción"
+          ],
+          "shuffle": [
+            "canción",
+            "esta",
+            "Me",
+            "gusta"
+          ],
+          "en": "I like this song."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "The Music Show",
+        "paras": [
+          "Sol toca la guitarra. Luna toca el piano. They make beautiful música together!",
+          "They write una canción about the stars. Then they perform a concierto for all the planets.",
+          "'¡Bravo! ¡Otra! ¡Otra!' shout the planets. Sol and Luna are muy felices."
+        ],
+        "qs": [
+          {
+            "q": "What instrument does Sol play?",
+            "opts": [
+              "Guitar",
+              "Piano",
+              "Drums"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Luna play?",
+            "opts": [
+              "Piano",
+              "Guitar",
+              "Violin"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Who do they perform for?",
+            "opts": [
+              "The planets",
+              "Their family",
+              "Other suns"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 45,
+      "title": "La tecnología",
+      "subtitle": "Technology",
+      "emoji": "📱",
+      "milestone": false,
+      "funFact": "In Spain, 'computer' is 'ordenador'. In Latin America, it's 'computadora'!",
+      "phrase": {
+        "es": "Tengo un móvil nuevo.",
+        "en": "I have a new mobile phone."
+      },
+      "words": [
+        {
+          "es": "El móvil",
+          "en": "Mobile phone",
+          "say": "el MOH-beel",
+          "emoji": "📱"
+        },
+        {
+          "es": "El ordenador",
+          "en": "Computer",
+          "say": "el or-deh-na-DOR",
+          "emoji": "💻"
+        },
+        {
+          "es": "La tableta",
+          "en": "Tablet",
+          "say": "la tah-BLEH-tah",
+          "emoji": "📱"
+        },
+        {
+          "es": "La pantalla",
+          "en": "Screen",
+          "say": "la pan-TAH-yah",
+          "emoji": "🖥️"
+        },
+        {
+          "es": "El videojuego",
+          "en": "Video game",
+          "say": "el bee-deh-o-HWEH-go",
+          "emoji": "🎮"
+        },
+        {
+          "es": "Internet",
+          "en": "Internet",
+          "say": "een-tehr-NET",
+          "emoji": "🌐"
+        },
+        {
+          "es": "La foto",
+          "en": "Photo",
+          "say": "la FOH-toh",
+          "emoji": "📸"
+        },
+        {
+          "es": "El robot",
+          "en": "Robot",
+          "say": "el roh-BOT",
+          "emoji": "🤖"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Mi",
+            "ordenador",
+            "es",
+            "rápido"
+          ],
+          "shuffle": [
+            "rápido",
+            "ordenador",
+            "Mi",
+            "es"
+          ],
+          "en": "My computer is fast."
+        },
+        {
+          "correct": [
+            "Hago",
+            "una",
+            "foto"
+          ],
+          "shuffle": [
+            "foto",
+            "una",
+            "Hago"
+          ],
+          "en": "I take a photo."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "The Robot Helper",
+        "paras": [
+          "Sol gets un nuevo móvil! He learns to take fotos and play videojuegos.",
+          "Luna prefers el ordenador. She uses Internet to talk with friends on otros planetas.",
+          "Then a friendly robot arrives! He plays música on his pantalla. ¡La tecnología es divertida!"
+        ],
+        "qs": [
+          {
+            "q": "What does Sol get?",
+            "opts": [
+              "A new mobile",
+              "A computer",
+              "A tablet"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Luna prefer?",
+            "opts": [
+              "The computer",
+              "The mobile",
+              "The robot"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Who arrives?",
+            "opts": [
+              "A friendly robot",
+              "A friend",
+              "A teacher"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 46,
+      "title": "Estoy enfermo",
+      "subtitle": "I'm sick",
+      "emoji": "🤒",
+      "milestone": false,
+      "funFact": "In Spain, you can ask for medicine over the counter at any 'farmacia' — green cross sign!",
+      "phrase": {
+        "es": "Tengo fiebre y tos.",
+        "en": "I have a fever and a cough."
+      },
+      "words": [
+        {
+          "es": "La fiebre",
+          "en": "Fever",
+          "say": "la FYEH-breh",
+          "emoji": "🤒"
+        },
+        {
+          "es": "La tos",
+          "en": "Cough",
+          "say": "la TOS",
+          "emoji": "😷"
+        },
+        {
+          "es": "El resfriado",
+          "en": "Cold",
+          "say": "el res-FRYAH-do",
+          "emoji": "🤧"
+        },
+        {
+          "es": "El dolor",
+          "en": "Pain",
+          "say": "el doh-LOR",
+          "emoji": "😖"
+        },
+        {
+          "es": "La medicina",
+          "en": "Medicine",
+          "say": "la meh-dee-THEE-nah",
+          "emoji": "💊"
+        },
+        {
+          "es": "La tirita",
+          "en": "Plaster (band-aid)",
+          "say": "la tee-REE-tah",
+          "emoji": "🩹"
+        },
+        {
+          "es": "Descansar",
+          "en": "To rest",
+          "say": "des-kahn-SAR",
+          "emoji": "😴"
+        },
+        {
+          "es": "Mejorarse",
+          "en": "To get better",
+          "say": "meh-ho-RAR-seh",
+          "emoji": "💪"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Necesito",
+            "una",
+            "tirita"
+          ],
+          "shuffle": [
+            "tirita",
+            "una",
+            "Necesito"
+          ],
+          "en": "I need a plaster."
+        },
+        {
+          "correct": [
+            "Tengo",
+            "que",
+            "descansar"
+          ],
+          "shuffle": [
+            "descansar",
+            "que",
+            "Tengo"
+          ],
+          "en": "I have to rest."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "Sol Gets Sick",
+        "paras": [
+          "One day Sol tiene fiebre y tos. He's resfriado.",
+          "Luna says 'Necesitas medicina y descansar.' She gives him una tirita too.",
+          "Sol descansa all day. The next morning, he feels mejor and shines brightly! ¡Gracias, Luna!"
+        ],
+        "qs": [
+          {
+            "q": "What's wrong with Sol?",
+            "opts": [
+              "Has a fever and cough",
+              "Has a stomachache",
+              "Hurt his foot"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Luna give him?",
+            "opts": [
+              "Medicine and a plaster",
+              "Food",
+              "A hug"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How does Sol feel the next day?",
+            "opts": [
+              "Better",
+              "Worse",
+              "The same"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 47,
+      "title": "Sentimientos",
+      "subtitle": "Deeper feelings",
+      "emoji": "💭",
+      "milestone": false,
+      "funFact": "In Spanish, 'estoy aburrido' means I'm bored, but 'soy aburrido' means I'm boring!",
+      "phrase": {
+        "es": "Estoy un poco nervioso pero contento.",
+        "en": "I'm a bit nervous but happy."
+      },
+      "words": [
+        {
+          "es": "Nervioso",
+          "en": "Nervous",
+          "say": "nehr-BYOH-so",
+          "emoji": "😰"
+        },
+        {
+          "es": "Tímido",
+          "en": "Shy",
+          "say": "TEE-mee-do",
+          "emoji": "😳"
+        },
+        {
+          "es": "Sorprendido",
+          "en": "Surprised",
+          "say": "sor-pren-DEE-do",
+          "emoji": "😲"
+        },
+        {
+          "es": "Aburrido",
+          "en": "Bored",
+          "say": "ah-boo-RREE-do",
+          "emoji": "😑"
+        },
+        {
+          "es": "Tranquilo",
+          "en": "Calm",
+          "say": "trahn-KEE-loh",
+          "emoji": "😌"
+        },
+        {
+          "es": "Confundido",
+          "en": "Confused",
+          "say": "kon-foon-DEE-do",
+          "emoji": "😕"
+        },
+        {
+          "es": "Orgulloso",
+          "en": "Proud",
+          "say": "or-goo-YO-so",
+          "emoji": "😊"
+        },
+        {
+          "es": "Avergonzado",
+          "en": "Embarrassed",
+          "say": "ah-behr-gon-THAH-do",
+          "emoji": "😳"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Estoy",
+            "muy",
+            "tranquilo",
+            "hoy"
+          ],
+          "shuffle": [
+            "hoy",
+            "Estoy",
+            "muy",
+            "tranquilo"
+          ],
+          "en": "I'm very calm today."
+        },
+        {
+          "correct": [
+            "Mamá",
+            "está",
+            "orgullosa"
+          ],
+          "shuffle": [
+            "orgullosa",
+            "Mamá",
+            "está"
+          ],
+          "en": "Mum is proud."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "The Big Day",
+        "paras": [
+          "Today is Luna's first concert. She is muy nerviosa. 'Estoy muy nerviosa,' she tells Sol.",
+          "Sol smiles: 'Tranquila! You'll be amazing.' Luna feels más tranquila.",
+          "After the concert, all the stars cheer. Luna is orgullosa and ¡un poco sorprendida! 'I did it!'"
+        ],
+        "qs": [
+          {
+            "q": "How does Luna feel before the concert?",
+            "opts": [
+              "Nervous",
+              "Happy",
+              "Bored"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How does Sol help?",
+            "opts": [
+              "Tells her to be calm",
+              "Plays music",
+              "Goes home"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How does Luna feel after?",
+            "opts": [
+              "Proud and surprised",
+              "Sad",
+              "Tired"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 48,
+      "title": "Mi opinión",
+      "subtitle": "Giving opinions",
+      "emoji": "💬",
+      "milestone": false,
+      "funFact": "Spaniards are known for being very direct with opinions — they don't sugar-coat!",
+      "phrase": {
+        "es": "Creo que el chocolate es delicioso.",
+        "en": "I think chocolate is delicious."
+      },
+      "words": [
+        {
+          "es": "Creo que…",
+          "en": "I think…",
+          "say": "KREH-o keh",
+          "emoji": "💭"
+        },
+        {
+          "es": "Pienso que…",
+          "en": "I think that…",
+          "say": "PYEN-soh keh",
+          "emoji": "🤔"
+        },
+        {
+          "es": "En mi opinión",
+          "en": "In my opinion",
+          "say": "en mee oh-pee-NYON",
+          "emoji": "💬"
+        },
+        {
+          "es": "Estoy de acuerdo",
+          "en": "I agree",
+          "say": "es-TOY deh ah-KWEHR-do",
+          "emoji": "👍"
+        },
+        {
+          "es": "No estoy de acuerdo",
+          "en": "I disagree",
+          "say": "no es-TOY deh ah-KWEHR-do",
+          "emoji": "👎"
+        },
+        {
+          "es": "Quizás",
+          "en": "Maybe",
+          "say": "kee-THAS",
+          "emoji": "🤷"
+        },
+        {
+          "es": "Por supuesto",
+          "en": "Of course",
+          "say": "por soo-PWES-toh",
+          "emoji": "✅"
+        },
+        {
+          "es": "Depende",
+          "en": "It depends",
+          "say": "deh-PEN-deh",
+          "emoji": "⚖️"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Creo",
+            "que",
+            "tienes",
+            "razón"
+          ],
+          "shuffle": [
+            "razón",
+            "tienes",
+            "Creo",
+            "que"
+          ],
+          "en": "I think you're right."
+        },
+        {
+          "correct": [
+            "En",
+            "mi",
+            "opinión",
+            "es",
+            "bonito"
+          ],
+          "shuffle": [
+            "bonito",
+            "mi",
+            "En",
+            "opinión",
+            "es"
+          ],
+          "en": "In my opinion it's pretty."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "What's the Best?",
+        "paras": [
+          "Sol and Luna debate: '¿Cuál es el mejor postre?' Sol creo que el chocolate es lo mejor.",
+          "Luna piensa que la fruta es mejor. 'En mi opinión, la fruta es más sana.'",
+          "Estrella arrives: 'Estoy de acuerdo con los dos. Both are great!' They all laugh."
+        ],
+        "qs": [
+          {
+            "q": "What does Sol think is best?",
+            "opts": [
+              "Chocolate",
+              "Fruit",
+              "Cake"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Why does Luna prefer fruit?",
+            "opts": [
+              "Because it's healthier",
+              "Because it's tasty",
+              "Because it's sweet"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Estrella say?",
+            "opts": [
+              "Both are great",
+              "Only chocolate",
+              "Only fruit"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 49,
+      "title": "Comparaciones",
+      "subtitle": "Comparisons",
+      "emoji": "⚖️",
+      "milestone": false,
+      "funFact": "Spanish uses 'que' for comparisons — like saying 'taller QUE me' for 'taller than me'!",
+      "phrase": {
+        "es": "Mi hermano es más alto que yo.",
+        "en": "My brother is taller than me."
+      },
+      "words": [
+        {
+          "es": "Más que",
+          "en": "More than",
+          "say": "mahs keh",
+          "emoji": "➕"
+        },
+        {
+          "es": "Menos que",
+          "en": "Less than",
+          "say": "MEH-nos keh",
+          "emoji": "➖"
+        },
+        {
+          "es": "Tan… como",
+          "en": "As… as",
+          "say": "tahn KOH-mo",
+          "emoji": "🟰"
+        },
+        {
+          "es": "El mejor",
+          "en": "The best (m)",
+          "say": "el meh-HOR",
+          "emoji": "🥇"
+        },
+        {
+          "es": "La mejor",
+          "en": "The best (f)",
+          "say": "la meh-HOR",
+          "emoji": "🥇"
+        },
+        {
+          "es": "El peor",
+          "en": "The worst (m)",
+          "say": "el peh-OR",
+          "emoji": "🥉"
+        },
+        {
+          "es": "Más alto",
+          "en": "Taller",
+          "say": "mahs AHL-toh",
+          "emoji": "📏"
+        },
+        {
+          "es": "Más rápido",
+          "en": "Faster",
+          "say": "mahs RAH-pee-do",
+          "emoji": "💨"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Soy",
+            "más",
+            "rápido",
+            "que",
+            "tú"
+          ],
+          "shuffle": [
+            "tú",
+            "más",
+            "Soy",
+            "que",
+            "rápido"
+          ],
+          "en": "I'm faster than you."
+        },
+        {
+          "correct": [
+            "El",
+            "perro",
+            "es",
+            "el",
+            "mejor"
+          ],
+          "shuffle": [
+            "mejor",
+            "perro",
+            "el",
+            "El",
+            "es"
+          ],
+          "en": "The dog is the best."
+        }
+      ],
+      "gaps": [],
+      "story": {
+        "title": "Who's the Tallest?",
+        "paras": [
+          "Sol, Luna, and Estrella compare. 'Yo soy más grande que tú,' Sol says to Estrella.",
+          "'Pero Luna es más rápida que Sol,' Estrella says. They check — it's true!",
+          "En el final, they decide: each one is el mejor at something. ¡Todos son únicos!"
+        ],
+        "qs": [
+          {
+            "q": "Who is bigger than Estrella?",
+            "opts": [
+              "Sol",
+              "Luna",
+              "Nobody"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Who is faster than Sol?",
+            "opts": [
+              "Luna",
+              "Estrella",
+              "Nobody"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What do they decide?",
+            "opts": [
+              "Each one is the best at something",
+              "Sol is the best",
+              "Luna is the worst"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 50,
+      "title": "¡Campeón de comparaciones!",
+      "subtitle": "Comparison Champion",
+      "emoji": "🏆",
+      "milestone": true,
+      "funFact": "You can now talk about jobs, opinions, feelings, and compare things! ¡Increíble! 🌟",
+      "phrase": {
+        "es": "Creo que soy más rápido que mi hermano.",
+        "en": "I think I'm faster than my brother."
+      },
+      "words": [
+        {
+          "es": "Mejor amigo",
+          "en": "Best friend",
+          "say": "meh-HOR ah-MEE-go",
+          "emoji": "👬"
+        },
+        {
+          "es": "La fiesta",
+          "en": "Party",
+          "say": "la FYES-tah",
+          "emoji": "🎉"
+        },
+        {
+          "es": "Quiero ser",
+          "en": "I want to be",
+          "say": "KYEH-ro sehr",
+          "emoji": "🌟"
+        },
+        {
+          "es": "Toco la guitarra",
+          "en": "I play the guitar",
+          "say": "TOH-ko la gee-TAH-rrah",
+          "emoji": "🎸"
+        },
+        {
+          "es": "Tengo fiebre",
+          "en": "I have a fever",
+          "say": "TEN-go FYEH-breh",
+          "emoji": "🤒"
+        },
+        {
+          "es": "Estoy nervioso",
+          "en": "I'm nervous",
+          "say": "es-TOY nehr-BYOH-so",
+          "emoji": "😰"
+        },
+        {
+          "es": "Creo que",
+          "en": "I think",
+          "say": "KREH-o keh",
+          "emoji": "💭"
+        },
+        {
+          "es": "Más alto que",
+          "en": "Taller than",
+          "say": "mahs AHL-toh keh",
+          "emoji": "📏"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Mi",
+            "amigo",
+            "es",
+            "mejor",
+            "que",
+            "yo"
+          ],
+          "shuffle": [
+            "mejor",
+            "amigo",
+            "Mi",
+            "yo",
+            "que",
+            "es"
+          ],
+          "en": "My friend is better than me."
+        },
+        {
+          "correct": [
+            "Quiero",
+            "ser",
+            "cocinero"
+          ],
+          "shuffle": [
+            "cocinero",
+            "ser",
+            "Quiero"
+          ],
+          "en": "I want to be a cook."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Más alto que' means:",
+          "opts": [
+            "Taller than",
+            "As tall as",
+            "Less tall than"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Estoy de acuerdo' means:",
+          "opts": [
+            "I agree",
+            "I think",
+            "I'm tired"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Tengo fiebre' means:",
+          "opts": [
+            "I have a fever",
+            "I have a cough",
+            "I have a cold"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'El mejor' means:",
+          "opts": [
+            "The best",
+            "The worst",
+            "The biggest"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "The Comparison Champion",
+        "paras": [
+          "Sol, Luna, and Estrella have learned so much! They can now compare and give opinions.",
+          "'Eres mejor amigo que nunca!' Sol tells Luna. 'Y tú eres más simpático que el sol!' Luna laughs.",
+          "Together they are los mejores amigos del universo. ¡Felicidades, campeones!"
+        ],
+        "qs": [
+          {
+            "q": "What can they now do?",
+            "opts": [
+              "Compare and give opinions",
+              "Travel to space",
+              "Sing songs"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How does Luna describe Sol?",
+            "opts": [
+              "Nicer than the sun",
+              "Bigger than the moon",
+              "Faster than a star"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What are they together?",
+            "opts": [
+              "The best friends in the universe",
+              "Just friends",
+              "Family"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    }
+  ]
+}
