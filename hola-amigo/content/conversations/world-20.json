@@ -1,0 +1,838 @@
+{
+  "world": 20,
+  "conversations": [
+    {
+      "lesson": 171,
+      "who": "sol",
+      "title": "What's wrong?",
+      "scene": "🤕",
+      "turns": [
+        {
+          "ask": "Tienes mala cara. ¿Qué te pasa?",
+          "askEn": "You don't look well. What's wrong?",
+          "answer": "Me duele la barriga.",
+          "answerEn": "My tummy hurts.",
+          "keys": [
+            "me duele",
+            "me duelen",
+            "estoy",
+            "tengo"
+          ],
+          "wrong": [
+            "La espalda es larga.",
+            "Mi brazo."
+          ],
+          "reply": "¡Pobrecito!",
+          "replyEn": "Poor thing!"
+        },
+        {
+          "ask": "¿Te duele la cabeza también?",
+          "askEn": "Does your head hurt too?",
+          "answer": "No, solo la barriga.",
+          "answerEn": "No, just my tummy.",
+          "keys": [
+            "si",
+            "no",
+            "me duele",
+            "un poco"
+          ],
+          "wrong": [
+            "Me duelen los pies.",
+            "Es la pierna."
+          ],
+          "reply": "Vale.",
+          "replyEn": "OK."
+        },
+        {
+          "ask": "¿Qué has comido?",
+          "askEn": "What have you eaten?",
+          "answer": "He comido muchos caramelos.",
+          "answerEn": "I've eaten lots of sweets.",
+          "keys": [
+            "he comido",
+            "comi",
+            "comido"
+          ],
+          "wrong": [
+            "Me duele la barriga.",
+            "Como mañana."
+          ],
+          "reply": "¡Ahí está el problema!",
+          "replyEn": "There's the problem!"
+        },
+        {
+          "ask": "¿Te duelen las muelas?",
+          "askEn": "Do your teeth hurt?",
+          "answer": "Sí, un poco.",
+          "answerEn": "Yes, a bit.",
+          "keys": [
+            "si",
+            "no",
+            "un poco",
+            "me duelen",
+            "mucho"
+          ],
+          "wrong": [
+            "Me duele el brazo.",
+            "La pierna."
+          ],
+          "reply": "Hay que ir al dentista.",
+          "replyEn": "You need to go to the dentist."
+        }
+      ]
+    },
+    {
+      "lesson": 172,
+      "who": "luna",
+      "title": "I've got a cold",
+      "scene": "🤧",
+      "turns": [
+        {
+          "ask": "¡Achís! ¿Estás resfriado?",
+          "askEn": "Atchoo! Have you got a cold?",
+          "answer": "Sí, estoy resfriado.",
+          "answerEn": "Yes, I've got a cold.",
+          "keys": [
+            "resfriado",
+            "resfriada",
+            "si",
+            "no",
+            "gripe"
+          ],
+          "wrong": [
+            "Estornudar.",
+            "La cama."
+          ],
+          "reply": "¡Jesús!",
+          "replyEn": "Bless you!"
+        },
+        {
+          "ask": "¿Cómo te encuentras?",
+          "askEn": "How do you feel?",
+          "answer": "Me encuentro mal.",
+          "answerEn": "I feel ill.",
+          "keys": [
+            "me encuentro",
+            "mal",
+            "mejor",
+            "fatal",
+            "bien"
+          ],
+          "wrong": [
+            "Estoy en la cama.",
+            "Tengo un pañuelo."
+          ],
+          "reply": "¡Qué pena!",
+          "replyEn": "What a shame!"
+        },
+        {
+          "ask": "¿Tienes fiebre?",
+          "askEn": "Have you got a temperature?",
+          "answer": "No, pero tengo mocos.",
+          "answerEn": "No, but I've got a runny nose.",
+          "keys": [
+            "si",
+            "no",
+            "fiebre",
+            "mocos",
+            "tos"
+          ],
+          "wrong": [
+            "Me encuentro bien.",
+            "Estoy mareado."
+          ],
+          "reply": "Pues, a la cama.",
+          "replyEn": "Off to bed, then."
+        },
+        {
+          "ask": "¿Y hoy? ¿Ya estás mejor?",
+          "askEn": "And today? Are you better now?",
+          "answer": "¡Sí, me encuentro mucho mejor!",
+          "answerEn": "Yes, I feel much better!",
+          "keys": [
+            "mejor",
+            "bien",
+            "si",
+            "no",
+            "todavia"
+          ],
+          "wrong": [
+            "Estoy resfriado.",
+            "Tengo gripe."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Great!"
+        }
+      ]
+    },
+    {
+      "lesson": 173,
+      "who": "sol",
+      "title": "At the doctor's",
+      "scene": "🩺",
+      "role": "the doctor",
+      "turns": [
+        {
+          "ask": "Hola. ¿Qué te pasa?",
+          "askEn": "Hello. What's wrong?",
+          "answer": "Tengo tos y me duele la garganta.",
+          "answerEn": "I've got a cough and my throat hurts.",
+          "keys": [
+            "tos",
+            "me duele",
+            "fiebre",
+            "tengo",
+            "estoy"
+          ],
+          "wrong": [
+            "Abre la boca.",
+            "La receta."
+          ],
+          "reply": "Vamos a ver.",
+          "replyEn": "Let's have a look."
+        },
+        {
+          "ask": "Abre la boca, por favor.",
+          "askEn": "Open your mouth, please.",
+          "answer": "¡Aaah!",
+          "answerEn": "Aaah!",
+          "keys": [
+            "aaah",
+            "aah",
+            "ah",
+            "vale",
+            "si"
+          ],
+          "wrong": [
+            "Respira hondo.",
+            "La pastilla."
+          ],
+          "reply": "Tienes la garganta un poco roja.",
+          "replyEn": "Your throat is a bit red."
+        },
+        {
+          "ask": "Respira hondo. ¿Te duele?",
+          "askEn": "Breathe deeply. Does it hurt?",
+          "answer": "No, no me duele.",
+          "answerEn": "No, it doesn't hurt.",
+          "keys": [
+            "no",
+            "si",
+            "me duele",
+            "un poco"
+          ],
+          "wrong": [
+            "El termómetro.",
+            "La cita."
+          ],
+          "reply": "Muy bien.",
+          "replyEn": "Very good."
+        },
+        {
+          "ask": "Aquí tienes la receta. Toma el jarabe tres veces al día.",
+          "askEn": "Here's the prescription. Take the syrup three times a day.",
+          "answer": "Vale. ¡Muchas gracias!",
+          "answerEn": "OK. Thank you very much!",
+          "keys": [
+            "gracias",
+            "vale"
+          ],
+          "wrong": [
+            "Abre la boca.",
+            "Respira hondo."
+          ],
+          "reply": "¡Que te mejores!",
+          "replyEn": "Get well soon!"
+        }
+      ]
+    },
+    {
+      "lesson": 174,
+      "who": "luna",
+      "title": "An accident",
+      "scene": "🩹",
+      "turns": [
+        {
+          "ask": "¡Ay! ¿Qué te ha pasado?",
+          "askEn": "Ouch! What's happened to you?",
+          "answer": "Me he torcido el tobillo.",
+          "answerEn": "I've twisted my ankle.",
+          "keys": [
+            "me he",
+            "me duele",
+            "me cai",
+            "me he caido"
+          ],
+          "wrong": [
+            "La escayola.",
+            "Urgencias."
+          ],
+          "reply": "¡Pobre!",
+          "replyEn": "Poor you!"
+        },
+        {
+          "ask": "¿Te duele mucho?",
+          "askEn": "Does it hurt a lot?",
+          "answer": "Sí, me duele mucho.",
+          "answerEn": "Yes, it really hurts.",
+          "keys": [
+            "si",
+            "no",
+            "un poco",
+            "mucho",
+            "me duele"
+          ],
+          "wrong": [
+            "La venda.",
+            "Me he cortado con un papel."
+          ],
+          "reply": "Vamos a urgencias.",
+          "replyEn": "Let's go to A&E."
+        },
+        {
+          "ask": "¿Cómo te lo has hecho?",
+          "askEn": "How did you do it?",
+          "answer": "Jugando al fútbol.",
+          "answerEn": "Playing football.",
+          "keys": [
+            "jugando",
+            "corriendo",
+            "me cai",
+            "en el"
+          ],
+          "wrong": [
+            "Me he cortado.",
+            "La herida."
+          ],
+          "reply": "¡Ay, el fútbol!",
+          "replyEn": "Oh, football!"
+        },
+        {
+          "ask": "El médico dice que está roto. ¿Qué te ponen?",
+          "askEn": "The doctor says it's broken. What are they putting on?",
+          "answer": "Me ponen una escayola.",
+          "answerEn": "They're putting on a plaster cast.",
+          "keys": [
+            "escayola",
+            "venda"
+          ],
+          "wrong": [
+            "Me he quemado.",
+            "Urgencias."
+          ],
+          "reply": "¡Todos vamos a escribir en ella!",
+          "replyEn": "We're all going to write on it!"
+        }
+      ]
+    },
+    {
+      "lesson": 175,
+      "who": "sol",
+      "title": "Good advice",
+      "scene": "💧",
+      "turns": [
+        {
+          "ask": "Me duele la cabeza. ¿Qué hago?",
+          "askEn": "My head hurts. What should I do?",
+          "answer": "Bebe agua y descansa.",
+          "answerEn": "Drink water and rest.",
+          "keys": [
+            "bebe",
+            "descansa",
+            "deberias",
+            "tienes que",
+            "hay que",
+            "ve al medico"
+          ],
+          "wrong": [
+            "Me duele la cabeza.",
+            "Abrígate."
+          ],
+          "reply": "¡Buena idea!",
+          "replyEn": "Good idea!"
+        },
+        {
+          "ask": "Hace mucho frío fuera.",
+          "askEn": "It's very cold outside.",
+          "answer": "¡Abrígate!",
+          "answerEn": "Wrap up warm!",
+          "keys": [
+            "abrigate",
+            "abrigo",
+            "bufanda"
+          ],
+          "wrong": [
+            "Bebe agua.",
+            "Lávate las manos."
+          ],
+          "reply": "¡Sí, abuela!",
+          "replyEn": "Yes, Grandma!"
+        },
+        {
+          "ask": "Vamos a comer. ¿Qué hay que hacer antes?",
+          "askEn": "Let's eat. What do we have to do first?",
+          "answer": "Hay que lavarse las manos.",
+          "answerEn": "We have to wash our hands.",
+          "keys": [
+            "lavarse las manos",
+            "lavate las manos",
+            "manos"
+          ],
+          "wrong": [
+            "Hay que comer.",
+            "No comas tanto."
+          ],
+          "reply": "¡Exacto!",
+          "replyEn": "Exactly!"
+        },
+        {
+          "ask": "Me he comido diez galletas…",
+          "askEn": "I've eaten ten biscuits…",
+          "answer": "¡No comas tanto!",
+          "answerEn": "Don't eat so much!",
+          "keys": [
+            "no comas",
+            "no deberias",
+            "tanto"
+          ],
+          "wrong": [
+            "Bebe agua.",
+            "Descansa."
+          ],
+          "reply": "¡Vale, vale!",
+          "replyEn": "OK, OK!"
+        }
+      ]
+    },
+    {
+      "lesson": 176,
+      "who": "luna",
+      "title": "Healthy habits",
+      "scene": "🥦",
+      "turns": [
+        {
+          "ask": "¿Comes fruta y verdura todos los días?",
+          "askEn": "Do you eat fruit and vegetables every day?",
+          "answer": "Sí, casi todos los días.",
+          "answerEn": "Yes, almost every day.",
+          "keys": [
+            "si",
+            "no",
+            "a veces",
+            "todos los dias",
+            "casi"
+          ],
+          "wrong": [
+            "La comida basura.",
+            "El azúcar."
+          ],
+          "reply": "¡Muy bien!",
+          "replyEn": "Well done!"
+        },
+        {
+          "ask": "¿La comida basura es sana?",
+          "askEn": "Is junk food healthy?",
+          "answer": "No, no es sana.",
+          "answerEn": "No, it isn't healthy.",
+          "keys": [
+            "no",
+            "no es sana"
+          ],
+          "wrong": [
+            "Sí, es muy sana.",
+            "Me gusta mucho."
+          ],
+          "reply": "¡Exacto!",
+          "replyEn": "Exactly!"
+        },
+        {
+          "ask": "¿Cuántas horas duermes?",
+          "askEn": "How many hours do you sleep?",
+          "answer": "Duermo nueve horas.",
+          "answerEn": "I sleep nine hours.",
+          "keys": [
+            "horas",
+            "duermo"
+          ],
+          "wrong": [
+            "Hago ejercicio.",
+            "Me gustan las vitaminas."
+          ],
+          "reply": "¡Perfecto!",
+          "replyEn": "Perfect!"
+        },
+        {
+          "ask": "¿Haces ejercicio?",
+          "askEn": "Do you exercise?",
+          "answer": "Sí, monto en bici y nado.",
+          "answerEn": "Yes, I ride my bike and swim.",
+          "keys": [
+            "si",
+            "no",
+            "monto",
+            "nado",
+            "corro",
+            "juego",
+            "hago"
+          ],
+          "wrong": [
+            "La fruta.",
+            "Es sano."
+          ],
+          "reply": "¡Qué deportista!",
+          "replyEn": "How sporty!"
+        }
+      ]
+    },
+    {
+      "lesson": 177,
+      "who": "sol",
+      "title": "Team talk",
+      "scene": "⚽",
+      "turns": [
+        {
+          "ask": "¿Juegas en un equipo?",
+          "askEn": "Do you play in a team?",
+          "answer": "Sí, juego en un equipo de fútbol.",
+          "answerEn": "Yes, I play in a football team.",
+          "keys": [
+            "si",
+            "no",
+            "equipo",
+            "juego"
+          ],
+          "wrong": [
+            "El árbitro.",
+            "El campeonato."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Nice!"
+        },
+        {
+          "ask": "¿Cuándo entrenáis?",
+          "askEn": "When do you train?",
+          "answer": "Entrenamos los martes y jueves.",
+          "answerEn": "We train on Tuesdays and Thursdays.",
+          "keys": [
+            "lunes",
+            "martes",
+            "miercoles",
+            "jueves",
+            "viernes",
+            "sabado",
+            "domingo",
+            "entrenamos"
+          ],
+          "wrong": [
+            "Ganamos el partido.",
+            "El entrenador."
+          ],
+          "reply": "¡Qué constancia!",
+          "replyEn": "So dedicated!"
+        },
+        {
+          "ask": "¿Qué pasó en el último partido?",
+          "askEn": "What happened in the last match?",
+          "answer": "Ganamos dos a uno.",
+          "answerEn": "We won two–one.",
+          "keys": [
+            "ganamos",
+            "perdimos",
+            "empatamos",
+            "marque",
+            "gane"
+          ],
+          "wrong": [
+            "Mañana jugaremos.",
+            "Juego al fútbol."
+          ],
+          "reply": "¡Enhorabuena!",
+          "replyEn": "Congratulations!"
+        },
+        {
+          "ask": "¿Marcaste algún gol?",
+          "askEn": "Did you score a goal?",
+          "answer": "¡Sí, marqué un gol!",
+          "answerEn": "Yes, I scored a goal!",
+          "keys": [
+            "marque",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Marco mañana.",
+            "El árbitro."
+          ],
+          "reply": "¡Golazo!",
+          "replyEn": "What a goal!"
+        }
+      ]
+    },
+    {
+      "lesson": 178,
+      "who": "luna",
+      "title": "PE class",
+      "scene": "🏃‍♀️",
+      "turns": [
+        {
+          "ask": "¿Qué dice el profe de educación física?",
+          "askEn": "What does the PE teacher say?",
+          "answer": "¡Corre más rápido!",
+          "answerEn": "Run faster!",
+          "keys": [
+            "corre",
+            "salta",
+            "lanza",
+            "para",
+            "venga",
+            "pasa",
+            "estirate"
+          ],
+          "wrong": [
+            "Me duele la pierna.",
+            "Es muy simpático."
+          ],
+          "reply": "¡Eso es!",
+          "replyEn": "That's it!"
+        },
+        {
+          "ask": "¡Tengo el balón! ¿Qué hago?",
+          "askEn": "I've got the ball! What should I do?",
+          "answer": "¡Pásame el balón!",
+          "answerEn": "Pass me the ball!",
+          "keys": [
+            "pasa",
+            "pasame",
+            "lanza",
+            "chuta",
+            "corre"
+          ],
+          "wrong": [
+            "¡Para!",
+            "¡Estírate!"
+          ],
+          "reply": "¡Toma!",
+          "replyEn": "Here you go!"
+        },
+        {
+          "ask": "Estoy muy cansada…",
+          "askEn": "I'm really tired…",
+          "answer": "¡Venga, tú puedes!",
+          "answerEn": "Come on, you can do it!",
+          "keys": [
+            "venga",
+            "animo",
+            "tu puedes",
+            "vamos"
+          ],
+          "wrong": [
+            "¡Para!",
+            "¡Cuidado!"
+          ],
+          "reply": "¡Gracias!",
+          "replyEn": "Thanks!"
+        },
+        {
+          "ask": "¿Qué hacemos al final de la clase?",
+          "askEn": "What do we do at the end of the class?",
+          "answer": "Nos estiramos.",
+          "answerEn": "We stretch.",
+          "keys": [
+            "estiramos",
+            "estirate",
+            "descansamos",
+            "estirar"
+          ],
+          "wrong": [
+            "Corremos más rápido.",
+            "Saltamos."
+          ],
+          "reply": "¡Muy bien!",
+          "replyEn": "Very good!"
+        }
+      ]
+    },
+    {
+      "lesson": 179,
+      "who": "sol",
+      "title": "Feelings",
+      "scene": "😁",
+      "turns": [
+        {
+          "ask": "¿Cómo estás hoy?",
+          "askEn": "How are you today?",
+          "answer": "Estoy de muy buen humor.",
+          "answerEn": "I'm in a really good mood.",
+          "keys": [
+            "estoy",
+            "humor",
+            "contento",
+            "contenta",
+            "bien",
+            "triste",
+            "cansado",
+            "cansada"
+          ],
+          "wrong": [
+            "La lluvia es gris.",
+            "Me da vergüenza."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Great!"
+        },
+        {
+          "ask": "¿Qué te pone contento?",
+          "askEn": "What makes you happy?",
+          "answer": "El sol me pone contento.",
+          "answerEn": "The sun makes me happy.",
+          "keys": [
+            "me pone",
+            "me encanta",
+            "me gusta"
+          ],
+          "wrong": [
+            "Estoy agobiado.",
+            "Me siento solo."
+          ],
+          "reply": "¡A mí también!",
+          "replyEn": "Me too!"
+        },
+        {
+          "ask": "¿Qué te da vergüenza?",
+          "askEn": "What embarrasses you?",
+          "answer": "Me da vergüenza cantar en clase.",
+          "answerEn": "Singing in class embarrasses me.",
+          "keys": [
+            "me da verguenza",
+            "verguenza",
+            "nada"
+          ],
+          "wrong": [
+            "Me pone contento.",
+            "Estoy de buen humor."
+          ],
+          "reply": "¡A mí también un poco!",
+          "replyEn": "Me too, a bit!"
+        },
+        {
+          "ask": "¿Estás preocupado por algo?",
+          "askEn": "Are you worried about something?",
+          "answer": "Sí, por el examen de mañana.",
+          "answerEn": "Yes, about tomorrow's exam.",
+          "keys": [
+            "si",
+            "no",
+            "por",
+            "un poco"
+          ],
+          "wrong": [
+            "Me pone triste la lluvia.",
+            "Estoy de buen humor."
+          ],
+          "reply": "¡Tranquilo, lo harás muy bien!",
+          "replyEn": "Don't worry, you'll do really well!"
+        }
+      ]
+    },
+    {
+      "lesson": 180,
+      "who": "luna",
+      "title": "Health champion",
+      "scene": "🏆",
+      "turns": [
+        {
+          "ask": "¿Qué te pasa?",
+          "askEn": "What's wrong?",
+          "answer": "Me duelen las piernas.",
+          "answerEn": "My legs hurt.",
+          "keys": [
+            "me duele",
+            "me duelen",
+            "estoy",
+            "tengo",
+            "me encuentro"
+          ],
+          "wrong": [
+            "Bebe agua.",
+            "¡Venga!"
+          ],
+          "reply": "¡Pobre!",
+          "replyEn": "Poor you!"
+        },
+        {
+          "ask": "¿Por qué?",
+          "askEn": "Why?",
+          "answer": "Porque he entrenado mucho.",
+          "answerEn": "Because I've trained a lot.",
+          "keys": [
+            "porque"
+          ],
+          "wrong": [
+            "Por eso.",
+            "Así que."
+          ],
+          "reply": "¡Ah, claro!",
+          "replyEn": "Oh, of course!"
+        },
+        {
+          "ask": "¿Qué me aconsejas para el resfriado?",
+          "askEn": "What do you advise me for a cold?",
+          "answer": "Bebe mucha agua y descansa.",
+          "answerEn": "Drink lots of water and rest.",
+          "keys": [
+            "bebe",
+            "descansa",
+            "abrigate",
+            "deberias",
+            "tienes que",
+            "hay que"
+          ],
+          "wrong": [
+            "Me duele la cabeza.",
+            "Estoy resfriado."
+          ],
+          "reply": "¡Gracias!",
+          "replyEn": "Thanks!"
+        },
+        {
+          "ask": "¿Marcaste un gol en el partido?",
+          "askEn": "Did you score a goal in the match?",
+          "answer": "Sí, marqué dos goles.",
+          "answerEn": "Yes, I scored two goals.",
+          "keys": [
+            "marque",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Marco mañana.",
+            "El árbitro."
+          ],
+          "reply": "¡Qué crack!",
+          "replyEn": "What a star!"
+        },
+        {
+          "ask": "¿Cómo te sientes ahora?",
+          "askEn": "How do you feel now?",
+          "answer": "Estoy de muy buen humor.",
+          "answerEn": "I'm in a really good mood.",
+          "keys": [
+            "estoy",
+            "me siento",
+            "me encuentro",
+            "humor",
+            "bien",
+            "contento",
+            "contenta"
+          ],
+          "wrong": [
+            "Me duele.",
+            "¡Venga!"
+          ],
+          "reply": "¡Eres un campeón de la salud!",
+          "replyEn": "You're a health champion!"
+        }
+      ]
+    }
+  ]
+}

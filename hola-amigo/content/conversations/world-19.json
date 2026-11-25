@@ -1,0 +1,846 @@
+{
+  "world": 19,
+  "conversations": [
+    {
+      "lesson": 161,
+      "who": "sol",
+      "title": "How do you travel?",
+      "scene": "🚆",
+      "turns": [
+        {
+          "ask": "¿Cómo vas al colegio?",
+          "askEn": "How do you get to school?",
+          "answer": "Voy andando.",
+          "answerEn": "I walk.",
+          "keys": [
+            "andando",
+            "a pie",
+            "en coche",
+            "en autobus",
+            "en bici",
+            "en metro",
+            "en tren"
+          ],
+          "wrong": [
+            "El aeropuerto está lejos.",
+            "La estación."
+          ],
+          "reply": "¡Qué sano!",
+          "replyEn": "How healthy!"
+        },
+        {
+          "ask": "¿Cómo vas a Madrid?",
+          "askEn": "How do you get to Madrid?",
+          "answer": "Voy en tren.",
+          "answerEn": "I go by train.",
+          "keys": [
+            "en tren",
+            "en avion",
+            "en coche",
+            "en autobus",
+            "en ave",
+            "en autocar"
+          ],
+          "wrong": [
+            "Madrid es la capital.",
+            "Voy andando a la playa."
+          ],
+          "reply": "¡Qué rápido!",
+          "replyEn": "So fast!"
+        },
+        {
+          "ask": "¿Has viajado en avión?",
+          "askEn": "Have you travelled by plane?",
+          "answer": "Sí, muchas veces.",
+          "answerEn": "Yes, lots of times.",
+          "keys": [
+            "si",
+            "no",
+            "nunca",
+            "veces",
+            "vez"
+          ],
+          "wrong": [
+            "El puerto.",
+            "El metro es rápido."
+          ],
+          "reply": "¡Qué suerte!",
+          "replyEn": "Lucky you!"
+        },
+        {
+          "ask": "¿Dónde están los barcos?",
+          "askEn": "Where are the boats?",
+          "answer": "En el puerto.",
+          "answerEn": "In the port.",
+          "keys": [
+            "puerto"
+          ],
+          "wrong": [
+            "En el aeropuerto.",
+            "En la estación."
+          ],
+          "reply": "¡Correcto!",
+          "replyEn": "Correct!"
+        }
+      ]
+    },
+    {
+      "lesson": 162,
+      "who": "luna",
+      "title": "At the station",
+      "scene": "🎫",
+      "role": "the ticket seller",
+      "turns": [
+        {
+          "ask": "Buenos días. ¿Adónde va?",
+          "askEn": "Good morning. Where are you going?",
+          "answer": "A Sevilla. Un billete de ida y vuelta, por favor.",
+          "answerEn": "To Seville. A return ticket, please.",
+          "keys": [
+            "billete",
+            "ida",
+            "sevilla",
+            "madrid",
+            "barcelona",
+            "a "
+          ],
+          "wrong": [
+            "El andén.",
+            "La llegada."
+          ],
+          "reply": "Muy bien.",
+          "replyEn": "Very good."
+        },
+        {
+          "ask": "¿Solo ida o ida y vuelta?",
+          "askEn": "One way or return?",
+          "answer": "Ida y vuelta.",
+          "answerEn": "Return.",
+          "keys": [
+            "ida y vuelta",
+            "solo ida"
+          ],
+          "wrong": [
+            "El retraso.",
+            "Sale a las diez."
+          ],
+          "reply": "Son cuarenta euros.",
+          "replyEn": "That's forty euros."
+        },
+        {
+          "ask": "¿A qué hora sale el tren?",
+          "askEn": "What time does the train leave?",
+          "answer": "Sale a las nueve.",
+          "answerEn": "It leaves at nine.",
+          "keys": [
+            "a las",
+            "sale"
+          ],
+          "wrong": [
+            "Llega mañana.",
+            "El andén cinco."
+          ],
+          "reply": "Del andén cinco.",
+          "replyEn": "From platform five."
+        },
+        {
+          "ask": "Hay un retraso de veinte minutos.",
+          "askEn": "There's a twenty-minute delay.",
+          "answer": "¡Vaya! ¡Qué pena!",
+          "answerEn": "Oh no! What a shame!",
+          "keys": [
+            "vaya",
+            "que pena",
+            "vale",
+            "no pasa nada"
+          ],
+          "wrong": [
+            "Sale a las nueve.",
+            "Un billete de ida."
+          ],
+          "reply": "Lo siento.",
+          "replyEn": "Sorry."
+        }
+      ]
+    },
+    {
+      "lesson": 163,
+      "who": "sol",
+      "title": "Which way?",
+      "scene": "↪️",
+      "turns": [
+        {
+          "ask": "Perdona, ¿dónde está la heladería?",
+          "askEn": "Excuse me, where's the ice cream shop?",
+          "answer": "Sigue todo recto y gira a la izquierda.",
+          "answerEn": "Keep going straight on and turn left.",
+          "keys": [
+            "recto",
+            "derecha",
+            "izquierda",
+            "gira",
+            "cruza",
+            "sigue"
+          ],
+          "wrong": [
+            "Me gusta el helado.",
+            "La heladería es bonita."
+          ],
+          "reply": "¡Gracias!",
+          "replyEn": "Thanks!"
+        },
+        {
+          "ask": "¿En qué calle?",
+          "askEn": "Which street?",
+          "answer": "En la primera calle.",
+          "answerEn": "The first street.",
+          "keys": [
+            "primera",
+            "segunda",
+            "tercera",
+            "calle"
+          ],
+          "wrong": [
+            "Todo recto.",
+            "Cruza."
+          ],
+          "reply": "¡Vale!",
+          "replyEn": "OK!"
+        },
+        {
+          "ask": "¿Tengo que cruzar la calle?",
+          "askEn": "Do I have to cross the street?",
+          "answer": "Sí, cruza en el semáforo.",
+          "answerEn": "Yes, cross at the traffic lights.",
+          "keys": [
+            "cruza",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Gira a la derecha.",
+            "La esquina."
+          ],
+          "reply": "¡Gracias!",
+          "replyEn": "Thanks!"
+        },
+        {
+          "ask": "¿Y dónde está exactamente?",
+          "askEn": "And where exactly is it?",
+          "answer": "Al final de la calle, en la esquina.",
+          "answerEn": "At the end of the street, on the corner.",
+          "keys": [
+            "al final",
+            "esquina",
+            "al lado",
+            "enfrente"
+          ],
+          "wrong": [
+            "Todo recto.",
+            "Cruza la calle."
+          ],
+          "reply": "¡Muchas gracias!",
+          "replyEn": "Thank you very much!"
+        }
+      ]
+    },
+    {
+      "lesson": 164,
+      "who": "luna",
+      "title": "Where's the cat?",
+      "scene": "🐈",
+      "turns": [
+        {
+          "ask": "¿Dónde está el gato?",
+          "askEn": "Where's the cat?",
+          "answer": "Está debajo de la mesa.",
+          "answerEn": "It's under the table.",
+          "keys": [
+            "debajo",
+            "encima",
+            "detras",
+            "delante",
+            "dentro",
+            "al lado",
+            "entre",
+            "enfrente"
+          ],
+          "wrong": [
+            "Es un gato negro.",
+            "El gato come."
+          ],
+          "reply": "¡Ah, sí!",
+          "replyEn": "Oh, yes!"
+        },
+        {
+          "ask": "¿Dónde está la farmacia?",
+          "askEn": "Where's the chemist's?",
+          "answer": "Al lado del banco.",
+          "answerEn": "Next to the bank.",
+          "keys": [
+            "al lado",
+            "enfrente",
+            "detras",
+            "delante",
+            "entre",
+            "cerca"
+          ],
+          "wrong": [
+            "Es una farmacia.",
+            "Necesito medicina."
+          ],
+          "reply": "¡Gracias!",
+          "replyEn": "Thanks!"
+        },
+        {
+          "ask": "¿Dónde está tu casa?",
+          "askEn": "Where's your house?",
+          "answer": "Enfrente del parque.",
+          "answerEn": "Opposite the park.",
+          "keys": [
+            "enfrente",
+            "al lado",
+            "detras",
+            "delante",
+            "cerca",
+            "lejos"
+          ],
+          "wrong": [
+            "Mi casa es grande.",
+            "Vivo con mi familia."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Nice!"
+        },
+        {
+          "ask": "¿Y tus zapatillas?",
+          "askEn": "And your trainers?",
+          "answer": "Están dentro del armario.",
+          "answerEn": "They're inside the wardrobe.",
+          "keys": [
+            "dentro",
+            "debajo",
+            "encima",
+            "detras",
+            "al lado"
+          ],
+          "wrong": [
+            "Son azules.",
+            "Me gustan."
+          ],
+          "reply": "¡Perfecto!",
+          "replyEn": "Perfect!"
+        }
+      ]
+    },
+    {
+      "lesson": 165,
+      "who": "sol",
+      "title": "At the hotel",
+      "scene": "🏨",
+      "role": "the receptionist",
+      "turns": [
+        {
+          "ask": "Buenas tardes. ¿Tienen reserva?",
+          "askEn": "Good afternoon. Do you have a booking?",
+          "answer": "Sí, a nombre de García.",
+          "answerEn": "Yes, under the name García.",
+          "keys": [
+            "si",
+            "nombre",
+            "reserva",
+            "no"
+          ],
+          "wrong": [
+            "Las vistas al mar.",
+            "La llave."
+          ],
+          "reply": "Perfecto.",
+          "replyEn": "Perfect."
+        },
+        {
+          "ask": "¿Una habitación doble?",
+          "askEn": "A double room?",
+          "answer": "Sí, con vistas al mar, por favor.",
+          "answerEn": "Yes, with a sea view, please.",
+          "keys": [
+            "si",
+            "doble",
+            "vistas",
+            "no",
+            "individual"
+          ],
+          "wrong": [
+            "La planta baja.",
+            "El desayuno."
+          ],
+          "reply": "Aquí tienen la llave.",
+          "replyEn": "Here's your key."
+        },
+        {
+          "ask": "¿Tienen alguna pregunta?",
+          "askEn": "Do you have any questions?",
+          "answer": "¿El desayuno está incluido?",
+          "answerEn": "Is breakfast included?",
+          "keys": [
+            "desayuno",
+            "a que hora",
+            "donde",
+            "no"
+          ],
+          "wrong": [
+            "La llave, por favor.",
+            "Una habitación doble."
+          ],
+          "reply": "Sí, de ocho a diez.",
+          "replyEn": "Yes, from eight to ten."
+        },
+        {
+          "ask": "La habitación está en la tercera planta.",
+          "askEn": "The room is on the third floor.",
+          "answer": "¿Dónde está el ascensor?",
+          "answerEn": "Where's the lift?",
+          "keys": [
+            "ascensor",
+            "escaleras",
+            "donde"
+          ],
+          "wrong": [
+            "Las vistas al mar.",
+            "Gracias por el desayuno."
+          ],
+          "reply": "Allí, a la derecha.",
+          "replyEn": "Over there, on the right."
+        }
+      ]
+    },
+    {
+      "lesson": 166,
+      "who": "luna",
+      "title": "The map of Spain",
+      "scene": "🧭",
+      "turns": [
+        {
+          "ask": "¿Cuál es la capital de España?",
+          "askEn": "What's the capital of Spain?",
+          "answer": "Madrid.",
+          "answerEn": "Madrid.",
+          "keys": [
+            "madrid"
+          ],
+          "wrong": [
+            "Barcelona.",
+            "Sevilla."
+          ],
+          "reply": "¡Correcto!",
+          "replyEn": "Correct!"
+        },
+        {
+          "ask": "¿Dónde está Galicia?",
+          "askEn": "Where's Galicia?",
+          "answer": "En el norte.",
+          "answerEn": "In the north.",
+          "keys": [
+            "norte",
+            "noroeste"
+          ],
+          "wrong": [
+            "En el sur.",
+            "En el este."
+          ],
+          "reply": "¡Muy bien!",
+          "replyEn": "Very good!"
+        },
+        {
+          "ask": "¿Y Andalucía?",
+          "askEn": "And Andalusia?",
+          "answer": "En el sur.",
+          "answerEn": "In the south.",
+          "keys": [
+            "sur"
+          ],
+          "wrong": [
+            "En el norte.",
+            "En el centro."
+          ],
+          "reply": "¡Exacto!",
+          "replyEn": "Exactly!"
+        },
+        {
+          "ask": "¿Dónde vives tú?",
+          "askEn": "Where do you live?",
+          "answer": "Vivo en la costa, en el este.",
+          "answerEn": "I live on the coast, in the east.",
+          "keys": [
+            "vivo",
+            "norte",
+            "sur",
+            "este",
+            "oeste",
+            "centro",
+            "costa",
+            "isla"
+          ],
+          "wrong": [
+            "Madrid es la capital.",
+            "Galicia es verde."
+          ],
+          "reply": "¡Qué bonito!",
+          "replyEn": "How lovely!"
+        }
+      ]
+    },
+    {
+      "lesson": 167,
+      "who": "sol",
+      "title": "Sightseeing",
+      "scene": "📸",
+      "turns": [
+        {
+          "ask": "¿Qué visitasteis en Granada?",
+          "askEn": "What did you visit in Granada?",
+          "answer": "Visitamos la Alhambra.",
+          "answerEn": "We visited the Alhambra.",
+          "keys": [
+            "visitamos",
+            "alhambra",
+            "catedral",
+            "palacio",
+            "museo"
+          ],
+          "wrong": [
+            "Granada está en el sur.",
+            "Granada es bonita."
+          ],
+          "reply": "¡Qué bonita!",
+          "replyEn": "How beautiful!"
+        },
+        {
+          "ask": "¿Hiciste muchas fotos?",
+          "askEn": "Did you take lots of photos?",
+          "answer": "Sí, hice cien fotos.",
+          "answerEn": "Yes, I took a hundred photos.",
+          "keys": [
+            "hice",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Hago fotos mañana.",
+            "La foto es bonita."
+          ],
+          "reply": "¡Qué barbaridad!",
+          "replyEn": "Wow!"
+        },
+        {
+          "ask": "¿Subisteis a un mirador?",
+          "askEn": "Did you go up to a viewpoint?",
+          "answer": "Sí, y las vistas eran preciosas.",
+          "answerEn": "Yes, and the views were beautiful.",
+          "keys": [
+            "si",
+            "no",
+            "subimos",
+            "vistas"
+          ],
+          "wrong": [
+            "El mirador está cerrado.",
+            "Me gusta mirar."
+          ],
+          "reply": "¡Qué maravilla!",
+          "replyEn": "How wonderful!"
+        },
+        {
+          "ask": "¿Compraste algún recuerdo?",
+          "askEn": "Did you buy a souvenir?",
+          "answer": "Sí, compré un imán para mi abuela.",
+          "answerEn": "Yes, I bought a magnet for my grandma.",
+          "keys": [
+            "compre",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Compro mañana.",
+            "Mi abuela es simpática."
+          ],
+          "reply": "¡Qué detalle!",
+          "replyEn": "How thoughtful!"
+        }
+      ]
+    },
+    {
+      "lesson": 168,
+      "who": "luna",
+      "title": "Packing",
+      "scene": "🧳",
+      "turns": [
+        {
+          "ask": "¿Has hecho la maleta?",
+          "askEn": "Have you packed your suitcase?",
+          "answer": "Todavía no.",
+          "answerEn": "Not yet.",
+          "keys": [
+            "todavia no",
+            "si",
+            "ya",
+            "no"
+          ],
+          "wrong": [
+            "La maleta es grande.",
+            "Mi pasaporte."
+          ],
+          "reply": "¡Pues venga!",
+          "replyEn": "Come on, then!"
+        },
+        {
+          "ask": "¿Qué vas a llevar?",
+          "askEn": "What are you going to take?",
+          "answer": "El bañador, las chanclas y una gorra.",
+          "answerEn": "My swimsuit, flip-flops and a cap.",
+          "keys": [
+            "banador",
+            "chanclas",
+            "gorra",
+            "cargador",
+            "neceser",
+            "ropa",
+            "voy a llevar"
+          ],
+          "wrong": [
+            "Hacer la maleta.",
+            "No te olvides."
+          ],
+          "reply": "¡Muy bien!",
+          "replyEn": "Good!"
+        },
+        {
+          "ask": "¿Y el pasaporte?",
+          "askEn": "And your passport?",
+          "answer": "¡Ay, se me ha olvidado!",
+          "answerEn": "Oh, I've forgotten it!",
+          "keys": [
+            "olvidado",
+            "ya lo tengo",
+            "lo tengo",
+            "aqui",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "La gorra.",
+            "Las chanclas."
+          ],
+          "reply": "¡Sin pasaporte no hay viaje!",
+          "replyEn": "No passport, no trip!"
+        },
+        {
+          "ask": "¿Llevas el cargador del móvil?",
+          "askEn": "Are you taking your phone charger?",
+          "answer": "Sí, está en el neceser.",
+          "answerEn": "Yes, it's in my washbag.",
+          "keys": [
+            "si",
+            "no",
+            "lo llevo",
+            "esta"
+          ],
+          "wrong": [
+            "El pasaporte.",
+            "La gorra es azul."
+          ],
+          "reply": "¡Perfecto!",
+          "replyEn": "Perfect!"
+        }
+      ]
+    },
+    {
+      "lesson": 169,
+      "who": "sol",
+      "title": "Lost in the city",
+      "scene": "🆘",
+      "role": "a friendly local",
+      "turns": [
+        {
+          "ask": "¿Te puedo ayudar?",
+          "askEn": "Can I help you?",
+          "answer": "Sí, por favor. Me he perdido.",
+          "answerEn": "Yes, please. I'm lost.",
+          "keys": [
+            "me he perdido",
+            "si",
+            "por favor",
+            "ayudar"
+          ],
+          "wrong": [
+            "No te olvides.",
+            "Más despacio."
+          ],
+          "reply": "¿Adónde vas?",
+          "replyEn": "Where are you going?"
+        },
+        {
+          "ask": "¿Adónde quieres ir?",
+          "askEn": "Where do you want to go?",
+          "answer": "A la oficina de turismo.",
+          "answerEn": "To the tourist office.",
+          "keys": [
+            "a la",
+            "al ",
+            "oficina",
+            "hotel",
+            "estacion",
+            "plaza",
+            "museo"
+          ],
+          "wrong": [
+            "Me he perdido.",
+            "No entiendo."
+          ],
+          "reply": "Está muy cerca.",
+          "replyEn": "It's very close."
+        },
+        {
+          "ask": "Sigue recto, gira a la derecha y está al lado del museo.",
+          "askEn": "Go straight on, turn right and it's next to the museum.",
+          "answer": "Más despacio, por favor.",
+          "answerEn": "More slowly, please.",
+          "keys": [
+            "despacio",
+            "repite",
+            "no entiendo",
+            "gracias",
+            "vale"
+          ],
+          "wrong": [
+            "Me he perdido.",
+            "La comisaría."
+          ],
+          "reply": "Recto… derecha… al lado del museo.",
+          "replyEn": "Straight on… right… next to the museum."
+        },
+        {
+          "ask": "¿Lo entiendes ahora?",
+          "askEn": "Do you understand now?",
+          "answer": "Sí, ahora sí. ¡Muchas gracias!",
+          "answerEn": "Yes, now I do. Thanks a lot!",
+          "keys": [
+            "si",
+            "gracias",
+            "entiendo"
+          ],
+          "wrong": [
+            "No te olvides.",
+            "La oficina de turismo."
+          ],
+          "reply": "¡De nada! ¡Buen viaje!",
+          "replyEn": "You're welcome! Have a good trip!"
+        }
+      ]
+    },
+    {
+      "lesson": 170,
+      "who": "luna",
+      "title": "Travel champion",
+      "scene": "🏆",
+      "turns": [
+        {
+          "ask": "¿Cómo vas a Barcelona?",
+          "askEn": "How are you getting to Barcelona?",
+          "answer": "Voy en tren.",
+          "answerEn": "I'm going by train.",
+          "keys": [
+            "en tren",
+            "en avion",
+            "en coche",
+            "en autocar",
+            "en barco",
+            "en ave"
+          ],
+          "wrong": [
+            "Barcelona es grande.",
+            "Me he perdido."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Nice!"
+        },
+        {
+          "ask": "¿Qué billete quieres?",
+          "askEn": "Which ticket do you want?",
+          "answer": "Un billete de ida y vuelta.",
+          "answerEn": "A return ticket.",
+          "keys": [
+            "ida y vuelta",
+            "solo ida",
+            "billete"
+          ],
+          "wrong": [
+            "El andén tres.",
+            "La llegada."
+          ],
+          "reply": "Aquí tienes.",
+          "replyEn": "Here you are."
+        },
+        {
+          "ask": "¿Dónde está el hotel?",
+          "askEn": "Where's the hotel?",
+          "answer": "Está enfrente de la estación.",
+          "answerEn": "It's opposite the station.",
+          "keys": [
+            "enfrente",
+            "al lado",
+            "cerca",
+            "detras",
+            "delante",
+            "recto",
+            "derecha",
+            "izquierda"
+          ],
+          "wrong": [
+            "Es un hotel bonito.",
+            "La habitación doble."
+          ],
+          "reply": "¡Qué cómodo!",
+          "replyEn": "How handy!"
+        },
+        {
+          "ask": "¿Has hecho la maleta?",
+          "askEn": "Have you packed?",
+          "answer": "Sí, ya he hecho la maleta.",
+          "answerEn": "Yes, I've already packed.",
+          "keys": [
+            "si",
+            "ya",
+            "todavia no",
+            "no",
+            "he hecho"
+          ],
+          "wrong": [
+            "Me he perdido.",
+            "Gira a la derecha."
+          ],
+          "reply": "¡Genial!",
+          "replyEn": "Great!"
+        },
+        {
+          "ask": "¿Qué dices si te pierdes?",
+          "askEn": "What do you say if you get lost?",
+          "answer": "Perdone, me he perdido. ¿Me puede ayudar?",
+          "answerEn": "Excuse me, I'm lost. Can you help me?",
+          "keys": [
+            "me he perdido",
+            "perdone",
+            "me puede ayudar",
+            "ayuda"
+          ],
+          "wrong": [
+            "Hasta luego.",
+            "Me lo llevo."
+          ],
+          "reply": "¡Eres un campeón de viajes!",
+          "replyEn": "You're a travel champion!"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,836 @@
+{
+  "world": 22,
+  "conversations": [
+    {
+      "lesson": 191,
+      "who": "luna",
+      "title": "Introducing yourself",
+      "scene": "🙋",
+      "turns": [
+        {
+          "ask": "¿Dónde naciste?",
+          "askEn": "Where were you born?",
+          "answer": "Nací en Londres.",
+          "answerEn": "I was born in London.",
+          "keys": [
+            "naci"
+          ],
+          "wrong": [
+            "Vivo en Valencia.",
+            "Me mudé ayer."
+          ],
+          "reply": "¡Qué interesante!",
+          "replyEn": "How interesting!"
+        },
+        {
+          "ask": "¿Cuánto tiempo llevas en España?",
+          "askEn": "How long have you been in Spain?",
+          "answer": "Llevo dos años aquí.",
+          "answerEn": "I've been here two years.",
+          "keys": [
+            "llevo",
+            "desde hace",
+            "anos",
+            "meses"
+          ],
+          "wrong": [
+            "Nací en Londres.",
+            "España es bonita."
+          ],
+          "reply": "¡Hablas muy bien español!",
+          "replyEn": "You speak Spanish really well!"
+        },
+        {
+          "ask": "¿Cuántos idiomas hablas?",
+          "askEn": "How many languages do you speak?",
+          "answer": "Hablo dos idiomas: inglés y español.",
+          "answerEn": "I speak two languages: English and Spanish.",
+          "keys": [
+            "hablo",
+            "dos",
+            "tres",
+            "ingles",
+            "espanol"
+          ],
+          "wrong": [
+            "Me gustaría viajar.",
+            "Mi sueño es volar."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Brilliant!"
+        },
+        {
+          "ask": "¿Cuál es tu sueño?",
+          "askEn": "What's your dream?",
+          "answer": "Mi sueño es ser astronauta.",
+          "answerEn": "My dream is to be an astronaut.",
+          "keys": [
+            "mi sueno es",
+            "me gustaria",
+            "quiero"
+          ],
+          "wrong": [
+            "Nací en Londres.",
+            "Llevo dos años."
+          ],
+          "reply": "¡Qué bonito sueño!",
+          "replyEn": "What a lovely dream!"
+        }
+      ]
+    },
+    {
+      "lesson": 192,
+      "who": "sol",
+      "title": "Your routine",
+      "scene": "🕗",
+      "turns": [
+        {
+          "ask": "¿A qué hora te levantas entre semana?",
+          "askEn": "What time do you get up on weekdays?",
+          "answer": "Suelo levantarme a las siete.",
+          "answerEn": "I usually get up at seven.",
+          "keys": [
+            "a las",
+            "suelo",
+            "temprano"
+          ],
+          "wrong": [
+            "Los fines de semana.",
+            "Me toca a mí."
+          ],
+          "reply": "¡Qué temprano!",
+          "replyEn": "So early!"
+        },
+        {
+          "ask": "¿Y los fines de semana?",
+          "askEn": "And at the weekend?",
+          "answer": "Casi nunca me levanto temprano.",
+          "answerEn": "I hardly ever get up early.",
+          "keys": [
+            "casi nunca",
+            "tarde",
+            "a las",
+            "normalmente",
+            "suelo"
+          ],
+          "wrong": [
+            "Entre semana.",
+            "Después de cenar."
+          ],
+          "reply": "¡Ja, ja! ¡Como yo!",
+          "replyEn": "Ha ha! Like me!"
+        },
+        {
+          "ask": "¿Qué haces después del cole?",
+          "askEn": "What do you do after school?",
+          "answer": "Normalmente hago los deberes.",
+          "answerEn": "I usually do my homework.",
+          "keys": [
+            "hago",
+            "juego",
+            "voy",
+            "normalmente",
+            "suelo",
+            "deberes",
+            "meriendo"
+          ],
+          "wrong": [
+            "Antes de comer.",
+            "Me toca."
+          ],
+          "reply": "¡Muy bien!",
+          "replyEn": "Good!"
+        },
+        {
+          "ask": "¿A quién le toca sacar la basura hoy?",
+          "askEn": "Whose turn is it to take out the rubbish today?",
+          "answer": "Hoy me toca a mí.",
+          "answerEn": "Today it's my turn.",
+          "keys": [
+            "me toca",
+            "le toca",
+            "a mi",
+            "a mi hermano",
+            "a mi hermana"
+          ],
+          "wrong": [
+            "Suelo levantarme.",
+            "Casi nunca."
+          ],
+          "reply": "¡Venga, que huele!",
+          "replyEn": "Go on, it smells!"
+        }
+      ]
+    },
+    {
+      "lesson": 193,
+      "who": "luna",
+      "title": "How was the weekend?",
+      "scene": "💬",
+      "turns": [
+        {
+          "ask": "¿Qué tal el finde?",
+          "askEn": "How was the weekend?",
+          "answer": "¡Lo pasé bomba!",
+          "answerEn": "I had a fantastic time!",
+          "keys": [
+            "lo pase bomba",
+            "genial",
+            "bien",
+            "fatal",
+            "estuvo",
+            "fue"
+          ],
+          "wrong": [
+            "Mañana es lunes.",
+            "El finde es largo."
+          ],
+          "reply": "¿Qué hiciste?",
+          "replyEn": "What did you do?"
+        },
+        {
+          "ask": "¿Qué hiciste?",
+          "askEn": "What did you do?",
+          "answer": "Quedé con mis primos.",
+          "answerEn": "I met up with my cousins.",
+          "keys": [
+            "quede",
+            "fui",
+            "vimos",
+            "dimos",
+            "jugue",
+            "hice",
+            "sali"
+          ],
+          "wrong": [
+            "Quedo mañana.",
+            "Mis primos son altos."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Nice!"
+        },
+        {
+          "ask": "¿Visteis una peli?",
+          "askEn": "Did you watch a film?",
+          "answer": "Sí, y luego dimos un paseo.",
+          "answerEn": "Yes, and then we went for a walk.",
+          "keys": [
+            "vimos",
+            "si",
+            "no",
+            "dimos"
+          ],
+          "wrong": [
+            "Vemos una peli.",
+            "La peli es larga."
+          ],
+          "reply": "¡Qué plan!",
+          "replyEn": "What a plan!"
+        },
+        {
+          "ask": "¿A qué hora volvisteis?",
+          "askEn": "What time did you get back?",
+          "answer": "Volvimos tarde, a las diez.",
+          "answerEn": "We came back late, at ten.",
+          "keys": [
+            "volvimos",
+            "a las",
+            "tarde"
+          ],
+          "wrong": [
+            "Volvemos mañana.",
+            "Las diez."
+          ],
+          "reply": "¡Qué tarde!",
+          "replyEn": "So late!"
+        }
+      ]
+    },
+    {
+      "lesson": 194,
+      "who": "sol",
+      "title": "Memories",
+      "scene": "🕰️",
+      "turns": [
+        {
+          "ask": "¿Te acuerdas de tu primer día de cole?",
+          "askEn": "Do you remember your first day at school?",
+          "answer": "Sí, me acuerdo muy bien.",
+          "answerEn": "Yes, I remember it well.",
+          "keys": [
+            "me acuerdo",
+            "si",
+            "no",
+            "recuerdo"
+          ],
+          "wrong": [
+            "Echo de menos.",
+            "Mi cole es grande."
+          ],
+          "reply": "¿Cómo fue?",
+          "replyEn": "What was it like?"
+        },
+        {
+          "ask": "¿Cómo te sentías?",
+          "askEn": "How did you feel?",
+          "answer": "Tenía mucho miedo.",
+          "answerEn": "I was really scared.",
+          "keys": [
+            "tenia",
+            "estaba",
+            "me sentia"
+          ],
+          "wrong": [
+            "Tengo miedo.",
+            "Voy a tener miedo."
+          ],
+          "reply": "¡Normal!",
+          "replyEn": "That's normal!"
+        },
+        {
+          "ask": "¿Quién era tu mejor amigo?",
+          "askEn": "Who was your best friend?",
+          "answer": "Mi mejor amigo era Pablo.",
+          "answerEn": "My best friend was Pablo.",
+          "keys": [
+            "era"
+          ],
+          "wrong": [
+            "Es Pablo.",
+            "Va a ser Pablo."
+          ],
+          "reply": "¡Qué bonito!",
+          "replyEn": "How lovely!"
+        },
+        {
+          "ask": "¿A quién echas de menos?",
+          "askEn": "Who do you miss?",
+          "answer": "Echo de menos a mis abuelos.",
+          "answerEn": "I miss my grandparents.",
+          "keys": [
+            "echo de menos"
+          ],
+          "wrong": [
+            "Me acuerdo de mi cole.",
+            "Tenía miedo."
+          ],
+          "reply": "¡Ay, llámalos hoy!",
+          "replyEn": "Aw, call them today!"
+        }
+      ]
+    },
+    {
+      "lesson": 195,
+      "who": "luna",
+      "title": "Your plans",
+      "scene": "🌈",
+      "turns": [
+        {
+          "ask": "¿Qué harás el curso que viene?",
+          "askEn": "What will you do next school year?",
+          "answer": "Iré a un colegio nuevo.",
+          "answerEn": "I'll go to a new school.",
+          "keys": [
+            "ire",
+            "voy a",
+            "estudiare",
+            "sere"
+          ],
+          "wrong": [
+            "Fui a un colegio.",
+            "El curso es largo."
+          ],
+          "reply": "¡Qué emocionante!",
+          "replyEn": "How exciting!"
+        },
+        {
+          "ask": "¿Qué tienes pensado hacer este verano?",
+          "askEn": "What are you planning to do this summer?",
+          "answer": "Tengo pensado aprender a surfear.",
+          "answerEn": "I'm planning to learn to surf.",
+          "keys": [
+            "tengo pensado",
+            "voy a",
+            "quiero",
+            "me gustaria"
+          ],
+          "wrong": [
+            "Aprendí a nadar.",
+            "El verano es caluroso."
+          ],
+          "reply": "¡Qué guay!",
+          "replyEn": "Cool!"
+        },
+        {
+          "ask": "¿Adónde te gustaría viajar algún día?",
+          "askEn": "Where would you like to travel one day?",
+          "answer": "Me gustaría viajar a Japón.",
+          "answerEn": "I'd like to travel to Japan.",
+          "keys": [
+            "me gustaria",
+            "quiero ir",
+            "quiero viajar"
+          ],
+          "wrong": [
+            "Viajé a Japón.",
+            "Japón está lejos."
+          ],
+          "reply": "¡Qué aventura!",
+          "replyEn": "What an adventure!"
+        },
+        {
+          "ask": "¿Cómo hablarás español dentro de un año?",
+          "askEn": "How will you speak Spanish in a year's time?",
+          "answer": "¡Espero que perfectamente!",
+          "answerEn": "Perfectly, I hope!",
+          "keys": [
+            "espero",
+            "perfectamente",
+            "muy bien",
+            "mejor",
+            "hablare"
+          ],
+          "wrong": [
+            "Hablé español.",
+            "El español es bonito."
+          ],
+          "reply": "¡Seguro que sí!",
+          "replyEn": "I'm sure you will!"
+        }
+      ]
+    },
+    {
+      "lesson": 196,
+      "who": "sol",
+      "title": "In town",
+      "scene": "🏙️",
+      "role": "a passer-by",
+      "turns": [
+        {
+          "ask": "Disculpe, ¿me puede decir dónde está la farmacia?",
+          "askEn": "Excuse me, could you tell me where the chemist's is?",
+          "answer": "Sí, está al lado del banco.",
+          "answerEn": "Yes, it's next to the bank.",
+          "keys": [
+            "al lado",
+            "enfrente",
+            "cerca",
+            "recto",
+            "derecha",
+            "izquierda"
+          ],
+          "wrong": [
+            "Está cerrado.",
+            "El horario."
+          ],
+          "reply": "¡Muchas gracias!",
+          "replyEn": "Thank you very much!"
+        },
+        {
+          "ask": "¿Está abierta ahora?",
+          "askEn": "Is it open now?",
+          "answer": "No, está cerrada hasta las cinco.",
+          "answerEn": "No, it's closed until five.",
+          "keys": [
+            "abierta",
+            "abierto",
+            "cerrada",
+            "cerrado",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Está al lado del banco.",
+            "Disculpe."
+          ],
+          "reply": "¡Vaya!",
+          "replyEn": "Oh dear!"
+        },
+        {
+          "ask": "¿Se puede hacer fotos en el museo?",
+          "askEn": "Can you take photos in the museum?",
+          "answer": "No, está prohibido.",
+          "answerEn": "No, it's not allowed.",
+          "keys": [
+            "prohibido",
+            "no se puede",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "El horario es largo.",
+            "¿Hay un banco cerca?"
+          ],
+          "reply": "Vale, gracias.",
+          "replyEn": "OK, thanks."
+        },
+        {
+          "ask": "¿Hay un supermercado cerca?",
+          "askEn": "Is there a supermarket nearby?",
+          "answer": "Sí, hay uno muy cerca de aquí.",
+          "answerEn": "Yes, there's one very near here.",
+          "keys": [
+            "hay",
+            "cerca",
+            "si",
+            "no",
+            "lejos"
+          ],
+          "wrong": [
+            "Está prohibido.",
+            "Disculpe."
+          ],
+          "reply": "¡Perfecto!",
+          "replyEn": "Perfect!"
+        }
+      ]
+    },
+    {
+      "lesson": 197,
+      "who": "luna",
+      "title": "On the phone",
+      "scene": "📱",
+      "role": "Grandma",
+      "turns": [
+        {
+          "ask": "¡Riiing! … ¿Quién contesta así al teléfono?",
+          "askEn": "Ring ring! … How do you answer the phone?",
+          "answer": "¿Diga?",
+          "answerEn": "Hello?",
+          "keys": [
+            "diga",
+            "si",
+            "hola",
+            "digame"
+          ],
+          "wrong": [
+            "Un beso.",
+            "Mándame un mensaje."
+          ],
+          "reply": "Hola, cariño, soy yo, la abuela.",
+          "replyEn": "Hello, sweetheart, it's me, Grandma."
+        },
+        {
+          "ask": "¿Puedes hablar ahora?",
+          "askEn": "Can you talk now?",
+          "answer": "Ahora no puedo. Te llamo luego.",
+          "answerEn": "I can't right now. I'll call you later.",
+          "keys": [
+            "ahora no puedo",
+            "te llamo luego",
+            "si",
+            "no",
+            "puedo"
+          ],
+          "wrong": [
+            "¿Diga?",
+            "Soy yo."
+          ],
+          "reply": "Vale, cariño.",
+          "replyEn": "OK, sweetheart."
+        },
+        {
+          "ask": "¿Me mandas un mensaje cuando termines?",
+          "askEn": "Will you send me a message when you finish?",
+          "answer": "Sí, te mando un mensaje.",
+          "answerEn": "Yes, I'll send you a message.",
+          "keys": [
+            "te mando",
+            "si",
+            "vale",
+            "claro"
+          ],
+          "wrong": [
+            "¿De parte de quién?",
+            "Soy yo."
+          ],
+          "reply": "¡Gracias!",
+          "replyEn": "Thank you!"
+        },
+        {
+          "ask": "Bueno, cariño, tengo que colgar.",
+          "askEn": "Well, sweetheart, I have to hang up.",
+          "answer": "Vale, abuela. ¡Un beso!",
+          "answerEn": "OK, Grandma. Love you!",
+          "keys": [
+            "un beso",
+            "adios",
+            "chao",
+            "hasta luego",
+            "besos"
+          ],
+          "wrong": [
+            "¿Diga?",
+            "Ahora no puedo."
+          ],
+          "reply": "¡Un beso, cariño! ¡Chao!",
+          "replyEn": "Love you, sweetheart! Bye!"
+        }
+      ]
+    },
+    {
+      "lesson": 198,
+      "who": "sol",
+      "title": "Spanish festivals",
+      "scene": "🎭",
+      "turns": [
+        {
+          "ask": "¿Dónde son las Fallas?",
+          "askEn": "Where are Las Fallas?",
+          "answer": "En Valencia.",
+          "answerEn": "In Valencia.",
+          "keys": [
+            "valencia"
+          ],
+          "wrong": [
+            "En Pamplona.",
+            "En Buñol."
+          ],
+          "reply": "¡Correcto!",
+          "replyEn": "Correct!"
+        },
+        {
+          "ask": "¿Qué tira la gente en la Tomatina?",
+          "askEn": "What do people throw at the Tomatina?",
+          "answer": "¡Tomates!",
+          "answerEn": "Tomatoes!",
+          "keys": [
+            "tomates",
+            "tomate"
+          ],
+          "wrong": [
+            "¡Caramelos!",
+            "¡Uvas!"
+          ],
+          "reply": "¡Ja, ja! ¡Exacto!",
+          "replyEn": "Ha ha! Exactly!"
+        },
+        {
+          "ask": "¿Cuándo es la cabalgata de Reyes?",
+          "askEn": "When is the Three Kings parade?",
+          "answer": "El cinco de enero.",
+          "answerEn": "On the fifth of January.",
+          "keys": [
+            "cinco de enero",
+            "enero"
+          ],
+          "wrong": [
+            "En agosto.",
+            "En marzo."
+          ],
+          "reply": "¡Y al día siguiente, regalos!",
+          "replyEn": "And the next day, presents!"
+        },
+        {
+          "ask": "¿Qué fiesta te gusta más?",
+          "askEn": "Which festival do you like best?",
+          "answer": "Me gusta más el Carnaval.",
+          "answerEn": "I like Carnival best.",
+          "keys": [
+            "fallas",
+            "tomatina",
+            "san fermin",
+            "feria",
+            "cabalgata",
+            "reyes",
+            "carnaval",
+            "semana santa",
+            "nochevieja",
+            "navidad"
+          ],
+          "wrong": [
+            "Me gustan los tomates.",
+            "Es en Valencia."
+          ],
+          "reply": "¡Qué divertido!",
+          "replyEn": "What fun!"
+        }
+      ]
+    },
+    {
+      "lesson": 199,
+      "who": "luna",
+      "title": "A postcard",
+      "scene": "💌",
+      "turns": [
+        {
+          "ask": "¿Cómo empiezas una postal para tu abuela?",
+          "askEn": "How do you start a postcard to your grandma?",
+          "answer": "Querida abuela.",
+          "answerEn": "Dear Grandma.",
+          "keys": [
+            "querida",
+            "querido",
+            "hola"
+          ],
+          "wrong": [
+            "Muchos besos.",
+            "Hasta pronto."
+          ],
+          "reply": "¡Muy bien!",
+          "replyEn": "Very good!"
+        },
+        {
+          "ask": "¿Desde dónde escribes?",
+          "askEn": "Where are you writing from?",
+          "answer": "Te escribo desde Mallorca.",
+          "answerEn": "I'm writing to you from Mallorca.",
+          "keys": [
+            "te escribo desde",
+            "desde"
+          ],
+          "wrong": [
+            "Querida abuela.",
+            "Hace buen tiempo."
+          ],
+          "reply": "¡Qué bonito!",
+          "replyEn": "How lovely!"
+        },
+        {
+          "ask": "¿Qué tal lo estás pasando?",
+          "askEn": "How are you getting on?",
+          "answer": "¡Lo estoy pasando genial!",
+          "answerEn": "I'm having a great time!",
+          "keys": [
+            "lo estoy pasando",
+            "genial",
+            "bien",
+            "fatal"
+          ],
+          "wrong": [
+            "Un abrazo.",
+            "La postal."
+          ],
+          "reply": "¡Me alegro mucho!",
+          "replyEn": "I'm so glad!"
+        },
+        {
+          "ask": "¿Cómo terminas la postal?",
+          "askEn": "How do you end the postcard?",
+          "answer": "¡Hasta pronto! Muchos besos.",
+          "answerEn": "See you soon! Lots of love.",
+          "keys": [
+            "besos",
+            "un abrazo",
+            "hasta pronto",
+            "un beso"
+          ],
+          "wrong": [
+            "Querida abuela.",
+            "Te escribo desde aquí."
+          ],
+          "reply": "¡Perfecto!",
+          "replyEn": "Perfect!"
+        }
+      ]
+    },
+    {
+      "lesson": 200,
+      "who": "sol",
+      "title": "The A2 graduation",
+      "scene": "🏅",
+      "turns": [
+        {
+          "ask": "¡Enhorabuena! ¿Qué has aprendido este año?",
+          "askEn": "Congratulations! What have you learned this year?",
+          "answer": "He aprendido mucho español.",
+          "answerEn": "I've learned lots of Spanish.",
+          "keys": [
+            "he aprendido",
+            "aprendido",
+            "aprendi"
+          ],
+          "wrong": [
+            "Aprenderé mañana.",
+            "Me gusta aprender."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Brilliant!"
+        },
+        {
+          "ask": "¿Qué hiciste ayer para celebrarlo?",
+          "askEn": "What did you do yesterday to celebrate?",
+          "answer": "Fui al cine con mi familia.",
+          "answerEn": "I went to the cinema with my family.",
+          "keys": [
+            "fui",
+            "comi",
+            "vi",
+            "sali",
+            "jugue",
+            "hice",
+            "celebre",
+            "quede"
+          ],
+          "wrong": [
+            "Voy al cine.",
+            "Iré al cine."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Nice!"
+        },
+        {
+          "ask": "¿Qué te gustaba de pequeño?",
+          "askEn": "What did you like when you were little?",
+          "answer": "De pequeño me gustaban los dinosaurios.",
+          "answerEn": "When I was little I liked dinosaurs.",
+          "keys": [
+            "me gustaba",
+            "me gustaban",
+            "me encantaba",
+            "jugaba",
+            "era"
+          ],
+          "wrong": [
+            "Me gustan los dinosaurios.",
+            "Me gustarán."
+          ],
+          "reply": "¡Y a mí!",
+          "replyEn": "Me too!"
+        },
+        {
+          "ask": "¿Qué harás el año que viene?",
+          "askEn": "What will you do next year?",
+          "answer": "Seguiré aprendiendo español.",
+          "answerEn": "I'll keep on learning Spanish.",
+          "keys": [
+            "seguire",
+            "ire",
+            "aprendere",
+            "voy a",
+            "hare"
+          ],
+          "wrong": [
+            "Aprendí mucho.",
+            "Aprendía mucho."
+          ],
+          "reply": "¡Muy bien!",
+          "replyEn": "Great!"
+        },
+        {
+          "ask": "¿Tú qué opinas del curso?",
+          "askEn": "What do you think of the course?",
+          "answer": "Me parece genial.",
+          "answerEn": "I think it's great.",
+          "keys": [
+            "me parece",
+            "creo que",
+            "pienso que",
+            "para mi",
+            "en mi opinion",
+            "desde mi punto de vista",
+            "genial",
+            "me ha gustado",
+            "me encanta"
+          ],
+          "wrong": [
+            "Me duele la barriga.",
+            "¿Me pones un zumo?"
+          ],
+          "reply": "¡Eres un campeón de A2!",
+          "replyEn": "You're an A2 champion!"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,761 @@
+{
+  "world": 16,
+  "conversations": [
+    {
+      "lesson": 131,
+      "who": "luna",
+      "title": "When you were little",
+      "scene": "👶",
+      "turns": [
+        {
+          "ask": "¿Cómo eras de pequeño?",
+          "askEn": "What were you like when you were little?",
+          "answer": "De pequeño era muy travieso.",
+          "answerEn": "When I was little I was very naughty.",
+          "keys": [
+            "era"
+          ],
+          "wrong": [
+            "Soy travieso.",
+            "Voy a ser."
+          ],
+          "reply": "¡Ja, ja! ¿Y ahora?",
+          "replyEn": "Ha ha! And now?"
+        },
+        {
+          "ask": "¿Qué te gustaba de pequeño?",
+          "askEn": "What did you like when you were little?",
+          "answer": "Me gustaban los dinosaurios.",
+          "answerEn": "I liked dinosaurs.",
+          "keys": [
+            "me gustaba",
+            "me gustaban",
+            "me encantaba"
+          ],
+          "wrong": [
+            "Me gustan ahora.",
+            "Me gustará."
+          ],
+          "reply": "¡A mí también!",
+          "replyEn": "Me too!"
+        },
+        {
+          "ask": "¿Te daba miedo la oscuridad?",
+          "askEn": "Were you scared of the dark?",
+          "answer": "Sí, me daba mucho miedo.",
+          "answerEn": "Yes, it really scared me.",
+          "keys": [
+            "me daba",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Me da miedo mañana.",
+            "La oscuridad es negra."
+          ],
+          "reply": "¡Normal!",
+          "replyEn": "That's normal!"
+        },
+        {
+          "ask": "¿Sabías nadar?",
+          "askEn": "Could you swim?",
+          "answer": "No, no sabía nadar.",
+          "answerEn": "No, I couldn't swim.",
+          "keys": [
+            "sabia",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Sé nadar ahora.",
+            "Voy a nadar."
+          ],
+          "reply": "¡Pero ahora sí!",
+          "replyEn": "But now you can!"
+        }
+      ]
+    },
+    {
+      "lesson": 132,
+      "who": "sol",
+      "title": "What did you use to do?",
+      "scene": "🧸",
+      "turns": [
+        {
+          "ask": "¿A qué jugabas de pequeño?",
+          "askEn": "What did you play when you were little?",
+          "answer": "Jugaba con mis coches.",
+          "answerEn": "I played with my cars.",
+          "keys": [
+            "jugaba"
+          ],
+          "wrong": [
+            "Juego con coches.",
+            "Voy a jugar."
+          ],
+          "reply": "¡Qué bonito!",
+          "replyEn": "How lovely!"
+        },
+        {
+          "ask": "¿Qué dibujos veías?",
+          "askEn": "Which cartoons did you watch?",
+          "answer": "Veía los dibujos de Peppa.",
+          "answerEn": "I watched Peppa cartoons.",
+          "keys": [
+            "veia"
+          ],
+          "wrong": [
+            "Veo los dibujos.",
+            "Voy a ver."
+          ],
+          "reply": "¡Me encantaban!",
+          "replyEn": "I loved them!"
+        },
+        {
+          "ask": "¿Dormías con un peluche?",
+          "askEn": "Did you sleep with a cuddly toy?",
+          "answer": "Sí, casi siempre.",
+          "answerEn": "Yes, almost always.",
+          "keys": [
+            "dormia",
+            "siempre",
+            "a menudo",
+            "nunca",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Duermo mucho.",
+            "Mi peluche es un oso."
+          ],
+          "reply": "¡Qué tierno!",
+          "replyEn": "How sweet!"
+        },
+        {
+          "ask": "¿Leías cuentos?",
+          "askEn": "Did you read stories?",
+          "answer": "Sí, de vez en cuando.",
+          "answerEn": "Yes, from time to time.",
+          "keys": [
+            "leia",
+            "de vez en cuando",
+            "a menudo",
+            "siempre",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Leo un cuento.",
+            "Voy a leer."
+          ],
+          "reply": "¡Muy bien!",
+          "replyEn": "Good!"
+        }
+      ]
+    },
+    {
+      "lesson": 133,
+      "who": "luna",
+      "title": "Old-fashioned games",
+      "scene": "🌀",
+      "turns": [
+        {
+          "ask": "¿Jugabas a la comba?",
+          "askEn": "Did you use to skip?",
+          "answer": "Sí, me encantaba.",
+          "answerEn": "Yes, I loved it.",
+          "keys": [
+            "jugaba",
+            "me encantaba",
+            "si",
+            "no",
+            "saltaba"
+          ],
+          "wrong": [
+            "Juego a la comba.",
+            "La comba es larga."
+          ],
+          "reply": "¡A mí también!",
+          "replyEn": "Me too!"
+        },
+        {
+          "ask": "¿A qué jugaban tus abuelos?",
+          "askEn": "What did your grandparents play?",
+          "answer": "Jugaban a las canicas.",
+          "answerEn": "They played marbles.",
+          "keys": [
+            "jugaban"
+          ],
+          "wrong": [
+            "Juegan a las cartas.",
+            "Van a jugar."
+          ],
+          "reply": "¡Qué divertido!",
+          "replyEn": "What fun!"
+        },
+        {
+          "ask": "¿Tenías un osito?",
+          "askEn": "Did you have a teddy bear?",
+          "answer": "Sí, tenía un osito muy suave.",
+          "answerEn": "Yes, I had a very soft teddy.",
+          "keys": [
+            "tenia",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Tengo un osito.",
+            "El osito es marrón."
+          ],
+          "reply": "¡Qué tierno!",
+          "replyEn": "How sweet!"
+        },
+        {
+          "ask": "¿Cuál era tu juguete favorito?",
+          "askEn": "What was your favourite toy?",
+          "answer": "Mi juguete favorito era el tren.",
+          "answerEn": "My favourite toy was the train.",
+          "keys": [
+            "era"
+          ],
+          "wrong": [
+            "Es el tren.",
+            "Va a ser el tren."
+          ],
+          "reply": "¡Qué bonito!",
+          "replyEn": "Lovely!"
+        }
+      ]
+    },
+    {
+      "lesson": 134,
+      "who": "sol",
+      "title": "Setting the scene",
+      "scene": "🌧️",
+      "turns": [
+        {
+          "ask": "¿Qué tiempo hacía cuando saliste?",
+          "askEn": "What was the weather like when you went out?",
+          "answer": "Llovía mucho.",
+          "answerEn": "It was raining a lot.",
+          "keys": [
+            "llovia",
+            "hacia",
+            "nevaba",
+            "estaba nublado"
+          ],
+          "wrong": [
+            "Llueve mucho.",
+            "Va a llover."
+          ],
+          "reply": "¡Qué pena!",
+          "replyEn": "What a shame!"
+        },
+        {
+          "ask": "¿Había mucha gente en la plaza?",
+          "askEn": "Were there lots of people in the square?",
+          "answer": "Sí, había mucha gente.",
+          "answerEn": "Yes, there were lots of people.",
+          "keys": [
+            "habia",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Hay mucha gente.",
+            "Va a haber gente."
+          ],
+          "reply": "¡Qué lío!",
+          "replyEn": "What a crowd!"
+        },
+        {
+          "ask": "¿Cómo era el hombre?",
+          "askEn": "What was the man like?",
+          "answer": "Era muy alto y tenía el pelo largo.",
+          "answerEn": "He was very tall and had long hair.",
+          "keys": [
+            "era",
+            "tenia",
+            "llevaba"
+          ],
+          "wrong": [
+            "Es alto.",
+            "Va a ser alto."
+          ],
+          "reply": "¡Qué misterio!",
+          "replyEn": "What a mystery!"
+        },
+        {
+          "ask": "¿Cómo estabas tú?",
+          "askEn": "How were you feeling?",
+          "answer": "Estaba cansada.",
+          "answerEn": "I was tired.",
+          "keys": [
+            "estaba"
+          ],
+          "wrong": [
+            "Estoy cansada.",
+            "Voy a estar."
+          ],
+          "reply": "¡Normal!",
+          "replyEn": "That's normal!"
+        }
+      ]
+    },
+    {
+      "lesson": 135,
+      "who": "luna",
+      "title": "Grandparents' times",
+      "scene": "📻",
+      "turns": [
+        {
+          "ask": "¿Había tele cuando tu abuela era pequeña?",
+          "askEn": "Was there TV when your grandma was little?",
+          "answer": "No, no había tele en su casa.",
+          "answerEn": "No, there was no TV in her house.",
+          "keys": [
+            "habia",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Hay tele.",
+            "Mi abuela ve la tele."
+          ],
+          "reply": "¡Qué diferente!",
+          "replyEn": "How different!"
+        },
+        {
+          "ask": "¿Qué escuchaban por la noche?",
+          "askEn": "What did they listen to at night?",
+          "answer": "Escuchaban la radio.",
+          "answerEn": "They listened to the radio.",
+          "keys": [
+            "escuchaban",
+            "radio"
+          ],
+          "wrong": [
+            "Escuchan música.",
+            "Van a escuchar."
+          ],
+          "reply": "¡Qué bonito!",
+          "replyEn": "How lovely!"
+        },
+        {
+          "ask": "¿Dónde vivían tus abuelos?",
+          "askEn": "Where did your grandparents live?",
+          "answer": "Vivían en un pueblo.",
+          "answerEn": "They lived in a village.",
+          "keys": [
+            "vivian"
+          ],
+          "wrong": [
+            "Viven en Madrid.",
+            "Van a vivir."
+          ],
+          "reply": "¡Qué tranquilo!",
+          "replyEn": "So peaceful!"
+        },
+        {
+          "ask": "¿Cómo llamaban a sus amigos?",
+          "askEn": "How did they call their friends?",
+          "answer": "Con el teléfono fijo.",
+          "answerEn": "With the landline.",
+          "keys": [
+            "fijo",
+            "telefono",
+            "cartas",
+            "andando"
+          ],
+          "wrong": [
+            "Con el móvil.",
+            "Con la tableta."
+          ],
+          "reply": "¡Exacto!",
+          "replyEn": "Exactly!"
+        }
+      ]
+    },
+    {
+      "lesson": 136,
+      "who": "sol",
+      "title": "Then and now",
+      "scene": "🔄",
+      "turns": [
+        {
+          "ask": "¿Dónde vivías antes?",
+          "askEn": "Where did you use to live?",
+          "answer": "Antes vivía en Inglaterra.",
+          "answerEn": "I used to live in England.",
+          "keys": [
+            "vivia"
+          ],
+          "wrong": [
+            "Vivo en España.",
+            "Voy a vivir."
+          ],
+          "reply": "¿Y ahora?",
+          "replyEn": "And now?"
+        },
+        {
+          "ask": "¿Y ahora dónde vives?",
+          "askEn": "And where do you live now?",
+          "answer": "Ahora vivo en Málaga.",
+          "answerEn": "Now I live in Málaga.",
+          "keys": [
+            "vivo"
+          ],
+          "wrong": [
+            "Vivía en Londres.",
+            "Viviré en Madrid."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Nice!"
+        },
+        {
+          "ask": "¿Antes eras tímido?",
+          "askEn": "Were you shy before?",
+          "answer": "Sí, pero ya no.",
+          "answerEn": "Yes, but not any more.",
+          "keys": [
+            "era",
+            "ya no",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Soy tímido.",
+            "Voy a ser tímido."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Great!"
+        },
+        {
+          "ask": "¿Qué te gusta todavía?",
+          "askEn": "What do you still like?",
+          "answer": "Todavía me gusta el chocolate.",
+          "answerEn": "I still like chocolate.",
+          "keys": [
+            "todavia",
+            "me gusta",
+            "me encanta"
+          ],
+          "wrong": [
+            "Antes era pequeño.",
+            "Ya no vivo allí."
+          ],
+          "reply": "¡A mí también!",
+          "replyEn": "Me too!"
+        }
+      ]
+    },
+    {
+      "lesson": 137,
+      "who": "luna",
+      "title": "What were you doing when…?",
+      "scene": "☎️",
+      "turns": [
+        {
+          "ask": "¿Qué hacías cuando sonó el teléfono?",
+          "askEn": "What were you doing when the phone rang?",
+          "answer": "Estaba cenando.",
+          "answerEn": "I was having dinner.",
+          "keys": [
+            "estaba"
+          ],
+          "wrong": [
+            "Ceno a las nueve.",
+            "Voy a cenar."
+          ],
+          "reply": "¡Vaya! ¡Perdona!",
+          "replyEn": "Oops! Sorry!"
+        },
+        {
+          "ask": "¿Qué pasó cuando estabas en el parque?",
+          "askEn": "What happened when you were in the park?",
+          "answer": "Empezó a llover.",
+          "answerEn": "It started to rain.",
+          "keys": [
+            "empezo",
+            "llovio",
+            "llego",
+            "paso",
+            "vi"
+          ],
+          "wrong": [
+            "Llueve mucho.",
+            "Va a llover."
+          ],
+          "reply": "¡Qué mala suerte!",
+          "replyEn": "Bad luck!"
+        },
+        {
+          "ask": "¿Qué hacías cuando se fue la luz?",
+          "askEn": "What were you doing when the power went out?",
+          "answer": "Estaba viendo la tele.",
+          "answerEn": "I was watching TV.",
+          "keys": [
+            "estaba"
+          ],
+          "wrong": [
+            "Veo la tele.",
+            "La luz es blanca."
+          ],
+          "reply": "¡Qué rollo!",
+          "replyEn": "What a pain!"
+        },
+        {
+          "ask": "¿Quién llamó a la puerta?",
+          "askEn": "Who knocked at the door?",
+          "answer": "Era el vecino.",
+          "answerEn": "It was the neighbour.",
+          "keys": [
+            "era",
+            "fue",
+            "llamo"
+          ],
+          "wrong": [
+            "Es el vecino.",
+            "Va a venir."
+          ],
+          "reply": "¡Qué sorpresa!",
+          "replyEn": "What a surprise!"
+        }
+      ]
+    },
+    {
+      "lesson": 138,
+      "who": "sol",
+      "title": "Fairy tales",
+      "scene": "🧚",
+      "turns": [
+        {
+          "ask": "¿Cómo empiezan los cuentos?",
+          "askEn": "How do fairy tales begin?",
+          "answer": "Érase una vez…",
+          "answerEn": "Once upon a time…",
+          "keys": [
+            "erase una vez",
+            "habia una vez"
+          ],
+          "wrong": [
+            "Colorín colorado.",
+            "Fin."
+          ],
+          "reply": "¡Eso es!",
+          "replyEn": "That's it!"
+        },
+        {
+          "ask": "¿Dónde vivía el lobo?",
+          "askEn": "Where did the wolf live?",
+          "answer": "Vivía en el bosque.",
+          "answerEn": "He lived in the forest.",
+          "keys": [
+            "vivia",
+            "bosque"
+          ],
+          "wrong": [
+            "Vive en una casa.",
+            "Va a vivir."
+          ],
+          "reply": "¡Uuuh!",
+          "replyEn": "Ooooh!"
+        },
+        {
+          "ask": "¿Quién ayudó a la reina?",
+          "askEn": "Who helped the queen?",
+          "answer": "Un hada buena.",
+          "answerEn": "A good fairy.",
+          "keys": [
+            "hada"
+          ],
+          "wrong": [
+            "La bruja.",
+            "El lobo."
+          ],
+          "reply": "¡Qué bonito!",
+          "replyEn": "How lovely!"
+        },
+        {
+          "ask": "¿Y cómo terminan los cuentos?",
+          "askEn": "And how do fairy tales end?",
+          "answer": "Y colorín colorado, este cuento se ha acabado.",
+          "answerEn": "And that's the end of the story.",
+          "keys": [
+            "colorin colorado",
+            "vivieron felices",
+            "fin"
+          ],
+          "wrong": [
+            "Érase una vez.",
+            "Había una reina."
+          ],
+          "reply": "¡Muy bien!",
+          "replyEn": "Very good!"
+        }
+      ]
+    },
+    {
+      "lesson": 139,
+      "who": "luna",
+      "title": "Summers gone by",
+      "scene": "⛱️",
+      "turns": [
+        {
+          "ask": "¿Adónde ibas en verano de pequeño?",
+          "askEn": "Where did you go in the summer when you were little?",
+          "answer": "Íbamos al pueblo de mis abuelos.",
+          "answerEn": "We used to go to my grandparents' village.",
+          "keys": [
+            "ibamos",
+            "iba"
+          ],
+          "wrong": [
+            "Vamos al pueblo.",
+            "Voy a ir."
+          ],
+          "reply": "¡Qué bonito!",
+          "replyEn": "How lovely!"
+        },
+        {
+          "ask": "¿Os bañabais en el río?",
+          "askEn": "Did you swim in the river?",
+          "answer": "Sí, nos bañábamos todos los días.",
+          "answerEn": "Yes, we swam every day.",
+          "keys": [
+            "nos banabamos",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Nos bañamos mañana.",
+            "El río es frío."
+          ],
+          "reply": "¡Qué divertido!",
+          "replyEn": "What fun!"
+        },
+        {
+          "ask": "¿Qué comíais?",
+          "askEn": "What did you eat?",
+          "answer": "Comíamos sandía.",
+          "answerEn": "We used to eat watermelon.",
+          "keys": [
+            "comiamos"
+          ],
+          "wrong": [
+            "Comemos sandía.",
+            "Vamos a comer."
+          ],
+          "reply": "¡Mmm!",
+          "replyEn": "Mmm!"
+        },
+        {
+          "ask": "¿Dormíais la siesta?",
+          "askEn": "Did you have a nap?",
+          "answer": "Sí, por la tarde.",
+          "answerEn": "Yes, in the afternoon.",
+          "keys": [
+            "dormiamos",
+            "siesta",
+            "si",
+            "no",
+            "a veces"
+          ],
+          "wrong": [
+            "Duermo mucho.",
+            "Me gusta el verano."
+          ],
+          "reply": "¡Qué tiempos!",
+          "replyEn": "Good times!"
+        }
+      ]
+    },
+    {
+      "lesson": 140,
+      "who": "sol",
+      "title": "Memories champion",
+      "scene": "🏆",
+      "turns": [
+        {
+          "ask": "¿Dónde vivías de pequeño?",
+          "askEn": "Where did you live when you were little?",
+          "answer": "Vivía en un piso pequeño.",
+          "answerEn": "I lived in a small flat.",
+          "keys": [
+            "vivia"
+          ],
+          "wrong": [
+            "Vivo en un piso.",
+            "Voy a vivir."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Nice!"
+        },
+        {
+          "ask": "¿Qué te encantaba hacer?",
+          "askEn": "What did you love doing?",
+          "answer": "Me encantaba saltar a la comba.",
+          "answerEn": "I loved skipping.",
+          "keys": [
+            "me encantaba",
+            "me gustaba"
+          ],
+          "wrong": [
+            "Me encanta saltar.",
+            "Me va a gustar."
+          ],
+          "reply": "¡A mí también!",
+          "replyEn": "Me too!"
+        },
+        {
+          "ask": "¿Qué tiempo hacía ayer cuando saliste?",
+          "askEn": "What was the weather like when you went out yesterday?",
+          "answer": "Llovía un poco.",
+          "answerEn": "It was raining a bit.",
+          "keys": [
+            "llovia",
+            "hacia",
+            "nevaba",
+            "estaba"
+          ],
+          "wrong": [
+            "Llueve.",
+            "Va a llover."
+          ],
+          "reply": "¡Vaya!",
+          "replyEn": "Oh dear!"
+        },
+        {
+          "ask": "¿Qué estabas haciendo cuando llegué?",
+          "askEn": "What were you doing when I arrived?",
+          "answer": "Estaba leyendo.",
+          "answerEn": "I was reading.",
+          "keys": [
+            "estaba"
+          ],
+          "wrong": [
+            "Leo ahora.",
+            "Voy a leer."
+          ],
+          "reply": "¡Perdona!",
+          "replyEn": "Sorry!"
+        },
+        {
+          "ask": "¿Qué cosa ya no haces?",
+          "askEn": "What don't you do any more?",
+          "answer": "Ya no duermo con mi osito.",
+          "answerEn": "I don't sleep with my teddy any more.",
+          "keys": [
+            "ya no"
+          ],
+          "wrong": [
+            "Todavía duermo.",
+            "Siempre duermo."
+          ],
+          "reply": "¡Eres un campeón de recuerdos!",
+          "replyEn": "You're a memories champion!"
+        }
+      ]
+    }
+  ]
+}

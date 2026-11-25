@@ -1,0 +1,850 @@
+{
+  "world": 13,
+  "conversations": [
+    {
+      "lesson": 101,
+      "who": "sol",
+      "title": "Your day so far",
+      "scene": "🌅",
+      "turns": [
+        {
+          "ask": "¿Qué has hecho hoy?",
+          "askEn": "What have you done today?",
+          "answer": "He jugado en el parque.",
+          "answerEn": "I've played in the park.",
+          "keys": [
+            "he ",
+            "hemos",
+            "ha ",
+            "han "
+          ],
+          "wrong": [
+            "Juego mañana.",
+            "Voy a jugar."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Nice!"
+        },
+        {
+          "ask": "¿Qué has comido?",
+          "askEn": "What have you eaten?",
+          "answer": "He comido macarrones.",
+          "answerEn": "I've eaten macaroni.",
+          "keys": [
+            "he comido",
+            "comido"
+          ],
+          "wrong": [
+            "Como pizza mañana.",
+            "Voy a comer."
+          ],
+          "reply": "¡Mmm!",
+          "replyEn": "Mmm!"
+        },
+        {
+          "ask": "¿Has hecho los deberes?",
+          "askEn": "Have you done your homework?",
+          "answer": "Todavía no.",
+          "answerEn": "Not yet.",
+          "keys": [
+            "todavia no",
+            "si",
+            "ya",
+            "no",
+            "he hecho"
+          ],
+          "wrong": [
+            "Hago la cama.",
+            "Voy al cole."
+          ],
+          "reply": "¡Pues a trabajar!",
+          "replyEn": "Off you go then!"
+        },
+        {
+          "ask": "¿Has leído algo hoy?",
+          "askEn": "Have you read anything today?",
+          "answer": "Sí, he leído un cuento.",
+          "answerEn": "Yes, I've read a story.",
+          "keys": [
+            "he leido",
+            "leido",
+            "si",
+            "no",
+            "todavia no"
+          ],
+          "wrong": [
+            "Leo mañana.",
+            "Me gusta leer."
+          ],
+          "reply": "¡Muy bien!",
+          "replyEn": "Well done!"
+        }
+      ]
+    },
+    {
+      "lesson": 102,
+      "who": "luna",
+      "title": "This week",
+      "scene": "📅",
+      "turns": [
+        {
+          "ask": "¿Qué has aprendido esta semana?",
+          "askEn": "What have you learned this week?",
+          "answer": "He aprendido muchas palabras.",
+          "answerEn": "I've learned lots of words.",
+          "keys": [
+            "he aprendido",
+            "aprendido"
+          ],
+          "wrong": [
+            "Aprendo mañana.",
+            "Voy a aprender."
+          ],
+          "reply": "¡Genial!",
+          "replyEn": "Great!"
+        },
+        {
+          "ask": "¿Has dormido bien?",
+          "askEn": "Have you slept well?",
+          "answer": "Sí, he dormido muy bien.",
+          "answerEn": "Yes, I've slept very well.",
+          "keys": [
+            "he dormido",
+            "dormido",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Duermo en mi cama.",
+            "Voy a dormir."
+          ],
+          "reply": "¡Me alegro!",
+          "replyEn": "I'm glad!"
+        },
+        {
+          "ask": "¿Has estudiado mucho este mes?",
+          "askEn": "Have you studied a lot this month?",
+          "answer": "Sí, he estudiado mucho.",
+          "answerEn": "Yes, I've studied a lot.",
+          "keys": [
+            "he estudiado",
+            "estudiado",
+            "si",
+            "no",
+            "un poco"
+          ],
+          "wrong": [
+            "Estudio el lunes.",
+            "Este mes."
+          ],
+          "reply": "¡Muy bien!",
+          "replyEn": "Well done!"
+        },
+        {
+          "ask": "¿Cuántas veces has limpiado tu habitación?",
+          "askEn": "How many times have you cleaned your room?",
+          "answer": "La he limpiado dos veces.",
+          "answerEn": "I've cleaned it twice.",
+          "keys": [
+            "vez",
+            "veces",
+            "nunca",
+            "ninguna"
+          ],
+          "wrong": [
+            "Limpio mañana.",
+            "Es mi habitación."
+          ],
+          "reply": "¡Ja, ja! ¡Yo también!",
+          "replyEn": "Ha ha! Me too!"
+        }
+      ]
+    },
+    {
+      "lesson": 103,
+      "who": "sol",
+      "title": "Oops!",
+      "scene": "💔",
+      "turns": [
+        {
+          "ask": "¿Qué ha pasado? ¿Has roto algo?",
+          "askEn": "What's happened? Have you broken something?",
+          "answer": "Sí, he roto un vaso.",
+          "answerEn": "Yes, I've broken a glass.",
+          "keys": [
+            "he roto",
+            "roto",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Rompo un vaso mañana.",
+            "Es un vaso."
+          ],
+          "reply": "No pasa nada.",
+          "replyEn": "Never mind."
+        },
+        {
+          "ask": "¿Has visto mi libro?",
+          "askEn": "Have you seen my book?",
+          "answer": "Sí, lo he visto en la mesa.",
+          "answerEn": "Yes, I've seen it on the table.",
+          "keys": [
+            "he visto",
+            "visto",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Veo la tele.",
+            "Voy a ver."
+          ],
+          "reply": "¡Gracias!",
+          "replyEn": "Thanks!"
+        },
+        {
+          "ask": "¿Qué has hecho hoy en clase?",
+          "askEn": "What have you done in class today?",
+          "answer": "He escrito un cuento.",
+          "answerEn": "I've written a story.",
+          "keys": [
+            "he escrito",
+            "he hecho",
+            "he leido",
+            "he dibujado",
+            "hemos",
+            "he "
+          ],
+          "wrong": [
+            "Escribo mañana.",
+            "Voy a escribir."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Nice!"
+        },
+        {
+          "ask": "¿Has abierto la ventana?",
+          "askEn": "Have you opened the window?",
+          "answer": "Sí, la he abierto.",
+          "answerEn": "Yes, I've opened it.",
+          "keys": [
+            "abierto",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Abro la puerta mañana.",
+            "La ventana es grande."
+          ],
+          "reply": "¡Gracias, hace calor!",
+          "replyEn": "Thanks, it's hot!"
+        }
+      ]
+    },
+    {
+      "lesson": 104,
+      "who": "luna",
+      "title": "Have you ever…?",
+      "scene": "🤔",
+      "turns": [
+        {
+          "ask": "¿Alguna vez has estado en Madrid?",
+          "askEn": "Have you ever been to Madrid?",
+          "answer": "Sí, he estado una vez.",
+          "answerEn": "Yes, I've been once.",
+          "keys": [
+            "he estado",
+            "nunca",
+            "una vez",
+            "dos veces",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Voy a Madrid.",
+            "Madrid es grande."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Nice!"
+        },
+        {
+          "ask": "¿Has probado el pulpo?",
+          "askEn": "Have you tried octopus?",
+          "answer": "No, nunca lo he probado.",
+          "answerEn": "No, I've never tried it.",
+          "keys": [
+            "probado",
+            "nunca",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Me gusta el mar.",
+            "El pulpo tiene ocho patas."
+          ],
+          "reply": "¡Está riquísimo!",
+          "replyEn": "It's delicious!"
+        },
+        {
+          "ask": "¿Alguna vez has montado a caballo?",
+          "askEn": "Have you ever ridden a horse?",
+          "answer": "Sí, varias veces.",
+          "answerEn": "Yes, several times.",
+          "keys": [
+            "he montado",
+            "montado",
+            "nunca",
+            "vez",
+            "veces",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "El caballo es marrón.",
+            "Voy a montar."
+          ],
+          "reply": "¡Qué valiente!",
+          "replyEn": "How brave!"
+        },
+        {
+          "ask": "¿Has visto la nieve?",
+          "askEn": "Have you seen snow?",
+          "answer": "Sí, la he visto dos veces.",
+          "answerEn": "Yes, I've seen it twice.",
+          "keys": [
+            "he visto",
+            "visto",
+            "nunca",
+            "vez",
+            "veces",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Hace frío.",
+            "Veo la tele."
+          ],
+          "reply": "¡Es preciosa!",
+          "replyEn": "It's beautiful!"
+        }
+      ]
+    },
+    {
+      "lesson": 105,
+      "who": "sol",
+      "title": "After the match",
+      "scene": "🏆",
+      "turns": [
+        {
+          "ask": "¿Habéis ganado el partido?",
+          "askEn": "Have you won the match?",
+          "answer": "¡Sí, hemos ganado!",
+          "answerEn": "Yes, we've won!",
+          "keys": [
+            "hemos",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Ganamos mañana.",
+            "Juego al fútbol."
+          ],
+          "reply": "¡Enhorabuena!",
+          "replyEn": "Congratulations!"
+        },
+        {
+          "ask": "¿Cuántos goles habéis marcado?",
+          "askEn": "How many goals have you scored?",
+          "answer": "Hemos marcado tres goles.",
+          "answerEn": "We've scored three goals.",
+          "keys": [
+            "hemos marcado",
+            "uno",
+            "dos",
+            "tres",
+            "cuatro",
+            "cinco",
+            "goles",
+            "gol"
+          ],
+          "wrong": [
+            "Marco mañana.",
+            "El portero."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Brilliant!"
+        },
+        {
+          "ask": "¿Han venido tus padres?",
+          "askEn": "Have your parents come?",
+          "answer": "Sí, han venido los dos.",
+          "answerEn": "Yes, they've both come.",
+          "keys": [
+            "han venido",
+            "venido",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Vienen mañana.",
+            "Mis padres son altos."
+          ],
+          "reply": "¡Qué bonito!",
+          "replyEn": "How lovely!"
+        },
+        {
+          "ask": "¿Ha llovido durante el partido?",
+          "askEn": "Has it rained during the match?",
+          "answer": "No, ha hecho sol.",
+          "answerEn": "No, it's been sunny.",
+          "keys": [
+            "ha llovido",
+            "ha hecho",
+            "si",
+            "no",
+            "llovido"
+          ],
+          "wrong": [
+            "Llueve mañana.",
+            "Hace frío en invierno."
+          ],
+          "reply": "¡Qué suerte!",
+          "replyEn": "Lucky!"
+        }
+      ]
+    },
+    {
+      "lesson": 106,
+      "who": "luna",
+      "title": "How was school?",
+      "scene": "🏫",
+      "turns": [
+        {
+          "ask": "¿Qué tal el examen? ¿Has aprobado?",
+          "askEn": "How was the exam? Have you passed?",
+          "answer": "¡Sí, he aprobado!",
+          "answerEn": "Yes, I've passed!",
+          "keys": [
+            "aprobado",
+            "suspendido",
+            "si",
+            "no",
+            "todavia no"
+          ],
+          "wrong": [
+            "Tengo examen mañana.",
+            "Me gusta el examen."
+          ],
+          "reply": "¡Enhorabuena!",
+          "replyEn": "Congratulations!"
+        },
+        {
+          "ask": "¿Qué nota has sacado?",
+          "askEn": "What mark have you got?",
+          "answer": "He sacado un ocho.",
+          "answerEn": "I've got an eight.",
+          "keys": [
+            "he sacado",
+            "un ",
+            "cinco",
+            "seis",
+            "siete",
+            "ocho",
+            "nueve",
+            "diez"
+          ],
+          "wrong": [
+            "Saco la basura.",
+            "La nota es mañana."
+          ],
+          "reply": "¡Muy bien!",
+          "replyEn": "Very good!"
+        },
+        {
+          "ask": "¿Has olvidado algo en casa?",
+          "askEn": "Have you left anything at home?",
+          "answer": "Sí, he olvidado los deberes.",
+          "answerEn": "Yes, I've forgotten my homework.",
+          "keys": [
+            "olvidado",
+            "si",
+            "no",
+            "nada"
+          ],
+          "wrong": [
+            "Olvido mañana.",
+            "Mi casa es bonita."
+          ],
+          "reply": "¡Ay, ay, ay!",
+          "replyEn": "Oh dear!"
+        },
+        {
+          "ask": "¿Qué has hecho en el recreo?",
+          "askEn": "What have you done at break?",
+          "answer": "He jugado con mis amigos.",
+          "answerEn": "I've played with my friends.",
+          "keys": [
+            "he ",
+            "hemos",
+            "ha ",
+            "han "
+          ],
+          "wrong": [
+            "Juego después.",
+            "El recreo es largo."
+          ],
+          "reply": "¡Qué divertido!",
+          "replyEn": "What fun!"
+        }
+      ]
+    },
+    {
+      "lesson": 107,
+      "who": "sol",
+      "title": "How did it go?",
+      "scene": "🙂",
+      "turns": [
+        {
+          "ask": "¿Qué tal te ha ido el día?",
+          "askEn": "How has your day gone?",
+          "answer": "Me ha ido muy bien.",
+          "answerEn": "It's gone really well.",
+          "keys": [
+            "me ha ido",
+            "bien",
+            "mal",
+            "genial",
+            "fatal",
+            "regular"
+          ],
+          "wrong": [
+            "Voy a ir.",
+            "Ha sido el lunes."
+          ],
+          "reply": "¡Me alegro!",
+          "replyEn": "I'm glad!"
+        },
+        {
+          "ask": "¿Qué tal la excursión?",
+          "askEn": "How was the school trip?",
+          "answer": "Ha sido muy divertida.",
+          "answerEn": "It's been really fun.",
+          "keys": [
+            "ha sido",
+            "divertida",
+            "divertido",
+            "aburrida",
+            "aburrido",
+            "genial"
+          ],
+          "wrong": [
+            "Mañana es la excursión.",
+            "Voy en autobús."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Great!"
+        },
+        {
+          "ask": "¿Te lo has pasado bien?",
+          "askEn": "Have you had a good time?",
+          "answer": "¡Me lo he pasado genial!",
+          "answerEn": "I've had a great time!",
+          "keys": [
+            "me lo he pasado",
+            "genial",
+            "bien",
+            "fatal",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Lo paso mañana.",
+            "He pasado la calle."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "How nice!"
+        },
+        {
+          "ask": "¿Qué es lo mejor que has visto?",
+          "askEn": "What's the best thing you've seen?",
+          "answer": "He visto un dinosaurio enorme.",
+          "answerEn": "I've seen a huge dinosaur.",
+          "keys": [
+            "he visto",
+            "visto"
+          ],
+          "wrong": [
+            "Veo un dinosaurio mañana.",
+            "Me gusta ver."
+          ],
+          "reply": "¡Qué guay!",
+          "replyEn": "How cool!"
+        }
+      ]
+    },
+    {
+      "lesson": 108,
+      "who": "luna",
+      "title": "Morning check",
+      "scene": "⏰",
+      "turns": [
+        {
+          "ask": "¿A qué hora te has levantado hoy?",
+          "askEn": "What time did you get up today?",
+          "answer": "Me he levantado a las siete.",
+          "answerEn": "I got up at seven.",
+          "keys": [
+            "me he levantado",
+            "a las",
+            "temprano",
+            "tarde"
+          ],
+          "wrong": [
+            "Me levanto mañana.",
+            "Me acuesto."
+          ],
+          "reply": "¡Qué temprano!",
+          "replyEn": "So early!"
+        },
+        {
+          "ask": "¿Te has duchado?",
+          "askEn": "Have you had a shower?",
+          "answer": "Sí, me he duchado.",
+          "answerEn": "Yes, I've had a shower.",
+          "keys": [
+            "me he duchado",
+            "duchado",
+            "si",
+            "no",
+            "todavia no"
+          ],
+          "wrong": [
+            "Me ducho mañana.",
+            "El baño es azul."
+          ],
+          "reply": "¡Muy bien!",
+          "replyEn": "Good!"
+        },
+        {
+          "ask": "¿Te has lavado los dientes?",
+          "askEn": "Have you brushed your teeth?",
+          "answer": "¡Ay, todavía no!",
+          "answerEn": "Oh, not yet!",
+          "keys": [
+            "todavia no",
+            "si",
+            "no",
+            "lavado"
+          ],
+          "wrong": [
+            "Mis dientes son blancos.",
+            "Me lavo mañana."
+          ],
+          "reply": "¡Corre, al baño!",
+          "replyEn": "Quick, to the bathroom!"
+        },
+        {
+          "ask": "¿Por qué llegas tarde?",
+          "askEn": "Why are you late?",
+          "answer": "Porque me he dormido.",
+          "answerEn": "Because I've overslept.",
+          "keys": [
+            "me he dormido",
+            "porque",
+            "dormido"
+          ],
+          "wrong": [
+            "Llego mañana.",
+            "Duermo en la cama."
+          ],
+          "reply": "¡Otra vez! ¡Ja, ja!",
+          "replyEn": "Again! Ha ha!"
+        }
+      ]
+    },
+    {
+      "lesson": 109,
+      "who": "sol",
+      "title": "Big news",
+      "scene": "📰",
+      "turns": [
+        {
+          "ask": "¿Sabes qué? ¡Ha nacido mi primo!",
+          "askEn": "Guess what? My cousin has been born!",
+          "answer": "¡Enhorabuena! ¿Cómo se llama?",
+          "answerEn": "Congratulations! What's his name?",
+          "keys": [
+            "enhorabuena",
+            "felicidades",
+            "que bien",
+            "como se llama"
+          ],
+          "wrong": [
+            "¡Qué pena!",
+            "Mi primo es alto."
+          ],
+          "reply": "Se llama Pablo.",
+          "replyEn": "He's called Pablo."
+        },
+        {
+          "ask": "Mi mejor amigo se ha mudado a otra ciudad.",
+          "askEn": "My best friend has moved to another city.",
+          "answer": "¡Qué pena!",
+          "answerEn": "What a shame!",
+          "keys": [
+            "que pena",
+            "lo siento",
+            "vaya",
+            "que triste"
+          ],
+          "wrong": [
+            "¡Enhorabuena!",
+            "¡Qué bien!"
+          ],
+          "reply": "Sí, lo echo de menos.",
+          "replyEn": "Yes, I miss him."
+        },
+        {
+          "ask": "¿Tienes noticias?",
+          "askEn": "Have you got any news?",
+          "answer": "Sí, mi abuela ha cumplido setenta años.",
+          "answerEn": "Yes, my grandma has turned seventy.",
+          "keys": [
+            "ha ",
+            "he ",
+            "hemos",
+            "han ",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Las noticias de la tele.",
+            "Mañana es lunes."
+          ],
+          "reply": "¡Felicidades a tu abuela!",
+          "replyEn": "Happy birthday to your grandma!"
+        },
+        {
+          "ask": "¡He ganado un premio de dibujo!",
+          "askEn": "I've won a drawing prize!",
+          "answer": "¡Qué bien! ¡Enhorabuena!",
+          "answerEn": "Great! Congratulations!",
+          "keys": [
+            "enhorabuena",
+            "que bien",
+            "felicidades",
+            "genial"
+          ],
+          "wrong": [
+            "¡Qué pena!",
+            "Lo siento mucho."
+          ],
+          "reply": "¡Gracias!",
+          "replyEn": "Thank you!"
+        }
+      ]
+    },
+    {
+      "lesson": 110,
+      "who": "luna",
+      "title": "Recent past champion",
+      "scene": "🏆",
+      "turns": [
+        {
+          "ask": "¿Qué has hecho esta semana?",
+          "askEn": "What have you done this week?",
+          "answer": "He visto una película y he jugado al fútbol.",
+          "answerEn": "I've watched a film and played football.",
+          "keys": [
+            "he ",
+            "hemos",
+            "ha ",
+            "han "
+          ],
+          "wrong": [
+            "Juego al fútbol.",
+            "Voy a ver una película."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Nice!"
+        },
+        {
+          "ask": "¿Alguna vez has comido paella?",
+          "askEn": "Have you ever eaten paella?",
+          "answer": "Sí, muchas veces.",
+          "answerEn": "Yes, lots of times.",
+          "keys": [
+            "comido",
+            "vez",
+            "veces",
+            "nunca",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "La paella es de Valencia.",
+            "Voy a comer."
+          ],
+          "reply": "¡Riquísima!",
+          "replyEn": "Delicious!"
+        },
+        {
+          "ask": "¿A qué hora te has despertado?",
+          "askEn": "What time did you wake up?",
+          "answer": "Me he despertado a las ocho.",
+          "answerEn": "I woke up at eight.",
+          "keys": [
+            "me he despertado",
+            "a las",
+            "temprano",
+            "tarde"
+          ],
+          "wrong": [
+            "Me despierto mañana.",
+            "Son las ocho."
+          ],
+          "reply": "¡Vale!",
+          "replyEn": "OK!"
+        },
+        {
+          "ask": "¿Te lo has pasado bien hoy?",
+          "askEn": "Have you had a good time today?",
+          "answer": "Sí, me lo he pasado genial.",
+          "answerEn": "Yes, I've had a great time.",
+          "keys": [
+            "me lo he pasado",
+            "genial",
+            "bien",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Hoy es lunes.",
+            "Me gusta pasear."
+          ],
+          "reply": "¡Me alegro mucho!",
+          "replyEn": "I'm so glad!"
+        },
+        {
+          "ask": "¡He aprendido el pretérito perfecto!",
+          "askEn": "I've learned the present perfect!",
+          "answer": "¡Enhorabuena!",
+          "answerEn": "Congratulations!",
+          "keys": [
+            "enhorabuena",
+            "que bien",
+            "felicidades",
+            "genial",
+            "yo tambien"
+          ],
+          "wrong": [
+            "¡Qué pena!",
+            "Todavía no."
+          ],
+          "reply": "¡Gracias! ¡Somos campeones!",
+          "replyEn": "Thanks! We're champions!"
+        }
+      ]
+    }
+  ]
+}

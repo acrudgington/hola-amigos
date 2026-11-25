@@ -1,0 +1,799 @@
+{
+  "world": 14,
+  "conversations": [
+    {
+      "lesson": 111,
+      "who": "luna",
+      "title": "Last night",
+      "scene": "🌙",
+      "turns": [
+        {
+          "ask": "¿Qué cenaste anoche?",
+          "askEn": "What did you have for dinner last night?",
+          "answer": "Anoche cené pescado.",
+          "answerEn": "Last night I had fish.",
+          "keys": [
+            "cene"
+          ],
+          "wrong": [
+            "Ceno pescado.",
+            "Voy a cenar."
+          ],
+          "reply": "¡Qué sano!",
+          "replyEn": "How healthy!"
+        },
+        {
+          "ask": "¿A quién llamaste ayer?",
+          "askEn": "Who did you call yesterday?",
+          "answer": "Llamé a mi abuela.",
+          "answerEn": "I called my grandma.",
+          "keys": [
+            "llame"
+          ],
+          "wrong": [
+            "Llamo a mi abuela.",
+            "Mi abuela se llama Rosa."
+          ],
+          "reply": "¡Qué bonito!",
+          "replyEn": "How lovely!"
+        },
+        {
+          "ask": "¿Qué música escuchaste?",
+          "askEn": "What music did you listen to?",
+          "answer": "Escuché música pop.",
+          "answerEn": "I listened to pop music.",
+          "keys": [
+            "escuche"
+          ],
+          "wrong": [
+            "Escucho la radio.",
+            "Me gusta la música."
+          ],
+          "reply": "¡Me encanta el pop!",
+          "replyEn": "I love pop!"
+        },
+        {
+          "ask": "¿Estudiaste la semana pasada?",
+          "askEn": "Did you study last week?",
+          "answer": "Sí, estudié mucho.",
+          "answerEn": "Yes, I studied a lot.",
+          "keys": [
+            "estudie",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Estudio mañana.",
+            "La semana que viene."
+          ],
+          "reply": "¡Muy bien!",
+          "replyEn": "Well done!"
+        }
+      ]
+    },
+    {
+      "lesson": 112,
+      "who": "sol",
+      "title": "Saturday fun",
+      "scene": "💃",
+      "turns": [
+        {
+          "ask": "¿Qué hiciste el sábado?",
+          "askEn": "What did you do on Saturday?",
+          "answer": "Monté en bici y paseé por el parque.",
+          "answerEn": "I rode my bike and walked in the park.",
+          "keys": [
+            "monte",
+            "pasee",
+            "jugue",
+            "visite",
+            "baile",
+            "cocine",
+            "ayude",
+            "dibuje",
+            "cante",
+            "fui"
+          ],
+          "wrong": [
+            "Monto en bici.",
+            "Voy a pasear."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Nice!"
+        },
+        {
+          "ask": "¿Bailaste en la fiesta?",
+          "askEn": "Did you dance at the party?",
+          "answer": "Sí, bailé mucho.",
+          "answerEn": "Yes, I danced a lot.",
+          "keys": [
+            "baile",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Bailo mañana.",
+            "Me gusta bailar."
+          ],
+          "reply": "¡Qué divertido!",
+          "replyEn": "What fun!"
+        },
+        {
+          "ask": "¿Ayudaste en casa?",
+          "askEn": "Did you help at home?",
+          "answer": "Sí, ayudé a mi madre.",
+          "answerEn": "Yes, I helped my mum.",
+          "keys": [
+            "ayude",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Ayudo mañana.",
+            "Mi casa es grande."
+          ],
+          "reply": "¡Muy bien!",
+          "replyEn": "Well done!"
+        },
+        {
+          "ask": "¿Qué cocinaste?",
+          "askEn": "What did you cook?",
+          "answer": "Cociné una tortilla.",
+          "answerEn": "I cooked an omelette.",
+          "keys": [
+            "cocine"
+          ],
+          "wrong": [
+            "Cocino pasta.",
+            "Voy a cocinar."
+          ],
+          "reply": "¡Mmm, qué rico!",
+          "replyEn": "Mmm, yummy!"
+        }
+      ]
+    },
+    {
+      "lesson": 113,
+      "who": "luna",
+      "title": "Sunday out",
+      "scene": "🏃",
+      "turns": [
+        {
+          "ask": "¿Saliste el domingo?",
+          "askEn": "Did you go out on Sunday?",
+          "answer": "Sí, salí con mi familia.",
+          "answerEn": "Yes, I went out with my family.",
+          "keys": [
+            "sali",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Salgo mañana.",
+            "Voy a salir."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Nice!"
+        },
+        {
+          "ask": "¿Qué bebiste?",
+          "askEn": "What did you drink?",
+          "answer": "Bebí un zumo de naranja.",
+          "answerEn": "I drank an orange juice.",
+          "keys": [
+            "bebi"
+          ],
+          "wrong": [
+            "Bebo agua.",
+            "Me gusta el zumo."
+          ],
+          "reply": "¡Qué rico!",
+          "replyEn": "Yummy!"
+        },
+        {
+          "ask": "¿Corriste en el parque?",
+          "askEn": "Did you run in the park?",
+          "answer": "Sí, corrí mucho.",
+          "answerEn": "Yes, I ran a lot.",
+          "keys": [
+            "corri",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Corro mañana.",
+            "El parque es grande."
+          ],
+          "reply": "¡Qué deportista!",
+          "replyEn": "How sporty!"
+        },
+        {
+          "ask": "¿Escribiste a alguien?",
+          "askEn": "Did you write to anyone?",
+          "answer": "Sí, escribí una postal a mi abuela.",
+          "answerEn": "Yes, I wrote a postcard to my grandma.",
+          "keys": [
+            "escribi",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Escribo mañana.",
+            "Mi abuela es simpática."
+          ],
+          "reply": "¡Qué detalle!",
+          "replyEn": "How thoughtful!"
+        }
+      ]
+    },
+    {
+      "lesson": 114,
+      "who": "sol",
+      "title": "Questions about yesterday",
+      "scene": "❓",
+      "turns": [
+        {
+          "ask": "¿Qué hiciste ayer?",
+          "askEn": "What did you do yesterday?",
+          "answer": "Jugué con mi perro.",
+          "answerEn": "I played with my dog.",
+          "keys": [
+            "jugue",
+            "fui",
+            "comi",
+            "vi",
+            "sali",
+            "visite",
+            "monte",
+            "hice",
+            "e "
+          ],
+          "wrong": [
+            "Juego mañana.",
+            "Voy a jugar."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Nice!"
+        },
+        {
+          "ask": "¿Y tu hermana? ¿Qué hizo?",
+          "askEn": "And your sister? What did she do?",
+          "answer": "Mi hermana ganó una carrera.",
+          "answerEn": "My sister won a race.",
+          "keys": [
+            "gano",
+            "jugo",
+            "comio",
+            "salio",
+            "llego",
+            "escribio",
+            "hizo",
+            "fue",
+            "vio"
+          ],
+          "wrong": [
+            "Mi hermana gana.",
+            "Va a ganar."
+          ],
+          "reply": "¡Enhorabuena a tu hermana!",
+          "replyEn": "Congratulations to your sister!"
+        },
+        {
+          "ask": "¿Qué comió tu perro?",
+          "askEn": "What did your dog eat?",
+          "answer": "Comió mi bocadillo.",
+          "answerEn": "He ate my sandwich.",
+          "keys": [
+            "comio"
+          ],
+          "wrong": [
+            "Come mucho.",
+            "Va a comer."
+          ],
+          "reply": "¡Ja, ja! ¡Qué perro tan travieso!",
+          "replyEn": "Ha ha! What a naughty dog!"
+        },
+        {
+          "ask": "¿A qué hora llegó tu padre?",
+          "askEn": "What time did your dad arrive?",
+          "answer": "Llegó a las ocho.",
+          "answerEn": "He arrived at eight.",
+          "keys": [
+            "llego",
+            "a las"
+          ],
+          "wrong": [
+            "Llega mañana.",
+            "Mi padre es alto."
+          ],
+          "reply": "¡Qué tarde!",
+          "replyEn": "So late!"
+        }
+      ]
+    },
+    {
+      "lesson": 115,
+      "who": "luna",
+      "title": "The family wedding",
+      "scene": "💒",
+      "turns": [
+        {
+          "ask": "¿Qué comisteis en la boda?",
+          "askEn": "What did you all eat at the wedding?",
+          "answer": "Comimos paella.",
+          "answerEn": "We ate paella.",
+          "keys": [
+            "comimos"
+          ],
+          "wrong": [
+            "Comemos paella.",
+            "Vamos a comer."
+          ],
+          "reply": "¡Qué rica!",
+          "replyEn": "Yummy!"
+        },
+        {
+          "ask": "¿Bailaron tus abuelos?",
+          "askEn": "Did your grandparents dance?",
+          "answer": "Sí, bailaron toda la noche.",
+          "answerEn": "Yes, they danced all night.",
+          "keys": [
+            "bailaron",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Bailan mañana.",
+            "Mis abuelos son mayores."
+          ],
+          "reply": "¡Qué marchosos!",
+          "replyEn": "Party animals!"
+        },
+        {
+          "ask": "¿Cuándo llegaron tus tíos?",
+          "askEn": "When did your aunt and uncle arrive?",
+          "answer": "Llegaron el viernes.",
+          "answerEn": "They arrived on Friday.",
+          "keys": [
+            "llegaron"
+          ],
+          "wrong": [
+            "Llegan mañana.",
+            "Mis tíos son de Londres."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Nice!"
+        },
+        {
+          "ask": "¿Jugasteis con vuestros primos?",
+          "askEn": "Did you all play with your cousins?",
+          "answer": "Sí, jugamos al escondite.",
+          "answerEn": "Yes, we played hide-and-seek.",
+          "keys": [
+            "jugamos",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Mañana jugaremos.",
+            "Mis primos son simpáticos."
+          ],
+          "reply": "¡Qué divertido!",
+          "replyEn": "What fun!"
+        }
+      ]
+    },
+    {
+      "lesson": 116,
+      "who": "sol",
+      "title": "When was it?",
+      "scene": "⏪",
+      "turns": [
+        {
+          "ask": "¿Cuándo fuiste al museo?",
+          "askEn": "When did you go to the museum?",
+          "answer": "Hace dos días.",
+          "answerEn": "Two days ago.",
+          "keys": [
+            "hace",
+            "ayer",
+            "el lunes",
+            "el martes",
+            "la semana pasada",
+            "el sabado",
+            "el domingo"
+          ],
+          "wrong": [
+            "Mañana.",
+            "La semana que viene."
+          ],
+          "reply": "¡Qué interesante!",
+          "replyEn": "Interesting!"
+        },
+        {
+          "ask": "¿Dónde estuviste el verano pasado?",
+          "askEn": "Where were you last summer?",
+          "answer": "Estuve en la playa.",
+          "answerEn": "I was at the beach.",
+          "keys": [
+            "estuve",
+            "fui"
+          ],
+          "wrong": [
+            "Voy a la playa.",
+            "Estoy en casa."
+          ],
+          "reply": "¡Qué suerte!",
+          "replyEn": "Lucky you!"
+        },
+        {
+          "ask": "¿Qué hiciste primero?",
+          "askEn": "What did you do first?",
+          "answer": "Primero nadé y después comí.",
+          "answerEn": "First I swam and then I ate.",
+          "keys": [
+            "primero",
+            "despues",
+            "luego"
+          ],
+          "wrong": [
+            "Nado mañana.",
+            "Voy a comer."
+          ],
+          "reply": "¡Buen plan!",
+          "replyEn": "Good plan!"
+        },
+        {
+          "ask": "¿A qué hora volviste a casa?",
+          "askEn": "What time did you get home?",
+          "answer": "Volví a las ocho.",
+          "answerEn": "I got back at eight.",
+          "keys": [
+            "volvi",
+            "llegue",
+            "a las"
+          ],
+          "wrong": [
+            "Vuelvo mañana.",
+            "Mi casa es grande."
+          ],
+          "reply": "¡Qué tarde!",
+          "replyEn": "So late!"
+        }
+      ]
+    },
+    {
+      "lesson": 117,
+      "who": "luna",
+      "title": "Beach day",
+      "scene": "🏖️",
+      "turns": [
+        {
+          "ask": "¿Te bañaste en el mar?",
+          "askEn": "Did you go for a swim in the sea?",
+          "answer": "Sí, me bañé mucho.",
+          "answerEn": "Yes, I swam a lot.",
+          "keys": [
+            "me bane",
+            "bane",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Me baño mañana.",
+            "El mar es azul."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Nice!"
+        },
+        {
+          "ask": "¿Usaste crema solar?",
+          "askEn": "Did you use sun cream?",
+          "answer": "Sí, usé mucha crema solar.",
+          "answerEn": "Yes, I used lots of sun cream.",
+          "keys": [
+            "use",
+            "si",
+            "no",
+            "me puse"
+          ],
+          "wrong": [
+            "Uso crema mañana.",
+            "Hace sol."
+          ],
+          "reply": "¡Muy bien!",
+          "replyEn": "Good!"
+        },
+        {
+          "ask": "¿Hiciste un castillo de arena?",
+          "askEn": "Did you make a sandcastle?",
+          "answer": "Sí, pero llegó una ola.",
+          "answerEn": "Yes, but a wave came.",
+          "keys": [
+            "hice",
+            "si",
+            "no",
+            "construi"
+          ],
+          "wrong": [
+            "Hago un castillo mañana.",
+            "La arena es amarilla."
+          ],
+          "reply": "¡Oh, no! ¡Adiós, castillo!",
+          "replyEn": "Oh no! Bye-bye, castle!"
+        },
+        {
+          "ask": "¿Tu padre tomó el sol?",
+          "askEn": "Did your dad sunbathe?",
+          "answer": "Sí, debajo de la sombrilla.",
+          "answerEn": "Yes, under the beach umbrella.",
+          "keys": [
+            "tomo",
+            "si",
+            "no",
+            "sombrilla"
+          ],
+          "wrong": [
+            "Toma el sol mañana.",
+            "Mi padre es alto."
+          ],
+          "reply": "¡Qué relajado!",
+          "replyEn": "How relaxing!"
+        }
+      ]
+    },
+    {
+      "lesson": 118,
+      "who": "sol",
+      "title": "Birthday party",
+      "scene": "🥳",
+      "turns": [
+        {
+          "ask": "¿Cuántos años cumpliste?",
+          "askEn": "How old did you turn?",
+          "answer": "Cumplí nueve años.",
+          "answerEn": "I turned nine.",
+          "keys": [
+            "cumpli",
+            "anos"
+          ],
+          "wrong": [
+            "Cumplo mañana.",
+            "Mi cumpleaños es en mayo."
+          ],
+          "reply": "¡Felicidades!",
+          "replyEn": "Happy birthday!"
+        },
+        {
+          "ask": "¿A quién invitaste?",
+          "askEn": "Who did you invite?",
+          "answer": "Invité a mis amigos del cole.",
+          "answerEn": "I invited my school friends.",
+          "keys": [
+            "invite"
+          ],
+          "wrong": [
+            "Invito mañana.",
+            "Mis amigos son simpáticos."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Nice!"
+        },
+        {
+          "ask": "¿Qué regalos recibiste?",
+          "askEn": "What presents did you get?",
+          "answer": "Recibí un libro y un juego.",
+          "answerEn": "I got a book and a game.",
+          "keys": [
+            "recibi",
+            "me regalaron"
+          ],
+          "wrong": [
+            "Recibo mañana.",
+            "Me gustan los regalos."
+          ],
+          "reply": "¡Qué suerte!",
+          "replyEn": "Lucky you!"
+        },
+        {
+          "ask": "¿Soplaste las velas?",
+          "askEn": "Did you blow out the candles?",
+          "answer": "¡Sí, soplé las velas!",
+          "answerEn": "Yes, I blew out the candles!",
+          "keys": [
+            "sople",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Soplo mañana.",
+            "Las velas son rojas."
+          ],
+          "reply": "¡Y pediste un deseo!",
+          "replyEn": "And made a wish!"
+        }
+      ]
+    },
+    {
+      "lesson": 119,
+      "who": "luna",
+      "title": "Today or yesterday?",
+      "scene": "⚖️",
+      "turns": [
+        {
+          "ask": "¿Has nadado hoy?",
+          "askEn": "Have you swum today?",
+          "answer": "Hoy no, pero ayer nadé.",
+          "answerEn": "Not today, but yesterday I swam.",
+          "keys": [
+            "nade",
+            "he nadado",
+            "si",
+            "no",
+            "hoy no"
+          ],
+          "wrong": [
+            "Nado mañana.",
+            "Voy a nadar."
+          ],
+          "reply": "¡Muy bien!",
+          "replyEn": "Good!"
+        },
+        {
+          "ask": "¿Adónde viajaste el año pasado?",
+          "askEn": "Where did you travel last year?",
+          "answer": "El año pasado viajé a Francia.",
+          "answerEn": "Last year I travelled to France.",
+          "keys": [
+            "viaje",
+            "fui"
+          ],
+          "wrong": [
+            "Viajo mañana.",
+            "Voy a viajar."
+          ],
+          "reply": "¡Qué bonito!",
+          "replyEn": "How lovely!"
+        },
+        {
+          "ask": "¿Y este año? ¿Has viajado?",
+          "askEn": "And this year? Have you travelled?",
+          "answer": "Sí, este año he viajado a Portugal.",
+          "answerEn": "Yes, this year I've travelled to Portugal.",
+          "keys": [
+            "he viajado",
+            "viajado",
+            "si",
+            "no",
+            "todavia no"
+          ],
+          "wrong": [
+            "Viajé el año pasado.",
+            "Viajo mañana."
+          ],
+          "reply": "¡Qué suerte!",
+          "replyEn": "Lucky you!"
+        },
+        {
+          "ask": "¿Ya has comido?",
+          "askEn": "Have you already eaten?",
+          "answer": "Sí, ya he comido. Comí a las dos.",
+          "answerEn": "Yes, I've already eaten. I ate at two.",
+          "keys": [
+            "he comido",
+            "comi",
+            "si",
+            "no",
+            "todavia no"
+          ],
+          "wrong": [
+            "Como mañana.",
+            "Voy a comer."
+          ],
+          "reply": "¡Vale!",
+          "replyEn": "OK!"
+        }
+      ]
+    },
+    {
+      "lesson": 120,
+      "who": "sol",
+      "title": "The weekend report",
+      "scene": "🏆",
+      "turns": [
+        {
+          "ask": "¿Qué hiciste el fin de semana?",
+          "askEn": "What did you do at the weekend?",
+          "answer": "Salí con mis amigos.",
+          "answerEn": "I went out with my friends.",
+          "keys": [
+            "sali",
+            "jugue",
+            "fui",
+            "vi",
+            "comi",
+            "visite",
+            "monte",
+            "baile",
+            "e "
+          ],
+          "wrong": [
+            "Salgo mañana.",
+            "Voy a salir."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Nice!"
+        },
+        {
+          "ask": "¿Qué comisteis?",
+          "askEn": "What did you all eat?",
+          "answer": "Comimos pizza.",
+          "answerEn": "We ate pizza.",
+          "keys": [
+            "comimos"
+          ],
+          "wrong": [
+            "Comemos pizza.",
+            "Vamos a comer."
+          ],
+          "reply": "¡Mmm!",
+          "replyEn": "Mmm!"
+        },
+        {
+          "ask": "¿Cuándo fue tu cumpleaños?",
+          "askEn": "When was your birthday?",
+          "answer": "Hace dos semanas.",
+          "answerEn": "Two weeks ago.",
+          "keys": [
+            "hace",
+            "el ",
+            "en ",
+            "ayer"
+          ],
+          "wrong": [
+            "Mañana es lunes.",
+            "Tengo un regalo."
+          ],
+          "reply": "¡Feliz cumpleaños atrasado!",
+          "replyEn": "Belated happy birthday!"
+        },
+        {
+          "ask": "¿Te bañaste en la piscina?",
+          "askEn": "Did you go in the pool?",
+          "answer": "Sí, me bañé.",
+          "answerEn": "Yes, I went in.",
+          "keys": [
+            "me bane",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Me baño mañana.",
+            "La piscina es azul."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Nice!"
+        },
+        {
+          "ask": "¿Te lo pasaste bien?",
+          "askEn": "Did you have a good time?",
+          "answer": "¡Sí, me lo pasé genial!",
+          "answerEn": "Yes, I had a great time!",
+          "keys": [
+            "me lo pase",
+            "genial",
+            "bien",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Lo paso mañana.",
+            "Es el fin de semana."
+          ],
+          "reply": "¡Eres un campeón del finde!",
+          "replyEn": "You're a weekend champion!"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+Where	Rule	Text	LanguageTool says
+talk L91 turn 3	ES_INITIAL_QUESTION_MARK	«…» in «¡Uno, dos, tres… ¡plaf!»	Símbolo de exclamación desparejado. → …!
+talk L120 turn 3	MISSING_COMMA	«Felicidades» in «¡Felicidades atrasadas!»	En este contexto es necesaria una coma después de «felicidades» (ej. «Felicidades, Ana»). → Felicidades,
+talk L131 turn 1	ES_QUESTION_MARK	«Y» in «¡Ja, ja! ¡Y ahora?»	Símbolo desparejado: Parece que falta un ‘¿’ → ¿Y
+talk L131 turn 1	ES_INITIAL_QUESTION_MARK	«?» in «¡Ja, ja! ¡Y ahora?»	Símbolo de exclamación desparejado. → !

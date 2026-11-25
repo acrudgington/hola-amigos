@@ -1,0 +1,839 @@
+{
+  "world": 21,
+  "conversations": [
+    {
+      "lesson": 181,
+      "who": "luna",
+      "title": "What do you think?",
+      "scene": "🗨️",
+      "turns": [
+        {
+          "ask": "Van a construir un parque nuevo. ¿Tú qué opinas?",
+          "askEn": "They're going to build a new park. What do you think?",
+          "answer": "Me parece bien.",
+          "answerEn": "I think it's fine.",
+          "keys": [
+            "me parece",
+            "creo que",
+            "pienso que",
+            "para mi",
+            "en mi opinion",
+            "desde mi punto de vista",
+            "bien",
+            "fatal",
+            "genial"
+          ],
+          "wrong": [
+            "¿Tú qué opinas?",
+            "Puede ser mañana."
+          ],
+          "reply": "¡A mí también!",
+          "replyEn": "Me too!"
+        },
+        {
+          "ask": "¿Para ti el fútbol es divertido?",
+          "askEn": "For you, is football fun?",
+          "answer": "Para mí es aburrido.",
+          "answerEn": "For me it's boring.",
+          "keys": [
+            "me parece",
+            "creo que",
+            "pienso que",
+            "para mi",
+            "en mi opinion",
+            "desde mi punto de vista",
+            "divertido",
+            "aburrido",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Juego al fútbol.",
+            "El balón es blanco."
+          ],
+          "reply": "¡Vaya! ¡A mí me encanta!",
+          "replyEn": "Oh! I love it!"
+        },
+        {
+          "ask": "¿Mañana lloverá?",
+          "askEn": "Will it rain tomorrow?",
+          "answer": "No estoy seguro. Puede ser.",
+          "answerEn": "I'm not sure. Maybe.",
+          "keys": [
+            "no estoy seguro",
+            "no estoy segura",
+            "puede ser",
+            "creo que",
+            "me parece que",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Llovió ayer.",
+            "La lluvia es fría."
+          ],
+          "reply": "¡Llevaré paraguas!",
+          "replyEn": "I'll take an umbrella!"
+        },
+        {
+          "ask": "¿Qué te parece tirar basura al suelo?",
+          "askEn": "What do you think about dropping litter?",
+          "answer": "Me parece fatal.",
+          "answerEn": "I think it's awful.",
+          "keys": [
+            "fatal",
+            "mal",
+            "horrible",
+            "no me gusta"
+          ],
+          "wrong": [
+            "Me parece bien.",
+            "Me parece genial."
+          ],
+          "reply": "¡Estoy de acuerdo!",
+          "replyEn": "I agree!"
+        }
+      ]
+    },
+    {
+      "lesson": 182,
+      "who": "sol",
+      "title": "Me too!",
+      "scene": "🙌",
+      "turns": [
+        {
+          "ask": "Me gusta mucho el chocolate.",
+          "askEn": "I really like chocolate.",
+          "answer": "¡A mí también!",
+          "answerEn": "Me too!",
+          "keys": [
+            "a mi tambien",
+            "a mi no",
+            "yo tambien"
+          ],
+          "wrong": [
+            "A mí tampoco.",
+            "Yo tampoco."
+          ],
+          "reply": "¡Choca esos cinco!",
+          "replyEn": "High five!"
+        },
+        {
+          "ask": "No me gustan las arañas.",
+          "askEn": "I don't like spiders.",
+          "answer": "A mí tampoco.",
+          "answerEn": "Me neither.",
+          "keys": [
+            "a mi tampoco",
+            "a mi si",
+            "yo tampoco"
+          ],
+          "wrong": [
+            "A mí también.",
+            "¡Qué va!"
+          ],
+          "reply": "¡Son horribles!",
+          "replyEn": "They're horrible!"
+        },
+        {
+          "ask": "¿Eres aburrido?",
+          "askEn": "Are you boring?",
+          "answer": "¡Qué va! Soy muy divertido.",
+          "answerEn": "No way! I'm really fun.",
+          "keys": [
+            "que va",
+            "no",
+            "claro que no",
+            "al contrario"
+          ],
+          "wrong": [
+            "A mí también.",
+            "Tienes toda la razón."
+          ],
+          "reply": "¡Ja, ja! ¡Es verdad!",
+          "replyEn": "Ha ha! True!"
+        },
+        {
+          "ask": "Los lunes son los peores días.",
+          "askEn": "Mondays are the worst days.",
+          "answer": "Tienes toda la razón.",
+          "answerEn": "You're absolutely right.",
+          "keys": [
+            "tienes toda la razon",
+            "tienes razon",
+            "no estoy de acuerdo",
+            "al contrario",
+            "que va"
+          ],
+          "wrong": [
+            "A mí tampoco.",
+            "Puede ser mañana."
+          ],
+          "reply": "¡Ja, ja! ¡Ánimo!",
+          "replyEn": "Ha ha! Cheer up!"
+        }
+      ]
+    },
+    {
+      "lesson": 183,
+      "who": "luna",
+      "title": "Comparing",
+      "scene": "⚖️",
+      "turns": [
+        {
+          "ask": "¿Tienes hermanos mayores?",
+          "askEn": "Do you have older brothers or sisters?",
+          "answer": "Sí, mi hermana es mayor que yo.",
+          "answerEn": "Yes, my sister is older than me.",
+          "keys": [
+            "mayor",
+            "menor",
+            "si",
+            "no",
+            "soy el mayor",
+            "soy la mayor"
+          ],
+          "wrong": [
+            "Mi hermana es alta.",
+            "Tengo un perro."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Nice!"
+        },
+        {
+          "ask": "¿Qué es mejor: el libro o la película?",
+          "askEn": "Which is better: the book or the film?",
+          "answer": "El libro es mejor que la película.",
+          "answerEn": "The book is better than the film.",
+          "keys": [
+            "mejor",
+            "peor",
+            "igual"
+          ],
+          "wrong": [
+            "Leo un libro.",
+            "Me gusta el cine."
+          ],
+          "reply": "¡Estoy de acuerdo!",
+          "replyEn": "I agree!"
+        },
+        {
+          "ask": "¿Cuántos cómics tienes?",
+          "askEn": "How many comics have you got?",
+          "answer": "Tengo más de cien cómics.",
+          "answerEn": "I've got more than a hundred comics.",
+          "keys": [
+            "mas de",
+            "menos de",
+            "tengo"
+          ],
+          "wrong": [
+            "Me gustan los cómics.",
+            "Los cómics son divertidos."
+          ],
+          "reply": "¡Qué barbaridad!",
+          "replyEn": "Wow!"
+        },
+        {
+          "ask": "¿Te pareces a tu padre o a tu madre?",
+          "askEn": "Do you look like your dad or your mum?",
+          "answer": "Me parezco a mi madre.",
+          "answerEn": "I look like my mum.",
+          "keys": [
+            "me parezco",
+            "parecido",
+            "parecida"
+          ],
+          "wrong": [
+            "Mi madre es simpática.",
+            "Mi padre trabaja."
+          ],
+          "reply": "¡Qué bonito!",
+          "replyEn": "How lovely!"
+        }
+      ]
+    },
+    {
+      "lesson": 184,
+      "who": "sol",
+      "title": "Record breakers",
+      "scene": "🌐",
+      "turns": [
+        {
+          "ask": "¿Cuál es el animal más alto del mundo?",
+          "askEn": "What's the tallest animal in the world?",
+          "answer": "La jirafa.",
+          "answerEn": "The giraffe.",
+          "keys": [
+            "jirafa"
+          ],
+          "wrong": [
+            "El elefante.",
+            "El guepardo."
+          ],
+          "reply": "¡Es altísima!",
+          "replyEn": "It's really tall!"
+        },
+        {
+          "ask": "¿Quién es el más rápido de tu clase?",
+          "askEn": "Who's the fastest in your class?",
+          "answer": "Mi amiga Lucía es la más rápida.",
+          "answerEn": "My friend Lucía is the fastest.",
+          "keys": [
+            "el mas rapido",
+            "la mas rapida",
+            "yo"
+          ],
+          "wrong": [
+            "Lucía es simpática.",
+            "Mi clase es grande."
+          ],
+          "reply": "¡Qué crack!",
+          "replyEn": "What a star!"
+        },
+        {
+          "ask": "¿Cómo estaba la paella?",
+          "askEn": "How was the paella?",
+          "answer": "¡Estaba buenísima!",
+          "answerEn": "It was really good!",
+          "keys": [
+            "buenisima",
+            "riquisima",
+            "deliciosa",
+            "rica",
+            "buena",
+            "mala"
+          ],
+          "wrong": [
+            "La paella es de Valencia.",
+            "Me gusta el arroz."
+          ],
+          "reply": "¡Qué rica!",
+          "replyEn": "Yummy!"
+        },
+        {
+          "ask": "¿Fue difícil el examen?",
+          "askEn": "Was the exam difficult?",
+          "answer": "No, fue facilísimo.",
+          "answerEn": "No, it was really easy.",
+          "keys": [
+            "facilisimo",
+            "facil",
+            "dificil",
+            "dificilisimo",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Tengo un examen.",
+            "El examen es mañana."
+          ],
+          "reply": "¡Enhorabuena!",
+          "replyEn": "Well done!"
+        }
+      ]
+    },
+    {
+      "lesson": 185,
+      "who": "luna",
+      "title": "What do you like most?",
+      "scene": "❤️",
+      "turns": [
+        {
+          "ask": "¿Qué es lo que más te gusta hacer?",
+          "askEn": "What do you like doing most?",
+          "answer": "Lo que más me gusta es nadar.",
+          "answerEn": "What I like most is swimming.",
+          "keys": [
+            "lo que mas me gusta",
+            "me encanta",
+            "me gusta",
+            "me fascina"
+          ],
+          "wrong": [
+            "No soporto el ruido.",
+            "Me da igual."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Nice!"
+        },
+        {
+          "ask": "¿Y lo que menos te gusta?",
+          "askEn": "And what do you like least?",
+          "answer": "Lo que menos me gusta es madrugar.",
+          "answerEn": "What I like least is getting up early.",
+          "keys": [
+            "lo que menos me gusta",
+            "no soporto",
+            "no me gusta",
+            "odio",
+            "me aburre",
+            "me molesta"
+          ],
+          "wrong": [
+            "Lo que más me gusta.",
+            "Me interesa."
+          ],
+          "reply": "¡A mí tampoco!",
+          "replyEn": "Me neither!"
+        },
+        {
+          "ask": "¿Pizza o pasta?",
+          "askEn": "Pizza or pasta?",
+          "answer": "Me da igual. ¡Me gusta todo!",
+          "answerEn": "I don't mind. I like everything!",
+          "keys": [
+            "me da igual",
+            "pizza",
+            "pasta",
+            "prefiero"
+          ],
+          "wrong": [
+            "No soporto el ruido.",
+            "Me molesta."
+          ],
+          "reply": "¡Qué fácil eres!",
+          "replyEn": "You're easy to please!"
+        },
+        {
+          "ask": "¿Te interesa la historia?",
+          "askEn": "Are you interested in history?",
+          "answer": "Sí, me interesa mucho.",
+          "answerEn": "Yes, I'm very interested.",
+          "keys": [
+            "me interesa",
+            "me aburre",
+            "si",
+            "no",
+            "me fascina"
+          ],
+          "wrong": [
+            "Me da igual el ruido.",
+            "Lo que menos me gusta."
+          ],
+          "reply": "¡A mí también!",
+          "replyEn": "Me too!"
+        }
+      ]
+    },
+    {
+      "lesson": 186,
+      "who": "sol",
+      "title": "The perfect friend",
+      "scene": "🎩",
+      "turns": [
+        {
+          "ask": "¿Cómo es tu mejor amigo?",
+          "askEn": "What's your best friend like?",
+          "answer": "Es muy sincero y educado.",
+          "answerEn": "He's very honest and polite.",
+          "keys": [
+            "es",
+            "sincero",
+            "sincera",
+            "educado",
+            "educada",
+            "hablador",
+            "habladora",
+            "simpatico",
+            "simpatica",
+            "divertido",
+            "divertida"
+          ],
+          "wrong": [
+            "Tengo un amigo.",
+            "Mi amigo se llama Leo."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Nice!"
+        },
+        {
+          "ask": "¿Eres desordenado?",
+          "askEn": "Are you messy?",
+          "answer": "Sí, un poco.",
+          "answerEn": "Yes, a bit.",
+          "keys": [
+            "si",
+            "no",
+            "un poco",
+            "muy",
+            "soy"
+          ],
+          "wrong": [
+            "Es vago.",
+            "Mi habitación."
+          ],
+          "reply": "¡Ja, ja! ¡Yo también!",
+          "replyEn": "Ha ha! Me too!"
+        },
+        {
+          "ask": "¿Qué no te gusta en un amigo?",
+          "askEn": "What don't you like in a friend?",
+          "answer": "No me gusta que sea egoísta.",
+          "answerEn": "I don't like it if they're selfish.",
+          "keys": [
+            "egoista",
+            "maleducado",
+            "maleducada",
+            "antipatico",
+            "antipatica",
+            "vago",
+            "vaga"
+          ],
+          "wrong": [
+            "Me gusta mi amigo.",
+            "Es educado."
+          ],
+          "reply": "¡Estoy de acuerdo!",
+          "replyEn": "I agree!"
+        },
+        {
+          "ask": "¿Eres hablador?",
+          "askEn": "Are you chatty?",
+          "answer": "Sí, ¡hablo mucho!",
+          "answerEn": "Yes, I talk a lot!",
+          "keys": [
+            "si",
+            "no",
+            "hablo",
+            "un poco",
+            "soy"
+          ],
+          "wrong": [
+            "Es sincero.",
+            "Mi amigo."
+          ],
+          "reply": "¡Ya lo veo! ¡Ja, ja!",
+          "replyEn": "I can tell! Ha ha!"
+        }
+      ]
+    },
+    {
+      "lesson": 187,
+      "who": "luna",
+      "title": "At the museum",
+      "scene": "🛑",
+      "turns": [
+        {
+          "ask": "Sol quiere tocar un cuadro. ¿Qué le dices?",
+          "askEn": "Sol wants to touch a painting. What do you say to him?",
+          "answer": "¡No toques el cuadro!",
+          "answerEn": "Don't touch the painting!",
+          "keys": [
+            "no toques"
+          ],
+          "wrong": [
+            "¡Toca el cuadro!",
+            "¡Mira!"
+          ],
+          "reply": "¡Uy, perdón!",
+          "replyEn": "Oops, sorry!"
+        },
+        {
+          "ask": "Leo está corriendo. ¿Qué le dices?",
+          "askEn": "Leo is running. What do you say to him?",
+          "answer": "¡No corras!",
+          "answerEn": "Don't run!",
+          "keys": [
+            "no corras"
+          ],
+          "wrong": [
+            "¡Corre!",
+            "¡Ven aquí!"
+          ],
+          "reply": "¡Vale, vale!",
+          "replyEn": "OK, OK!"
+        },
+        {
+          "ask": "Quiero enseñarte algo. ¿Qué te digo?",
+          "askEn": "I want to show you something. What do I say?",
+          "answer": "¡Ven aquí y mira!",
+          "answerEn": "Come here and look!",
+          "keys": [
+            "ven",
+            "mira"
+          ],
+          "wrong": [
+            "¡No grites!",
+            "¡Siéntate!"
+          ],
+          "reply": "¡Qué dinosaurio tan grande!",
+          "replyEn": "What a big dinosaur!"
+        },
+        {
+          "ask": "Hay un perro grande. ¿Qué le dices a tu hermano?",
+          "askEn": "There's a big dog. What do you say to your brother?",
+          "answer": "¡Ten cuidado!",
+          "answerEn": "Be careful!",
+          "keys": [
+            "ten cuidado",
+            "cuidado"
+          ],
+          "wrong": [
+            "¡Siéntate!",
+            "¡Escucha la música!"
+          ],
+          "reply": "¡Gracias!",
+          "replyEn": "Thanks!"
+        }
+      ]
+    },
+    {
+      "lesson": 188,
+      "who": "sol",
+      "title": "City or village?",
+      "scene": "🔗",
+      "turns": [
+        {
+          "ask": "¿Prefieres la ciudad o el pueblo?",
+          "askEn": "Do you prefer the city or the village?",
+          "answer": "Por un lado, la ciudad es divertida; por otro lado, hay mucho ruido.",
+          "answerEn": "On the one hand the city is fun; on the other hand it's very noisy.",
+          "keys": [
+            "por un lado",
+            "por otro lado",
+            "prefiero",
+            "ciudad",
+            "pueblo",
+            "me da igual"
+          ],
+          "wrong": [
+            "En resumen.",
+            "O sea, no."
+          ],
+          "reply": "¡Buena respuesta!",
+          "replyEn": "Good answer!"
+        },
+        {
+          "ask": "Llovía. ¿Qué hiciste?",
+          "askEn": "It was raining. What did you do?",
+          "answer": "Llovía, así que me quedé en casa.",
+          "answerEn": "It was raining, so I stayed at home.",
+          "keys": [
+            "asi que",
+            "me quede",
+            "por eso"
+          ],
+          "wrong": [
+            "Llueve mucho.",
+            "En cambio, sol."
+          ],
+          "reply": "¡Buena idea!",
+          "replyEn": "Good idea!"
+        },
+        {
+          "ask": "¿Te gustan los animales?",
+          "askEn": "Do you like animals?",
+          "answer": "Sí, sobre todo los perros.",
+          "answerEn": "Yes, especially dogs.",
+          "keys": [
+            "sobre todo",
+            "si",
+            "no",
+            "me gustan"
+          ],
+          "wrong": [
+            "En resumen.",
+            "Por otro lado."
+          ],
+          "reply": "¡A mí también!",
+          "replyEn": "Me too!"
+        },
+        {
+          "ask": "En resumen, ¿qué te gusta más?",
+          "askEn": "In short, what do you like best?",
+          "answer": "Pues… ¡me gustan los dos!",
+          "answerEn": "Well… I like both!",
+          "keys": [
+            "pues",
+            "los dos",
+            "me gusta",
+            "me gustan",
+            "prefiero"
+          ],
+          "wrong": [
+            "Así que llovía.",
+            "En cambio."
+          ],
+          "reply": "¡Ja, ja! ¡Muy diplomático!",
+          "replyEn": "Ha ha! Very diplomatic!"
+        }
+      ]
+    },
+    {
+      "lesson": 189,
+      "who": "luna",
+      "title": "Planet heroes",
+      "scene": "♻️",
+      "turns": [
+        {
+          "ask": "¿Dónde tiramos el plástico?",
+          "askEn": "Where do we put plastic?",
+          "answer": "En el contenedor amarillo.",
+          "answerEn": "In the yellow bin.",
+          "keys": [
+            "amarillo"
+          ],
+          "wrong": [
+            "En el contenedor verde.",
+            "En el contenedor azul."
+          ],
+          "reply": "¡Correcto!",
+          "replyEn": "Correct!"
+        },
+        {
+          "ask": "¿Y el papel?",
+          "askEn": "And paper?",
+          "answer": "En el azul.",
+          "answerEn": "In the blue one.",
+          "keys": [
+            "azul"
+          ],
+          "wrong": [
+            "En el amarillo.",
+            "En el verde."
+          ],
+          "reply": "¡Muy bien!",
+          "replyEn": "Very good!"
+        },
+        {
+          "ask": "¿Qué haces para ahorrar agua?",
+          "askEn": "What do you do to save water?",
+          "answer": "Me ducho rápido.",
+          "answerEn": "I have quick showers.",
+          "keys": [
+            "me ducho",
+            "cierro el grifo",
+            "ahorro",
+            "rapido"
+          ],
+          "wrong": [
+            "Reciclo papel.",
+            "Apago la tele."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Great!"
+        },
+        {
+          "ask": "¿Qué podemos hacer por el medio ambiente?",
+          "askEn": "What can we do for the environment?",
+          "answer": "Reciclar y apagar la luz.",
+          "answerEn": "Recycle and switch off the light.",
+          "keys": [
+            "reciclar",
+            "apagar",
+            "ahorrar",
+            "andar",
+            "bici",
+            "cuidar"
+          ],
+          "wrong": [
+            "Me gusta el plástico.",
+            "El cambio climático."
+          ],
+          "reply": "¡Somos héroes del planeta!",
+          "replyEn": "We're planet heroes!"
+        }
+      ]
+    },
+    {
+      "lesson": 190,
+      "who": "sol",
+      "title": "The class debate",
+      "scene": "🏆",
+      "turns": [
+        {
+          "ask": "¿Qué es mejor: el verano o el invierno?",
+          "askEn": "Which is better: summer or winter?",
+          "answer": "Me parece que el verano es mejor.",
+          "answerEn": "I think summer is better.",
+          "keys": [
+            "me parece",
+            "creo que",
+            "pienso que",
+            "para mi",
+            "en mi opinion",
+            "desde mi punto de vista",
+            "verano",
+            "invierno",
+            "mejor"
+          ],
+          "wrong": [
+            "Hace frío.",
+            "Hace calor ayer."
+          ],
+          "reply": "¿Por qué?",
+          "replyEn": "Why?"
+        },
+        {
+          "ask": "¿Por qué?",
+          "askEn": "Why?",
+          "answer": "Porque hace calor y no hay cole.",
+          "answerEn": "Because it's hot and there's no school.",
+          "keys": [
+            "porque"
+          ],
+          "wrong": [
+            "Así que.",
+            "En cambio."
+          ],
+          "reply": "¡Tiene sentido!",
+          "replyEn": "That makes sense!"
+        },
+        {
+          "ask": "A mí me encanta la Navidad.",
+          "askEn": "I love Christmas.",
+          "answer": "¡A mí también!",
+          "answerEn": "Me too!",
+          "keys": [
+            "a mi tambien",
+            "a mi no",
+            "yo tambien"
+          ],
+          "wrong": [
+            "A mí tampoco.",
+            "Me da igual el verano."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Great!"
+        },
+        {
+          "ask": "¿Quién es el más alto de tu familia?",
+          "askEn": "Who's the tallest in your family?",
+          "answer": "Mi padre es el más alto.",
+          "answerEn": "My dad is the tallest.",
+          "keys": [
+            "el mas alto",
+            "la mas alta",
+            "mas alto",
+            "mas alta"
+          ],
+          "wrong": [
+            "Mi padre es simpático.",
+            "Tengo una familia."
+          ],
+          "reply": "¡Vaya!",
+          "replyEn": "Wow!"
+        },
+        {
+          "ask": "En resumen, ¿te ha gustado el debate?",
+          "askEn": "In short, did you enjoy the debate?",
+          "answer": "¡Sí, me ha gustado mucho!",
+          "answerEn": "Yes, I really enjoyed it!",
+          "keys": [
+            "me ha gustado",
+            "si",
+            "no",
+            "me gusto"
+          ],
+          "wrong": [
+            "En resumen.",
+            "Por otro lado."
+          ],
+          "reply": "¡Eres un campeón de opiniones!",
+          "replyEn": "You're an opinions champion!"
+        }
+      ]
+    }
+  ]
+}

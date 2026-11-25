@@ -1,0 +1,836 @@
+{
+  "world": 18,
+  "conversations": [
+    {
+      "lesson": 151,
+      "who": "sol",
+      "title": "Big numbers",
+      "scene": "💯",
+      "turns": [
+        {
+          "ask": "¿Cuántos años tiene tu abuelo?",
+          "askEn": "How old is your grandad?",
+          "answer": "Tiene ochenta años.",
+          "answerEn": "He's eighty.",
+          "keys": [
+            "anos",
+            "tiene"
+          ],
+          "wrong": [
+            "Mi abuelo es alto.",
+            "Ochenta euros."
+          ],
+          "reply": "¡Qué mayor!",
+          "replyEn": "So old!"
+        },
+        {
+          "ask": "¿Cuánto es cincuenta más cincuenta?",
+          "askEn": "What's fifty plus fifty?",
+          "answer": "Cien.",
+          "answerEn": "A hundred.",
+          "keys": [
+            "cien"
+          ],
+          "wrong": [
+            "Ciento uno.",
+            "Mil."
+          ],
+          "reply": "¡Correcto!",
+          "replyEn": "Correct!"
+        },
+        {
+          "ask": "¿Cuántos alumnos hay en tu cole?",
+          "askEn": "How many pupils are there at your school?",
+          "answer": "Hay quinientos alumnos.",
+          "answerEn": "There are five hundred pupils.",
+          "keys": [
+            "cien",
+            "doscientos",
+            "trescientos",
+            "cuatrocientos",
+            "quinientos",
+            "seiscientos",
+            "setecientos",
+            "ochocientos",
+            "novecientos",
+            "mil",
+            "sesenta",
+            "setenta",
+            "ochenta",
+            "noventa",
+            "hay"
+          ],
+          "wrong": [
+            "Mi cole es grande.",
+            "Los alumnos son simpáticos."
+          ],
+          "reply": "¡Qué cole tan grande!",
+          "replyEn": "What a big school!"
+        },
+        {
+          "ask": "¿Cuánto cuesta esa bici?",
+          "askEn": "How much does that bike cost?",
+          "answer": "Cuesta doscientos euros.",
+          "answerEn": "It costs two hundred euros.",
+          "keys": [
+            "euros",
+            "cuesta"
+          ],
+          "wrong": [
+            "La bici es roja.",
+            "Monto en bici."
+          ],
+          "reply": "¡Qué cara!",
+          "replyEn": "So expensive!"
+        }
+      ]
+    },
+    {
+      "lesson": 152,
+      "who": "luna",
+      "title": "How much is it?",
+      "scene": "🏷️",
+      "role": "the shopkeeper",
+      "turns": [
+        {
+          "ask": "¿Qué desea?",
+          "askEn": "What would you like?",
+          "answer": "¿Cuánto cuesta este libro?",
+          "answerEn": "How much is this book?",
+          "keys": [
+            "cuanto cuesta",
+            "cuanto es",
+            "cuanto vale"
+          ],
+          "wrong": [
+            "Aquí tiene.",
+            "Es una ganga."
+          ],
+          "reply": "Cuesta veinte euros.",
+          "replyEn": "It costs twenty euros."
+        },
+        {
+          "ask": "¿Qué le parece el precio?",
+          "askEn": "What do you think of the price?",
+          "answer": "Es demasiado caro.",
+          "answerEn": "It's too expensive.",
+          "keys": [
+            "caro",
+            "barato",
+            "ganga"
+          ],
+          "wrong": [
+            "¿Tiene otro?",
+            "Aquí tiene."
+          ],
+          "reply": "Este otro cuesta un euro con cincuenta.",
+          "replyEn": "This other one costs one euro fifty."
+        },
+        {
+          "ask": "¿Se lo lleva?",
+          "askEn": "Will you take it?",
+          "answer": "Sí, me lo llevo. ¡Es una ganga!",
+          "answerEn": "Yes, I'll take it. It's a bargain!",
+          "keys": [
+            "me lo llevo",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Cuestan tres euros.",
+            "¿Tiene otro color?"
+          ],
+          "reply": "Son un euro con cincuenta.",
+          "replyEn": "That's one euro fifty."
+        },
+        {
+          "ask": "Son un euro con cincuenta.",
+          "askEn": "That's one euro fifty.",
+          "answer": "Aquí tiene.",
+          "answerEn": "Here you are.",
+          "keys": [
+            "aqui tiene",
+            "toma"
+          ],
+          "wrong": [
+            "¿Cuánto es?",
+            "Demasiado caro."
+          ],
+          "reply": "¡Gracias! ¡Adiós!",
+          "replyEn": "Thank you! Goodbye!"
+        }
+      ]
+    },
+    {
+      "lesson": 153,
+      "who": "sol",
+      "title": "In the clothes shop",
+      "scene": "👖",
+      "role": "the shop assistant",
+      "turns": [
+        {
+          "ask": "¡Hola! ¿Qué buscas?",
+          "askEn": "Hello! What are you looking for?",
+          "answer": "Busco unos vaqueros.",
+          "answerEn": "I'm looking for some jeans.",
+          "keys": [
+            "busco",
+            "quiero",
+            "vaqueros",
+            "sudadera",
+            "botas",
+            "camiseta"
+          ],
+          "wrong": [
+            "Me queda bien.",
+            "Es grande."
+          ],
+          "reply": "Aquí tienes estos.",
+          "replyEn": "Here are these."
+        },
+        {
+          "ask": "¿Quieres probártelos?",
+          "askEn": "Do you want to try them on?",
+          "answer": "Sí, ¿me los puedo probar?",
+          "answerEn": "Yes, can I try them on?",
+          "keys": [
+            "probar",
+            "si",
+            "vale"
+          ],
+          "wrong": [
+            "Me queda grande.",
+            "Tiene otro color."
+          ],
+          "reply": "Claro, el probador está allí.",
+          "replyEn": "Of course, the changing room is over there."
+        },
+        {
+          "ask": "¿Qué tal te quedan?",
+          "askEn": "How do they fit?",
+          "answer": "Me quedan grandes.",
+          "answerEn": "They're too big.",
+          "keys": [
+            "me queda",
+            "me quedan",
+            "grande",
+            "grandes",
+            "pequeno",
+            "pequenos",
+            "bien"
+          ],
+          "wrong": [
+            "Son vaqueros.",
+            "Cuestan veinte euros."
+          ],
+          "reply": "Toma una talla más pequeña.",
+          "replyEn": "Take a smaller size."
+        },
+        {
+          "ask": "¿Y esta sudadera? ¿Te gusta el color?",
+          "askEn": "And this hoodie? Do you like the colour?",
+          "answer": "¿La tiene en otro color?",
+          "answerEn": "Do you have it in another colour?",
+          "keys": [
+            "otro color",
+            "si",
+            "no",
+            "me gusta"
+          ],
+          "wrong": [
+            "Me queda pequeña.",
+            "Es una sudadera."
+          ],
+          "reply": "Sí, en azul.",
+          "replyEn": "Yes, in blue."
+        }
+      ]
+    },
+    {
+      "lesson": 154,
+      "who": "luna",
+      "title": "Have you got it?",
+      "scene": "🤲",
+      "turns": [
+        {
+          "ask": "¿Tienes mi libro?",
+          "askEn": "Have you got my book?",
+          "answer": "Sí, lo tengo.",
+          "answerEn": "Yes, I've got it.",
+          "keys": [
+            "lo tengo",
+            "no lo tengo",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "La tengo.",
+            "Las tengo."
+          ],
+          "reply": "¡Gracias!",
+          "replyEn": "Thanks!"
+        },
+        {
+          "ask": "¿Dónde están mis gafas?",
+          "askEn": "Where are my glasses?",
+          "answer": "No lo sé. No las encuentro.",
+          "answerEn": "I don't know. I can't find them.",
+          "keys": [
+            "las",
+            "no lo se",
+            "aqui"
+          ],
+          "wrong": [
+            "Lo tengo.",
+            "La encuentro."
+          ],
+          "reply": "¡Ay! ¡Las tengo en la cabeza!",
+          "replyEn": "Oh! They're on my head!"
+        },
+        {
+          "ask": "¿Quieres esta camiseta?",
+          "askEn": "Do you want this T-shirt?",
+          "answer": "Sí, la quiero.",
+          "answerEn": "Yes, I want it.",
+          "keys": [
+            "la quiero",
+            "si",
+            "no",
+            "la compro"
+          ],
+          "wrong": [
+            "Lo quiero.",
+            "Los quiero."
+          ],
+          "reply": "¡Es tuya!",
+          "replyEn": "It's yours!"
+        },
+        {
+          "ask": "¿Me dejas tu cómic?",
+          "askEn": "Will you lend me your comic?",
+          "answer": "Sí, te lo dejo.",
+          "answerEn": "Yes, I'll lend it to you.",
+          "keys": [
+            "te lo dejo",
+            "toma",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Te la dejo.",
+            "Las busco."
+          ],
+          "reply": "¡Gracias!",
+          "replyEn": "Thanks!"
+        }
+      ]
+    },
+    {
+      "lesson": 155,
+      "who": "sol",
+      "title": "At the market",
+      "scene": "⚖️",
+      "role": "the market trader",
+      "turns": [
+        {
+          "ask": "¡Buenos días! ¿Qué te pongo?",
+          "askEn": "Good morning! What can I get you?",
+          "answer": "Un kilo de naranjas, por favor.",
+          "answerEn": "A kilo of oranges, please.",
+          "keys": [
+            "kilo",
+            "quiero",
+            "me pone",
+            "por favor"
+          ],
+          "wrong": [
+            "¿Algo más?",
+            "Es la frutería."
+          ],
+          "reply": "Aquí tienes.",
+          "replyEn": "Here you are."
+        },
+        {
+          "ask": "¿Algo más?",
+          "askEn": "Anything else?",
+          "answer": "Sí, medio kilo de fresas.",
+          "answerEn": "Yes, half a kilo of strawberries.",
+          "keys": [
+            "medio kilo",
+            "si",
+            "no",
+            "nada mas",
+            "docena",
+            "kilo"
+          ],
+          "wrong": [
+            "Es una panadería.",
+            "La carnicería."
+          ],
+          "reply": "Muy bien.",
+          "replyEn": "Very good."
+        },
+        {
+          "ask": "¿Dónde compras el pan?",
+          "askEn": "Where do you buy bread?",
+          "answer": "En la panadería.",
+          "answerEn": "At the bakery.",
+          "keys": [
+            "panaderia"
+          ],
+          "wrong": [
+            "En la carnicería.",
+            "En la pescadería."
+          ],
+          "reply": "¡Claro!",
+          "replyEn": "Of course!"
+        },
+        {
+          "ask": "¿Y los huevos? ¿Cuántos quieres?",
+          "askEn": "And the eggs? How many do you want?",
+          "answer": "Una docena, por favor.",
+          "answerEn": "A dozen, please.",
+          "keys": [
+            "docena",
+            "seis",
+            "doce"
+          ],
+          "wrong": [
+            "Medio kilo de pan.",
+            "La frutería."
+          ],
+          "reply": "¡Aquí tienes!",
+          "replyEn": "Here you go!"
+        }
+      ]
+    },
+    {
+      "lesson": 156,
+      "who": "luna",
+      "title": "At the café",
+      "scene": "☕",
+      "role": "the waiter",
+      "turns": [
+        {
+          "ask": "¡Hola! ¿Qué te pongo?",
+          "askEn": "Hi! What can I get you?",
+          "answer": "¿Me pones un zumo de naranja?",
+          "answerEn": "Can I have an orange juice?",
+          "keys": [
+            "me pones",
+            "quería",
+            "queria",
+            "zumo",
+            "chocolate",
+            "cruasan",
+            "bocadillo"
+          ],
+          "wrong": [
+            "Para llevar.",
+            "Aquí tiene."
+          ],
+          "reply": "¡Marchando!",
+          "replyEn": "Coming right up!"
+        },
+        {
+          "ask": "¿Algo de comer?",
+          "askEn": "Anything to eat?",
+          "answer": "Sí, un cruasán, por favor.",
+          "answerEn": "Yes, a croissant, please.",
+          "keys": [
+            "cruasan",
+            "bocadillo",
+            "tostada",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Un zumo de naranja.",
+            "Para beber."
+          ],
+          "reply": "Muy bien.",
+          "replyEn": "Very good."
+        },
+        {
+          "ask": "¿Para tomar aquí o para llevar?",
+          "askEn": "To have here or to take away?",
+          "answer": "Para llevar.",
+          "answerEn": "To take away.",
+          "keys": [
+            "para llevar",
+            "aqui",
+            "para tomar"
+          ],
+          "wrong": [
+            "Un cruasán.",
+            "Me pones un zumo."
+          ],
+          "reply": "Aquí tienes.",
+          "replyEn": "Here you are."
+        },
+        {
+          "ask": "¿Algo más?",
+          "askEn": "Anything else?",
+          "answer": "No, gracias. ¿Cuánto es?",
+          "answerEn": "No, thanks. How much is it?",
+          "keys": [
+            "cuanto es",
+            "no",
+            "nada mas"
+          ],
+          "wrong": [
+            "Me pones un cruasán.",
+            "Para llevar."
+          ],
+          "reply": "Son tres euros.",
+          "replyEn": "That's three euros."
+        }
+      ]
+    },
+    {
+      "lesson": 157,
+      "who": "sol",
+      "title": "Lunch at a restaurant",
+      "scene": "🍽️",
+      "role": "the waiter",
+      "turns": [
+        {
+          "ask": "Buenas tardes. ¿Cuántos son?",
+          "askEn": "Good afternoon. How many are you?",
+          "answer": "Una mesa para cuatro, por favor.",
+          "answerEn": "A table for four, please.",
+          "keys": [
+            "mesa",
+            "para",
+            "dos",
+            "tres",
+            "cuatro",
+            "cinco"
+          ],
+          "wrong": [
+            "El menú del día.",
+            "Está buenísimo."
+          ],
+          "reply": "Por aquí, por favor.",
+          "replyEn": "This way, please."
+        },
+        {
+          "ask": "¿Qué van a tomar?",
+          "askEn": "What are you going to have?",
+          "answer": "¿Qué me recomienda?",
+          "answerEn": "What do you recommend?",
+          "keys": [
+            "recomienda",
+            "menu del dia",
+            "quiero",
+            "para mi"
+          ],
+          "wrong": [
+            "Está buenísimo.",
+            "Para compartir."
+          ],
+          "reply": "El menú del día: gazpacho y pollo.",
+          "replyEn": "The set menu: gazpacho and chicken."
+        },
+        {
+          "ask": "¿Alguno tiene alergias?",
+          "askEn": "Does anyone have allergies?",
+          "answer": "Sí, soy alérgico al pescado.",
+          "answerEn": "Yes, I'm allergic to fish.",
+          "keys": [
+            "alergico",
+            "alergica",
+            "no",
+            "si"
+          ],
+          "wrong": [
+            "Una ración.",
+            "Sin postre."
+          ],
+          "reply": "No hay problema.",
+          "replyEn": "No problem."
+        },
+        {
+          "ask": "¿Qué tal la comida?",
+          "askEn": "How's the food?",
+          "answer": "¡Está buenísima!",
+          "answerEn": "It's delicious!",
+          "keys": [
+            "buenisima",
+            "buenisimo",
+            "rica",
+            "rico",
+            "deliciosa"
+          ],
+          "wrong": [
+            "Una mesa para cuatro.",
+            "¿Qué me recomienda?"
+          ],
+          "reply": "¡Me alegro!",
+          "replyEn": "I'm glad!"
+        }
+      ]
+    },
+    {
+      "lesson": 158,
+      "who": "luna",
+      "title": "Spanish food",
+      "scene": "🥘",
+      "turns": [
+        {
+          "ask": "¿Cuál es tu comida española favorita?",
+          "askEn": "What's your favourite Spanish food?",
+          "answer": "La tortilla de patatas.",
+          "answerEn": "Spanish omelette.",
+          "keys": [
+            "tortilla",
+            "paella",
+            "gazpacho",
+            "churros",
+            "jamon",
+            "croquetas",
+            "tapas",
+            "turron"
+          ],
+          "wrong": [
+            "Valencia está en el este.",
+            "Me gusta comer."
+          ],
+          "reply": "¡Me encanta!",
+          "replyEn": "I love it!"
+        },
+        {
+          "ask": "¿De dónde es la paella?",
+          "askEn": "Where is paella from?",
+          "answer": "Es de Valencia.",
+          "answerEn": "It's from Valencia.",
+          "keys": [
+            "valencia"
+          ],
+          "wrong": [
+            "Es de Madrid.",
+            "Es de Galicia."
+          ],
+          "reply": "¡Correcto!",
+          "replyEn": "Correct!"
+        },
+        {
+          "ask": "¿Cuándo comes churros?",
+          "askEn": "When do you eat churros?",
+          "answer": "Los domingos, con chocolate.",
+          "answerEn": "On Sundays, with chocolate.",
+          "keys": [
+            "domingo",
+            "domingos",
+            "sabado",
+            "sabados",
+            "fin de semana",
+            "a veces",
+            "nunca"
+          ],
+          "wrong": [
+            "Me gusta el jamón.",
+            "Las croquetas."
+          ],
+          "reply": "¡Qué rico!",
+          "replyEn": "Yummy!"
+        },
+        {
+          "ask": "¿Has probado el gazpacho?",
+          "askEn": "Have you tried gazpacho?",
+          "answer": "Sí, está muy fresquito.",
+          "answerEn": "Yes, it's lovely and cool.",
+          "keys": [
+            "si",
+            "no",
+            "nunca",
+            "probado"
+          ],
+          "wrong": [
+            "Es de Valencia.",
+            "El turrón es dulce."
+          ],
+          "reply": "¡Perfecto para el verano!",
+          "replyEn": "Perfect for summer!"
+        }
+      ]
+    },
+    {
+      "lesson": 159,
+      "who": "sol",
+      "title": "Paying",
+      "scene": "💳",
+      "role": "the shopkeeper",
+      "turns": [
+        {
+          "ask": "Son veinticinco euros. ¿Con tarjeta o en efectivo?",
+          "askEn": "That's twenty-five euros. By card or in cash?",
+          "answer": "En efectivo.",
+          "answerEn": "In cash.",
+          "keys": [
+            "efectivo",
+            "tarjeta"
+          ],
+          "wrong": [
+            "Mi hucha.",
+            "La paga."
+          ],
+          "reply": "Muy bien.",
+          "replyEn": "Very good."
+        },
+        {
+          "ask": "Aquí tienes la vuelta.",
+          "askEn": "Here's your change.",
+          "answer": "¡Gracias!",
+          "answerEn": "Thank you!",
+          "keys": [
+            "gracias"
+          ],
+          "wrong": [
+            "Gasto mucho.",
+            "El cajero."
+          ],
+          "reply": "¡A ti!",
+          "replyEn": "Thank you!"
+        },
+        {
+          "ask": "¿Recibes paga?",
+          "askEn": "Do you get pocket money?",
+          "answer": "Sí, los sábados.",
+          "answerEn": "Yes, on Saturdays.",
+          "keys": [
+            "si",
+            "no",
+            "sabado",
+            "sabados",
+            "semana",
+            "paga"
+          ],
+          "wrong": [
+            "Pago con tarjeta.",
+            "El monedero."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Nice!"
+        },
+        {
+          "ask": "¿Gastas tu dinero o lo ahorras?",
+          "askEn": "Do you spend your money or save it?",
+          "answer": "Lo ahorro en mi hucha.",
+          "answerEn": "I save it in my piggy bank.",
+          "keys": [
+            "ahorro",
+            "gasto",
+            "hucha"
+          ],
+          "wrong": [
+            "El cajero automático.",
+            "En efectivo."
+          ],
+          "reply": "¡Qué ahorrador!",
+          "replyEn": "What a good saver!"
+        }
+      ]
+    },
+    {
+      "lesson": 160,
+      "who": "luna",
+      "title": "Shopping champion",
+      "scene": "🏆",
+      "turns": [
+        {
+          "ask": "¿Qué vas a comprar en el mercado?",
+          "askEn": "What are you going to buy at the market?",
+          "answer": "Un kilo de tomates.",
+          "answerEn": "A kilo of tomatoes.",
+          "keys": [
+            "kilo",
+            "voy a comprar",
+            "naranjas",
+            "fresas",
+            "tomates",
+            "pan",
+            "huevos"
+          ],
+          "wrong": [
+            "Me queda pequeño.",
+            "En efectivo."
+          ],
+          "reply": "¡Muy bien!",
+          "replyEn": "Very good!"
+        },
+        {
+          "ask": "¿Cuánto cuesta esta camiseta?",
+          "askEn": "How much is this T-shirt?",
+          "answer": "Cuesta quince euros.",
+          "answerEn": "It costs fifteen euros.",
+          "keys": [
+            "cuesta",
+            "euros"
+          ],
+          "wrong": [
+            "Me queda bien.",
+            "La compro."
+          ],
+          "reply": "¡Qué barata!",
+          "replyEn": "So cheap!"
+        },
+        {
+          "ask": "¿Te queda bien?",
+          "askEn": "Does it fit you?",
+          "answer": "No, me queda pequeña.",
+          "answerEn": "No, it's too small.",
+          "keys": [
+            "me queda",
+            "bien",
+            "grande",
+            "pequena",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Cuesta quince euros.",
+            "¿Me pones un zumo?"
+          ],
+          "reply": "Prueba la talla grande.",
+          "replyEn": "Try the large size."
+        },
+        {
+          "ask": "Estamos en la cafetería. ¿Qué pides?",
+          "askEn": "We're at the café. What are you ordering?",
+          "answer": "¿Me pones un chocolate caliente?",
+          "answerEn": "Can I have a hot chocolate?",
+          "keys": [
+            "me pones",
+            "queria",
+            "quiero",
+            "para mi"
+          ],
+          "wrong": [
+            "En efectivo.",
+            "La tortilla es de patatas."
+          ],
+          "reply": "¡Marchando!",
+          "replyEn": "Coming right up!"
+        },
+        {
+          "ask": "¿Cómo pagas?",
+          "askEn": "How are you paying?",
+          "answer": "Con mi paga, en efectivo.",
+          "answerEn": "With my pocket money, in cash.",
+          "keys": [
+            "efectivo",
+            "tarjeta",
+            "paga"
+          ],
+          "wrong": [
+            "Me pones un zumo.",
+            "Un kilo."
+          ],
+          "reply": "¡Eres un campeón de compras!",
+          "replyEn": "You're a shopping champion!"
+        }
+      ]
+    }
+  ]
+}

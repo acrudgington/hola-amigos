@@ -1,0 +1,778 @@
+{
+  "world": 17,
+  "conversations": [
+    {
+      "lesson": 141,
+      "who": "luna",
+      "title": "This week's plans",
+      "scene": "📆",
+      "turns": [
+        {
+          "ask": "¿Qué vas a hacer esta noche?",
+          "askEn": "What are you going to do tonight?",
+          "answer": "Voy a cenar con mis abuelos.",
+          "answerEn": "I'm going to have dinner with my grandparents.",
+          "keys": [
+            "voy a"
+          ],
+          "wrong": [
+            "Cené con mis abuelos.",
+            "Ceno a las nueve."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Nice!"
+        },
+        {
+          "ask": "¿Qué vais a hacer el próximo sábado?",
+          "askEn": "What are you all going to do next Saturday?",
+          "answer": "Vamos a ir al cine.",
+          "answerEn": "We're going to the cinema.",
+          "keys": [
+            "vamos a"
+          ],
+          "wrong": [
+            "Fuimos al cine.",
+            "Vamos al cine ayer."
+          ],
+          "reply": "¡Qué divertido!",
+          "replyEn": "What fun!"
+        },
+        {
+          "ask": "¿Va a venir tu hermano?",
+          "askEn": "Is your brother going to come?",
+          "answer": "No, va a jugar un partido.",
+          "answerEn": "No, he's going to play a match.",
+          "keys": [
+            "va a",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Jugó un partido.",
+            "Mi hermano es alto."
+          ],
+          "reply": "¡Qué pena!",
+          "replyEn": "What a shame!"
+        },
+        {
+          "ask": "¿Qué vas a hacer pasado mañana?",
+          "askEn": "What are you going to do the day after tomorrow?",
+          "answer": "Voy a ir a la piscina.",
+          "answerEn": "I'm going to the swimming pool.",
+          "keys": [
+            "voy a"
+          ],
+          "wrong": [
+            "Fui a la piscina.",
+            "La piscina es grande."
+          ],
+          "reply": "¡Buena idea!",
+          "replyEn": "Good idea!"
+        }
+      ]
+    },
+    {
+      "lesson": 142,
+      "who": "sol",
+      "title": "Weekend plans",
+      "scene": "🍿",
+      "turns": [
+        {
+          "ask": "¿Qué vas a hacer este fin de semana?",
+          "askEn": "What are you going to do this weekend?",
+          "answer": "Voy a quedar con mis amigos.",
+          "answerEn": "I'm going to meet up with my friends.",
+          "keys": [
+            "voy a",
+            "quedar"
+          ],
+          "wrong": [
+            "Quedé con mis amigos.",
+            "Mis amigos son simpáticos."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Nice!"
+        },
+        {
+          "ask": "¿Vais a ver una peli?",
+          "askEn": "Are you going to watch a film?",
+          "answer": "Sí, vamos a ver una peli.",
+          "answerEn": "Yes, we're going to watch a film.",
+          "keys": [
+            "vamos a",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Vimos una peli.",
+            "Me gustan las pelis."
+          ],
+          "reply": "¡Qué divertido!",
+          "replyEn": "What fun!"
+        },
+        {
+          "ask": "¿Vas a ir de compras?",
+          "askEn": "Are you going to go shopping?",
+          "answer": "No, voy a descansar.",
+          "answerEn": "No, I'm going to rest.",
+          "keys": [
+            "voy a",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Fui de compras.",
+            "La tienda es grande."
+          ],
+          "reply": "¡Buen plan!",
+          "replyEn": "Good plan!"
+        },
+        {
+          "ask": "¿Hacemos una barbacoa el domingo?",
+          "askEn": "Shall we have a barbecue on Sunday?",
+          "answer": "¡Sí, qué buena idea!",
+          "answerEn": "Yes, what a good idea!",
+          "keys": [
+            "si",
+            "vale",
+            "buena idea",
+            "no"
+          ],
+          "wrong": [
+            "Hicimos una barbacoa.",
+            "El domingo es fiesta."
+          ],
+          "reply": "¡Genial!",
+          "replyEn": "Great!"
+        }
+      ]
+    },
+    {
+      "lesson": 143,
+      "who": "luna",
+      "title": "An invitation",
+      "scene": "💌",
+      "turns": [
+        {
+          "ask": "¿Quieres venir a mi casa esta tarde?",
+          "askEn": "Do you want to come to my house this afternoon?",
+          "answer": "¡Me encantaría!",
+          "answerEn": "I'd love to!",
+          "keys": [
+            "me encantaria",
+            "si",
+            "vale",
+            "no puedo",
+            "lo siento"
+          ],
+          "wrong": [
+            "Vine a tu casa.",
+            "Tu casa es bonita."
+          ],
+          "reply": "¡Genial! ¡Vamos a hacer pizza!",
+          "replyEn": "Great! We're going to make pizza!"
+        },
+        {
+          "ask": "¿Te apetece ir al parque mañana?",
+          "askEn": "Do you fancy going to the park tomorrow?",
+          "answer": "Lo siento, no puedo. Tengo que estudiar.",
+          "answerEn": "Sorry, I can't. I have to study.",
+          "keys": [
+            "lo siento",
+            "no puedo",
+            "me apetece",
+            "me encantaria",
+            "vale",
+            "si"
+          ],
+          "wrong": [
+            "Fui al parque.",
+            "El parque es verde."
+          ],
+          "reply": "Vale, otro día.",
+          "replyEn": "OK, another day."
+        },
+        {
+          "ask": "¿Por qué no vamos a la playa?",
+          "askEn": "Why don't we go to the beach?",
+          "answer": "¡Qué buena idea!",
+          "answerEn": "What a good idea!",
+          "keys": [
+            "buena idea",
+            "vale",
+            "si",
+            "no",
+            "me apetece"
+          ],
+          "wrong": [
+            "Fuimos a la playa.",
+            "La playa es grande."
+          ],
+          "reply": "¡Vamos!",
+          "replyEn": "Let's go!"
+        },
+        {
+          "ask": "¿Quieres venir a mi cumpleaños?",
+          "askEn": "Do you want to come to my birthday?",
+          "answer": "¡Sí, claro! ¿Cuándo es?",
+          "answerEn": "Yes, of course! When is it?",
+          "keys": [
+            "si",
+            "claro",
+            "me encantaria",
+            "vale"
+          ],
+          "wrong": [
+            "Mi cumpleaños fue ayer.",
+            "Tengo nueve años."
+          ],
+          "reply": "Es el sábado.",
+          "replyEn": "It's on Saturday."
+        }
+      ]
+    },
+    {
+      "lesson": 144,
+      "who": "sol",
+      "title": "Arranging to meet",
+      "scene": "🕠",
+      "turns": [
+        {
+          "ask": "¿A qué hora quedamos?",
+          "askEn": "What time shall we meet?",
+          "answer": "A las cinco y media.",
+          "answerEn": "At half past five.",
+          "keys": [
+            "a las"
+          ],
+          "wrong": [
+            "En la plaza.",
+            "Ayer."
+          ],
+          "reply": "¡Vale!",
+          "replyEn": "OK!"
+        },
+        {
+          "ask": "¿Dónde quedamos?",
+          "askEn": "Where shall we meet?",
+          "answer": "En la puerta del cine.",
+          "answerEn": "At the cinema entrance.",
+          "keys": [
+            "en la",
+            "en el",
+            "puerta",
+            "plaza",
+            "parque",
+            "cine"
+          ],
+          "wrong": [
+            "A las cinco.",
+            "El sábado."
+          ],
+          "reply": "¡Perfecto!",
+          "replyEn": "Perfect!"
+        },
+        {
+          "ask": "¡Llego tarde! ¿Me esperas?",
+          "askEn": "I'm going to be late! Will you wait for me?",
+          "answer": "Vale, te espero.",
+          "answerEn": "OK, I'll wait for you.",
+          "keys": [
+            "te espero",
+            "vale",
+            "si",
+            "claro"
+          ],
+          "wrong": [
+            "Llegué tarde.",
+            "Tarde es mal."
+          ],
+          "reply": "¡Gracias!",
+          "replyEn": "Thanks!"
+        },
+        {
+          "ask": "¡Ya estoy aquí! ¡Hola!",
+          "askEn": "I'm here! Hi!",
+          "answer": "¡Hola! ¡Vamos!",
+          "answerEn": "Hi! Let's go!",
+          "keys": [
+            "hola",
+            "vamos",
+            "por fin"
+          ],
+          "wrong": [
+            "Adiós.",
+            "Hasta mañana."
+          ],
+          "reply": "¡Vamos!",
+          "replyEn": "Let's go!"
+        }
+      ]
+    },
+    {
+      "lesson": 145,
+      "who": "luna",
+      "title": "Crystal ball",
+      "scene": "🔮",
+      "turns": [
+        {
+          "ask": "¿Adónde irás mañana?",
+          "askEn": "Where will you go tomorrow?",
+          "answer": "Mañana iré a casa de mi abuela.",
+          "answerEn": "Tomorrow I'll go to my grandma's.",
+          "keys": [
+            "ire"
+          ],
+          "wrong": [
+            "Fui a casa de mi abuela.",
+            "Voy ayer."
+          ],
+          "reply": "¡Qué bonito!",
+          "replyEn": "How lovely!"
+        },
+        {
+          "ask": "¿Dónde vivirás en el futuro?",
+          "askEn": "Where will you live in the future?",
+          "answer": "Viviré en una isla.",
+          "answerEn": "I'll live on an island.",
+          "keys": [
+            "vivire"
+          ],
+          "wrong": [
+            "Vivía en una isla.",
+            "Vivo aquí."
+          ],
+          "reply": "¡Qué suerte!",
+          "replyEn": "Lucky you!"
+        },
+        {
+          "ask": "¿Viajarás mucho?",
+          "askEn": "Will you travel a lot?",
+          "answer": "Sí, viajaré por todo el mundo.",
+          "answerEn": "Yes, I'll travel all over the world.",
+          "keys": [
+            "viajare",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Viajé mucho.",
+            "Me gusta el avión."
+          ],
+          "reply": "¡Qué aventura!",
+          "replyEn": "What an adventure!"
+        },
+        {
+          "ask": "¿Cómo será el examen?",
+          "askEn": "What will the exam be like?",
+          "answer": "Será fácil.",
+          "answerEn": "It'll be easy.",
+          "keys": [
+            "sera"
+          ],
+          "wrong": [
+            "Fue fácil.",
+            "Es fácil ayer."
+          ],
+          "reply": "¡Seguro que sí!",
+          "replyEn": "I'm sure it will!"
+        }
+      ]
+    },
+    {
+      "lesson": 146,
+      "who": "sol",
+      "title": "When I grow up",
+      "scene": "🧑‍🎓",
+      "turns": [
+        {
+          "ask": "¿Qué serás cuando seas mayor?",
+          "askEn": "What will you be when you grow up?",
+          "answer": "Cuando sea mayor, seré veterinaria.",
+          "answerEn": "When I grow up, I'll be a vet.",
+          "keys": [
+            "sere",
+            "quiero ser",
+            "trabajare"
+          ],
+          "wrong": [
+            "Fui veterinaria.",
+            "Mi madre es veterinaria."
+          ],
+          "reply": "¡Qué bonito!",
+          "replyEn": "How lovely!"
+        },
+        {
+          "ask": "¿Por qué?",
+          "askEn": "Why?",
+          "answer": "Porque me encantan los animales.",
+          "answerEn": "Because I love animals.",
+          "keys": [
+            "porque"
+          ],
+          "wrong": [
+            "Por eso.",
+            "Sin embargo."
+          ],
+          "reply": "¡Tiene sentido!",
+          "replyEn": "Makes sense!"
+        },
+        {
+          "ask": "¿Dónde trabajarás?",
+          "askEn": "Where will you work?",
+          "answer": "Trabajaré en un hospital.",
+          "answerEn": "I'll work in a hospital.",
+          "keys": [
+            "trabajare",
+            "en un",
+            "en una"
+          ],
+          "wrong": [
+            "Trabajé mucho ayer.",
+            "Me gusta trabajar."
+          ],
+          "reply": "¡Qué interesante!",
+          "replyEn": "How interesting!"
+        },
+        {
+          "ask": "¿Qué quiere ser tu mejor amigo?",
+          "askEn": "What does your best friend want to be?",
+          "answer": "Quiere ser piloto.",
+          "answerEn": "He wants to be a pilot.",
+          "keys": [
+            "quiere ser",
+            "sera"
+          ],
+          "wrong": [
+            "Fue piloto.",
+            "Mi amigo es alto."
+          ],
+          "reply": "¡Qué guay!",
+          "replyEn": "Cool!"
+        }
+      ]
+    },
+    {
+      "lesson": 147,
+      "who": "luna",
+      "title": "Tomorrow's weather",
+      "scene": "🌡️",
+      "turns": [
+        {
+          "ask": "¿Qué tiempo hará mañana?",
+          "askEn": "What will the weather be like tomorrow?",
+          "answer": "Mañana lloverá.",
+          "answerEn": "Tomorrow it will rain.",
+          "keys": [
+            "llovera",
+            "hara",
+            "nevara",
+            "habra"
+          ],
+          "wrong": [
+            "Ayer llovió.",
+            "Hoy llueve."
+          ],
+          "reply": "¡Pues paraguas!",
+          "replyEn": "Umbrella time, then!"
+        },
+        {
+          "ask": "¿Hará frío el sábado?",
+          "askEn": "Will it be cold on Saturday?",
+          "answer": "No, hará sol.",
+          "answerEn": "No, it'll be sunny.",
+          "keys": [
+            "hara",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Hizo sol.",
+            "Hace sol."
+          ],
+          "reply": "¡Genial!",
+          "replyEn": "Great!"
+        },
+        {
+          "ask": "¿Cuántos grados habrá en Sevilla?",
+          "askEn": "How many degrees will it be in Seville?",
+          "answer": "Habrá treinta grados.",
+          "answerEn": "It'll be thirty degrees.",
+          "keys": [
+            "grados",
+            "habra"
+          ],
+          "wrong": [
+            "Hubo calor.",
+            "Sevilla es bonita."
+          ],
+          "reply": "¡Qué calor!",
+          "replyEn": "So hot!"
+        },
+        {
+          "ask": "¿Nevará en los Pirineos?",
+          "askEn": "Will it snow in the Pyrenees?",
+          "answer": "Sí, nevará mucho.",
+          "answerEn": "Yes, it'll snow a lot.",
+          "keys": [
+            "nevara",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Nevó mucho.",
+            "Los Pirineos son altos."
+          ],
+          "reply": "¡Vamos a esquiar!",
+          "replyEn": "Let's go skiing!"
+        }
+      ]
+    },
+    {
+      "lesson": 148,
+      "who": "sol",
+      "title": "Promises",
+      "scene": "🤞",
+      "turns": [
+        {
+          "ask": "¿Me prometes que ordenarás tu habitación?",
+          "askEn": "Do you promise you'll tidy your room?",
+          "answer": "Te prometo que la ordenaré.",
+          "answerEn": "I promise I'll tidy it.",
+          "keys": [
+            "te prometo",
+            "prometo",
+            "si",
+            "vale"
+          ],
+          "wrong": [
+            "La ordené ayer.",
+            "Mi habitación es grande."
+          ],
+          "reply": "¡Vale, confío en ti!",
+          "replyEn": "OK, I trust you!"
+        },
+        {
+          "ask": "¿Vamos a ir a la playa?",
+          "askEn": "Are we going to the beach?",
+          "answer": "A lo mejor.",
+          "answerEn": "Maybe.",
+          "keys": [
+            "a lo mejor",
+            "quizas",
+            "probablemente",
+            "si",
+            "no",
+            "seguro que"
+          ],
+          "wrong": [
+            "Fuimos a la playa.",
+            "La playa es grande."
+          ],
+          "reply": "¡Ojalá!",
+          "replyEn": "I hope so!"
+        },
+        {
+          "ask": "¿Me ayudarás con los deberes?",
+          "askEn": "Will you help me with my homework?",
+          "answer": "Sí, te ayudaré.",
+          "answerEn": "Yes, I'll help you.",
+          "keys": [
+            "te ayudare",
+            "ayudare",
+            "si",
+            "claro"
+          ],
+          "wrong": [
+            "Te ayudé ayer.",
+            "Los deberes son difíciles."
+          ],
+          "reply": "¡Gracias!",
+          "replyEn": "Thank you!"
+        },
+        {
+          "ask": "Hoy ha sido un mal día…",
+          "askEn": "Today has been a bad day…",
+          "answer": "Tranquilo, mañana será otro día.",
+          "answerEn": "Don't worry, tomorrow is another day.",
+          "keys": [
+            "manana sera otro dia",
+            "tranquilo",
+            "tranquila",
+            "animo"
+          ],
+          "wrong": [
+            "Ayer fue lunes.",
+            "Hoy es martes."
+          ],
+          "reply": "¡Gracias!",
+          "replyEn": "Thanks!"
+        }
+      ]
+    },
+    {
+      "lesson": 149,
+      "who": "luna",
+      "title": "New Year's resolutions",
+      "scene": "🍇",
+      "turns": [
+        {
+          "ask": "¿Cuáles son tus propósitos para este año?",
+          "askEn": "What are your resolutions for this year?",
+          "answer": "Este año voy a leer más.",
+          "answerEn": "This year I'm going to read more.",
+          "keys": [
+            "voy a"
+          ],
+          "wrong": [
+            "Leí mucho.",
+            "Leo un libro."
+          ],
+          "reply": "¡Qué buen propósito!",
+          "replyEn": "What a good resolution!"
+        },
+        {
+          "ask": "¿Vas a comer más sano?",
+          "askEn": "Are you going to eat more healthily?",
+          "answer": "Sí, voy a comer más fruta.",
+          "answerEn": "Yes, I'm going to eat more fruit.",
+          "keys": [
+            "voy a",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Comí fruta.",
+            "La fruta es sana."
+          ],
+          "reply": "¡Muy bien!",
+          "replyEn": "Well done!"
+        },
+        {
+          "ask": "¿Para qué vas a ahorrar?",
+          "askEn": "What are you going to save up for?",
+          "answer": "Voy a ahorrar para una bici.",
+          "answerEn": "I'm going to save up for a bike.",
+          "keys": [
+            "para"
+          ],
+          "wrong": [
+            "Ahorré mucho.",
+            "La bici es roja."
+          ],
+          "reply": "¡Buena idea!",
+          "replyEn": "Good idea!"
+        },
+        {
+          "ask": "¿Cuántas uvas comes en Nochevieja?",
+          "askEn": "How many grapes do you eat on New Year's Eve?",
+          "answer": "Doce uvas.",
+          "answerEn": "Twelve grapes.",
+          "keys": [
+            "doce"
+          ],
+          "wrong": [
+            "Diez uvas.",
+            "Una uva."
+          ],
+          "reply": "¡Feliz Año Nuevo!",
+          "replyEn": "Happy New Year!"
+        }
+      ]
+    },
+    {
+      "lesson": 150,
+      "who": "sol",
+      "title": "Future champion",
+      "scene": "🏆",
+      "turns": [
+        {
+          "ask": "¿Qué vas a hacer este verano?",
+          "askEn": "What are you going to do this summer?",
+          "answer": "Voy a ir a la playa.",
+          "answerEn": "I'm going to the beach.",
+          "keys": [
+            "voy a",
+            "ire"
+          ],
+          "wrong": [
+            "Fui a la playa.",
+            "La playa es grande."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Nice!"
+        },
+        {
+          "ask": "¿Te apetece venir conmigo?",
+          "askEn": "Do you fancy coming with me?",
+          "answer": "¡Me encantaría!",
+          "answerEn": "I'd love to!",
+          "keys": [
+            "me encantaria",
+            "si",
+            "vale",
+            "lo siento",
+            "no puedo"
+          ],
+          "wrong": [
+            "Vine contigo.",
+            "Eres mi amigo."
+          ],
+          "reply": "¡Genial!",
+          "replyEn": "Great!"
+        },
+        {
+          "ask": "¿Dónde quedamos?",
+          "askEn": "Where shall we meet?",
+          "answer": "En la estación, a las diez.",
+          "answerEn": "At the station, at ten.",
+          "keys": [
+            "en la",
+            "en el",
+            "a las"
+          ],
+          "wrong": [
+            "Ayer.",
+            "El verano."
+          ],
+          "reply": "¡Vale, nos vemos!",
+          "replyEn": "OK, see you!"
+        },
+        {
+          "ask": "¿Qué tiempo hará?",
+          "askEn": "What will the weather be like?",
+          "answer": "Hará mucho sol.",
+          "answerEn": "It'll be very sunny.",
+          "keys": [
+            "hara",
+            "llovera",
+            "habra"
+          ],
+          "wrong": [
+            "Hizo sol.",
+            "Hace sol."
+          ],
+          "reply": "¡Genial!",
+          "replyEn": "Great!"
+        },
+        {
+          "ask": "¿Qué serás de mayor?",
+          "askEn": "What will you be when you grow up?",
+          "answer": "Seré científico.",
+          "answerEn": "I'll be a scientist.",
+          "keys": [
+            "sere",
+            "quiero ser",
+            "cuando sea"
+          ],
+          "wrong": [
+            "Fui científico.",
+            "Mi padre es científico."
+          ],
+          "reply": "¡Eres un campeón del futuro!",
+          "replyEn": "You're a future champion!"
+        }
+      ]
+    }
+  ]
+}

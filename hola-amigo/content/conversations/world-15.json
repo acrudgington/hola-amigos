@@ -1,0 +1,763 @@
+{
+  "world": 15,
+  "conversations": [
+    {
+      "lesson": 121,
+      "who": "luna",
+      "title": "Where did you go?",
+      "scene": "🗺️",
+      "turns": [
+        {
+          "ask": "¿Adónde fuiste en verano?",
+          "askEn": "Where did you go in the summer?",
+          "answer": "Fui a Galicia.",
+          "answerEn": "I went to Galicia.",
+          "keys": [
+            "fui",
+            "fuimos"
+          ],
+          "wrong": [
+            "Voy a Galicia.",
+            "Galicia es verde."
+          ],
+          "reply": "¡Qué bonito!",
+          "replyEn": "How lovely!"
+        },
+        {
+          "ask": "¿Con quién fuiste?",
+          "askEn": "Who did you go with?",
+          "answer": "Fui con mi familia.",
+          "answerEn": "I went with my family.",
+          "keys": [
+            "con mi",
+            "con mis",
+            "fui con"
+          ],
+          "wrong": [
+            "Voy solo.",
+            "Mi familia es grande."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Nice!"
+        },
+        {
+          "ask": "¿Cómo fue el viaje?",
+          "askEn": "How was the journey?",
+          "answer": "Fue largo pero divertido.",
+          "answerEn": "It was long but fun.",
+          "keys": [
+            "fue"
+          ],
+          "wrong": [
+            "Es largo.",
+            "Va a ser largo."
+          ],
+          "reply": "¡Me alegro!",
+          "replyEn": "I'm glad!"
+        },
+        {
+          "ask": "¿Fue genial o fue un desastre?",
+          "askEn": "Was it great or a disaster?",
+          "answer": "¡Fue genial!",
+          "answerEn": "It was great!",
+          "keys": [
+            "fue genial",
+            "fue un desastre",
+            "genial",
+            "desastre"
+          ],
+          "wrong": [
+            "El viaje es mañana.",
+            "Voy a ir."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Great!"
+        }
+      ]
+    },
+    {
+      "lesson": 122,
+      "who": "sol",
+      "title": "Making a cake",
+      "scene": "🧁",
+      "turns": [
+        {
+          "ask": "¿Qué hiciste el domingo?",
+          "askEn": "What did you do on Sunday?",
+          "answer": "Hice una tarta.",
+          "answerEn": "I made a cake.",
+          "keys": [
+            "hice",
+            "hicimos"
+          ],
+          "wrong": [
+            "Hago una tarta.",
+            "Voy a hacer."
+          ],
+          "reply": "¡Qué rica!",
+          "replyEn": "Yummy!"
+        },
+        {
+          "ask": "¿Qué tiempo hizo?",
+          "askEn": "What was the weather like?",
+          "answer": "Hizo mucho frío.",
+          "answerEn": "It was very cold.",
+          "keys": [
+            "hizo"
+          ],
+          "wrong": [
+            "Hace frío.",
+            "Va a hacer frío."
+          ],
+          "reply": "¡Brrr!",
+          "replyEn": "Brrr!"
+        },
+        {
+          "ask": "¿Qué hizo tu hermano?",
+          "askEn": "What did your brother do?",
+          "answer": "Hizo el chocolate.",
+          "answerEn": "He made the chocolate.",
+          "keys": [
+            "hizo",
+            "comio",
+            "ayudo"
+          ],
+          "wrong": [
+            "Hace el chocolate.",
+            "Va a hacer."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Nice!"
+        },
+        {
+          "ask": "¿Hiciste los deberes?",
+          "askEn": "Did you do your homework?",
+          "answer": "Sí, hice los deberes por la tarde.",
+          "answerEn": "Yes, I did my homework in the afternoon.",
+          "keys": [
+            "hice",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Hago los deberes mañana.",
+            "Los deberes son difíciles."
+          ],
+          "reply": "¡Muy bien!",
+          "replyEn": "Well done!"
+        }
+      ]
+    },
+    {
+      "lesson": 123,
+      "who": "luna",
+      "title": "Off sick",
+      "scene": "🤒",
+      "turns": [
+        {
+          "ask": "¿Dónde estuviste el lunes?",
+          "askEn": "Where were you on Monday?",
+          "answer": "Estuve en casa.",
+          "answerEn": "I was at home.",
+          "keys": [
+            "estuve"
+          ],
+          "wrong": [
+            "Estoy en casa.",
+            "Voy a estar."
+          ],
+          "reply": "¿Por qué?",
+          "replyEn": "Why?"
+        },
+        {
+          "ask": "¿Estuviste enfermo?",
+          "askEn": "Were you ill?",
+          "answer": "Sí, estuve enfermo.",
+          "answerEn": "Yes, I was ill.",
+          "keys": [
+            "estuve",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Estoy enfermo mañana.",
+            "El médico."
+          ],
+          "reply": "¡Pobre!",
+          "replyEn": "Poor you!"
+        },
+        {
+          "ask": "¿Tuviste fiebre?",
+          "askEn": "Did you have a temperature?",
+          "answer": "Sí, tuve fiebre.",
+          "answerEn": "Yes, I had a temperature.",
+          "keys": [
+            "tuve",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Tengo fiebre mañana.",
+            "La fiebre es mala."
+          ],
+          "reply": "¡Ay!",
+          "replyEn": "Oh dear!"
+        },
+        {
+          "ask": "¿Tuviste que estar en la cama?",
+          "askEn": "Did you have to stay in bed?",
+          "answer": "Sí, tuve que estar en la cama todo el día.",
+          "answerEn": "Yes, I had to stay in bed all day.",
+          "keys": [
+            "tuve que",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Tengo que ir.",
+            "Mi cama es grande."
+          ],
+          "reply": "¡Que te mejores!",
+          "replyEn": "Get well soon!"
+        }
+      ]
+    },
+    {
+      "lesson": 124,
+      "who": "sol",
+      "title": "The secret present",
+      "scene": "🎁",
+      "turns": [
+        {
+          "ask": "¿Qué trajiste a la fiesta?",
+          "askEn": "What did you bring to the party?",
+          "answer": "Traje un regalo.",
+          "answerEn": "I brought a present.",
+          "keys": [
+            "traje"
+          ],
+          "wrong": [
+            "Traigo un regalo.",
+            "Voy a traer."
+          ],
+          "reply": "¡Qué detalle!",
+          "replyEn": "How kind!"
+        },
+        {
+          "ask": "¿Dónde pusiste el regalo?",
+          "askEn": "Where did you put the present?",
+          "answer": "Lo puse en la mesa.",
+          "answerEn": "I put it on the table.",
+          "keys": [
+            "puse"
+          ],
+          "wrong": [
+            "Lo pongo mañana.",
+            "La mesa es grande."
+          ],
+          "reply": "¡Gracias!",
+          "replyEn": "Thanks!"
+        },
+        {
+          "ask": "¿Qué le dijiste a Luna?",
+          "askEn": "What did you say to Luna?",
+          "answer": "Le dije: ¡feliz cumpleaños!",
+          "answerEn": "I said: happy birthday!",
+          "keys": [
+            "dije"
+          ],
+          "wrong": [
+            "Digo hola.",
+            "Voy a decir."
+          ],
+          "reply": "¡Qué bonito!",
+          "replyEn": "How lovely!"
+        },
+        {
+          "ask": "¿Pudiste ir a la fiesta de Leo?",
+          "askEn": "Were you able to go to Leo's party?",
+          "answer": "No, no pude ir.",
+          "answerEn": "No, I couldn't go.",
+          "keys": [
+            "pude",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Puedo ir mañana.",
+            "La fiesta es el sábado."
+          ],
+          "reply": "¡Qué pena!",
+          "replyEn": "What a shame!"
+        }
+      ]
+    },
+    {
+      "lesson": 125,
+      "who": "luna",
+      "title": "The school trip",
+      "scene": "🚌",
+      "turns": [
+        {
+          "ask": "¿Adónde fuisteis de excursión?",
+          "askEn": "Where did you go on your school trip?",
+          "answer": "Fuimos a Toledo.",
+          "answerEn": "We went to Toledo.",
+          "keys": [
+            "fuimos"
+          ],
+          "wrong": [
+            "Vamos a Toledo.",
+            "Toledo es bonito."
+          ],
+          "reply": "¡Qué bonito!",
+          "replyEn": "How lovely!"
+        },
+        {
+          "ask": "¿Cómo fuisteis?",
+          "askEn": "How did you get there?",
+          "answer": "Fuimos en autocar.",
+          "answerEn": "We went by coach.",
+          "keys": [
+            "autocar",
+            "autobus",
+            "tren",
+            "coche",
+            "en "
+          ],
+          "wrong": [
+            "Fuimos a Toledo.",
+            "Fue genial."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Nice!"
+        },
+        {
+          "ask": "¿Os perdisteis?",
+          "askEn": "Did you get lost?",
+          "answer": "Sí, nos perdimos un poco.",
+          "answerEn": "Yes, we got a bit lost.",
+          "keys": [
+            "nos perdimos",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Me pierdo mañana.",
+            "El mapa es grande."
+          ],
+          "reply": "¡Qué susto!",
+          "replyEn": "What a fright!"
+        },
+        {
+          "ask": "¿Encontrasteis al guía?",
+          "askEn": "Did you find the guide?",
+          "answer": "Sí, lo encontramos en la plaza.",
+          "answerEn": "Yes, we found him in the square.",
+          "keys": [
+            "encontramos",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Encuentro al guía mañana.",
+            "El guía es simpático."
+          ],
+          "reply": "¡Menos mal!",
+          "replyEn": "Thank goodness!"
+        }
+      ]
+    },
+    {
+      "lesson": 126,
+      "who": "sol",
+      "title": "Camping trip",
+      "scene": "⛺",
+      "turns": [
+        {
+          "ask": "¿Dónde acampasteis?",
+          "askEn": "Where did you camp?",
+          "answer": "Acampamos cerca de un río.",
+          "answerEn": "We camped near a river.",
+          "keys": [
+            "acampamos",
+            "cerca",
+            "en "
+          ],
+          "wrong": [
+            "Acampo mañana.",
+            "El río es largo."
+          ],
+          "reply": "¡Qué bonito!",
+          "replyEn": "How lovely!"
+        },
+        {
+          "ask": "¿Subisteis a la montaña?",
+          "askEn": "Did you climb the mountain?",
+          "answer": "Sí, subimos por un camino largo.",
+          "answerEn": "Yes, we went up a long path.",
+          "keys": [
+            "subimos",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Subo mañana.",
+            "La montaña es alta."
+          ],
+          "reply": "¡Qué valientes!",
+          "replyEn": "How brave!"
+        },
+        {
+          "ask": "¿Qué hicisteis por la noche?",
+          "askEn": "What did you do at night?",
+          "answer": "Hicimos una hoguera.",
+          "answerEn": "We made a campfire.",
+          "keys": [
+            "hicimos",
+            "miramos",
+            "cantamos",
+            "dormimos",
+            "jugamos"
+          ],
+          "wrong": [
+            "Hacemos una hoguera.",
+            "La noche es oscura."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Great!"
+        },
+        {
+          "ask": "¿Dónde dormiste?",
+          "askEn": "Where did you sleep?",
+          "answer": "Dormí en mi saco de dormir.",
+          "answerEn": "I slept in my sleeping bag.",
+          "keys": [
+            "dormi",
+            "en la tienda",
+            "saco"
+          ],
+          "wrong": [
+            "Duermo en mi cama.",
+            "Voy a dormir."
+          ],
+          "reply": "¡Qué aventura!",
+          "replyEn": "What an adventure!"
+        }
+      ]
+    },
+    {
+      "lesson": 127,
+      "who": "luna",
+      "title": "What a fright!",
+      "scene": "😱",
+      "turns": [
+        {
+          "ask": "¿Qué oíste anoche?",
+          "askEn": "What did you hear last night?",
+          "answer": "Oí un ruido muy fuerte.",
+          "answerEn": "I heard a very loud noise.",
+          "keys": [
+            "oi",
+            "ruido",
+            "escuche"
+          ],
+          "wrong": [
+            "Oigo música.",
+            "Voy a oír."
+          ],
+          "reply": "¡Qué miedo!",
+          "replyEn": "How scary!"
+        },
+        {
+          "ask": "¿Tuviste miedo?",
+          "askEn": "Were you scared?",
+          "answer": "Sí, tuve mucho miedo.",
+          "answerEn": "Yes, I was very scared.",
+          "keys": [
+            "tuve",
+            "si",
+            "no",
+            "un poco"
+          ],
+          "wrong": [
+            "Tengo un gato.",
+            "El miedo es malo."
+          ],
+          "reply": "¡Normal!",
+          "replyEn": "That's normal!"
+        },
+        {
+          "ask": "¿Qué hiciste?",
+          "askEn": "What did you do?",
+          "answer": "Me escondí debajo de la manta.",
+          "answerEn": "I hid under the blanket.",
+          "keys": [
+            "me escondi",
+            "grite",
+            "llame",
+            "corri"
+          ],
+          "wrong": [
+            "Me escondo mañana.",
+            "La manta es azul."
+          ],
+          "reply": "¡Ja, ja! ¡Qué listo!",
+          "replyEn": "Ha ha! Clever!"
+        },
+        {
+          "ask": "¿Y qué era?",
+          "askEn": "And what was it?",
+          "answer": "Por suerte, era solo el gato.",
+          "answerEn": "Luckily, it was only the cat.",
+          "keys": [
+            "era",
+            "por suerte"
+          ],
+          "wrong": [
+            "Es el gato mañana.",
+            "Tengo un gato."
+          ],
+          "reply": "¡Qué susto!",
+          "replyEn": "What a fright!"
+        }
+      ]
+    },
+    {
+      "lesson": 128,
+      "who": "sol",
+      "title": "Famous people",
+      "scene": "🖼️",
+      "turns": [
+        {
+          "ask": "¿Dónde nació Picasso?",
+          "askEn": "Where was Picasso born?",
+          "answer": "Nació en Málaga.",
+          "answerEn": "He was born in Málaga.",
+          "keys": [
+            "malaga"
+          ],
+          "wrong": [
+            "Nació en Madrid.",
+            "Vive en Barcelona."
+          ],
+          "reply": "¡Correcto!",
+          "replyEn": "Correct!"
+        },
+        {
+          "ask": "¿Qué pintó Velázquez?",
+          "askEn": "What did Velázquez paint?",
+          "answer": "Pintó Las meninas.",
+          "answerEn": "He painted Las meninas.",
+          "keys": [
+            "meninas"
+          ],
+          "wrong": [
+            "Escribió el Quijote.",
+            "Inventó el Chupa Chups."
+          ],
+          "reply": "¡Muy bien!",
+          "replyEn": "Very good!"
+        },
+        {
+          "ask": "¿Quién escribió el Quijote?",
+          "askEn": "Who wrote Don Quixote?",
+          "answer": "Cervantes.",
+          "answerEn": "Cervantes.",
+          "keys": [
+            "cervantes"
+          ],
+          "wrong": [
+            "Picasso.",
+            "Velázquez."
+          ],
+          "reply": "¡Exacto!",
+          "replyEn": "Exactly!"
+        },
+        {
+          "ask": "¿Dónde naciste tú?",
+          "askEn": "Where were you born?",
+          "answer": "Nací en Londres.",
+          "answerEn": "I was born in London.",
+          "keys": [
+            "naci"
+          ],
+          "wrong": [
+            "Nació en Málaga.",
+            "Vivo en España."
+          ],
+          "reply": "¡Qué interesante!",
+          "replyEn": "How interesting!"
+        }
+      ]
+    },
+    {
+      "lesson": 129,
+      "who": "luna",
+      "title": "Tell me a story",
+      "scene": "📜",
+      "turns": [
+        {
+          "ask": "¿Cómo empieza tu cuento?",
+          "askEn": "How does your story begin?",
+          "answer": "Érase una vez un dragón.",
+          "answerEn": "Once upon a time there was a dragon.",
+          "keys": [
+            "erase una vez",
+            "habia una vez"
+          ],
+          "wrong": [
+            "Colorín colorado.",
+            "Al día siguiente."
+          ],
+          "reply": "¡Qué emocionante!",
+          "replyEn": "How exciting!"
+        },
+        {
+          "ask": "¿Cómo estaba el dragón al principio?",
+          "askEn": "How was the dragon at the beginning?",
+          "answer": "Al principio estaba triste.",
+          "answerEn": "At the beginning he was sad.",
+          "keys": [
+            "estaba",
+            "al principio"
+          ],
+          "wrong": [
+            "Está triste.",
+            "Desde entonces."
+          ],
+          "reply": "¡Pobre dragón!",
+          "replyEn": "Poor dragon!"
+        },
+        {
+          "ask": "¿Y qué pasó un día?",
+          "askEn": "And what happened one day?",
+          "answer": "Un día encontró un amigo.",
+          "answerEn": "One day he found a friend.",
+          "keys": [
+            "encontro",
+            "conocio",
+            "vio",
+            "llego"
+          ],
+          "wrong": [
+            "Encuentra un amigo.",
+            "Va a encontrar."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "How nice!"
+        },
+        {
+          "ask": "¿Y cómo termina?",
+          "askEn": "And how does it end?",
+          "answer": "Desde entonces son muy amigos.",
+          "answerEn": "Since then they've been great friends.",
+          "keys": [
+            "desde entonces",
+            "vivieron felices",
+            "colorin colorado",
+            "fin"
+          ],
+          "wrong": [
+            "Érase una vez.",
+            "Al principio."
+          ],
+          "reply": "¡Me encanta tu cuento!",
+          "replyEn": "I love your story!"
+        }
+      ]
+    },
+    {
+      "lesson": 130,
+      "who": "sol",
+      "title": "Adventure champion",
+      "scene": "🏆",
+      "turns": [
+        {
+          "ask": "¿Adónde fuiste de vacaciones?",
+          "askEn": "Where did you go on holiday?",
+          "answer": "Fui a la montaña.",
+          "answerEn": "I went to the mountains.",
+          "keys": [
+            "fui",
+            "fuimos"
+          ],
+          "wrong": [
+            "Voy a la montaña.",
+            "La montaña es alta."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Nice!"
+        },
+        {
+          "ask": "¿Qué tiempo hizo?",
+          "askEn": "What was the weather like?",
+          "answer": "Hizo frío.",
+          "answerEn": "It was cold.",
+          "keys": [
+            "hizo",
+            "llovio",
+            "nevo"
+          ],
+          "wrong": [
+            "Hace frío.",
+            "Va a hacer frío."
+          ],
+          "reply": "¡Brrr!",
+          "replyEn": "Brrr!"
+        },
+        {
+          "ask": "¿Os perdisteis?",
+          "askEn": "Did you get lost?",
+          "answer": "Sí, pero encontramos el camino.",
+          "answerEn": "Yes, but we found the way.",
+          "keys": [
+            "nos perdimos",
+            "encontramos",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Me pierdo.",
+            "El camino es largo."
+          ],
+          "reply": "¡Menos mal!",
+          "replyEn": "Thank goodness!"
+        },
+        {
+          "ask": "¿Tuviste miedo?",
+          "askEn": "Were you scared?",
+          "answer": "Sí, tuve un susto.",
+          "answerEn": "Yes, I had a fright.",
+          "keys": [
+            "tuve",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Tengo miedo.",
+            "Es un susto."
+          ],
+          "reply": "¡Qué valiente!",
+          "replyEn": "How brave!"
+        },
+        {
+          "ask": "¿Qué trajiste de recuerdo?",
+          "askEn": "What did you bring back as a souvenir?",
+          "answer": "Traje una piedra bonita.",
+          "answerEn": "I brought a pretty stone.",
+          "keys": [
+            "traje",
+            "compre"
+          ],
+          "wrong": [
+            "Traigo una piedra.",
+            "Voy a traer."
+          ],
+          "reply": "¡Eres un campeón de aventuras!",
+          "replyEn": "You're an adventure champion!"
+        }
+      ]
+    }
+  ]
+}
