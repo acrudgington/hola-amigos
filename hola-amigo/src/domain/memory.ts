@@ -5,7 +5,7 @@
 // child keeps getting wrong. "Sol's mix" builds a short personal session from
 // due words, tricky words and recall challenges.
 import { ALL_WORDS, wordsForLessonsUpTo } from "../content/index.ts";
-import { BOX_INTERVALS, maxCompleted, type Progress, type WordMemory } from "./progress.ts";
+import { BOX_INTERVALS, learnedUpTo, type Progress, type WordMemory } from "./progress.ts";
 import { shuffle } from "../lib/utils.ts";
 
 const DAY = 86_400_000;
@@ -60,7 +60,7 @@ export function buildMix(p: Progress, { size = 10, now = Date.now(), canListen =
   stats.filter(s => s.mem.box >= 3 && (s.mem.recall || 0) < 2 && !used.has(s.es)).sort((a, b) => (a.mem.recall || 0) - (b.mem.recall || 0) || b.mem.box - a.mem.box)
     .slice(0, 3).forEach(s => take(s, "recall", "challenge", 4));
   // 4. Top up with a refresh of earlier lessons, weakest first.
-  const done = maxCompleted(p.stars || {});
+  const done = learnedUpTo(p);
   if (done) {
     const byStrength = new Map(stats.map(s => [s.es, s.strength]));
     const pool = shuffle(wordsForLessonsUpTo(done)).sort((a, b) => (byStrength.get(a.es) ?? 0) - (byStrength.get(b.es) ?? 0));

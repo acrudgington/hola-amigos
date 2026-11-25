@@ -105,6 +105,7 @@ function ChildReport({ child, progress: p, onRemove }: { child: Child; progress:
       {countLessons(p)} of {LESSONS.length} lessons done{perfect ? `, ${perfect} with 3 stars` : ""}.
       {" "}{due > 0 ? `${due} word${due === 1 ? " is" : "s are"} ready for review.` : "No words waiting for review."}
       {" "}{(p.badges || []).length} badges, {(p.stickers || []).length} stickers.
+      {p.placement && <>{" "}Level check on {new Date(p.placement.at).toLocaleDateString()}: started in {WORLDS.find(w => w.id === Math.min(WORLDS.length, p.placement!.world + 1))?.name} ({p.placement.right} of {p.placement.asked} right).</>}
     </div>
 
     {(() => {

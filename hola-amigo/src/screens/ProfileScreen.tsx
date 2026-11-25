@@ -6,11 +6,11 @@ import { Button, Card, ProgressBar } from "../components/ui.tsx";
 import { AnimatedNumber, LevelRing, MasteryCard, StreakCard, WeeklyChart } from "../components/Widgets.tsx";
 import { Art } from "../components/Art.tsx";
 import { Icon } from "../components/Icon.tsx";
-import { UNITS } from "../content/index.ts";
+import { UNITS, WORLDS } from "../content/index.ts";
 import { achievedGoals } from "../domain/goals.ts";
 
 // "Me" — the child's personal stats dashboard.
-export function ProfileScreen({ child, parent, progress, onTrophies, onSwitchChild }: { child: Child; parent: Parent; progress: Progress; onTrophies: () => void; onSwitchChild: () => void }) {
+export function ProfileScreen({ child, parent, progress, onTrophies, onSwitchChild, onPlacement }: { child: Child; parent: Parent; progress: Progress; onTrophies: () => void; onSwitchChild: () => void; onPlacement: () => void }) {
   const lessons = countLessons(progress);
   const words = Object.keys(progress.wordMemory || {}).length;
   const pct = lessons / LESSONS.length;
@@ -73,6 +73,14 @@ export function ProfileScreen({ child, parent, progress, onTrophies, onSwitchChi
             <div><div>{g.goal.can}</div><div className="goal__es" lang="es">{g.goal.es}</div></div>
           </li>)}</ul>
         : <p className="small muted">Finish a lesson and practise its words, and your first “I can…” will appear here!</p>}
+    </Card>
+    <Card className="row" style={{ gap: 14 }}>
+      <Art e="🚀" size={44} />
+      <div className="grow">
+        <div className="h3">Already know some Spanish?</div>
+        <div className="small muted">{progress.placement ? `Your level check put you in ${WORLDS.find(w => w.id === Math.min(WORLDS.length, progress.placement!.world + 1))?.name ?? "the first world"}. You can take it again.` : "Take the level check and skip ahead to the right place."}</div>
+      </div>
+      <Button size="sm" variant="luna" onClick={onPlacement}>Find my level</Button>
     </Card>
   </div>;
 }

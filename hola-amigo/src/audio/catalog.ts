@@ -4,7 +4,7 @@
 // ============================================================
 import { ALL_WORDS, LESSONS, SURPRISES } from "../content/index.ts";
 import { REACTION_LINES } from "../lib/reactions.ts";
-import { BOSS_HIT, DONE_LINES, INSTRUCTIONS, LEVEL_UP_LINE, PRAISE, REMEMBERED, REVIEW_INSTRUCTION } from "./lines.ts";
+import { BOSS_HIT, DONE_LINES, INSTRUCTIONS, LEVEL_UP_LINE, PLACEMENT_LINES, PRAISE, REMEMBERED, REVIEW_INSTRUCTION } from "./lines.ts";
 import { clipId, segmentMixed, single, splitSentences, type Segment, type Speaker, type VoiceRole } from "./text.ts";
 
 // A Spanish word, phrase or sentence, said by the Castilian teacher voice.
@@ -31,7 +31,7 @@ export function collectClips(): Clip[] {
   for (const s of SURPRISES) for (const line of s.lines) add(narration(line));
   for (const t of [...Object.values(INSTRUCTIONS), REVIEW_INSTRUCTION]) add(narration(t));
   for (const p of [...PRAISE, BOSS_HIT]) add(single("sol-es", p));
-  for (const t of [REMEMBERED, LEVEL_UP_LINE, ...Object.values(DONE_LINES)]) add(narration(t, "sol"));
+  for (const t of [REMEMBERED, LEVEL_UP_LINE, ...Object.values(DONE_LINES), ...Object.values(PLACEMENT_LINES)]) add(narration(t, "sol"));
   for (const r of REACTION_LINES) add(narration(r.text, r.who));
   return [...clips.values()];
 }

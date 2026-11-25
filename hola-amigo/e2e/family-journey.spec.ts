@@ -55,6 +55,7 @@ test("sign up → add a child → play lesson 1 → progress is saved", async ({
   await page.getByLabel("Child’s name").fill("Mia");
   await page.getByRole("button", { name: "Add ✓" }).click();
   await page.locator(".profile-tile").first().click();
+  await page.getByRole("button", { name: /new to Spanish/ }).click();   // placement offer for a new learner
 
   await expect(page.getByText(/Sol · study buddy/)).toBeVisible();
   await page.locator(".next-card").click();
@@ -87,6 +88,7 @@ test("Ask Sol finds and speaks words", async ({ page }) => {
   await page.getByLabel("Child’s name").fill("Leo");
   await page.getByRole("button", { name: "Add ✓" }).click();
   await page.locator(".profile-tile").first().click();
+  await page.getByRole("button", { name: /new to Spanish/ }).click();   // placement offer for a new learner
 
   await page.keyboard.press("Control+k");
   await page.getByRole("combobox", { name: /Search words and lessons/ }).fill("dog");

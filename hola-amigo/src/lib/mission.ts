@@ -1,7 +1,7 @@
 // Sol the study buddy plans "today's mission" from the child's real progress,
 // like an agent laying out its task list. Pure: progress in, plan out.
 import { LESSONS, type Lesson } from "../content/index.ts";
-import { dailyQuests, dayKey, getDueWords, maxCompleted, type Progress } from "../domain/progress.ts";
+import { dailyQuests, dayKey, getDueWords, learnedUpTo, type Progress } from "../domain/progress.ts";
 
 export interface MissionStep {
   id: "review" | "lesson" | "chest";
@@ -20,8 +20,7 @@ const isToday = (t: number, now: number) => dayKey(t) === dayKey(now);
 
 export function planMission(progress: Progress, now = Date.now()): Mission {
   const events = (progress.events || []).filter(e => isToday(e.t, now));
-  const stars = progress.stars || {};
-  const done = maxCompleted(stars);
+  const done = learnedUpTo(progress);
   const next = LESSONS.find(l => l.id === Math.min(LESSONS.length, done + 1)) ?? LESSONS[0];
   const due = getDueWords(progress, now).length;
   const reviewedToday = events.some(e => e.type === "review");

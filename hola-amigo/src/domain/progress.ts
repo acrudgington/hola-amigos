@@ -40,6 +40,10 @@ export interface Progress {
   comboToday: number;
   chestDay: string | null;
   events: ActivityEvent[];
+  // Placement check: lessons unlocked by showing what they already know (no stars).
+  placedUpTo: number;
+  placement: { world: number; at: number; asked: number; right: number } | null;
+  placementOffered: boolean;
 }
 
 export type NumericStat = "correctAnswers" | "micUses" | "storiesRead" | "reviewsDone" | "lessonsDone";
@@ -50,6 +54,7 @@ export const DEFAULT_PROGRESS: Readonly<Progress> = Object.freeze({
   lessonsDone: 0, correctAnswers: 0, micUses: 0, storiesRead: 0, reviewsDone: 0,
   wordMemory: {}, dailyGoal: 3, dailyDate: null, dailyCount: 0,
   xp: 0, xpByDay: {}, bestCombo: 0, comboDay: null, comboToday: 0, chestDay: null, events: [],
+  placedUpTo: 0, placement: null, placementOffered: false,
 });
 
 export const XP = { correct: 10, activity: 15, lesson: 50, perStar: 20, review: 25, combo5: 15, chest: 50 } as const;
@@ -58,6 +63,12 @@ const DAY = 86400000;
 export const sumStars = (p: Pick<Progress, "stars">) => Object.values(p.stars || {}).reduce((a, b) => a + b, 0);
 export const countLessons = (p: Pick<Progress, "stars">) => Object.keys(p.stars || {}).length;
 export const maxCompleted = (stars: Record<string, number>) => Object.keys(stars).reduce((m, id) => Math.max(m, Number(id)), 0);
+// Lessons the child has finished OR been placed past by the placement check.
+export const learnedUpTo = (p: Pick<Progress, "stars" | "placedUpTo">) => Math.max(maxCompleted(p.stars || {}), p.placedUpTo || 0);
+// The furthest lesson they can open (one past what they've learned).
+export const unlockedUpTo = (p: Pick<Progress, "stars" | "placedUpTo">, total = Number.MAX_SAFE_INTEGER) => Math.min(total, learnedUpTo(p) + 1);
+// A brand-new learner: nothing played and not yet asked about placement.
+export const isFreshLearner = (p: Progress) => !countLessons(p) && !Object.keys(p.wordMemory || {}).length && !p.placementOffered && !p.placement;
 
 // Fill in anything missing from older saves, and give pre-XP saves a fair XP total.
 export function normalizeProgress(raw: Partial<Progress> | null | undefined): Progress {

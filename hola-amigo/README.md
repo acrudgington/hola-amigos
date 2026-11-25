@@ -104,6 +104,17 @@ been got wrong, and how much it has faded since it was last seen.
 - **Warm-ups** use the child's weakest earlier words.
 - Parents see the **words their child finds tricky** in the grown-up dashboard.
 
+## Placement check ("Find my level")
+
+New learners are asked whether Spanish is new to them. Children who know some can take
+a short check (`src/domain/placement.ts`): 3 questions per world, 2 right passes it;
+worlds 1–2 in turn, then jumps of two (4, 6, 8…), checking the world in between after a
+missed jump. Beginners finish in 3–6 questions, and nobody sees more than 24. There's an
+"I don't know" button and no right/wrong feedback, so children don't guess their way
+past lessons they need. Placement unlocks lessons up to their level **without** awarding
+stars or claiming "I can…" goals. It can be retaken from the child's "Me" page, and
+parents see the result in the dashboard.
+
 ## Editing lessons
 
 All course content lives in `content/` as plain JSON, so it can be edited without touching code:

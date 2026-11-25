@@ -36,3 +36,10 @@ export const DONE_LINES = {
   keepGoing: "¡Bien hecho! Keep practising!",
 };
 export const LEVEL_UP_LINE = "¡Increíble! You reached a new level!";
+
+// The placement check ("Find my level"), said by Sol.
+export const PLACEMENT_LINES = {
+  offer: "¡Hola! Is Spanish new for you, or do you know some already?",
+  intro: "Let's find your level! If you don't know an answer, that's fine. Just tap I don't know.",
+  result: "¡Fantástico! I've found the perfect place for you to start.",
+};

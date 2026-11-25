@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { maxCompleted, type Progress } from "../domain/progress.ts";
+import { learnedUpTo, type Progress } from "../domain/progress.ts";
 import { wordsForLessonsUpTo } from "../content/index.ts";
 import { buildMix, mixSummary, type MixItem } from "../domain/memory.ts";
 import { voice } from "../audio/player.ts";
@@ -44,7 +44,7 @@ export function ReviewScreen({ progress, onBack, onFinish, onWord }: { progress:
             <Button variant="luna" onClick={again}>↻ Review more</Button>
             <Button onClick={onBack}>Back to the map</Button>
           </div>
-        </div> : <MixGame key={run} items={list} pool={wordsForLessonsUpTo(Math.max(1, maxCompleted(progress.stars || {})))} onWord={onWord} onDone={(s: number, t: number) => { onFinish(s, t); setResult({ s, t }); }} />}
+        </div> : <MixGame key={run} items={list} pool={wordsForLessonsUpTo(Math.max(1, learnedUpTo(progress)))} onWord={onWord} onDone={(s: number, t: number) => { onFinish(s, t); setResult({ s, t }); }} />}
       </Card>
     </div>
   </div>;

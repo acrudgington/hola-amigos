@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { LESSONS, WORLDS, isMilestone, lessonsInWorld, worldOf, type Lesson, type World } from "../content/index.ts";
-import { getDaily, levelInfo, liveStreak, maxCompleted, sumStars, weekXP, type Progress } from "../domain/progress.ts";
+import { getDaily, learnedUpTo, levelInfo, liveStreak, sumStars, weekXP, type Progress } from "../domain/progress.ts";
 import type { MissionStep } from "../lib/mission.ts";
 import type { Child } from "../services/index.ts";
 import { darken } from "../lib/utils.ts";
@@ -167,7 +167,7 @@ export function HomeScreen({ child, progress, onStartLesson, onOpenLesson, onCla
   onClaim: () => void; onSearch: () => void; onMission: (s: MissionStep) => void;
 }) {
   const stars = progress.stars || {};
-  const done = maxCompleted(stars);
+  const done = learnedUpTo(progress);                       // finished, or placed past by the level check
   const unlockedUpTo = Math.min(LESSONS.length, done + 1);
   const current = LESSONS.find(l => l.id === unlockedUpTo) || LESSONS[LESSONS.length - 1];
   const allDone = done >= LESSONS.length && stars[current.id] > 0;

@@ -9,8 +9,8 @@ import { AnimatePresence, MotionConfig, motion } from "framer-motion";
 import { lessonById, LESSONS, type Lesson } from "./content/index.ts";
 import { isBadgeEarned, type EarnedReward } from "./domain/rewards.ts";
 import {
-  XP, addStat, addXP, awardStars, bumpDaily, claimChest, logEvent, maxCompleted,
-  recordCombo, recordWord, repairProgress, starsForScore, touchStreak, type Progress,
+  XP, addStat, addXP, awardStars, bumpDaily, claimChest, logEvent,
+  recordCombo, recordWord, repairProgress, starsForScore, touchStreak, unlockedUpTo, isFreshLearner, type Progress,
 } from "./domain/progress.ts";
 import { services, type Child, type Parent } from "./services/index.ts";
 import { initialNav, isLastStep, navReducer, type ShellView } from "./state/nav.ts";
@@ -38,6 +38,8 @@ import { DoneScreen } from "./screens/DoneScreen.tsx";
 import { ReviewScreen } from "./screens/ReviewScreen.tsx";
 import { ProfileScreen } from "./screens/ProfileScreen.tsx";
 import { TrophyScreen } from "./screens/TrophyScreen.tsx";
+import { PlacementScreen } from "./screens/PlacementScreen.tsx";
+import { lastLessonOf } from "./domain/placement.ts";
 
 const SHELL_VIEWS = new Set(["home", "review", "trophies", "profile", "lesson"]);
 const pageMotion = {
@@ -131,6 +133,8 @@ export default function App() {
 
   // Scroll to the top whenever the screen changes (the map manages its own scroll).
   useEffect(() => { if (nav.view !== "home") window.scrollTo(0, 0); }, [nav.view, nav.activity?.run]);
+  // A brand-new learner is first asked whether Spanish is new to them (placement check).
+  useEffect(() => { if (nav.view === "home" && progress && isFreshLearner(progress)) dispatch({ type: "go", view: "placement" }); }, [nav.view, progress]);
 
   const gainXP = (amount: number, label?: string) => {
     sessionXpRef.current += amount;
@@ -273,7 +277,7 @@ export default function App() {
     let inner: JSX.Element | null = null;
     if (nav.view === "home") inner = <HomeScreen child={child} progress={progress} onStartLesson={startLesson} onOpenLesson={openLesson}
       onClaim={openChest} onSearch={() => setPalette(true)} onMission={onMission} />;
-    if (nav.view === "profile") inner = <ProfileScreen child={child} parent={parent} progress={progress} onTrophies={() => dispatch({ type: "go", view: "trophies" })} onSwitchChild={() => void switchChild()} />;
+    if (nav.view === "profile") inner = <ProfileScreen child={child} parent={parent} progress={progress} onTrophies={() => dispatch({ type: "go", view: "trophies" })} onSwitchChild={() => void switchChild()} onPlacement={() => dispatch({ type: "go", view: "placement" })} />;
     if (nav.view === "trophies") inner = <TrophyScreen progress={progress} onEquip={equip} />;
     if (nav.view === "review") inner = <ReviewScreen progress={progress} onBack={() => dispatch({ type: "go", view: "home" })} onFinish={finishReview} onWord={onWord} />;
     if (nav.view === "lesson") inner = <LessonScreen lesson={lesson} stars={progress.stars[lesson.id] || 0} onBack={() => dispatch({ type: "go", view: "home" })}
@@ -290,6 +294,15 @@ export default function App() {
       combo={combo} sessionXp={sessionXp} onWord={onWord} onFinish={finishActivity}
       onExit={() => dispatch({ type: "exitActivity" })} onRetry={() => practice(nav.activity!.type)} />;
     topKey = `act-${nav.activity.run}`;
+  } else if (nav.view === "placement") {
+    content = <PlacementScreen child={child} progress={progress}
+      onRecord={(es, en, ok, dir) => onWord(es, en, ok, { quiet: true, dir })}
+      onCancel={() => { update(p => ({ ...p, placementOffered: true })); dispatch({ type: "go", view: "home" }); }}
+      onDone={r => {
+        update(p => r === "new" ? { ...p, placementOffered: true }
+          : { ...p, placementOffered: true, placedUpTo: lastLessonOf(r.world), placement: { world: r.world, at: Date.now(), asked: r.asked, right: r.right } });
+        dispatch({ type: "go", view: "home" });
+      }} />;
   } else if (nav.view === "done" && nav.done) {
     content = <DoneScreen lesson={lesson} result={nav.done} progress={progress}
       onNext={startLesson} onHome={() => dispatch({ type: "go", view: "home" })} onPractice={() => openLesson(lesson)} />;
@@ -307,7 +320,7 @@ export default function App() {
     {rewards[0] && <RewardToast key={`${rewards[0].type}-${rewards[0].id}`} reward={rewards[0]} onClose={() => setRewards(q => q.slice(1))} />}
     {(nav.view === "activity" || nav.view === "review") && <MascotReaction reaction={reaction} onDone={() => setReaction(null)} />}
     {palette && child && progress && <CommandPalette onClose={() => setPalette(false)} onOpenLesson={openLesson}
-      unlockedUpTo={Math.min(LESSONS.length, maxCompleted(progress.stars) + 1)} />}
+      unlockedUpTo={unlockedUpTo(progress, LESSONS.length)} />}
     {levelUp && <LevelUpModal level={levelUp.level} title={levelUp.title} onClose={() => setLevelUp(null)} />}
   </MotionConfig></GuideContext.Provider>;
 }
