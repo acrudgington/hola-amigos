@@ -12,7 +12,7 @@ export function LessonScreen({ lesson, stars, onBack, onStart, onPractice }: { l
       <Button size="sm" onClick={onBack}>← {world?.name || "Map"}</Button>
 
       <div className="lesson-hero">
-        <div className="lesson-hero__emoji" aria-hidden="true"><Art e={lesson.emoji} size={88} eager /></div>
+        <div className="lesson-hero__emoji" aria-hidden="true"><Art e={lesson.emoji} size={88} eager still /></div>
         <div className="eyebrow" style={{ color: world?.color }}>Lesson {lesson.id} · {world?.name}</div>
         <h1 className="h1" style={{ marginTop: 2 }}>{lesson.title}</h1>
         <p className="muted" style={{ marginTop: 4 }}>{lesson.subtitle}</p>

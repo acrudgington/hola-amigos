@@ -69,7 +69,7 @@ export function ActivityScreen({ lesson, type, journey, combo = 0, sessionXp = 0
   const meta = ACTIVITIES[type];
   const guide = useGuide();
   // Read the instructions aloud as the activity opens (pre-readers can play alone).
-  useSayOnShow(type === "surprise" ? null : INSTRUCTIONS[type], { delay: 450 });
+  useSayOnShow(type === "surprise" ? null : INSTRUCTIONS[type], { delay: 450, lead: true });
 
   const finish = (correct: number, total: number, stats?: ActivityStats) => {
     onFinish(correct, total, stats);

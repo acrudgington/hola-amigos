@@ -16,8 +16,10 @@ const GAP_MS = 90;               // breath between segments of one line
 
 export interface PlayOptions {
   // "interrupt" (default) stops whatever is playing; "queue" waits its turn
-  // (used for words that auto-play after an instruction).
-  mode?: "interrupt" | "queue";
+  // (used for words that auto-play after an instruction); "lead" is an
+  // activity's spoken instructions: it plays now and keeps anything queued
+  // to follow it.
+  mode?: "interrupt" | "queue" | "lead";
   onEnd?: () => void;
 }
 
@@ -70,6 +72,9 @@ class VoicePlayer {
   private current: Job | null = null;
   private token = 0;
   private unlocked = false;
+  // An activity's instructions are about to play: queued lines wait for them.
+  private introPending = false;
+  private introTimer: ReturnType<typeof setTimeout> | null = null;
 
   private element() {
     if (!this.el && hasWindow) { this.el = new Audio(); this.el.preload = "auto"; }
@@ -91,9 +96,40 @@ class VoicePlayer {
   play(segments: Segment[], { mode = "interrupt", onEnd }: PlayOptions = {}) {
     if (!segments.length) { onEnd?.(); return; }
     const job: Job = { segments, onEnd };
-    if (mode === "queue" && this.current) { this.queue.push(job); return; }
+    if (mode === "queue" && (this.current || this.introPending)) { this.queue.push(job); return; }
+    if (mode === "lead") {
+      const waiting = this.queue;
+      this.endIntroWait();
+      this.stop();
+      this.queue = waiting;
+      this.run(job);
+      return;
+    }
     this.stop();
     this.run(job);
+  }
+
+  // Hold queued lines until the instructions start (or give up after a moment,
+  // e.g. when spoken guidance is turned off).
+  expectIntro(maxWaitMs = 1500) {
+    this.endIntroWait();
+    this.introPending = true;
+    this.introTimer = setTimeout(() => this.releaseIntro(), maxWaitMs);
+  }
+  releaseIntro() {
+    if (!this.introPending) return;
+    this.endIntroWait();
+    if (!this.current) { const next = this.queue.shift(); if (next) this.run(next); }
+  }
+  // The activity closed before its instructions played: drop what was waiting for them.
+  cancelIntro() {
+    if (!this.introPending) return;
+    this.endIntroWait();
+    this.queue = [];
+  }
+  private endIntroWait() {
+    this.introPending = false;
+    if (this.introTimer) { clearTimeout(this.introTimer); this.introTimer = null; }
   }
 
   stop() {
@@ -152,6 +188,9 @@ export const voice = {
   // English narration that may contain Spanish: stories, questions, instructions.
   narrate: (text: string, opts?: PlayOptions & { speaker?: Speaker }) => player.play(narration(text, opts?.speaker), opts),
   stop: () => player.stop(),
+  expectIntro: (maxWaitMs?: number) => player.expectIntro(maxWaitMs),
+  releaseIntro: () => player.releaseIntro(),
+  cancelIntro: () => player.cancelIntro(),
   unlock: () => player.unlock(),
   busy: () => player.isBusy(),
   prefetch: (lines: { spanish?: string[]; narration?: string[] }) =>

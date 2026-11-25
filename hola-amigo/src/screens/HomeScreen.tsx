@@ -29,7 +29,7 @@ function NextCard({ lesson, label, onClick }: { lesson: Lesson; label: string; o
     <div className="next-card__top"><span className="next-card__tag">{label}</span></div>
     <div className="row" style={{ position: "relative", gap: 14 }}>
       <motion.div className="next-card__emoji" aria-hidden="true" animate={{ rotate: [0, -6, 6, 0], y: [0, -3, 0] }} transition={{ duration: 2.6, repeat: Infinity, repeatDelay: 1.2 }}>
-        <Art e={isMilestone(lesson.id) ? "🏆" : lesson.emoji} size={78} eager />
+        <Art e={isMilestone(lesson.id) ? "🏆" : lesson.emoji} size={78} eager still />
       </motion.div>
       <div className="grow">
         <div className="display" style={{ fontSize: 28 }}>{lesson.title}</div>

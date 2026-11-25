@@ -865,3 +865,27 @@ li:last-child > .step .step__rail { display: none; }
 .world__banner-info { z-index: 1; }
 .world__name, .world__desc { text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35); }
 .next-card__scene { opacity: 0.85; -webkit-mask-image: linear-gradient(180deg, transparent, #000 55%); mask-image: linear-gradient(180deg, transparent, #000 55%); }
+
+/* ============================================================
+   Word-picture motion (Art.tsx)
+   ============================================================ */
+.art--pop { animation: art-pop 0.55s var(--ease-spring) backwards; }
+.art--idle { animation: art-pop 0.55s var(--ease-spring) backwards, art-idle 3.4s ease-in-out 0.55s infinite; animation-delay: 0s, var(--art-delay, 0s); }
+.art.is-tapped { animation: art-jelly 0.55s ease-out !important; }
+.float .art, .boss-emoji .art, .reaction .art { animation: art-pop 0.55s var(--ease-spring) backwards; }
+.choices > .choice:nth-child(2) .art--pop { animation-delay: 0.05s; }
+.choices > .choice:nth-child(3) .art--pop { animation-delay: 0.1s; }
+.choices > .choice:nth-child(4) .art--pop { animation-delay: 0.15s; }
+
+/* answers: right → jump for joy, wrong → droop */
+.choice.is-correct .art, .big-emoji.is-happy .art, .drop-target.is-done .art { animation: art-joy 0.75s var(--ease-spring) !important; }
+.choice.is-wrong .art, .big-emoji.is-sad .art { animation: art-droop 0.9s ease-out forwards !important; }
+.choice.is-matched .art { animation: art-hop 0.5s ease-out !important; }
+.choice:hover:not(:disabled) .art--pop { transform: translateY(-2px) rotate(-4deg); transition: transform 0.2s var(--ease-spring); }
+
+@keyframes art-pop { 0% { transform: scale(0.5) rotate(-12deg); opacity: 0; } 60% { transform: scale(1.1) rotate(4deg); opacity: 1; } 100% { transform: none; } }
+@keyframes art-idle { 0%, 100% { transform: translateY(0) rotate(0); } 30% { transform: translateY(-4px) rotate(-2.5deg); } 70% { transform: translateY(-1px) rotate(2deg); } }
+@keyframes art-jelly { 0% { transform: scale(1, 1); } 25% { transform: scale(1.18, 0.82); } 45% { transform: scale(0.88, 1.12); } 65% { transform: scale(1.06, 0.95); } 85% { transform: scale(0.98, 1.02); } 100% { transform: scale(1, 1); } }
+@keyframes art-joy { 0% { transform: none; } 30% { transform: translateY(-16px) scale(1.15) rotate(-10deg); } 55% { transform: translateY(0) scale(0.92, 1.08) rotate(6deg); } 75% { transform: translateY(-5px) rotate(-3deg); } 100% { transform: none; } }
+@keyframes art-droop { 0% { transform: none; } 20% { transform: translateX(-4px) rotate(-6deg); } 40% { transform: translateX(4px) rotate(6deg); } 70%, 100% { transform: translateY(4px) rotate(-8deg) scale(0.94); filter: grayscale(0.6) var(--art-shadow); } }
+@keyframes art-hop { 0%, 100% { transform: none; } 45% { transform: translateY(-10px) scale(1.1); } }

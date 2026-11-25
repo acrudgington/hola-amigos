@@ -39,7 +39,7 @@ export function LearnIntro({ words, onDone, onWord }: { words: Word[]; onDone: (
 
   // Say each new word as it appears. (This used to happen on the "Next word"
   // tap, so children heard the word they'd just learned instead of the new one.)
-  // The first word waits for the activity's spoken introduction to finish.
+  // The first word queues behind the activity's spoken instructions (see useSayOnShow's `lead`).
   const showing = step?.kind === "show" ? step.w.es : null;
   useEffect(() => {
     if (!showing) return;
@@ -76,7 +76,7 @@ export function LearnIntro({ words, onDone, onWord }: { words: Word[]; onDone: (
   return <div className="text-center" key={at}>
     <div className="counter">{step.label}</div>
     <div className="tiny muted" style={{ margin: "4px 0 12px" }}>{step.i + 1} / {step.n}</div>
-    <div className="big-emoji"><Art e={w.emoji} size={84} eager /></div>
+    <div className={`big-emoji ${picked == null ? "" : picked === w.en ? "is-happy" : "is-sad"}`}><Art e={w.emoji} size={84} eager /></div>
     <div className="row row--center" style={{ gap: 10, margin: "6px 0 16px" }}>
       <div className="big-word">{w.es}</div><SpeakButton text={w.es} />
     </div>
