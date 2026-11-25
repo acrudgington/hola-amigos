@@ -1,0 +1,85 @@
+[
+  { "world": 1, "title": "Hello, me and my world", "level": "pre-a1", "goals": [
+    { "id": "1a", "can": "I can say hello, goodbye and thank you.", "es": "¡Hola! ¿Qué tal? — Bien, gracias.", "lessons": [1] },
+    { "id": "1b", "can": "I can say my name and ask someone theirs.", "es": "Me llamo Mia. ¿Cómo te llamas?", "lessons": [2] },
+    { "id": "1c", "can": "I can count from 1 to 10.", "es": "Uno, dos, tres… ¡diez!", "lessons": [3] },
+    { "id": "1d", "can": "I can name colours and animals.", "es": "El perro es negro.", "lessons": [4, 5] },
+    { "id": "1e", "can": "I can name my family and parts of my body.", "es": "Mi mamá, mi papá… ¡Tócate la cabeza!", "lessons": [6, 7] },
+    { "id": "1f", "can": "I can say how I feel.", "es": "Estoy feliz. Tengo hambre.", "lessons": [8] }
+  ] },
+  { "world": 2, "title": "My everyday things", "level": "pre-a1", "goals": [
+    { "id": "2a", "can": "I can name foods and fruit.", "es": "Me gusta la pizza. Mi fruta favorita es la fresa.", "lessons": [9, 10] },
+    { "id": "2b", "can": "I can talk about a day at the beach.", "es": "¡Vamos a la playa!", "lessons": [11] },
+    { "id": "2c", "can": "I can name things at school and the clothes I wear.", "es": "Llevo una camiseta roja.", "lessons": [12, 13] },
+    { "id": "2d", "can": "I can name the rooms in my house.", "es": "La cocina, el salón, mi dormitorio.", "lessons": [14] },
+    { "id": "2e", "can": "I can say the days of the week and what the weather is like.", "es": "Hoy es lunes y hace sol.", "lessons": [15] },
+    { "id": "2f", "can": "I can remember the words from my first two worlds.", "es": "¡Soy un campeón de español!", "lessons": [16] }
+  ] },
+  { "world": 3, "title": "My first sentences", "level": "a1", "goals": [
+    { "id": "3a", "can": "I can describe myself and other people.", "es": "Soy alto. Ella es simpática.", "lessons": [17, 23] },
+    { "id": "3b", "can": "I can say what I have and how old I am.", "es": "Tengo un perro. Tengo ocho años.", "lessons": [18] },
+    { "id": "3c", "can": "I can say what I like and don't like.", "es": "Me gusta el chocolate, pero no me gusta el pescado.", "lessons": [19] },
+    { "id": "3d", "can": "I can say what I want to do and what I can do.", "es": "Quiero ir a la playa. Puedo nadar.", "lessons": [20] },
+    { "id": "3e", "can": "I can tell the time and describe my day.", "es": "Me despierto a las siete.", "lessons": [21, 22] },
+    { "id": "3f", "can": "I can build simple sentences on my own.", "es": "Tengo una hermana pequeña.", "lessons": [24] }
+  ] },
+  { "world": 4, "title": "Out and about, then and next", "level": "a1", "goals": [
+    { "id": "4a", "can": "I can say what I did yesterday.", "es": "Ayer fui al parque.", "lessons": [25], "taster": true },
+    { "id": "4b", "can": "I can say what I'm going to do.", "es": "Mañana voy a nadar.", "lessons": [26] },
+    { "id": "4c", "can": "I can order food and ask for the bill.", "es": "Quiero la sopa, por favor. La cuenta, por favor.", "lessons": [27] },
+    { "id": "4d", "can": "I can ask how much something costs.", "es": "¿Cuánto cuesta?", "lessons": [28] },
+    { "id": "4e", "can": "I can ask the way and follow simple directions.", "es": "¿Dónde está el parque? — Todo recto.", "lessons": [29] },
+    { "id": "4f", "can": "I can say what hurts.", "es": "Me duele la cabeza.", "lessons": [30] },
+    { "id": "4g", "can": "I can follow a short story in Spanish.", "es": "Había una vez…", "lessons": [31, 32] }
+  ] },
+  { "world": 5, "title": "Around my town", "level": "a1", "goals": [
+    { "id": "5a", "can": "I can name places in town and ways to travel.", "es": "Voy al cole en bicicleta.", "lessons": [33, 34] },
+    { "id": "5b", "can": "I can do the food shopping with a list.", "es": "Una botella de agua y un paquete de pan.", "lessons": [35, 36] },
+    { "id": "5c", "can": "I can talk about sports and what I do in my free time.", "es": "Me encanta jugar al fútbol.", "lessons": [37, 38] },
+    { "id": "5d", "can": "I can name farm animals and things in the countryside.", "es": "En la granja hay muchas gallinas.", "lessons": [39, 40] }
+  ] },
+  { "world": 6, "title": "Friends, feelings and opinions", "level": "a1", "goals": [
+    { "id": "6a", "can": "I can talk about my friends and celebrations.", "es": "¡Feliz cumpleaños! Mi mejor amiga es Sara.", "lessons": [41, 42] },
+    { "id": "6b", "can": "I can say what people do and what I want to be.", "es": "Quiero ser astronauta.", "lessons": [43] },
+    { "id": "6c", "can": "I can talk about music, art and technology.", "es": "Toco la guitarra. Tengo un móvil nuevo.", "lessons": [44, 45] },
+    { "id": "6d", "can": "I can say I'm ill and describe how I feel.", "es": "Tengo fiebre. Estoy un poco nervioso.", "lessons": [46, 47] },
+    { "id": "6e", "can": "I can give my opinion and compare things.", "es": "Creo que mi hermano es más alto que yo.", "lessons": [48, 49, 50], "taster": true }
+  ] },
+  { "world": 7, "title": "Telling stories", "level": "a1", "goals": [
+    { "id": "7a", "can": "I can say what I was doing when something happened.", "es": "Estaba leyendo cuando llegó papá.", "lessons": [51], "taster": true },
+    { "id": "7b", "can": "I can talk about when I was little.", "es": "Cuando era pequeño, vivía en Inglaterra.", "lessons": [52, 53], "taster": true },
+    { "id": "7c", "can": "I can join my ideas together.", "es": "Estoy contento porque hace sol.", "lessons": [54] },
+    { "id": "7d", "can": "I can describe my dream house and dream trip.", "es": "Mi casa ideal tendría una piscina.", "lessons": [55, 56], "taster": true },
+    { "id": "7e", "can": "I can agree, disagree, give instructions and give advice.", "es": "Tienes razón. Primero coge un huevo. Deberías descansar.", "lessons": [57, 58, 59, 60], "taster": true }
+  ] },
+  { "world": 8, "title": "Life at home", "level": "a1", "goals": [
+    { "id": "8a", "can": "I can name the things in my schoolbag and the bathroom.", "es": "En mi mochila tengo cuadernos y bolis.", "lessons": [61, 62] },
+    { "id": "8b", "can": "I can name things in the kitchen and my bedroom.", "es": "Pongo los platos y los vasos.", "lessons": [63, 64] },
+    { "id": "8c", "can": "I can talk about tidying up and chores.", "es": "Hago la cama cada día.", "lessons": [65, 66] },
+    { "id": "8d", "can": "I can use euros and pay in a shop.", "es": "Tengo cinco euros para gastar.", "lessons": [67, 68] }
+  ] },
+  { "world": 9, "title": "Things I do and play", "level": "a1", "goals": [
+    { "id": "9a", "can": "I can use everyday action words and talk about making things.", "es": "Abro la puerta. Corto el papel.", "lessons": [69, 71] },
+    { "id": "9b", "can": "I can talk about the playground and my toys.", "es": "Me subo al tobogán. Mi juguete favorito es mi peluche.", "lessons": [70, 72] },
+    { "id": "9c", "can": "I can play games with friends in Spanish.", "es": "¡Te toca! Jugamos al escondite.", "lessons": [73] },
+    { "id": "9d", "can": "I can talk about my favourite books and films.", "es": "Me encanta leer cuentos antes de dormir.", "lessons": [74, 75, 76] }
+  ] },
+  { "world": 10, "title": "The world around me", "level": "a1", "goals": [
+    { "id": "10a", "can": "I can name zoo animals and sea creatures.", "es": "En el mar hay peces y delfines.", "lessons": [77, 78] },
+    { "id": "10b", "can": "I can name minibeasts and things in the garden.", "es": "Las plantas necesitan agua y sol.", "lessons": [79, 81] },
+    { "id": "10c", "can": "I can talk about the seasons and the sky.", "es": "En verano hace calor. Después de la lluvia hay un arcoíris.", "lessons": [80, 82] },
+    { "id": "10d", "can": "I can name things in space.", "es": "La Tierra y la Luna están en el espacio.", "lessons": [83, 84] }
+  ] },
+  { "world": 11, "title": "All about me", "level": "a1", "goals": [
+    { "id": "11a", "can": "I can describe what I look like.", "es": "Tengo el pelo rubio y los ojos azules.", "lessons": [85] },
+    { "id": "11b", "can": "I can describe my personality and what I like.", "es": "Soy amable y un poco gracioso.", "lessons": [86, 87] },
+    { "id": "11c", "can": "I can talk about my wider family and neighbours.", "es": "Tengo dos tíos y cuatro primos.", "lessons": [88, 89] },
+    { "id": "11d", "can": "I can talk about school subjects and parties.", "es": "Me gustan las matemáticas y la música.", "lessons": [90, 91, 92] }
+  ] },
+  { "world": 12, "title": "Putting it all together", "level": "a1", "goals": [
+    { "id": "12a", "can": "I can count to 50 and greet people politely.", "es": "Encantado. Hasta luego.", "lessons": [93] },
+    { "id": "12b", "can": "I can describe shapes, colours and flavours.", "es": "Veo una estrella amarilla. El limón es ácido.", "lessons": [94, 95] },
+    { "id": "12c", "can": "I can talk about my home and the weather through the year.", "es": "Hoy hace buen tiempo.", "lessons": [96, 97] },
+    { "id": "12d", "can": "I can order in a restaurant and buy clothes.", "es": "De primero quiero ensalada. ¿Puedo probar esto?", "lessons": [98, 99, 100] }
+  ] }
+]

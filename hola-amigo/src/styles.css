@@ -889,3 +889,49 @@ li:last-child > .step .step__rail { display: none; }
 @keyframes art-joy { 0% { transform: none; } 30% { transform: translateY(-16px) scale(1.15) rotate(-10deg); } 55% { transform: translateY(0) scale(0.92, 1.08) rotate(6deg); } 75% { transform: translateY(-5px) rotate(-3deg); } 100% { transform: none; } }
 @keyframes art-droop { 0% { transform: none; } 20% { transform: translateX(-4px) rotate(-6deg); } 40% { transform: translateX(4px) rotate(6deg); } 70%, 100% { transform: translateY(4px) rotate(-8deg) scale(0.94); filter: grayscale(0.6) var(--art-shadow); } }
 @keyframes art-hop { 0%, 100% { transform: none; } 45% { transform: translateY(-10px) scale(1.1); } }
+
+/* ============================================================
+   "I can…" goals (parent dashboard + child profile)
+   ============================================================ */
+.level-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.level-chip { display: inline-flex; align-items: center; gap: 6px; height: 30px; padding: 0 11px; border-radius: 999px; font-size: 13px; font-weight: 800;
+  border: 1px solid var(--lc); color: var(--text); background: color-mix(in srgb, var(--lc) 12%, transparent); cursor: help; }
+.level-chip b { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.06em; color: var(--lc); }
+.level-chip--pre-a1 { --lc: var(--mint); }
+.level-chip--a1 { --lc: var(--sky); }
+.level-chip--a2-taster { --lc: var(--luna); }
+.level-tag { display: inline-block; margin-left: 8px; padding: 1px 7px; border-radius: 999px; font-family: var(--font-mono); font-size: 10px; font-weight: 700; letter-spacing: 0.06em; vertical-align: 2px; }
+.level-tag--a2 { color: var(--luna); background: color-mix(in srgb, var(--luna) 14%, transparent); border: 1px solid color-mix(in srgb, var(--luna) 35%, transparent); }
+.next-goal { padding: 12px 14px; border-radius: 14px; margin-bottom: 12px; border: 1px solid color-mix(in srgb, var(--sun) 40%, transparent);
+  background: linear-gradient(90deg, color-mix(in srgb, var(--sun) 12%, transparent), transparent 80%); }
+.next-goal__can { font-weight: 900; font-size: 15px; margin: 3px 0 2px; }
+.units { display: flex; flex-direction: column; gap: 8px; }
+.unit { border-radius: 14px; border: 1px solid var(--hairline); background: var(--glass-2); overflow: hidden; }
+.unit__head { display: flex; align-items: center; gap: 10px; padding: 10px 12px; cursor: pointer; list-style: none; }
+.unit__head::-webkit-details-marker { display: none; }
+.unit__title { font-weight: 900; font-size: 14px; }
+.unit__sub { font-size: 11px; font-weight: 800; color: var(--muted); }
+.unit__count { font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: var(--text-2); }
+.unit__chev { color: var(--muted); transition: transform 0.2s; }
+.unit[open] .unit__chev { transform: rotate(90deg); }
+.unit__bar { height: 4px; background: var(--track); }
+.unit__bar > div { height: 100%; background: var(--wc); transition: width 0.6s var(--ease-out); }
+.goals { list-style: none; padding: 6px 8px 8px; }
+.goal { display: flex; align-items: flex-start; gap: 10px; padding: 9px 6px; }
+.goal + .goal { border-top: 1px dashed var(--hairline); }
+.goal__icon { width: 22px; height: 22px; flex-shrink: 0; border-radius: 50%; display: grid; place-items: center; font-size: 13px; margin-top: 1px;
+  border: 2px solid var(--border-2); color: var(--muted); }
+.goal--achieved .goal__icon { background: var(--mint); border-color: var(--mint); color: #fff; }
+.goal--practising .goal__icon { border-color: var(--sun); color: var(--sun); }
+.goal__can { font-weight: 800; font-size: 14px; line-height: 1.35; }
+.goal--not-started .goal__can { color: var(--text-2); }
+.goal__es { font-size: 13px; font-style: italic; color: var(--text-2); margin-top: 2px; }
+.goal__meta { font-family: var(--font-mono); font-size: 10.5px; color: var(--muted); margin-top: 3px; }
+.goal__state { font-family: var(--font-mono); font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap; color: var(--muted); padding-top: 3px; }
+.goal--achieved .goal__state { color: var(--mint); }
+.goal--practising .goal__state { color: var(--sun); }
+@media (max-width: 480px) { .goal__state { display: none; } }
+.can-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.can-list li { display: flex; gap: 10px; align-items: flex-start; font-weight: 800; font-size: 14px; }
+.can-list .goal__icon { background: var(--mint); border-color: var(--mint); color: #fff; }
+.goal--practising .goal__icon::after { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--sun); }

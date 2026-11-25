@@ -3,7 +3,7 @@
 // Mixed English/Spanish lines are split with the same splitter the voices use,
 // so only the Spanish parts are checked. Run: npm run content:grammar
 import { writeFileSync } from "node:fs";
-import { LESSONS } from "../src/content/index.ts";
+import { LESSONS, UNITS } from "../src/content/index.ts";
 import { segmentMixed, splitSentences } from "../src/audio/text.ts";
 
 interface Item { where: string; text: string }
@@ -22,6 +22,8 @@ for (const l of LESSONS) {
   l.story.paras.forEach((p, i) => addMixed(`${L} story ${i + 1}`, p));
   for (const q of l.story.qs) addMixed(`${L} question`, q.q);
 }
+
+for (const u of UNITS) for (const g of u.goals) add(`goal ${g.id}`, g.es);
 
 // Rules that only flag the course's deliberate style (sentence-building tiles have
 // no punctuation; children's lines are short and exclamatory).

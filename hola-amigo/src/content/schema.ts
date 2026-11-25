@@ -77,6 +77,22 @@ export const SurpriseSchema = z.object({
   lines: z.array(text).min(1),
 });
 
+// "I can…" units: one per world, each with plain-English goals that link to the
+// lessons that teach them. Levels are honest CEFR bands (see content/review/README.md).
+export const GoalSchema = z.object({
+  id: text,
+  can: z.string().regex(/^I can /, "goals start with \"I can \""),
+  es: text,
+  lessons: z.array(z.number().int().positive()).min(1),
+  taster: z.boolean().optional(),   // a first taste of A2 grammar
+});
+export const UnitSchema = z.object({
+  world: z.number().int().positive(),
+  title: text,
+  level: z.enum(["pre-a1", "a1"]),
+  goals: z.array(GoalSchema).min(1),
+});
+
 export type Word = z.infer<typeof WordSchema>;
 export type Sentence = z.infer<typeof SentenceSchema>;
 export type Gap = z.infer<typeof GapSchema>;
@@ -86,6 +102,8 @@ export type Lesson = z.infer<typeof LessonSchema>;
 export type LessonFile = z.infer<typeof LessonFileSchema>;
 export type World = z.infer<typeof WorldSchema>;
 export type Surprise = z.infer<typeof SurpriseSchema>;
+export type Goal = z.infer<typeof GoalSchema>;
+export type Unit = z.infer<typeof UnitSchema>;
 
 export interface ContentIssue { level: "error" | "warning"; where: string; message: string }
 
@@ -94,7 +112,7 @@ const dupes = <T,>(xs: T[]) => xs.filter((x, i) => xs.indexOf(x) !== i);
 
 // Rules that a schema alone can't express: cross-file consistency and
 // teaching-quality checks. Errors fail the build; warnings are reported.
-export function checkCourse(worlds: unknown, lessonFiles: unknown[], surprises: unknown): ContentIssue[] {
+export function checkCourse(worlds: unknown, lessonFiles: unknown[], surprises: unknown, units?: unknown): ContentIssue[] {
   const issues: ContentIssue[] = [];
   const err = (where: string, message: string) => issues.push({ level: "error", where, message });
   const warn = (where: string, message: string) => issues.push({ level: "warning", where, message });
@@ -141,5 +159,27 @@ export function checkCourse(worlds: unknown, lessonFiles: unknown[], surprises: 
       if (dupes(q.opts).length) err(`${at} story question ${i + 1}`, "options repeat");
     });
   }
+  // Units: one per world; every lesson is taught by exactly one goal, inside its own world.
+  if (units !== undefined) {
+    const u = z.array(UnitSchema).safeParse(units);
+    if (!u.success) u.error.issues.forEach(i => err(`units.json:${i.path.join(".")}`, i.message));
+    else {
+      for (const world of w.data) if (!u.data.some(x => x.world === world.id)) err(`units.json`, `no unit for world ${world.id} (${world.name})`);
+      dupes(u.data.map(x => x.world)).forEach(id => err(`units.json`, `two units for world ${id}`));
+      dupes(u.data.flatMap(x => x.goals.map(g => g.id))).forEach(id => err(`units.json`, `goal id "${id}" is used twice`));
+      const covered = new Map<number, string>();
+      for (const unit of u.data) {
+        const world = w.data.find(x => x.id === unit.world);
+        if (!world) { err(`units.json`, `unit for unknown world ${unit.world}`); continue; }
+        for (const g of unit.goals) for (const id of g.lessons) {
+          if (id < world.range[0] || id > world.range[1]) err(`goal ${g.id}`, `lesson ${id} isn't in ${world.name}`);
+          if (covered.has(id)) err(`goal ${g.id}`, `lesson ${id} is already in goal ${covered.get(id)}`);
+          covered.set(id, g.id);
+        }
+      }
+      for (const l of lessons) if (!covered.has(l.id)) err(`lesson ${l.id}`, "isn't part of any \"I can…\" goal");
+    }
+  }
+
   return issues;
 }

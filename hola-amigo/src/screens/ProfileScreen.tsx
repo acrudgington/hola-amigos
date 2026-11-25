@@ -5,6 +5,9 @@ import type { Child, Parent } from "../services/index.ts";
 import { Button, Card, ProgressBar } from "../components/ui.tsx";
 import { AnimatedNumber, LevelRing, MasteryCard, StreakCard, WeeklyChart } from "../components/Widgets.tsx";
 import { Art } from "../components/Art.tsx";
+import { Icon } from "../components/Icon.tsx";
+import { UNITS } from "../content/index.ts";
+import { achievedGoals } from "../domain/goals.ts";
 
 // "Me" — the child's personal stats dashboard.
 export function ProfileScreen({ child, parent, progress, onTrophies, onSwitchChild }: { child: Child; parent: Parent; progress: Progress; onTrophies: () => void; onSwitchChild: () => void }) {
@@ -12,6 +15,8 @@ export function ProfileScreen({ child, parent, progress, onTrophies, onSwitchChi
   const words = Object.keys(progress.wordMemory || {}).length;
   const pct = lessons / LESSONS.length;
   const info = levelInfo(progress.xp);
+  const achieved = achievedGoals(progress);
+  const totalGoals = UNITS.reduce((n, u) => n + u.goals.length, 0);
   const stats = [
     { v: sumStars(progress), l: "Stars", e: "⭐", c: "var(--sun)" },
     { v: lessons, l: "Lessons", e: "📚", c: "var(--mint)" },
@@ -57,5 +62,17 @@ export function ProfileScreen({ child, parent, progress, onTrophies, onSwitchChi
       <Button variant="luna" block onClick={onTrophies}>🏆 Trophies</Button>
       <Button block onClick={onSwitchChild}>👥 Switch</Button>
     </div>
+    <Card>
+      <div className="row row--between" style={{ marginBottom: 12, alignItems: "baseline" }}>
+        <div className="h3">Things I can do in Spanish</div>
+        <span className="small muted mono">{achieved.length}/{totalGoals}</span>
+      </div>
+      {achieved.length
+        ? <ul className="can-list">{achieved.slice(-6).reverse().map(g => <li key={g.goal.id}>
+            <span className="goal__icon" aria-hidden="true"><Icon name="check" size={14} stroke={3.5} /></span>
+            <div><div>{g.goal.can}</div><div className="goal__es" lang="es">{g.goal.es}</div></div>
+          </li>)}</ul>
+        : <p className="small muted">Finish a lesson and practise its words, and your first “I can…” will appear here!</p>}
+    </Card>
   </div>;
 }

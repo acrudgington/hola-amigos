@@ -1,11 +1,78 @@
 import { useState } from "react";
+import { Icon } from "../components/Icon.tsx";
 import { countLessons, getDueWords, liveStreak, sumStars, type Progress } from "../domain/progress.ts";
 import { services, type Child, type Parent } from "../services/index.ts";
 import { useFamily } from "../state/useFamily.ts";
 import { AccountPanel } from "../components/AccountPanel.tsx";
 import { LESSONS, WORLDS } from "../content/index.ts";
-import { Button, Card, Modal, ProgressBar } from "../components/ui.tsx";
+import { LEVEL_INFO, allGoals, levelSummary, nextGoal, type GoalProgress, type Level, type UnitProgress } from "../domain/goals.ts";
+import { Button, Card, Modal } from "../components/ui.tsx";
 import { Art } from "../components/Art.tsx";
+
+const rangeLabel = (ids: number[]) => ids.length === 1 ? `Lesson ${ids[0]}` : `Lessons ${ids[0]}–${ids[ids.length - 1]}`;
+const STATE_TEXT = { "achieved": "Can do", "practising": "Practising", "not-started": "Not started" } as const;
+
+function GoalRow({ g }: { g: GoalProgress }) {
+  return <li className={`goal goal--${g.state}`}>
+    <span className="goal__icon" aria-hidden="true">{g.state === "achieved" && <Icon name="check" size={14} stroke={3.5} />}</span>
+    <div className="grow">
+      <div className="goal__can">{g.goal.can}{g.level === "a2-taster" && <span className="level-tag level-tag--a2">A2 taster</span>}</div>
+      <div className="goal__es" lang="es">{g.goal.es}</div>
+      <div className="goal__meta">{rangeLabel(g.goal.lessons)} · {g.lessonsDone}/{g.lessonsTotal} done · {g.wordsKnown}/{g.wordsTotal} words known</div>
+    </div>
+    <span className="goal__state">{STATE_TEXT[g.state]}</span>
+  </li>;
+}
+
+function UnitBlock({ u, open }: { u: UnitProgress; open: boolean }) {
+  const world = WORLDS.find(w => w.id === u.unit.world)!;
+  const total = u.goals.length;
+  return <details className="unit" open={open} style={{ "--wc": world.color }}>
+    <summary className="unit__head">
+      <Art e={world.emoji} size={30} />
+      <div className="grow">
+        <div className="unit__title">{u.unit.title}</div>
+        <div className="unit__sub">{world.name} · {LEVEL_INFO[u.unit.level].label}</div>
+      </div>
+      <span className="unit__count">{u.achieved}/{total}</span>
+      <Icon name="chevronRight" size={16} className="unit__chev" />
+    </summary>
+    <div className="unit__bar"><div style={{ width: `${(u.goals.reduce((a, g) => a + g.score, 0) / total) * 100}%` }} /></div>
+    <ul className="goals">{u.goals.map(g => <GoalRow key={g.goal.id} g={g} />)}</ul>
+  </details>;
+}
+
+// What the child can now do in Spanish, goal by goal, with honest CEFR levels.
+function CanDo({ name, progress }: { name: string; progress: Progress }) {
+  const units = allGoals(progress);
+  const sum = levelSummary(units);
+  const next = nextGoal(units);
+  const openUnit = next?.unit.world ?? 1;
+  const total = units.reduce((n, u) => n + u.goals.length, 0);
+  const done = units.reduce((n, u) => n + u.achieved, 0);
+  return <section aria-label={`What ${name} can do`}>
+    <div className="row row--between" style={{ marginBottom: 10, alignItems: "baseline" }}>
+      <div className="h3">What {name} can do</div>
+      <span className="small muted mono">{done}/{total} goals</span>
+    </div>
+    <div className="level-chips">
+      {(Object.keys(sum) as Level[]).map(l => <span key={l} className={`level-chip level-chip--${l}`} title={LEVEL_INFO[l].about}>
+        <b>{LEVEL_INFO[l].short}</b> {sum[l].achieved}/{sum[l].total}
+      </span>)}
+    </div>
+    {next && <div className="next-goal">
+      <span className="eyebrow">Work on next</span>
+      <div className="next-goal__can">{next.goal.can}</div>
+      <div className="small muted">{rangeLabel(next.goal.lessons)}{next.state === "practising" ? ` · ${next.wordsKnown}/${next.wordsTotal} words known so far` : ""}</div>
+    </div>}
+    <div className="units">{units.filter(u => u.started || u.unit.world <= openUnit + 1).map(u => <UnitBlock key={u.unit.world} u={u} open={u.unit.world === openUnit} />)}</div>
+    {units.some(u => !u.started && u.unit.world > openUnit + 1) && <p className="tiny muted" style={{ marginTop: 8 }}>{units.filter(u => !u.started && u.unit.world > openUnit + 1).length} more units ahead.</p>}
+    <p className="tiny muted" style={{ marginTop: 10, lineHeight: 1.5 }}>
+      A goal counts as <b>can do</b> when its lessons are finished and {name} reliably knows most of their words.
+      Levels follow the Common European Framework (CEFR): this course covers Pre-A1 to A1, with first tastes of A2.
+    </p>
+  </section>;
+}
 
 function ChildReport({ child, progress: p, onRemove }: { child: Child; progress: Progress; onRemove: (c: Child) => void }) {
   const stars = p.stars || {};
@@ -15,7 +82,6 @@ function ChildReport({ child, progress: p, onRemove }: { child: Child; progress:
   const daysAgo = p.lastActive ? Math.floor((Date.now() - p.lastActive) / 86400000) : null;
   const active = daysAgo == null ? "Not started yet" : daysAgo === 0 ? "Active today" : daysAgo === 1 ? "Active yesterday" : `Last seen ${daysAgo} days ago`;
   const perfect = Object.values(stars).filter(s => s === 3).length;
-  const started = WORLDS.filter(w => Object.keys(stars).map(Number).some(id => id >= w.range[0] && id <= w.range[1]) || w.id === 1);
 
   return <Card style={{ marginBottom: 16 }}>
     <div className="row" style={{ marginBottom: 16 }}>
@@ -40,20 +106,7 @@ function ChildReport({ child, progress: p, onRemove }: { child: Child; progress:
       {" "}{(p.badges || []).length} badges, {(p.stickers || []).length} stickers.
     </div>
 
-    <div className="stack" style={{ "--gap": "10px" }}>
-      {started.map(w => {
-        let s = 0;
-        for (let i = w.range[0]; i <= w.range[1]; i++) s += stars[i] || 0;
-        const max = (w.range[1] - w.range[0] + 1) * 3;
-        return <div key={w.id}>
-          <div className="row row--between small" style={{ fontWeight: 800, marginBottom: 4 }}>
-            <span className="row" style={{ gap: 8 }}><Art e={w.emoji} size={22} />{w.name}</span><span className="muted">{s}/{max} ⭐</span>
-          </div>
-          <ProgressBar thin value={s / max} color={w.color} label={`${w.name} progress`} />
-        </div>;
-      })}
-      {started.length < WORLDS.length && <p className="tiny muted">{WORLDS.length - started.length} more worlds still to unlock.</p>}
-    </div>
+    <CanDo name={child.name} progress={p} />
   </Card>;
 }
 

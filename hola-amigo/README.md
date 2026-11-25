@@ -75,6 +75,19 @@ The first time you run the browser tests on a new machine, install the browser w
 
 GitHub Actions (`.github/workflows/ci.yml`) runs all of this on every push and pull request.
 
+## "I can…" goals and levels
+
+`content/units.json` groups the 100 lessons into 12 units (one per world) with 59
+plain-English goals such as *"I can say what I like and don't like"*, each with a
+Spanish example and the lessons that teach it. A goal counts as **achieved** when its
+lessons are finished **and** the child reliably knows at least 60% of their words
+(`src/domain/goals.ts`). Parents see progress goal by goal in the grown-up dashboard;
+children see "Things I can do in Spanish" on their profile.
+
+Levels are honest CEFR bands: worlds 1–2 are **Pre-A1**, the rest **A1**, and goals
+that introduce A2 grammar (the past, opinions, comparisons) are marked **A2 taster**.
+The content check fails if any lesson isn't covered by exactly one goal.
+
 ## Editing lessons
 
 All course content lives in `content/` as plain JSON, so it can be edited without touching code:
