@@ -137,7 +137,7 @@ test("learn together → the weekly report shows it", async ({ page }, info) => 
 });
 
 test("an A2 lesson (101) plays from start to finish", async ({ page }) => {
-  test.setTimeout(300_000);
+  test.setTimeout(600_000);   // a full A2 lesson, answering at random (slow on the phone emulator)
   const errors: string[] = [];
   page.on("pageerror", e => errors.push(e.message));
   await page.goto("/");
@@ -154,8 +154,10 @@ test("an A2 lesson (101) plays from start to finish", async ({ page }) => {
   await page.getByRole("button", { name: /new to Spanish/ }).click();
   await expect(page.getByText(/Sol · study buddy/)).toBeVisible();
 
-  // Pretend the placement check put Mia past the first 100 lessons.
+  // Pretend the placement check put Mia past the first 100 lessons. Instructions
+  // aren't read aloud here (a grown-up setting), which keeps this long lesson quick.
   await page.evaluate(() => {
+    localStorage.setItem("hola_prefs", JSON.stringify({ ...JSON.parse(localStorage.getItem("hola_prefs") || "{}"), guide: false }));
     const key = Object.keys(localStorage).find(k => k.startsWith("hola_progress_"))!;
     const p = JSON.parse(localStorage.getItem(key)!);
     localStorage.setItem(key, JSON.stringify({ ...p, placedUpTo: 100, placementOffered: true }));

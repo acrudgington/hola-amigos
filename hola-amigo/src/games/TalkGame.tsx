@@ -29,7 +29,7 @@ export function TalkGame({ conversation: c, onDone }: { conversation: Conversati
   const right = useRef(0);
   const mic = useRef(0);
   const recog = useRef<Recognizer | null>(null);
-  const end = useRef<HTMLDivElement>(null);
+  const box = useRef<HTMLDivElement>(null);
   const later = useLater();
   const turn = c.turns[i];
   const canListen = speech.recogSupported();
@@ -37,7 +37,9 @@ export function TalkGame({ conversation: c, onDone }: { conversation: Conversati
   const Who = c.who === "sol" ? Sol : Luna;
 
   useEffect(() => () => { try { recog.current?.abort(); } catch { /* ignore */ } voice.stop(); }, []);
-  useEffect(() => { end.current?.scrollIntoView({ block: "nearest", behavior: "smooth" }); }, [chat, phase]);
+  // Keep the newest message in view by scrolling the chat box only, never the
+  // page: moving the page would shift the answer buttons under a child's finger.
+  useEffect(() => { const el = box.current; if (el) el.scrollTop = el.scrollHeight; }, [chat, phase]);
 
   // Each turn: the character asks, then it's the child's go.
   useEffect(() => {
@@ -110,7 +112,7 @@ export function TalkGame({ conversation: c, onDone }: { conversation: Conversati
       <Button size="sm" variant="white" onClick={() => setEnglish(e => !e)} aria-pressed={english}>{english ? "Hide English" : "English"}</Button>
     </div>
 
-    <div className="talk__chat" lang="es">
+    <div className="talk__chat" lang="es" ref={box}>
       <AnimatePresence initial={false}>
         {chat.map((b, k) => <motion.div key={k} className={`talk__bubble talk__bubble--${b.from} talk__bubble--${c.who}`}
           initial={{ opacity: 0, y: 10, scale: 0.96 }} animate={{ opacity: 1, y: 0, scale: 1 }}>
@@ -118,7 +120,6 @@ export function TalkGame({ conversation: c, onDone }: { conversation: Conversati
           {english && b.en && <span className="talk__en" lang="en">{b.en}</span>}
         </motion.div>)}
       </AnimatePresence>
-      <div ref={end} />
     </div>
 
     {phase !== "answered" && <div className="talk__answer">
