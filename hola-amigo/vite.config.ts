@@ -10,7 +10,7 @@ export default defineConfig({
     VitePWA({
       registerType: "prompt",        // never reload mid-lesson: ask first
       filename: "sw.js",             // same URL as the old hand-written worker, so it replaces it
-      includeAssets: ["icon-192.png", "icon-512.png"],
+      includeAssets: ["icon-192.png", "icon-512.png", "icon-maskable-512.png", "apple-touch-icon.png", "favicon-64.png"],
       manifest: {
         name: "¡Hola, Amigo! — Learn Spanish",
         short_name: "Hola Amigo",
@@ -26,7 +26,7 @@ export default defineConfig({
         icons: [
           { src: "/icon-192.png", sizes: "192x192", type: "image/png", purpose: "any" },
           { src: "/icon-512.png", sizes: "512x512", type: "image/png", purpose: "any" },
-          { src: "/icon-512.png", sizes: "512x512", type: "image/png", purpose: "maskable" },
+          { src: "/icon-maskable-512.png", sizes: "512x512", type: "image/png", purpose: "maskable" },
         ],
       },
       workbox: {
