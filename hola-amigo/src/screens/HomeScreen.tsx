@@ -64,7 +64,7 @@ function WorldPath({ world, stars, unlockedUpTo, currentId, onStart }: MapProps 
 
   return <div className={`world ${locked ? "is-locked" : ""}`} style={{ "--world-color": world.color }}>
     <div className="world__banner">
-      <div className="world__banner-scene"><WorldScene world={world} height={150} /></div>
+      <div className="world__banner-scene"><WorldScene world={world} height={176} /></div>
       <div className="world__banner-info">
         <div className="world__emoji" aria-hidden="true"><Art e={world.emoji} size={46} eager /></div>
         <div className="grow">
