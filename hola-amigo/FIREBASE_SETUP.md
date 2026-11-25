@@ -30,11 +30,11 @@ You'll need: a Google account, and the site deployed somewhere (e.g. Vercel).
    site's domain, e.g. `hola-amigos.vercel.app` (and your own domain later).
    `localhost` is already there.
 
-## 3. Create the database (in the UK/EU)
+## 3. Create the database (in Spain)
 
 1. **Build → Firestore Database → Create database**.
-2. **Location: choose `europe-west2 (London)`** (or another `europe-` region).
-   This keeps families' data in the UK/EU and **can't be changed later**.
+2. **Location: choose `europe-southwest1 (Madrid)`**. This keeps families'
+   data in Spain and **can't be changed later**.
 3. Choose **Start in production mode** (everything locked). Step 5 uploads the
    app's own rules, which let each parent see only their own family.
 
@@ -123,15 +123,22 @@ and offers to *"bring them in"* with all their progress.
 This stops other websites from using your project's key. Leave "API
 restrictions" alone unless you know which Firebase APIs to keep.
 
-## 8. Before launch
+## 8. Before launch (Spain)
 
-- [ ] Fill in the real contact email in `src/config.ts` (`PRIVACY.contactEmail`).
-- [ ] Have the privacy notice (`src/components/PrivacyNotice.tsx`) reviewed, then
-      change `PRIVACY.version` from the `-draft` date.
-- [ ] Register with the ICO (UK data protection fee) if you charge for the app.
+- [ ] Fill in your legal or trading name, NIF/NIE and postal address in
+      `src/config.ts` (`PRIVACY.controller`). They appear in the privacy notice.
+- [ ] Have the privacy notice reviewed (`legal/privacy-notice.md`), then change
+      `PRIVACY.version` so it no longer ends in `-draft`.
+- [ ] Spanish law (LSSI) requires an *aviso legal* on the website with the same
+      business details, and consumer law expects terms to be available in Spanish.
+- [ ] Check Google's data processing terms are accepted for the project
+      (Firebase console → ⚙️ Project settings, look for the **Privacy** / data
+      processing section) and add your contact details there.
+- [ ] Spain has no yearly registration fee for data protection (unlike the UK's
+      ICO). Keep a simple record of what data you hold and why (the notice covers it).
 - [ ] Optional: **Firebase App Check** (reCAPTCHA Enterprise) to block bots.
-- [ ] Optional: in Google Cloud **Billing → Budgets**, set a £5 budget alert
-      before upgrading from the free plan.
+- [ ] When you upgrade from the free Spark plan, set a small budget alert in
+      Google Cloud **Billing → Budgets**.
 
 ---
 

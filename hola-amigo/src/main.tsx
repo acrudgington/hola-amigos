@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import { UpdateBanner } from "./components/UpdateBanner.tsx";
 // Fonts are bundled with the app (no requests to Google): better privacy for
-// children under the UK Children's Code, and they work offline. Latin subset
+// children under EU data protection law (GDPR), and they work offline. Latin subset
 // covers Spanish (á é í ó ú ñ ¿ ¡).
 import "@fontsource/fredoka/latin-500.css";
 import "@fontsource/fredoka/latin-600.css";

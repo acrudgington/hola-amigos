@@ -19,8 +19,18 @@ export const LANGUAGE = {
 // The privacy notice & terms version parents agree to at sign-up. Bump it when
 // the text changes; the date of agreement is stored with each account.
 export const PRIVACY = {
-  version: "2026-11-24-draft",
-  contactEmail: "privacy@example.com",   // TODO: replace with your real contact address
+  // Bump this when the notice changes materially (the consent record stores it).
+  version: "2026-11-25-draft",
+  contactEmail: "help@hola-amigos.es",
+  // The data controller (who is responsible for the data). TODO: fill in before launch.
+  controller: {
+    name: "[Your legal or trading name]",
+    taxId: "[NIF / NIE]",
+    address: "[Postal address in Spain]",
+  },
+  // Where Cloud Firestore keeps families' data (chosen when the database was created).
+  dataLocation: "Madrid, Spain",
+  authority: { name: "Agencia Española de Protección de Datos (AEPD)", site: "www.aepd.es" },
 } as const;
 
 // Subscription plans (wired to payments in step 5).

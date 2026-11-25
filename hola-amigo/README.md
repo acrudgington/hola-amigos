@@ -129,7 +129,7 @@ Two backends, chosen with `VITE_BACKEND` at build time:
 
 | | `local` (default) | `firebase` |
 |---|---|---|
-| Where data lives | This device only | Firebase (UK/EU region) with an offline copy on each device |
+| Where data lives | This device only | Firebase (database in Madrid, Spain) with an offline copy on each device |
 | Works across devices | No | Yes |
 | Password reset | No | Yes, by email |
 | Setup | None | ~20 minutes: see **[FIREBASE_SETUP.md](FIREBASE_SETUP.md)** |
