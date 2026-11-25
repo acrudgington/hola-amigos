@@ -1,0 +1,33 @@
+{
+  "name": "tranqui-ops",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Tranqui autonomous operations: prospecting, outreach, inbound, support and social agents",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "start": "tsx src/server.ts",
+    "agent": "tsx src/cli.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test test/*.test.ts"
+  },
+  "engines": {
+    "node": ">=22.13"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.14.0",
+    "@hono/node-server": "^2.1.11",
+    "hono": "^4.13.22",
+    "node-cron": "^4.6.0",
+    "nodemailer": "^10.6.1",
+    "sharp": "^0.35.5",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.7",
+    "@types/node-cron": "^3.0.11",
+    "@types/nodemailer": "^8.0.2",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3"
+  }
+}

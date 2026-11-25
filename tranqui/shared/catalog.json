@@ -1,0 +1,188 @@
+{
+  "brand": {
+    "name": "Tranqui",
+    "legalName": "Tranqui Tech Ltd (placeholder: confirm at Companies House)",
+    "tagline": "IT, sorted. Now relax.",
+    "taglineEs": "Tu informática, resuelta. Tranqui.",
+    "promise": "British-run IT support for small businesses in the UK and on the Costa Blanca. A 24/7 AI helpdesk that fixes most problems in minutes, with real engineers behind it.",
+    "domains": {
+      "primary": "tranqui.tech",
+      "uk": "tranqui.co.uk",
+      "es": "tranqui.es",
+      "outreach": ["gettranqui.co.uk", "hellotranqui.co.uk"]
+    },
+    "contact": {
+      "email": "hola@tranqui.tech",
+      "support": "help@tranqui.tech",
+      "whatsapp": "+34 600 000 000",
+      "ukPhone": "+44 20 0000 0000"
+    },
+    "regions": ["UK", "Costa Blanca"]
+  },
+  "services": [
+    {
+      "id": "helpdesk",
+      "name": "24/7 AI Helpdesk",
+      "summary": "WhatsApp, email and portal support that answers in under a minute, day or night. It walks staff through fixes, resets passwords and opens tickets. Anything it can't solve goes to a human engineer with the full history attached.",
+      "automation": "full",
+      "examples": ["Password and MFA resets", "Printer and Wi-Fi troubleshooting", "Outlook/Gmail issues", "How-do-I questions"]
+    },
+    {
+      "id": "patching",
+      "name": "Automated Patching & Updates",
+      "summary": "Windows, macOS and third-party apps patched automatically after business hours, with failed updates retried and reported.",
+      "automation": "full",
+      "examples": ["OS updates", "Chrome/Adobe/Zoom updates", "Reboot scheduling", "Patch compliance reports"]
+    },
+    {
+      "id": "security",
+      "name": "Security & Threat Protection",
+      "summary": "Managed endpoint protection (EDR), DNS filtering and email security. Threats are quarantined automatically and our engineers are alerted.",
+      "automation": "full",
+      "examples": ["EDR / antivirus", "Phishing filter", "DNS web filtering", "Dark-web credential alerts"]
+    },
+    {
+      "id": "monitoring",
+      "name": "Proactive Monitoring",
+      "summary": "We watch disk space, failing drives, backups, offline devices and expiring certificates, then fix what we can before you notice.",
+      "automation": "full",
+      "examples": ["Disk/health alerts", "Auto-remediation scripts", "Domain & SSL expiry watch", "Uptime checks"]
+    },
+    {
+      "id": "cloud",
+      "name": "Microsoft 365 & Google Workspace",
+      "summary": "Licences, mailboxes, shared drives, MFA, security baselines and starter/leaver automation, all managed for you.",
+      "automation": "high",
+      "examples": ["New starter setup in minutes", "Leaver lock-down", "MFA enforcement", "Licence optimisation"]
+    },
+    {
+      "id": "backup",
+      "name": "Backup & Recovery",
+      "summary": "Daily cloud backup of M365/Google data and key devices, with automated restore tests and a monthly report.",
+      "automation": "full",
+      "examples": ["Mailbox & OneDrive backup", "Laptop backup", "Ransomware rollback", "Restore testing"]
+    },
+    {
+      "id": "email-health",
+      "name": "Domain & Email Health",
+      "summary": "SPF, DKIM and DMARC set up properly so your emails land in inboxes and nobody can impersonate you.",
+      "automation": "high",
+      "examples": ["DMARC rollout", "Deliverability fixes", "Domain renewals", "DNS hygiene"]
+    },
+    {
+      "id": "training",
+      "name": "Staff Cyber Training",
+      "summary": "Bite-size monthly training and simulated phishing, delivered and scored automatically.",
+      "automation": "full",
+      "examples": ["Phishing simulations", "2-minute lessons", "Risk score per user"]
+    },
+    {
+      "id": "compliance",
+      "name": "Cyber Essentials & GDPR Readiness",
+      "summary": "Automated evidence gathering and gap reports for Cyber Essentials (UK) and GDPR/LOPDGDD (Spain), with an engineer sign-off.",
+      "automation": "partial",
+      "examples": ["CE readiness scan", "Policy templates", "Asset register", "Annual review"]
+    },
+    {
+      "id": "vcio",
+      "name": "Tech Health Reports & Advice",
+      "summary": "A plain-English monthly report written by our AI from live data, plus a quarterly review call on higher plans.",
+      "automation": "high",
+      "examples": ["Monthly health score", "Device lifecycle planning", "Budget forecasts"]
+    },
+    {
+      "id": "onsite",
+      "name": "On-site Help (Costa Blanca & partners)",
+      "summary": "When something needs hands, a vetted local engineer visits. Costa Blanca is covered directly and the UK through partners.",
+      "automation": "human",
+      "examples": ["New office setup", "Network & Wi-Fi installs", "Hardware swaps"]
+    }
+  ],
+  "currency": {
+    "UK": { "code": "GBP", "symbol": "£", "vatNote": "Prices exclude VAT (20%)." },
+    "Costa Blanca": { "code": "EUR", "symbol": "€", "vatNote": "Prices exclude IVA (21%)." }
+  },
+  "plans": [
+    {
+      "id": "calma",
+      "name": "Calma",
+      "tagline": "Protected and patched",
+      "price": { "GBP": 19, "EUR": 22 },
+      "unit": "per user / month",
+      "minUsers": 3,
+      "response": "Same business day",
+      "features": [
+        "24/7 AI helpdesk (WhatsApp, email, portal)",
+        "Automated patching & updates",
+        "Managed EDR antivirus",
+        "Proactive monitoring & auto-fixes",
+        "Password manager",
+        "Monthly health report"
+      ],
+      "humanSupport": "Remote engineer support billed at the Rescue rate"
+    },
+    {
+      "id": "tranqui",
+      "name": "Tranqui",
+      "tagline": "Fully looked after",
+      "featured": true,
+      "price": { "GBP": 35, "EUR": 39 },
+      "unit": "per user / month",
+      "minUsers": 3,
+      "response": "4 business hours",
+      "features": [
+        "Everything in Calma",
+        "Unlimited remote engineer support",
+        "Microsoft 365 / Google Workspace management",
+        "Cloud backup of email & files",
+        "Starter & leaver automation",
+        "Email security + DMARC",
+        "Monthly phishing training"
+      ],
+      "humanSupport": "Unlimited remote"
+    },
+    {
+      "id": "siesta",
+      "name": "Siesta",
+      "tagline": "Sleep-easy and compliance-ready",
+      "price": { "GBP": 55, "EUR": 62 },
+      "unit": "per user / month",
+      "minUsers": 3,
+      "response": "1 business hour (priority)",
+      "features": [
+        "Everything in Tranqui",
+        "Cyber Essentials / GDPR readiness",
+        "Dark-web credential monitoring",
+        "Laptop backup & ransomware rollback",
+        "Quarterly strategy review",
+        "2 on-site visits a year (Costa Blanca)",
+        "Hardware sourcing & lifecycle"
+      ],
+      "humanSupport": "Unlimited remote + priority"
+    }
+  ],
+  "payg": {
+    "id": "rescue",
+    "name": "Rescue",
+    "tagline": "No contract. Just fix it.",
+    "price": { "GBP": 45, "EUR": 49 },
+    "unit": "first 30 minutes, then per 15 minutes at a third of that",
+    "notes": "Remote only. The AI helpdesk triage is free and tries to fix the problem before a paid engineer is involved."
+  },
+  "addons": [
+    { "id": "server", "name": "Server / NAS monitoring", "price": { "GBP": 25, "EUR": 29 }, "unit": "per device / month" },
+    { "id": "device-backup", "name": "Extra device backup", "price": { "GBP": 5, "EUR": 6 }, "unit": "per device / month" },
+    { "id": "website-care", "name": "Website care (WordPress updates, uptime, backups)", "price": { "GBP": 29, "EUR": 32 }, "unit": "per site / month" },
+    { "id": "email-fix", "name": "Domain & email health fix (SPF/DKIM/DMARC)", "price": { "GBP": 149, "EUR": 165 }, "unit": "one-off" },
+    { "id": "ce", "name": "Cyber Essentials readiness pack (UK)", "price": { "GBP": 495, "EUR": 0 }, "unit": "one-off, plus IASME certification fee" },
+    { "id": "migration", "name": "Email / Microsoft 365 / Google migration", "price": { "GBP": 49, "EUR": 55 }, "unit": "per mailbox, one-off" },
+    { "id": "laptop", "name": "New laptop build & ship", "price": { "GBP": 99, "EUR": 110 }, "unit": "per device, one-off" },
+    { "id": "onsite", "name": "On-site visit (Costa Blanca)", "price": { "GBP": 0, "EUR": 65 }, "unit": "per hour, 1-hour minimum" }
+  ],
+  "terms": {
+    "onboarding": "£99 / €110 per business plus £10 / €11 per user, waived on 12-month terms",
+    "annualDiscount": "2 months free when paid annually",
+    "contract": "Monthly rolling with 30 days' notice, or 12 months with onboarding free",
+    "guarantee": "If we miss our response time twice in a month, that month is free"
+  }
+}
