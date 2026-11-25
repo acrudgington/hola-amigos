@@ -50,7 +50,8 @@ describe("I can… goals", () => {
     const sum = levelSummary(units);
     expect(sum["pre-a1"].achieved).toBe(1);
     expect(sum["a2-taster"].total).toBeGreaterThan(0);
-    expect(sum["pre-a1"].total + sum["a1"].total + sum["a2-taster"].total).toBe(UNITS.reduce((n, u) => n + u.goals.length, 0));
+    expect(sum["a2"].total).toBeGreaterThan(0);
+    expect(sum["pre-a1"].total + sum["a1"].total + sum["a2-taster"].total + sum["a2"].total).toBe(UNITS.reduce((n, u) => n + u.goals.length, 0));
     expect(nextGoal(units)?.goal.lessons).toContain(2);   // in progress beats not started
   });
 });

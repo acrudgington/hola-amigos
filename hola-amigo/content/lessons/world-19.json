@@ -72,11 +72,11 @@
             "tren"
           ],
           "shuffle": [
-            "en",
-            "Madrid",
-            "tren",
             "a",
-            "Vamos"
+            "en",
+            "Vamos",
+            "tren",
+            "Madrid"
           ],
           "en": "We're going to Madrid by train."
         },
@@ -88,8 +88,8 @@
             "andando"
           ],
           "shuffle": [
-            "andando",
             "colegio",
+            "andando",
             "al",
             "Voy"
           ],
@@ -107,12 +107,12 @@
           ],
           "shuffle": [
             "aeropuerto",
-            "lejos",
-            "mi",
-            "de",
             "está",
+            "mi",
+            "lejos",
+            "El",
             "casa",
-            "El"
+            "de"
           ],
           "en": "The airport is far from my house."
         }
@@ -247,12 +247,12 @@
             "nueve"
           ],
           "shuffle": [
-            "tren",
             "las",
             "nueve",
+            "a",
             "sale",
-            "El",
-            "a"
+            "tren",
+            "El"
           ],
           "en": "The train leaves at nine."
         },
@@ -267,13 +267,13 @@
             "vuelta"
           ],
           "shuffle": [
-            "ida",
-            "Quería",
-            "y",
-            "un",
+            "de",
             "vuelta",
             "billete",
-            "de"
+            "y",
+            "ida",
+            "Quería",
+            "un"
           ],
           "en": "I'd like a return ticket."
         },
@@ -289,14 +289,14 @@
             "minutos"
           ],
           "shuffle": [
-            "un",
             "de",
-            "tren",
             "retraso",
-            "tiene",
             "El",
+            "minutos",
             "diez",
-            "minutos"
+            "tren",
+            "un",
+            "tiene"
           ],
           "en": "The train is ten minutes late."
         }
@@ -432,13 +432,13 @@
             "esquina"
           ],
           "shuffle": [
+            "la",
+            "en",
+            "la",
+            "a",
             "esquina",
             "Gira",
-            "en",
-            "derecha",
-            "a",
-            "la",
-            "la"
+            "derecha"
           ],
           "en": "Turn right at the corner."
         },
@@ -453,13 +453,13 @@
             "recto"
           ],
           "shuffle": [
+            "y",
+            "la",
+            "Cruza",
+            "recto",
             "sigue",
             "todo",
-            "la",
-            "y",
-            "calle",
-            "recto",
-            "Cruza"
+            "calle"
           ],
           "en": "Cross the street and keep going straight on."
         },
@@ -475,14 +475,14 @@
             "calle"
           ],
           "shuffle": [
+            "al",
+            "museo",
             "está",
-            "El",
-            "de",
-            "final",
             "calle",
             "la",
-            "museo",
-            "al"
+            "de",
+            "final",
+            "El"
           ],
           "en": "The museum is at the end of the street."
         }
@@ -618,13 +618,13 @@
             "banco"
           ],
           "shuffle": [
-            "banco",
+            "farmacia",
+            "La",
             "lado",
             "al",
-            "farmacia",
+            "del",
             "está",
-            "La",
-            "del"
+            "banco"
           ],
           "en": "The chemist's is next to the bank."
         },
@@ -639,13 +639,13 @@
             "mesa"
           ],
           "shuffle": [
-            "la",
             "gato",
-            "está",
-            "debajo",
+            "la",
+            "mesa",
             "El",
+            "debajo",
             "de",
-            "mesa"
+            "está"
           ],
           "en": "The cat is under the table."
         },
@@ -659,12 +659,12 @@
             "parque"
           ],
           "shuffle": [
-            "está",
-            "casa",
-            "parque",
-            "enfrente",
+            "Mi",
             "del",
-            "Mi"
+            "parque",
+            "está",
+            "enfrente",
+            "casa"
           ],
           "en": "My house is opposite the park."
         }
@@ -776,9 +776,9 @@
           "emoji": "🥞"
         },
         {
-          "es": "La planta",
-          "en": "The floor (storey)",
-          "say": "lah PLAN-tah",
+          "es": "La planta baja",
+          "en": "The ground floor",
+          "say": "lah PLAN-tah BAH-hah",
           "emoji": "🏢"
         },
         {
@@ -801,14 +801,14 @@
             "mar"
           ],
           "shuffle": [
-            "doble",
             "habitación",
+            "con",
+            "doble",
+            "mar",
+            "vistas",
             "Tenemos",
             "una",
-            "mar",
-            "al",
-            "vistas",
-            "con"
+            "al"
           ],
           "en": "We have a double room with a sea view."
         },
@@ -823,13 +823,13 @@
             "baja"
           ],
           "shuffle": [
-            "la",
-            "La",
-            "está",
-            "en",
             "planta",
+            "en",
+            "la",
+            "recepción",
             "baja",
-            "recepción"
+            "La",
+            "está"
           ],
           "en": "Reception is on the ground floor."
         },
@@ -844,12 +844,12 @@
             "internet"
           ],
           "shuffle": [
+            "Mis",
+            "hotel",
+            "por",
+            "el",
             "internet",
             "padres",
-            "el",
-            "por",
-            "hotel",
-            "Mis",
             "reservaron"
           ],
           "en": "My parents booked the hotel online."
@@ -986,12 +986,12 @@
             "España"
           ],
           "shuffle": [
+            "está",
+            "España",
+            "de",
             "en",
             "centro",
-            "de",
             "Madrid",
-            "España",
-            "está",
             "el"
           ],
           "en": "Madrid is in the centre of Spain."
@@ -1005,11 +1005,11 @@
             "norte"
           ],
           "shuffle": [
-            "está",
-            "en",
-            "Galicia",
             "norte",
-            "el"
+            "está",
+            "Galicia",
+            "el",
+            "en"
           ],
           "en": "Galicia is in the north."
         },
@@ -1025,14 +1025,14 @@
             "Atlántico"
           ],
           "shuffle": [
-            "Canarias",
+            "el",
             "Las",
-            "Atlántico",
             "en",
             "islas",
+            "Canarias",
             "océano",
             "están",
-            "el"
+            "Atlántico"
           ],
           "en": "The Canary Islands are in the Atlantic Ocean."
         }
@@ -1166,11 +1166,11 @@
             "Santiago"
           ],
           "shuffle": [
-            "de",
-            "Santiago",
             "Visitamos",
             "catedral",
-            "la"
+            "Santiago",
+            "la",
+            "de"
           ],
           "en": "We visited Santiago Cathedral."
         },
@@ -1184,12 +1184,12 @@
             "mirador"
           ],
           "shuffle": [
-            "Hice",
-            "muchas",
             "desde",
-            "mirador",
             "fotos",
-            "el"
+            "mirador",
+            "el",
+            "muchas",
+            "Hice"
           ],
           "en": "I took lots of photos from the viewpoint."
         },
@@ -1203,12 +1203,12 @@
             "abuela"
           ],
           "shuffle": [
-            "abuela",
-            "mi",
             "Compré",
             "recuerdo",
-            "un",
-            "para"
+            "para",
+            "abuela",
+            "mi",
+            "un"
           ],
           "en": "I bought a souvenir for my grandma."
         }
@@ -1343,12 +1343,12 @@
             "maleta"
           ],
           "shuffle": [
-            "Mañana",
             "a",
-            "voy",
-            "la",
             "hacer",
-            "maleta"
+            "maleta",
+            "Mañana",
+            "la",
+            "voy"
           ],
           "en": "Tomorrow I'm going to pack my suitcase."
         },
@@ -1361,8 +1361,8 @@
             "pasaporte"
           ],
           "shuffle": [
-            "te",
             "pasaporte",
+            "te",
             "No",
             "olvides",
             "del"
@@ -1379,12 +1379,12 @@
             "maleta"
           ],
           "shuffle": [
-            "en",
-            "Mis",
-            "maleta",
-            "la",
             "están",
-            "chanclas"
+            "la",
+            "Mis",
+            "chanclas",
+            "en",
+            "maleta"
           ],
           "en": "My flip-flops are in the suitcase."
         }
@@ -1518,9 +1518,9 @@
           ],
           "shuffle": [
             "No",
+            "entiendo",
             "pregunta",
-            "la",
-            "entiendo"
+            "la"
           ],
           "en": "I don't understand the question."
         },
@@ -1536,14 +1536,14 @@
             "plaza"
           ],
           "shuffle": [
-            "de",
-            "la",
             "plaza",
-            "turismo",
+            "la",
             "La",
-            "en",
+            "de",
+            "oficina",
+            "turismo",
             "está",
-            "oficina"
+            "en"
           ],
           "en": "The tourist office is in the square."
         },
@@ -1559,14 +1559,14 @@
             "parque"
           ],
           "shuffle": [
-            "Mi",
-            "hermano",
-            "perdido",
-            "en",
-            "ha",
             "parque",
             "se",
-            "el"
+            "en",
+            "perdido",
+            "hermano",
+            "ha",
+            "el",
+            "Mi"
           ],
           "en": "My brother has got lost in the park."
         }
@@ -1701,12 +1701,12 @@
             "tres"
           ],
           "shuffle": [
+            "tren",
             "El",
             "andén",
-            "sale",
+            "tres",
             "del",
-            "tren",
-            "tres"
+            "sale"
           ],
           "en": "The train leaves from platform three."
         },
@@ -1721,13 +1721,13 @@
             "estación"
           ],
           "shuffle": [
-            "estación",
-            "enfrente",
+            "de",
+            "la",
             "está",
             "hotel",
+            "enfrente",
             "El",
-            "la",
-            "de"
+            "estación"
           ],
           "en": "The hotel is opposite the station."
         }

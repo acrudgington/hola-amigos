@@ -70,14 +70,6 @@
     {"who": "sol", "es": "¿Y el domingo? ¿Qué pasó?", "en": "And on Sunday? What happened?"},
     {"who": "luna", "es": "¡Me bañé en el mar y el sol brilló!", "en": "I swam in the sea and the sun shone!"}
   ] },
-  { "id": "fui-fuiste", "world": 15, "title": "Fui, fuiste, fue", "en": "I went, you went, he went", "emoji": "⛰️", "bpm": 98, "lines": [
-    {"who": "sol", "es": "Fui, fuiste, fue: ¡a la montaña fue!", "en": "I went, you went, he went: to the mountains he went!"},
-    {"who": "luna", "es": "Fuimos, fuisteis, fueron: ¡todos se fueron!", "en": "We went, you all went, they went: they all went away!"},
-    {"who": "sol", "es": "Hice, hiciste, hizo: ¡qué frío hizo!", "en": "I did, you did, he did: how cold it was!"},
-    {"who": "luna", "es": "Tuve, tuviste, tuvo: ¡un susto tuvo!", "en": "I had, you had, he had: he had a fright!"},
-    {"who": "sol", "es": "Dije, traje, puse: ¡todo lo hice!", "en": "I said, I brought, I put: I did it all!"},
-    {"who": "luna", "es": "¡Y colorín colorado, este cuento se ha acabado!", "en": "And that's the end of the story!"}
-  ] },
   { "id": "cuando-era", "world": 16, "title": "Cuando era pequeño", "en": "When I was little", "emoji": "🧸", "bpm": 90, "lines": [
     {"who": "sol", "es": "Cuando era pequeño, ¿sabes qué hacía?", "en": "When I was little, do you know what I did?"},
     {"who": "luna", "es": "¡Jugaba en el parque y la sandía comía!", "en": "I played in the park and I ate watermelon!"},
@@ -94,30 +86,6 @@
     {"who": "sol", "es": "¿Y de mayor? ¿Qué serás? ¡Dímelo ya!", "en": "And when you grow up? What will you be? Tell me now!"},
     {"who": "luna", "es": "¡Seré astronauta y viajaré allá!", "en": "I'll be an astronaut and I'll travel up there!"}
   ] },
-  { "id": "me-pones", "world": 18, "title": "¿Me pones…?", "en": "Can I have…?", "emoji": "☕", "bpm": 102, "lines": [
-    {"who": "sol", "es": "¿Me pones un zumo? ¿Me pones un pan?", "en": "Can I have a juice? Can I have some bread?"},
-    {"who": "luna", "es": "¡Marchando, marchando, ahora mismo van!", "en": "Coming right up, coming right up, they're on their way!"},
-    {"who": "sol", "es": "¿Me pones churros con chocolate?", "en": "Can I have churros with chocolate?"},
-    {"who": "luna", "es": "¡Claro que sí! ¡Aquí tienes tu plato!", "en": "Of course! Here's your plate!"},
-    {"who": "sol", "es": "¿Cuánto es todo? ¿Cuánto es?", "en": "How much is everything? How much is it?"},
-    {"who": "luna", "es": "¡Son cinco euros! ¡Gracias, y hasta otra vez!", "en": "That's five euros! Thank you, and see you again!"}
-  ] },
-  { "id": "por-donde", "world": 19, "title": "¿Por dónde se va?", "en": "Which way is it?", "emoji": "🗺️", "bpm": 104, "lines": [
-    {"who": "sol", "es": "¿Por dónde se va? ¿Por dónde se va?", "en": "Which way is it? Which way is it?"},
-    {"who": "luna", "es": "¡Todo recto, todo recto, y ya está!", "en": "Straight on, straight on, and that's it!"},
-    {"who": "sol", "es": "¿A la derecha? ¿A la izquierda?", "en": "To the right? To the left?"},
-    {"who": "luna", "es": "¡A la derecha, al lado de la tienda!", "en": "To the right, next to the shop!"},
-    {"who": "sol", "es": "¿Y la estación? ¿Está muy lejos?", "en": "And the station? Is it very far?"},
-    {"who": "luna", "es": "¡No, está cerca, enfrente del parque viejo!", "en": "No, it's close, opposite the old park!"}
-  ] },
-  { "id": "que-te-pasa", "world": 20, "title": "¿Qué te pasa?", "en": "What's wrong?", "emoji": "🩺", "bpm": 96, "lines": [
-    {"who": "sol", "es": "¿Qué te pasa, qué te pasa? ¿Qué te duele hoy?", "en": "What's wrong, what's wrong? What hurts today?"},
-    {"who": "luna", "es": "¡Me duele la cabeza, qué malita estoy!", "en": "My head hurts, I'm so poorly!"},
-    {"who": "sol", "es": "Bebe mucha agua y descansa, ya verás.", "en": "Drink lots of water and rest, you'll see."},
-    {"who": "luna", "es": "¡Y con un abrazo me curo mucho más!", "en": "And with a hug I'll get better even faster!"},
-    {"who": "sol", "es": "¿Y ahora qué tal? ¿Cómo estás ahora?", "en": "And now how are you? How are you now?"},
-    {"who": "luna", "es": "¡Mucho mejor! ¡Vamos a jugar sin demora!", "en": "Much better! Let's go and play right now!"}
-  ] },
   { "id": "tu-que-opinas", "world": 21, "title": "¿Tú qué opinas?", "en": "What do you think?", "emoji": "💬", "bpm": 98, "lines": [
     {"who": "sol", "es": "Me gusta el verano, ¿tú qué opinas?", "en": "I like summer, what do you think?"},
     {"who": "luna", "es": "¡A mí también, con playas y piscinas!", "en": "Me too, with beaches and swimming pools!"},
@@ -133,5 +101,37 @@
     {"who": "luna", "es": "¡Hablo del pasado y del futuro también!", "en": "I talk about the past and the future too!"},
     {"who": "sol", "es": "¿Tú qué opinas? ¿Lo hacemos otra vez?", "en": "What do you think? Shall we do it again?"},
     {"who": "luna", "es": "¡Claro que sí! ¡Ya hablo español, olé!", "en": "Of course! I speak Spanish now, olé!"}
+  ] },
+  { "id": "por-donde", "world": 19, "title": "¿Por dónde se va?", "en": "Which way is it?", "emoji": "🗺️", "bpm": 104, "lines": [
+    {"who": "sol", "es": "¿Por dónde se va? ¿Por dónde se va?", "en": "Which way is it? Which way is it?"},
+    {"who": "luna", "es": "¡Todo recto, todo recto, y ya está!", "en": "Straight on, straight on, and that's it!"},
+    {"who": "sol", "es": "¿A la derecha? ¿A la izquierda?", "en": "To the right? To the left?"},
+    {"who": "luna", "es": "¡A la derecha, al lado de la tienda!", "en": "To the right, next to the shop!"},
+    {"who": "sol", "es": "¿Y la estación? ¿Está muy lejos?", "en": "And the station? Is it very far?"},
+    {"who": "luna", "es": "¡No, está cerca, enfrente del parque viejo!", "en": "No, it's close, opposite the old park!"}
+  ] },
+  { "id": "fui-fuiste", "world": 15, "title": "Fui, fuiste, fue", "en": "I went, you went, he went", "emoji": "⛰️", "bpm": 98, "lines": [
+    {"who": "sol", "es": "Fui, fuiste, fue: ¡a la montaña fue!", "en": "I went, you went, he went: to the mountains he went!"},
+    {"who": "luna", "es": "Fuimos, fuisteis, fueron: ¡todos se fueron!", "en": "We went, you all went, they went: they all went away!"},
+    {"who": "sol", "es": "Hice, hiciste, hizo: ¡qué frío hizo!", "en": "I did, you did, he did: how cold it was!"},
+    {"who": "luna", "es": "Tuve, tuviste, tuvo: ¡un susto tuvo!", "en": "I had, you had, he had: he had a fright!"},
+    {"who": "sol", "es": "Dije, traje, puse: ¡todo lo hice!", "en": "I said, I brought, I put: I did it all!"},
+    {"who": "luna", "es": "¡Y colorín colorado, este cuento se ha acabado!", "en": "And that's the end of the story!"}
+  ] },
+  { "id": "me-pones", "world": 18, "title": "¿Me pones…?", "en": "Can I have…?", "emoji": "☕", "bpm": 102, "lines": [
+    {"who": "sol", "es": "¿Me pones un zumo? ¿Me pones un pan?", "en": "Can I have a juice? Can I have some bread?"},
+    {"who": "luna", "es": "¡Marchando, marchando, ahora mismo van!", "en": "Coming right up, coming right up, they're on their way!"},
+    {"who": "sol", "es": "¿Me pones churros con chocolate?", "en": "Can I have churros with chocolate?"},
+    {"who": "luna", "es": "¡Claro que sí! ¡Aquí tienes tu plato!", "en": "Of course! Here's your plate!"},
+    {"who": "sol", "es": "¿Cuánto es todo? ¿Cuánto es?", "en": "How much is everything? How much is it?"},
+    {"who": "luna", "es": "¡Son cinco euros! ¡Gracias, y hasta otra vez!", "en": "That's five euros! Thank you, and see you again!"}
+  ] },
+  { "id": "que-te-pasa", "world": 20, "title": "¿Qué te pasa?", "en": "What's wrong?", "emoji": "🩺", "bpm": 96, "lines": [
+    {"who": "sol", "es": "¿Qué te pasa, qué te pasa? ¿Qué te duele hoy?", "en": "What's wrong, what's wrong? What hurts today?"},
+    {"who": "luna", "es": "¡Me duele la cabeza, qué malita estoy!", "en": "My head hurts, I'm so poorly!"},
+    {"who": "sol", "es": "Bebe mucha agua y descansa, ya verás.", "en": "Drink lots of water and rest, you'll see."},
+    {"who": "luna", "es": "¡Y con un abrazo me curo mucho más!", "en": "And with a hug I'll get better even faster!"},
+    {"who": "sol", "es": "¿Y ahora qué tal? ¿Cómo estás ahora?", "en": "And now how are you? How are you now?"},
+    {"who": "luna", "es": "¡Mucho mejor! ¡Vamos a jugar sin demora!", "en": "Much better! Let's go and play right now!"}
   ] }
 ]

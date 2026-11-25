@@ -5,8 +5,8 @@ An interactive Spanish learning app for kids aged 6+, taking them from absolute 
 ## 🌟 Features
 
 ### Learning content
-- **100 lessons** across 12 themed worlds, from Starter Island to Repaso Total
-- **692 Spanish words** across vocabulary, phrases, grammar, past, future, and everyday situations
+- **200 lessons** across 22 themed worlds: lessons 1–100 (Starter Island to Repaso Total) cover Pre-A1 to A1, and lessons 101–200 (Lo que he hecho to ¡Fiesta A2!) cover the A2 curriculum
+- **1,412 Spanish words and phrases** across vocabulary, grammar, the three past tenses, the future, and everyday situations (shopping, travel, health, opinions)
 - **14 activity types**: Learn, Flashcards, Listen, Matching, Drag & Match, Odd One Out, Quiz, Say It! (speaking), Sentences, Word Order, Stories, Warm-ups, Surprises and end-of-world Boss Battles
 - **Guided lessons** that mix the activities differently in each lesson, scored 1–3 stars
 - **Daily review** with spaced repetition (Leitner boxes) so words stick
@@ -36,8 +36,8 @@ An interactive Spanish learning app for kids aged 6+, taking them from absolute 
 ### Look & feel — "mission control for kids"
 - **Bento dashboard** home: Sol's mission plan, an "Up next" lesson card, live stat tiles with sparklines, daily quests, an activity feed, a weekly XP chart and word-power meter
 - **Sol the study buddy** plans today's mission (review → lesson → treasure chest) as a live, step-by-step checklist
-- **Ask Sol** (⌘K / Ctrl+K): search all 692 words and 100 lessons; tap a word to hear it
-- **Journey map** with world tabs: flip through the 12 worlds, each with its own illustrated banner and winding path
+- **Ask Sol** (⌘K / Ctrl+K): search all 1,412 words and 200 lessons; tap a word to hear it
+- **Journey map** with world tabs: flip through the 22 worlds, each with its own illustrated banner and winding path
 - **Night and Day themes**: crisp, flat surfaces on a dot-grid canvas, with a custom SVG icon set
 - **Motion**: spring animations, page transitions, typing text, flowing paths, floating "+XP" pop-ups
 - **Sound effects** synthesised in the browser (no audio files), with a mute button
@@ -77,15 +77,18 @@ GitHub Actions (`.github/workflows/ci.yml`) runs all of this on every push and p
 
 ## "I can…" goals and levels
 
-`content/units.json` groups the 100 lessons into 12 units (one per world) with 59
+`content/units.json` groups the 200 lessons into 22 units (one per world) with 99
 plain-English goals such as *"I can say what I like and don't like"*, each with a
 Spanish example and the lessons that teach it. A goal counts as **achieved** when its
 lessons are finished **and** the child reliably knows at least 60% of their words
 (`src/domain/goals.ts`). Parents see progress goal by goal in the grown-up dashboard;
 children see "Things I can do in Spanish" on their profile.
 
-Levels are honest CEFR bands: worlds 1–2 are **Pre-A1**, the rest **A1**, and goals
-that introduce A2 grammar (the past, opinions, comparisons) are marked **A2 taster**.
+Levels are honest CEFR bands: worlds 1–2 are **Pre-A1**, worlds 3–12 **A1** (goals in
+them that introduce A2 grammar are marked **A2 taster**), and worlds 13–22 are **A2**,
+following the Instituto Cervantes A2 inventory: the present perfect, the indefinido
+(regular and irregular), the imperfect, the future, object pronouns, commands,
+comparisons and everyday tasks such as shopping, travel and the doctor.
 The content check fails if any lesson isn't covered by exactly one goal.
 
 ## Adaptive practice
@@ -147,7 +150,7 @@ older single-emoji avatars still display. Change it any time from the ✏️ on 
 
 All course content lives in `content/` as plain JSON, so it can be edited without touching code:
 
-- `content/worlds.json`: the 12 worlds (name, colour, lesson range, scenery)
+- `content/worlds.json`: the 22 worlds (name, colour, lesson range, scenery)
 - `content/lessons/world-01.json` … `world-12.json`: each world's lessons (words, phrase, fun fact, sentences, quiz questions, story)
 - `content/surprises.json`: the surprise cards
 

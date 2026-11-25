@@ -72,10 +72,10 @@
             "años"
           ],
           "shuffle": [
-            "abuela",
             "años",
-            "Mi",
             "ochenta",
+            "Mi",
+            "abuela",
             "tiene"
           ],
           "en": "My grandma is eighty years old."
@@ -90,12 +90,12 @@
             "alumnos"
           ],
           "shuffle": [
-            "hay",
             "alumnos",
-            "colegio",
-            "mi",
+            "En",
             "quinientos",
-            "En"
+            "mi",
+            "hay",
+            "colegio"
           ],
           "en": "There are five hundred pupils at my school."
         },
@@ -108,11 +108,11 @@
             "euros"
           ],
           "shuffle": [
-            "cuesta",
-            "doscientos",
-            "euros",
             "Esta",
-            "bici"
+            "bici",
+            "euros",
+            "cuesta",
+            "doscientos"
           ],
           "en": "This bike costs two hundred euros."
         }
@@ -246,11 +246,11 @@
             "euros"
           ],
           "shuffle": [
-            "euros",
+            "fresas",
             "Las",
-            "cuestan",
+            "euros",
             "tres",
-            "fresas"
+            "cuestan"
           ],
           "en": "The strawberries cost three euros."
         },
@@ -263,11 +263,11 @@
             "caro"
           ],
           "shuffle": [
-            "demasiado",
             "juego",
-            "Este",
+            "caro",
             "es",
-            "caro"
+            "demasiado",
+            "Este"
           ],
           "en": "This game is too expensive."
         },
@@ -280,9 +280,9 @@
           ],
           "shuffle": [
             "tiene",
-            "euros",
+            "diez",
             "Aquí",
-            "diez"
+            "euros"
           ],
           "en": "Here you are, ten euros."
         }
@@ -351,7 +351,7 @@
       "subtitle": "In the clothes shop",
       "emoji": "👖",
       "milestone": false,
-      "funFact": "In Spain, jeans are called 'vaqueros', like the cowboys who first wore them!",
+      "funFact": "In Spain, jeans are called 'vaqueros'. The same word also means 'cowboys'!",
       "phrase": {
         "es": "Estos vaqueros me quedan grandes.",
         "en": "These jeans are too big for me."
@@ -416,11 +416,11 @@
             "grandes"
           ],
           "shuffle": [
-            "grandes",
-            "vaqueros",
-            "Estos",
             "quedan",
-            "me"
+            "Estos",
+            "me",
+            "grandes",
+            "vaqueros"
           ],
           "en": "These jeans are too big for me."
         },
@@ -434,12 +434,12 @@
             "bien"
           ],
           "shuffle": [
-            "me",
-            "sudadera",
             "queda",
             "La",
-            "muy",
-            "bien"
+            "me",
+            "sudadera",
+            "bien",
+            "muy"
           ],
           "en": "The hoodie fits me really well."
         },
@@ -451,10 +451,10 @@
             "negras"
           ],
           "shuffle": [
-            "Quiero",
             "botas",
+            "unas",
             "negras",
-            "unas"
+            "Quiero"
           ],
           "en": "I want some black boots."
         }
@@ -590,12 +590,12 @@
             "compro"
           ],
           "shuffle": [
-            "esta",
-            "Me",
+            "y",
+            "camiseta",
             "la",
             "compro",
-            "camiseta",
-            "y",
+            "esta",
+            "Me",
             "gusta"
           ],
           "en": "I like this T-shirt and I'll buy it."
@@ -611,13 +611,13 @@
             "encuentro"
           ],
           "shuffle": [
-            "no",
-            "mis",
             "las",
-            "pero",
+            "mis",
+            "gafas",
             "encuentro",
             "Busco",
-            "gafas"
+            "no",
+            "pero"
           ],
           "en": "I'm looking for my glasses but I can't find them."
         },
@@ -633,14 +633,14 @@
             "dejo"
           ],
           "shuffle": [
-            "lo",
             "te",
-            "Tengo",
+            "lo",
+            "dejo",
             "un",
-            "cómic",
             "y",
-            "nuevo",
-            "dejo"
+            "cómic",
+            "Tengo",
+            "nuevo"
           ],
           "en": "I've got a new comic and I'll lend it to you."
         }
@@ -774,11 +774,11 @@
             "naranjas"
           ],
           "shuffle": [
-            "naranjas",
-            "un",
             "de",
+            "naranjas",
             "kilo",
-            "Quiero"
+            "Quiero",
+            "un"
           ],
           "en": "I'd like a kilo of oranges."
         },
@@ -792,11 +792,11 @@
             "panadería"
           ],
           "shuffle": [
+            "en",
+            "pan",
+            "panadería",
             "el",
             "Compramos",
-            "pan",
-            "en",
-            "panadería",
             "la"
           ],
           "en": "We buy bread at the bakery."
@@ -813,14 +813,14 @@
             "mercado"
           ],
           "shuffle": [
-            "Mi",
-            "padre",
-            "en",
-            "el",
-            "el",
-            "pescado",
             "compra",
-            "mercado"
+            "en",
+            "padre",
+            "el",
+            "Mi",
+            "mercado",
+            "el",
+            "pescado"
           ],
           "en": "My dad buys fish at the market."
         }
@@ -954,11 +954,11 @@
             "caliente"
           ],
           "shuffle": [
-            "mí",
             "caliente",
-            "chocolate",
+            "un",
+            "mí",
             "Para",
-            "un"
+            "chocolate"
           ],
           "en": "A hot chocolate for me."
         },
@@ -971,11 +971,11 @@
             "queso"
           ],
           "shuffle": [
-            "queso",
-            "bocadillo",
+            "Quería",
             "un",
             "de",
-            "Quería"
+            "queso",
+            "bocadillo"
           ],
           "en": "I'd like a cheese sandwich."
         },
@@ -988,8 +988,8 @@
           ],
           "shuffle": [
             "llevar",
-            "cruasán",
             "Un",
+            "cruasán",
             "para"
           ],
           "en": "A croissant to take away."
@@ -1126,13 +1126,13 @@
             "euros"
           ],
           "shuffle": [
-            "día",
-            "menú",
-            "cuesta",
-            "El",
             "euros",
             "del",
-            "doce"
+            "cuesta",
+            "día",
+            "menú",
+            "doce",
+            "El"
           ],
           "en": "The set menu costs twelve euros."
         },
@@ -1146,12 +1146,12 @@
             "secos"
           ],
           "shuffle": [
-            "alérgica",
-            "los",
             "Soy",
+            "secos",
             "frutos",
+            "alérgica",
             "a",
-            "secos"
+            "los"
           ],
           "en": "I'm allergic to nuts."
         },
@@ -1163,8 +1163,8 @@
             "buenísima"
           ],
           "shuffle": [
-            "está",
             "Esta",
+            "está",
             "tortilla",
             "buenísima"
           ],
@@ -1302,8 +1302,8 @@
           "shuffle": [
             "paella",
             "Valencia",
-            "de",
             "es",
+            "de",
             "La"
           ],
           "en": "Paella comes from Valencia."
@@ -1318,12 +1318,12 @@
             "chocolate"
           ],
           "shuffle": [
-            "chocolate",
+            "Los",
             "con",
+            "comemos",
             "domingos",
             "churros",
-            "comemos",
-            "Los"
+            "chocolate"
           ],
           "en": "On Sundays we eat churros with chocolate."
         },
@@ -1337,10 +1337,10 @@
             "buenísimas"
           ],
           "shuffle": [
-            "buenísimas",
-            "croquetas",
             "unas",
             "Mi",
+            "croquetas",
+            "buenísimas",
             "abuela",
             "hace"
           ],
@@ -1479,13 +1479,13 @@
             "sábados"
           ],
           "shuffle": [
-            "dan",
-            "los",
-            "padres",
             "paga",
+            "padres",
+            "dan",
             "me",
             "sábados",
             "Mis",
+            "los",
             "la"
           ],
           "en": "My parents give me my pocket money on Saturdays."
@@ -1500,12 +1500,12 @@
             "hucha"
           ],
           "shuffle": [
+            "Guardo",
+            "mi",
+            "en",
             "hucha",
             "dinero",
-            "Guardo",
-            "en",
-            "el",
-            "mi"
+            "el"
           ],
           "en": "I keep my money in my piggy bank."
         },
@@ -1517,10 +1517,10 @@
             "efectivo"
           ],
           "shuffle": [
-            "Prefiero",
             "en",
             "pagar",
-            "efectivo"
+            "efectivo",
+            "Prefiero"
           ],
           "en": "I prefer to pay in cash."
         }
@@ -1654,11 +1654,11 @@
             "tomates"
           ],
           "shuffle": [
+            "tomates",
+            "un",
             "de",
             "Quiero",
-            "kilo",
-            "un",
-            "tomates"
+            "kilo"
           ],
           "en": "I'd like a kilo of tomatoes."
         },
@@ -1671,11 +1671,11 @@
             "pequeña"
           ],
           "shuffle": [
+            "pequeña",
             "me",
-            "camiseta",
             "Esta",
-            "queda",
-            "pequeña"
+            "camiseta",
+            "queda"
           ],
           "en": "This T-shirt is too small for me."
         }

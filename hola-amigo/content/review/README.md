@@ -1,6 +1,6 @@
 # Content review
 
-The course content (100 lessons, 692 words) has been reviewed for accurate,
+The course content (200 lessons, 1,412 words and phrases) has been reviewed for accurate,
 natural **Castilian Spanish** and correct facts, in two passes:
 
 1. **A full read-through of every lesson** (190 changes): grammar, Spain-specific
@@ -27,8 +27,33 @@ the Instituto Cervantes curriculum site was down for maintenance during the chec
 ## How to describe the course honestly
 
 - ✅ "Castilian Spanish from Spain, checked against the Real Academia Española."
-- ✅ "Covers Pre-A1 to A1, with a first taste of A2 grammar."
-- ❌ Don't say "teacher-approved" or "takes children to A2" unless that becomes true.
+- ✅ "Covers Pre-A1 to A2: lessons 1–100 reach A1, lessons 101–200 cover the A2 curriculum."
+- ✅ "Follows the Instituto Cervantes A2 inventory: past, present and future, and everyday situations."
+- ❌ Don't say "teacher-approved", "certified A2" or "guarantees A2". A2 also needs real
+  conversation practice, and reaching it depends on how much a child actually plays.
+
+## Lessons 101–200 (A2, added November 2026)
+
+Written to the same standard and checked the same way:
+
+- **Spelling:** every Spanish word in lessons, stories, chants and goals against the
+  RLA-ES Spanish dictionary. Flags were only proper names, deliberate wrong quiz
+  options, and valid words missing from that dictionary (diminutives like «osito»,
+  «-ísimo» forms, «pescadería», informal «peli», «finde»).
+- **Grammar:** LanguageTool on every new Spanish line (`FROM_LESSON=101 npm run
+  content:grammar`, results in `grammar-check-from-*.tsv`). Real issues were fixed
+  (missing commas, an awkward chant line); the rest are known false alarms.
+- **Spain, not Latin America:** a scan for Latin-American-only words (computadora,
+  celular, carro, vos…). The only hits are fun facts that explain the difference
+  (zumo/jugo, vosotros/ustedes, echar de menos/extrañar).
+- **Facts** checked against official and reputable sources: the DNI from age 14 (Ley
+  Orgánica 4/2015 and Real Decreto 255/2025), TVE's first broadcast (28 October 1956),
+  the AVE Madrid–Seville time (from 2 h 30 min, spain.info), the Mediterranean diet on
+  UNESCO's Intangible Cultural Heritage list (2010), recycling bin colours (Ecoembes),
+  Chupa Chups (1958) and its Dalí logo, the siesta (about 60% of adults in Spain never
+  take one), and the Picos de Europa name (presented as a popular story, not fact).
+- **Voices:** `npm run content:voice-split` shows how every mixed English/Spanish
+  line is split between the English and Castilian voices.
 
 ## Changing content later
 

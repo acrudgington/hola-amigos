@@ -13,7 +13,7 @@ export function WorldGallery() {
     <Cosmos />
     <div className="page" style={{ maxWidth: 1100 }}>
       <div className="eyebrow">World lab</div>
-      <h1 className="h1" style={{ margin: "4px 0 12px" }}>The 12 worlds</h1>
+      <h1 className="h1" style={{ margin: "4px 0 12px" }}>The {WORLDS.length} worlds</h1>
       <div className="row row--wrap" style={{ gap: 8, marginBottom: 16 }}>
         {PHASES.map(p => <button key={p} type="button" className={`btn btn--sm ${p === phase ? "btn--sun" : "btn--white"}`} onClick={() => setPhase(p)}>{p === "now" ? "Time now" : p}</button>)}
       </div>

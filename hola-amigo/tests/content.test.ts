@@ -11,13 +11,13 @@ describe("course content", () => {
     expect(errors).toEqual([]);
   });
 
-  test("has 100 lessons across 12 worlds with 11 milestones", () => {
-    expect(LESSONS).toHaveLength(100);
-    expect(WORLDS).toHaveLength(12);
-    expect(MILESTONES).toEqual([16, 24, 32, 40, 50, 60, 68, 76, 84, 92, 100]);
-    expect(WORLDS.reduce((n, w) => n + lessonsInWorld(w).length, 0)).toBe(100);
+  test("has 200 lessons across 22 worlds with 21 milestones", () => {
+    expect(LESSONS).toHaveLength(200);
+    expect(WORLDS).toHaveLength(22);
+    expect(MILESTONES).toEqual([16, 24, 32, 40, 50, 60, 68, 76, 84, 92, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200]);
+    expect(WORLDS.reduce((n, w) => n + lessonsInWorld(w).length, 0)).toBe(200);
     expect(worldOf(33)?.name).toBe("Plaza del Pueblo");
-    expect(ALL_WORDS).toHaveLength(692);
+    expect(ALL_WORDS).toHaveLength(1412);
   });
 
   test("the checker catches broken content", () => {

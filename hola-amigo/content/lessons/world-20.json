@@ -73,10 +73,10 @@
           ],
           "shuffle": [
             "mucho",
-            "Me",
-            "duele",
             "espalda",
-            "la"
+            "duele",
+            "la",
+            "Me"
           ],
           "en": "My back really hurts."
         },
@@ -91,13 +91,13 @@
             "piernas"
           ],
           "shuffle": [
-            "del",
             "las",
-            "me",
-            "duelen",
-            "partido",
             "piernas",
-            "Después"
+            "Después",
+            "partido",
+            "del",
+            "duelen",
+            "me"
           ],
           "en": "After the match my legs hurt."
         },
@@ -112,11 +112,11 @@
             "oído"
           ],
           "shuffle": [
-            "A",
             "hermano",
-            "le",
-            "mi",
             "el",
+            "A",
+            "mi",
+            "le",
             "duele",
             "oído"
           ],
@@ -257,16 +257,16 @@
             "cama"
           ],
           "shuffle": [
-            "la",
-            "me",
+            "y",
+            "encuentro",
+            "quedo",
             "cama",
             "me",
             "en",
-            "y",
-            "quedo",
+            "me",
+            "mal",
             "Hoy",
-            "encuentro",
-            "mal"
+            "la"
           ],
           "en": "Today I feel ill and I'm staying in bed."
         },
@@ -278,8 +278,8 @@
             "gripe"
           ],
           "shuffle": [
-            "tiene",
             "gripe",
+            "tiene",
             "hermana",
             "Mi"
           ],
@@ -295,10 +295,10 @@
           ],
           "shuffle": [
             "me",
-            "mejor",
-            "encuentro",
+            "Ya",
             "mucho",
-            "Ya"
+            "mejor",
+            "encuentro"
           ],
           "en": "I already feel much better."
         }
@@ -436,15 +436,15 @@
             "cinco"
           ],
           "shuffle": [
-            "médico",
-            "a",
-            "cinco",
             "cita",
-            "el",
-            "una",
-            "las",
+            "a",
             "Tengo",
-            "con"
+            "con",
+            "una",
+            "cinco",
+            "el",
+            "las",
+            "médico"
           ],
           "en": "I've got a doctor's appointment at five."
         },
@@ -459,13 +459,13 @@
             "día"
           ],
           "shuffle": [
-            "el",
-            "Toma",
             "tres",
-            "al",
-            "veces",
+            "el",
             "jarabe",
-            "día"
+            "Toma",
+            "veces",
+            "día",
+            "al"
           ],
           "en": "Take the syrup three times a day."
         },
@@ -479,12 +479,12 @@
             "farmacia"
           ],
           "shuffle": [
-            "la",
-            "Compramos",
             "pastillas",
-            "farmacia",
             "las",
-            "en"
+            "en",
+            "Compramos",
+            "la",
+            "farmacia"
           ],
           "en": "We bought the tablets at the chemist's."
         }
@@ -619,12 +619,12 @@
             "papel"
           ],
           "shuffle": [
+            "papel",
+            "cortado",
             "un",
             "con",
             "he",
-            "Me",
-            "cortado",
-            "papel"
+            "Me"
           ],
           "en": "I've cut myself on a piece of paper."
         },
@@ -639,13 +639,13 @@
             "brazo"
           ],
           "shuffle": [
-            "se",
-            "roto",
-            "Mi",
-            "primo",
+            "el",
             "brazo",
             "ha",
-            "el"
+            "roto",
+            "primo",
+            "Mi",
+            "se"
           ],
           "en": "My cousin has broken his arm."
         },
@@ -658,10 +658,10 @@
             "ambulancia"
           ],
           "shuffle": [
-            "Fuimos",
-            "a",
             "ambulancia",
+            "Fuimos",
             "urgencias",
+            "a",
             "en"
           ],
           "en": "We went to A&E in an ambulance."
@@ -796,10 +796,10 @@
             "horas"
           ],
           "shuffle": [
-            "nueve",
-            "dormir",
-            "horas",
             "que",
+            "dormir",
+            "nueve",
+            "horas",
             "Hay"
           ],
           "en": "You have to sleep nine hours."
@@ -814,12 +814,12 @@
             "agua"
           ],
           "shuffle": [
+            "estás",
+            "Si",
             "bebe",
-            "agua",
             "resfriado",
             "mucha",
-            "Si",
-            "estás"
+            "agua"
           ],
           "en": "If you've got a cold, drink lots of water."
         },
@@ -832,9 +832,9 @@
             "manos"
           ],
           "shuffle": [
-            "importante",
             "las",
             "manos",
+            "importante",
             "Es",
             "lavarse"
           ],
@@ -905,7 +905,7 @@
       "subtitle": "Healthy living",
       "emoji": "🥦",
       "milestone": false,
-      "funFact": "The Mediterranean diet, with lots of olive oil, vegetables, fruit and fish, is on UNESCO's list of the world's cultural heritage.",
+      "funFact": "The Mediterranean diet, with lots of olive oil, vegetables, fruit and fish, is on UNESCO's list of Intangible Cultural Heritage.",
       "phrase": {
         "es": "Hay que comer fruta y verdura todos los días.",
         "en": "You have to eat fruit and vegetables every day."
@@ -971,10 +971,10 @@
             "sana"
           ],
           "shuffle": [
+            "no",
             "sana",
             "es",
             "comida",
-            "no",
             "La",
             "basura"
           ],
@@ -993,15 +993,15 @@
             "días"
           ],
           "shuffle": [
-            "todos",
-            "comer",
-            "verdura",
-            "y",
-            "los",
             "que",
+            "los",
+            "comer",
+            "y",
+            "verdura",
+            "Hay",
             "fruta",
             "días",
-            "Hay"
+            "todos"
           ],
           "en": "You have to eat fruit and vegetables every day."
         },
@@ -1016,10 +1016,10 @@
             "mañana"
           ],
           "shuffle": [
-            "la",
+            "ejercicio",
             "hace",
             "por",
-            "ejercicio",
+            "la",
             "mañana",
             "Mi",
             "padre"
@@ -1159,9 +1159,9 @@
           "shuffle": [
             "equipo",
             "los",
-            "con",
-            "Entreno",
             "mi",
+            "Entreno",
+            "con",
             "martes"
           ],
           "en": "I train with my team on Tuesdays."
@@ -1174,10 +1174,10 @@
             "goles"
           ],
           "shuffle": [
-            "dos",
-            "Ayer",
+            "marqué",
             "goles",
-            "marqué"
+            "dos",
+            "Ayer"
           ],
           "en": "Yesterday I scored two goals."
         },
@@ -1191,10 +1191,10 @@
           ],
           "shuffle": [
             "partido",
-            "en",
+            "El",
             "empate",
             "terminó",
-            "El"
+            "en"
           ],
           "en": "The match ended in a draw."
         }
@@ -1329,9 +1329,9 @@
           ],
           "shuffle": [
             "la",
-            "lanza",
             "pelota",
             "y",
+            "lanza",
             "Salta"
           ],
           "en": "Jump and throw the ball."
@@ -1346,8 +1346,8 @@
           ],
           "shuffle": [
             "balón",
-            "a",
             "Pasa",
+            "a",
             "Luna",
             "el"
           ],
@@ -1361,10 +1361,10 @@
             "portería"
           ],
           "shuffle": [
-            "la",
-            "hasta",
             "portería",
-            "Corre"
+            "hasta",
+            "Corre",
+            "la"
           ],
           "en": "Run to the goal."
         }
@@ -1499,12 +1499,12 @@
             "humor"
           ],
           "shuffle": [
-            "humor",
-            "de",
-            "buen",
+            "Hoy",
             "muy",
+            "de",
             "estoy",
-            "Hoy"
+            "buen",
+            "humor"
           ],
           "en": "Today I'm in a really good mood."
         },
@@ -1518,11 +1518,11 @@
             "público"
           ],
           "shuffle": [
+            "Me",
             "da",
             "hablar",
-            "Me",
-            "público",
             "vergüenza",
+            "público",
             "en"
           ],
           "en": "I feel embarrassed speaking in public."
@@ -1538,9 +1538,9 @@
           "shuffle": [
             "triste",
             "lluvia",
-            "pone",
             "La",
-            "me"
+            "me",
+            "pone"
           ],
           "en": "Rain makes me sad."
         }
@@ -1676,13 +1676,13 @@
             "entrenar"
           ],
           "shuffle": [
-            "duelen",
-            "Me",
-            "las",
-            "entrenar",
             "de",
+            "las",
+            "Me",
+            "piernas",
             "después",
-            "piernas"
+            "duelen",
+            "entrenar"
           ],
           "en": "My legs hurt after training."
         },
@@ -1695,11 +1695,11 @@
             "agua"
           ],
           "shuffle": [
+            "beber",
             "mucha",
-            "que",
-            "Hay",
             "agua",
-            "beber"
+            "Hay",
+            "que"
           ],
           "en": "You have to drink lots of water."
         }

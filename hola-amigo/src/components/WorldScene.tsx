@@ -427,8 +427,13 @@ function sceneBody(world: World, phase: Phase): ReactNode {
     case "fiesta": return <>
       <rect x={X0} y={GROUND - 20} width={SPAN()} height={H} fill="#16285a" />
       <g className="ws-anim ws-wave"><path d={waves(GROUND - 14)} stroke="#ffd93d" strokeOpacity="0.35" strokeWidth="1.4" fill="none" /></g>
-      {Array.from({ length: 6 }).map((_, i) => <Prop key={i} e="🎆" x={X0 + 40 + r() * (SPAN() - 80)} y={30 + r() * 50} s={26 + r() * 16} cls="ws-twinkle" delay={-r() * 3} />)}
-      <Prop e="🎇" x={200} y={60} s={40} cls="ws-twinkle" delay={-1} />
+      {Array.from({ length: 7 }).map((_, i) => { const cx = X0 + 40 + r() * (SPAN() - 80), cy = 22 + r() * 50, rad = 9 + r() * 9;
+        const col = ["#FFD93D", "#FF6B9D", "#6BCB77", "#4D96FF", "#FF9F45"][i % 5];
+        return <g key={i} className="ws-anim ws-twinkle" style={{ animationDelay: `${-r() * 3}s`, animationDuration: `${2 + r() * 2}s` }}>
+          {Array.from({ length: 10 }).map((_, k) => { const a = (k / 10) * Math.PI * 2;
+            return <line key={k} x1={cx + Math.cos(a) * rad * 0.35} y1={cy + Math.sin(a) * rad * 0.35} x2={cx + Math.cos(a) * rad} y2={cy + Math.sin(a) * rad} stroke={col} strokeWidth="1.6" strokeLinecap="round" />; })}
+          <circle cx={cx} cy={cy} r="1.6" fill="#fff" />
+        </g>; })}
       <rect x={X0} y={GROUND} width={SPAN()} height={H - GROUND} fill="#3a2a4a" />
       <Prop e="🏆" x={200} y={GROUND + 6} s={36} cls="ws-bob" />
       <Prop e="🎉" x={130} y={GROUND + 8} s={24} cls="ws-hop" />

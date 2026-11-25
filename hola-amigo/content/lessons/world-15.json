@@ -73,12 +73,12 @@
             "Galicia"
           ],
           "shuffle": [
-            "verano",
-            "El",
             "a",
-            "pasado",
+            "verano",
             "fuimos",
-            "Galicia"
+            "El",
+            "Galicia",
+            "pasado"
           ],
           "en": "Last summer we went to Galicia."
         },
@@ -90,10 +90,10 @@
             "genial"
           ],
           "shuffle": [
+            "La",
             "fue",
-            "genial",
             "fiesta",
-            "La"
+            "genial"
           ],
           "en": "The party was great."
         },
@@ -107,10 +107,10 @@
           ],
           "shuffle": [
             "fueron",
-            "primos",
-            "Mis",
             "zoo",
-            "al"
+            "primos",
+            "al",
+            "Mis"
           ],
           "en": "My cousins went to the zoo."
         }
@@ -243,9 +243,9 @@
             "calor"
           ],
           "shuffle": [
-            "calor",
             "Ayer",
             "mucho",
+            "calor",
             "hizo"
           ],
           "en": "Yesterday it was very hot."
@@ -259,11 +259,11 @@
             "chocolate"
           ],
           "shuffle": [
-            "tarta",
             "chocolate",
+            "de",
+            "tarta",
             "Hicimos",
-            "una",
-            "de"
+            "una"
           ],
           "en": "We made a chocolate cake."
         },
@@ -277,12 +277,12 @@
             "precioso"
           ],
           "shuffle": [
-            "hizo",
-            "un",
             "dibujo",
             "hermano",
-            "Mi",
-            "precioso"
+            "precioso",
+            "un",
+            "hizo",
+            "Mi"
           ],
           "en": "My brother made a beautiful drawing."
         }
@@ -417,10 +417,10 @@
           ],
           "shuffle": [
             "Ayer",
-            "estudiar",
-            "tuve",
+            "que",
             "mucho",
-            "que"
+            "tuve",
+            "estudiar"
           ],
           "en": "Yesterday I had to study a lot."
         },
@@ -434,10 +434,10 @@
             "abuela"
           ],
           "shuffle": [
-            "abuela",
-            "mi",
             "casa",
             "de",
+            "mi",
+            "abuela",
             "en",
             "Estuve"
           ],
@@ -452,11 +452,11 @@
             "enfermo"
           ],
           "shuffle": [
-            "estuve",
             "La",
             "enfermo",
+            "semana",
             "pasada",
-            "semana"
+            "estuve"
           ],
           "en": "Last week I was ill."
         }
@@ -591,12 +591,12 @@
             "amiga"
           ],
           "shuffle": [
-            "regalo",
-            "para",
             "Traje",
+            "regalo",
+            "un",
             "amiga",
             "mi",
-            "un"
+            "para"
           ],
           "en": "I brought a present for my friend."
         },
@@ -610,12 +610,12 @@
             "fiesta"
           ],
           "shuffle": [
+            "a",
+            "ir",
             "la",
             "No",
-            "pude",
             "fiesta",
-            "a",
-            "ir"
+            "pude"
           ],
           "en": "I couldn't go to the party."
         },
@@ -629,12 +629,12 @@
             "mochila"
           ],
           "shuffle": [
+            "los",
             "libros",
+            "la",
             "mochila",
             "en",
-            "la",
-            "Puse",
-            "los"
+            "Puse"
           ],
           "en": "I put the books in my school bag."
         }
@@ -768,11 +768,11 @@
             "autocar"
           ],
           "shuffle": [
-            "Fuimos",
-            "autocar",
-            "museo",
             "al",
-            "en"
+            "Fuimos",
+            "en",
+            "museo",
+            "autocar"
           ],
           "en": "We went to the museum by coach."
         },
@@ -786,10 +786,10 @@
           ],
           "shuffle": [
             "ciudad",
-            "la",
-            "en",
+            "perdimos",
             "Nos",
-            "perdimos"
+            "en",
+            "la"
           ],
           "en": "We got lost in the city."
         },
@@ -802,11 +802,11 @@
             "guía"
           ],
           "shuffle": [
-            "al",
-            "final",
             "Al",
+            "final",
+            "encontramos",
             "guía",
-            "encontramos"
+            "al"
           ],
           "en": "In the end we found the guide."
         }
@@ -875,7 +875,7 @@
       "subtitle": "A night in the mountains",
       "emoji": "⛺",
       "milestone": false,
-      "funFact": "A popular story says the Picos de Europa, in northern Spain, got their name because sailors coming home from America saw them first.",
+      "funFact": "Nobody knows for sure how the Picos de Europa got their name. A popular story says sailors coming home from America saw these mountains first.",
       "phrase": {
         "es": "Acampamos cerca del río.",
         "en": "We camped near the river."
@@ -939,10 +939,10 @@
             "río"
           ],
           "shuffle": [
-            "del",
-            "río",
             "Acampamos",
-            "cerca"
+            "cerca",
+            "río",
+            "del"
           ],
           "en": "We camped near the river."
         },
@@ -956,11 +956,11 @@
             "camino"
           ],
           "shuffle": [
+            "camino",
             "por",
             "montaña",
-            "camino",
-            "la",
             "el",
+            "la",
             "Subimos"
           ],
           "en": "We climbed the mountain along the path."
@@ -976,9 +976,9 @@
           ],
           "shuffle": [
             "la",
+            "usamos",
             "Por",
             "noche",
-            "usamos",
             "la",
             "linterna"
           ],
@@ -1114,11 +1114,11 @@
             "ruido"
           ],
           "shuffle": [
-            "oí",
-            "ruido",
             "De",
             "repente",
-            "un"
+            "un",
+            "ruido",
+            "oí"
           ],
           "en": "Suddenly I heard a noise."
         },
@@ -1131,11 +1131,11 @@
             "grité"
           ],
           "shuffle": [
-            "y",
             "mucho",
-            "Tuve",
+            "y",
+            "grité",
             "miedo",
-            "grité"
+            "Tuve"
           ],
           "en": "I was very scared and I shouted."
         },
@@ -1149,12 +1149,12 @@
             "gato"
           ],
           "shuffle": [
-            "suerte",
-            "gato",
             "solo",
-            "Por",
+            "el",
             "era",
-            "el"
+            "Por",
+            "suerte",
+            "gato"
           ],
           "en": "Luckily it was only the cat."
         }
@@ -1287,9 +1287,9 @@
             "Málaga"
           ],
           "shuffle": [
+            "en",
             "Picasso",
             "Málaga",
-            "en",
             "nació"
           ],
           "en": "Picasso was born in Málaga."
@@ -1303,9 +1303,9 @@
           ],
           "shuffle": [
             "pintó",
-            "meninas",
+            "Velázquez",
             "Las",
-            "Velázquez"
+            "meninas"
           ],
           "en": "Velázquez painted Las meninas."
         },
@@ -1318,9 +1318,9 @@
           ],
           "shuffle": [
             "el",
-            "Quijote",
             "Cervantes",
-            "escribió"
+            "escribió",
+            "Quijote"
           ],
           "en": "Cervantes wrote Don Quixote."
         }
@@ -1456,8 +1456,8 @@
           ],
           "shuffle": [
             "principio",
-            "triste",
             "Al",
+            "triste",
             "el",
             "dragón",
             "estaba"
@@ -1474,12 +1474,12 @@
             "amigo"
           ],
           "shuffle": [
-            "encontró",
-            "un",
             "siguiente",
-            "amigo",
+            "encontró",
             "día",
-            "Al"
+            "amigo",
+            "Al",
+            "un"
           ],
           "en": "The next day he found a friend."
         },
@@ -1492,11 +1492,11 @@
             "amigos"
           ],
           "shuffle": [
-            "muy",
             "entonces",
-            "son",
+            "Desde",
             "amigos",
-            "Desde"
+            "son",
+            "muy"
           ],
           "en": "Since then they have been great friends."
         }
@@ -1631,12 +1631,12 @@
             "autocar"
           ],
           "shuffle": [
-            "en",
             "montaña",
-            "autocar",
+            "a",
+            "en",
             "Fuimos",
-            "la",
-            "a"
+            "autocar",
+            "la"
           ],
           "en": "We went to the mountains by coach."
         },
@@ -1651,13 +1651,13 @@
             "dormir"
           ],
           "shuffle": [
-            "llevar",
-            "que",
-            "Tuve",
-            "de",
             "dormir",
+            "de",
             "saco",
-            "mi"
+            "mi",
+            "que",
+            "llevar",
+            "Tuve"
           ],
           "en": "I had to take my sleeping bag."
         }
