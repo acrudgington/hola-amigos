@@ -135,3 +135,35 @@ test("learn together → the weekly report shows it", async ({ page }, info) => 
   if (shots) await page.locator(".week-card").screenshot({ path: `${shots}/week-${info.project.name}.png` });
   expect(errors).toEqual([]);
 });
+
+test("an A2 lesson (101) plays from start to finish", async ({ page }) => {
+  test.setTimeout(300_000);
+  const errors: string[] = [];
+  page.on("pageerror", e => errors.push(e.message));
+  await page.goto("/");
+  await page.getByRole("tab", { name: /Sign up/i }).click();
+  await page.getByLabel("Your name").fill("Sam");
+  await page.getByLabel("Email").fill(`sam+${Date.now()}@example.com`);
+  await page.getByLabel("Password").fill("secret123");
+  await page.getByRole("checkbox", { name: /parent or guardian/ }).check();
+  await page.getByRole("button", { name: /Create account/ }).click();
+  await page.locator(".profile-tile--add").click();
+  await page.getByLabel("Child’s name").fill("Mia");
+  await page.getByRole("button", { name: "Add ✓" }).click();
+  await page.locator(".profile-tile").first().click();
+  await page.getByRole("button", { name: /new to Spanish/ }).click();
+  await expect(page.getByText(/Sol · study buddy/)).toBeVisible();
+
+  // Pretend the placement check put Mia past the first 100 lessons.
+  await page.evaluate(() => {
+    const key = Object.keys(localStorage).find(k => k.startsWith("hola_progress_"))!;
+    const p = JSON.parse(localStorage.getItem(key)!);
+    localStorage.setItem(key, JSON.stringify({ ...p, placedUpTo: 100, placementOffered: true }));
+  });
+  await page.reload();
+  await expect(page.getByText(/LESSON 101/)).toBeVisible();
+  await page.locator(".next-card").click();
+  await playThrough(page);
+  await expect(page.getByText("Lesson complete!")).toBeVisible();
+  expect(errors).toEqual([]);
+});
