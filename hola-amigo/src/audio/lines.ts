@@ -22,7 +22,7 @@ export const INSTRUCTIONS: Record<ActivityType, string> = {
   boss: "It's the big challenge! Every right answer is a hit. You can do it!",
 };
 
-export const REVIEW_INSTRUCTION = "Daily review! Let's keep your words strong.";
+export const REVIEW_INSTRUCTION = "Time for Sol's mix! These words are picked just for you.";
 
 // Short Spanish praise, said by Sol when an answer is right.
 export const PRAISE = ["¡Correcto!", "¡Muy bien!", "¡Sí!", "¡Genial!", "¡Fantástico!"];

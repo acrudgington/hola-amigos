@@ -935,3 +935,13 @@ li:last-child > .step .step__rail { display: none; }
 .can-list li { display: flex; gap: 10px; align-items: flex-start; font-weight: 800; font-size: 14px; }
 .can-list .goal__icon { background: var(--mint); border-color: var(--mint); color: #fff; }
 .goal--practising .goal__icon::after { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--sun); }
+
+/* Adaptive practice */
+.diff-chip { display: inline-block; margin-left: 8px; padding: 2px 8px; border-radius: 999px; font-size: 10px; letter-spacing: 0.06em; vertical-align: 1px; animation: pop-in 0.3s var(--ease-spring); }
+.diff-chip--up { color: var(--fire); background: color-mix(in srgb, var(--fire) 14%, transparent); border: 1px solid color-mix(in srgb, var(--fire) 35%, transparent); }
+.diff-chip--down { color: var(--sky); background: color-mix(in srgb, var(--sky) 14%, transparent); border: 1px solid color-mix(in srgb, var(--sky) 35%, transparent); }
+.mix-chip { font-family: var(--font-mono); font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 999px; border: 1px solid var(--mc); color: var(--mc); background: color-mix(in srgb, var(--mc) 12%, transparent); }
+.mix-chip--due { --mc: var(--sky); } .mix-chip--tricky { --mc: var(--coral); } .mix-chip--challenge { --mc: var(--luna); } .mix-chip--refresh { --mc: var(--mint); }
+.tricky-words { display: flex; flex-wrap: wrap; gap: 6px; }
+.tricky-word { display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px 5px 6px; border-radius: 12px; background: var(--glass-2); border: 1px solid var(--hairline-hi); font-size: 13px; font-weight: 800; }
+.tricky-word small { color: var(--muted); font-weight: 700; }

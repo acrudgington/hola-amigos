@@ -5,6 +5,7 @@ import { services, type Child, type Parent } from "../services/index.ts";
 import { useFamily } from "../state/useFamily.ts";
 import { AccountPanel } from "../components/AccountPanel.tsx";
 import { LESSONS, WORLDS } from "../content/index.ts";
+import { trickyWords } from "../domain/memory.ts";
 import { LEVEL_INFO, allGoals, levelSummary, nextGoal, type GoalProgress, type Level, type UnitProgress } from "../domain/goals.ts";
 import { Button, Card, Modal } from "../components/ui.tsx";
 import { Art } from "../components/Art.tsx";
@@ -106,6 +107,14 @@ function ChildReport({ child, progress: p, onRemove }: { child: Child; progress:
       {" "}{(p.badges || []).length} badges, {(p.stickers || []).length} stickers.
     </div>
 
+    {(() => {
+      const tricky = trickyWords(p, 6);
+      return tricky.length > 0 && <div style={{ marginBottom: 16 }}>
+        <div className="small" style={{ fontWeight: 900, marginBottom: 8 }}>Words {child.name} finds tricky</div>
+        <div className="tricky-words">{tricky.map(w => <span key={w.es} className="tricky-word" lang="es"><Art e={w.emoji} size={20} />{w.es} <small>{w.en}</small></span>)}</div>
+        <p className="tiny muted" style={{ marginTop: 6 }}>These come up more often in Sol’s mix until they stick.</p>
+      </div>;
+    })()}
     <CanDo name={child.name} progress={p} />
   </Card>;
 }

@@ -32,8 +32,8 @@ export function planMission(progress: Progress, now = Date.now()): Mission {
   if (Object.keys(progress.wordMemory || {}).length) {
     steps.push({
       id: "review", action: "review", icon: "review",
-      title: due ? `Refresh ${Math.min(due, 10)} word${due === 1 ? "" : "s"}` : "Quick memory warm-up",
-      detail: due ? "Words that are ready to practise again" : "Keep your words strong",
+      title: "Sol’s mix",
+      detail: due ? `${Math.min(due, 10)} word${due === 1 ? "" : "s"} to refresh, picked just for you` : "Practice picked just for you",
       done: reviewedToday,
     });
   }

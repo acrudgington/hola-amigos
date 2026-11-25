@@ -2,16 +2,17 @@
 // Each one builds its rounds ONCE when it mounts (useState initialiser), so a
 // re-render of the app — a mascot reaction, a confetti burst — can never
 // reshuffle or restart the game. (That was the root of the old "lesson loop" bugs.)
-import { useEffect, useState, type ReactNode } from "react";
+import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { voice } from "../audio/player.ts";
-import { buildOptions, shuffle, uniqueBy } from "../lib/utils.ts";
-import { ALL_WORDS, type Gap, type Word, type World } from "../content/index.ts";
+import { shuffle, uniqueBy } from "../lib/utils.ts";
+import { ALL_WORDS, siblingsOf, type Gap, type Word, type World } from "../content/index.ts";
 import type { GameProps } from "./types.ts";
 import { Choices, Feedback, SpeakButton } from "../components/ui.tsx";
 import { useLater, useRounds } from "./hooks.ts";
 import { useGuide } from "../audio/guide.ts";
 import { BOSS_HIT, PRAISE, REMEMBERED } from "../audio/lines.ts";
 import { Art } from "../components/Art.tsx";
+import { CHOICES, nextDifficulty, type Difficulty, type MixItem } from "../domain/memory.ts";
 
 const praise = () => PRAISE[Math.floor(Math.random() * PRAISE.length)];
 const emojiFor = (es: string) => ALL_WORDS.find(w => w.es === es)?.emoji || "";
@@ -24,6 +25,11 @@ interface Opt { en: string; es?: string; emoji?: string }
 interface Round {
   es?: string; en?: string; listen?: boolean;
   answerKey: string; reveal: string; options: Opt[];
+  // Adaptive rounds carry extra distractors; how many are shown depends on how
+  // the child is doing (see nextDifficulty). `base` is the usual number of choices.
+  // `near` = confusable distractors (same lesson); `far` = other learned words.
+  adaptive?: boolean; base?: number; near?: Opt[]; far?: Opt[];
+  dir?: "recognise" | "recall";
   prompt?: ReactNode; render: (o: Opt) => ReactNode; list?: boolean;
   narrate?: string;   // read the question aloud (gap-fill questions)
 }
@@ -36,6 +42,32 @@ interface RoundGameProps extends GameProps {
 function RoundGame({ rounds, onDone, onWord, counterLabel = "Question", header, goodText, delay = 1000 }: RoundGameProps) {
   const { idx, item, picked, answer, total } = useRounds(rounds, { onDone, delay });
   const [praiseText, setPraiseText] = useState(praise);
+
+  // Adaptive difficulty: decided when each round starts, from the answers so far.
+  const results = useRef<boolean[]>([]);
+  const difficulty: Difficulty = useMemo(() => nextDifficulty(results.current), [idx]); // eslint-disable-line react-hooks/exhaustive-deps
+  const shown = useMemo(() => {
+    if (!item?.adaptive) return item?.options ?? [];
+    const base = item.base ?? 4;
+    const n = difficulty === "easier" ? Math.min(base, CHOICES.easier) : difficulty === "harder" ? Math.min(CHOICES.harder, base + 2) : base;
+    const right = item.options.find(o => keyOf(o) === item.answerKey)!;
+    // Harder = more look-alikes from the same lesson; easier = only unrelated words.
+    const near = item.near ?? [], far = item.far ?? [];
+    const wantNear = difficulty === "harder" ? n - 1 : difficulty === "normal" ? 1 : 0;
+    const picked: Opt[] = [];
+    const add = (o: Opt) => { if (picked.length < n - 1 && keyOf(o) !== item.answerKey && !picked.some(x => keyOf(x) === keyOf(o))) picked.push(o); };
+    near.slice(0, wantNear).forEach(add);
+    far.forEach(add);
+    near.forEach(add);
+    return shuffle([right, ...picked]);
+  }, [item, difficulty]);
+  // A spoken hint when it's getting hard: hear the Spanish word again.
+  useEffect(() => {
+    if (difficulty !== "easier" || !item?.es || item.listen || item.dir === "recall") return;
+    const es = item.es;
+    const t = setTimeout(() => voice.spanish(es, { mode: "queue" }), 500);
+    return () => clearTimeout(t);
+  }, [item, difficulty]);
 
   // Read written questions aloud for pre-readers (after any instruction finishes).
   const guide = useGuide();
@@ -59,7 +91,8 @@ function RoundGame({ rounds, onDone, onWord, counterLabel = "Question", header, 
   const pick = (o: Opt) => {
     const k = keyOf(o);
     const ok = k === item.answerKey;
-    if (item.es) onWord?.(item.es, item.en ?? "", ok);
+    results.current.push(ok);
+    if (item.es) onWord?.(item.es, item.en ?? "", ok, item.dir ? { dir: item.dir } : undefined);
     const p = goodText ? goodText() : praise();
     setPraiseText(p);
     if (ok) voice.narrate(p, { speaker: "sol" });   // Sol cheers in Spanish
@@ -69,14 +102,18 @@ function RoundGame({ rounds, onDone, onWord, counterLabel = "Question", header, 
 
   return <div className="text-center">
     {header?.()}
-    <div className="counter" style={{ marginBottom: 12 }}>{counterLabel} {idx + 1} / {total}</div>
+    <div className="counter" style={{ marginBottom: 12 }}>
+      {counterLabel} {idx + 1} / {total}
+      {difficulty === "harder" && <span className="diff-chip diff-chip--up">Trickier! 🔥</span>}
+      {difficulty === "easier" && <span className="diff-chip diff-chip--down">Fewer choices 💪</span>}
+    </div>
     <div key={idx} style={{ animation: "pop-in .3s var(--ease-spring)" }}>
       {item.listen ? <>
         <p className="say-hint" style={{ marginBottom: 12 }}>Listen, then choose!</p>
         <div className="row row--center" style={{ marginBottom: 18 }}><SpeakButton text={item.es ?? ""} big label="Play again" /></div>
       </> : item.prompt}
     </div>
-    <Choices options={item.options} getKey={keyOf} render={item.render} answerKey={item.answerKey} picked={picked} onPick={pick} list={item.list} />
+    <Choices options={shown} getKey={keyOf} render={item.render} answerKey={item.answerKey} picked={picked} onPick={pick} list={item.list} />
     <Feedback show={picked != null} good={good}>
       {good ? `${goodText ? "" : "⭐ "}${praiseText}` : <>It’s <b>{item.reveal}</b></>}
     </Feedback>
@@ -94,11 +131,22 @@ const wordPrompt = (w: Word, sub?: string) => <>
 const withEmoji = (o: Opt) => <>{o.emoji && <Art e={o.emoji} size={40} className="choice__emoji" />}<span>{o.en}</span></>;
 const textOnly = (o: Opt) => <span>{o.en}</span>;
 
+// Distractor pools for adaptive rounds: look-alikes from the word's own lesson,
+// and other words from `pool` (ideally only words the child has learned).
+function distractors(w: Word, pool: Word[], key: (x: Word) => string) {
+  const k = key(w);
+  const near = uniqueBy(shuffle(siblingsOf(w.es).filter(x => key(x) !== k)), key);
+  const nearKeys = new Set(near.map(key));
+  const far = uniqueBy(shuffle(pool.filter(x => key(x) !== k && !nearKeys.has(key(x)))), key).slice(0, 12);
+  return { near, far };
+}
+
 // Turn a word into a "what does it mean?" round.
 function meaningRound(w: Word, pool: Word[], { listen = false, emoji = true, sub }: { listen?: boolean; emoji?: boolean; sub?: string } = {}): Round {
+  const { near, far } = distractors(w, pool, x => x.en);
   return {
     es: w.es, en: w.en, listen, answerKey: w.en, reveal: `${w.emoji ? w.emoji + " " : ""}${w.en}`,
-    options: buildOptions(w, pool),
+    options: [w, ...near, ...far], near, far, adaptive: true, base: 4, dir: "recognise",
     prompt: wordPrompt(w, sub),
     render: emoji ? withEmoji : textOnly,
   };
@@ -139,20 +187,39 @@ export function ListenGame({ words, onDone, onWord }: GameProps & { words: Word[
 // ------------------------------------------------------------
 // WARM-UP — "Can you still remember?" over earlier words
 // ------------------------------------------------------------
-export function WarmUp({ words, onDone, onWord }: GameProps & { words: Word[] }) {
-  const [rounds] = useState(() => shuffle(words).slice(0, 5).map(w => meaningRound(w, ALL_WORDS, { sub: "Can you still remember? 🤔" })));
+export function WarmUp({ words, pool = ALL_WORDS, onDone, onWord }: GameProps & { words: Word[]; pool?: Word[] }) {
+  const [rounds] = useState(() => shuffle(words).slice(0, 5).map(w => meaningRound(w, pool, { sub: "Can you still remember? 🤔" })));
   return <RoundGame rounds={rounds} onDone={onDone} onWord={onWord} goodText={() => REMEMBERED} delay={900} />;
 }
 
+// Recall: see the English (and picture), choose the Spanish. Harder than
+// recognising, and closer to speaking.
+function recallRound(w: Word, pool: Word[]): Round {
+  const asOpt = (x: Word): Opt => ({ en: x.es, es: x.es });
+  const { near, far } = distractors(w, pool, x => x.es);
+  return {
+    es: w.es, en: w.en, answerKey: w.es, reveal: w.es, options: [asOpt(w)], near: near.map(asOpt), far: far.map(asOpt), adaptive: true, base: 4, dir: "recall",
+    prompt: <>
+      <p className="say-hint" style={{ marginBottom: 6 }}>How do you say this in Spanish?</p>
+      <div className="row row--center" style={{ gap: 12, marginBottom: 18 }}>
+        {w.emoji && <Art e={w.emoji} size={56} />}<div className="big-word" style={{ fontSize: "clamp(26px, 7vw, 36px)" }}>{w.en}</div>
+      </div>
+    </>,
+    render: textOnly,
+  };
+}
+
 // ------------------------------------------------------------
-// DAILY REVIEW — spaced repetition, alternating reading & listening
+// SOL'S MIX — daily personal practice: due, tricky and challenge words
 // ------------------------------------------------------------
-export function ReviewGame({ dueWords, onDone, onWord }: GameProps & { dueWords: { es: string; en: string; emoji?: string }[] }) {
-  const [rounds] = useState(() => dueWords.slice(0, 10).map((d, i) => {
-    const w: Word = { es: d.es, en: d.en, emoji: d.emoji ?? emojiFor(d.es), say: "" };
-    return meaningRound(w, ALL_WORDS, { listen: i % 2 === 1 && voice.available() });
+export function MixGame({ items, pool, onDone, onWord }: GameProps & { items: MixItem[]; pool: Word[] }) {
+  const [rounds] = useState(() => items.map(m => {
+    const w: Word = { es: m.es, en: m.en, emoji: m.emoji || emojiFor(m.es), say: "" };
+    const from = pool.length >= 8 ? pool : ALL_WORDS;   // distractors from words they've learned
+    const r = m.mode === "recall" ? recallRound(w, from) : meaningRound(w, from, { listen: m.mode === "listen" && voice.available(), sub: m.reason === "tricky" ? "A tricky one — you can do it! 💪" : undefined });
+    return { ...r, base: m.choices };
   }));
-  return <RoundGame rounds={rounds} onDone={onDone} onWord={onWord} counterLabel="Review" />;
+  return <RoundGame rounds={rounds} onDone={onDone} onWord={onWord} counterLabel="Question" />;
 }
 
 // ------------------------------------------------------------

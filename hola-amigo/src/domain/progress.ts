@@ -5,7 +5,10 @@
 // the storage service (local today, Firebase later).
 // ============================================================
 
-export interface WordMemory { box: number; seen: number; en: string; last: number }
+// box: recognising the word (Spanish → English), Leitner 0–5.
+// recall: producing it (English → Spanish), 0–5. wrong: wrong answers in total.
+export interface WordMemory { box: number; seen: number; en: string; last: number; recall?: number; wrong?: number }
+export type Direction = "recognise" | "recall";
 
 export type EventType = "lesson" | "review" | "badge" | "sticker" | "outfit" | "level" | "chest" | "combo" | "start";
 export interface ActivityEvent { t: number; type: EventType; text: string; emoji?: string; title?: string }
@@ -90,11 +93,20 @@ export function liveStreak(p: Pick<Progress, "lastActive" | "streak"> | null | u
 // Interval per box, in days. Box 1 = due tomorrow, box 5 = due in 3 weeks.
 export const BOX_INTERVALS = [0, 1, 2, 4, 9, 21];
 
-export function recordWord(p: Progress, es: string, en: string, correct: boolean, now = Date.now()): Progress {
+export function recordWord(p: Progress, es: string, en: string, correct: boolean, now = Date.now(), dir: Direction = "recognise"): Progress {
   if (!es) return p;
-  const prev = p.wordMemory[es] || { box: 0, seen: 0, en, last: 0 };
-  const box = correct ? Math.min(5, prev.box + 1) : 1;
-  return { ...p, wordMemory: { ...p.wordMemory, [es]: { box, seen: prev.seen + 1, en: en || prev.en, last: now } } };
+  const prev: WordMemory = p.wordMemory[es] || { box: 0, seen: 0, en, last: 0 };
+  const next: WordMemory = { ...prev, seen: prev.seen + 1, en: en || prev.en, last: now };
+  if (dir === "recall") {
+    // Recalling the Spanish is harder: success also proves recognition; a miss
+    // only resets recall (they may still recognise it when they see it).
+    next.recall = correct ? Math.min(5, (prev.recall || 0) + 1) : 0;
+    if (correct) next.box = Math.max(prev.box, Math.min(5, prev.box + 1));
+  } else {
+    next.box = correct ? Math.min(5, prev.box + 1) : 1;
+  }
+  if (!correct) next.wrong = (prev.wrong || 0) + 1;
+  return { ...p, wordMemory: { ...p.wordMemory, [es]: next } };
 }
 
 export interface DueWord { es: string; en: string; box: number; overdue: number }

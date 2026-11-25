@@ -10,7 +10,7 @@ import { lessonById, LESSONS, type Lesson } from "./content/index.ts";
 import { isBadgeEarned, type EarnedReward } from "./domain/rewards.ts";
 import {
   XP, addStat, addXP, awardStars, bumpDaily, claimChest, logEvent, maxCompleted,
-  recordCombo, recordWord, repairProgress, starsForScore, touchStreak,
+  recordCombo, recordWord, repairProgress, starsForScore, touchStreak, type Progress,
 } from "./domain/progress.ts";
 import { services, type Child, type Parent } from "./services/index.ts";
 import { initialNav, isLastStep, navReducer, type ShellView } from "./state/nav.ts";
@@ -170,13 +170,14 @@ export default function App() {
   const practice = (activity: ActivityType) => { resetSession(); dispatch({ type: "practice", activity, run: Date.now() }); };
 
   // ---------- answers & activities ----------
-  const onWord = useCallback((es: string, en: string, ok: boolean, opts?: { quiet?: boolean }) => {
+  const onWord = useCallback((es: string, en: string, ok: boolean, opts?: { quiet?: boolean; dir?: "recognise" | "recall" }) => {
     const s = streak.current;
-    if (opts?.quiet) { update(p => recordWord(p, es, en, ok)); return; }
+    const record = (p: Progress) => recordWord(p, es, en, ok, Date.now(), opts?.dir);
+    if (opts?.quiet) { update(record); return; }
     if (ok) {
       s.run += 1;
       const bonus = s.run % 5 === 0 ? XP.combo5 : 0;
-      update(p => recordCombo(addXP(recordWord(p, es, en, ok), XP.correct + bonus), s.run));
+      update(p => recordCombo(addXP(record(p), XP.correct + bonus), s.run));
       gainXP(XP.correct + bonus, s.run >= 3 ? `🔥x${s.run}` : "");
       setCombo(s.run);
       if (bonus) sfx.combo(); else sfx.correct();
@@ -185,7 +186,7 @@ export default function App() {
       else if (s.lastWrong && Math.random() < 0.5) setReaction(pickReaction("recover"));
       s.lastWrong = false;
     } else {
-      update(p => recordWord(p, es, en, ok));
+      update(record);
       sfx.wrong();
       s.run = 0; s.lastWrong = true; setCombo(0);
       if (Math.random() < 0.34) {
@@ -235,7 +236,7 @@ export default function App() {
     update(p => {
       const r = bumpDaily(addStat(addStat(p, "correctAnswers", s), "reviewsDone", 1));
       goalMet = r.justMet;
-      return logEvent(addXP(r.progress, XP.review), { type: "review", emoji: "🔁", text: `Daily review: ${s} of ${t} right` });
+      return logEvent(addXP(r.progress, XP.review), { type: "review", emoji: "🔁", text: `Sol's mix: ${s} of ${t} right` });
     });
     sfx.complete();
     if (goalMet || s === t) celebrate();
@@ -285,7 +286,7 @@ export default function App() {
     </Shell>;
     topKey = "shell";
   } else if (nav.view === "activity" && nav.activity) {
-    content = <ActivityScreen key={`${nav.activity.type}-${nav.activity.run}`} lesson={lesson} type={nav.activity.type} journey={nav.journey}
+    content = <ActivityScreen key={`${nav.activity.type}-${nav.activity.run}`} lesson={lesson} type={nav.activity.type} journey={nav.journey} progress={progress}
       combo={combo} sessionXp={sessionXp} onWord={onWord} onFinish={finishActivity}
       onExit={() => dispatch({ type: "exitActivity" })} onRetry={() => practice(nav.activity!.type)} />;
     topKey = `act-${nav.activity.run}`;

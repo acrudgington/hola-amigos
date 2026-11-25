@@ -1,15 +1,17 @@
 import { useState } from "react";
-import { getDueWords, maxCompleted, type Progress } from "../domain/progress.ts";
+import { maxCompleted, type Progress } from "../domain/progress.ts";
+import { wordsForLessonsUpTo } from "../content/index.ts";
+import { buildMix, mixSummary, type MixItem } from "../domain/memory.ts";
+import { voice } from "../audio/player.ts";
 import { useSayOnShow } from "../audio/guide.ts";
 import { REVIEW_INSTRUCTION } from "../audio/lines.ts";
 import type { OnWord } from "../games/types.ts";
-import { shuffle } from "../lib/utils.ts";
-import { wordsForLessonsUpTo } from "../content/index.ts";
 import { Button, Card } from "../components/ui.tsx";
 import { Luna, Sol } from "../components/Mascots.tsx";
-import { ReviewGame } from "../games/ChoiceGames.tsx";
+import { MixGame } from "../games/ChoiceGames.tsx";
 
-// Daily review — spaced repetition over words the child has met before.
+// Sol's mix — daily personal practice: words that are fading, tricky words,
+// and recall challenges for words they already recognise (domain/memory.ts).
 export function ReviewScreen({ progress, onBack, onFinish, onWord }: { progress: Progress; onBack: () => void; onFinish: (s: number, t: number) => void; onWord: OnWord }) {
   // Snapshot the list when the screen opens. (Previously it was recomputed on
   // every render, so answering a word changed the list and restarted the game.)
@@ -24,8 +26,9 @@ export function ReviewScreen({ progress, onBack, onFinish, onWord }: { progress:
     <div>
       <div className="text-center" style={{ margin: "10px 0 16px" }}>
         <div className="row row--center" style={{ gap: 4 }}><Sol size={48} outfit={progress.solOutfit} /><Luna size={46} mood="happy" outfit={progress.lunaOutfit} /></div>
-        <h1 className="h2" style={{ marginTop: 6 }}>Daily review</h1>
-        <p className="small muted" style={{ marginTop: 4 }}>Words you’ve met before — let’s keep them strong!</p>
+        <h1 className="h2" style={{ marginTop: 6 }}>Sol’s mix</h1>
+        <p className="small muted" style={{ marginTop: 4 }}>Your own practice, picked from the words you’ve learned.</p>
+        {list.length > 0 && !result && <MixChips items={list} />}
       </div>
       <Card className="card--pad-lg" style={{ padding: "22px 16px" }}>
         {list.length === 0 ? <div className="text-center">
@@ -41,17 +44,22 @@ export function ReviewScreen({ progress, onBack, onFinish, onWord }: { progress:
             <Button variant="luna" onClick={again}>↻ Review more</Button>
             <Button onClick={onBack}>Back to the map</Button>
           </div>
-        </div> : <ReviewGame key={run} dueWords={list} onWord={onWord} onDone={(s, t) => { onFinish(s, t); setResult({ s, t }); }} />}
+        </div> : <MixGame key={run} items={list} pool={wordsForLessonsUpTo(Math.max(1, maxCompleted(progress.stars || {})))} onWord={onWord} onDone={(s: number, t: number) => { onFinish(s, t); setResult({ s, t }); }} />}
       </Card>
     </div>
   </div>;
 }
 
-function makeList(progress: Progress): { es: string; en: string; emoji?: string }[] {
-  const due = getDueWords(progress);
-  if (due.length) return due.slice(0, 10);
-  // Nothing technically due → a mixed refresh of everything learned so far.
-  const done = maxCompleted(progress.stars || {});
-  if (!done) return [];
-  return shuffle(wordsForLessonsUpTo(done)).slice(0, 10);
+function makeList(progress: Progress): MixItem[] {
+  return buildMix(progress, { size: 10, canListen: voice.available() });
+}
+
+function MixChips({ items }: { items: MixItem[] }) {
+  const n = mixSummary(items);
+  const chips: [number, string, string][] = [
+    [n.due, "due", "to refresh"], [n.tricky, "tricky", "tricky"], [n.challenge, "challenge", "challenges"], [n.refresh, "refresh", "from earlier"],
+  ];
+  return <div className="row row--center row--wrap" style={{ gap: 6, marginTop: 10 }}>
+    {chips.filter(([c]) => c > 0).map(([c, k, label]) => <span key={k} className={`mix-chip mix-chip--${k}`}>{c} {label}</span>)}
+  </div>;
 }

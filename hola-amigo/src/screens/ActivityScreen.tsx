@@ -19,6 +19,8 @@ import { SentenceGame } from "../games/SentenceGame.tsx";
 import { StoryReader } from "../games/StoryReader.tsx";
 import { SayItGame } from "../games/SayItGame.tsx";
 import { Art } from "../components/Art.tsx";
+import { warmupWords } from "../domain/memory.ts";
+import type { Progress } from "../domain/progress.ts";
 
 function SurpriseCard({ surprise, onDone }: { surprise: Surprise; onDone: () => void }) {
   useSayOnShow(surprise.lines.join(" "), { delay: 450 });
@@ -49,16 +51,17 @@ function FreeResult({ score, total, onRetry, onBack }: { score: number; total: n
 
 // One activity screen. Keyed by the parent, so a fresh key = a fresh game.
 interface ActivityScreenProps {
-  lesson: Lesson; type: ActivityType; journey: Journey | null; combo?: number; sessionXp?: number;
+  lesson: Lesson; type: ActivityType; journey: Journey | null; combo?: number; sessionXp?: number; progress?: Progress;
   onExit: () => void; onFinish: (correct: number, total: number, stats?: ActivityStats) => void; onRetry: () => void; onWord: OnWord;
 }
-export function ActivityScreen({ lesson, type, journey, combo = 0, sessionXp = 0, onExit, onFinish, onRetry, onWord }: ActivityScreenProps) {
+export function ActivityScreen({ lesson, type, journey, combo = 0, sessionXp = 0, progress, onExit, onFinish, onRetry, onWord }: ActivityScreenProps) {
   const [result, setResult] = useState<{ score: number; total: number } | null>(null);
   // Activity inputs are fixed for the life of this screen.
   const [inputs] = useState((): { words?: Word[]; world?: World } => {
     if (type === "warmup") {
+      // The child's weakest earlier words first (see domain/memory.ts).
       const earlier = wordsForLessonsUpTo(Math.max(1, lesson.id - 1));
-      return { words: earlier.length >= 4 ? earlier : lesson.words };
+      return { words: earlier.length >= 4 ? (progress ? warmupWords(progress, earlier, 5) : earlier) : lesson.words };
     }
     if (type === "boss") {
       const w = wordsForWorld(lesson.id);
@@ -95,7 +98,7 @@ export function ActivityScreen({ lesson, type, journey, combo = 0, sessionXp = 0
     wordorder: () => <SentenceGame sentences={lesson.sentences} variant="wordorder" onDone={finish} />,
     story: () => <StoryReader story={lesson.story} onDone={(s, t) => finish(s, t, { storiesRead: 1 })} />,
     surprise: () => <SurpriseCard surprise={surpriseFor(lesson.id)} onDone={() => finish(0, 0, { noCount: true })} />,
-    warmup: () => <WarmUp words={inputs.words ?? lesson.words} {...common} onDone={finish} />,
+    warmup: () => <WarmUp words={inputs.words ?? lesson.words} pool={wordsForLessonsUpTo(lesson.id)} {...common} onDone={finish} />,
     boss: () => <BossBattle words={inputs.words ?? lesson.words} world={inputs.world} {...common} onDone={finish} />,
   };
 

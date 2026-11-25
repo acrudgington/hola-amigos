@@ -88,6 +88,22 @@ Levels are honest CEFR bands: worlds 1–2 are **Pre-A1**, the rest **A1**, and 
 that introduce A2 grammar (the past, opinions, comparisons) are marked **A2 taster**.
 The content check fails if any lesson isn't covered by exactly one goal.
 
+## Adaptive practice
+
+`src/domain/memory.ts` keeps a picture of how well each word is known:
+recognising it (Spanish → English), recalling it (English → Spanish), how often it's
+been got wrong, and how much it has faded since it was last seen.
+
+- **Sol's mix** (the Practise tab) builds a personal 10-question session: tricky words
+  (fewer choices so they can win them back), words that are due, recall challenges for
+  words they already recognise, then a refresh of earlier lessons, weakest first.
+- **Difficulty adapts while playing**: after 2 misses in a row the next question has 3
+  choices and the word is read aloud as a hint; after 4 right in a row it goes up to 5–6
+  choices, all look-alikes from the same lesson. Wrong answers are drawn only from words
+  the child has learned.
+- **Warm-ups** use the child's weakest earlier words.
+- Parents see the **words their child finds tricky** in the grown-up dashboard.
+
 ## Editing lessons
 
 All course content lives in `content/` as plain JSON, so it can be edited without touching code:

@@ -42,6 +42,12 @@ const uniqueWords = (lessons: Lesson[]): Word[] => {
 // Every distinct word in the course (distractors, emoji look-ups, search).
 export const ALL_WORDS = uniqueWords(LESSONS);
 export const wordsForLessonsUpTo = (maxLessonId: number) => uniqueWords(LESSONS.filter(l => l.id <= maxLessonId));
+
+// The other words taught alongside a word (its "siblings" — the most confusable
+// distractors, e.g. Buenos días / Buenas tardes / Buenas noches).
+const firstLessonOf = new Map<string, Lesson>();
+for (const l of LESSONS) for (const w of l.words) if (!firstLessonOf.has(w.es)) firstLessonOf.set(w.es, l);
+export const siblingsOf = (es: string): Word[] => (firstLessonOf.get(es)?.words ?? []).filter(w => w.es !== es);
 export const wordsForWorld = (lessonId: number) => {
   const w = worldOf(lessonId);
   return w ? uniqueWords(lessonsInWorld(w)) : [];
