@@ -103,7 +103,7 @@ export default function App() {
   }, [enterChild]);
 
   // ---------- preferences ----------
-  useEffect(() => { applyTheme(prefs.theme); setSoundEnabled(prefs.sound); savePrefs(prefs); }, [prefs]);
+  useEffect(() => { applyTheme(prefs.theme); setSoundEnabled(prefs.sound); voice.setSlow(prefs.slow); savePrefs(prefs); }, [prefs]);
   const togglePref = (key: keyof Prefs) => setPrefs(p => (key === "theme"
     ? { ...p, theme: p.theme === "galaxy" ? "daylight" : "galaxy" }
     : { ...p, [key]: !p[key] }));

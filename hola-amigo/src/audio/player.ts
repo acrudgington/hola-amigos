@@ -21,9 +21,13 @@ export interface PlayOptions {
   // to follow it.
   mode?: "interrupt" | "queue" | "lead";
   onEnd?: () => void;
+  // Playback speed for the Spanish parts (1 = normal). The 🐢 buttons use SLOW.
+  rate?: number;
 }
+// Slow Spanish: slower, same pitch, so learners can hear every sound.
+export const SLOW = 0.7;
 
-interface Job { segments: Segment[]; onEnd?: () => void }
+interface Job { segments: Segment[]; onEnd?: () => void; rate?: number }
 
 const urlFor = (s: Segment) => {
   const id = clipId(s.role, s.text);
@@ -37,12 +41,12 @@ if (hasWindow && window.speechSynthesis) {
   load();
   window.speechSynthesis.addEventListener?.("voiceschanged", load);
 }
-function speakWithDevice(s: Segment, done: () => void) {
+function speakWithDevice(s: Segment, done: () => void, rate = 1) {
   if (!hasWindow || !window.speechSynthesis) { done(); return; }
   const spanishLine = s.role.endsWith("es");
   const u = new SpeechSynthesisUtterance(s.text);
   u.lang = spanishLine ? "es-ES" : "en-GB";
-  u.rate = spanishLine ? 0.85 : 0.95;
+  u.rate = (spanishLine ? 0.85 : 0.95) * (spanishLine ? rate : 1);
   const v = deviceVoices.find(x => x.lang === u.lang) || deviceVoices.find(x => x.lang.startsWith(spanishLine ? "es" : "en"));
   if (v) u.voice = v;
   u.onend = done;
@@ -75,6 +79,9 @@ class VoicePlayer {
   // An activity's instructions are about to play: queued lines wait for them.
   private introPending = false;
   private introTimer: ReturnType<typeof setTimeout> | null = null;
+  private watchdog: ReturnType<typeof setTimeout> | null = null;
+  // "Always speak Spanish slowly" (a grown-up setting).
+  slowSpanish = false;
 
   private element() {
     if (!this.el && hasWindow) { this.el = new Audio(); this.el.preload = "auto"; }
@@ -93,9 +100,9 @@ class VoicePlayer {
     el.play().then(() => el.pause(), () => {});
   }
 
-  play(segments: Segment[], { mode = "interrupt", onEnd }: PlayOptions = {}) {
+  play(segments: Segment[], { mode = "interrupt", onEnd, rate }: PlayOptions = {}) {
     if (!segments.length) { onEnd?.(); return; }
-    const job: Job = { segments, onEnd };
+    const job: Job = { segments, onEnd, rate };
     if (mode === "queue" && (this.current || this.introPending)) { this.queue.push(job); return; }
     if (mode === "lead") {
       const waiting = this.queue;
@@ -136,6 +143,7 @@ class VoicePlayer {
     this.token++;
     this.queue = [];
     this.current = null;
+    this.clearWatchdog();
     if (this.el) { this.el.onended = null; this.el.onerror = null; this.el.pause(); }
     if (hasWindow) window.speechSynthesis?.cancel();
     setTalker(null);
@@ -149,23 +157,43 @@ class VoicePlayer {
     for (const s of segments) { const url = urlFor(s); if (url) void fetch(url).catch(() => {}); }
   }
 
+  private clearWatchdog() { if (this.watchdog) { clearTimeout(this.watchdog); this.watchdog = null; } }
+
   private run(job: Job) {
     const token = ++this.token;
     this.current = job;
     let i = 0;
     const next = () => {
       if (token !== this.token) return;
+      this.clearWatchdog();
       if (i >= job.segments.length) { this.finish(job); return; }
       const seg = job.segments[i++];
+      const spanishSeg = seg.role.endsWith("es");
+      const rate = spanishSeg ? (job.rate ?? (this.slowSpanish ? SLOW : 1)) : 1;
       setTalker(speakerOf(seg));
-      const advance = () => { if (token === this.token) setTimeout(next, i < job.segments.length ? GAP_MS : 0); };
+      // Each segment moves on exactly once: when it ends, fails, or (if a
+      // browser never reports the end) when the watchdog gives up on it. A
+      // stuck clip used to block every queued line until the screen was left.
+      let moved = false;
+      const advance = () => {
+        if (moved || token !== this.token) return;
+        moved = true;
+        this.clearWatchdog();
+        setTimeout(next, i < job.segments.length ? GAP_MS : 0);
+      };
+      const guard = (ms: number) => { this.clearWatchdog(); this.watchdog = setTimeout(advance, ms); };
+      guard((2500 + seg.text.length * 110) / rate);
       const url = urlFor(seg);
       const el = this.element();
-      if (!url || !el) { speakWithDevice(seg, advance); return; }
+      if (!url || !el) { speakWithDevice(seg, advance, rate); return; }
       el.onended = advance;
-      el.onerror = () => { el.onerror = null; speakWithDevice(seg, advance); };
+      el.onerror = () => { el.onerror = null; speakWithDevice(seg, advance, rate); };
+      el.onloadedmetadata = () => { if (isFinite(el.duration) && el.duration > 0) guard((el.duration * 1000) / rate + 1500); };
       el.src = url;
-      el.play().catch(() => { el.onended = null; el.onerror = null; speakWithDevice(seg, advance); });
+      el.playbackRate = rate;
+      el.defaultPlaybackRate = rate;
+      (el as HTMLAudioElement & { preservesPitch?: boolean }).preservesPitch = true;
+      el.play().catch(() => { el.onended = null; el.onerror = null; speakWithDevice(seg, advance, rate); });
     };
     next();
   }
@@ -190,6 +218,8 @@ export const voice = {
   // English narration that may contain Spanish: stories, questions, instructions.
   narrate: (text: string, opts?: PlayOptions & { speaker?: Speaker }) => player.play(narration(text, opts?.speaker), opts),
   stop: () => player.stop(),
+  // Slow Spanish everywhere (grown-up setting), or one line slowly with { rate: SLOW }.
+  setSlow: (on: boolean) => { player.slowSpanish = on; },
   expectIntro: (maxWaitMs?: number) => player.expectIntro(maxWaitMs),
   releaseIntro: () => player.releaseIntro(),
   cancelIntro: () => player.cancelIntro(),

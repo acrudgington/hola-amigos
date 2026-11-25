@@ -33,6 +33,9 @@ export function PrefToggles({ prefs, onToggle }: { prefs: Prefs; onToggle: (key:
     <button type="button" className={`toggle ${prefs.guide ? "toggle--on" : ""}`} onClick={() => onToggle("guide")} aria-label={prefs.guide ? "Stop reading instructions aloud" : "Read instructions aloud"} aria-pressed={prefs.guide} title="Read instructions aloud">
       <Icon name="chat" size={16} />
     </button>
+    <button type="button" className={`toggle ${prefs.slow ? "toggle--on" : ""}`} onClick={() => onToggle("slow")} aria-label={prefs.slow ? "Speak Spanish at normal speed" : "Speak Spanish slowly"} aria-pressed={prefs.slow} title="Slow Spanish">
+      <span aria-hidden="true">🐢</span>
+    </button>
   </div>;
 }
 

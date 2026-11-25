@@ -1,5 +1,5 @@
 import type React from "react";
-import { voice } from "../audio/player.ts";
+import { SLOW, voice } from "../audio/player.ts";
 import { useEffect, useMemo, useRef, useState, type ButtonHTMLAttributes, type HTMLAttributes, type InputHTMLAttributes, type ReactNode } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { findReward, RARITY, type EarnedReward, type Sticker } from "../domain/rewards.ts";
@@ -40,21 +40,29 @@ export function Stars({ count, max = 3, className = "stone__stars" }: { count: n
   </div>;
 }
 
-// 🔊 button that speaks a Spanish word.
-export function SpeakButton({ text, size = 40, big = false, lang = "es", label = "Listen" }: { text: string; size?: number; big?: boolean; lang?: SpeakLang; label?: string }) {
-  const [on, setOn] = useState(false);
+// 🔊 button that speaks a Spanish word, with a 🐢 button beside it that says
+// it slowly (same pitch) so learners can hear every sound.
+export function SpeakButton({ text, size = 40, big = false, lang = "es", label = "Listen", slow = true }: { text: string; size?: number; big?: boolean; lang?: SpeakLang; label?: string; slow?: boolean }) {
+  const [on, setOn] = useState<"normal" | "slow" | null>(null);
   const t = useRef<ReturnType<typeof setTimeout>>();
   useEffect(() => () => clearTimeout(t.current), []);
   if (!voice.available()) return null;
-  const click = (e: React.MouseEvent) => {
+  const say = (how: "normal" | "slow") => (e: React.MouseEvent) => {
     e.stopPropagation();
-    if (lang === "es") voice.spanish(text); else voice.narrate(text);
-    setOn(true);
+    const rate = how === "slow" ? SLOW : undefined;
+    if (lang === "es") voice.spanish(text, { rate }); else voice.narrate(text, { rate });
+    setOn(how);
     clearTimeout(t.current);
-    t.current = setTimeout(() => setOn(false), 700);
+    t.current = setTimeout(() => setOn(null), how === "slow" ? 1200 : 700);
   };
-  return <button type="button" onClick={click} aria-label={`${label}: ${text}`} title={label}
-    className={`speak-btn ${big ? "speak-btn--big" : ""} ${on ? "is-on" : ""}`} style={big ? undefined : { "--s": `${size}px` }}>🔊</button>;
+  const main = <button type="button" onClick={say("normal")} aria-label={`${label}: ${text}`} title={label}
+    className={`speak-btn ${big ? "speak-btn--big" : ""} ${on === "normal" ? "is-on" : ""}`} style={big ? undefined : { "--s": `${size}px` }}>🔊</button>;
+  if (!slow || lang !== "es") return main;
+  return <span className="speak-pair">
+    {main}
+    <button type="button" onClick={say("slow")} aria-label={`Say it slowly: ${text}`} title="Say it slowly"
+      className={`speak-btn speak-btn--slow ${on === "slow" ? "is-on" : ""}`} style={{ "--s": `${Math.round((big ? 64 : size) * 0.62)}px` }}>🐢</button>
+  </span>;
 }
 
 export function Modal({ onClose, children, labelledBy }: { onClose?: () => void; children: ReactNode; labelledBy?: string }) {

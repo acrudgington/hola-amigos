@@ -222,3 +222,35 @@ test("Let's talk: a full conversation, then chat cards in Learn together", async
   await page.getByRole("button", { name: /¡Sí!/ }).click();
   expect(errors).toEqual([]);
 });
+
+test("Find my level: stricter quiz with sentence questions", async ({ page }, info) => {
+  const shots = process.env.SHOTS;
+  const errors: string[] = [];
+  page.on("pageerror", e => errors.push(e.message));
+  await page.goto("/");
+  await page.getByRole("tab", { name: /Sign up/i }).click();
+  await page.getByLabel("Your name").fill("Sam");
+  await page.getByLabel("Email").fill(`sam+${Date.now()}@example.com`);
+  await page.getByLabel("Password").fill("secret123");
+  await page.getByRole("checkbox", { name: /parent or guardian/ }).check();
+  await page.getByRole("button", { name: /Create account/ }).click();
+  await page.locator(".profile-tile--add").click();
+  await page.getByLabel("Child’s name").fill("Mia");
+  await page.getByRole("button", { name: "Add ✓" }).click();
+  await page.locator(".profile-tile").first().click();
+  await page.getByRole("button", { name: /know some Spanish/ }).click();
+  await page.getByRole("button", { name: /Let’s go/ }).click();
+  // Pretend to know worlds 1 and 2 perfectly (answer from the hidden key), then sentences appear in world 4.
+  let sawSentence = false;
+  for (let i = 0; i < 40 && !(await page.getByText("Starting point").count()); i++) {
+    if (await page.getByText(/What does this sentence mean|How do you say this in Spanish/).count()) {
+      if (await page.locator(".choices--list").count()) { sawSentence = true; if (shots) await page.screenshot({ path: `${shots}/placement-sentence-${info.project.name}.png` }); }
+    }
+    await page.getByRole("button", { name: /I don’t know/ }).click();
+    await page.waitForTimeout(500);
+  }
+  await expect(page.getByText("Starting point")).toBeVisible();
+  await expect(page.getByText(/from the very beginning/)).toBeVisible();   // all "I don't know" → start at lesson 1
+  expect(sawSentence).toBe(false);   // a beginner never reaches the sentence worlds
+  expect(errors).toEqual([]);
+});

@@ -9,7 +9,8 @@ import { useSayOnShow } from "../audio/guide.ts";
 import { PLACEMENT_LINES } from "../audio/lines.ts";
 import { WORLDS, siblingsOf, wordsForLessonsUpTo, type Word } from "../content/index.ts";
 import { isFreshLearner, type Progress } from "../domain/progress.ts";
-import { lastLessonOf, nextWorld, placedWorld, questionsFor, type PlacementQuestion, type WorldResult } from "../domain/placement.ts";
+import { lastLessonOf, nextWorld, placedWorld, questionsFor, sentencesOf, type PlacementQuestion, type WorldResult } from "../domain/placement.ts";
+import { wordsForWorld } from "../content/index.ts";
 import { shuffle, uniqueBy } from "../lib/utils.ts";
 import type { Child } from "../services/index.ts";
 import { Button, Card, SpeakButton } from "../components/ui.tsx";
@@ -21,12 +22,21 @@ export interface PlacementResult { world: number; asked: number; right: number }
 
 interface Option { key: string; label: string; emoji?: string }
 
+// Wrong options come from the same world, so they are as close as possible to
+// the right answer and can't be ruled out just by topic.
 function optionsFor(q: PlacementQuestion): Option[] {
+  if (q.sentence) {
+    const toSpanish = q.kind === "sentenceRecall";
+    const key = (x: { es: string; en: string }) => (toSpanish ? x.es : x.en);
+    const others = shuffle(sentencesOf(q.world).filter(x => key(x) !== key(q.sentence!))).slice(0, 3);
+    return shuffle([q.sentence, ...others]).map(x => ({ key: key(x), label: key(x) }));
+  }
   const recall = q.kind === "recall";
   const key = (w: Word) => (recall ? w.es : w.en);
-  const pool = wordsForLessonsUpTo(lastLessonOf(q.world));
   const near = shuffle(siblingsOf(q.word.es));
-  const others = uniqueBy([...near.slice(0, 1), ...shuffle(pool)].filter(w => key(w) !== key(q.word)), key).slice(0, 3);
+  const sameWorld = shuffle(wordsForWorld(lastLessonOf(q.world)));
+  const pool = wordsForLessonsUpTo(lastLessonOf(q.world));
+  const others = uniqueBy([...near.slice(0, 2), ...sameWorld, ...shuffle(pool)].filter(w => key(w) !== key(q.word)), key).slice(0, 3);
   return shuffle([q.word, ...others]).map(w => ({ key: key(w), label: key(w), emoji: recall ? undefined : w.emoji }));
 }
 
@@ -52,14 +62,17 @@ export function PlacementScreen({ child, progress, onRecord, onDone, onCancel }:
 
   useEffect(() => {
     if (stage !== "quiz" || !q || q.kind !== "listen") return;
-    const t = setTimeout(() => voice.spanish(q.word.es, { mode: "queue" }), 350);
+    // Interrupt anything still playing (e.g. the intro) so the word is always heard.
+    const t = setTimeout(() => voice.spanish(q.word.es), 350);
     return () => clearTimeout(t);
   }, [q, stage]);
 
   const answer = (key: string | null) => {
     if (!q || tapped) return;
-    const ok = key != null && key === (q.kind === "recall" ? q.word.es : q.word.en);
-    if (key != null) onRecord(q.word.es, q.word.en, ok, q.kind === "recall" ? "recall" : "recognise");
+    const right = q.sentence ? (q.kind === "sentenceRecall" ? q.sentence.es : q.sentence.en) : q.kind === "recall" ? q.word.es : q.word.en;
+    const ok = key != null && key === right;
+    // Only single-word answers update the child's word memory.
+    if (key != null && !q.sentence) onRecord(q.word.es, q.word.en, ok, q.kind === "recall" ? "recall" : "recognise");
     setTapped(key ?? "?");
     setTimeout(() => {
       setTapped(null);
@@ -100,7 +113,7 @@ export function PlacementScreen({ child, progress, onRecord, onDone, onCancel }:
         </button>
         <button type="button" className="card placement-choice" onClick={() => setStage("intro")}>
           <Art e="🚀" size={52} />
-          <div className="grow"><div className="h3">I know some Spanish</div><div className="small muted">Answer a few questions so we can find your level (about 3 minutes).</div></div>
+          <div className="grow"><div className="h3">I know some Spanish</div><div className="small muted">Answer some questions so we can find your level (3 to 8 minutes).</div></div>
           <Icon name="chevronRight" size={20} />
         </button>
       </div>
@@ -135,7 +148,17 @@ export function PlacementScreen({ child, progress, onRecord, onDone, onCancel }:
             {q.word.emoji && <Art e={q.word.emoji} size={56} />}<div className="big-word" style={{ fontSize: "clamp(26px, 7vw, 36px)" }}>{q.word.en}</div>
           </div>
         </>}
-        <div className="choices">
+        {q.kind === "sentence" && q.sentence && <>
+          <p className="say-hint" style={{ marginBottom: 6 }}>What does this sentence mean?</p>
+          <div className="row row--center" style={{ gap: 12, marginBottom: 18 }}>
+            <div className="big-word" lang="es" style={{ fontSize: "clamp(20px, 5.5vw, 28px)" }}>{q.sentence.es}</div><SpeakButton text={q.sentence.es} size={40} />
+          </div>
+        </>}
+        {q.kind === "sentenceRecall" && q.sentence && <>
+          <p className="say-hint" style={{ marginBottom: 6 }}>How do you say this in Spanish?</p>
+          <div className="big-word" style={{ fontSize: "clamp(20px, 5.5vw, 28px)", marginBottom: 18 }}>{q.sentence.en}</div>
+        </>}
+        <div className={`choices ${q.sentence ? "choices--list" : ""}`}>
           {opts.map(o => <button key={o.key} type="button" className={`choice ${tapped === o.key ? "is-selected" : ""}`} disabled={!!tapped} onClick={() => answer(o.key)}>
             {o.emoji && <Art e={o.emoji} size={40} className="choice__emoji" />}<span>{o.label}</span>
           </button>)}
