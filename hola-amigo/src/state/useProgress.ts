@@ -9,6 +9,7 @@
 import { useCallback, useRef, useState } from "react";
 import { applyRewards, findReward, type EarnedReward } from "../domain/rewards.ts";
 import { levelInfo, levelTitle, logEvent, type Progress } from "../domain/progress.ts";
+import { stampGoals } from "../domain/goals.ts";
 import { services } from "../services/index.ts";
 
 export interface ProgressEffects {
@@ -19,7 +20,10 @@ export interface ProgressEffects {
 // Pure: apply a change, award anything newly earned and log it to the feed.
 export function applyChange(before: Progress, fn: (p: Progress) => Progress) {
   const changed = applyRewards(fn(before));
-  let next = changed.progress;
+  // Note when "I can…" goals are first achieved (for the weekly report). Only
+  // stars and word memory affect goals, so skip the work when neither changed.
+  let next = changed.progress.stars !== before.stars || changed.progress.wordMemory !== before.wordMemory
+    ? stampGoals(changed.progress) : changed.progress;
   for (const r of changed.rewards) {
     const item = findReward(r);
     if (item) next = logEvent(next, { type: r.type, emoji: item.emoji, text: `New ${r.type}: ${item.name}` });

@@ -7,7 +7,7 @@
 import type { ActivityType } from "../lib/journey.ts";
 
 export type ShellView = "home" | "review" | "stories" | "trophies" | "profile";
-export type View = "family" | "dashboard" | ShellView | "lesson" | "activity" | "done" | "placement";
+export type View = "family" | "dashboard" | ShellView | "lesson" | "activity" | "done" | "placement" | "together";
 
 export interface Journey {
   steps: ActivityType[];
@@ -34,7 +34,7 @@ export interface NavState {
 }
 
 export type NavAction =
-  | { type: "go"; view: "family" | "dashboard" | "placement" | ShellView }
+  | { type: "go"; view: "family" | "dashboard" | "placement" | "together" | ShellView }
   | { type: "openLesson"; lessonId: number }
   | { type: "startLesson"; lessonId: number; steps: ActivityType[]; run: number }
   | { type: "practice"; activity: ActivityType; run: number }

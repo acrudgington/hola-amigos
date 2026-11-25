@@ -13,7 +13,7 @@ import { Art } from "../components/Art.tsx";
 
 // Sol's mix — daily personal practice: words that are fading, tricky words,
 // and recall challenges for words they already recognise (domain/memory.ts).
-export function ReviewScreen({ progress, onBack, onFinish, onWord }: { progress: Progress; onBack: () => void; onFinish: (s: number, t: number) => void; onWord: OnWord }) {
+export function ReviewScreen({ progress, onBack, onFinish, onWord, onTogether }: { progress: Progress; onBack: () => void; onFinish: (s: number, t: number) => void; onWord: OnWord; onTogether: () => void }) {
   // Snapshot the list when the screen opens. (Previously it was recomputed on
   // every render, so answering a word changed the list and restarted the game.)
   const [run, setRun] = useState(0);
@@ -47,6 +47,11 @@ export function ReviewScreen({ progress, onBack, onFinish, onWord }: { progress:
           </div>
         </div> : <MixGame key={run} items={list} pool={wordsForLessonsUpTo(Math.max(1, learnedUpTo(progress)))} onWord={onWord} onDone={(s: number, t: number) => { onFinish(s, t); setResult({ s, t }); }} />}
       </Card>
+      <button type="button" className="card together-cta" onClick={onTogether}>
+        <Art e="🧑‍🤝‍🧑" size={48} />
+        <div className="grow"><div className="h3">Learn together</div><div className="small muted">Play with a grown-up: take turns and check each other.</div></div>
+        <span className="together-cta__go" aria-hidden="true">→</span>
+      </button>
     </div>
   </div>;
 }

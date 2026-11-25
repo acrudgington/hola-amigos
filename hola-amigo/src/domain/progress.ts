@@ -7,10 +7,10 @@
 
 // box: recognising the word (Spanish → English), Leitner 0–5.
 // recall: producing it (English → Spanish), 0–5. wrong: wrong answers in total.
-export interface WordMemory { box: number; seen: number; en: string; last: number; recall?: number; wrong?: number }
+export interface WordMemory { box: number; seen: number; en: string; last: number; recall?: number; wrong?: number; first?: number }
 export type Direction = "recognise" | "recall";
 
-export type EventType = "lesson" | "review" | "badge" | "sticker" | "outfit" | "level" | "chest" | "combo" | "start" | "story";
+export type EventType = "lesson" | "review" | "badge" | "sticker" | "outfit" | "level" | "chest" | "combo" | "start" | "story" | "chant" | "together";
 export interface ActivityEvent { t: number; type: EventType; text: string; emoji?: string; title?: string }
 
 export interface Progress {
@@ -45,7 +45,14 @@ export interface Progress {
   placement: { world: number; at: number; asked: number; right: number } | null;
   placementOffered: boolean;
   storyBest: Record<string, number>;   // Spanish story id → best number of questions right
+  // For the weekly report: what was done each day, and when each "I can…" goal was first achieved.
+  doneByDay: Record<string, Partial<Record<CountedEvent, number>>>;
+  goalsAt: Record<string, number>;
 }
+
+// Event types counted per day for the weekly report.
+export const COUNTED_EVENTS = ["lesson", "review", "story", "chant", "together"] as const;
+export type CountedEvent = typeof COUNTED_EVENTS[number];
 
 export type NumericStat = "correctAnswers" | "micUses" | "storiesRead" | "reviewsDone" | "lessonsDone";
 
@@ -55,7 +62,7 @@ export const DEFAULT_PROGRESS: Readonly<Progress> = Object.freeze({
   lessonsDone: 0, correctAnswers: 0, micUses: 0, storiesRead: 0, reviewsDone: 0,
   wordMemory: {}, dailyGoal: 3, dailyDate: null, dailyCount: 0,
   xp: 0, xpByDay: {}, bestCombo: 0, comboDay: null, comboToday: 0, chestDay: null, events: [],
-  placedUpTo: 0, placement: null, placementOffered: false, storyBest: {},
+  placedUpTo: 0, placement: null, placementOffered: false, storyBest: {}, doneByDay: {}, goalsAt: {},
 });
 
 export const XP = { correct: 10, activity: 15, lesson: 50, perStar: 20, review: 25, combo5: 15, chest: 50 } as const;
@@ -71,12 +78,16 @@ export const unlockedUpTo = (p: Pick<Progress, "stars" | "placedUpTo">, total = 
 // A brand-new learner: nothing played and not yet asked about placement.
 export const isFreshLearner = (p: Progress) => !countLessons(p) && !Object.keys(p.wordMemory || {}).length && !p.placementOffered && !p.placement;
 
+import { BEFORE_TRACKING, stampGoals } from "./goals.ts";
+
 // Fill in anything missing from older saves, and give pre-XP saves a fair XP total.
 export function normalizeProgress(raw: Partial<Progress> | null | undefined): Progress {
   const p: Progress = { ...structuredClone(DEFAULT_PROGRESS), ...(raw || {}) } as Progress;
   if (p.xp === 0 && !Object.keys(p.xpByDay).length && (p.correctAnswers || countLessons(p))) {
     p.xp = p.correctAnswers * XP.correct + sumStars(p) * XP.perStar + countLessons(p) * XP.lesson;
   }
+  // Saves from before goal dates were kept: goals already achieved count as "before".
+  if (!raw?.goalsAt) p.goalsAt = stampGoals(p, BEFORE_TRACKING).goalsAt;
   return p;
 }
 
@@ -107,7 +118,7 @@ export const BOX_INTERVALS = [0, 1, 2, 4, 9, 21];
 
 export function recordWord(p: Progress, es: string, en: string, correct: boolean, now = Date.now(), dir: Direction = "recognise"): Progress {
   if (!es) return p;
-  const prev: WordMemory = p.wordMemory[es] || { box: 0, seen: 0, en, last: 0 };
+  const prev: WordMemory = p.wordMemory[es] || { box: 0, seen: 0, en, last: 0, first: now };
   const next: WordMemory = { ...prev, seen: prev.seen + 1, en: en || prev.en, last: now };
   if (dir === "recall") {
     // Recalling the Spanish is harder: success also proves recognition; a miss
@@ -221,7 +232,18 @@ export function claimChest(p: Progress, now = Date.now()): Progress {
 
 // ---------- activity feed ----------
 export function logEvent(p: Progress, ev: Omit<ActivityEvent, "t">, now = Date.now()): Progress {
-  return { ...p, events: [{ ...ev, t: now }, ...p.events].slice(0, 40) };
+  const next = { ...p, events: [{ ...ev, t: now }, ...p.events].slice(0, 40) };
+  return (COUNTED_EVENTS as readonly string[]).includes(ev.type) ? countDone(next, ev.type as CountedEvent, now) : next;
+}
+
+// Keep about two months of daily counts (enough for any weekly report).
+const KEEP_DAYS = 62;
+export function countDone(p: Progress, type: CountedEvent, now = Date.now()): Progress {
+  const k = dayKey(now);
+  const cutoff = dayKey(now - KEEP_DAYS * DAY);
+  const days = Object.fromEntries(Object.entries(p.doneByDay || {}).filter(([d]) => d >= cutoff));
+  const today = days[k] || {};
+  return { ...p, doneByDay: { ...days, [k]: { ...today, [type]: (today[type] || 0) + 1 } } };
 }
 
 export function timeAgo(t: number, now = Date.now()) {

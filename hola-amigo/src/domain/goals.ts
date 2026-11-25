@@ -78,3 +78,13 @@ export function nextGoal(units: UnitProgress[]): GoalProgress | null {
 
 export const achievedGoals = (p: Pick<Progress, "stars" | "wordMemory">) =>
   allGoals(p).flatMap(u => u.goals).filter(g => g.state === "achieved");
+
+// Record when each goal was first achieved (for the weekly report).
+export function stampGoals<P extends Pick<Progress, "stars" | "wordMemory" | "goalsAt">>(p: P, now = Date.now()): P {
+  const at = p.goalsAt || {};
+  const fresh = achievedGoals(p).filter(g => at[g.goal.id] == null);
+  if (!fresh.length) return p;
+  return { ...p, goalsAt: { ...at, ...Object.fromEntries(fresh.map(g => [g.goal.id, now])) } };
+}
+// Goals achieved before this was tracked are stamped 0 ("some time before").
+export const BEFORE_TRACKING = 0;

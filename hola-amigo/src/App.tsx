@@ -41,6 +41,7 @@ import { TrophyScreen } from "./screens/TrophyScreen.tsx";
 import { PlacementScreen } from "./screens/PlacementScreen.tsx";
 import { lastLessonOf } from "./domain/placement.ts";
 import { StoriesScreen } from "./screens/StoriesScreen.tsx";
+import { TogetherScreen } from "./screens/TogetherScreen.tsx";
 import type { Book } from "./content/index.ts";
 
 const SHELL_VIEWS = new Set(["home", "review", "stories", "trophies", "profile", "lesson"]);
@@ -289,9 +290,9 @@ export default function App() {
     if (nav.view === "profile") inner = <ProfileScreen child={child} parent={parent} progress={progress} onTrophies={() => dispatch({ type: "go", view: "trophies" })} onSwitchChild={() => void switchChild()} onPlacement={() => dispatch({ type: "go", view: "placement" })}
       onAvatar={code => void services.family.updateChild(child.id, { avatar: code }).then(c => { if (c) setChild(c); })} />;
     if (nav.view === "stories") inner = <StoriesScreen progress={progress} onFinish={finishStory}
-      onChant={c => update(p => logEvent(addXP(p, XP.activity), { type: "story", emoji: "🎵", text: `Chanted “${c.title}”` }))} />;
+      onChant={c => update(p => logEvent(addXP(p, XP.activity), { type: "chant", emoji: "🎵", text: `Chanted “${c.title}”` }))} />;
     if (nav.view === "trophies") inner = <TrophyScreen progress={progress} onEquip={equip} />;
-    if (nav.view === "review") inner = <ReviewScreen progress={progress} onBack={() => dispatch({ type: "go", view: "home" })} onFinish={finishReview} onWord={onWord} />;
+    if (nav.view === "review") inner = <ReviewScreen progress={progress} onBack={() => dispatch({ type: "go", view: "home" })} onFinish={finishReview} onWord={onWord} onTogether={() => dispatch({ type: "go", view: "together" })} />;
     if (nav.view === "lesson") inner = <LessonScreen lesson={lesson} stars={progress.stars[lesson.id] || 0} onBack={() => dispatch({ type: "go", view: "home" })}
       onStart={() => startLesson(lesson)} onPractice={practice} />;
     content = <Shell child={child} progress={progress} active={nav.view === "lesson" ? "home" : (nav.view as ShellView)} onNav={goTo}
@@ -306,6 +307,14 @@ export default function App() {
       combo={combo} sessionXp={sessionXp} onWord={onWord} onFinish={finishActivity}
       onExit={() => dispatch({ type: "exitActivity" })} onRetry={() => practice(nav.activity!.type)} />;
     topKey = `act-${nav.activity.run}`;
+  } else if (nav.view === "together") {
+    content = <TogetherScreen child={child} progress={progress} onWord={onWord} onBack={() => dispatch({ type: "go", view: "review" })}
+      onFinish={(s, t) => {
+        let goalMet = false;
+        update(p => { const r = bumpDaily(p); goalMet = r.justMet; return logEvent(addXP(r.progress, XP.review), { type: "together", emoji: "🤝", text: `Learned together: ${s} of ${t} as a team` }); });
+        sfx.complete();
+        if (goalMet || s === t) celebrate();
+      }} />;
   } else if (nav.view === "placement") {
     content = <PlacementScreen child={child} progress={progress}
       onRecord={(es, en, ok, dir) => onWord(es, en, ok, { quiet: true, dir })}

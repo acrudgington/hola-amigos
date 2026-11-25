@@ -94,3 +94,44 @@ test("Ask Sol finds and speaks words", async ({ page }) => {
   await page.getByRole("combobox", { name: /Search words and lessons/ }).fill("dog");
   await expect(page.locator(".palette__item").filter({ hasText: "El perro" })).toBeVisible();
 });
+
+test("learn together → the weekly report shows it", async ({ page }, info) => {
+  const shots = process.env.SHOTS;
+  const errors: string[] = [];
+  page.on("pageerror", e => errors.push(e.message));
+  await page.goto("/");
+  await page.getByRole("tab", { name: /Sign up/i }).click();
+  await page.getByLabel("Your name").fill("Sam");
+  await page.getByLabel("Email").fill(`sam+${Date.now()}@example.com`);
+  await page.getByLabel("Password").fill("secret123");
+  await page.getByRole("checkbox", { name: /parent or guardian/ }).check();
+  await page.getByRole("button", { name: /Create account/ }).click();
+  await page.locator(".profile-tile--add").click();
+  await page.getByLabel("Child’s name").fill("Mia");
+  await page.getByRole("button", { name: "Add ✓" }).click();
+  await page.locator(".profile-tile").first().click();
+  await page.getByRole("button", { name: /new to Spanish/ }).click();
+
+  await page.getByRole("button", { name: /Practise/ }).first().click();
+  await page.getByRole("button", { name: /Learn together/ }).click();
+  await page.getByRole("button", { name: "Dad", exact: true }).click();
+  await page.getByRole("button", { name: /Let’s play/ }).click();
+  for (let i = 0; i < 8; i++) {
+    await expect(page.getByText(i % 2 === 0 ? /Mia’s turn/ : /Dad’s turn/)).toBeVisible();
+    await page.getByRole("button", { name: /Check/ }).click();
+    if (i === 0 && shots) await page.screenshot({ path: `${shots}/together-${info.project.name}.png` });
+    await page.getByRole("button", { name: i === 3 ? "Not yet" : /¡Sí!/ }).click();
+  }
+  await expect(page.getByText("¡Qué equipo!").first()).toBeVisible();
+  await expect(page.getByText(/7/).first()).toBeVisible();
+  await page.getByRole("button", { name: "Done" }).click();
+
+  // The grown-up dashboard's weekly report counts the session.
+  await page.locator(".avatar-btn:visible").first().click();
+  await page.getByRole("button", { name: /Grown-up dashboard/ }).click();
+  await expect(page.getByText("This week", { exact: true })).toBeVisible();
+  await expect(page.locator(".week-chip", { hasText: "learn together" })).toContainText("1");
+  await expect(page.getByRole("link", { name: /Email me this report/ })).toHaveAttribute("href", /^mailto:sam/);
+  if (shots) await page.locator(".week-card").screenshot({ path: `${shots}/week-${info.project.name}.png` });
+  expect(errors).toEqual([]);
+});

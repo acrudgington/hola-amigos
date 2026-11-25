@@ -224,3 +224,15 @@ On Desktop: Chrome/Edge will show an install icon in the address bar
 ## License
 
 Built for personal/educational use.
+
+## Weekly report and Learn together
+
+- **Weekly report.** The grown-up dashboard has a "This week" card for each
+  child, with email, share and copy buttons. It is built by
+  `src/domain/weeklyReport.ts` from daily activity counts (`doneByDay`), when
+  each word was first met (`first`) and when each goal was achieved (`goalsAt`).
+  `WEEKLY_EMAIL.md` explains how to send it automatically.
+- **Learn together** (Practise tab). A child and a grown-up take turns on one
+  device, and their partner checks each answer. Grown-ups get Castilian
+  pronunciation tips worked out from the spelling (`src/domain/pronunciation.ts`).
+  Only the child's answers count towards their word memory.

@@ -10,6 +10,53 @@ import { LEVEL_INFO, allGoals, levelSummary, nextGoal, type GoalProgress, type L
 import { Button, Card, Modal } from "../components/ui.tsx";
 import { Art } from "../components/Art.tsx";
 import { Avatar } from "../components/Avatar.tsx";
+import { headline, homeIdeas, reportSubject, reportText, weeklyReport } from "../domain/weeklyReport.ts";
+
+// This week at a glance, with ways to send it to yourself (no server needed:
+// the email opens in the grown-up's own mail app).
+function WeekCard({ name, progress, email }: { name: string; progress: Progress; email: string }) {
+  const r = weeklyReport(name, progress);
+  const [copied, setCopied] = useState(false);
+  const text = reportText(r);
+  const subject = reportSubject(r);
+  const mailto = `mailto:${encodeURIComponent(email)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(text)}`;
+  const canShare = typeof navigator !== "undefined" && typeof navigator.share === "function";
+  const share = () => { void navigator.share({ title: subject, text }).catch(() => {}); };
+  const copy = () => { void navigator.clipboard?.writeText(text).then(() => { setCopied(true); setTimeout(() => setCopied(false), 2000); }); };
+  const max = Math.max(30, ...r.days.map(d => d.xp));
+  const chips = [
+    [r.counts.lesson, "📘", "lessons"], [r.counts.review, "🔁", "practice mixes"], [r.counts.story, "📖", "stories"],
+    [r.counts.chant, "🎵", "chants"], [r.counts.together, "🤝", "learn together"], [r.newWords.length, "🆕", "new words"],
+  ] as const;
+  return <section className="week-card" aria-label={`${name}’s week`}>
+    <div className="row row--between" style={{ alignItems: "baseline", marginBottom: 6 }}>
+      <div className="h3">This week</div>
+      <span className="small muted mono">{r.xp} XP · {r.activeDays}/7 days</span>
+    </div>
+    <p className="small" style={{ fontWeight: 700, color: "var(--text-2)", marginBottom: 10 }}>{headline(r)}</p>
+    <div className="week-bars" aria-hidden="true">
+      {r.days.map((d, i) => <div key={d.key} className={`week-bars__day ${i === 6 ? "is-today" : ""}`}>
+        <div className="week-bars__bar"><div style={{ height: `${d.active ? Math.max(8, (d.xp / max) * 100) : 0}%` }} /></div>
+        <span>{d.date.toLocaleDateString("en-GB", { weekday: "narrow" })}</span>
+      </div>)}
+    </div>
+    {!r.quiet && <div className="week-chips">{chips.filter(([n]) => n > 0).map(([n, e, label]) => <span key={label} className="week-chip">{e} <b>{n}</b> {label}</span>)}</div>}
+    {r.goalsThisWeek.length > 0 && <div className="week-goals">
+      <div className="eyebrow">New this week</div>
+      {r.goalsThisWeek.map(g => <div key={g.id} className="week-goal">⭐ {g.can} <span lang="es" className="muted">{g.es}</span></div>)}
+    </div>}
+    {homeIdeas(r).length > 0 && <div className="week-ideas">
+      <div className="eyebrow">Try this at home</div>
+      <ul>{homeIdeas(r).map(i => <li key={i}>{i}</li>)}</ul>
+    </div>}
+    <div className="row row--wrap" style={{ gap: 8, marginTop: 12 }}>
+      <a className="btn btn--sm btn--sun" href={mailto}>📧 Email me this report</a>
+      {canShare && <Button size="sm" onClick={share}>Share…</Button>}
+      <Button size="sm" variant="white" onClick={copy}>{copied ? "Copied ✓" : "Copy text"}</Button>
+    </div>
+    <p className="tiny muted" style={{ marginTop: 6 }}>Opens your email app with the report ready to send to {email || "yourself"}. Nothing is sent by us.</p>
+  </section>;
+}
 
 const rangeLabel = (ids: number[]) => ids.length === 1 ? `Lesson ${ids[0]}` : `Lessons ${ids[0]}–${ids[ids.length - 1]}`;
 const STATE_TEXT = { "achieved": "Can do", "practising": "Practising", "not-started": "Not started" } as const;
@@ -76,7 +123,7 @@ function CanDo({ name, progress }: { name: string; progress: Progress }) {
   </section>;
 }
 
-function ChildReport({ child, progress: p, onRemove }: { child: Child; progress: Progress; onRemove: (c: Child) => void }) {
+function ChildReport({ child, progress: p, email, onRemove }: { child: Child; progress: Progress; email: string; onRemove: (c: Child) => void }) {
   const stars = p.stars || {};
   const words = Object.values(p.wordMemory || {});
   const strong = words.filter(w => w.box >= 3).length;
@@ -94,6 +141,8 @@ function ChildReport({ child, progress: p, onRemove }: { child: Child; progress:
       </div>
       <button type="button" className="icon-btn" onClick={() => onRemove(child)} aria-label={`Remove ${child.name}`} title="Remove">🗑️</button>
     </div>
+
+    <WeekCard name={child.name} progress={p} email={email} />
 
     <div className="grid-4" style={{ marginBottom: 16 }}>
       <div className="stat" style={{ background: "var(--sel2-bg)" }}><div className="stat__value" style={{ color: "var(--sun)" }}>{sumStars(p)}</div><div className="stat__label">Stars</div></div>
@@ -136,7 +185,7 @@ export function ParentDashboard({ parent, onBack, onAccountDeleted }: { parent: 
         <p className="muted small" style={{ marginTop: 4 }}>{children.length} {children.length === 1 ? "learner" : "learners"} · {parent.name}</p>
       </div>
       {children.length === 0 && <Card className="text-center"><Art e="👶" size={60} /><p className="muted">No learners yet — add one to start tracking progress.</p></Card>}
-      {children.map(({ child, progress }) => <ChildReport key={child.id} child={child} progress={progress} onRemove={setToRemove} />)}
+      {children.map(({ child, progress }) => <ChildReport key={child.id} child={child} progress={progress} email={parent.email} onRemove={setToRemove} />)}
       <AccountPanel parent={parent} onDeleted={onAccountDeleted} />
     </div>
     {toRemove && <Modal onClose={() => setToRemove(null)} labelledBy="rm-title">

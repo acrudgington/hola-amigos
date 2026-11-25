@@ -1029,3 +1029,36 @@ li:last-child > .step .step__rail { display: none; }
 .tone { width: 30px; height: 30px; border-radius: 50%; border: 2px solid var(--hairline-hi); cursor: pointer; }
 .tone[aria-checked="true"] { box-shadow: 0 0 0 3px var(--bg), 0 0 0 5px var(--sun); }
 .avatar-edit { position: absolute; right: -6px; bottom: -4px; width: 34px; height: 34px; border-radius: 50%; font-size: 15px; }
+
+/* Weekly report (grown-up dashboard) */
+.week-card { padding: 14px; border-radius: 16px; margin-bottom: 16px; border: 1px solid var(--hairline-hi);
+  background: linear-gradient(160deg, color-mix(in srgb, var(--sky) 12%, transparent), var(--glass-2) 60%); }
+.week-bars { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; height: 74px; margin-bottom: 10px; }
+.week-bars__day { display: flex; flex-direction: column; align-items: center; gap: 4px; font-size: 11px; font-weight: 800; color: var(--muted); }
+.week-bars__bar { flex: 1; width: 100%; max-width: 26px; border-radius: 7px; background: var(--glass-2); border: 1px solid var(--hairline); display: flex; align-items: flex-end; overflow: hidden; }
+.week-bars__bar > div { width: 100%; border-radius: 6px; background: linear-gradient(180deg, var(--sky), var(--luna)); }
+.week-bars__day.is-today span { color: var(--text); }
+.week-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+.week-chip { display: inline-flex; align-items: center; gap: 5px; padding: 4px 10px; border-radius: 999px; font-size: 12.5px; font-weight: 700; background: var(--glass-2); border: 1px solid var(--hairline); }
+.week-goals, .week-ideas { margin-top: 8px; }
+.week-goal { font-weight: 800; font-size: 14px; margin-top: 4px; }
+.week-goal span { font-weight: 700; font-size: 13px; margin-left: 4px; }
+.week-ideas ul { margin: 4px 0 0; padding-left: 18px; font-size: 13.5px; line-height: 1.5; color: var(--text-2); }
+
+/* Learn together */
+.together-cta { display: flex; align-items: center; gap: 14px; width: 100%; margin-top: 14px; padding: 16px; text-align: left; cursor: pointer; color: var(--text); font: inherit;
+  border: 1px solid color-mix(in srgb, var(--luna) 45%, transparent); background: linear-gradient(100deg, color-mix(in srgb, var(--luna) 16%, transparent), var(--glass-2) 70%); }
+.together-cta:hover { border-color: var(--luna); }
+.together-cta__go { font-size: 22px; font-weight: 900; color: var(--luna); }
+.together-plus { font-size: 28px; font-weight: 900; color: var(--muted); }
+.together__score { display: flex; justify-content: center; gap: 6px; margin-bottom: 14px; }
+.together__pip { width: 22px; height: 8px; border-radius: 99px; background: var(--glass-2); border: 1px solid var(--hairline-hi); transition: background .2s; }
+.together__pip.is-now { outline: 2px solid var(--sun); outline-offset: 2px; }
+.together__pip.is-ok { background: var(--mint); border-color: transparent; }
+.together__pip.is-miss { background: color-mix(in srgb, var(--coral) 60%, transparent); border-color: transparent; }
+.together__who { display: inline-flex; align-items: center; gap: 10px; padding: 6px 16px 6px 6px; border-radius: 999px; font-size: 16px; }
+.together__who--kid { background: color-mix(in srgb, var(--sun) 18%, transparent); border: 1px solid color-mix(in srgb, var(--sun) 50%, transparent); }
+.together__who--grownUp { background: color-mix(in srgb, var(--luna) 18%, transparent); border: 1px solid color-mix(in srgb, var(--luna) 50%, transparent); }
+.together__answer { display: flex; align-items: center; justify-content: center; gap: 12px; padding: 12px; border-radius: 14px; background: var(--good-bg); }
+.together__tips { list-style: none; padding: 0; margin: 12px auto 0; max-width: 460px; text-align: left; font-size: 13.5px; line-height: 1.5; color: var(--text-2); display: grid; gap: 6px; }
+.together__tips li { padding: 8px 10px; border-radius: 10px; background: var(--glass-2); border: 1px solid var(--hairline); }

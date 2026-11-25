@@ -43,3 +43,11 @@ export const PLACEMENT_LINES = {
   intro: "Let's find your level! If you don't know an answer, that's fine. Just tap I don't know.",
   result: "¡Fantástico! I've found the perfect place for you to start.",
 };
+
+// "Learn together": a child and a grown-up take turns (said by Sol and Luna).
+export const TOGETHER_LINES = {
+  intro: "Let's learn together! Take turns to say the word in Spanish. Then your partner checks.",
+  kid: "Your turn! How do you say this in Spanish?",
+  grownUp: "Grown-up's turn! Can you say it in Spanish?",
+  done: "¡Qué equipo! What a team!",
+};
