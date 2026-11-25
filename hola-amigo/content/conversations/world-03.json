@@ -1,0 +1,509 @@
+{
+  "world": 3,
+  "conversations": [
+    {
+      "lesson": 17,
+      "who": "luna",
+      "title": "Describe yourself",
+      "scene": "🪞",
+      "turns": [
+        {
+          "ask": "¿Eres alto o pequeño?",
+          "askEn": "Are you tall or small?",
+          "answer": "Soy pequeño.",
+          "answerEn": "I'm small.",
+          "keys": [
+            "alto",
+            "alta",
+            "pequeno",
+            "pequena",
+            "soy"
+          ],
+          "wrong": [
+            "Tengo un gato.",
+            "Me gusta el pan."
+          ],
+          "reply": "¡Yo también soy pequeña!",
+          "replyEn": "I'm small too!"
+        },
+        {
+          "ask": "¿Cómo es tu mejor amigo?",
+          "askEn": "What is your best friend like?",
+          "answer": "Es simpático.",
+          "answerEn": "He's nice.",
+          "keys": [
+            "simpatico",
+            "simpatica",
+            "alto",
+            "alta",
+            "grande",
+            "pequeno",
+            "pequena",
+            "es"
+          ],
+          "wrong": [
+            "Me llamo Mia.",
+            "Hace frío."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "How nice!"
+        },
+        {
+          "ask": "¿Yo soy grande?",
+          "askEn": "Am I big?",
+          "answer": "No, tú eres pequeña.",
+          "answerEn": "No, you're small.",
+          "keys": [
+            "eres",
+            "pequena",
+            "grande",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Me gusta el gato.",
+            "Hoy es lunes."
+          ],
+          "reply": "¡Ja, ja! ¡Es verdad!",
+          "replyEn": "Ha ha! That's true!"
+        }
+      ]
+    },
+    {
+      "lesson": 18,
+      "who": "sol",
+      "title": "What have you got?",
+      "scene": "🎒",
+      "turns": [
+        {
+          "ask": "¿Cuántos años tienes?",
+          "askEn": "How old are you?",
+          "answer": "Tengo siete años.",
+          "answerEn": "I'm seven.",
+          "keys": [
+            "anos",
+            "tengo"
+          ],
+          "wrong": [
+            "Me llamo Sol.",
+            "Es azul."
+          ],
+          "reply": "¡Qué mayor!",
+          "replyEn": "So grown-up!"
+        },
+        {
+          "ask": "¿Tienes hermanos?",
+          "askEn": "Have you got brothers or sisters?",
+          "answer": "Sí, tengo dos hermanos.",
+          "answerEn": "Yes, I've got two.",
+          "keys": [
+            "hermano",
+            "hermana",
+            "hermanos",
+            "si",
+            "no",
+            "tengo"
+          ],
+          "wrong": [
+            "Soy alto.",
+            "Buenas noches."
+          ],
+          "reply": "¡Qué familia tan grande!",
+          "replyEn": "What a big family!"
+        },
+        {
+          "ask": "Yo tengo un perro. ¿Y tú?",
+          "askEn": "I've got a dog. And you?",
+          "answer": "Yo tengo un gato.",
+          "answerEn": "I've got a cat.",
+          "keys": [
+            "tengo",
+            "perro",
+            "gato",
+            "pez",
+            "conejo",
+            "no"
+          ],
+          "wrong": [
+            "Es lunes.",
+            "Soy simpático."
+          ],
+          "reply": "¡Qué bonito!",
+          "replyEn": "How lovely!"
+        }
+      ]
+    },
+    {
+      "lesson": 19,
+      "who": "luna",
+      "title": "Likes and dislikes",
+      "scene": "👍",
+      "turns": [
+        {
+          "ask": "¿Te gusta el pescado?",
+          "askEn": "Do you like fish?",
+          "answer": "No, no me gusta el pescado.",
+          "answerEn": "No, I don't like fish.",
+          "keys": [
+            "me gusta",
+            "me encanta",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Tengo ocho años.",
+            "Es mi hermano."
+          ],
+          "reply": "¡A mí tampoco!",
+          "replyEn": "Me neither!"
+        },
+        {
+          "ask": "¿Qué te encanta?",
+          "askEn": "What do you love?",
+          "answer": "Me encanta el chocolate.",
+          "answerEn": "I love chocolate.",
+          "keys": [
+            "me encanta",
+            "me gusta",
+            "me gustan"
+          ],
+          "wrong": [
+            "Soy pequeña.",
+            "Tengo un gato."
+          ],
+          "reply": "¡Mmm!",
+          "replyEn": "Mmm!"
+        },
+        {
+          "ask": "¿Te gustan los gatos?",
+          "askEn": "Do you like cats?",
+          "answer": "Sí, me gustan mucho.",
+          "answerEn": "Yes, I like them a lot.",
+          "keys": [
+            "me gustan",
+            "me encantan",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Tengo siete años.",
+            "Es grande."
+          ],
+          "reply": "¡A mí también!",
+          "replyEn": "Me too!"
+        }
+      ]
+    },
+    {
+      "lesson": 20,
+      "who": "sol",
+      "title": "What do you want to do?",
+      "scene": "⚽",
+      "turns": [
+        {
+          "ask": "¿Qué quieres hacer?",
+          "askEn": "What do you want to do?",
+          "answer": "Quiero jugar al fútbol.",
+          "answerEn": "I want to play football.",
+          "keys": [
+            "quiero",
+            "jugar",
+            "comer",
+            "ir"
+          ],
+          "wrong": [
+            "Me llamo Sol.",
+            "Tengo un perro."
+          ],
+          "reply": "¡Vale, vamos!",
+          "replyEn": "OK, let's go!"
+        },
+        {
+          "ask": "¿Puedes venir al parque?",
+          "askEn": "Can you come to the park?",
+          "answer": "Sí, puedo.",
+          "answerEn": "Yes, I can.",
+          "keys": [
+            "puedo",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Es grande.",
+            "Me gusta el pan."
+          ],
+          "reply": "¡Genial!",
+          "replyEn": "Great!"
+        },
+        {
+          "ask": "¿Qué necesitas para el cole?",
+          "askEn": "What do you need for school?",
+          "answer": "Necesito un lápiz.",
+          "answerEn": "I need a pencil.",
+          "keys": [
+            "necesito",
+            "lapiz",
+            "libro",
+            "mochila"
+          ],
+          "wrong": [
+            "Quiero jugar.",
+            "Soy alto."
+          ],
+          "reply": "Toma, aquí tienes.",
+          "replyEn": "Here you are."
+        }
+      ]
+    },
+    {
+      "lesson": 21,
+      "who": "luna",
+      "title": "What time is it?",
+      "scene": "🕑",
+      "turns": [
+        {
+          "ask": "¿Qué hora es? 🕑",
+          "askEn": "What time is it? 🕑",
+          "answer": "Son las dos.",
+          "answerEn": "It's two o'clock.",
+          "keys": [
+            "las dos",
+            "son las"
+          ],
+          "wrong": [
+            "Es lunes.",
+            "Tengo dos años."
+          ],
+          "reply": "¡Gracias!",
+          "replyEn": "Thanks!"
+        },
+        {
+          "ask": "¿A qué hora comes?",
+          "askEn": "What time do you have lunch?",
+          "answer": "A las dos de la tarde.",
+          "answerEn": "At two in the afternoon.",
+          "keys": [
+            "a las",
+            "la una",
+            "de la tarde"
+          ],
+          "wrong": [
+            "Me gusta comer.",
+            "Hoy es martes."
+          ],
+          "reply": "¡Como en España!",
+          "replyEn": "Just like in Spain!"
+        },
+        {
+          "ask": "¿Y a qué hora te acuestas?",
+          "askEn": "And what time do you go to bed?",
+          "answer": "A las nueve de la noche.",
+          "answerEn": "At nine at night.",
+          "keys": [
+            "a las",
+            "de la noche"
+          ],
+          "wrong": [
+            "Me acuesto en la cama.",
+            "Son azules."
+          ],
+          "reply": "¡Buenas noches!",
+          "replyEn": "Good night!"
+        }
+      ]
+    },
+    {
+      "lesson": 22,
+      "who": "sol",
+      "title": "My day",
+      "scene": "⏰",
+      "turns": [
+        {
+          "ask": "¿A qué hora te despiertas?",
+          "askEn": "What time do you wake up?",
+          "answer": "Me despierto a las siete.",
+          "answerEn": "I wake up at seven.",
+          "keys": [
+            "a las",
+            "me despierto"
+          ],
+          "wrong": [
+            "Me ducho.",
+            "Voy al cole."
+          ],
+          "reply": "¡Qué temprano!",
+          "replyEn": "So early!"
+        },
+        {
+          "ask": "¿Qué desayunas?",
+          "askEn": "What do you have for breakfast?",
+          "answer": "Desayuno pan y leche.",
+          "answerEn": "I have bread and milk.",
+          "keys": [
+            "desayuno",
+            "pan",
+            "leche",
+            "cereales",
+            "fruta",
+            "huevos",
+            "chocolate"
+          ],
+          "wrong": [
+            "Me acuesto.",
+            "A las siete."
+          ],
+          "reply": "¡Qué rico!",
+          "replyEn": "Yummy!"
+        },
+        {
+          "ask": "¿Cómo vas al cole?",
+          "askEn": "How do you get to school?",
+          "answer": "Voy al cole a pie.",
+          "answerEn": "I walk to school.",
+          "keys": [
+            "a pie",
+            "andando",
+            "en coche",
+            "en autobus",
+            "en bici",
+            "voy"
+          ],
+          "wrong": [
+            "Ceno a las nueve.",
+            "Juego al fútbol."
+          ],
+          "reply": "¡Muy bien!",
+          "replyEn": "Very good!"
+        }
+      ]
+    },
+    {
+      "lesson": 23,
+      "who": "luna",
+      "title": "Big or small?",
+      "scene": "🐘",
+      "turns": [
+        {
+          "ask": "¿El elefante es grande o pequeño?",
+          "askEn": "Is the elephant big or small?",
+          "answer": "Es grande.",
+          "answerEn": "It's big.",
+          "keys": [
+            "grande"
+          ],
+          "wrong": [
+            "Es pequeño.",
+            "Es lento."
+          ],
+          "reply": "¡Muy grande!",
+          "replyEn": "Very big!"
+        },
+        {
+          "ask": "¿La tortuga es rápida o lenta?",
+          "askEn": "Is the tortoise fast or slow?",
+          "answer": "Es lenta.",
+          "answerEn": "It's slow.",
+          "keys": [
+            "lenta",
+            "lento"
+          ],
+          "wrong": [
+            "Es rápida.",
+            "Es nueva."
+          ],
+          "reply": "¡Sí, muy lenta!",
+          "replyEn": "Yes, very slow!"
+        },
+        {
+          "ask": "¿Tu mochila es nueva o vieja?",
+          "askEn": "Is your school bag new or old?",
+          "answer": "Es nueva.",
+          "answerEn": "It's new.",
+          "keys": [
+            "nueva",
+            "nuevo",
+            "vieja",
+            "viejo"
+          ],
+          "wrong": [
+            "Es rápida.",
+            "Me llamo Ana."
+          ],
+          "reply": "¡Qué bonita!",
+          "replyEn": "How nice!"
+        }
+      ]
+    },
+    {
+      "lesson": 24,
+      "who": "sol",
+      "title": "Sentence City interview",
+      "scene": "🎤",
+      "turns": [
+        {
+          "ask": "¿Cómo eres?",
+          "askEn": "What are you like?",
+          "answer": "Soy simpático y alto.",
+          "answerEn": "I'm nice and tall.",
+          "keys": [
+            "soy"
+          ],
+          "wrong": [
+            "Tengo un gato.",
+            "Son las dos."
+          ],
+          "reply": "¡Genial!",
+          "replyEn": "Great!"
+        },
+        {
+          "ask": "¿Qué tienes en casa?",
+          "askEn": "What have you got at home?",
+          "answer": "Tengo un perro.",
+          "answerEn": "I've got a dog.",
+          "keys": [
+            "tengo"
+          ],
+          "wrong": [
+            "Soy alto.",
+            "Me gusta."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Nice!"
+        },
+        {
+          "ask": "¿Qué quieres hacer mañana?",
+          "askEn": "What do you want to do tomorrow?",
+          "answer": "Quiero ir a la playa.",
+          "answerEn": "I want to go to the beach.",
+          "keys": [
+            "quiero",
+            "puedo"
+          ],
+          "wrong": [
+            "Son las tres.",
+            "Soy pequeño."
+          ],
+          "reply": "¡Buena idea!",
+          "replyEn": "Good idea!"
+        },
+        {
+          "ask": "¿Qué te gusta de España?",
+          "askEn": "What do you like about Spain?",
+          "answer": "Me gusta la playa.",
+          "answerEn": "I like the beach.",
+          "keys": [
+            "me gusta",
+            "me encanta",
+            "me gustan"
+          ],
+          "wrong": [
+            "Tengo ocho años.",
+            "Es la una."
+          ],
+          "reply": "¡A mí también!",
+          "replyEn": "Me too!"
+        }
+      ]
+    }
+  ]
+}

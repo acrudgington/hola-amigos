@@ -1,0 +1,482 @@
+{
+  "world": 1,
+  "conversations": [
+    {
+      "lesson": 1,
+      "who": "sol",
+      "title": "Saying hello",
+      "scene": "👋",
+      "turns": [
+        {
+          "ask": "¡Hola!",
+          "askEn": "Hello!",
+          "answer": "¡Hola!",
+          "answerEn": "Hello!",
+          "keys": [
+            "hola",
+            "buenos dias",
+            "buenas"
+          ],
+          "wrong": [
+            "Adiós.",
+            "Gracias."
+          ],
+          "reply": "¡Hola, amigo!",
+          "replyEn": "Hello, friend!"
+        },
+        {
+          "ask": "¿Qué tal?",
+          "askEn": "How are you?",
+          "answer": "Bien, gracias.",
+          "answerEn": "Fine, thanks.",
+          "keys": [
+            "bien",
+            "genial",
+            "mal",
+            "regular"
+          ],
+          "wrong": [
+            "Adiós.",
+            "Buenas noches."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Great!"
+        },
+        {
+          "ask": "¡Adiós!",
+          "askEn": "Bye!",
+          "answer": "¡Adiós!",
+          "answerEn": "Bye!",
+          "keys": [
+            "adios",
+            "hasta luego",
+            "chao"
+          ],
+          "wrong": [
+            "¡Hola!",
+            "Buenos días."
+          ]
+        }
+      ]
+    },
+    {
+      "lesson": 2,
+      "who": "luna",
+      "title": "Meeting someone new",
+      "scene": "🤝",
+      "turns": [
+        {
+          "ask": "¡Hola! Me llamo Luna. ¿Cómo te llamas?",
+          "askEn": "Hi! I'm Luna. What's your name?",
+          "answer": "Me llamo Mia.",
+          "answerEn": "My name is Mia.",
+          "keys": [
+            "me llamo",
+            "soy",
+            "mi nombre"
+          ],
+          "wrong": [
+            "Bien, gracias.",
+            "Por favor."
+          ],
+          "reply": "¡Mucho gusto!",
+          "replyEn": "Nice to meet you!"
+        },
+        {
+          "ask": "¿Eres mi amigo?",
+          "askEn": "Are you my friend?",
+          "answer": "Sí, soy tu amigo.",
+          "answerEn": "Yes, I'm your friend.",
+          "keys": [
+            "si",
+            "claro",
+            "amigo",
+            "amiga"
+          ],
+          "wrong": [
+            "Me llamo Leo.",
+            "Adiós."
+          ],
+          "reply": "¡Genial!",
+          "replyEn": "Great!"
+        },
+        {
+          "ask": "¿Quieres jugar? Di «por favor».",
+          "askEn": "Do you want to play? Say 'please'.",
+          "answer": "Sí, por favor.",
+          "answerEn": "Yes, please.",
+          "keys": [
+            "por favor"
+          ],
+          "wrong": [
+            "No, gracias.",
+            "Mucho gusto."
+          ],
+          "reply": "¡Vale, vamos!",
+          "replyEn": "OK, let's go!"
+        }
+      ]
+    },
+    {
+      "lesson": 3,
+      "who": "sol",
+      "title": "Counting together",
+      "scene": "🔢",
+      "turns": [
+        {
+          "ask": "Uno, dos… ¿y después?",
+          "askEn": "One, two… and then?",
+          "answer": "Tres.",
+          "answerEn": "Three.",
+          "keys": [
+            "tres"
+          ],
+          "wrong": [
+            "Cinco.",
+            "Diez."
+          ],
+          "reply": "¡Muy bien!",
+          "replyEn": "Very good!"
+        },
+        {
+          "ask": "¿Cuántos dedos tienes en una mano?",
+          "askEn": "How many fingers do you have on one hand?",
+          "answer": "Cinco.",
+          "answerEn": "Five.",
+          "keys": [
+            "cinco"
+          ],
+          "wrong": [
+            "Dos.",
+            "Ocho."
+          ],
+          "reply": "¡Sí, cinco!",
+          "replyEn": "Yes, five!"
+        },
+        {
+          "ask": "Seis, siete, ocho… ¿y luego?",
+          "askEn": "Six, seven, eight… and next?",
+          "answer": "Nueve.",
+          "answerEn": "Nine.",
+          "keys": [
+            "nueve"
+          ],
+          "wrong": [
+            "Cuatro.",
+            "Uno."
+          ],
+          "reply": "¡Y diez! ¡Bravo!",
+          "replyEn": "And ten! Bravo!"
+        }
+      ]
+    },
+    {
+      "lesson": 4,
+      "who": "luna",
+      "title": "Colours",
+      "scene": "🎨",
+      "turns": [
+        {
+          "ask": "¿De qué color es el sol?",
+          "askEn": "What colour is the sun?",
+          "answer": "Amarillo.",
+          "answerEn": "Yellow.",
+          "keys": [
+            "amarillo"
+          ],
+          "wrong": [
+            "Azul.",
+            "Negro."
+          ],
+          "reply": "¡Sí, amarillo!",
+          "replyEn": "Yes, yellow!"
+        },
+        {
+          "ask": "¿De qué color es la hierba?",
+          "askEn": "What colour is the grass?",
+          "answer": "Verde.",
+          "answerEn": "Green.",
+          "keys": [
+            "verde"
+          ],
+          "wrong": [
+            "Rojo.",
+            "Morado."
+          ],
+          "reply": "¡Correcto!",
+          "replyEn": "Correct!"
+        },
+        {
+          "ask": "¿Cuál es tu color favorito?",
+          "askEn": "What's your favourite colour?",
+          "answer": "Mi color favorito es el azul.",
+          "answerEn": "My favourite colour is blue.",
+          "keys": [
+            "rojo",
+            "azul",
+            "amarillo",
+            "verde",
+            "naranja",
+            "morado",
+            "negro",
+            "blanco",
+            "rosa"
+          ],
+          "wrong": [
+            "Me llamo Sol.",
+            "Tengo cinco."
+          ],
+          "reply": "¡Qué bonito!",
+          "replyEn": "How lovely!"
+        }
+      ]
+    },
+    {
+      "lesson": 5,
+      "who": "sol",
+      "title": "At the farm",
+      "scene": "🐮",
+      "turns": [
+        {
+          "ask": "¿Qué animal dice «guau»?",
+          "askEn": "Which animal says 'woof'?",
+          "answer": "El perro.",
+          "answerEn": "The dog.",
+          "keys": [
+            "perro"
+          ],
+          "wrong": [
+            "El gato.",
+            "La vaca."
+          ],
+          "reply": "¡Guau, guau!",
+          "replyEn": "Woof, woof!"
+        },
+        {
+          "ask": "¿Qué animal dice «miau»?",
+          "askEn": "Which animal says 'miaow'?",
+          "answer": "El gato.",
+          "answerEn": "The cat.",
+          "keys": [
+            "gato"
+          ],
+          "wrong": [
+            "El caballo.",
+            "El pez."
+          ],
+          "reply": "¡Miau!",
+          "replyEn": "Miaow!"
+        },
+        {
+          "ask": "¿Qué animal te gusta?",
+          "askEn": "Which animal do you like?",
+          "answer": "Me gusta el conejo.",
+          "answerEn": "I like the rabbit.",
+          "keys": [
+            "perro",
+            "gato",
+            "pajaro",
+            "pez",
+            "conejo",
+            "caballo",
+            "vaca",
+            "cerdo",
+            "me gusta"
+          ],
+          "wrong": [
+            "Rojo.",
+            "Buenas noches."
+          ],
+          "reply": "¡A mí también!",
+          "replyEn": "Me too!"
+        }
+      ]
+    },
+    {
+      "lesson": 6,
+      "who": "luna",
+      "title": "My family",
+      "scene": "👨‍👩‍👧",
+      "turns": [
+        {
+          "ask": "¿Tienes hermanos?",
+          "askEn": "Do you have brothers or sisters?",
+          "answer": "Sí, tengo una hermana.",
+          "answerEn": "Yes, I have a sister.",
+          "keys": [
+            "hermano",
+            "hermana",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Me gusta el perro.",
+            "Verde."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "How nice!"
+        },
+        {
+          "ask": "¿Cómo se llama tu mamá?",
+          "askEn": "What's your mum called?",
+          "answer": "Mi mamá se llama Ana.",
+          "answerEn": "My mum is called Ana.",
+          "keys": [
+            "se llama",
+            "mama"
+          ],
+          "wrong": [
+            "Tengo un gato.",
+            "Adiós."
+          ],
+          "reply": "¡Qué nombre tan bonito!",
+          "replyEn": "What a lovely name!"
+        },
+        {
+          "ask": "¿Tienes mascota?",
+          "askEn": "Do you have a pet?",
+          "answer": "Sí, tengo un perro.",
+          "answerEn": "Yes, I have a dog.",
+          "keys": [
+            "si",
+            "no",
+            "perro",
+            "gato",
+            "pez",
+            "conejo",
+            "mascota"
+          ],
+          "wrong": [
+            "Mi mamá.",
+            "Buenos días."
+          ],
+          "reply": "¡Me encantan las mascotas!",
+          "replyEn": "I love pets!"
+        }
+      ]
+    },
+    {
+      "lesson": 7,
+      "who": "sol",
+      "title": "Simón dice",
+      "scene": "🙆",
+      "turns": [
+        {
+          "ask": "¿Qué es esto? 👃",
+          "askEn": "What's this? 👃",
+          "answer": "La nariz.",
+          "answerEn": "The nose.",
+          "keys": [
+            "nariz"
+          ],
+          "wrong": [
+            "La boca.",
+            "Los pies."
+          ],
+          "reply": "¡Sí, la nariz!",
+          "replyEn": "Yes, the nose!"
+        },
+        {
+          "ask": "¿Con qué ves?",
+          "askEn": "What do you see with?",
+          "answer": "Con los ojos.",
+          "answerEn": "With my eyes.",
+          "keys": [
+            "ojos"
+          ],
+          "wrong": [
+            "Con las manos.",
+            "Con las orejas."
+          ],
+          "reply": "¡Exacto!",
+          "replyEn": "Exactly!"
+        },
+        {
+          "ask": "¿Con qué escuchas?",
+          "askEn": "What do you listen with?",
+          "answer": "Con las orejas.",
+          "answerEn": "With my ears.",
+          "keys": [
+            "orejas",
+            "oidos"
+          ],
+          "wrong": [
+            "Con la nariz.",
+            "Con el pelo."
+          ],
+          "reply": "¡Muy bien!",
+          "replyEn": "Very good!"
+        }
+      ]
+    },
+    {
+      "lesson": 8,
+      "who": "luna",
+      "title": "How are you feeling?",
+      "scene": "😊",
+      "turns": [
+        {
+          "ask": "Hola. ¿Cómo estás hoy?",
+          "askEn": "Hi. How are you today?",
+          "answer": "Estoy feliz.",
+          "answerEn": "I'm happy.",
+          "keys": [
+            "feliz",
+            "contento",
+            "contenta",
+            "triste",
+            "cansado",
+            "cansada",
+            "bien",
+            "emocionado",
+            "emocionada",
+            "enfadado",
+            "enfadada"
+          ],
+          "wrong": [
+            "Me llamo Luna.",
+            "El perro."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Great!"
+        },
+        {
+          "ask": "¿Tienes hambre?",
+          "askEn": "Are you hungry?",
+          "answer": "Sí, tengo hambre.",
+          "answerEn": "Yes, I'm hungry.",
+          "keys": [
+            "si",
+            "no",
+            "hambre"
+          ],
+          "wrong": [
+            "Estoy azul.",
+            "Tengo un gato."
+          ],
+          "reply": "¡Vamos a comer!",
+          "replyEn": "Let's go and eat!"
+        },
+        {
+          "ask": "Estoy cansada. ¿Y tú?",
+          "askEn": "I'm tired. And you?",
+          "answer": "Yo también estoy cansado.",
+          "answerEn": "I'm tired too.",
+          "keys": [
+            "tambien",
+            "cansado",
+            "cansada",
+            "estoy",
+            "no"
+          ],
+          "wrong": [
+            "Rojo y verde.",
+            "Mucho gusto."
+          ],
+          "reply": "¡A dormir!",
+          "replyEn": "Time for bed!"
+        }
+      ]
+    }
+  ]
+}

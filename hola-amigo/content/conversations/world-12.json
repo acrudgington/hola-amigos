@@ -1,0 +1,521 @@
+{
+  "world": 12,
+  "conversations": [
+    {
+      "lesson": 93,
+      "who": "sol",
+      "title": "Nice to meet you",
+      "scene": "👋",
+      "turns": [
+        {
+          "ask": "Hola, me llamo Sol. Encantado.",
+          "askEn": "Hi, I'm Sol. Nice to meet you.",
+          "answer": "Encantada. Me llamo Ana.",
+          "answerEn": "Nice to meet you. I'm Ana.",
+          "keys": [
+            "encantado",
+            "encantada",
+            "mucho gusto",
+            "me llamo"
+          ],
+          "wrong": [
+            "Hasta mañana.",
+            "Tengo treinta."
+          ],
+          "reply": "¿Cuántos años tienes?",
+          "replyEn": "How old are you?"
+        },
+        {
+          "ask": "¿Cuántos años tiene tu abuela?",
+          "askEn": "How old is your grandma?",
+          "answer": "Tiene setenta años.",
+          "answerEn": "She's seventy.",
+          "keys": [
+            "anos",
+            "tiene"
+          ],
+          "wrong": [
+            "Hasta luego.",
+            "Encantada."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "How nice!"
+        },
+        {
+          "ask": "Tengo que irme. ¡Hasta luego!",
+          "askEn": "I have to go. See you later!",
+          "answer": "¡Hasta luego!",
+          "answerEn": "See you later!",
+          "keys": [
+            "hasta luego",
+            "hasta manana",
+            "adios",
+            "chao"
+          ],
+          "wrong": [
+            "Encantado.",
+            "Veinte."
+          ]
+        }
+      ]
+    },
+    {
+      "lesson": 94,
+      "who": "luna",
+      "title": "Shapes and colours",
+      "scene": "🔺",
+      "turns": [
+        {
+          "ask": "¿Cuántos lados tiene un triángulo?",
+          "askEn": "How many sides does a triangle have?",
+          "answer": "Tres.",
+          "answerEn": "Three.",
+          "keys": [
+            "tres"
+          ],
+          "wrong": [
+            "Cuatro.",
+            "Cinco."
+          ],
+          "reply": "¡Correcto!",
+          "replyEn": "Correct!"
+        },
+        {
+          "ask": "¿Qué forma tiene una pizza?",
+          "askEn": "What shape is a pizza?",
+          "answer": "Es un círculo.",
+          "answerEn": "It's a circle.",
+          "keys": [
+            "circulo",
+            "redonda"
+          ],
+          "wrong": [
+            "Es un cuadrado.",
+            "Es una estrella."
+          ],
+          "reply": "¡Sí!",
+          "replyEn": "Yes!"
+        },
+        {
+          "ask": "¿Te gusta más el azul claro o el azul oscuro?",
+          "askEn": "Do you like light blue or dark blue more?",
+          "answer": "El azul oscuro.",
+          "answerEn": "Dark blue.",
+          "keys": [
+            "claro",
+            "oscuro"
+          ],
+          "wrong": [
+            "El corazón.",
+            "El rectángulo."
+          ],
+          "reply": "¡Qué bonito!",
+          "replyEn": "How nice!"
+        }
+      ]
+    },
+    {
+      "lesson": 95,
+      "who": "sol",
+      "title": "Tasting time",
+      "scene": "😋",
+      "turns": [
+        {
+          "ask": "¿El chocolate es dulce o salado?",
+          "askEn": "Is chocolate sweet or salty?",
+          "answer": "Es dulce.",
+          "answerEn": "It's sweet.",
+          "keys": [
+            "dulce"
+          ],
+          "wrong": [
+            "Es salado.",
+            "Es picante."
+          ],
+          "reply": "¡Y delicioso!",
+          "replyEn": "And delicious!"
+        },
+        {
+          "ask": "¿Te gusta la comida picante?",
+          "askEn": "Do you like spicy food?",
+          "answer": "No, no me gusta.",
+          "answerEn": "No, I don't like it.",
+          "keys": [
+            "si",
+            "no",
+            "me gusta",
+            "me encanta"
+          ],
+          "wrong": [
+            "Es amargo.",
+            "Está frío."
+          ],
+          "reply": "¡A mí tampoco!",
+          "replyEn": "Me neither!"
+        },
+        {
+          "ask": "¿Cómo está la sopa?",
+          "askEn": "How's the soup?",
+          "answer": "Está caliente y deliciosa.",
+          "answerEn": "It's hot and delicious.",
+          "keys": [
+            "caliente",
+            "fria",
+            "deliciosa",
+            "rica",
+            "salada"
+          ],
+          "wrong": [
+            "Es dulce el helado.",
+            "Ácido."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Great!"
+        }
+      ]
+    },
+    {
+      "lesson": 96,
+      "who": "luna",
+      "title": "Family life",
+      "scene": "🏡",
+      "turns": [
+        {
+          "ask": "¿Con quién vives?",
+          "askEn": "Who do you live with?",
+          "answer": "Vivo con mi familia.",
+          "answerEn": "I live with my family.",
+          "keys": [
+            "vivo",
+            "familia",
+            "mama",
+            "papa",
+            "madre",
+            "padre"
+          ],
+          "wrong": [
+            "Comparto mi habitación.",
+            "Cenamos juntos."
+          ],
+          "reply": "¡Qué bonito!",
+          "replyEn": "How lovely!"
+        },
+        {
+          "ask": "¿Compartes habitación?",
+          "askEn": "Do you share a room?",
+          "answer": "Sí, con mi hermano.",
+          "answerEn": "Yes, with my brother.",
+          "keys": [
+            "si",
+            "no",
+            "comparto",
+            "con mi"
+          ],
+          "wrong": [
+            "Vivo en Valencia.",
+            "Querer."
+          ],
+          "reply": "¡Qué divertido!",
+          "replyEn": "What fun!"
+        },
+        {
+          "ask": "¿Cenáis juntos?",
+          "askEn": "Do you have dinner together?",
+          "answer": "Sí, cenamos juntos cada noche.",
+          "answerEn": "Yes, we have dinner together every night.",
+          "keys": [
+            "si",
+            "no",
+            "cenamos",
+            "juntos"
+          ],
+          "wrong": [
+            "Cuidar.",
+            "Mi habitación."
+          ],
+          "reply": "¡Me encanta!",
+          "replyEn": "I love that!"
+        }
+      ]
+    },
+    {
+      "lesson": 97,
+      "who": "sol",
+      "title": "Today, yesterday, tomorrow",
+      "scene": "📆",
+      "turns": [
+        {
+          "ask": "¿Qué tiempo hace hoy?",
+          "askEn": "What's the weather like today?",
+          "answer": "Hoy hace buen tiempo.",
+          "answerEn": "The weather is good today.",
+          "keys": [
+            "buen tiempo",
+            "mal tiempo",
+            "sol",
+            "frio",
+            "calor",
+            "llueve"
+          ],
+          "wrong": [
+            "Ayer.",
+            "El año."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Nice!"
+        },
+        {
+          "ask": "¿Y ayer?",
+          "askEn": "And yesterday?",
+          "answer": "Ayer hizo mal tiempo.",
+          "answerEn": "Yesterday the weather was bad.",
+          "keys": [
+            "hizo",
+            "llovio",
+            "hacia"
+          ],
+          "wrong": [
+            "Mañana hace sol.",
+            "Este mes."
+          ],
+          "reply": "¡Vaya!",
+          "replyEn": "Oh dear!"
+        },
+        {
+          "ask": "¿Qué vas a hacer mañana?",
+          "askEn": "What are you going to do tomorrow?",
+          "answer": "Mañana voy a ir al parque.",
+          "answerEn": "Tomorrow I'm going to the park.",
+          "keys": [
+            "voy a",
+            "manana"
+          ],
+          "wrong": [
+            "Ayer fui al parque.",
+            "Hoy hace sol."
+          ],
+          "reply": "¡Buena idea!",
+          "replyEn": "Good idea!"
+        }
+      ]
+    },
+    {
+      "lesson": 98,
+      "who": "luna",
+      "title": "Dinner at a restaurant",
+      "scene": "🍷",
+      "role": "the waiter",
+      "turns": [
+        {
+          "ask": "Buenas noches. ¿Qué quieren de primero?",
+          "askEn": "Good evening. What would you like for your first course?",
+          "answer": "De primero quiero ensalada.",
+          "answerEn": "For my first course I'd like salad.",
+          "keys": [
+            "de primero",
+            "quiero",
+            "ensalada",
+            "sopa"
+          ],
+          "wrong": [
+            "De postre, helado.",
+            "La propina."
+          ],
+          "reply": "Muy bien.",
+          "replyEn": "Very good."
+        },
+        {
+          "ask": "¿Y de segundo?",
+          "askEn": "And for your main course?",
+          "answer": "De segundo, pollo, por favor.",
+          "answerEn": "For my main course, chicken, please.",
+          "keys": [
+            "de segundo",
+            "pollo",
+            "pescado",
+            "carne",
+            "quiero"
+          ],
+          "wrong": [
+            "Para beber, agua.",
+            "De primero, ensalada."
+          ],
+          "reply": "Perfecto.",
+          "replyEn": "Perfect."
+        },
+        {
+          "ask": "¿Y para beber?",
+          "askEn": "And to drink?",
+          "answer": "Agua, por favor.",
+          "answerEn": "Water, please.",
+          "keys": [
+            "agua",
+            "zumo",
+            "leche",
+            "limonada"
+          ],
+          "wrong": [
+            "La cuenta.",
+            "De postre."
+          ],
+          "reply": "Ahora mismo.",
+          "replyEn": "Coming right up."
+        }
+      ]
+    },
+    {
+      "lesson": 99,
+      "who": "sol",
+      "title": "Trying clothes on",
+      "scene": "👗",
+      "role": "the shop assistant",
+      "turns": [
+        {
+          "ask": "Hola. ¿Qué talla necesitas?",
+          "askEn": "Hello. What size do you need?",
+          "answer": "La talla mediana, por favor.",
+          "answerEn": "Medium, please.",
+          "keys": [
+            "mediana",
+            "mediano",
+            "pequena",
+            "pequeno",
+            "grande",
+            "talla"
+          ],
+          "wrong": [
+            "Me lo llevo.",
+            "La rebaja."
+          ],
+          "reply": "Aquí tienes.",
+          "replyEn": "Here you are."
+        },
+        {
+          "ask": "El probador está allí. ¿Qué tal te queda?",
+          "askEn": "The changing room is over there. How does it fit?",
+          "answer": "Me queda bien.",
+          "answerEn": "It fits well.",
+          "keys": [
+            "bien",
+            "grande",
+            "pequeno",
+            "pequena",
+            "mal"
+          ],
+          "wrong": [
+            "La tienda.",
+            "El probador."
+          ],
+          "reply": "¡Te queda genial!",
+          "replyEn": "It looks great on you!"
+        },
+        {
+          "ask": "Hoy hay rebajas. ¿Te lo llevas?",
+          "askEn": "There's a sale today. Will you take it?",
+          "answer": "Sí, me lo llevo.",
+          "answerEn": "Yes, I'll take it.",
+          "keys": [
+            "me lo llevo",
+            "me la llevo",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Talla grande.",
+            "Mediano."
+          ],
+          "reply": "¡Gracias!",
+          "replyEn": "Thank you!"
+        }
+      ]
+    },
+    {
+      "lesson": 100,
+      "who": "luna",
+      "title": "The mega quiz",
+      "scene": "🎉",
+      "turns": [
+        {
+          "ask": "¡Hola! ¿Cómo te llamas?",
+          "askEn": "Hello! What's your name?",
+          "answer": "Me llamo Mia.",
+          "answerEn": "My name is Mia.",
+          "keys": [
+            "me llamo",
+            "soy"
+          ],
+          "wrong": [
+            "Tengo un perro.",
+            "Mañana."
+          ],
+          "reply": "¡Encantada!",
+          "replyEn": "Nice to meet you!"
+        },
+        {
+          "ask": "¿Cómo es tu familia?",
+          "askEn": "What's your family like?",
+          "answer": "Mi familia es grande y simpática.",
+          "answerEn": "My family is big and nice.",
+          "keys": [
+            "familia",
+            "grande",
+            "pequena",
+            "simpatica"
+          ],
+          "wrong": [
+            "Me llamo Leo.",
+            "Mañana voy."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Nice!"
+        },
+        {
+          "ask": "¿Qué te encanta hacer?",
+          "askEn": "What do you love doing?",
+          "answer": "Me encanta jugar al fútbol.",
+          "answerEn": "I love playing football.",
+          "keys": [
+            "me encanta",
+            "me gusta"
+          ],
+          "wrong": [
+            "Soy amable.",
+            "En mi casa."
+          ],
+          "reply": "¡Genial!",
+          "replyEn": "Great!"
+        },
+        {
+          "ask": "¿Cómo eres?",
+          "askEn": "What are you like?",
+          "answer": "Soy amable y valiente.",
+          "answerEn": "I'm kind and brave.",
+          "keys": [
+            "soy"
+          ],
+          "wrong": [
+            "Tengo hambre.",
+            "En mi casa."
+          ],
+          "reply": "¡Sí que lo eres!",
+          "replyEn": "You really are!"
+        },
+        {
+          "ask": "¿Qué vas a hacer mañana?",
+          "askEn": "What are you going to do tomorrow?",
+          "answer": "Mañana voy a aprender más español.",
+          "answerEn": "Tomorrow I'm going to learn more Spanish.",
+          "keys": [
+            "voy a"
+          ],
+          "wrong": [
+            "Ayer aprendí.",
+            "Me encanta."
+          ],
+          "reply": "¡Eres un megacampeón!",
+          "replyEn": "You're a megachampion!"
+        }
+      ]
+    }
+  ]
+}

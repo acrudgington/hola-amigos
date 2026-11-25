@@ -14,6 +14,7 @@ export const INSTRUCTIONS: Record<ActivityType, string> = {
   oddone: "Three of these words belong in this lesson. Tap the one that doesn't!",
   quiz: "Let's see what you remember! Tap the right answer.",
   sayit: "Listen to the word, then tap the microphone and say it out loud.",
+  talk: "Let's have a chat! Listen to the question, then answer out loud, or tap an answer.",
   build: "Tap the words in the right order to make the sentence.",
   wordorder: "These words are all mixed up. Tap them in the right order.",
   story: "Story time! Tap read to me, or tap any sentence to hear it.",

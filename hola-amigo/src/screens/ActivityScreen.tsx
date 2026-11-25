@@ -4,7 +4,7 @@ import { Icon } from "../components/Icon.tsx";
 import { voice } from "../audio/player.ts";
 import { useGuide, useSayOnShow } from "../audio/guide.ts";
 import { INSTRUCTIONS } from "../audio/lines.ts";
-import { surpriseFor, wordsForLessonsUpTo, wordsForWorld, worldOf, type Lesson, type Surprise, type Word, type World } from "../content/index.ts";
+import { conversationFor, surpriseFor, wordsForLessonsUpTo, wordsForWorld, worldOf, type Lesson, type Surprise, type Word, type World } from "../content/index.ts";
 import { ACTIVITIES, type ActivityType } from "../lib/journey.ts";
 import type { Mood } from "../lib/reactions.ts";
 import type { Journey } from "../state/nav.ts";
@@ -18,6 +18,7 @@ import { DragMatch, FlashCards, LearnIntro, MatchGame, OddOneOut } from "../game
 import { SentenceGame } from "../games/SentenceGame.tsx";
 import { StoryReader } from "../games/StoryReader.tsx";
 import { SayItGame } from "../games/SayItGame.tsx";
+import { TalkGame } from "../games/TalkGame.tsx";
 import { Art } from "../components/Art.tsx";
 import { warmupWords } from "../domain/memory.ts";
 import type { Progress } from "../domain/progress.ts";
@@ -94,6 +95,7 @@ export function ActivityScreen({ lesson, type, journey, combo = 0, sessionXp = 0
     oddone: () => <OddOneOut words={lesson.words} {...common} onDone={finish} />,
     quiz: () => <Quiz words={lesson.words} gaps={lesson.gaps} {...common} onDone={finish} />,
     sayit: () => <SayItGame words={lesson.words} {...common} onDone={(s, t) => finish(s, t, { micUses: t })} />,
+    talk: () => { const c = conversationFor(lesson.id); return c ? <TalkGame key={lesson.id} conversation={c} onDone={(s, t, m) => finish(s, t, { micUses: m })} /> : <SayItGame words={lesson.words} {...common} onDone={(s, t) => finish(s, t, { micUses: t })} />; },
     build: () => <SentenceGame sentences={lesson.sentences} variant="build" onDone={finish} />,
     wordorder: () => <SentenceGame sentences={lesson.sentences} variant="wordorder" onDone={finish} />,
     story: () => <StoryReader story={lesson.story} onDone={(s, t) => finish(s, t, { storiesRead: 1 })} />,

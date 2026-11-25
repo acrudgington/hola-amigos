@@ -1,0 +1,539 @@
+{
+  "world": 11,
+  "conversations": [
+    {
+      "lesson": 85,
+      "who": "sol",
+      "title": "What do you look like?",
+      "scene": "🪞",
+      "turns": [
+        {
+          "ask": "¿Cómo tienes el pelo?",
+          "askEn": "What's your hair like?",
+          "answer": "Tengo el pelo corto y moreno.",
+          "answerEn": "I've got short dark hair.",
+          "keys": [
+            "pelo",
+            "rubio",
+            "rubia",
+            "moreno",
+            "morena",
+            "pelirrojo",
+            "pelirroja",
+            "largo",
+            "corto"
+          ],
+          "wrong": [
+            "Tengo pecas en la nariz.",
+            "Llevo gafas."
+          ],
+          "reply": "¡Como yo!",
+          "replyEn": "Like me!"
+        },
+        {
+          "ask": "¿De qué color tienes los ojos?",
+          "askEn": "What colour are your eyes?",
+          "answer": "Tengo los ojos azules.",
+          "answerEn": "I've got blue eyes.",
+          "keys": [
+            "azules",
+            "marrones",
+            "verdes",
+            "negros",
+            "grises"
+          ],
+          "wrong": [
+            "Tengo el pelo largo.",
+            "Soy alto."
+          ],
+          "reply": "¡Qué bonitos!",
+          "replyEn": "How lovely!"
+        },
+        {
+          "ask": "¿Llevas gafas?",
+          "askEn": "Do you wear glasses?",
+          "answer": "No, no llevo gafas.",
+          "answerEn": "No, I don't wear glasses.",
+          "keys": [
+            "si",
+            "no",
+            "llevo"
+          ],
+          "wrong": [
+            "Tengo pecas.",
+            "Es pelirrojo."
+          ],
+          "reply": "¡Vale!",
+          "replyEn": "OK!"
+        }
+      ]
+    },
+    {
+      "lesson": 86,
+      "who": "luna",
+      "title": "What are you like?",
+      "scene": "😇",
+      "turns": [
+        {
+          "ask": "¿Cómo eres?",
+          "askEn": "What are you like?",
+          "answer": "Soy amable y un poco gracioso.",
+          "answerEn": "I'm kind and a bit funny.",
+          "keys": [
+            "soy",
+            "amable",
+            "gracioso",
+            "graciosa",
+            "valiente",
+            "inteligente",
+            "generoso",
+            "generosa",
+            "paciente",
+            "trabajador",
+            "trabajadora",
+            "curioso",
+            "curiosa"
+          ],
+          "wrong": [
+            "Tengo el pelo rubio.",
+            "Me gusta el chocolate."
+          ],
+          "reply": "¡Me encanta!",
+          "replyEn": "I love that!"
+        },
+        {
+          "ask": "¿Tu mejor amigo es valiente?",
+          "askEn": "Is your best friend brave?",
+          "answer": "Sí, es muy valiente.",
+          "answerEn": "Yes, he's very brave.",
+          "keys": [
+            "si",
+            "no",
+            "valiente",
+            "es"
+          ],
+          "wrong": [
+            "Soy curioso.",
+            "Tengo pecas."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Nice!"
+        },
+        {
+          "ask": "¿Eres paciente?",
+          "askEn": "Are you patient?",
+          "answer": "Más o menos.",
+          "answerEn": "Sort of.",
+          "keys": [
+            "si",
+            "no",
+            "mas o menos",
+            "un poco",
+            "soy"
+          ],
+          "wrong": [
+            "Es generoso.",
+            "El trabajador."
+          ],
+          "reply": "¡Ja, ja! ¡Yo tampoco!",
+          "replyEn": "Ha ha! Me neither!"
+        }
+      ]
+    },
+    {
+      "lesson": 87,
+      "who": "sol",
+      "title": "Likes and loves",
+      "scene": "❤️",
+      "turns": [
+        {
+          "ask": "¿Qué es lo mejor del verano?",
+          "askEn": "What's the best thing about summer?",
+          "answer": "Lo mejor es la playa.",
+          "answerEn": "The best thing is the beach.",
+          "keys": [
+            "lo mejor",
+            "playa",
+            "piscina",
+            "vacaciones",
+            "helado"
+          ],
+          "wrong": [
+            "Lo peor es el frío.",
+            "Odio el verano."
+          ],
+          "reply": "¡Es verdad!",
+          "replyEn": "So true!"
+        },
+        {
+          "ask": "¿Qué odias?",
+          "askEn": "What do you hate?",
+          "answer": "Odio las verduras.",
+          "answerEn": "I hate vegetables.",
+          "keys": [
+            "odio",
+            "no me gusta",
+            "no me gustan"
+          ],
+          "wrong": [
+            "Me encanta el sol.",
+            "Prefiero el verano."
+          ],
+          "reply": "¡Ja, ja! ¡Son sanas!",
+          "replyEn": "Ha ha! They're healthy!"
+        },
+        {
+          "ask": "¿Prefieres el perro o el gato?",
+          "askEn": "Do you prefer dogs or cats?",
+          "answer": "Prefiero el perro.",
+          "answerEn": "I prefer the dog.",
+          "keys": [
+            "prefiero",
+            "perro",
+            "gato"
+          ],
+          "wrong": [
+            "Lo peor.",
+            "Odio el chocolate."
+          ],
+          "reply": "¡Yo también!",
+          "replyEn": "Me too!"
+        }
+      ]
+    },
+    {
+      "lesson": 88,
+      "who": "luna",
+      "title": "The big family",
+      "scene": "👪",
+      "turns": [
+        {
+          "ask": "¿Tienes primos?",
+          "askEn": "Have you got cousins?",
+          "answer": "Sí, tengo cuatro primos.",
+          "answerEn": "Yes, I've got four cousins.",
+          "keys": [
+            "primo",
+            "primos",
+            "prima",
+            "primas",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Mi tía es alta.",
+            "El padrino."
+          ],
+          "reply": "¡Qué familia tan grande!",
+          "replyEn": "What a big family!"
+        },
+        {
+          "ask": "¿Cómo se llama tu tía?",
+          "askEn": "What's your aunt called?",
+          "answer": "Mi tía se llama Carmen.",
+          "answerEn": "My aunt is called Carmen.",
+          "keys": [
+            "se llama",
+            "tia"
+          ],
+          "wrong": [
+            "Tengo dos tíos.",
+            "Es mi sobrino."
+          ],
+          "reply": "¡Qué nombre tan bonito!",
+          "replyEn": "What a lovely name!"
+        },
+        {
+          "ask": "¿Quién es tu padrino?",
+          "askEn": "Who is your godfather?",
+          "answer": "Mi padrino es mi tío.",
+          "answerEn": "My godfather is my uncle.",
+          "keys": [
+            "padrino",
+            "tio",
+            "abuelo",
+            "amigo",
+            "no tengo"
+          ],
+          "wrong": [
+            "Mi prima es rubia.",
+            "La madrina."
+          ],
+          "reply": "¡Qué bonito!",
+          "replyEn": "How nice!"
+        }
+      ]
+    },
+    {
+      "lesson": 89,
+      "who": "sol",
+      "title": "My neighbours",
+      "scene": "🏢",
+      "turns": [
+        {
+          "ask": "¿Vives en una casa o en un piso?",
+          "askEn": "Do you live in a house or a flat?",
+          "answer": "Vivo en un piso.",
+          "answerEn": "I live in a flat.",
+          "keys": [
+            "casa",
+            "piso"
+          ],
+          "wrong": [
+            "El ascensor.",
+            "Mi vecina es simpática."
+          ],
+          "reply": "¡Yo también!",
+          "replyEn": "Me too!"
+        },
+        {
+          "ask": "¿En qué piso vives?",
+          "askEn": "Which floor do you live on?",
+          "answer": "Vivo en el tercer piso.",
+          "answerEn": "I live on the third floor.",
+          "keys": [
+            "primer",
+            "segundo",
+            "tercer",
+            "cuarto",
+            "quinto",
+            "bajo",
+            "piso"
+          ],
+          "wrong": [
+            "Vivo en España.",
+            "Subo las escaleras."
+          ],
+          "reply": "¡Qué alto!",
+          "replyEn": "So high!"
+        },
+        {
+          "ask": "¿Usas el ascensor o las escaleras?",
+          "askEn": "Do you use the lift or the stairs?",
+          "answer": "Uso las escaleras.",
+          "answerEn": "I use the stairs.",
+          "keys": [
+            "ascensor",
+            "escaleras"
+          ],
+          "wrong": [
+            "El portero.",
+            "El barrio."
+          ],
+          "reply": "¡Qué deportista!",
+          "replyEn": "How sporty!"
+        }
+      ]
+    },
+    {
+      "lesson": 90,
+      "who": "luna",
+      "title": "School subjects",
+      "scene": "📐",
+      "turns": [
+        {
+          "ask": "¿Qué asignatura te gusta más?",
+          "askEn": "Which subject do you like best?",
+          "answer": "Me gustan las matemáticas.",
+          "answerEn": "I like maths.",
+          "keys": [
+            "matematicas",
+            "ingles",
+            "educacion fisica",
+            "arte",
+            "ciencia",
+            "ciencias",
+            "musica",
+            "historia"
+          ],
+          "wrong": [
+            "Tengo un examen.",
+            "Mi profe es simpática."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Nice!"
+        },
+        {
+          "ask": "¿Tienes examen esta semana?",
+          "askEn": "Have you got an exam this week?",
+          "answer": "Sí, de inglés.",
+          "answerEn": "Yes, in English.",
+          "keys": [
+            "si",
+            "no",
+            "examen"
+          ],
+          "wrong": [
+            "Me gusta la música.",
+            "El arte."
+          ],
+          "reply": "¡Mucha suerte!",
+          "replyEn": "Good luck!"
+        },
+        {
+          "ask": "¿Qué haces en educación física?",
+          "askEn": "What do you do in PE?",
+          "answer": "Corremos y saltamos.",
+          "answerEn": "We run and jump.",
+          "keys": [
+            "corremos",
+            "saltamos",
+            "jugamos",
+            "futbol",
+            "baloncesto"
+          ],
+          "wrong": [
+            "Leemos libros.",
+            "Pintamos cuadros."
+          ],
+          "reply": "¡Qué divertido!",
+          "replyEn": "What fun!"
+        }
+      ]
+    },
+    {
+      "lesson": 91,
+      "who": "sol",
+      "title": "Party time",
+      "scene": "🎉",
+      "turns": [
+        {
+          "ask": "¿Te vas a disfrazar?",
+          "askEn": "Are you going to dress up?",
+          "answer": "Sí, voy a disfrazarme de pirata.",
+          "answerEn": "Yes, I'm going to dress up as a pirate.",
+          "keys": [
+            "si",
+            "no",
+            "disfraz",
+            "disfrazarme",
+            "de"
+          ],
+          "wrong": [
+            "Me gustan las patatas fritas.",
+            "La piñata."
+          ],
+          "reply": "¡Qué divertido!",
+          "replyEn": "What fun!"
+        },
+        {
+          "ask": "¿Quieres patatas fritas o caramelos?",
+          "askEn": "Do you want crisps or sweets?",
+          "answer": "Caramelos, por favor.",
+          "answerEn": "Sweets, please.",
+          "keys": [
+            "patatas",
+            "caramelos"
+          ],
+          "wrong": [
+            "Bailar.",
+            "Soplar las velas."
+          ],
+          "reply": "¡Toma!",
+          "replyEn": "Here you go!"
+        },
+        {
+          "ask": "¿Rompemos la piñata?",
+          "askEn": "Shall we break the piñata?",
+          "answer": "¡Sí! ¡Vamos!",
+          "answerEn": "Yes! Let's go!",
+          "keys": [
+            "si",
+            "vamos",
+            "vale",
+            "claro"
+          ],
+          "wrong": [
+            "Me divierto.",
+            "Los aperitivos."
+          ],
+          "reply": "¡Uno, dos, tres… ¡plaf!",
+          "replyEn": "One, two, three… smash!"
+        }
+      ]
+    },
+    {
+      "lesson": 92,
+      "who": "luna",
+      "title": "All about you",
+      "scene": "🌟",
+      "turns": [
+        {
+          "ask": "¿Cómo tienes el pelo?",
+          "askEn": "What's your hair like?",
+          "answer": "Tengo el pelo rubio.",
+          "answerEn": "I've got blonde hair.",
+          "keys": [
+            "pelo",
+            "rubio",
+            "rubia",
+            "moreno",
+            "morena",
+            "pelirrojo",
+            "pelirroja",
+            "largo",
+            "corto"
+          ],
+          "wrong": [
+            "Soy amable.",
+            "Me encanta el arte."
+          ],
+          "reply": "¡Qué bonito!",
+          "replyEn": "Lovely!"
+        },
+        {
+          "ask": "¿Cómo eres?",
+          "askEn": "What are you like?",
+          "answer": "Soy amable y curioso.",
+          "answerEn": "I'm kind and curious.",
+          "keys": [
+            "soy"
+          ],
+          "wrong": [
+            "Tengo un primo.",
+            "Mi vecino."
+          ],
+          "reply": "¡Genial!",
+          "replyEn": "Great!"
+        },
+        {
+          "ask": "¿Qué te encanta?",
+          "askEn": "What do you love?",
+          "answer": "Me encanta el arte.",
+          "answerEn": "I love art.",
+          "keys": [
+            "me encanta",
+            "me gusta",
+            "me gustan",
+            "me encantan"
+          ],
+          "wrong": [
+            "La piñata está rota.",
+            "Tengo un vecino."
+          ],
+          "reply": "¡A mí también!",
+          "replyEn": "Me too!"
+        },
+        {
+          "ask": "¿Tienes primos?",
+          "askEn": "Have you got cousins?",
+          "answer": "Sí, tengo dos primos.",
+          "answerEn": "Yes, I've got two cousins.",
+          "keys": [
+            "si",
+            "no",
+            "primo",
+            "primos",
+            "prima"
+          ],
+          "wrong": [
+            "Las matemáticas.",
+            "Me divierto."
+          ],
+          "reply": "¡Eres una persona genial!",
+          "replyEn": "You're a great person!"
+        }
+      ]
+    }
+  ]
+}

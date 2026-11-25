@@ -9,7 +9,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { voice } from "../audio/player.ts";
 import { useSayOnShow } from "../audio/guide.ts";
 import { TOGETHER_LINES } from "../audio/lines.ts";
-import { wordsForLessonsUpTo, wordsForWorld, type Word } from "../content/index.ts";
+import { CONVERSATIONS, wordsForLessonsUpTo, wordsForWorld, type Conversation, type Turn, type Word } from "../content/index.ts";
 import { learnedUpTo, type Progress } from "../domain/progress.ts";
 import { trickyWords } from "../domain/memory.ts";
 import { tipsFor } from "../domain/pronunciation.ts";
@@ -36,27 +36,49 @@ export function togetherWords(p: Progress, n = ROUND): Word[] {
   return uniqueBy([...tricky, ...recent, ...shuffle(pool)], w => w.es).slice(0, n);
 }
 
-interface Turn { word: Word; who: "kid" | "grownUp"; ok: boolean | null }
+interface WordTurn { word: Word; who: "kid" | "grownUp"; ok: boolean | null }
+interface ChatCard { c: Conversation; turn: Turn; ok: boolean | null }
+
+// Conversation questions from the lessons the child has reached (most recent first).
+export function chatCards(p: Progress, n = 6): ChatCard[] {
+  const upTo = Math.max(1, learnedUpTo(p));
+  const recent = CONVERSATIONS.filter(c => c.lesson <= upTo).slice(-4);
+  const cards = recent.flatMap(c => c.turns.map(turn => ({ c, turn, ok: null })));
+  return shuffle(cards).slice(0, n);
+}
 
 export function TogetherScreen({ child, progress, onWord, onFinish, onBack }: {
   child: Child; progress: Progress; onWord: OnWord; onFinish: (score: number, total: number) => void; onBack: () => void;
 }) {
-  const [stage, setStage] = useState<"setup" | "play" | "done">("setup");
+  const [stage, setStage] = useState<"setup" | "play" | "chat" | "done">("setup");
+  const [cards, setCards] = useState<ChatCard[]>([]);
+  const [example, setExample] = useState(false);
   const [partner, setPartner] = useState("Grown-up");
-  const [turns, setTurns] = useState<Turn[]>([]);
+  const [turns, setTurns] = useState<WordTurn[]>([]);
   const [i, setI] = useState(0);
   const [revealed, setRevealed] = useState(false);
   const turn = turns[i];
-  const score = turns.filter(t => t.ok).length;
+  const chatMode = cards.length > 0 && stage !== "play";
+  const score = chatMode ? cards.filter(x => x.ok).length : turns.filter(t => t.ok).length;
   const kidName = child.name;
 
   useSayOnShow(stage === "setup" ? TOGETHER_LINES.intro : stage === "done" ? TOGETHER_LINES.done
-    : turn && !revealed ? (turn.who === "kid" ? TOGETHER_LINES.kid : TOGETHER_LINES.grownUp) : null, { speaker: "sol", delay: 350 });
+    : stage === "play" && turn && !revealed ? (turn.who === "kid" ? TOGETHER_LINES.kid : TOGETHER_LINES.grownUp) : null, { speaker: "sol", delay: 350 });
 
   const start = () => {
     const words = togetherWords(progress);
     setTurns(words.map((word, n) => ({ word, who: n % 2 === 0 ? "kid" : "grownUp", ok: null })));
     setI(0); setRevealed(false); setStage("play");
+  };
+  const startChat = () => { setCards(chatCards(progress)); setI(0); setExample(false); setStage("chat"); };
+  const card = cards[i];
+  const judgeCard = (ok: boolean) => {
+    const next = cards.map((x, n) => (n === i ? { ...x, ok } : x));
+    setCards(next);
+    if (ok) sfx.correct(); else sfx.whoosh();
+    if (i + 1 < next.length) { setI(i + 1); setExample(false); return; }
+    setStage("done");
+    onFinish(next.filter(x => x.ok).length, next.length);
   };
   const check = () => { setRevealed(true); voice.spanish(turn.word.es); };
   const judge = (ok: boolean) => {
@@ -86,8 +108,40 @@ export function TogetherScreen({ child, progress, onWord, onFinish, onBack }: {
       <div className="row row--center row--wrap" style={{ gap: 8, marginBottom: 20 }}>
         {PARTNERS.map(p => <Button key={p} size="sm" variant={partner === p ? "luna" : "white"} aria-pressed={partner === p} onClick={() => setPartner(p)}>{p}</Button>)}
       </div>
-      <Button variant="sun" size="lg" onClick={start}>Let’s play! 🤝</Button>
+      <div className="row row--center row--wrap" style={{ gap: 10 }}>
+        <Button variant="sun" size="lg" onClick={() => { setCards([]); start(); }}>🎯 Word game</Button>
+        <Button variant="luna" size="lg" onClick={startChat}>💬 Chat cards</Button>
+      </div>
+      <p className="tiny muted" style={{ marginTop: 10 }}>Word game: take turns saying words. Chat cards: the grown-up asks questions from {kidName}’s lessons, and {kidName} answers in Spanish.</p>
     </motion.div>}
+
+    {stage === "chat" && card && <Card className="card--pad-lg text-center together">
+      <div className="together__score">{cards.map((x, n) => <span key={n} className={`together__pip together__pip--kid ${x.ok ? "is-ok" : x.ok === false ? "is-miss" : ""} ${n === i ? "is-now" : ""}`} />)}</div>
+      <AnimatePresence mode="wait">
+        <motion.div key={i} initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -30 }} transition={{ duration: 0.25 }}>
+          <div className="eyebrow" style={{ marginBottom: 6 }}><Art e={card.c.scene} size={18} /> {card.c.title}</div>
+          <p className="small muted" style={{ marginBottom: 6 }}>{partner}, ask {kidName}:</p>
+          <div className="row row--center" style={{ gap: 10, marginBottom: 4 }}>
+            <div className="big-word" lang="es" style={{ fontSize: "clamp(22px, 6vw, 30px)" }}>{card.turn.ask}</div>
+            <SpeakButton text={card.turn.ask} size={40} />
+          </div>
+          <p className="small muted" style={{ marginBottom: 14 }}>“{card.turn.askEn}”</p>
+          <p className="small" style={{ fontWeight: 800, marginBottom: 10 }}>🗣️ {kidName}, answer in Spanish!</p>
+          {!example ? <Button variant="white" onClick={() => setExample(true)}>Show an example answer</Button> : <>
+            <div className="together__answer">
+              <div className="h3" lang="es">{card.turn.answer}</div>
+              <SpeakButton text={card.turn.answer} size={36} label="Hear it" />
+            </div>
+            <p className="tiny muted" style={{ marginTop: 6 }}>“{card.turn.answerEn}”. Any sensible answer counts!</p>
+          </>}
+          <p className="small" style={{ fontWeight: 800, margin: "14px 0 8px" }}>{partner}: did {kidName} answer?</p>
+          <div className="row row--center" style={{ gap: 10 }}>
+            <Button variant="white" onClick={() => judgeCard(false)}>Not yet</Button>
+            <Button variant="sun" onClick={() => judgeCard(true)}>¡Sí! ✓</Button>
+          </div>
+        </motion.div>
+      </AnimatePresence>
+    </Card>}
 
     {stage === "play" && turn && <Card className="card--pad-lg text-center together">
       <div className="together__score" aria-label={`Team score ${score}`}>
@@ -126,7 +180,8 @@ export function TogetherScreen({ child, progress, onWord, onFinish, onBack }: {
     {stage === "done" && <motion.div initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} className="text-center">
       <div className="row row--center" style={{ gap: 6 }}><Sol size={84} mood="celebrate" /><Luna size={78} mood="celebrate" /></div>
       <h1 className="h2" style={{ margin: "8px 0 4px" }}>¡Qué equipo!</h1>
-      <div className="display" style={{ fontSize: 40 }}>{score}<span className="muted" style={{ fontSize: 26 }}> / {turns.length}</span></div>
+      <div className="display" style={{ fontSize: 40 }}>{score}<span className="muted" style={{ fontSize: 26 }}> / {chatMode ? cards.length : turns.length}</span></div>
+      {chatMode ? <p className="muted" style={{ margin: "4px 0 14px" }}>{kidName} answered {score} of {cards.length} questions in Spanish!</p> : <>
       <p className="muted" style={{ margin: "4px 0 14px" }}>
         {kidName}: {turns.filter(t => t.who === "kid" && t.ok).length} · {partner}: {turns.filter(t => t.who === "grownUp" && t.ok).length}
       </p>
@@ -136,9 +191,9 @@ export function TogetherScreen({ child, progress, onWord, onFinish, onBack }: {
         <div className="tricky-words">{turns.map(t => <button key={t.word.es} type="button" className="tricky-word" lang="es" onClick={() => voice.spanish(t.word.es)}>
           <Art e={t.word.emoji} size={20} />{t.word.es} <small>{t.word.en}</small>
         </button>)}</div>
-      </Card>
+      </Card></>}
       <div className="row row--center row--wrap" style={{ gap: 10 }}>
-        <Button variant="luna" onClick={start}>↻ Play again</Button>
+        <Button variant="luna" onClick={chatMode ? startChat : start}>↻ Play again</Button>
         <Button variant="sun" onClick={onBack}>Done</Button>
       </div>
     </motion.div>}

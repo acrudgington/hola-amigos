@@ -1,0 +1,516 @@
+{
+  "world": 9,
+  "conversations": [
+    {
+      "lesson": 69,
+      "who": "sol",
+      "title": "Opening and closing",
+      "scene": "🚪",
+      "turns": [
+        {
+          "ask": "Hace frío. ¿Cierras la ventana?",
+          "askEn": "It's cold. Will you close the window?",
+          "answer": "Sí, cierro la ventana.",
+          "answerEn": "Yes, I'll close the window.",
+          "keys": [
+            "cierro",
+            "si",
+            "vale",
+            "claro"
+          ],
+          "wrong": [
+            "Abro la ventana.",
+            "Empiezo."
+          ],
+          "reply": "¡Gracias!",
+          "replyEn": "Thanks!"
+        },
+        {
+          "ask": "¿A qué hora empieza el cole?",
+          "askEn": "What time does school start?",
+          "answer": "Empieza a las nueve.",
+          "answerEn": "It starts at nine.",
+          "keys": [
+            "a las",
+            "empieza"
+          ],
+          "wrong": [
+            "Termina el cole.",
+            "Abro la puerta."
+          ],
+          "reply": "¡Qué temprano!",
+          "replyEn": "So early!"
+        },
+        {
+          "ask": "He perdido mi lápiz. ¿Lo encuentras?",
+          "askEn": "I've lost my pencil. Can you find it?",
+          "answer": "¡Sí, aquí está!",
+          "answerEn": "Yes, here it is!",
+          "keys": [
+            "aqui",
+            "lo encuentro",
+            "lo encontre",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Lo pierdo.",
+            "Cierra la puerta."
+          ],
+          "reply": "¡Gracias!",
+          "replyEn": "Thank you!"
+        }
+      ]
+    },
+    {
+      "lesson": 70,
+      "who": "luna",
+      "title": "In the playground",
+      "scene": "🛝",
+      "turns": [
+        {
+          "ask": "¿Qué te gusta más: el columpio o el tobogán?",
+          "askEn": "What do you like more: the swing or the slide?",
+          "answer": "El tobogán.",
+          "answerEn": "The slide.",
+          "keys": [
+            "columpio",
+            "tobogan"
+          ],
+          "wrong": [
+            "Me caigo.",
+            "Busco."
+          ],
+          "reply": "¡Vamos!",
+          "replyEn": "Let's go!"
+        },
+        {
+          "ask": "¡Te has caído! ¿Estás bien?",
+          "askEn": "You've fallen over! Are you OK?",
+          "answer": "Sí, estoy bien, gracias.",
+          "answerEn": "Yes, I'm fine, thanks.",
+          "keys": [
+            "bien",
+            "si",
+            "no",
+            "me duele"
+          ],
+          "wrong": [
+            "El columpio.",
+            "Bajar."
+          ],
+          "reply": "¡Uf, menos mal!",
+          "replyEn": "Phew, thank goodness!"
+        },
+        {
+          "ask": "¿Jugamos al escondite? ¿Quién busca?",
+          "askEn": "Shall we play hide-and-seek? Who's seeking?",
+          "answer": "¡Busco yo!",
+          "answerEn": "I'll seek!",
+          "keys": [
+            "yo",
+            "tu",
+            "busco",
+            "buscas"
+          ],
+          "wrong": [
+            "Me escondo en el árbol.",
+            "Subir."
+          ],
+          "reply": "¡Uno, dos, tres…!",
+          "replyEn": "One, two, three…!"
+        }
+      ]
+    },
+    {
+      "lesson": 71,
+      "who": "sol",
+      "title": "Arts and crafts",
+      "scene": "✂️",
+      "turns": [
+        {
+          "ask": "¿Qué necesitas para cortar?",
+          "askEn": "What do you need to cut?",
+          "answer": "Las tijeras.",
+          "answerEn": "Scissors.",
+          "keys": [
+            "tijeras"
+          ],
+          "wrong": [
+            "El pegamento.",
+            "La pintura."
+          ],
+          "reply": "¡Toma!",
+          "replyEn": "Here!"
+        },
+        {
+          "ask": "¿Y para pegar?",
+          "askEn": "And to glue?",
+          "answer": "El pegamento.",
+          "answerEn": "Glue.",
+          "keys": [
+            "pegamento"
+          ],
+          "wrong": [
+            "Las tijeras.",
+            "El papel."
+          ],
+          "reply": "¡Muy bien!",
+          "replyEn": "Very good!"
+        },
+        {
+          "ask": "¿Qué vas a hacer?",
+          "askEn": "What are you going to make?",
+          "answer": "Voy a hacer un barco de papel.",
+          "answerEn": "I'm going to make a paper boat.",
+          "keys": [
+            "voy a",
+            "hacer",
+            "construir",
+            "pintar"
+          ],
+          "wrong": [
+            "Las manualidades.",
+            "Corto."
+          ],
+          "reply": "¡Qué buena idea!",
+          "replyEn": "What a good idea!"
+        }
+      ]
+    },
+    {
+      "lesson": 72,
+      "who": "luna",
+      "title": "Toy box",
+      "scene": "🧸",
+      "turns": [
+        {
+          "ask": "¿Cuál es tu juguete favorito?",
+          "askEn": "What's your favourite toy?",
+          "answer": "Mi juguete favorito es mi peluche.",
+          "answerEn": "My favourite toy is my cuddly toy.",
+          "keys": [
+            "pelota",
+            "muneca",
+            "coche",
+            "bloques",
+            "puzle",
+            "cometa",
+            "peluche",
+            "patinete",
+            "favorito"
+          ],
+          "wrong": [
+            "Juego mañana.",
+            "Me caigo."
+          ],
+          "reply": "¡Qué bonito!",
+          "replyEn": "How lovely!"
+        },
+        {
+          "ask": "¿Qué necesitas para jugar con el viento?",
+          "askEn": "What do you need to play with the wind?",
+          "answer": "Una cometa.",
+          "answerEn": "A kite.",
+          "keys": [
+            "cometa"
+          ],
+          "wrong": [
+            "Un puzle.",
+            "Los bloques."
+          ],
+          "reply": "¡Exacto!",
+          "replyEn": "Exactly!"
+        },
+        {
+          "ask": "¿Me prestas tu patinete?",
+          "askEn": "Will you lend me your scooter?",
+          "answer": "Sí, claro.",
+          "answerEn": "Yes, of course.",
+          "keys": [
+            "si",
+            "claro",
+            "toma",
+            "vale",
+            "no"
+          ],
+          "wrong": [
+            "Mi peluche.",
+            "La muñeca es rubia."
+          ],
+          "reply": "¡Gracias!",
+          "replyEn": "Thank you!"
+        }
+      ]
+    },
+    {
+      "lesson": 73,
+      "who": "sol",
+      "title": "Game time",
+      "scene": "🎲",
+      "turns": [
+        {
+          "ask": "¿Jugamos a piedra, papel, tijera?",
+          "askEn": "Shall we play rock, paper, scissors?",
+          "answer": "¡Vale!",
+          "answerEn": "OK!",
+          "keys": [
+            "vale",
+            "si",
+            "venga",
+            "claro"
+          ],
+          "wrong": [
+            "Empate.",
+            "Te toca."
+          ],
+          "reply": "Piedra, papel, tijera… ¡una, dos y tres!",
+          "replyEn": "Rock, paper, scissors… one, two, three!"
+        },
+        {
+          "ask": "¿A quién le toca?",
+          "askEn": "Whose turn is it?",
+          "answer": "Me toca a mí.",
+          "answerEn": "It's my turn.",
+          "keys": [
+            "me toca",
+            "te toca",
+            "a mi",
+            "a ti"
+          ],
+          "wrong": [
+            "He ganado.",
+            "Las cartas."
+          ],
+          "reply": "¡Venga!",
+          "replyEn": "Go on!"
+        },
+        {
+          "ask": "¿Quién ha ganado?",
+          "askEn": "Who has won?",
+          "answer": "¡He ganado yo!",
+          "answerEn": "I've won!",
+          "keys": [
+            "yo",
+            "tu",
+            "gane",
+            "ganado",
+            "empate"
+          ],
+          "wrong": [
+            "Me toca.",
+            "Juego de mesa."
+          ],
+          "reply": "¡Enhorabuena!",
+          "replyEn": "Congratulations!"
+        }
+      ]
+    },
+    {
+      "lesson": 74,
+      "who": "luna",
+      "title": "Favourite books",
+      "scene": "📚",
+      "turns": [
+        {
+          "ask": "¿Te gusta leer?",
+          "askEn": "Do you like reading?",
+          "answer": "Sí, me encanta leer cuentos.",
+          "answerEn": "Yes, I love reading stories.",
+          "keys": [
+            "me gusta",
+            "me encanta",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "El dragón.",
+            "La princesa."
+          ],
+          "reply": "¡A mí también!",
+          "replyEn": "Me too!"
+        },
+        {
+          "ask": "¿Quién es tu personaje favorito?",
+          "askEn": "Who is your favourite character?",
+          "answer": "Mi personaje favorito es el dragón.",
+          "answerEn": "My favourite character is the dragon.",
+          "keys": [
+            "dragon",
+            "princesa",
+            "heroe",
+            "heroina",
+            "monstruo",
+            "favorito"
+          ],
+          "wrong": [
+            "Leo un libro.",
+            "Me encanta leer."
+          ],
+          "reply": "¡Qué guay!",
+          "replyEn": "Cool!"
+        },
+        {
+          "ask": "¿El monstruo es bueno o malo?",
+          "askEn": "Is the monster good or bad?",
+          "answer": "Es bueno.",
+          "answerEn": "It's good.",
+          "keys": [
+            "bueno",
+            "malo"
+          ],
+          "wrong": [
+            "Es un libro.",
+            "Es la heroína."
+          ],
+          "reply": "¡Menos mal!",
+          "replyEn": "Thank goodness!"
+        }
+      ]
+    },
+    {
+      "lesson": 75,
+      "who": "sol",
+      "title": "Films and series",
+      "scene": "🍿",
+      "turns": [
+        {
+          "ask": "¿Cuál es tu película favorita?",
+          "askEn": "What's your favourite film?",
+          "answer": "Mi película favorita es Frozen.",
+          "answerEn": "My favourite film is Frozen.",
+          "keys": [
+            "pelicula",
+            "favorita",
+            "me gusta",
+            "me encanta"
+          ],
+          "wrong": [
+            "Veo la tele.",
+            "Es aburrida."
+          ],
+          "reply": "¡Qué buena!",
+          "replyEn": "Great one!"
+        },
+        {
+          "ask": "¿Es divertida o aburrida?",
+          "askEn": "Is it fun or boring?",
+          "answer": "Es muy divertida.",
+          "answerEn": "It's really fun.",
+          "keys": [
+            "divertida",
+            "divertido",
+            "aburrida",
+            "aburrido"
+          ],
+          "wrong": [
+            "Es mi favorita.",
+            "El cine."
+          ],
+          "reply": "¡Vamos a verla!",
+          "replyEn": "Let's watch it!"
+        },
+        {
+          "ask": "¿Vamos al cine el sábado?",
+          "askEn": "Shall we go to the cinema on Saturday?",
+          "answer": "¡Sí, vamos!",
+          "answerEn": "Yes, let's go!",
+          "keys": [
+            "si",
+            "vamos",
+            "vale",
+            "no",
+            "claro"
+          ],
+          "wrong": [
+            "Los dibujos.",
+            "La serie."
+          ],
+          "reply": "¡Genial!",
+          "replyEn": "Great!"
+        }
+      ]
+    },
+    {
+      "lesson": 76,
+      "who": "luna",
+      "title": "Game champion",
+      "scene": "🏆",
+      "turns": [
+        {
+          "ask": "¿A qué jugamos?",
+          "askEn": "What shall we play?",
+          "answer": "Jugamos al escondite.",
+          "answerEn": "Let's play hide-and-seek.",
+          "keys": [
+            "escondite",
+            "pelota",
+            "cartas",
+            "pillapilla",
+            "columpio",
+            "juego"
+          ],
+          "wrong": [
+            "Abro la puerta.",
+            "Corto papel."
+          ],
+          "reply": "¡Vale!",
+          "replyEn": "OK!"
+        },
+        {
+          "ask": "¿Te gusta el columpio?",
+          "askEn": "Do you like the swing?",
+          "answer": "Sí, me encanta.",
+          "answerEn": "Yes, I love it.",
+          "keys": [
+            "si",
+            "no",
+            "me gusta",
+            "me encanta"
+          ],
+          "wrong": [
+            "La película.",
+            "El cuento."
+          ],
+          "reply": "¡A mí también!",
+          "replyEn": "Me too!"
+        },
+        {
+          "ask": "¿Qué cuento te gusta?",
+          "askEn": "Which story do you like?",
+          "answer": "Me gusta el cuento del dragón.",
+          "answerEn": "I like the dragon story.",
+          "keys": [
+            "cuento",
+            "me gusta",
+            "me encanta"
+          ],
+          "wrong": [
+            "Abrir.",
+            "La pelota."
+          ],
+          "reply": "¡Qué bonito!",
+          "replyEn": "How lovely!"
+        },
+        {
+          "ask": "¿La película fue divertida?",
+          "askEn": "Was the film fun?",
+          "answer": "Sí, fue muy divertida.",
+          "answerEn": "Yes, it was really fun.",
+          "keys": [
+            "divertida",
+            "aburrida",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Cortar.",
+            "El columpio."
+          ],
+          "reply": "¡Eres un campeón del juego!",
+          "replyEn": "You're a game champion!"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,491 @@
+{
+  "world": 4,
+  "conversations": [
+    {
+      "lesson": 25,
+      "who": "luna",
+      "title": "What did you do yesterday?",
+      "scene": "📅",
+      "turns": [
+        {
+          "ask": "¿Adónde fuiste ayer?",
+          "askEn": "Where did you go yesterday?",
+          "answer": "Ayer fui al parque.",
+          "answerEn": "Yesterday I went to the park.",
+          "keys": [
+            "fui"
+          ],
+          "wrong": [
+            "Voy a ir.",
+            "Me gusta el parque."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Nice!"
+        },
+        {
+          "ask": "¿Qué comiste?",
+          "askEn": "What did you eat?",
+          "answer": "Comí pizza.",
+          "answerEn": "I ate pizza.",
+          "keys": [
+            "comi"
+          ],
+          "wrong": [
+            "Como pizza.",
+            "Voy a comer."
+          ],
+          "reply": "¡Mmm!",
+          "replyEn": "Mmm!"
+        },
+        {
+          "ask": "¿Jugaste al fútbol?",
+          "askEn": "Did you play football?",
+          "answer": "Sí, jugué al fútbol.",
+          "answerEn": "Yes, I played football.",
+          "keys": [
+            "jugue",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Juego mañana.",
+            "Me gusta el pan."
+          ],
+          "reply": "¡Genial!",
+          "replyEn": "Great!"
+        }
+      ]
+    },
+    {
+      "lesson": 26,
+      "who": "sol",
+      "title": "Weekend plans",
+      "scene": "🗓️",
+      "turns": [
+        {
+          "ask": "¿Qué vas a hacer mañana?",
+          "askEn": "What are you going to do tomorrow?",
+          "answer": "Mañana voy a ir a la playa.",
+          "answerEn": "Tomorrow I'm going to the beach.",
+          "keys": [
+            "voy a"
+          ],
+          "wrong": [
+            "Ayer fui a la playa.",
+            "Me gusta la playa."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Lovely!"
+        },
+        {
+          "ask": "¿Vas a nadar?",
+          "askEn": "Are you going to swim?",
+          "answer": "Sí, voy a nadar.",
+          "answerEn": "Yes, I'm going to swim.",
+          "keys": [
+            "voy a",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Nadé ayer.",
+            "Tengo un pez."
+          ],
+          "reply": "¡Cuidado con las olas!",
+          "replyEn": "Watch out for the waves!"
+        },
+        {
+          "ask": "¿Y el fin de semana?",
+          "askEn": "And at the weekend?",
+          "answer": "Voy a jugar con mis amigos.",
+          "answerEn": "I'm going to play with my friends.",
+          "keys": [
+            "voy a"
+          ],
+          "wrong": [
+            "Jugué con mis amigos.",
+            "Soy alto."
+          ],
+          "reply": "¡Qué divertido!",
+          "replyEn": "What fun!"
+        }
+      ]
+    },
+    {
+      "lesson": 27,
+      "who": "luna",
+      "title": "At the restaurant",
+      "scene": "🍽️",
+      "role": "the waiter",
+      "turns": [
+        {
+          "ask": "¡Hola! Aquí tiene la carta. ¿Qué quiere?",
+          "askEn": "Hello! Here's the menu. What would you like?",
+          "answer": "Quiero la sopa, por favor.",
+          "answerEn": "I'd like the soup, please.",
+          "keys": [
+            "quiero",
+            "me trae",
+            "sopa",
+            "carne",
+            "pescado"
+          ],
+          "wrong": [
+            "La cuenta.",
+            "Adiós."
+          ],
+          "reply": "Muy bien.",
+          "replyEn": "Very good."
+        },
+        {
+          "ask": "¿Y de postre?",
+          "askEn": "And for dessert?",
+          "answer": "Un helado, por favor.",
+          "answerEn": "An ice cream, please.",
+          "keys": [
+            "helado",
+            "fruta",
+            "tarta",
+            "flan",
+            "quiero",
+            "me trae"
+          ],
+          "wrong": [
+            "La sopa está fría.",
+            "Tengo un perro."
+          ],
+          "reply": "¡Perfecto!",
+          "replyEn": "Perfect!"
+        },
+        {
+          "ask": "¿Algo más?",
+          "askEn": "Anything else?",
+          "answer": "La cuenta, por favor.",
+          "answerEn": "The bill, please.",
+          "keys": [
+            "cuenta",
+            "no",
+            "nada"
+          ],
+          "wrong": [
+            "Hola, buenos días.",
+            "Me llamo Luna."
+          ],
+          "reply": "Aquí tiene. ¡Gracias!",
+          "replyEn": "Here you are. Thank you!"
+        }
+      ]
+    },
+    {
+      "lesson": 28,
+      "who": "sol",
+      "title": "In the shop",
+      "scene": "🛍️",
+      "role": "the shop assistant",
+      "turns": [
+        {
+          "ask": "¡Hola! ¿Qué quieres comprar?",
+          "askEn": "Hello! What do you want to buy?",
+          "answer": "Quiero comprar una camiseta.",
+          "answerEn": "I want to buy a T-shirt.",
+          "keys": [
+            "quiero",
+            "camiseta",
+            "comprar"
+          ],
+          "wrong": [
+            "Es caro.",
+            "Adiós."
+          ],
+          "reply": "Tenemos muchas.",
+          "replyEn": "We've got lots."
+        },
+        {
+          "ask": "Esta camiseta es muy bonita.",
+          "askEn": "This T-shirt is very pretty.",
+          "answer": "¿Cuánto cuesta?",
+          "answerEn": "How much is it?",
+          "keys": [
+            "cuanto cuesta",
+            "cuanto es"
+          ],
+          "wrong": [
+            "Me lo llevo ayer.",
+            "Es mi hermano."
+          ],
+          "reply": "Cuesta diez euros.",
+          "replyEn": "It costs ten euros."
+        },
+        {
+          "ask": "¿Te la llevas?",
+          "askEn": "Are you taking it?",
+          "answer": "Sí, me lo llevo.",
+          "answerEn": "Yes, I'll take it.",
+          "keys": [
+            "me lo llevo",
+            "me la llevo",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Es grande el perro.",
+            "Hace sol."
+          ],
+          "reply": "¡Gracias!",
+          "replyEn": "Thank you!"
+        }
+      ]
+    },
+    {
+      "lesson": 29,
+      "who": "luna",
+      "title": "Where is it?",
+      "scene": "🗺️",
+      "turns": [
+        {
+          "ask": "¿Dónde está la playa?",
+          "askEn": "Where is the beach?",
+          "answer": "Todo recto.",
+          "answerEn": "Straight on.",
+          "keys": [
+            "recto",
+            "derecha",
+            "izquierda",
+            "cerca",
+            "lejos",
+            "alli",
+            "aqui"
+          ],
+          "wrong": [
+            "Me gusta la playa.",
+            "Son las dos."
+          ],
+          "reply": "¡Gracias!",
+          "replyEn": "Thanks!"
+        },
+        {
+          "ask": "¿Está cerca o lejos?",
+          "askEn": "Is it near or far?",
+          "answer": "Está cerca.",
+          "answerEn": "It's near.",
+          "keys": [
+            "cerca",
+            "lejos"
+          ],
+          "wrong": [
+            "Está rojo.",
+            "Tengo hambre."
+          ],
+          "reply": "¡Genial, vamos andando!",
+          "replyEn": "Great, let's walk!"
+        },
+        {
+          "ask": "¿Y el parque? ¿A la derecha?",
+          "askEn": "And the park? On the right?",
+          "answer": "No, a la izquierda.",
+          "answerEn": "No, on the left.",
+          "keys": [
+            "derecha",
+            "izquierda",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Me llamo Sol.",
+            "Ayer comí."
+          ],
+          "reply": "¡Vale, gracias!",
+          "replyEn": "OK, thanks!"
+        }
+      ]
+    },
+    {
+      "lesson": 30,
+      "who": "sol",
+      "title": "At the doctor's",
+      "scene": "🩺",
+      "role": "the doctor",
+      "turns": [
+        {
+          "ask": "Hola. ¿Qué te pasa?",
+          "askEn": "Hello. What's wrong?",
+          "answer": "Me duele la cabeza.",
+          "answerEn": "My head hurts.",
+          "keys": [
+            "me duele",
+            "estoy enfermo",
+            "estoy enferma"
+          ],
+          "wrong": [
+            "Me gusta la cabeza.",
+            "Son las tres."
+          ],
+          "reply": "Vaya, pobrecito.",
+          "replyEn": "Oh dear, poor thing."
+        },
+        {
+          "ask": "¿Te duele la garganta?",
+          "askEn": "Does your throat hurt?",
+          "answer": "Sí, me duele un poco.",
+          "answerEn": "Yes, it hurts a bit.",
+          "keys": [
+            "me duele",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Tengo un perro.",
+            "Voy a la playa."
+          ],
+          "reply": "Vale.",
+          "replyEn": "OK."
+        },
+        {
+          "ask": "Necesitas descansar. ¿Vale?",
+          "askEn": "You need to rest. OK?",
+          "answer": "Vale, gracias.",
+          "answerEn": "OK, thank you.",
+          "keys": [
+            "vale",
+            "gracias",
+            "si"
+          ],
+          "wrong": [
+            "Me duele la playa.",
+            "Quiero jugar al fútbol ahora."
+          ],
+          "reply": "¡Que te mejores!",
+          "replyEn": "Get well soon!"
+        }
+      ]
+    },
+    {
+      "lesson": 31,
+      "who": "luna",
+      "title": "Tell me a story",
+      "scene": "📖",
+      "turns": [
+        {
+          "ask": "¿Cómo empieza un cuento?",
+          "askEn": "How does a story begin?",
+          "answer": "Había una vez…",
+          "answerEn": "Once upon a time…",
+          "keys": [
+            "habia una vez",
+            "erase una vez"
+          ],
+          "wrong": [
+            "Fin.",
+            "Adiós."
+          ],
+          "reply": "¡Muy bien!",
+          "replyEn": "Very good!"
+        },
+        {
+          "ask": "¿Qué encontró el niño?",
+          "askEn": "What did the boy find?",
+          "answer": "Encontró un perro.",
+          "answerEn": "He found a dog.",
+          "keys": [
+            "encontro"
+          ],
+          "wrong": [
+            "Dijo hola.",
+            "Fue al parque."
+          ],
+          "reply": "¡Qué bonito!",
+          "replyEn": "How lovely!"
+        },
+        {
+          "ask": "¿Y cómo estaba el niño?",
+          "askEn": "And how was the boy?",
+          "answer": "Estaba muy contento.",
+          "answerEn": "He was very happy.",
+          "keys": [
+            "contento",
+            "feliz",
+            "triste",
+            "estaba"
+          ],
+          "wrong": [
+            "Había una vez.",
+            "Fin."
+          ],
+          "reply": "¡Fin!",
+          "replyEn": "The end!"
+        }
+      ]
+    },
+    {
+      "lesson": 32,
+      "who": "sol",
+      "title": "Super quiz",
+      "scene": "🏆",
+      "turns": [
+        {
+          "ask": "¿Qué te gusta hacer?",
+          "askEn": "What do you like doing?",
+          "answer": "Me gusta nadar.",
+          "answerEn": "I like swimming.",
+          "keys": [
+            "me gusta",
+            "me encanta"
+          ],
+          "wrong": [
+            "Ayer fui.",
+            "Tengo fiebre."
+          ],
+          "reply": "¡Genial!",
+          "replyEn": "Great!"
+        },
+        {
+          "ask": "¿Adónde fuiste ayer?",
+          "askEn": "Where did you go yesterday?",
+          "answer": "Ayer fui al cine.",
+          "answerEn": "Yesterday I went to the cinema.",
+          "keys": [
+            "fui"
+          ],
+          "wrong": [
+            "Voy a ir.",
+            "Me duele."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Nice!"
+        },
+        {
+          "ask": "¿Y mañana?",
+          "askEn": "And tomorrow?",
+          "answer": "Voy a ir a la playa.",
+          "answerEn": "I'm going to the beach.",
+          "keys": [
+            "voy a"
+          ],
+          "wrong": [
+            "Fui a la playa.",
+            "Me gusta la playa."
+          ],
+          "reply": "¡Buena idea!",
+          "replyEn": "Good idea!"
+        },
+        {
+          "ask": "¿Cuánto cuesta un helado?",
+          "askEn": "How much is an ice cream?",
+          "answer": "Cuesta dos euros.",
+          "answerEn": "It costs two euros.",
+          "keys": [
+            "cuesta",
+            "euros",
+            "euro"
+          ],
+          "wrong": [
+            "Me duele la cabeza.",
+            "Es grande."
+          ],
+          "reply": "¡Eres un supercampeón!",
+          "replyEn": "You're a superchampion!"
+        }
+      ]
+    }
+  ]
+}

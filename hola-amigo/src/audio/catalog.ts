@@ -2,7 +2,7 @@
 // What can be said, and how. The player and the clip generator both use
 // these helpers, so a line always maps to the same clips.
 // ============================================================
-import { ALL_WORDS, BOOKS, CHANTS, LESSONS, SURPRISES } from "../content/index.ts";
+import { ALL_WORDS, BOOKS, CHANTS, CONVERSATIONS, LESSONS, SURPRISES } from "../content/index.ts";
 import { REACTION_LINES } from "../lib/reactions.ts";
 import { BOSS_HIT, DONE_LINES, INSTRUCTIONS, LEVEL_UP_LINE, PLACEMENT_LINES, PRAISE, REMEMBERED, REVIEW_INSTRUCTION, TOGETHER_LINES } from "./lines.ts";
 import { clipId, segmentMixed, single, splitSentences, type Segment, type Speaker, type VoiceRole } from "./text.ts";
@@ -35,6 +35,13 @@ export function collectClips(): Clip[] {
     add(spanish(b.title));
     for (const s of b.sentences) add(spanish(s.es));
     for (const q of b.questions) add(narration(q.q));
+  }
+  // Conversations: the character's questions and replies in their own voice;
+  // answers and tap options in the teacher's voice.
+  for (const c of CONVERSATIONS) for (const t of c.turns) {
+    add(spanishBy(c.who, t.ask));
+    if (t.reply) add(spanishBy(c.who, t.reply));
+    for (const o of [t.answer, ...t.wrong.slice(0, 2)]) add(spanish(o));
   }
   for (const c of CHANTS) { add(spanish(c.title)); for (const l of c.lines) add(spanishBy(l.who, l.es)); }
   for (const t of [...Object.values(INSTRUCTIONS), REVIEW_INSTRUCTION]) add(narration(t));

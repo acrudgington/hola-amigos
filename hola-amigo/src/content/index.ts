@@ -6,15 +6,21 @@ import surprisesJson from "../../content/surprises.json";
 import unitsJson from "../../content/units.json";
 import storiesJson from "../../content/stories.json";
 import chantsJson from "../../content/chants.json";
-import type { Book, Chant, Lesson, LessonFile, Surprise, Unit, Word, World } from "./schema.ts";
+import type { Book, Chant, Conversation, ConversationFile, Lesson, LessonFile, Surprise, Unit, Word, World } from "./schema.ts";
 
-export type { Book, Chant, Gap, Goal, Lesson, Sentence, Story, StoryQuestion, Surprise, Unit, Word, World } from "./schema.ts";
+export type { Book, Chant, Conversation, Turn, Gap, Goal, Lesson, Sentence, Story, StoryQuestion, Surprise, Unit, Word, World } from "./schema.ts";
 
 const lessonFiles = Object.values(
   import.meta.glob<LessonFile>("../../content/lessons/*.json", { eager: true, import: "default" }),
 );
 
-export const RAW_CONTENT = { worlds: worldsJson as unknown, lessonFiles: lessonFiles as unknown[], surprises: surprisesJson as unknown, units: unitsJson as unknown, books: storiesJson as unknown, chants: chantsJson as unknown };
+const conversationFiles = Object.values(
+  import.meta.glob<ConversationFile>("../../content/conversations/*.json", { eager: true, import: "default" }),
+);
+export const CONVERSATIONS: Conversation[] = conversationFiles.flatMap(f => f.conversations).sort((a, b) => a.lesson - b.lesson);
+export const conversationFor = (lessonId: number): Conversation | undefined => CONVERSATIONS.find(c => c.lesson === lessonId);
+
+export const RAW_CONTENT = { worlds: worldsJson as unknown, lessonFiles: lessonFiles as unknown[], surprises: surprisesJson as unknown, units: unitsJson as unknown, books: storiesJson as unknown, chants: chantsJson as unknown, conversationFiles: conversationFiles as unknown[] };
 
 export const WORLDS = worldsJson as World[];
 export const SURPRISES = surprisesJson as Surprise[];

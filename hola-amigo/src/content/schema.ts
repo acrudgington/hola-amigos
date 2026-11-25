@@ -116,7 +116,32 @@ export const ChantSchema = z.object({
   lines: z.array(z.object({ who: z.enum(["sol", "luna"]), es: text, en: text })).min(4).max(10),
 });
 
+// "Let's talk": one short role-play per lesson. Sol or Luna asks questions; the
+// child answers aloud (or taps an answer). A reply is accepted when it is close
+// to the model answer or one of the "also" answers, or contains one of the "keys"
+// (words that show a sensible answer, so personal answers count too).
+export const TurnSchema = z.object({
+  ask: text, askEn: text,                 // the character's question, said in their voice
+  answer: text, answerEn: text,           // a model reply (also the correct tap option)
+  also: z.array(text).optional(),         // other full replies that are just as good
+  keys: z.array(text).min(1),             // any of these in the reply = a sensible answer
+  wrong: z.array(text).min(2),            // tap options that don't fit the question
+  reply: text.optional(), replyEn: text.optional(),   // the character's response
+});
+export const ConversationSchema = z.object({
+  lesson: z.number().int().positive(),
+  who: z.enum(["sol", "luna"]),
+  title: text,                            // English, e.g. "At the café"
+  scene: text,                            // an emoji for the setting
+  role: text.optional(),                  // who the character plays, e.g. "the waiter"
+  turns: z.array(TurnSchema).min(3).max(5),
+});
+export const ConversationFileSchema = z.object({ world: z.number().int().positive(), conversations: z.array(ConversationSchema).min(1) });
+
 export type Word = z.infer<typeof WordSchema>;
+export type Turn = z.infer<typeof TurnSchema>;
+export type Conversation = z.infer<typeof ConversationSchema>;
+export type ConversationFile = z.infer<typeof ConversationFileSchema>;
 export type Sentence = z.infer<typeof SentenceSchema>;
 export type Gap = z.infer<typeof GapSchema>;
 export type Story = z.infer<typeof StorySchema>;
@@ -137,7 +162,7 @@ const dupes = <T,>(xs: T[]) => xs.filter((x, i) => xs.indexOf(x) !== i);
 
 // Rules that a schema alone can't express: cross-file consistency and
 // teaching-quality checks. Errors fail the build; warnings are reported.
-export function checkCourse(worlds: unknown, lessonFiles: unknown[], surprises: unknown, units?: unknown, books?: unknown, chants?: unknown): ContentIssue[] {
+export function checkCourse(worlds: unknown, lessonFiles: unknown[], surprises: unknown, units?: unknown, books?: unknown, chants?: unknown, conversationFiles?: unknown[]): ContentIssue[] {
   const issues: ContentIssue[] = [];
   const err = (where: string, message: string) => issues.push({ level: "error", where, message });
   const warn = (where: string, message: string) => issues.push({ level: "warning", where, message });
@@ -225,6 +250,31 @@ export function checkCourse(worlds: unknown, lessonFiles: unknown[], surprises: 
     else {
       dupes(c.data.map(x => x.id)).forEach(id => err("chants.json", `chant id "${id}" is used twice`));
       for (const ch of c.data) if (!w.data.some(x => x.id === ch.world)) err(`chant ${ch.id}`, `world ${ch.world} doesn't exist`);
+    }
+  }
+
+  // Conversations: exactly one per lesson; tap options must not repeat the answer.
+  if (conversationFiles !== undefined) {
+    const seen = new Map<number, number>();
+    conversationFiles.forEach((f, fi) => {
+      const r = ConversationFileSchema.safeParse(f);
+      if (!r.success) { r.error.issues.forEach(i => err(`conversation file #${fi + 1}:${i.path.join(".")}`, i.message)); return; }
+      const world = w.data.find(x => x.id === r.data.world);
+      for (const c of r.data.conversations) {
+        const at = `conversation for lesson ${c.lesson}`;
+        if (world && (c.lesson < world.range[0] || c.lesson > world.range[1])) err(at, `outside ${world.name}'s lessons`);
+        seen.set(c.lesson, (seen.get(c.lesson) ?? 0) + 1);
+        c.turns.forEach((t, i) => {
+          const opts = [t.answer, ...t.wrong].map(o => o.toLowerCase());
+          if (dupes(opts).length) err(`${at} turn ${i + 1}`, "tap options repeat");
+          if (!!t.reply !== !!t.replyEn) err(`${at} turn ${i + 1}`, "reply and replyEn go together");
+        });
+      }
+    });
+    for (const l of lessons) {
+      const n = seen.get(l.id) ?? 0;
+      if (n === 0) err(`lesson ${l.id}`, "has no conversation");
+      if (n > 1) err(`lesson ${l.id}`, "has more than one conversation");
     }
   }
 

@@ -7,7 +7,7 @@ import { similarity } from "../src/lib/speech.ts";
 
 describe("course content", () => {
   test("passes every schema and teaching rule", () => {
-    const errors = checkCourse(RAW_CONTENT.worlds, RAW_CONTENT.lessonFiles, RAW_CONTENT.surprises, RAW_CONTENT.units, RAW_CONTENT.books, RAW_CONTENT.chants).filter(i => i.level === "error");
+    const errors = checkCourse(RAW_CONTENT.worlds, RAW_CONTENT.lessonFiles, RAW_CONTENT.surprises, RAW_CONTENT.units, RAW_CONTENT.books, RAW_CONTENT.chants, RAW_CONTENT.conversationFiles).filter(i => i.level === "error");
     expect(errors).toEqual([]);
   });
 

@@ -1,0 +1,669 @@
+{
+  "world": 6,
+  "conversations": [
+    {
+      "lesson": 41,
+      "who": "luna",
+      "title": "Best friends",
+      "scene": "🤗",
+      "turns": [
+        {
+          "ask": "¿Quién es tu mejor amigo o amiga?",
+          "askEn": "Who is your best friend?",
+          "answer": "Mi mejor amiga es Lucía.",
+          "answerEn": "My best friend is Lucía.",
+          "keys": [
+            "mejor amigo",
+            "mejor amiga",
+            "se llama"
+          ],
+          "wrong": [
+            "Me gusta compartir.",
+            "Lloro."
+          ],
+          "reply": "¡Qué bonito!",
+          "replyEn": "How lovely!"
+        },
+        {
+          "ask": "¿Qué hacéis juntos?",
+          "askEn": "What do you do together?",
+          "answer": "Jugamos y nos reímos.",
+          "answerEn": "We play and laugh.",
+          "keys": [
+            "jugamos",
+            "reimos",
+            "nos reimos",
+            "compartimos",
+            "bailamos",
+            "hablamos"
+          ],
+          "wrong": [
+            "Mi amiga se llama Ana.",
+            "Es alto."
+          ],
+          "reply": "¡Qué divertido!",
+          "replyEn": "What fun!"
+        },
+        {
+          "ask": "¿Ayudas a tus amigos?",
+          "askEn": "Do you help your friends?",
+          "answer": "Sí, siempre ayudo a mis amigos.",
+          "answerEn": "Yes, I always help my friends.",
+          "keys": [
+            "ayudo",
+            "si",
+            "siempre"
+          ],
+          "wrong": [
+            "Me gusta llorar.",
+            "Abrazar."
+          ],
+          "reply": "¡Eres un buen amigo!",
+          "replyEn": "You're a good friend!"
+        }
+      ]
+    },
+    {
+      "lesson": 42,
+      "who": "sol",
+      "title": "Birthday party",
+      "scene": "🎂",
+      "turns": [
+        {
+          "ask": "¡Felicidades! ¿Cuántos años cumples?",
+          "askEn": "Happy birthday! How old are you turning?",
+          "answer": "Cumplo nueve años.",
+          "answerEn": "I'm turning nine.",
+          "keys": [
+            "cumplo",
+            "anos",
+            "tengo"
+          ],
+          "wrong": [
+            "Me gustan los globos.",
+            "La tarta es de chocolate."
+          ],
+          "reply": "¡Qué mayor!",
+          "replyEn": "So grown-up!"
+        },
+        {
+          "ask": "¿Qué regalo quieres?",
+          "askEn": "What present do you want?",
+          "answer": "Quiero una bicicleta.",
+          "answerEn": "I want a bike.",
+          "keys": [
+            "quiero",
+            "regalo",
+            "bici",
+            "bicicleta",
+            "libro",
+            "juego",
+            "muneca",
+            "pelota"
+          ],
+          "wrong": [
+            "Las velas.",
+            "Gracias por venir."
+          ],
+          "reply": "¡Qué buena idea!",
+          "replyEn": "What a good idea!"
+        },
+        {
+          "ask": "¿Soplamos las velas?",
+          "askEn": "Shall we blow out the candles?",
+          "answer": "¡Sí! ¡Vamos!",
+          "answerEn": "Yes! Let's go!",
+          "keys": [
+            "si",
+            "vamos",
+            "vale"
+          ],
+          "wrong": [
+            "Es Navidad.",
+            "Mi profesor."
+          ],
+          "reply": "¡Uno, dos, tres… fuuu!",
+          "replyEn": "One, two, three… whoosh!"
+        }
+      ]
+    },
+    {
+      "lesson": 43,
+      "who": "luna",
+      "title": "Dream jobs",
+      "scene": "👩‍🚀",
+      "turns": [
+        {
+          "ask": "¿Qué quieres ser de mayor?",
+          "askEn": "What do you want to be when you grow up?",
+          "answer": "Quiero ser astronauta.",
+          "answerEn": "I want to be an astronaut.",
+          "keys": [
+            "quiero ser",
+            "medico",
+            "medica",
+            "profesor",
+            "profesora",
+            "bombero",
+            "bombera",
+            "policia",
+            "cocinero",
+            "cocinera",
+            "astronauta"
+          ],
+          "wrong": [
+            "Me gusta la pizza.",
+            "Tengo ocho años."
+          ],
+          "reply": "¡Qué emocionante!",
+          "replyEn": "How exciting!"
+        },
+        {
+          "ask": "¿Qué hace un bombero?",
+          "askEn": "What does a firefighter do?",
+          "answer": "Apaga fuegos.",
+          "answerEn": "Puts out fires.",
+          "keys": [
+            "fuego",
+            "fuegos",
+            "ayuda",
+            "apaga"
+          ],
+          "wrong": [
+            "Cocina pizza.",
+            "Enseña inglés."
+          ],
+          "reply": "¡Exacto! ¡Es muy valiente!",
+          "replyEn": "Exactly! They're very brave!"
+        },
+        {
+          "ask": "¿Tu madre o tu padre trabaja?",
+          "askEn": "Does your mum or dad work?",
+          "answer": "Sí, mi madre es profesora.",
+          "answerEn": "Yes, my mum is a teacher.",
+          "keys": [
+            "trabaja",
+            "si",
+            "no",
+            "mi madre",
+            "mi padre",
+            "mi mama",
+            "mi papa"
+          ],
+          "wrong": [
+            "Quiero ser médico.",
+            "El cocinero."
+          ],
+          "reply": "¡Qué interesante!",
+          "replyEn": "How interesting!"
+        }
+      ]
+    },
+    {
+      "lesson": 44,
+      "who": "sol",
+      "title": "The music club",
+      "scene": "🎸",
+      "turns": [
+        {
+          "ask": "¿Tocas un instrumento?",
+          "askEn": "Do you play an instrument?",
+          "answer": "Sí, toco el piano.",
+          "answerEn": "Yes, I play the piano.",
+          "keys": [
+            "toco",
+            "guitarra",
+            "piano",
+            "flauta",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Me gusta el cuadro.",
+            "Canto bien."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "How nice!"
+        },
+        {
+          "ask": "¿Qué canción te gusta?",
+          "askEn": "Which song do you like?",
+          "answer": "Me gusta «Cumpleaños feliz».",
+          "answerEn": "I like 'Happy Birthday'.",
+          "keys": [
+            "me gusta",
+            "me encanta",
+            "cancion"
+          ],
+          "wrong": [
+            "Toco la guitarra mañana.",
+            "Es un concierto."
+          ],
+          "reply": "¡Vamos a cantarla!",
+          "replyEn": "Let's sing it!"
+        },
+        {
+          "ask": "¿Te gusta pintar?",
+          "askEn": "Do you like painting?",
+          "answer": "Sí, me encanta pintar.",
+          "answerEn": "Yes, I love painting.",
+          "keys": [
+            "me gusta",
+            "me encanta",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Toco el piano.",
+            "La canción."
+          ],
+          "reply": "¡Eres un artista!",
+          "replyEn": "You're an artist!"
+        }
+      ]
+    },
+    {
+      "lesson": 45,
+      "who": "luna",
+      "title": "Gadgets",
+      "scene": "📱",
+      "turns": [
+        {
+          "ask": "¿Tienes móvil?",
+          "askEn": "Have you got a mobile phone?",
+          "answer": "No, todavía no.",
+          "answerEn": "No, not yet.",
+          "keys": [
+            "si",
+            "no",
+            "tengo"
+          ],
+          "wrong": [
+            "Me gusta la foto.",
+            "Es un robot."
+          ],
+          "reply": "¡Yo tampoco!",
+          "replyEn": "Me neither!"
+        },
+        {
+          "ask": "¿Te gustan los videojuegos?",
+          "askEn": "Do you like video games?",
+          "answer": "Sí, me encantan.",
+          "answerEn": "Yes, I love them.",
+          "keys": [
+            "me gustan",
+            "me encantan",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Tengo una tableta azul.",
+            "Internet."
+          ],
+          "reply": "¡A mí también!",
+          "replyEn": "Me too!"
+        },
+        {
+          "ask": "¿Hacemos una foto?",
+          "askEn": "Shall we take a photo?",
+          "answer": "¡Sí! ¡Patata!",
+          "answerEn": "Yes! Cheese!",
+          "keys": [
+            "si",
+            "patata",
+            "vale"
+          ],
+          "wrong": [
+            "El ordenador.",
+            "La pantalla."
+          ],
+          "reply": "¡Qué foto tan bonita!",
+          "replyEn": "What a lovely photo!"
+        }
+      ]
+    },
+    {
+      "lesson": 46,
+      "who": "sol",
+      "title": "Feeling poorly",
+      "scene": "🤒",
+      "turns": [
+        {
+          "ask": "¿Qué te pasa?",
+          "askEn": "What's wrong?",
+          "answer": "Tengo fiebre y tos.",
+          "answerEn": "I've got a temperature and a cough.",
+          "keys": [
+            "fiebre",
+            "tos",
+            "resfriado",
+            "me duele",
+            "enfermo",
+            "enferma"
+          ],
+          "wrong": [
+            "Me gusta la medicina.",
+            "Quiero jugar."
+          ],
+          "reply": "¡Pobre!",
+          "replyEn": "Poor you!"
+        },
+        {
+          "ask": "¿Necesitas una medicina?",
+          "askEn": "Do you need some medicine?",
+          "answer": "Sí, por favor.",
+          "answerEn": "Yes, please.",
+          "keys": [
+            "si",
+            "por favor",
+            "no"
+          ],
+          "wrong": [
+            "Una tirita roja.",
+            "Me mejoro mañana."
+          ],
+          "reply": "Aquí tienes.",
+          "replyEn": "Here you are."
+        },
+        {
+          "ask": "¿Vas a descansar?",
+          "askEn": "Are you going to rest?",
+          "answer": "Sí, voy a descansar.",
+          "answerEn": "Yes, I'm going to rest.",
+          "keys": [
+            "descansar",
+            "si",
+            "voy a"
+          ],
+          "wrong": [
+            "Tengo tos.",
+            "Juego al fútbol."
+          ],
+          "reply": "¡Que te mejores!",
+          "replyEn": "Get well soon!"
+        }
+      ]
+    },
+    {
+      "lesson": 47,
+      "who": "luna",
+      "title": "How do you feel?",
+      "scene": "😳",
+      "turns": [
+        {
+          "ask": "Mañana hay un examen. ¿Cómo estás?",
+          "askEn": "There's an exam tomorrow. How are you?",
+          "answer": "Estoy un poco nervioso.",
+          "answerEn": "I'm a bit nervous.",
+          "keys": [
+            "nervioso",
+            "nerviosa",
+            "tranquilo",
+            "tranquila",
+            "bien",
+            "estoy"
+          ],
+          "wrong": [
+            "Es un examen.",
+            "Me gusta el examen ayer."
+          ],
+          "reply": "¡Tranquilo, vas a estar bien!",
+          "replyEn": "Don't worry, you'll be fine!"
+        },
+        {
+          "ask": "¿Estás aburrido?",
+          "askEn": "Are you bored?",
+          "answer": "No, estoy contento.",
+          "answerEn": "No, I'm happy.",
+          "keys": [
+            "aburrido",
+            "aburrida",
+            "contento",
+            "contenta",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Es tímido.",
+            "Mi amigo."
+          ],
+          "reply": "¡Me alegro!",
+          "replyEn": "I'm glad!"
+        },
+        {
+          "ask": "¡Has ganado el premio! ¿Cómo te sientes?",
+          "askEn": "You've won the prize! How do you feel?",
+          "answer": "Estoy muy orgulloso.",
+          "answerEn": "I'm very proud.",
+          "keys": [
+            "orgulloso",
+            "orgullosa",
+            "contento",
+            "contenta",
+            "feliz",
+            "sorprendido",
+            "sorprendida"
+          ],
+          "wrong": [
+            "Estoy enfermo.",
+            "Tengo tos."
+          ],
+          "reply": "¡Muy bien!",
+          "replyEn": "Well done!"
+        }
+      ]
+    },
+    {
+      "lesson": 48,
+      "who": "sol",
+      "title": "What do you think?",
+      "scene": "💭",
+      "turns": [
+        {
+          "ask": "Creo que el chocolate es delicioso. ¿Y tú?",
+          "askEn": "I think chocolate is delicious. And you?",
+          "answer": "Estoy de acuerdo.",
+          "answerEn": "I agree.",
+          "keys": [
+            "de acuerdo",
+            "creo que",
+            "pienso que",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Es chocolate.",
+            "Me duele."
+          ],
+          "reply": "¡Choca esos cinco!",
+          "replyEn": "High five!"
+        },
+        {
+          "ask": "¿El fútbol es aburrido?",
+          "askEn": "Is football boring?",
+          "answer": "No estoy de acuerdo. Es divertido.",
+          "answerEn": "I don't agree. It's fun.",
+          "keys": [
+            "de acuerdo",
+            "creo que",
+            "pienso que",
+            "divertido",
+            "aburrido",
+            "depende"
+          ],
+          "wrong": [
+            "Tengo un balón.",
+            "Voy al parque."
+          ],
+          "reply": "¡Vale, vale!",
+          "replyEn": "OK, OK!"
+        },
+        {
+          "ask": "¿Quieres ir a la playa?",
+          "askEn": "Do you want to go to the beach?",
+          "answer": "Depende. ¿Hace sol?",
+          "answerEn": "It depends. Is it sunny?",
+          "keys": [
+            "depende",
+            "si",
+            "no",
+            "por supuesto",
+            "quizas"
+          ],
+          "wrong": [
+            "Mi opinión.",
+            "Es azul."
+          ],
+          "reply": "¡Sí, hace mucho sol!",
+          "replyEn": "Yes, it's very sunny!"
+        }
+      ]
+    },
+    {
+      "lesson": 49,
+      "who": "luna",
+      "title": "Who's taller?",
+      "scene": "📏",
+      "turns": [
+        {
+          "ask": "¿Quién es más alto: tú o tu hermano?",
+          "askEn": "Who's taller: you or your brother?",
+          "answer": "Mi hermano es más alto que yo.",
+          "answerEn": "My brother is taller than me.",
+          "keys": [
+            "mas alto",
+            "mas alta",
+            "mas bajo",
+            "mas baja",
+            "que yo",
+            "yo",
+            "igual"
+          ],
+          "wrong": [
+            "Me gusta mi hermano.",
+            "Tengo un hermano."
+          ],
+          "reply": "¡Vaya!",
+          "replyEn": "Wow!"
+        },
+        {
+          "ask": "¿Qué es más rápido: un coche o una bici?",
+          "askEn": "Which is faster: a car or a bike?",
+          "answer": "El coche es más rápido.",
+          "answerEn": "The car is faster.",
+          "keys": [
+            "el coche",
+            "mas rapido"
+          ],
+          "wrong": [
+            "La bici es la mejor.",
+            "Tengo una bici azul."
+          ],
+          "reply": "¡Correcto!",
+          "replyEn": "Correct!"
+        },
+        {
+          "ask": "¿Cuál es el mejor día de la semana?",
+          "askEn": "What's the best day of the week?",
+          "answer": "El sábado es el mejor.",
+          "answerEn": "Saturday is the best.",
+          "keys": [
+            "lunes",
+            "martes",
+            "miercoles",
+            "jueves",
+            "viernes",
+            "sabado",
+            "domingo"
+          ],
+          "wrong": [
+            "Más alto que yo.",
+            "El peor."
+          ],
+          "reply": "¡Para mí también!",
+          "replyEn": "For me too!"
+        }
+      ]
+    },
+    {
+      "lesson": 50,
+      "who": "sol",
+      "title": "Champion's interview",
+      "scene": "🎙️",
+      "turns": [
+        {
+          "ask": "¿Quién es tu mejor amigo?",
+          "askEn": "Who is your best friend?",
+          "answer": "Mi mejor amigo es Pablo.",
+          "answerEn": "My best friend is Pablo.",
+          "keys": [
+            "mejor amigo",
+            "mejor amiga"
+          ],
+          "wrong": [
+            "Quiero ser bombero.",
+            "Tengo fiebre."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Nice!"
+        },
+        {
+          "ask": "¿Qué quieres ser de mayor?",
+          "askEn": "What do you want to be when you grow up?",
+          "answer": "Quiero ser médico.",
+          "answerEn": "I want to be a doctor.",
+          "keys": [
+            "quiero ser"
+          ],
+          "wrong": [
+            "Toco la guitarra.",
+            "Creo que sí."
+          ],
+          "reply": "¡Genial!",
+          "replyEn": "Great!"
+        },
+        {
+          "ask": "¿Estás nervioso?",
+          "askEn": "Are you nervous?",
+          "answer": "Un poco, pero estoy contento.",
+          "answerEn": "A bit, but I'm happy.",
+          "keys": [
+            "nervioso",
+            "nerviosa",
+            "contento",
+            "contenta",
+            "tranquilo",
+            "tranquila",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Más alto que tú.",
+            "La fiesta."
+          ],
+          "reply": "¡Normal!",
+          "replyEn": "That's normal!"
+        },
+        {
+          "ask": "¿Eres más rápido que yo?",
+          "askEn": "Are you faster than me?",
+          "answer": "¡Sí, creo que soy más rápido!",
+          "answerEn": "Yes, I think I'm faster!",
+          "keys": [
+            "mas rapido",
+            "mas rapida",
+            "creo que",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Toco el piano.",
+            "Tengo fiebre."
+          ],
+          "reply": "¡Vamos a ver! ¡Una carrera!",
+          "replyEn": "Let's see! A race!"
+        }
+      ]
+    }
+  ]
+}

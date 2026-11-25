@@ -1,0 +1,509 @@
+{
+  "world": 8,
+  "conversations": [
+    {
+      "lesson": 61,
+      "who": "sol",
+      "title": "Packing your school bag",
+      "scene": "🎒",
+      "turns": [
+        {
+          "ask": "¿Qué llevas en la mochila?",
+          "askEn": "What have you got in your school bag?",
+          "answer": "Un cuaderno y un bolígrafo.",
+          "answerEn": "A notebook and a pen.",
+          "keys": [
+            "cuaderno",
+            "boligrafo",
+            "goma",
+            "sacapuntas",
+            "regla",
+            "tijeras",
+            "pegamento",
+            "lapiz",
+            "libro"
+          ],
+          "wrong": [
+            "Una toalla.",
+            "Un plato."
+          ],
+          "reply": "¡Muy bien!",
+          "replyEn": "Very good!"
+        },
+        {
+          "ask": "¿Me dejas la goma, por favor?",
+          "askEn": "Can I borrow your rubber, please?",
+          "answer": "Sí, toma.",
+          "answerEn": "Yes, here you are.",
+          "keys": [
+            "toma",
+            "si",
+            "claro",
+            "aqui tienes"
+          ],
+          "wrong": [
+            "Las tijeras cortan.",
+            "Es mi regla."
+          ],
+          "reply": "¡Gracias!",
+          "replyEn": "Thanks!"
+        },
+        {
+          "ask": "¿Para qué sirven las tijeras?",
+          "askEn": "What are scissors for?",
+          "answer": "Para cortar papel.",
+          "answerEn": "For cutting paper.",
+          "keys": [
+            "cortar"
+          ],
+          "wrong": [
+            "Para escribir.",
+            "Para pegar."
+          ],
+          "reply": "¡Exacto!",
+          "replyEn": "Exactly!"
+        }
+      ]
+    },
+    {
+      "lesson": 62,
+      "who": "luna",
+      "title": "Bath time",
+      "scene": "🛁",
+      "turns": [
+        {
+          "ask": "¿Qué necesitas para lavarte el pelo?",
+          "askEn": "What do you need to wash your hair?",
+          "answer": "Champú.",
+          "answerEn": "Shampoo.",
+          "keys": [
+            "champu"
+          ],
+          "wrong": [
+            "Pasta de dientes.",
+            "Un tenedor."
+          ],
+          "reply": "¡Muy bien!",
+          "replyEn": "Very good!"
+        },
+        {
+          "ask": "¿Y para los dientes?",
+          "askEn": "And for your teeth?",
+          "answer": "El cepillo y la pasta de dientes.",
+          "answerEn": "The toothbrush and toothpaste.",
+          "keys": [
+            "cepillo",
+            "pasta de dientes"
+          ],
+          "wrong": [
+            "El jabón y el champú.",
+            "La toalla."
+          ],
+          "reply": "¡Dientes limpios!",
+          "replyEn": "Clean teeth!"
+        },
+        {
+          "ask": "¿Dónde está la toalla?",
+          "askEn": "Where's the towel?",
+          "answer": "Está en el baño.",
+          "answerEn": "It's in the bathroom.",
+          "keys": [
+            "bano",
+            "aqui",
+            "alli"
+          ],
+          "wrong": [
+            "Está limpio.",
+            "Me lavo."
+          ],
+          "reply": "¡Gracias!",
+          "replyEn": "Thanks!"
+        }
+      ]
+    },
+    {
+      "lesson": 63,
+      "who": "sol",
+      "title": "Laying the table",
+      "scene": "🍴",
+      "turns": [
+        {
+          "ask": "¿Qué necesitamos para la sopa?",
+          "askEn": "What do we need for the soup?",
+          "answer": "Una cuchara.",
+          "answerEn": "A spoon.",
+          "keys": [
+            "cuchara"
+          ],
+          "wrong": [
+            "Un cuchillo.",
+            "Un tenedor."
+          ],
+          "reply": "¡Claro!",
+          "replyEn": "Of course!"
+        },
+        {
+          "ask": "¿Dónde está la leche?",
+          "askEn": "Where's the milk?",
+          "answer": "En la nevera.",
+          "answerEn": "In the fridge.",
+          "keys": [
+            "nevera"
+          ],
+          "wrong": [
+            "En el horno.",
+            "En el plato."
+          ],
+          "reply": "¡Gracias!",
+          "replyEn": "Thanks!"
+        },
+        {
+          "ask": "¿Cuántos platos pongo?",
+          "askEn": "How many plates shall I put out?",
+          "answer": "Pon cuatro platos.",
+          "answerEn": "Put four plates.",
+          "keys": [
+            "dos",
+            "tres",
+            "cuatro",
+            "cinco",
+            "seis"
+          ],
+          "wrong": [
+            "Pon la servilleta.",
+            "Un vaso de agua."
+          ],
+          "reply": "¡Vale!",
+          "replyEn": "OK!"
+        }
+      ]
+    },
+    {
+      "lesson": 64,
+      "who": "luna",
+      "title": "My bedroom",
+      "scene": "🛏️",
+      "turns": [
+        {
+          "ask": "¿Qué hay en tu dormitorio?",
+          "askEn": "What's in your bedroom?",
+          "answer": "Hay una cama y un armario.",
+          "answerEn": "There's a bed and a wardrobe.",
+          "keys": [
+            "cama",
+            "armario",
+            "lampara",
+            "espejo",
+            "almohada",
+            "manta",
+            "cajon"
+          ],
+          "wrong": [
+            "Hay una nevera.",
+            "Hay un horno."
+          ],
+          "reply": "¡Qué bonito!",
+          "replyEn": "How nice!"
+        },
+        {
+          "ask": "¿Dónde guardas la ropa?",
+          "askEn": "Where do you keep your clothes?",
+          "answer": "En el armario.",
+          "answerEn": "In the wardrobe.",
+          "keys": [
+            "armario",
+            "cajon"
+          ],
+          "wrong": [
+            "En la nevera.",
+            "En el espejo."
+          ],
+          "reply": "¡Muy bien!",
+          "replyEn": "Very good!"
+        },
+        {
+          "ask": "Tengo frío. ¿Qué necesito?",
+          "askEn": "I'm cold. What do I need?",
+          "answer": "Una manta.",
+          "answerEn": "A blanket.",
+          "keys": [
+            "manta"
+          ],
+          "wrong": [
+            "Una lámpara.",
+            "Un espejo."
+          ],
+          "reply": "¡Gracias, qué calentita!",
+          "replyEn": "Thanks, nice and warm!"
+        }
+      ]
+    },
+    {
+      "lesson": 65,
+      "who": "sol",
+      "title": "Cleaning up",
+      "scene": "🧹",
+      "turns": [
+        {
+          "ask": "Tu habitación está sucia. ¿Qué tienes que hacer?",
+          "askEn": "Your room is dirty. What do you have to do?",
+          "answer": "Tengo que limpiar mi habitación.",
+          "answerEn": "I have to clean my room.",
+          "keys": [
+            "limpiar",
+            "ordenar",
+            "tengo que"
+          ],
+          "wrong": [
+            "Está limpia.",
+            "Me gusta el polvo."
+          ],
+          "reply": "¡Eso es!",
+          "replyEn": "That's it!"
+        },
+        {
+          "ask": "¿Qué usas para el suelo?",
+          "askEn": "What do you use for the floor?",
+          "answer": "La escoba.",
+          "answerEn": "The broom.",
+          "keys": [
+            "escoba",
+            "aspiradora"
+          ],
+          "wrong": [
+            "La basura.",
+            "Los platos."
+          ],
+          "reply": "¡Muy bien!",
+          "replyEn": "Very good!"
+        },
+        {
+          "ask": "¿Quién lava los platos?",
+          "askEn": "Who washes the dishes?",
+          "answer": "Yo lavo los platos.",
+          "answerEn": "I wash the dishes.",
+          "keys": [
+            "yo",
+            "mi padre",
+            "mi madre",
+            "mi hermano",
+            "mi hermana",
+            "lavo"
+          ],
+          "wrong": [
+            "Está sucio.",
+            "La aspiradora."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Great!"
+        }
+      ]
+    },
+    {
+      "lesson": 66,
+      "who": "luna",
+      "title": "Chores",
+      "scene": "🧺",
+      "turns": [
+        {
+          "ask": "¿Ayudas en casa?",
+          "askEn": "Do you help at home?",
+          "answer": "Sí, ayudo en casa.",
+          "answerEn": "Yes, I help at home.",
+          "keys": [
+            "ayudo",
+            "si",
+            "no",
+            "a veces"
+          ],
+          "wrong": [
+            "Las plantas son verdes.",
+            "El perro."
+          ],
+          "reply": "¡Muy bien!",
+          "replyEn": "Well done!"
+        },
+        {
+          "ask": "¿Qué haces cada día?",
+          "askEn": "What do you do every day?",
+          "answer": "Hago la cama.",
+          "answerEn": "I make my bed.",
+          "keys": [
+            "hago la cama",
+            "pongo la mesa",
+            "saco la basura",
+            "riego",
+            "paseo al perro",
+            "doblo la ropa"
+          ],
+          "wrong": [
+            "Cada día.",
+            "Me gusta."
+          ],
+          "reply": "¡Perfecto!",
+          "replyEn": "Perfect!"
+        },
+        {
+          "ask": "¿Quién pasea al perro?",
+          "askEn": "Who walks the dog?",
+          "answer": "Yo paseo al perro.",
+          "answerEn": "I walk the dog.",
+          "keys": [
+            "yo",
+            "mi padre",
+            "mi madre",
+            "mi hermano",
+            "mi hermana",
+            "paseo"
+          ],
+          "wrong": [
+            "Doblar la ropa.",
+            "Cada día."
+          ],
+          "reply": "¡Qué suerte tiene el perro!",
+          "replyEn": "Lucky dog!"
+        }
+      ]
+    },
+    {
+      "lesson": 67,
+      "who": "sol",
+      "title": "Paying in the shop",
+      "scene": "🪙",
+      "role": "the shopkeeper",
+      "turns": [
+        {
+          "ask": "Son tres euros.",
+          "askEn": "That's three euros.",
+          "answer": "Aquí tiene cinco euros.",
+          "answerEn": "Here's five euros.",
+          "keys": [
+            "aqui tiene",
+            "euros",
+            "toma"
+          ],
+          "wrong": [
+            "Es caro.",
+            "Las monedas son bonitas."
+          ],
+          "reply": "Y aquí tienes el cambio.",
+          "replyEn": "And here's your change."
+        },
+        {
+          "ask": "¿Pagas con monedas o con un billete?",
+          "askEn": "Are you paying with coins or a note?",
+          "answer": "Con monedas.",
+          "answerEn": "With coins.",
+          "keys": [
+            "monedas",
+            "billete",
+            "tarjeta"
+          ],
+          "wrong": [
+            "Es barato.",
+            "El cambio."
+          ],
+          "reply": "¡Perfecto!",
+          "replyEn": "Perfect!"
+        },
+        {
+          "ask": "¿Es caro o barato?",
+          "askEn": "Is it expensive or cheap?",
+          "answer": "Es barato.",
+          "answerEn": "It's cheap.",
+          "keys": [
+            "barato",
+            "barata",
+            "caro",
+            "cara"
+          ],
+          "wrong": [
+            "Pago con monedas.",
+            "El euro."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Nice!"
+        }
+      ]
+    },
+    {
+      "lesson": 68,
+      "who": "luna",
+      "title": "Home champion",
+      "scene": "🏠",
+      "turns": [
+        {
+          "ask": "¿Qué hay en la nevera?",
+          "askEn": "What's in the fridge?",
+          "answer": "Hay leche y queso.",
+          "answerEn": "There's milk and cheese.",
+          "keys": [
+            "leche",
+            "queso",
+            "agua",
+            "huevos",
+            "fruta",
+            "yogur"
+          ],
+          "wrong": [
+            "Hay una cama.",
+            "Hay jabón."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Nice!"
+        },
+        {
+          "ask": "¿Haces la cama?",
+          "askEn": "Do you make your bed?",
+          "answer": "Sí, cada día.",
+          "answerEn": "Yes, every day.",
+          "keys": [
+            "si",
+            "no",
+            "cada dia",
+            "a veces"
+          ],
+          "wrong": [
+            "La mochila.",
+            "Es dinero."
+          ],
+          "reply": "¡Campeón!",
+          "replyEn": "Champion!"
+        },
+        {
+          "ask": "¿Qué usas para lavarte las manos?",
+          "askEn": "What do you use to wash your hands?",
+          "answer": "Jabón.",
+          "answerEn": "Soap.",
+          "keys": [
+            "jabon"
+          ],
+          "wrong": [
+            "Dinero.",
+            "La cama."
+          ],
+          "reply": "¡Exacto!",
+          "replyEn": "Exactly!"
+        },
+        {
+          "ask": "¿Cuánto dinero tienes?",
+          "askEn": "How much money have you got?",
+          "answer": "Tengo cinco euros.",
+          "answerEn": "I've got five euros.",
+          "keys": [
+            "euro",
+            "euros",
+            "nada",
+            "no tengo"
+          ],
+          "wrong": [
+            "Hago la cama.",
+            "Limpiar."
+          ],
+          "reply": "¡Eres un campeón de casa!",
+          "replyEn": "You're a home champion!"
+        }
+      ]
+    }
+  ]
+}

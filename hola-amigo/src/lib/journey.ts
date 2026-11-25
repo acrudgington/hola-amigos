@@ -3,16 +3,17 @@ import { lessonSeed, type Lesson } from "../content/index.ts";
 
 export type ActivityType =
   | "learn" | "flash" | "listen" | "match" | "dragmatch" | "oddone" | "quiz"
-  | "sayit" | "build" | "wordorder" | "story" | "surprise" | "warmup" | "boss";
+  | "sayit" | "talk" | "build" | "wordorder" | "story" | "surprise" | "warmup" | "boss";
 
 export function buildJourney(lesson: Lesson): ActivityType[] {
   const seed = lessonSeed(lesson.id);
 
   // Milestones are a boss battle over the whole world's vocabulary.
-  if (lesson.milestone) return ["learn", "warmup", "boss", "story"];
+  if (lesson.milestone) return ["learn", "warmup", "boss", "talk", "story"];
 
   const core: ActivityType[] = ["learn", "flash", "listen", "match", "quiz", "sayit"];
   if (lesson.sentences.length) core.push("build");
+  core.push("talk");   // every lesson ends its practice with a conversation
 
   // Opening style: mostly learn-first, sometimes story-first or warm-up-first.
   // Lesson 1 never opens with a warm-up — there's nothing to warm up on yet.
@@ -52,6 +53,7 @@ export const ACTIVITIES: Record<ActivityType, ActivityMeta> = {
   oddone: { title: "Odd One Out", emoji: "🤔", desc: "Spot the stranger", color: "#FF922B" },
   quiz: { title: "Quiz", emoji: "🧠", desc: "Test yourself", color: "#FF7A45" },
   sayit: { title: "Say It!", emoji: "🎤", desc: "Say the words aloud", color: "#FF5A6E" },
+  talk: { title: "Let’s Talk!", emoji: "💬", desc: "Have a conversation", color: "#E2589B" },
   build: { title: "Sentences", emoji: "🔨", desc: "Build sentences", color: "#A06CF0" },
   wordorder: { title: "Word Order", emoji: "🧩", desc: "Unscramble the sentence", color: "#9A5BE0" },
   story: { title: "Story", emoji: "📖", desc: "Read a story", color: "#F062A8" },
@@ -62,7 +64,7 @@ export const ACTIVITIES: Record<ActivityType, ActivityMeta> = {
 
 // Activities a child can pick individually from the lesson page.
 export function practiceList(lesson: Lesson): ActivityType[] {
-  const list: ActivityType[] = ["learn", "flash", "listen", "match", "dragmatch", "oddone", "quiz", "sayit"];
+  const list: ActivityType[] = ["learn", "flash", "listen", "match", "dragmatch", "oddone", "quiz", "sayit", "talk"];
   if (lesson.sentences.length) list.push("build", "wordorder");
   list.push("story");
   return list;

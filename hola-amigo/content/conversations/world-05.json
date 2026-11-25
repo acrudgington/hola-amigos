@@ -1,0 +1,535 @@
+{
+  "world": 5,
+  "conversations": [
+    {
+      "lesson": 33,
+      "who": "luna",
+      "title": "Meeting in town",
+      "scene": "🏙️",
+      "turns": [
+        {
+          "ask": "¿Dónde quedamos?",
+          "askEn": "Where shall we meet?",
+          "answer": "En la plaza.",
+          "answerEn": "In the square.",
+          "keys": [
+            "plaza",
+            "parque",
+            "cine",
+            "museo",
+            "banco",
+            "calle"
+          ],
+          "wrong": [
+            "A las cinco.",
+            "Me gusta la ciudad."
+          ],
+          "reply": "¡Vale!",
+          "replyEn": "OK!"
+        },
+        {
+          "ask": "¿Vamos al cine o al museo?",
+          "askEn": "Shall we go to the cinema or the museum?",
+          "answer": "Al cine.",
+          "answerEn": "To the cinema.",
+          "keys": [
+            "cine",
+            "museo"
+          ],
+          "wrong": [
+            "En la calle.",
+            "Tengo hambre."
+          ],
+          "reply": "¡Genial!",
+          "replyEn": "Great!"
+        },
+        {
+          "ask": "¿Hay un parque en tu ciudad?",
+          "askEn": "Is there a park in your town?",
+          "answer": "Sí, hay un parque grande.",
+          "answerEn": "Yes, there's a big park.",
+          "keys": [
+            "si",
+            "no",
+            "hay"
+          ],
+          "wrong": [
+            "Es mi hermano.",
+            "Ayer fui."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Nice!"
+        }
+      ]
+    },
+    {
+      "lesson": 34,
+      "who": "sol",
+      "title": "Getting around",
+      "scene": "🚌",
+      "turns": [
+        {
+          "ask": "¿Cómo vas al cole?",
+          "askEn": "How do you get to school?",
+          "answer": "Voy en autobús.",
+          "answerEn": "I go by bus.",
+          "keys": [
+            "autobus",
+            "coche",
+            "bici",
+            "bicicleta",
+            "a pie",
+            "andando",
+            "tren",
+            "moto"
+          ],
+          "wrong": [
+            "Me gusta el cole.",
+            "A las nueve."
+          ],
+          "reply": "¡Muy bien!",
+          "replyEn": "Very good!"
+        },
+        {
+          "ask": "¿Te gusta viajar en avión?",
+          "askEn": "Do you like flying?",
+          "answer": "Sí, me encanta.",
+          "answerEn": "Yes, I love it.",
+          "keys": [
+            "me gusta",
+            "me encanta",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Voy en coche.",
+            "Es azul."
+          ],
+          "reply": "¡A mí también!",
+          "replyEn": "Me too!"
+        },
+        {
+          "ask": "¿Qué es más rápido: el tren o la bici?",
+          "askEn": "Which is faster: the train or the bike?",
+          "answer": "El tren.",
+          "answerEn": "The train.",
+          "keys": [
+            "tren"
+          ],
+          "wrong": [
+            "La bici.",
+            "El barco es azul."
+          ],
+          "reply": "¡Correcto!",
+          "replyEn": "Correct!"
+        }
+      ]
+    },
+    {
+      "lesson": 35,
+      "who": "luna",
+      "title": "At the supermarket",
+      "scene": "🛒",
+      "role": "at the checkout",
+      "turns": [
+        {
+          "ask": "¿Tienes la lista?",
+          "askEn": "Have you got the list?",
+          "answer": "Sí, aquí está la lista.",
+          "answerEn": "Yes, here's the list.",
+          "keys": [
+            "si",
+            "lista",
+            "aqui"
+          ],
+          "wrong": [
+            "Quiero un carrito.",
+            "Me duele."
+          ],
+          "reply": "¡Genial!",
+          "replyEn": "Great!"
+        },
+        {
+          "ask": "¿Qué necesitamos?",
+          "askEn": "What do we need?",
+          "answer": "Necesitamos leche y pan.",
+          "answerEn": "We need milk and bread.",
+          "keys": [
+            "necesitamos",
+            "necesito",
+            "leche",
+            "pan",
+            "agua",
+            "huevos",
+            "queso"
+          ],
+          "wrong": [
+            "Una bolsa azul.",
+            "El carrito es grande."
+          ],
+          "reply": "¡Al carrito!",
+          "replyEn": "In the trolley!"
+        },
+        {
+          "ask": "¿Quieres una bolsa?",
+          "askEn": "Do you want a bag?",
+          "answer": "Sí, una bolsa, por favor.",
+          "answerEn": "Yes, a bag, please.",
+          "keys": [
+            "si",
+            "no",
+            "bolsa",
+            "por favor"
+          ],
+          "wrong": [
+            "La lata.",
+            "Es lunes."
+          ],
+          "reply": "Aquí tienes.",
+          "replyEn": "Here you are."
+        }
+      ]
+    },
+    {
+      "lesson": 36,
+      "who": "sol",
+      "title": "Making a salad",
+      "scene": "🥗",
+      "turns": [
+        {
+          "ask": "¿Qué ponemos en la ensalada?",
+          "askEn": "What shall we put in the salad?",
+          "answer": "Lechuga y tomate.",
+          "answerEn": "Lettuce and tomato.",
+          "keys": [
+            "lechuga",
+            "tomate",
+            "pepino",
+            "cebolla",
+            "zanahoria"
+          ],
+          "wrong": [
+            "Chocolate.",
+            "Una bicicleta."
+          ],
+          "reply": "¡Qué sana!",
+          "replyEn": "How healthy!"
+        },
+        {
+          "ask": "¿Te gusta la cebolla?",
+          "askEn": "Do you like onion?",
+          "answer": "No, no me gusta.",
+          "answerEn": "No, I don't like it.",
+          "keys": [
+            "me gusta",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Es naranja.",
+            "Es una piña."
+          ],
+          "reply": "¡Vale, sin cebolla!",
+          "replyEn": "OK, no onion!"
+        },
+        {
+          "ask": "¿De qué color es la zanahoria?",
+          "askEn": "What colour is the carrot?",
+          "answer": "Naranja.",
+          "answerEn": "Orange.",
+          "keys": [
+            "naranja"
+          ],
+          "wrong": [
+            "Morada.",
+            "Azul."
+          ],
+          "reply": "¡Muy bien!",
+          "replyEn": "Very good!"
+        }
+      ]
+    },
+    {
+      "lesson": 37,
+      "who": "luna",
+      "title": "Sports day",
+      "scene": "🏅",
+      "turns": [
+        {
+          "ask": "¿Qué deporte te gusta?",
+          "askEn": "Which sport do you like?",
+          "answer": "Me gusta el fútbol.",
+          "answerEn": "I like football.",
+          "keys": [
+            "futbol",
+            "baloncesto",
+            "tenis",
+            "natacion",
+            "nadar",
+            "correr",
+            "me gusta",
+            "me encanta"
+          ],
+          "wrong": [
+            "Voy en autobús.",
+            "Tengo hambre."
+          ],
+          "reply": "¡A mí también!",
+          "replyEn": "Me too!"
+        },
+        {
+          "ask": "¿Corres rápido?",
+          "askEn": "Do you run fast?",
+          "answer": "Sí, corro muy rápido.",
+          "answerEn": "Yes, I run very fast.",
+          "keys": [
+            "corro",
+            "si",
+            "no",
+            "rapido"
+          ],
+          "wrong": [
+            "Me gusta el tenis.",
+            "Es una pelota."
+          ],
+          "reply": "¡Vamos a ver!",
+          "replyEn": "Let's see!"
+        },
+        {
+          "ask": "¿Quién ha ganado?",
+          "askEn": "Who has won?",
+          "answer": "¡Yo! ¡He ganado!",
+          "answerEn": "Me! I've won!",
+          "keys": [
+            "yo",
+            "gane",
+            "ganado",
+            "nosotros"
+          ],
+          "wrong": [
+            "Me gusta correr.",
+            "Voy a saltar."
+          ],
+          "reply": "¡Enhorabuena!",
+          "replyEn": "Congratulations!"
+        }
+      ]
+    },
+    {
+      "lesson": 38,
+      "who": "sol",
+      "title": "Free time",
+      "scene": "🎨",
+      "turns": [
+        {
+          "ask": "¿Qué haces en tu tiempo libre?",
+          "askEn": "What do you do in your free time?",
+          "answer": "Me gusta dibujar.",
+          "answerEn": "I like drawing.",
+          "keys": [
+            "leer",
+            "dibujar",
+            "pintar",
+            "bailar",
+            "cantar",
+            "cocinar",
+            "ver la tele",
+            "jugar",
+            "me gusta"
+          ],
+          "wrong": [
+            "Son las dos.",
+            "Voy en tren."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Nice!"
+        },
+        {
+          "ask": "¿Te gusta bailar?",
+          "askEn": "Do you like dancing?",
+          "answer": "Sí, me encanta bailar.",
+          "answerEn": "Yes, I love dancing.",
+          "keys": [
+            "me gusta",
+            "me encanta",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Es un lápiz.",
+            "Voy en bici."
+          ],
+          "reply": "¡Vamos a bailar!",
+          "replyEn": "Let's dance!"
+        },
+        {
+          "ask": "¿Qué libro lees?",
+          "askEn": "What book are you reading?",
+          "answer": "Leo un libro de dragones.",
+          "answerEn": "I'm reading a book about dragons.",
+          "keys": [
+            "leo",
+            "libro",
+            "cuento"
+          ],
+          "wrong": [
+            "Canto una canción.",
+            "Hace sol."
+          ],
+          "reply": "¡Qué interesante!",
+          "replyEn": "How interesting!"
+        }
+      ]
+    },
+    {
+      "lesson": 39,
+      "who": "luna",
+      "title": "Visiting the farm",
+      "scene": "🐔",
+      "turns": [
+        {
+          "ask": "¿Qué animales hay en la granja?",
+          "askEn": "What animals are there on the farm?",
+          "answer": "Hay gallinas y ovejas.",
+          "answerEn": "There are hens and sheep.",
+          "keys": [
+            "gallina",
+            "gallinas",
+            "oveja",
+            "ovejas",
+            "cabra",
+            "pato",
+            "vaca",
+            "cerdo",
+            "caballo",
+            "gallo"
+          ],
+          "wrong": [
+            "Hay un cine.",
+            "Me gusta bailar."
+          ],
+          "reply": "¡Y un gallo!",
+          "replyEn": "And a rooster!"
+        },
+        {
+          "ask": "¿Qué animal dice «quiquiriquí»?",
+          "askEn": "Which animal says 'cock-a-doodle-doo'?",
+          "answer": "El gallo.",
+          "answerEn": "The rooster.",
+          "keys": [
+            "gallo"
+          ],
+          "wrong": [
+            "El pato.",
+            "La oveja."
+          ],
+          "reply": "¡Quiquiriquí!",
+          "replyEn": "Cock-a-doodle-doo!"
+        },
+        {
+          "ask": "¿Dónde vive la oveja?",
+          "askEn": "Where does the sheep live?",
+          "answer": "En la granja.",
+          "answerEn": "On the farm.",
+          "keys": [
+            "granja",
+            "campo"
+          ],
+          "wrong": [
+            "En el mar.",
+            "En el cine."
+          ],
+          "reply": "¡Muy bien!",
+          "replyEn": "Very good!"
+        }
+      ]
+    },
+    {
+      "lesson": 40,
+      "who": "sol",
+      "title": "Word Master challenge",
+      "scene": "📚",
+      "turns": [
+        {
+          "ask": "¿Cómo vas a la ciudad?",
+          "askEn": "How do you get into town?",
+          "answer": "Voy en autobús.",
+          "answerEn": "I go by bus.",
+          "keys": [
+            "autobus",
+            "coche",
+            "tren",
+            "bici",
+            "a pie",
+            "andando",
+            "voy"
+          ],
+          "wrong": [
+            "Me gusta la gallina.",
+            "Bailo."
+          ],
+          "reply": "¡Bien!",
+          "replyEn": "Good!"
+        },
+        {
+          "ask": "¿Qué compras en el supermercado?",
+          "askEn": "What do you buy at the supermarket?",
+          "answer": "Compro leche y fruta.",
+          "answerEn": "I buy milk and fruit.",
+          "keys": [
+            "compro",
+            "leche",
+            "fruta",
+            "pan",
+            "agua",
+            "zanahorias",
+            "huevos"
+          ],
+          "wrong": [
+            "Voy en tren.",
+            "Juego al fútbol."
+          ],
+          "reply": "¡Perfecto!",
+          "replyEn": "Perfect!"
+        },
+        {
+          "ask": "¿Qué deporte te gusta más?",
+          "askEn": "Which sport do you like best?",
+          "answer": "Me gusta más el baloncesto.",
+          "answerEn": "I like basketball best.",
+          "keys": [
+            "futbol",
+            "baloncesto",
+            "tenis",
+            "natacion",
+            "me gusta"
+          ],
+          "wrong": [
+            "El bosque.",
+            "La zanahoria."
+          ],
+          "reply": "¡Genial!",
+          "replyEn": "Great!"
+        },
+        {
+          "ask": "¿Te gusta el bosque?",
+          "askEn": "Do you like the forest?",
+          "answer": "Sí, me gusta mucho.",
+          "answerEn": "Yes, I like it a lot.",
+          "keys": [
+            "me gusta",
+            "me encanta",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Voy en autobús.",
+            "Una gallina."
+          ],
+          "reply": "¡Eres un maestro de las palabras!",
+          "replyEn": "You're a word master!"
+        }
+      ]
+    }
+  ]
+}

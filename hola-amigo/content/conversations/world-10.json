@@ -1,0 +1,475 @@
+{
+  "world": 10,
+  "conversations": [
+    {
+      "lesson": 77,
+      "who": "sol",
+      "title": "At the zoo",
+      "scene": "🦁",
+      "turns": [
+        {
+          "ask": "¿Qué animal es el rey de la selva?",
+          "askEn": "Which animal is king of the jungle?",
+          "answer": "El león.",
+          "answerEn": "The lion.",
+          "keys": [
+            "leon"
+          ],
+          "wrong": [
+            "El mono.",
+            "La serpiente."
+          ],
+          "reply": "¡Grrr!",
+          "replyEn": "Grrr!"
+        },
+        {
+          "ask": "¿Qué animal tiene el cuello muy largo?",
+          "askEn": "Which animal has a very long neck?",
+          "answer": "La jirafa.",
+          "answerEn": "The giraffe.",
+          "keys": [
+            "jirafa"
+          ],
+          "wrong": [
+            "El cocodrilo.",
+            "El panda."
+          ],
+          "reply": "¡Exacto!",
+          "replyEn": "Exactly!"
+        },
+        {
+          "ask": "¿Cuál es tu animal favorito del zoo?",
+          "askEn": "What's your favourite zoo animal?",
+          "answer": "Me gusta el elefante.",
+          "answerEn": "I like the elephant.",
+          "keys": [
+            "leon",
+            "tigre",
+            "jirafa",
+            "elefante",
+            "mono",
+            "serpiente",
+            "panda",
+            "cocodrilo"
+          ],
+          "wrong": [
+            "Voy al zoo.",
+            "El cielo."
+          ],
+          "reply": "¡Qué grande!",
+          "replyEn": "So big!"
+        }
+      ]
+    },
+    {
+      "lesson": 78,
+      "who": "luna",
+      "title": "Under the sea",
+      "scene": "🐠",
+      "turns": [
+        {
+          "ask": "¿Qué animal del mar tiene ocho patas?",
+          "askEn": "Which sea animal has eight legs?",
+          "answer": "El pulpo.",
+          "answerEn": "The octopus.",
+          "keys": [
+            "pulpo"
+          ],
+          "wrong": [
+            "El delfín.",
+            "La ballena."
+          ],
+          "reply": "¡Sí!",
+          "replyEn": "Yes!"
+        },
+        {
+          "ask": "¿Cuál es el animal más grande del mar?",
+          "askEn": "Which is the biggest animal in the sea?",
+          "answer": "La ballena.",
+          "answerEn": "The whale.",
+          "keys": [
+            "ballena"
+          ],
+          "wrong": [
+            "El cangrejo.",
+            "El caballito de mar."
+          ],
+          "reply": "¡Enorme!",
+          "replyEn": "Huge!"
+        },
+        {
+          "ask": "¿Te gustan los tiburones?",
+          "askEn": "Do you like sharks?",
+          "answer": "No, me dan miedo.",
+          "answerEn": "No, they scare me.",
+          "keys": [
+            "si",
+            "no",
+            "me gustan",
+            "miedo"
+          ],
+          "wrong": [
+            "Es una tortuga.",
+            "El delfín salta."
+          ],
+          "reply": "¡A mí también!",
+          "replyEn": "Me too!"
+        }
+      ]
+    },
+    {
+      "lesson": 79,
+      "who": "sol",
+      "title": "Bug hunt",
+      "scene": "🐞",
+      "turns": [
+        {
+          "ask": "¿Qué insecto hace miel?",
+          "askEn": "Which insect makes honey?",
+          "answer": "La abeja.",
+          "answerEn": "The bee.",
+          "keys": [
+            "abeja"
+          ],
+          "wrong": [
+            "La mosca.",
+            "La hormiga."
+          ],
+          "reply": "¡Bzzz!",
+          "replyEn": "Bzzz!"
+        },
+        {
+          "ask": "¿Qué es roja con puntos negros?",
+          "askEn": "What's red with black spots?",
+          "answer": "La mariquita.",
+          "answerEn": "The ladybird.",
+          "keys": [
+            "mariquita"
+          ],
+          "wrong": [
+            "La araña.",
+            "El caracol."
+          ],
+          "reply": "¡Qué bonita!",
+          "replyEn": "How pretty!"
+        },
+        {
+          "ask": "¿Te dan miedo las arañas?",
+          "askEn": "Are you scared of spiders?",
+          "answer": "Sí, un poco.",
+          "answerEn": "Yes, a bit.",
+          "keys": [
+            "si",
+            "no",
+            "un poco",
+            "mucho"
+          ],
+          "wrong": [
+            "Es una mariposa.",
+            "El gusano."
+          ],
+          "reply": "¡A mí no!",
+          "replyEn": "Not me!"
+        }
+      ]
+    },
+    {
+      "lesson": 80,
+      "who": "luna",
+      "title": "The seasons",
+      "scene": "🍂",
+      "turns": [
+        {
+          "ask": "¿Qué estación te gusta más?",
+          "askEn": "Which season do you like best?",
+          "answer": "Me gusta el verano.",
+          "answerEn": "I like summer.",
+          "keys": [
+            "primavera",
+            "verano",
+            "otono",
+            "invierno"
+          ],
+          "wrong": [
+            "Hace calor.",
+            "Las flores."
+          ],
+          "reply": "¡A mí también!",
+          "replyEn": "Me too!"
+        },
+        {
+          "ask": "¿Cuándo hace calor?",
+          "askEn": "When is it hot?",
+          "answer": "En verano.",
+          "answerEn": "In summer.",
+          "keys": [
+            "verano"
+          ],
+          "wrong": [
+            "En invierno.",
+            "En otoño."
+          ],
+          "reply": "¡Correcto!",
+          "replyEn": "Correct!"
+        },
+        {
+          "ask": "¿Qué pasa en otoño?",
+          "askEn": "What happens in autumn?",
+          "answer": "Caen las hojas.",
+          "answerEn": "The leaves fall.",
+          "keys": [
+            "hojas"
+          ],
+          "wrong": [
+            "Hay nieve.",
+            "Hace calor."
+          ],
+          "reply": "¡Muy bien!",
+          "replyEn": "Very good!"
+        }
+      ]
+    },
+    {
+      "lesson": 81,
+      "who": "sol",
+      "title": "In the garden",
+      "scene": "🌱",
+      "turns": [
+        {
+          "ask": "¿Qué necesitan las plantas para crecer?",
+          "askEn": "What do plants need to grow?",
+          "answer": "Agua y sol.",
+          "answerEn": "Water and sun.",
+          "keys": [
+            "agua",
+            "sol"
+          ],
+          "wrong": [
+            "Chocolate.",
+            "Una raíz roja."
+          ],
+          "reply": "¡Exacto!",
+          "replyEn": "Exactly!"
+        },
+        {
+          "ask": "¿De dónde sale una flor?",
+          "askEn": "Where does a flower come from?",
+          "answer": "De una semilla.",
+          "answerEn": "From a seed.",
+          "keys": [
+            "semilla"
+          ],
+          "wrong": [
+            "De una rama.",
+            "De una hoja."
+          ],
+          "reply": "¡Muy bien!",
+          "replyEn": "Very good!"
+        },
+        {
+          "ask": "¿Tienes jardín en casa?",
+          "askEn": "Have you got a garden at home?",
+          "answer": "Sí, tengo un jardín pequeño.",
+          "answerEn": "Yes, I've got a small garden.",
+          "keys": [
+            "si",
+            "no",
+            "tengo"
+          ],
+          "wrong": [
+            "Crecer.",
+            "La raíz."
+          ],
+          "reply": "¡Qué suerte!",
+          "replyEn": "Lucky you!"
+        }
+      ]
+    },
+    {
+      "lesson": 82,
+      "who": "luna",
+      "title": "Look at the sky",
+      "scene": "🌈",
+      "turns": [
+        {
+          "ask": "¿Qué hay en el cielo después de la lluvia?",
+          "askEn": "What's in the sky after the rain?",
+          "answer": "Un arcoíris.",
+          "answerEn": "A rainbow.",
+          "keys": [
+            "arcoiris"
+          ],
+          "wrong": [
+            "Un trueno.",
+            "Una tormenta."
+          ],
+          "reply": "¡Qué bonito!",
+          "replyEn": "How pretty!"
+        },
+        {
+          "ask": "¿Te dan miedo las tormentas?",
+          "askEn": "Are you scared of storms?",
+          "answer": "No, no me dan miedo.",
+          "answerEn": "No, they don't scare me.",
+          "keys": [
+            "si",
+            "no",
+            "un poco",
+            "miedo"
+          ],
+          "wrong": [
+            "Hay viento.",
+            "La nube."
+          ],
+          "reply": "¡Qué valiente!",
+          "replyEn": "How brave!"
+        },
+        {
+          "ask": "¿De qué color son las nubes?",
+          "askEn": "What colour are the clouds?",
+          "answer": "Son blancas.",
+          "answerEn": "They're white.",
+          "keys": [
+            "blanca",
+            "blancas",
+            "gris",
+            "grises",
+            "negras"
+          ],
+          "wrong": [
+            "Es la luna.",
+            "Hace viento."
+          ],
+          "reply": "¡Sí!",
+          "replyEn": "Yes!"
+        }
+      ]
+    },
+    {
+      "lesson": 83,
+      "who": "sol",
+      "title": "Space mission",
+      "scene": "🚀",
+      "turns": [
+        {
+          "ask": "¿Cómo se llama nuestro planeta?",
+          "askEn": "What's our planet called?",
+          "answer": "La Tierra.",
+          "answerEn": "Earth.",
+          "keys": [
+            "tierra"
+          ],
+          "wrong": [
+            "La Luna.",
+            "El sol."
+          ],
+          "reply": "¡Correcto!",
+          "replyEn": "Correct!"
+        },
+        {
+          "ask": "¿Quieres ser astronauta?",
+          "askEn": "Do you want to be an astronaut?",
+          "answer": "¡Sí, quiero viajar al espacio!",
+          "answerEn": "Yes, I want to travel to space!",
+          "keys": [
+            "si",
+            "no",
+            "quiero"
+          ],
+          "wrong": [
+            "El cohete.",
+            "Las estrellas."
+          ],
+          "reply": "¡Vamos en mi cohete!",
+          "replyEn": "Let's go in my rocket!"
+        },
+        {
+          "ask": "¿Qué brilla por la noche?",
+          "askEn": "What shines at night?",
+          "answer": "Las estrellas y la luna.",
+          "answerEn": "The stars and the moon.",
+          "keys": [
+            "estrellas",
+            "luna"
+          ],
+          "wrong": [
+            "El sol.",
+            "El planeta Tierra."
+          ],
+          "reply": "¡Qué bonito!",
+          "replyEn": "How beautiful!"
+        }
+      ]
+    },
+    {
+      "lesson": 84,
+      "who": "luna",
+      "title": "Nature champion",
+      "scene": "🌍",
+      "turns": [
+        {
+          "ask": "¿Dónde vive el delfín?",
+          "askEn": "Where does the dolphin live?",
+          "answer": "En el mar.",
+          "answerEn": "In the sea.",
+          "keys": [
+            "mar",
+            "oceano"
+          ],
+          "wrong": [
+            "En la selva.",
+            "En el cielo."
+          ],
+          "reply": "¡Sí!",
+          "replyEn": "Yes!"
+        },
+        {
+          "ask": "¿Cuándo hay muchas flores?",
+          "askEn": "When are there lots of flowers?",
+          "answer": "En primavera.",
+          "answerEn": "In spring.",
+          "keys": [
+            "primavera"
+          ],
+          "wrong": [
+            "En invierno.",
+            "En la luna."
+          ],
+          "reply": "¡Muy bien!",
+          "replyEn": "Very good!"
+        },
+        {
+          "ask": "¿Qué tiene muchos colores en el cielo?",
+          "askEn": "What has lots of colours in the sky?",
+          "answer": "El arcoíris.",
+          "answerEn": "The rainbow.",
+          "keys": [
+            "arcoiris"
+          ],
+          "wrong": [
+            "La estrella.",
+            "El león."
+          ],
+          "reply": "¡Exacto!",
+          "replyEn": "Exactly!"
+        },
+        {
+          "ask": "¿Qué animal te gusta más: el león o la mariposa?",
+          "askEn": "Which animal do you like more: the lion or the butterfly?",
+          "answer": "Me gusta más el león.",
+          "answerEn": "I like the lion more.",
+          "keys": [
+            "leon",
+            "mariposa"
+          ],
+          "wrong": [
+            "La Tierra.",
+            "Las estrellas."
+          ],
+          "reply": "¡Eres un campeón de la naturaleza!",
+          "replyEn": "You're a nature champion!"
+        }
+      ]
+    }
+  ]
+}

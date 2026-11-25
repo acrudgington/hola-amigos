@@ -1,0 +1,523 @@
+{
+  "world": 2,
+  "conversations": [
+    {
+      "lesson": 9,
+      "who": "sol",
+      "title": "Breakfast time",
+      "scene": "🍳",
+      "turns": [
+        {
+          "ask": "¿Te gusta el chocolate?",
+          "askEn": "Do you like chocolate?",
+          "answer": "Sí, me gusta mucho.",
+          "answerEn": "Yes, I like it a lot.",
+          "keys": [
+            "si",
+            "no",
+            "me gusta",
+            "me encanta"
+          ],
+          "wrong": [
+            "Tengo cinco años.",
+            "Es azul."
+          ],
+          "reply": "¡A mí también!",
+          "replyEn": "Me too!"
+        },
+        {
+          "ask": "¿Quieres leche o agua?",
+          "askEn": "Do you want milk or water?",
+          "answer": "Agua, por favor.",
+          "answerEn": "Water, please.",
+          "keys": [
+            "agua",
+            "leche"
+          ],
+          "wrong": [
+            "El pollo.",
+            "Hola."
+          ],
+          "reply": "Aquí tienes.",
+          "replyEn": "Here you are."
+        },
+        {
+          "ask": "¿Qué comida te gusta?",
+          "askEn": "What food do you like?",
+          "answer": "Me gusta la pizza.",
+          "answerEn": "I like pizza.",
+          "keys": [
+            "pizza",
+            "pan",
+            "queso",
+            "pollo",
+            "huevos",
+            "chocolate",
+            "me gusta"
+          ],
+          "wrong": [
+            "Estoy triste.",
+            "Buenas noches."
+          ],
+          "reply": "¡Mmm, qué rico!",
+          "replyEn": "Mmm, yummy!"
+        }
+      ]
+    },
+    {
+      "lesson": 10,
+      "who": "luna",
+      "title": "The fruit bowl",
+      "scene": "🍓",
+      "turns": [
+        {
+          "ask": "¿De qué color es el plátano?",
+          "askEn": "What colour is the banana?",
+          "answer": "Amarillo.",
+          "answerEn": "Yellow.",
+          "keys": [
+            "amarillo"
+          ],
+          "wrong": [
+            "Verde y rojo.",
+            "Morado."
+          ],
+          "reply": "¡Sí!",
+          "replyEn": "Yes!"
+        },
+        {
+          "ask": "¿Cuál es tu fruta favorita?",
+          "askEn": "What's your favourite fruit?",
+          "answer": "Mi fruta favorita es la fresa.",
+          "answerEn": "My favourite fruit is the strawberry.",
+          "keys": [
+            "manzana",
+            "platano",
+            "naranja",
+            "fresa",
+            "uvas",
+            "sandia",
+            "limon",
+            "pera"
+          ],
+          "wrong": [
+            "El perro.",
+            "Tengo hambre."
+          ],
+          "reply": "¡Qué rica!",
+          "replyEn": "Yummy!"
+        },
+        {
+          "ask": "¿El limón es dulce?",
+          "askEn": "Is the lemon sweet?",
+          "answer": "No, es ácido.",
+          "answerEn": "No, it's sour.",
+          "keys": [
+            "no",
+            "acido"
+          ],
+          "wrong": [
+            "Sí, me llamo Limón.",
+            "Tres."
+          ],
+          "reply": "¡Puaj, sí! ¡Muy ácido!",
+          "replyEn": "Yuck, yes! Very sour!"
+        }
+      ]
+    },
+    {
+      "lesson": 11,
+      "who": "sol",
+      "title": "A day at the beach",
+      "scene": "🏖️",
+      "turns": [
+        {
+          "ask": "¡Vamos a la playa! ¿Te gusta nadar?",
+          "askEn": "Let's go to the beach! Do you like swimming?",
+          "answer": "¡Sí, me encanta nadar!",
+          "answerEn": "Yes, I love swimming!",
+          "keys": [
+            "si",
+            "no",
+            "me gusta",
+            "me encanta",
+            "nadar"
+          ],
+          "wrong": [
+            "Es amarillo.",
+            "Mi mamá."
+          ],
+          "reply": "¡A mí también!",
+          "replyEn": "Me too!"
+        },
+        {
+          "ask": "¿Qué hay en la arena?",
+          "askEn": "What's on the sand?",
+          "answer": "Hay una concha.",
+          "answerEn": "There's a shell.",
+          "keys": [
+            "concha",
+            "arena",
+            "barco",
+            "helado"
+          ],
+          "wrong": [
+            "Hay un gato.",
+            "Buenos días."
+          ],
+          "reply": "¡Qué bonita!",
+          "replyEn": "How pretty!"
+        },
+        {
+          "ask": "¿Quieres un helado?",
+          "askEn": "Do you want an ice cream?",
+          "answer": "¡Sí, por favor!",
+          "answerEn": "Yes, please!",
+          "keys": [
+            "si",
+            "por favor",
+            "no",
+            "gracias"
+          ],
+          "wrong": [
+            "Es la arena.",
+            "El mar es azul."
+          ],
+          "reply": "¡Toma!",
+          "replyEn": "Here!"
+        }
+      ]
+    },
+    {
+      "lesson": 12,
+      "who": "luna",
+      "title": "First day at school",
+      "scene": "🏫",
+      "turns": [
+        {
+          "ask": "¿Te gusta el colegio?",
+          "askEn": "Do you like school?",
+          "answer": "Sí, me gusta el colegio.",
+          "answerEn": "Yes, I like school.",
+          "keys": [
+            "si",
+            "no",
+            "me gusta",
+            "me encanta"
+          ],
+          "wrong": [
+            "Es un lápiz.",
+            "Adiós, profe."
+          ],
+          "reply": "¡Genial!",
+          "replyEn": "Great!"
+        },
+        {
+          "ask": "¿Qué hay en tu mochila?",
+          "askEn": "What's in your school bag?",
+          "answer": "Un libro y un lápiz.",
+          "answerEn": "A book and a pencil.",
+          "keys": [
+            "libro",
+            "lapiz",
+            "mochila"
+          ],
+          "wrong": [
+            "La profe.",
+            "Me gusta nadar."
+          ],
+          "reply": "¡Muy bien!",
+          "replyEn": "Very good!"
+        },
+        {
+          "ask": "¿Qué te gusta más: la clase o el recreo?",
+          "askEn": "What do you like more: class or break time?",
+          "answer": "¡El recreo!",
+          "answerEn": "Break time!",
+          "keys": [
+            "recreo",
+            "clase"
+          ],
+          "wrong": [
+            "El libro es azul.",
+            "Tengo hambre."
+          ],
+          "reply": "¡Ja, ja! ¡A mí también!",
+          "replyEn": "Ha ha! Me too!"
+        }
+      ]
+    },
+    {
+      "lesson": 13,
+      "who": "sol",
+      "title": "Getting dressed",
+      "scene": "👕",
+      "turns": [
+        {
+          "ask": "Hace frío. ¿Qué te pones?",
+          "askEn": "It's cold. What do you put on?",
+          "answer": "El abrigo.",
+          "answerEn": "My coat.",
+          "keys": [
+            "abrigo",
+            "guantes",
+            "calcetines"
+          ],
+          "wrong": [
+            "El sombrero de playa.",
+            "Una manzana."
+          ],
+          "reply": "¡Muy bien!",
+          "replyEn": "Very good!"
+        },
+        {
+          "ask": "¿De qué color es tu camiseta?",
+          "askEn": "What colour is your T-shirt?",
+          "answer": "Mi camiseta es azul.",
+          "answerEn": "My T-shirt is blue.",
+          "keys": [
+            "rojo",
+            "roja",
+            "azul",
+            "amarillo",
+            "amarilla",
+            "verde",
+            "naranja",
+            "morado",
+            "morada",
+            "negro",
+            "negra",
+            "blanco",
+            "blanca",
+            "rosa"
+          ],
+          "wrong": [
+            "Tengo dos hermanos.",
+            "Es el colegio."
+          ],
+          "reply": "¡Qué bonita!",
+          "replyEn": "How nice!"
+        },
+        {
+          "ask": "¿Qué llevas en los pies?",
+          "askEn": "What are you wearing on your feet?",
+          "answer": "Llevo zapatillas.",
+          "answerEn": "I'm wearing trainers.",
+          "keys": [
+            "zapatillas",
+            "calcetines",
+            "zapatos"
+          ],
+          "wrong": [
+            "Llevo un sombrero.",
+            "Llevo guantes."
+          ],
+          "reply": "¡Perfecto!",
+          "replyEn": "Perfect!"
+        }
+      ]
+    },
+    {
+      "lesson": 14,
+      "who": "luna",
+      "title": "A tour of my house",
+      "scene": "🏠",
+      "turns": [
+        {
+          "ask": "¿Dónde duermes?",
+          "askEn": "Where do you sleep?",
+          "answer": "En el dormitorio.",
+          "answerEn": "In the bedroom.",
+          "keys": [
+            "dormitorio",
+            "habitacion",
+            "cama"
+          ],
+          "wrong": [
+            "En la cocina.",
+            "En el jardín."
+          ],
+          "reply": "¡Claro!",
+          "replyEn": "Of course!"
+        },
+        {
+          "ask": "¿Dónde cocinas?",
+          "askEn": "Where do you cook?",
+          "answer": "En la cocina.",
+          "answerEn": "In the kitchen.",
+          "keys": [
+            "cocina"
+          ],
+          "wrong": [
+            "En el baño.",
+            "En la puerta."
+          ],
+          "reply": "¡Sí!",
+          "replyEn": "Yes!"
+        },
+        {
+          "ask": "¿Tu casa es grande o pequeña?",
+          "askEn": "Is your house big or small?",
+          "answer": "Mi casa es grande.",
+          "answerEn": "My house is big.",
+          "keys": [
+            "grande",
+            "pequena",
+            "pequeno"
+          ],
+          "wrong": [
+            "Es lunes.",
+            "Me llamo Luna."
+          ],
+          "reply": "¡Me gusta tu casa!",
+          "replyEn": "I like your house!"
+        }
+      ]
+    },
+    {
+      "lesson": 15,
+      "who": "sol",
+      "title": "The weather today",
+      "scene": "🌦️",
+      "turns": [
+        {
+          "ask": "¿Qué día es hoy?",
+          "askEn": "What day is it today?",
+          "answer": "Hoy es lunes.",
+          "answerEn": "Today is Monday.",
+          "keys": [
+            "lunes",
+            "martes",
+            "miercoles",
+            "jueves",
+            "viernes",
+            "sabado",
+            "domingo"
+          ],
+          "wrong": [
+            "Hace sol.",
+            "Me gusta el pan."
+          ],
+          "reply": "¡Gracias!",
+          "replyEn": "Thanks!"
+        },
+        {
+          "ask": "¿Qué tiempo hace?",
+          "askEn": "What's the weather like?",
+          "answer": "Hace sol.",
+          "answerEn": "It's sunny.",
+          "keys": [
+            "hace sol",
+            "llueve",
+            "hace frio",
+            "hace calor",
+            "nieva"
+          ],
+          "wrong": [
+            "Es domingo.",
+            "Tengo un perro."
+          ],
+          "reply": "¡Vale!",
+          "replyEn": "OK!"
+        },
+        {
+          "ask": "¿Qué día te gusta más?",
+          "askEn": "Which day do you like best?",
+          "answer": "Me gusta el sábado.",
+          "answerEn": "I like Saturday.",
+          "keys": [
+            "lunes",
+            "martes",
+            "miercoles",
+            "jueves",
+            "viernes",
+            "sabado",
+            "domingo"
+          ],
+          "wrong": [
+            "Hace frío.",
+            "El abrigo."
+          ],
+          "reply": "¡A mí también!",
+          "replyEn": "Me too!"
+        }
+      ]
+    },
+    {
+      "lesson": 16,
+      "who": "luna",
+      "title": "Word Town quiz show",
+      "scene": "🏆",
+      "turns": [
+        {
+          "ask": "¡Hola, concursante! ¿Cómo te llamas?",
+          "askEn": "Hello, contestant! What's your name?",
+          "answer": "Me llamo Leo.",
+          "answerEn": "My name is Leo.",
+          "keys": [
+            "me llamo",
+            "soy",
+            "mi nombre"
+          ],
+          "wrong": [
+            "Hace sol.",
+            "Cinco."
+          ],
+          "reply": "¡Bienvenido!",
+          "replyEn": "Welcome!"
+        },
+        {
+          "ask": "Primera pregunta: ¿cuánto es dos y tres?",
+          "askEn": "First question: what's two and three?",
+          "answer": "Cinco.",
+          "answerEn": "Five.",
+          "keys": [
+            "cinco"
+          ],
+          "wrong": [
+            "Azul.",
+            "Siete."
+          ],
+          "reply": "¡Correcto!",
+          "replyEn": "Correct!"
+        },
+        {
+          "ask": "¿De qué color es el mar?",
+          "askEn": "What colour is the sea?",
+          "answer": "Azul.",
+          "answerEn": "Blue.",
+          "keys": [
+            "azul"
+          ],
+          "wrong": [
+            "Rojo.",
+            "El gato."
+          ],
+          "reply": "¡Muy bien!",
+          "replyEn": "Very good!"
+        },
+        {
+          "ask": "¿Cómo estás ahora?",
+          "askEn": "How are you now?",
+          "answer": "¡Estoy muy feliz!",
+          "answerEn": "I'm very happy!",
+          "keys": [
+            "feliz",
+            "contento",
+            "contenta",
+            "bien",
+            "emocionado",
+            "emocionada",
+            "genial"
+          ],
+          "wrong": [
+            "Hace sol.",
+            "La manzana."
+          ],
+          "reply": "¡Eres un campeón!",
+          "replyEn": "You're a champion!"
+        }
+      ]
+    }
+  ]
+}
