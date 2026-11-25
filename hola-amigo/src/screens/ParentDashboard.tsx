@@ -118,7 +118,7 @@ function CanDo({ name, progress }: { name: string; progress: Progress }) {
     {units.some(u => !u.started && u.unit.world > openUnit + 1) && <p className="tiny muted" style={{ marginTop: 8 }}>{units.filter(u => !u.started && u.unit.world > openUnit + 1).length} more units ahead.</p>}
     <p className="tiny muted" style={{ marginTop: 10, lineHeight: 1.5 }}>
       A goal counts as <b>can do</b> when its lessons are finished and {name} reliably knows most of their words.
-      Levels follow the Common European Framework (CEFR): this course covers Pre-A1 to A1, with first tastes of A2.
+      Levels follow the Common European Framework (CEFR): this course covers Pre-A1 to A1 (lessons 1–100) and the A2 curriculum (lessons 101–200).
     </p>
   </section>;
 }

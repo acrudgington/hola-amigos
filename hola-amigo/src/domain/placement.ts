@@ -1,15 +1,15 @@
 // Placement check: find where a child who already knows some Spanish should start.
 //
 // 3 questions per world; 2 right passes it. Worlds 1 and 2 are checked in turn,
-// then it jumps two at a time (4, 6, 8, 10, 12). After a missed jump it checks
-// the world in between, so the result is exact without asking about all 12.
-// A beginner finishes in 3–6 questions; the most anyone sees is 24.
+// then it jumps two at a time (4, 6, 8 … 22). After a missed jump it checks
+// the world in between, so the result is exact without asking about every world.
+// A beginner finishes in 3–6 questions; the most anyone sees is 39.
 import { WORLDS, lessonsInWorld, type Word } from "../content/index.ts";
 import { shuffle } from "../lib/utils.ts";
 
 export const PER_WORLD = 3;
 export const PASS_MARK = 2;
-const JUMPS = [1, 2, 4, 6, 8, 10, 12];
+const JUMPS = [1, ...WORLDS.map(w => w.id).filter(id => id % 2 === 0)];
 
 export interface WorldResult { world: number; right: number }
 export const passed = (r: WorldResult) => r.right >= PASS_MARK;

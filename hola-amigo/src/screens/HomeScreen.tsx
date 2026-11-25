@@ -178,7 +178,7 @@ export function HomeScreen({ child, progress, onStartLesson, onOpenLesson, onCla
   const daily = getDaily(progress);
   const streak = liveStreak(progress);
   const info = levelInfo(progress.xp);
-  const label = allDone ? "ALL 100 DONE · PLAY AGAIN" : done === 0 ? "START YOUR ADVENTURE" : `UP NEXT · LESSON ${current.id}`;
+  const label = allDone ? `ALL ${LESSONS.length} DONE · PLAY AGAIN` : done === 0 ? "START YOUR ADVENTURE" : `UP NEXT · LESSON ${current.id}`;
   const dateStr = new Date().toLocaleDateString(undefined, { weekday: "long", day: "numeric", month: "long" });
 
   return <div style={{ paddingTop: 4 }}>

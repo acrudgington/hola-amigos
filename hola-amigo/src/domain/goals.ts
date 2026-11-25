@@ -12,7 +12,7 @@ export const KNOWN_BOX = 2;
 export const ACHIEVED_SHARE = 0.6;
 
 export type GoalState = "not-started" | "practising" | "achieved";
-export type Level = "pre-a1" | "a1" | "a2-taster";
+export type Level = "pre-a1" | "a1" | "a2-taster" | "a2";
 
 export interface GoalProgress {
   goal: Goal;
@@ -32,6 +32,7 @@ export const LEVEL_INFO: Record<Level, { label: string; short: string; about: st
   "pre-a1": { label: "Pre-A1", short: "Pre-A1", about: "First words and phrases: greetings, numbers, colours, family, everyday things." },
   "a1": { label: "A1 · Beginner", short: "A1", about: "Simple everyday phrases and sentences about themselves, their home, school and town." },
   "a2-taster": { label: "A2 taster", short: "A2 taster", about: "A first taste of A2 (elementary) Spanish: talking about the past, opinions and comparisons. Not full A2 yet." },
+  "a2": { label: "A2 · Elementary", short: "A2", about: "Everyday Spanish about the past and the future: what they did, what they used to do, plans, shopping, travel, health and opinions." },
 };
 
 function wordsOf(goal: Goal): string[] {
@@ -64,7 +65,7 @@ export function allGoals(p: Pick<Progress, "stars" | "wordMemory">): UnitProgres
 
 // Achieved / total per level, for the summary chips.
 export function levelSummary(units: UnitProgress[]): Record<Level, { achieved: number; total: number }> {
-  const out: Record<Level, { achieved: number; total: number }> = { "pre-a1": { achieved: 0, total: 0 }, "a1": { achieved: 0, total: 0 }, "a2-taster": { achieved: 0, total: 0 } };
+  const out: Record<Level, { achieved: number; total: number }> = { "pre-a1": { achieved: 0, total: 0 }, "a1": { achieved: 0, total: 0 }, "a2-taster": { achieved: 0, total: 0 }, "a2": { achieved: 0, total: 0 } };
   for (const u of units) for (const g of u.goals) { out[g.level].total++; if (g.state === "achieved") out[g.level].achieved++; }
   return out;
 }

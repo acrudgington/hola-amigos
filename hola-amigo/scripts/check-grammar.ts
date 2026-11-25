@@ -3,7 +3,14 @@
 // Mixed English/Spanish lines are split with the same splitter the voices use,
 // so only the Spanish parts are checked. Run: npm run content:grammar
 import { writeFileSync } from "node:fs";
-import { BOOKS, CHANTS, LESSONS, UNITS } from "../src/content/index.ts";
+import { BOOKS, CHANTS, LESSONS as ALL_LESSONS, UNITS as ALL_UNITS, worldOf } from "../src/content/index.ts";
+
+// FROM_LESSON=101 npm run content:grammar checks only lessons from 101 on (and
+// the goals, stories and chants of their worlds), writing grammar-check-from-101.tsv.
+const FROM = Number(process.env.FROM_LESSON || 0);
+const FROM_WORLD = FROM ? worldOf(FROM)?.id ?? 0 : 0;
+const LESSONS = ALL_LESSONS.filter(l => l.id >= FROM);
+const UNITS = ALL_UNITS.filter(u => u.world >= FROM_WORLD);
 import { segmentMixed, splitSentences } from "../src/audio/text.ts";
 
 interface Item { where: string; text: string }
@@ -24,8 +31,8 @@ for (const l of LESSONS) {
 }
 
 for (const u of UNITS) for (const g of u.goals) add(`goal ${g.id}`, g.es);
-for (const c of CHANTS) { add(`chant ${c.id} title`, c.title); c.lines.forEach((l, i) => add(`chant ${c.id} ${i + 1}`, l.es)); }
-for (const b of BOOKS) { add(`story ${b.id} title`, b.title); b.sentences.forEach((x, i) => add(`story ${b.id} ${i + 1}`, x.es)); }
+for (const c of CHANTS.filter(c => c.world >= FROM_WORLD)) { add(`chant ${c.id} title`, c.title); c.lines.forEach((l, i) => add(`chant ${c.id} ${i + 1}`, l.es)); }
+for (const b of BOOKS.filter(b => b.world >= FROM_WORLD)) { add(`story ${b.id} title`, b.title); b.sentences.forEach((x, i) => add(`story ${b.id} ${i + 1}`, x.es)); }
 
 // Rules that only flag the course's deliberate style (sentence-building tiles have
 // no punctuation; children's lines are short and exclamatory).
@@ -76,5 +83,6 @@ for (const [bi, batch] of batches.entries()) {
   process.stdout.write(`  ${bi + 1}/${batches.length}\r`);
   await sleep(4000);
 }
-writeFileSync("content/review/grammar-check.tsv", ["Where\tRule\tText\tLanguageTool says", ...out].join("\n") + "\n");
-console.log(`\n${out.length} things to look at → content/review/grammar-check.tsv`);
+const OUT = FROM ? `content/review/grammar-check-from-${FROM}.tsv` : "content/review/grammar-check.tsv";
+writeFileSync(OUT, ["Where\tRule\tText\tLanguageTool says", ...out].join("\n") + "\n");
+console.log(`\n${out.length} things to look at → ${OUT}`);

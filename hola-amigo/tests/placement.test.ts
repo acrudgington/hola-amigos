@@ -1,3 +1,4 @@
+import { WORLDS } from "../src/content/index.ts";
 import { describe, expect, it } from "vitest";
 import { lastLessonOf, nextWorld, placedWorld, questionsFor, type WorldResult } from "../src/domain/placement.ts";
 import { learnedUpTo, normalizeProgress, unlockedUpTo, isFreshLearner } from "../src/domain/progress.ts";
@@ -12,12 +13,12 @@ function run(knows: number) {
 
 describe("placement check", () => {
   it("places every level exactly", () => {
-    for (let k = 0; k <= 12; k++) expect(run(k).placed).toBe(k);
+    for (let k = 0; k <= WORLDS.length; k++) expect(run(k).placed).toBe(k);
   });
   it("is quick for beginners and never more than 24 questions", () => {
     expect(run(0).asked).toBe(3);
     expect(run(1).asked).toBe(6);
-    for (let k = 0; k <= 12; k++) expect(run(k).asked).toBeLessThanOrEqual(24);
+    for (let k = 0; k <= WORLDS.length; k++) expect(run(k).asked).toBeLessThanOrEqual(39);
   });
   it("checks the world in between after a missed jump", () => {
     expect(run(3).tested).toEqual([1, 2, 4, 3]);

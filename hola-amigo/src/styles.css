@@ -900,6 +900,7 @@ li:last-child > .step .step__rail { display: none; }
 .level-chip--pre-a1 { --lc: var(--mint); }
 .level-chip--a1 { --lc: var(--sky); }
 .level-chip--a2-taster { --lc: var(--luna); }
+.level-chip--a2 { --lc: var(--coral); }
 .level-tag { display: inline-block; margin-left: 8px; padding: 1px 7px; border-radius: 999px; font-family: var(--font-mono); font-size: 10px; font-weight: 700; letter-spacing: 0.06em; vertical-align: 2px; }
 .level-tag--a2 { color: var(--luna); background: color-mix(in srgb, var(--luna) 14%, transparent); border: 1px solid color-mix(in srgb, var(--luna) 35%, transparent); }
 .next-goal { padding: 12px 14px; border-radius: 14px; margin-bottom: 12px; border: 1px solid color-mix(in srgb, var(--sun) 40%, transparent);

@@ -39,7 +39,7 @@ const SKY: Record<Phase, [string, string]> = {
   night: ["#0a0f2e", "#2a2c66"],
 };
 // Some worlds keep their own mood whatever the time.
-const FIXED: Partial<Record<World["scene"], Phase>> = { story: "dusk", stars: "night" };
+const FIXED: Partial<Record<World["scene"], Phase>> = { story: "dusk", stars: "night", fiesta: "night" };
 
 // Small deterministic random, so scenes look the same on every render.
 const seeded = (seed: number) => () => { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; };
@@ -138,7 +138,7 @@ function House({ x, w, h, color, roof, phase, door = true }: { x: number; w: num
   </g>;
 }
 
-// ---------- the 12 scenes ----------
+// ---------- the 22 scenes ----------
 function sceneBody(world: World, phase: Phase): ReactNode {
   const c = world.color;
   const night = phase === "night";
@@ -303,6 +303,136 @@ function sceneBody(world: World, phase: Phase): ReactNode {
       <Prop e="🏆" x={200} y={GROUND + 4} s={44} cls="ws-bob" />
       {Array.from({ length: 16 }).map((_, i) => <rect key={i} className="ws-anim ws-confetti" style={{ animationDelay: `${-r() * 6}s`, animationDuration: `${4 + r() * 4}s` }}
         x={X0 + r() * SPAN()} y={-10} width="3" height="6" rx="1" fill={["#FF6B6B", "#FFD93D", "#4D96FF", "#6BCB77", "#FF9EC7"][i % 5]} />)}
+    </>;
+    // ---------- A2 worlds (13–22) ----------
+    case "garden": return <>
+      <Birds phase={phase} y={42} />
+      {Hills({ color: c, phase })}
+      <House x={260} w={70} h={46} color="#fff1e0" roof="#c75b3f" phase={phase} />
+      {Ground({ color: c, phase })}
+      {Array.from({ length: 9 }).map((_, i) => <rect key={i} x={40 + i * 22} y={GROUND - 4} width="14" height="10" rx="2" fill={night ? "#5a4636" : "#8b5e3c"} />)}
+      {["🌷", "🥕", "🌻", "🍅", "🌷"].map((e, i) => <Prop key={i} e={e} x={48 + i * 40} y={GROUND} s={20} cls="ws-sway" delay={-i * 0.4} />)}
+      <Prop e="🐝" x={150} y={84} s={14} cls="ws-flutterby" />
+      <Prop e="🪴" x={350} y={GROUND + 6} s={24} />
+    </>;
+    case "beach": return <>
+      <g className="ws-anim ws-fly" style={{ animationDuration: "30s" }}><Prop e="🪁" x={0} y={50} s={22} cls="ws-kite" /></g>
+      <rect x={X0} y={GROUND - 22} width={SPAN()} height={H} fill={night ? "#1d3a6b" : "#36a9e0"} />
+      {[0, 1].map(i => <g key={i} className="ws-anim ws-wave" style={{ animationDuration: `${5 + i * 2}s` }}><path d={waves(GROUND - 16 + i * 6, 3)} stroke="#fff" strokeOpacity={0.6 - i * 0.2} strokeWidth="1.4" fill="none" /></g>)}
+      <path d={`M ${X0} ${GROUND - 4} Q 200 ${GROUND - 12} ${X1} ${GROUND - 4} V ${H} H ${X0} Z`} fill={night ? "#a68c5c" : "#ffd796"} />
+      <g><line x1="120" y1={GROUND + 6} x2="128" y2={GROUND - 40} stroke="#6b4b2b" strokeWidth="2" />
+        <path d={`M 98 ${GROUND - 34} Q 128 ${GROUND - 62} 158 ${GROUND - 34} Z`} fill="#ff6b6b" /><path d={`M 118 ${GROUND - 34} Q 128 ${GROUND - 62} 138 ${GROUND - 34} Z`} fill="#fff" /></g>
+      <Prop e="⛵" x={300} y={GROUND - 18} s={26} cls="ws-bob" />
+      <Prop e="🏖️" x={210} y={GROUND + 10} s={22} />
+      <Prop e="🦀" x={60} y={GROUND + 12} s={16} cls="ws-hop" />
+      <Prop e="🐚" x={250} y={GROUND + 14} s={12} />
+    </>;
+    case "mountain": return <>
+      <Birds phase={phase} y={38} />
+      {Array.from({ length: Math.ceil(SPAN() / 120) + 1 }).map((_, i) => { const x = X0 + i * 120 + 40, h = 70 + r() * 30;
+        return <g key={i}><polygon points={`${x - 70},${GROUND} ${x},${GROUND - h} ${x + 70},${GROUND}`} fill={shade(tint(c, 0.2), 0.25 + (night ? 0.35 : 0))} />
+          <polygon points={`${x - 16},${GROUND - h + 22} ${x},${GROUND - h} ${x + 16},${GROUND - h + 22} ${x + 6},${GROUND - h + 18} ${x},${GROUND - h + 24} ${x - 6},${GROUND - h + 18}`} fill="#ffffff" opacity="0.9" /></g>; })}
+      {Ground({ color: c, phase })}
+      <Prop e="⛺" x={250} y={GROUND + 6} s={40} />
+      <Prop e="🔥" x={300} y={GROUND + 8} s={18} cls="ws-flicker" />
+      <Prop e="🌲" x={60} y={GROUND + 4} s={40} cls="ws-sway" />
+      <Prop e="🌲" x={100} y={GROUND + 6} s={30} cls="ws-sway" delay={-0.8} />
+      <Prop e="🧭" x={180} y={GROUND + 10} s={16} cls="ws-bob" />
+    </>;
+    case "village": return <>
+      {Hills({ color: c, phase })}
+      {/* a windmill like the ones in La Mancha */}
+      <g><polygon points={`60,${GROUND} 70,${GROUND - 60} 90,${GROUND - 60} 100,${GROUND}`} fill="#fbf6ee" /><polygon points={`64,${GROUND - 60} 80,${GROUND - 76} 96,${GROUND - 60}`} fill="#3d3d55" />
+        <g className="ws-anim ws-spin" style={{ transformOrigin: `80px ${GROUND - 58}px`, animationDuration: "9s" }}>
+          {[0, 90, 180, 270].map(a => <rect key={a} x="78" y={GROUND - 98} width="4" height="40" fill="#8a6a4a" transform={`rotate(${a} 80 ${GROUND - 58})`} />)}</g></g>
+      <House x={170} w={44} h={30} color="#ffffff" roof="#c75b3f" phase={phase} />
+      <House x={222} w={36} h={38} color="#fff8ec" roof="#b8513a" phase={phase} />
+      <House x={300} w={50} h={28} color="#ffffff" roof="#c75b3f" phase={phase} />
+      {Ground({ color: c, phase })}
+      <Prop e="🐓" x={140} y={GROUND + 8} s={20} cls="ws-hop" />
+      <Prop e="🐈" x={280} y={GROUND + 8} s={18} />
+      <Prop e="🫒" x={370} y={GROUND + 4} s={22} cls="ws-sway" />
+    </>;
+    case "fair": return <>
+      {Hills({ color: c, phase })}
+      {/* Ferris wheel */}
+      <g><line x1="110" y1={GROUND} x2="140" y2={GROUND - 54} stroke="#5a4a6a" strokeWidth="3" /><line x1="170" y1={GROUND} x2="140" y2={GROUND - 54} stroke="#5a4a6a" strokeWidth="3" />
+        <g className="ws-anim ws-spin" style={{ transformOrigin: `140px ${GROUND - 54}px`, animationDuration: "16s" }}>
+          <circle cx="140" cy={GROUND - 54} r="40" stroke={tint(c, 0.3)} strokeWidth="2.5" fill="none" />
+          {Array.from({ length: 8 }).map((_, i) => { const a = (i / 8) * Math.PI * 2;
+            return <g key={i}><line x1="140" y1={GROUND - 54} x2={140 + Math.cos(a) * 40} y2={GROUND - 54 + Math.sin(a) * 40} stroke={tint(c, 0.5)} strokeWidth="1" />
+              <circle cx={140 + Math.cos(a) * 40} cy={GROUND - 54 + Math.sin(a) * 40} r="5" fill={["#FF6B6B", "#FFD93D", "#4D96FF", "#6BCB77"][i % 4]} /></g>; })}
+        </g></g>
+      {Ground({ color: c, phase })}
+      <path d={`M 230 ${GROUND} V ${GROUND - 34} L 270 ${GROUND - 52} L 310 ${GROUND - 34} V ${GROUND} Z`} fill="#fff5e6" />
+      {[0, 1, 2, 3].map(i => <rect key={i} x={234 + i * 19} y={GROUND - 34} width="10" height="34" fill="#ff6b6b" opacity="0.85" />)}
+      {[0, 1, 2].map(i => <g key={i} className="ws-anim ws-rise" style={{ animationDelay: `${-i * 3}s` }}><Prop e="🎈" x={330 + i * 20} y={H + 30} s={20} /></g>)}
+      <Prop e="📅" x={60} y={GROUND + 8} s={22} cls="ws-bob" />
+    </>;
+    case "market": return <>
+      <Birds phase={phase} y={36} />
+      <House x={10} w={60} h={50} color="#ffe6cc" roof="#c75b3f" phase={phase} door={false} />
+      <House x={330} w={60} h={46} color="#fff0db" roof="#b8513a" phase={phase} door={false} />
+      <rect x={X0} y={GROUND} width={SPAN()} height={H - GROUND} fill={night ? "#6a5a6a" : "#efd5bd"} />
+      {[90, 200].map((x, k) => <g key={x}>
+        <rect x={x} y={GROUND - 26} width="90" height="26" fill="#8b5e3c" />
+        {Array.from({ length: 6 }).map((_, i) => <path key={i} d={`M ${x - 4 + i * 16.3} ${GROUND - 46} h 16.3 v 10 q -8.15 8 -16.3 0 Z`} fill={i % 2 ? "#fff" : k ? "#4d96ff" : "#ff6b6b"} />)}
+        <line x1={x} y1={GROUND - 46} x2={x} y2={GROUND - 26} stroke="#6b4b2b" strokeWidth="2" /><line x1={x + 90} y1={GROUND - 46} x2={x + 90} y2={GROUND - 26} stroke="#6b4b2b" strokeWidth="2" />
+      </g>)}
+      {["🍎", "🍊", "🍋", "🍇"].map((e, i) => <Prop key={i} e={e} x={104 + i * 20} y={GROUND - 24} s={16} />)}
+      {["🥖", "🧀", "☕", "🥐"].map((e, i) => <Prop key={i} e={e} x={214 + i * 20} y={GROUND - 24} s={16} />)}
+      <Prop e="🛒" x={60} y={GROUND + 12} s={22} cls="ws-drive" />
+    </>;
+    case "train": return <>
+      <Birds phase={phase} y={40} />
+      {Hills({ color: c, phase })}
+      {Ground({ color: c, phase })}
+      <rect x={X0} y={GROUND - 2} width={SPAN()} height="3" fill="#6b5b4b" />
+      {Array.from({ length: Math.ceil(SPAN() / 12) + 1 }).map((_, i) => <rect key={i} x={X0 + i * 12} y={GROUND} width="6" height="3" fill="#8b6b4b" />)}
+      <g className="ws-anim ws-drive" style={{ animationDuration: "14s" }}>
+        <Prop e="🚄" x={0} y={GROUND + 2} s={40} /><Prop e="🚃" x={-38} y={GROUND + 2} s={34} /><Prop e="🚃" x={-70} y={GROUND + 2} s={34} />
+      </g>
+      <Prop e="🗺️" x={330} y={GROUND + 12} s={22} cls="ws-bob" />
+      <Prop e="🧳" x={300} y={GROUND + 12} s={20} />
+      <Prop e="🌳" x={60} y={GROUND - 4} s={30} cls="ws-sway" />
+    </>;
+    case "sport": return <>
+      {Hills({ color: c, phase })}
+      {Ground({ color: c, phase })}
+      {[0, 1, 2].map(i => <path key={i} d={`M ${X0} ${GROUND + 6 + i * 8} H ${X1}`} stroke="#ffffff" strokeOpacity="0.55" strokeWidth="1.2" />)}
+      <rect x={X0} y={GROUND + 2} width={SPAN()} height="26" fill="#d9603f" opacity="0.35" />
+      <g className="ws-anim ws-drive" style={{ animationDuration: "11s" }}><Prop e="🏃" x={0} y={GROUND + 14} s={26} /></g>
+      <Prop e="🚴" x={300} y={GROUND + 4} s={28} cls="ws-bob" />
+      <Prop e="🍎" x={60} y={GROUND} s={20} cls="ws-bob" />
+      <Prop e="💧" x={90} y={GROUND} s={16} cls="ws-bob" delay={-0.6} />
+      <Prop e="🏥" x={200} y={GROUND - 4} s={46} />
+    </>;
+    case "school": return <>
+      <Birds phase={phase} y={40} />
+      {Hills({ color: c, phase })}
+      <g>
+        <rect x="130" y={GROUND - 56} width="140" height="56" fill="#ffe9cf" />
+        <polygon points={`124,${GROUND - 56} 200,${GROUND - 82} 276,${GROUND - 56}`} fill="#c94f6d" />
+        <circle cx="200" cy={GROUND - 66} r="7" fill="#fff" stroke="#5a4a3a" />
+        {[142, 166, 214, 238].map(x => <rect key={x} x={x} y={GROUND - 44} width="16" height="12" fill={phase === "day" ? "#cfe8ff" : "#FFE58A"} />)}
+        <rect x="190" y={GROUND - 26} width="20" height="26" fill="#7a4b33" />
+        <line x1="290" y1={GROUND} x2="290" y2={GROUND - 70} stroke="#8a8a9a" strokeWidth="1.5" />
+        <path className="ws-anim ws-flag" d={`M 290 ${GROUND - 70} h 18 v 6 h -18 Z`} fill="#c60b1e" /><path className="ws-anim ws-flag" d={`M 290 ${GROUND - 64} h 18 v 6 h -18 Z`} fill="#ffc400" /><path className="ws-anim ws-flag" d={`M 290 ${GROUND - 58} h 18 v 4 h -18 Z`} fill="#c60b1e" />
+      </g>
+      {Ground({ color: c, phase })}
+      <Prop e="💬" x={70} y={GROUND - 30} s={24} cls="ws-bob" />
+      <Prop e="💭" x={330} y={GROUND - 34} s={22} cls="ws-bob" delay={-0.8} />
+      <Prop e="📚" x={100} y={GROUND + 8} s={20} />
+    </>;
+    case "fiesta": return <>
+      <rect x={X0} y={GROUND - 20} width={SPAN()} height={H} fill="#16285a" />
+      <g className="ws-anim ws-wave"><path d={waves(GROUND - 14)} stroke="#ffd93d" strokeOpacity="0.35" strokeWidth="1.4" fill="none" /></g>
+      {Array.from({ length: 6 }).map((_, i) => <Prop key={i} e="🎆" x={X0 + 40 + r() * (SPAN() - 80)} y={30 + r() * 50} s={26 + r() * 16} cls="ws-twinkle" delay={-r() * 3} />)}
+      <Prop e="🎇" x={200} y={60} s={40} cls="ws-twinkle" delay={-1} />
+      <rect x={X0} y={GROUND} width={SPAN()} height={H - GROUND} fill="#3a2a4a" />
+      <Prop e="🏆" x={200} y={GROUND + 6} s={36} cls="ws-bob" />
+      <Prop e="🎉" x={130} y={GROUND + 8} s={24} cls="ws-hop" />
+      <Prop e="💃" x={280} y={GROUND + 8} s={28} cls="ws-sway" />
     </>;
   }
 }

@@ -66,7 +66,8 @@ export const WorldSchema = z.object({
   desc: text,
   range: z.tuple([z.number().int().positive(), z.number().int().positive()]),
   deco: z.array(text),
-  scene: z.enum(["island", "town", "city", "story", "plaza", "bridge", "castle", "home", "play", "nature", "self", "stars"]),
+  scene: z.enum(["island", "town", "city", "story", "plaza", "bridge", "castle", "home", "play", "nature", "self", "stars",
+    "garden", "beach", "mountain", "village", "fair", "market", "train", "sport", "school", "fiesta"]),
   tint: hex,
 });
 
@@ -89,7 +90,7 @@ export const GoalSchema = z.object({
 export const UnitSchema = z.object({
   world: z.number().int().positive(),
   title: text,
-  level: z.enum(["pre-a1", "a1"]),
+  level: z.enum(["pre-a1", "a1", "a2"]),
   goals: z.array(GoalSchema).min(1),
 });
 

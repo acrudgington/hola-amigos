@@ -226,5 +226,195 @@
     ],
     "scene": "stars",
     "tint": "#FFF6DE"
+  },
+  {
+    "id": 13,
+    "name": "Lo que he hecho",
+    "emoji": "🌱",
+    "color": "#3FBF7F",
+    "desc": "Talk about what you've done today",
+    "range": [
+      101,
+      110
+    ],
+    "deco": [
+      "🌱",
+      "🌷",
+      "🐝",
+      "🥕"
+    ],
+    "scene": "garden",
+    "tint": "#E4F8EC"
+  },
+  {
+    "id": 14,
+    "name": "Ayer y el finde",
+    "emoji": "🏖️",
+    "color": "#2FA8E0",
+    "desc": "Say what you did yesterday",
+    "range": [
+      111,
+      120
+    ],
+    "deco": [
+      "🏖️",
+      "🐚",
+      "⛵",
+      "🦀"
+    ],
+    "scene": "beach",
+    "tint": "#E0F4FD"
+  },
+  {
+    "id": 15,
+    "name": "Aventuras del pasado",
+    "emoji": "⛰️",
+    "color": "#7A8B5A",
+    "desc": "Tell stories of past adventures",
+    "range": [
+      121,
+      130
+    ],
+    "deco": [
+      "⛰️",
+      "⛺",
+      "🧭",
+      "🔥"
+    ],
+    "scene": "mountain",
+    "tint": "#EEF2E4"
+  },
+  {
+    "id": 16,
+    "name": "Cuando era pequeño",
+    "emoji": "🧸",
+    "color": "#D9884A",
+    "desc": "Talk about when you were little",
+    "range": [
+      131,
+      140
+    ],
+    "deco": [
+      "🧸",
+      "🐓",
+      "🫒",
+      "🏡"
+    ],
+    "scene": "village",
+    "tint": "#FBEEDF"
+  },
+  {
+    "id": 17,
+    "name": "Planes y futuro",
+    "emoji": "🎡",
+    "color": "#E04F8C",
+    "desc": "Make plans and talk about the future",
+    "range": [
+      141,
+      150
+    ],
+    "deco": [
+      "🎡",
+      "🎈",
+      "📅",
+      "🔮"
+    ],
+    "scene": "fair",
+    "tint": "#FCE5EF"
+  },
+  {
+    "id": 18,
+    "name": "De compras y en el café",
+    "emoji": "🛍️",
+    "color": "#E8A33A",
+    "desc": "Shop, order food and pay",
+    "range": [
+      151,
+      160
+    ],
+    "deco": [
+      "🛍️",
+      "☕",
+      "🥐",
+      "🍊"
+    ],
+    "scene": "market",
+    "tint": "#FDF2DD"
+  },
+  {
+    "id": 19,
+    "name": "De viaje por España",
+    "emoji": "🚄",
+    "color": "#4F7BE0",
+    "desc": "Travel around Spain",
+    "range": [
+      161,
+      170
+    ],
+    "deco": [
+      "🚄",
+      "🧳",
+      "🗺️",
+      "🏰"
+    ],
+    "scene": "train",
+    "tint": "#E5ECFC"
+  },
+  {
+    "id": 20,
+    "name": "Salud y cuerpo",
+    "emoji": "🩺",
+    "color": "#E0564F",
+    "desc": "Health, sport and feelings",
+    "range": [
+      171,
+      180
+    ],
+    "deco": [
+      "🩺",
+      "🏃",
+      "🍎",
+      "💧"
+    ],
+    "scene": "sport",
+    "tint": "#FCE6E5"
+  },
+  {
+    "id": 21,
+    "name": "Opiniones y comparaciones",
+    "emoji": "💬",
+    "color": "#8E5BE0",
+    "desc": "Give opinions and compare",
+    "range": [
+      181,
+      190
+    ],
+    "deco": [
+      "💬",
+      "💭",
+      "⚖️",
+      "📚"
+    ],
+    "scene": "school",
+    "tint": "#EFE6FC"
+  },
+  {
+    "id": 22,
+    "name": "¡Fiesta A2!",
+    "emoji": "🎆",
+    "color": "#F2B21C",
+    "desc": "The big A2 review",
+    "range": [
+      191,
+      200
+    ],
+    "deco": [
+      "🎆",
+      "🏆",
+      "💃",
+      "🎉"
+    ],
+    "scene": "fiesta",
+    "tint": "#FFF4D6"
   }
 ]

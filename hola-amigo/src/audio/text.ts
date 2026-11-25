@@ -64,9 +64,10 @@ const SPANISH_CHARS = /[¿¡ñÑáéíóúÁÉÍÓÚü]/;
 // Small function words: Spanish only when they sit next to other Spanish ("un perro").
 const ES_GLUE = new Set(["el", "la", "los", "las", "un", "una", "unos", "unas", "y", "de", "del", "que", "es", "mi", "mis", "tu", "tus", "su", "sus", "te", "se", "con", "en", "por", "para", "al", "lo", "le", "les", "nos", "o", "a", "no", "me", "sol", "luna", "son"]);
 // Common words not in the vocabulary lists but clearly Spanish.
-const ES_EXTRA = ["muy", "sí", "hay", "está", "están", "soy", "eres", "hoy", "pero", "más", "qué", "cómo", "dónde", "cuándo", "quiero", "tengo", "gusta", "gustan", "hace", "hizo", "hacer", "tiene", "tienen", "va", "voy", "vamos", "dice", "mucho", "mucha", "muchos", "también", "aquí", "allí", "ahora", "siempre", "nunca", "todo", "todos", "nuevo", "nueva", "bonito", "bonita", "grande", "pequeño", "pequeña", "feliz", "bien", "mal", "buen", "buena", "bueno", "gracias", "hola", "adiós", "fue", "era", "estaba", "había", "puedo", "puedes", "vale", "claro", "ayer", "mañana", "tarde", "noche", "este", "esta", "estos", "estas", "ese", "esa"];
+const ES_EXTRA = ["muy", "sí", "hay", "está", "están", "soy", "eres", "hoy", "pero", "más", "qué", "cómo", "dónde", "cuándo", "quiero", "tengo", "gusta", "gustan", "hace", "hizo", "hacer", "tiene", "tienen", "va", "voy", "vamos", "dice", "mucho", "mucha", "muchos", "también", "aquí", "allí", "ahora", "siempre", "nunca", "todo", "todos", "nuevo", "nueva", "bonito", "bonita", "grande", "pequeño", "pequeña", "feliz", "bien", "mal", "buen", "buena", "bueno", "gracias", "hola", "adiós", "fue", "era", "estaba", "había", "puedo", "puedes", "vale", "claro", "ayer", "mañana", "tarde", "noche", "este", "esta", "estos", "estas", "ese", "esa",
+  "nada", "pasa", "otro", "otra", "día", "días", "vez", "veces", "ya", "cuando", "donde", "porque", "ella", "él", "yo", "tú", "nosotros", "nosotras", "vosotros", "vosotras", "ellos", "ellas", "usted", "ustedes", "hemos", "habéis", "han", "ha", "hecho", "todavía", "alguna", "algo", "nadie", "después", "antes", "entonces", "luego", "pronto", "poco", "tanto", "mismo", "cada", "sin", "sobre", "entre", "hasta", "desde", "romper", "rompido"];
 // English words spelled like Spanish ones; never Spanish on their own.
-const EN_SHADOW = new Set(["he", "are", "is", "come", "fin", "once", "dice", "pie", "real", "plan", "hotel", "hospital", "animal", "chocolate", "radio", "piano", "taxi", "bus", "idea", "mama", "papa", "gas", "set", "solo", "final", "normal", "local", "general", "total", "terrible", "horrible", "doctor", "actor", "color", "error", "motor", "popular", "regular", "similar", "pizza", "panda", "zoo", "ok", "on", "fan", "sale", "red", "mar", "tomato", "banana", "television"]);
+const EN_SHADOW = new Set(["he", "are", "is", "come", "fin", "once", "dice", "pie", "real", "plan", "hotel", "hospital", "animal", "chocolate", "radio", "piano", "taxi", "bus", "idea", "mama", "papa", "gas", "set", "solo", "final", "normal", "local", "general", "total", "terrible", "horrible", "doctor", "actor", "color", "error", "motor", "popular", "regular", "similar", "pizza", "panda", "zoo", "ok", "on", "fan", "sale", "red", "mar", "tomato", "banana", "television", "has", "ten", "van", "sea", "dime", "pan"]);
 
 let lexicon: Set<string> | null = null;
 function spanishLexicon() {
@@ -91,6 +92,8 @@ function kindOf(word: string): Kind {
   if (SPANISH_CHARS.test(word)) return "es";
   const lex = spanishLexicon();
   if (toks.every(t => ES_GLUE.has(t))) return "glue";
+  // Words that are both English and Spanish ("he", "has") follow their neighbours.
+  if (toks.every(t => lex.has(t) && (EN_SHADOW.has(t) || ES_GLUE.has(t)))) return "glue";
   if (toks.every(t => lex.has(t)) && toks.some(t => !EN_SHADOW.has(t) && !ES_GLUE.has(t))) return "es";
   return "en";
 }

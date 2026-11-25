@@ -1,0 +1,1782 @@
+{
+  "world": 13,
+  "lessons": [
+    {
+      "id": 101,
+      "title": "¿Qué has hecho hoy?",
+      "subtitle": "What have you done today?",
+      "emoji": "🌅",
+      "milestone": false,
+      "funFact": "In Spain, people use 'he comido' (I have eaten) for things that happened today. In much of Latin America they would say 'comí' instead!",
+      "phrase": {
+        "es": "Hoy he aprendido mucho.",
+        "en": "Today I have learned a lot."
+      },
+      "words": [
+        {
+          "es": "He comido",
+          "en": "I have eaten",
+          "say": "eh koh-MEE-doh",
+          "emoji": "🍽️"
+        },
+        {
+          "es": "He jugado",
+          "en": "I have played",
+          "say": "eh hoo-GAH-doh",
+          "emoji": "🎮"
+        },
+        {
+          "es": "He leído",
+          "en": "I have read",
+          "say": "eh leh-EE-doh",
+          "emoji": "📖"
+        },
+        {
+          "es": "He salido",
+          "en": "I have gone out",
+          "say": "eh sah-LEE-doh",
+          "emoji": "🚪"
+        },
+        {
+          "es": "¿Qué has hecho?",
+          "en": "What have you done?",
+          "say": "keh as EH-choh",
+          "emoji": "❓"
+        },
+        {
+          "es": "Esta mañana",
+          "en": "This morning",
+          "say": "ES-tah mah-NYAH-nah",
+          "emoji": "🌅"
+        },
+        {
+          "es": "Todavía no",
+          "en": "Not yet",
+          "say": "toh-dah-BEE-ah noh",
+          "emoji": "⏳"
+        },
+        {
+          "es": "Ya he terminado",
+          "en": "I have already finished",
+          "say": "yah eh tehr-mee-NAH-doh",
+          "emoji": "✅"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Hoy",
+            "he",
+            "comido",
+            "macarrones"
+          ],
+          "shuffle": [
+            "he",
+            "comido",
+            "Hoy",
+            "macarrones"
+          ],
+          "en": "Today I have eaten macaroni."
+        },
+        {
+          "correct": [
+            "Esta",
+            "mañana",
+            "he",
+            "leído",
+            "un",
+            "libro"
+          ],
+          "shuffle": [
+            "mañana",
+            "libro",
+            "he",
+            "un",
+            "leído",
+            "Esta"
+          ],
+          "en": "This morning I have read a book."
+        },
+        {
+          "correct": [
+            "Todavía",
+            "no",
+            "he",
+            "jugado",
+            "al",
+            "fútbol"
+          ],
+          "shuffle": [
+            "no",
+            "Todavía",
+            "fútbol",
+            "al",
+            "jugado",
+            "he"
+          ],
+          "en": "I haven't played football yet."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "Hoy ___ jugado en el parque. (I have)",
+          "opts": [
+            "he",
+            "has",
+            "ha"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Todavía no' means:",
+          "opts": [
+            "Not yet",
+            "Never",
+            "Already"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Luna's Busy Day",
+        "paras": [
+          "It's evening. Sol asks: '¿Qué has hecho hoy, Luna?'",
+          "Luna smiles. 'Esta mañana he leído un libro y he jugado con mi gato.'",
+          "'¿Y los deberes?' asks Sol. 'Todavía no,' says Luna. '¡Pero ya he terminado el libro!'"
+        ],
+        "qs": [
+          {
+            "q": "What has Luna read?",
+            "opts": [
+              "A book",
+              "A comic",
+              "A letter"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Who has Luna played with?",
+            "opts": [
+              "Her cat",
+              "Sol",
+              "Her brother"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Has Luna done her homework?",
+            "opts": [
+              "Not yet",
+              "Yes, all of it",
+              "She never does it"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 102,
+      "title": "Esta semana",
+      "subtitle": "This week",
+      "emoji": "📅",
+      "milestone": false,
+      "funFact": "Most verbs follow a simple rule: 'jugar' becomes 'he jugado' and 'comer' becomes 'he comido'.",
+      "phrase": {
+        "es": "Esta semana he estudiado mucho.",
+        "en": "This week I have studied a lot."
+      },
+      "words": [
+        {
+          "es": "He estudiado",
+          "en": "I have studied",
+          "say": "eh es-too-DYAH-doh",
+          "emoji": "📚"
+        },
+        {
+          "es": "He trabajado",
+          "en": "I have worked",
+          "say": "eh trah-bah-HAH-doh",
+          "emoji": "💼"
+        },
+        {
+          "es": "He bebido",
+          "en": "I have drunk",
+          "say": "eh beh-BEE-doh",
+          "emoji": "🥤"
+        },
+        {
+          "es": "He dormido",
+          "en": "I have slept",
+          "say": "eh dor-MEE-doh",
+          "emoji": "😴"
+        },
+        {
+          "es": "He aprendido",
+          "en": "I have learned",
+          "say": "eh ah-pren-DEE-doh",
+          "emoji": "🧠"
+        },
+        {
+          "es": "He limpiado",
+          "en": "I have cleaned",
+          "say": "eh leem-PYAH-doh",
+          "emoji": "🧽"
+        },
+        {
+          "es": "Este mes",
+          "en": "This month",
+          "say": "ES-teh mes",
+          "emoji": "🗓️"
+        },
+        {
+          "es": "Muchas veces",
+          "en": "Many times",
+          "say": "MOO-chas BEH-thes",
+          "emoji": "🔁"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Esta",
+            "semana",
+            "he",
+            "estudiado",
+            "mucho"
+          ],
+          "shuffle": [
+            "he",
+            "semana",
+            "mucho",
+            "Esta",
+            "estudiado"
+          ],
+          "en": "This week I have studied a lot."
+        },
+        {
+          "correct": [
+            "Este",
+            "mes",
+            "he",
+            "aprendido",
+            "muchas",
+            "palabras"
+          ],
+          "shuffle": [
+            "mes",
+            "aprendido",
+            "he",
+            "muchas",
+            "Este",
+            "palabras"
+          ],
+          "en": "This month I have learned lots of words."
+        },
+        {
+          "correct": [
+            "Hoy",
+            "he",
+            "dormido",
+            "muy",
+            "bien"
+          ],
+          "shuffle": [
+            "bien",
+            "Hoy",
+            "dormido",
+            "he",
+            "muy"
+          ],
+          "en": "Today I have slept very well."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "Beber → he ___",
+          "opts": [
+            "bebido",
+            "bebado",
+            "bebiendo"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Trabajar → he ___",
+          "opts": [
+            "trabajado",
+            "trabajido",
+            "trabajando"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Sol's Diary",
+        "paras": [
+          "Sol writes in his diary: 'Esta semana he estudiado mucho.'",
+          "'He aprendido a nadar y he dormido muy bien.'",
+          "'Este mes he limpiado mi habitación muchas veces.' Luna laughs: '¿Muchas veces? ¡Solo una vez!'"
+        ],
+        "qs": [
+          {
+            "q": "What has Sol learned to do?",
+            "opts": [
+              "To swim",
+              "To cook",
+              "To ski"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How has Sol slept?",
+            "opts": [
+              "Very well",
+              "Badly",
+              "Not at all"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How many times does Luna say he cleaned his room?",
+            "opts": [
+              "Only once",
+              "Every day",
+              "Many times"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 103,
+      "title": "Participios especiales",
+      "subtitle": "Special participles",
+      "emoji": "🛠️",
+      "milestone": false,
+      "funFact": "Some verbs break the rule: 'hacer' becomes 'hecho', and 'romper' becomes 'roto'. Little children in Spain often say 'rompido' by mistake!",
+      "phrase": {
+        "es": "He hecho un dibujo para ti.",
+        "en": "I have made a drawing for you."
+      },
+      "words": [
+        {
+          "es": "He hecho",
+          "en": "I have done / made",
+          "say": "eh EH-choh",
+          "emoji": "🛠️"
+        },
+        {
+          "es": "He visto",
+          "en": "I have seen",
+          "say": "eh BEES-toh",
+          "emoji": "👀"
+        },
+        {
+          "es": "He escrito",
+          "en": "I have written",
+          "say": "eh es-KREE-toh",
+          "emoji": "✍️"
+        },
+        {
+          "es": "He puesto",
+          "en": "I have put",
+          "say": "eh PWES-toh",
+          "emoji": "📥"
+        },
+        {
+          "es": "He dicho",
+          "en": "I have said",
+          "say": "eh DEE-choh",
+          "emoji": "🗣️"
+        },
+        {
+          "es": "He vuelto",
+          "en": "I have come back",
+          "say": "eh BWEL-toh",
+          "emoji": "🔙"
+        },
+        {
+          "es": "He abierto",
+          "en": "I have opened",
+          "say": "eh ah-BYEHR-toh",
+          "emoji": "📭"
+        },
+        {
+          "es": "He roto",
+          "en": "I have broken",
+          "say": "eh RROH-toh",
+          "emoji": "💔"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "He",
+            "roto",
+            "mi",
+            "vaso",
+            "favorito"
+          ],
+          "shuffle": [
+            "vaso",
+            "favorito",
+            "He",
+            "roto",
+            "mi"
+          ],
+          "en": "I have broken my favourite glass."
+        },
+        {
+          "correct": [
+            "He",
+            "escrito",
+            "una",
+            "carta",
+            "a",
+            "mi",
+            "abuela"
+          ],
+          "shuffle": [
+            "una",
+            "a",
+            "escrito",
+            "mi",
+            "He",
+            "carta",
+            "abuela"
+          ],
+          "en": "I have written a letter to my grandma."
+        },
+        {
+          "correct": [
+            "Mamá",
+            "ha",
+            "abierto",
+            "la",
+            "ventana"
+          ],
+          "shuffle": [
+            "ventana",
+            "la",
+            "ha",
+            "Mamá",
+            "abierto"
+          ],
+          "en": "Mum has opened the window."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "Escribir → he ___",
+          "opts": [
+            "escrito",
+            "escribido",
+            "escribiendo"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Ver → he ___",
+          "opts": [
+            "visto",
+            "veído",
+            "vido"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Oops!",
+        "paras": [
+          "Sol comes home. '¡Hola! ¡He vuelto!' he says.",
+          "Luna looks sad. 'Lo siento, Sol. He roto tu vaso favorito.'",
+          "Sol smiles. 'No pasa nada. He visto un vaso nuevo en la tienda. ¡Y te he hecho un dibujo!'"
+        ],
+        "qs": [
+          {
+            "q": "What has Luna broken?",
+            "opts": [
+              "Sol's favourite glass",
+              "A window",
+              "A toy"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How does Sol react?",
+            "opts": [
+              "Kindly",
+              "Angrily",
+              "He cries"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What has Sol made for Luna?",
+            "opts": [
+              "A drawing",
+              "A cake",
+              "A card game"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 104,
+      "title": "¿Alguna vez…?",
+      "subtitle": "Have you ever…?",
+      "emoji": "🤔",
+      "milestone": false,
+      "funFact": "'Pulpo a la gallega' (octopus with paprika and olive oil) is a famous dish from Galicia, in the north-west of Spain.",
+      "phrase": {
+        "es": "¿Alguna vez has estado en Madrid?",
+        "en": "Have you ever been to Madrid?"
+      },
+      "words": [
+        {
+          "es": "¿Alguna vez has…?",
+          "en": "Have you ever…?",
+          "say": "al-GOO-nah behth as",
+          "emoji": "🤔"
+        },
+        {
+          "es": "He estado en",
+          "en": "I have been to",
+          "say": "eh es-TAH-doh en",
+          "emoji": "📍"
+        },
+        {
+          "es": "Nunca he estado en",
+          "en": "I have never been to",
+          "say": "NOON-kah eh es-TAH-doh en",
+          "emoji": "🚫"
+        },
+        {
+          "es": "He probado",
+          "en": "I have tried (tasted)",
+          "say": "eh proh-BAH-doh",
+          "emoji": "😋"
+        },
+        {
+          "es": "¿Has estado en…?",
+          "en": "Have you been to…?",
+          "say": "as es-TAH-doh en",
+          "emoji": "✈️"
+        },
+        {
+          "es": "Una vez",
+          "en": "Once",
+          "say": "OO-nah behth",
+          "emoji": "1️⃣"
+        },
+        {
+          "es": "Dos veces",
+          "en": "Twice",
+          "say": "dos BEH-thes",
+          "emoji": "2️⃣"
+        },
+        {
+          "es": "Varias veces",
+          "en": "Several times",
+          "say": "BAH-ryas BEH-thes",
+          "emoji": "🔢"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "He",
+            "estado",
+            "en",
+            "Madrid",
+            "dos",
+            "veces"
+          ],
+          "shuffle": [
+            "en",
+            "Madrid",
+            "He",
+            "veces",
+            "estado",
+            "dos"
+          ],
+          "en": "I have been to Madrid twice."
+        },
+        {
+          "correct": [
+            "Nunca",
+            "he",
+            "probado",
+            "el",
+            "pulpo"
+          ],
+          "shuffle": [
+            "he",
+            "el",
+            "probado",
+            "pulpo",
+            "Nunca"
+          ],
+          "en": "I have never tried octopus."
+        },
+        {
+          "correct": [
+            "Mi",
+            "hermano",
+            "ha",
+            "estado",
+            "en",
+            "Londres",
+            "una",
+            "vez"
+          ],
+          "shuffle": [
+            "hermano",
+            "Mi",
+            "estado",
+            "ha",
+            "vez",
+            "una",
+            "Londres",
+            "en"
+          ],
+          "en": "My brother has been to London once."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "¿Alguna vez ___ estado en Sevilla? (have you)",
+          "opts": [
+            "has",
+            "he",
+            "ha"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Dos veces' means:",
+          "opts": [
+            "Twice",
+            "Two hours",
+            "Second"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Have You Ever…?",
+        "paras": [
+          "Sol and Luna play a game called '¿Alguna vez has…?'",
+          "'¿Alguna vez has probado el pulpo?' asks Luna. 'Sí, una vez, en Galicia. ¡Está riquísimo!' says Sol.",
+          "'¿Has estado en la luna?' laughs Sol. 'Nunca he estado en la luna… ¡pero me llamo Luna!'"
+        ],
+        "qs": [
+          {
+            "q": "Where did Sol try octopus?",
+            "opts": [
+              "In Galicia",
+              "In Madrid",
+              "At school"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How many times has Sol tried it?",
+            "opts": [
+              "Once",
+              "Never",
+              "Twice"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Luna joke about?",
+            "opts": [
+              "Her name",
+              "Her hat",
+              "Her cat"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 105,
+      "title": "Hemos, habéis, han",
+      "subtitle": "We, you all, they have",
+      "emoji": "👨‍👩‍👧‍👦",
+      "milestone": false,
+      "funFact": "In Spain, you say 'vosotros habéis' to a group of friends. In Latin America, people say 'ustedes han' instead.",
+      "phrase": {
+        "es": "¡Hemos ganado el partido!",
+        "en": "We have won the match!"
+      },
+      "words": [
+        {
+          "es": "Hemos ganado",
+          "en": "We have won",
+          "say": "EH-mos gah-NAH-doh",
+          "emoji": "🏆"
+        },
+        {
+          "es": "Hemos perdido",
+          "en": "We have lost",
+          "say": "EH-mos pehr-DEE-doh",
+          "emoji": "😞"
+        },
+        {
+          "es": "¿Habéis terminado?",
+          "en": "Have you all finished?",
+          "say": "ah-BEYS tehr-mee-NAH-doh",
+          "emoji": "🏁"
+        },
+        {
+          "es": "Habéis llegado",
+          "en": "You (all) have arrived",
+          "say": "ah-BEYS yeh-GAH-doh",
+          "emoji": "🚌"
+        },
+        {
+          "es": "Han venido",
+          "en": "They have come",
+          "say": "an beh-NEE-doh",
+          "emoji": "👋"
+        },
+        {
+          "es": "Han empezado",
+          "en": "They have started",
+          "say": "an em-peh-THAH-doh",
+          "emoji": "▶️"
+        },
+        {
+          "es": "Ha llovido",
+          "en": "It has rained",
+          "say": "ah yoh-BEE-doh",
+          "emoji": "🌧️"
+        },
+        {
+          "es": "Ha nevado",
+          "en": "It has snowed",
+          "say": "ah neh-BAH-doh",
+          "emoji": "❄️"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Hoy",
+            "hemos",
+            "ganado",
+            "el",
+            "partido"
+          ],
+          "shuffle": [
+            "el",
+            "Hoy",
+            "partido",
+            "ganado",
+            "hemos"
+          ],
+          "en": "Today we have won the match."
+        },
+        {
+          "correct": [
+            "Mis",
+            "primos",
+            "han",
+            "venido",
+            "a",
+            "casa"
+          ],
+          "shuffle": [
+            "Mis",
+            "casa",
+            "a",
+            "primos",
+            "venido",
+            "han"
+          ],
+          "en": "My cousins have come to our house."
+        },
+        {
+          "correct": [
+            "Esta",
+            "mañana",
+            "ha",
+            "llovido",
+            "mucho"
+          ],
+          "shuffle": [
+            "llovido",
+            "mañana",
+            "Esta",
+            "mucho",
+            "ha"
+          ],
+          "en": "This morning it has rained a lot."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "Nosotros ___ ganado.",
+          "opts": [
+            "hemos",
+            "han",
+            "habéis"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Ellos ___ venido.",
+          "opts": [
+            "han",
+            "hemos",
+            "has"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "The Big Match",
+        "paras": [
+          "Sol's team plays football. At the end, everyone shouts: '¡Hemos ganado!'",
+          "Mamá and Papá arrive. '¿Habéis terminado ya?' 'Sí, ¡y hemos ganado tres a uno!'",
+          "Then it starts to rain. 'Ha llovido justo después del partido,' says Luna. '¡Qué suerte!'"
+        ],
+        "qs": [
+          {
+            "q": "Who has won?",
+            "opts": [
+              "Sol's team",
+              "The other team",
+              "Nobody"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What was the score?",
+            "opts": [
+              "Three–one",
+              "Two–two",
+              "One–nil"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "When did it rain?",
+            "opts": [
+              "Right after the match",
+              "During the match",
+              "In the morning"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 106,
+      "title": "Hoy en el cole",
+      "subtitle": "Today at school",
+      "emoji": "🏫",
+      "milestone": false,
+      "funFact": "In Spanish secondary schools, marks go from 0 to 10, and 5 is a pass: 'un aprobado'.",
+      "phrase": {
+        "es": "¡He aprobado el examen!",
+        "en": "I have passed the exam!"
+      },
+      "words": [
+        {
+          "es": "Los deberes",
+          "en": "Homework",
+          "say": "los deh-BEH-res",
+          "emoji": "📝"
+        },
+        {
+          "es": "He aprobado",
+          "en": "I have passed",
+          "say": "eh ah-proh-BAH-doh",
+          "emoji": "✔️"
+        },
+        {
+          "es": "He suspendido",
+          "en": "I have failed",
+          "say": "eh soos-pen-DEE-doh",
+          "emoji": "❌"
+        },
+        {
+          "es": "La nota",
+          "en": "The mark",
+          "say": "lah NOH-tah",
+          "emoji": "💯"
+        },
+        {
+          "es": "He olvidado",
+          "en": "I have forgotten",
+          "say": "eh ol-bee-DAH-doh",
+          "emoji": "🤦"
+        },
+        {
+          "es": "He perdido",
+          "en": "I have lost",
+          "say": "eh pehr-DEE-doh",
+          "emoji": "🔍"
+        },
+        {
+          "es": "La pregunta",
+          "en": "The question",
+          "say": "lah preh-GOON-tah",
+          "emoji": "🙋"
+        },
+        {
+          "es": "La respuesta",
+          "en": "The answer",
+          "say": "lah rres-PWES-tah",
+          "emoji": "💡"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "He",
+            "aprobado",
+            "el",
+            "examen",
+            "de",
+            "matemáticas"
+          ],
+          "shuffle": [
+            "examen",
+            "He",
+            "el",
+            "de",
+            "aprobado",
+            "matemáticas"
+          ],
+          "en": "I have passed the maths exam."
+        },
+        {
+          "correct": [
+            "He",
+            "olvidado",
+            "los",
+            "deberes",
+            "en",
+            "casa"
+          ],
+          "shuffle": [
+            "en",
+            "He",
+            "olvidado",
+            "casa",
+            "deberes",
+            "los"
+          ],
+          "en": "I have left my homework at home."
+        },
+        {
+          "correct": [
+            "La",
+            "profe",
+            "ha",
+            "hecho",
+            "una",
+            "pregunta",
+            "difícil"
+          ],
+          "shuffle": [
+            "pregunta",
+            "hecho",
+            "ha",
+            "una",
+            "profe",
+            "difícil",
+            "La"
+          ],
+          "en": "The teacher has asked a difficult question."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'He suspendido' means:",
+          "opts": [
+            "I have failed",
+            "I have passed",
+            "I have stopped"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "He ___ mi lápiz. (lost)",
+          "opts": [
+            "perdido",
+            "perdo",
+            "pierdo"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "A Day at School",
+        "paras": [
+          "Luna comes home happy. '¡He aprobado el examen! Mi nota es un nueve.'",
+          "Sol is not so happy. 'He olvidado los deberes en casa y he perdido mi lápiz.'",
+          "'No pasa nada,' says Luna. 'Mañana es otro día.'"
+        ],
+        "qs": [
+          {
+            "q": "What mark did Luna get?",
+            "opts": [
+              "Nine",
+              "Five",
+              "Ten"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What has Sol forgotten?",
+            "opts": [
+              "His homework",
+              "His lunch",
+              "His coat"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What has Sol lost?",
+            "opts": [
+              "His pencil",
+              "His bag",
+              "His book"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 107,
+      "title": "¿Qué tal te ha ido?",
+      "subtitle": "How did it go?",
+      "emoji": "🙂",
+      "milestone": false,
+      "funFact": "Before a party or a trip, people in Spain say '¡Que lo pases bien!' It means 'Have a great time!'",
+      "phrase": {
+        "es": "Me lo he pasado genial.",
+        "en": "I've had a great time."
+      },
+      "words": [
+        {
+          "es": "¿Qué tal te ha ido?",
+          "en": "How did it go?",
+          "say": "keh tal teh ah EE-doh",
+          "emoji": "🙂"
+        },
+        {
+          "es": "Me ha ido bien",
+          "en": "It went well",
+          "say": "meh ah EE-doh byen",
+          "emoji": "👍"
+        },
+        {
+          "es": "Me ha ido mal",
+          "en": "It went badly",
+          "say": "meh ah EE-doh mal",
+          "emoji": "👎"
+        },
+        {
+          "es": "Ha sido divertido",
+          "en": "It has been fun",
+          "say": "ah SEE-doh dee-behr-TEE-doh",
+          "emoji": "🎉"
+        },
+        {
+          "es": "Ha sido aburrido",
+          "en": "It has been boring",
+          "say": "ah SEE-doh ah-boo-RREE-doh",
+          "emoji": "🥱"
+        },
+        {
+          "es": "Me lo he pasado genial",
+          "en": "I've had a great time",
+          "say": "meh loh eh pah-SAH-doh heh-NYAL",
+          "emoji": "🤩"
+        },
+        {
+          "es": "¡Qué día!",
+          "en": "What a day!",
+          "say": "keh DEE-ah",
+          "emoji": "😮"
+        },
+        {
+          "es": "La excursión",
+          "en": "The school trip",
+          "say": "lah es-koor-SYON",
+          "emoji": "🚌"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Me",
+            "lo",
+            "he",
+            "pasado",
+            "genial",
+            "en",
+            "la",
+            "fiesta"
+          ],
+          "shuffle": [
+            "lo",
+            "fiesta",
+            "genial",
+            "he",
+            "la",
+            "Me",
+            "pasado",
+            "en"
+          ],
+          "en": "I've had a great time at the party."
+        },
+        {
+          "correct": [
+            "Hoy",
+            "me",
+            "ha",
+            "ido",
+            "muy",
+            "bien"
+          ],
+          "shuffle": [
+            "ido",
+            "Hoy",
+            "me",
+            "bien",
+            "muy",
+            "ha"
+          ],
+          "en": "Today it has gone very well."
+        },
+        {
+          "correct": [
+            "La",
+            "excursión",
+            "ha",
+            "sido",
+            "muy",
+            "divertida"
+          ],
+          "shuffle": [
+            "excursión",
+            "La",
+            "divertida",
+            "ha",
+            "sido",
+            "muy"
+          ],
+          "en": "The school trip has been really fun."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Me lo he pasado genial' means:",
+          "opts": [
+            "I've had a great time",
+            "I've passed the exam",
+            "I've gone past"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "La película ___ sido aburrida.",
+          "opts": [
+            "ha",
+            "he",
+            "han"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "The School Trip",
+        "paras": [
+          "Papá asks Luna: '¿Qué tal te ha ido la excursión?'",
+          "'¡Me lo he pasado genial! Hemos visto el museo y ha sido muy divertido.'",
+          "'¿Y el viaje en autobús?' 'Ha sido un poco aburrido. ¡Pero qué día!'"
+        ],
+        "qs": [
+          {
+            "q": "Where did Luna go on the trip?",
+            "opts": [
+              "To a museum",
+              "To the zoo",
+              "To the beach"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How was the trip overall?",
+            "opts": [
+              "Great fun",
+              "Boring",
+              "Scary"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What was a bit boring?",
+            "opts": [
+              "The bus ride",
+              "The museum",
+              "The lunch"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 108,
+      "title": "Esta mañana me he…",
+      "subtitle": "This morning I have…",
+      "emoji": "🪥",
+      "milestone": false,
+      "funFact": "In Spain, 'me he dormido' can mean 'I've overslept'. It's a very common (and very handy) excuse for being late!",
+      "phrase": {
+        "es": "Hoy me he levantado muy temprano.",
+        "en": "Today I got up very early."
+      },
+      "words": [
+        {
+          "es": "Me he despertado",
+          "en": "I have woken up",
+          "say": "meh eh des-pehr-TAH-doh",
+          "emoji": "⏰"
+        },
+        {
+          "es": "Me he levantado",
+          "en": "I have got up",
+          "say": "meh eh leh-bahn-TAH-doh",
+          "emoji": "🛏️"
+        },
+        {
+          "es": "Me he duchado",
+          "en": "I have had a shower",
+          "say": "meh eh doo-CHAH-doh",
+          "emoji": "🚿"
+        },
+        {
+          "es": "Me he vestido",
+          "en": "I have got dressed",
+          "say": "meh eh bes-TEE-doh",
+          "emoji": "👕"
+        },
+        {
+          "es": "Me he peinado",
+          "en": "I have brushed my hair",
+          "say": "meh eh pey-NAH-doh",
+          "emoji": "💇"
+        },
+        {
+          "es": "Me he lavado los dientes",
+          "en": "I have brushed my teeth",
+          "say": "meh eh lah-BAH-doh los DYEN-tes",
+          "emoji": "🪥"
+        },
+        {
+          "es": "Temprano",
+          "en": "Early",
+          "say": "tem-PRAH-noh",
+          "emoji": "🌄"
+        },
+        {
+          "es": "Me he dormido",
+          "en": "I have overslept",
+          "say": "meh eh dor-MEE-doh",
+          "emoji": "😪"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Hoy",
+            "me",
+            "he",
+            "levantado",
+            "muy",
+            "temprano"
+          ],
+          "shuffle": [
+            "me",
+            "levantado",
+            "muy",
+            "Hoy",
+            "temprano",
+            "he"
+          ],
+          "en": "Today I have got up very early."
+        },
+        {
+          "correct": [
+            "Me",
+            "he",
+            "duchado",
+            "y",
+            "me",
+            "he",
+            "vestido"
+          ],
+          "shuffle": [
+            "he",
+            "Me",
+            "vestido",
+            "y",
+            "me",
+            "duchado",
+            "he"
+          ],
+          "en": "I have had a shower and got dressed."
+        },
+        {
+          "correct": [
+            "Mi",
+            "hermano",
+            "se",
+            "ha",
+            "dormido",
+            "otra",
+            "vez"
+          ],
+          "shuffle": [
+            "hermano",
+            "ha",
+            "dormido",
+            "vez",
+            "Mi",
+            "otra",
+            "se"
+          ],
+          "en": "My brother has overslept again."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "Mi hermana ___ ha duchado.",
+          "opts": [
+            "se",
+            "me",
+            "te"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Temprano' means:",
+          "opts": [
+            "Early",
+            "Late",
+            "Tomorrow"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Late Again!",
+        "paras": [
+          "Sol runs into the kitchen. '¡Me he dormido!'",
+          "'¿Te has duchado?' asks Mamá. 'Sí, me he duchado y me he vestido.'",
+          "'¿Y te has lavado los dientes?' Sol stops. '¡Ay, todavía no!'"
+        ],
+        "qs": [
+          {
+            "q": "Why is Sol late?",
+            "opts": [
+              "He has overslept",
+              "He has lost his shoes",
+              "He has been ill"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What has Sol already done?",
+            "opts": [
+              "Showered and got dressed",
+              "Had breakfast",
+              "Brushed his teeth"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What hasn't he done yet?",
+            "opts": [
+              "Brushed his teeth",
+              "Got dressed",
+              "Woken up"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 109,
+      "title": "¡Tengo noticias!",
+      "subtitle": "I've got news!",
+      "emoji": "📰",
+      "milestone": false,
+      "funFact": "In Spain, people say '¡Enhorabuena!' for good news and achievements, and '¡Felicidades!' especially for birthdays.",
+      "phrase": {
+        "es": "¿Sabes qué? ¡Ha nacido mi primo!",
+        "en": "Guess what? My cousin has been born!"
+      },
+      "words": [
+        {
+          "es": "¿Sabes qué?",
+          "en": "Guess what?",
+          "say": "SAH-bes keh",
+          "emoji": "🤫"
+        },
+        {
+          "es": "¡Qué bien!",
+          "en": "That's great!",
+          "say": "keh byen",
+          "emoji": "😃"
+        },
+        {
+          "es": "¡Qué pena!",
+          "en": "What a shame!",
+          "say": "keh PEH-nah",
+          "emoji": "😢"
+        },
+        {
+          "es": "¡Enhorabuena!",
+          "en": "Congratulations!",
+          "say": "en-oh-rah-BWEH-nah",
+          "emoji": "🎊"
+        },
+        {
+          "es": "Ha nacido",
+          "en": "Has been born",
+          "say": "ah nah-THEE-doh",
+          "emoji": "👶"
+        },
+        {
+          "es": "Se ha mudado",
+          "en": "Has moved house",
+          "say": "seh ah moo-DAH-doh",
+          "emoji": "📦"
+        },
+        {
+          "es": "Ha cumplido años",
+          "en": "Has had a birthday",
+          "say": "ah koom-PLEE-doh AH-nyos",
+          "emoji": "🎂"
+        },
+        {
+          "es": "La noticia",
+          "en": "The news",
+          "say": "lah noh-TEE-thyah",
+          "emoji": "📰"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Ha",
+            "nacido",
+            "mi",
+            "primo",
+            "Pablo"
+          ],
+          "shuffle": [
+            "Pablo",
+            "nacido",
+            "Ha",
+            "primo",
+            "mi"
+          ],
+          "en": "My cousin Pablo has been born."
+        },
+        {
+          "correct": [
+            "Mi",
+            "mejor",
+            "amiga",
+            "se",
+            "ha",
+            "mudado",
+            "a",
+            "Valencia"
+          ],
+          "shuffle": [
+            "se",
+            "mudado",
+            "mejor",
+            "Valencia",
+            "ha",
+            "a",
+            "Mi",
+            "amiga"
+          ],
+          "en": "My best friend has moved to Valencia."
+        },
+        {
+          "correct": [
+            "Mi",
+            "abuelo",
+            "ha",
+            "cumplido",
+            "ochenta",
+            "años"
+          ],
+          "shuffle": [
+            "años",
+            "cumplido",
+            "Mi",
+            "ochenta",
+            "ha",
+            "abuelo"
+          ],
+          "en": "My grandad has turned eighty."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'¡Qué pena!' means:",
+          "opts": [
+            "What a shame!",
+            "That's great!",
+            "Well done!"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Mi amiga ___ mudado.",
+          "opts": [
+            "se ha",
+            "ha se",
+            "me ha"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Good News, Bad News",
+        "paras": [
+          "Luna runs to Sol. '¿Sabes qué? ¡Ha nacido mi primo! Se llama Pablo.' '¡Enhorabuena!' says Sol.",
+          "'Pero tengo otra noticia. Mi mejor amiga se ha mudado a Valencia.' '¡Qué pena!'",
+          "'Y hoy mi abuelo ha cumplido ochenta años.' '¡Qué bien! ¡Felicidades al abuelo!'"
+        ],
+        "qs": [
+          {
+            "q": "Who has been born?",
+            "opts": [
+              "Luna's cousin",
+              "Luna's sister",
+              "Sol's brother"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Where has Luna's friend moved to?",
+            "opts": [
+              "Valencia",
+              "Madrid",
+              "London"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How old is Luna's grandad now?",
+            "opts": [
+              "Eighty",
+              "Seventy",
+              "Ninety"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 110,
+      "title": "¡Campeón del pasado reciente!",
+      "subtitle": "Recent past champion",
+      "emoji": "🏆",
+      "milestone": true,
+      "funFact": "You can now talk about your day, your week and things you have ever done, just like people in Spain do every day!",
+      "phrase": {
+        "es": "Hoy me lo he pasado genial y he aprendido mucho.",
+        "en": "Today I've had a great time and learned a lot."
+      },
+      "words": [
+        {
+          "es": "He comido",
+          "en": "I have eaten",
+          "say": "eh koh-MEE-doh",
+          "emoji": "🍽️"
+        },
+        {
+          "es": "He visto",
+          "en": "I have seen",
+          "say": "eh BEES-toh",
+          "emoji": "👀"
+        },
+        {
+          "es": "He hecho",
+          "en": "I have done / made",
+          "say": "eh EH-choh",
+          "emoji": "🛠️"
+        },
+        {
+          "es": "¿Alguna vez has…?",
+          "en": "Have you ever…?",
+          "say": "al-GOO-nah behth as",
+          "emoji": "🤔"
+        },
+        {
+          "es": "Hemos ganado",
+          "en": "We have won",
+          "say": "EH-mos gah-NAH-doh",
+          "emoji": "🏆"
+        },
+        {
+          "es": "Me lo he pasado genial",
+          "en": "I've had a great time",
+          "say": "meh loh eh pah-SAH-doh heh-NYAL",
+          "emoji": "🤩"
+        },
+        {
+          "es": "Me he despertado",
+          "en": "I have woken up",
+          "say": "meh eh des-pehr-TAH-doh",
+          "emoji": "⏰"
+        },
+        {
+          "es": "¡Enhorabuena!",
+          "en": "Congratulations!",
+          "say": "en-oh-rah-BWEH-nah",
+          "emoji": "🎊"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Esta",
+            "semana",
+            "he",
+            "visto",
+            "dos",
+            "películas"
+          ],
+          "shuffle": [
+            "visto",
+            "películas",
+            "dos",
+            "Esta",
+            "semana",
+            "he"
+          ],
+          "en": "This week I have seen two films."
+        },
+        {
+          "correct": [
+            "Nunca",
+            "he",
+            "estado",
+            "en",
+            "Barcelona"
+          ],
+          "shuffle": [
+            "Nunca",
+            "estado",
+            "he",
+            "en",
+            "Barcelona"
+          ],
+          "en": "I have never been to Barcelona."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "Hacer → he ___",
+          "opts": [
+            "hecho",
+            "hacido",
+            "hizo"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Nosotros ___ terminado los deberes.",
+          "opts": [
+            "hemos",
+            "he",
+            "han"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'¿Qué tal te ha ido?' means:",
+          "opts": [
+            "How did it go?",
+            "Where have you been?",
+            "What have you eaten?"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Se ha mudado' means:",
+          "opts": [
+            "Has moved house",
+            "Has changed clothes",
+            "Has gone mute"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "A Day to Remember",
+        "paras": [
+          "What a day! Sol and Luna sit on a bench in the park.",
+          "'Hoy hemos ganado el partido, he visto a mi abuela y he comido paella,' says Sol.",
+          "'Yo me lo he pasado genial,' says Luna. '¡Y hemos aprendido el pretérito perfecto!' '¡Enhorabuena a los dos!' 🏆"
+        ],
+        "qs": [
+          {
+            "q": "What has Sol eaten?",
+            "opts": [
+              "Paella",
+              "Pizza",
+              "Soup"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Who has Sol seen?",
+            "opts": [
+              "His grandma",
+              "His teacher",
+              "His cousin"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What have they both learned?",
+            "opts": [
+              "The present perfect",
+              "The future",
+              "Numbers"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    }
+  ]
+}
