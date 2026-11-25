@@ -1,5 +1,5 @@
 // What Sol & Luna say during activities. Sol = energetic, Luna = gentle.
-export type Mood = "happy" | "celebrate" | "encourage" | "wink" | "sleepy";
+export type Mood = "happy" | "celebrate" | "encourage" | "wink" | "sleepy" | "thinking" | "surprised";
 export interface Reaction { who: "sol" | "luna"; mood: Mood; text: string; id: number }
 type Kind = "streak" | "recover" | "wrong";
 

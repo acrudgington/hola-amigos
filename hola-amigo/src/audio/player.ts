@@ -48,6 +48,21 @@ function speakWithDevice(s: Segment, done: () => void) {
   window.speechSynthesis.speak(u);
 }
 
+// ---------- who is speaking right now (so Sol and Luna can move their mouths) ----------
+type Talker = Speaker | null;
+let talker: Talker = null;
+const talkerListeners = new Set<() => void>();
+const speakerOf = (s: Segment): Speaker => (s.role.startsWith("sol") ? "sol" : s.role.startsWith("luna") ? "luna" : "teacher");
+function setTalker(t: Talker) {
+  if (t === talker) return;
+  talker = t;
+  talkerListeners.forEach(fn => fn());
+}
+export const speaking = {
+  get: (): Talker => talker,
+  subscribe: (fn: () => void) => { talkerListeners.add(fn); return () => { talkerListeners.delete(fn); }; },
+};
+
 // ---------- player ----------
 class VoicePlayer {
   private el: HTMLAudioElement | null = null;
@@ -87,6 +102,7 @@ class VoicePlayer {
     this.current = null;
     if (this.el) { this.el.onended = null; this.el.onerror = null; this.el.pause(); }
     if (hasWindow) window.speechSynthesis?.cancel();
+    setTalker(null);
   }
 
   isBusy() { return !!this.current; }
@@ -105,6 +121,7 @@ class VoicePlayer {
       if (token !== this.token) return;
       if (i >= job.segments.length) { this.finish(job); return; }
       const seg = job.segments[i++];
+      setTalker(speakerOf(seg));
       const advance = () => { if (token === this.token) setTimeout(next, i < job.segments.length ? GAP_MS : 0); };
       const url = urlFor(seg);
       const el = this.element();
@@ -119,6 +136,7 @@ class VoicePlayer {
 
   private finish(job: Job) {
     this.current = null;
+    setTalker(null);
     job.onEnd?.();
     const following = this.queue.shift();
     if (following) this.run(following);

@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
+import { CharacterGallery } from "./screens/CharacterGallery.tsx";
 import { UpdateBanner } from "./components/UpdateBanner.tsx";
 // Fonts are bundled with the app (no requests to Google): better privacy for
 // children under EU data protection law (GDPR), and they work offline. Latin subset
@@ -18,7 +19,7 @@ import "./styles.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <App />
+    {location.hash === "#characters" ? <CharacterGallery /> : <App />}
     {import.meta.env.PROD && <UpdateBanner />}
   </React.StrictMode>,
 );
