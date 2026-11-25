@@ -6,7 +6,7 @@ An interactive Spanish learning app for kids aged 6+, taking them from absolute 
 
 ### Learning content
 - **100 lessons** across 12 themed worlds, from Starter Island to Repaso Total
-- **690 Spanish words** across vocabulary, phrases, grammar, past, future, and everyday situations
+- **692 Spanish words** across vocabulary, phrases, grammar, past, future, and everyday situations
 - **14 activity types**: Learn, Flashcards, Listen, Matching, Drag & Match, Odd One Out, Quiz, Say It! (speaking), Sentences, Word Order, Stories, Warm-ups, Surprises and end-of-world Boss Battles
 - **Guided lessons** that mix the activities differently in each lesson, scored 1–3 stars
 - **Daily review** with spaced repetition (Leitner boxes) so words stick
@@ -36,7 +36,7 @@ An interactive Spanish learning app for kids aged 6+, taking them from absolute 
 ### Look & feel — "mission control for kids"
 - **Bento dashboard** home: Sol's mission plan, an "Up next" lesson card, live stat tiles with sparklines, daily quests, an activity feed, a weekly XP chart and word-power meter
 - **Sol the study buddy** plans today's mission (review → lesson → treasure chest) as a live, step-by-step checklist
-- **Ask Sol** (⌘K / Ctrl+K): search all 690 words and 100 lessons; tap a word to hear it
+- **Ask Sol** (⌘K / Ctrl+K): search all 692 words and 100 lessons; tap a word to hear it
 - **Journey map** with world tabs: flip through the 12 worlds, each with its own illustrated banner and winding path
 - **Night and Day themes**: crisp, flat surfaces on a dot-grid canvas, with a custom SVG icon set
 - **Motion**: spring animations, page transitions, typing text, flowing paths, floating "+XP" pop-ups

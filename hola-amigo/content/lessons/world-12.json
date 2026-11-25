@@ -7,7 +7,7 @@
       "subtitle": "Greetings + numbers 1-50",
       "emoji": "🔢",
       "milestone": false,
-      "funFact": "In Spain, you say 'veintiuno' (21), 'veintidós' (22) — one word, not two!",
+      "funFact": "In Spain, 21 is one word, 'veintiuno' — but from 31 it's three: 'treinta y uno'!",
       "phrase": {
         "es": "Hola, encantado. Tengo treinta amigos.",
         "en": "Hello, pleased to meet you. I have thirty friends."
@@ -41,13 +41,13 @@
           "es": "Encantado",
           "en": "Pleased to meet you (m)",
           "say": "en-kahn-TAH-do",
-          "emoji": "🤝"
+          "emoji": "🙋‍♂️"
         },
         {
           "es": "Encantada",
           "en": "Pleased to meet you (f)",
           "say": "en-kahn-TAH-dah",
-          "emoji": "🤝"
+          "emoji": "🙋‍♀️"
         },
         {
           "es": "Hasta luego",
@@ -94,8 +94,8 @@
       "story": {
         "title": "The Big Reunion",
         "paras": [
-          "¡Hola a todos! Sol greets everyone. 'Encantado!' he says to a new face.",
-          "He counts his amigos — uno, dos… ¡veinte amigos! Treinta primos! Cuarenta peluches en casa.",
+          "¡Hola a todos! Sol greets everyone. '¡Encantado!' he says to a new face.",
+          "He counts his amigos — uno, dos… ¡veinte amigos! ¡Treinta primos! Cuarenta peluches en casa.",
           "'¡Hasta mañana!' shout the friends. ¡Qué fiesta tan grande!"
         ],
         "qs": [
@@ -232,7 +232,7 @@
         "paras": [
           "Luna draws muchas formas. Un círculo grande, un cuadrado azul claro, un triángulo verde.",
           "Sol adds un corazón rojo and una estrella amarilla. They make a beautiful painting.",
-          "'Mi favorita es la estrella oscura,' says Luna. 'Yo prefiero el corazón.' Both are happy."
+          "'Mi favorito es el cuadrado azul claro,' says Luna. 'Yo prefiero el corazón.' Both are happy."
         ],
         "qs": [
           {
@@ -256,7 +256,7 @@
           {
             "q": "What is Luna's favourite?",
             "opts": [
-              "The dark star",
+              "The light blue square",
               "The heart",
               "The circle"
             ],
@@ -366,8 +366,8 @@
       "story": {
         "title": "The Flavour Adventure",
         "paras": [
-          "Sol y Luna try many flavours. Sol tastes un limón — '¡Ácido!' Then chocolate — 'Dulce!'",
-          "Luna tries un chile picante — '¡Necesito agua!' Then helado frío — 'Delicioso!'",
+          "Sol y Luna try many flavours. Sol tastes un limón — '¡Ácido!' Then chocolate — '¡Dulce!'",
+          "Luna tries una guindilla picante — '¡Necesito agua!' Then helado frío — '¡Delicioso!'",
           "They agree: la comida is muy interesante. ¡Cuántos sabores diferentes!"
         ],
         "qs": [
@@ -505,7 +505,7 @@
         "title": "Family at Home",
         "paras": [
           "Sol y Luna viven en una casa grande. Comparten una habitación con su hermana.",
-          "Mamá y papá cuidan a todos. They cenan juntos every night at las ocho.",
+          "Mamá y papá cuidan a todos. They cenan juntos every night a las nueve.",
           "'Quiero mucho a mi familia,' says Sol. ¡La familia es lo más importante!"
         ],
         "qs": [
@@ -521,7 +521,7 @@
           {
             "q": "When do they dine together?",
             "opts": [
-              "Every night at eight",
+              "Every night at nine",
               "Every morning",
               "Sometimes"
             ],
@@ -545,7 +545,7 @@
       "subtitle": "Weather + seasons + time",
       "emoji": "⏰",
       "milestone": false,
-      "funFact": "Spain has 'siesta' — a tradition where people take a nap after lunch in the hottest months!",
+      "funFact": "'Siesta' is a Spanish word the whole world knows — a short nap after lunch, especially on hot summer days!",
       "phrase": {
         "es": "Hoy hace buen tiempo y mañana también.",
         "en": "Today the weather is nice and tomorrow too."
@@ -555,7 +555,7 @@
           "es": "Hoy",
           "en": "Today",
           "say": "OY",
-          "emoji": "📅"
+          "emoji": "📍"
         },
         {
           "es": "Mañana",
@@ -638,7 +638,7 @@
         "paras": [
           "Hoy hace buen tiempo y Sol is happy. Ayer hizo mal tiempo with lots of rain.",
           "Esta semana is special — Luna's cumpleaños. El próximo mes will be summer.",
-          "'El año pasa muy rápido,' says Sol. 'Pero cada día es una aventura nueva!'"
+          "'El año pasa muy rápido,' says Sol. '¡Pero cada día es una aventura nueva!'"
         ],
         "qs": [
           {
@@ -903,7 +903,7 @@
         "title": "Shopping Day",
         "paras": [
           "Luna goes to la tienda. She wants un vestido nuevo. The talla mediana fits well!",
-          "She goes to el probador to try it on. '¡Está perfecta!' she says. '¡Me lo llevo!'",
+          "She goes to el probador to try it on. '¡Me queda perfecto!' she says. '¡Me lo llevo!'",
           "Today is las rebajas, so it's muy barato. Luna is muy feliz with her new dress!"
         ],
         "qs": [
@@ -943,7 +943,7 @@
       "subtitle": "Final Mega Champion",
       "emoji": "🏆",
       "milestone": true,
-      "funFact": "¡FELICIDADES! You have completed all 100 lessons! 100 hours of learning, nearly 700 words! You ARE a Spanish superstar! 🎉🌟🏆",
+      "funFact": "¡FELICIDADES! You've completed all 100 lessons and nearly 700 words! You ARE a Spanish superstar! 🎉🌟🏆",
       "phrase": {
         "es": "¡Soy un mega campeón del español!",
         "en": "I am a mega Spanish champion!"
@@ -1098,8 +1098,8 @@
         "title": "The Mega Champion",
         "paras": [
           "Sol and Luna stand on top of the mountain. 'We did it!' they shout to the sky.",
-          "'100 lessons! ¡Casi 700 palabras! We can speak Spanish like real Spaniards!'",
-          "They look down at their journey — from ¡Hola! to today. ¡Qué viaje increíble! Eres un MEGA CAMPEÓN! 🏆🌟"
+          "'100 lessons! ¡Casi 700 palabras! We can talk about so many things in Spanish!'",
+          "They look down at their journey — from ¡Hola! to today. ¡Qué viaje increíble! ¡Eres un MEGA CAMPEÓN! 🏆🌟"
         ],
         "qs": [
           {

@@ -104,7 +104,7 @@
         "paras": [
           "Sol and Luna visit el zoo. They see un león yawning, un tigre running, and una jirafa with a very long neck!",
           "Los monos jump from tree to tree. ¡Qué divertidos! Una serpiente verde slithers along a branch.",
-          "At the end, they see el panda eating bamboo. 'Es mi favorito!' Luna says. '¡Qué lindo!'"
+          "At the end, they see el panda eating bamboo. '¡Es mi favorito!' Luna says. '¡Qué mono!'"
         ],
         "qs": [
           {
@@ -143,7 +143,7 @@
       "subtitle": "Sea animals",
       "emoji": "🐠",
       "milestone": false,
-      "funFact": "In Spain, 'pulpo a la gallega' (Galician octopus) is a famous dish — but kids prefer the sea ones!",
+      "funFact": "In Spanish, a fish swimming in the sea is 'un pez' — but fish on your plate is 'pescado'!",
       "phrase": {
         "es": "En el mar hay peces y delfines.",
         "en": "In the sea there are fish and dolphins."
@@ -236,9 +236,9 @@
       "story": {
         "title": "Under the Sea",
         "paras": [
-          "Sol y Luna explore el mar. They see peces colourful and una tortuga lenta.",
+          "Sol y Luna explore el mar. They see colourful peces and una tortuga lenta.",
           "De repente, ¡un tiburón! But it's friendly! He swims away. Then un pulpo waves with eight arms.",
-          "Un delfín jumps out of the water. 'Hola amigos!' he sings. Sol y Luna laugh muy felices."
+          "Un delfín jumps out of the water. '¡Hola, amigos!' he sings. Sol y Luna laugh muy felices."
         ],
         "qs": [
           {
@@ -277,7 +277,7 @@
       "subtitle": "Little insects",
       "emoji": "🦋",
       "milestone": false,
-      "funFact": "Spanish ladybugs ('mariquitas') are good luck if they land on you — make a wish!",
+      "funFact": "In Spain, some people say a 'mariquita' landing on you brings good luck!",
       "phrase": {
         "es": "Las mariposas son muy bonitas.",
         "en": "Butterflies are very pretty."
@@ -309,7 +309,7 @@
         },
         {
           "es": "La mariquita",
-          "en": "Ladybug",
+          "en": "Ladybird",
           "say": "la mah-ree-KEE-tah",
           "emoji": "🐞"
         },
@@ -346,7 +346,7 @@
             "Veo",
             "mariquita"
           ],
-          "en": "I see a red ladybug."
+          "en": "I see a red ladybird."
         },
         {
           "correct": [
@@ -372,7 +372,7 @@
         "paras": [
           "In the jardín, Sol sees una mariposa azul. It flies from flower to flower.",
           "Una abeja makes miel from the flowers. Una mariquita roja lands on Sol's hand. '¡Buena suerte!'",
-          "Luna spots una hormiga carrying a leaf to her hill. 'Las hormigas son muy fuertes!' she says."
+          "Luna spots una hormiga carrying a leaf to her hill. '¡Las hormigas son muy fuertes!' she says."
         ],
         "qs": [
           {
@@ -439,7 +439,7 @@
           "es": "El invierno",
           "en": "Winter",
           "say": "el een-BYEHR-no",
-          "emoji": "❄️"
+          "emoji": "⛄"
         },
         {
           "es": "Las flores",
@@ -545,7 +545,7 @@
       "subtitle": "In the garden",
       "emoji": "🌷",
       "milestone": false,
-      "funFact": "Spain's national tree is the holm oak ('encina') — it grows for hundreds of years!",
+      "funFact": "The 'encina' (holm oak) is one of Spain's most typical trees — some are hundreds of years old!",
       "phrase": {
         "es": "Las plantas necesitan agua y sol para crecer.",
         "en": "Plants need water and sun to grow."
@@ -638,7 +638,7 @@
         "paras": [
           "Sol planta una semilla in el jardín. He gives it agua and sol every day.",
           "After two weeks, una hoja appears. The raíz grows down. La rama grows up.",
-          "After dos meses, it's una planta grande con flores rosas. '¡Yo crecí esta planta!' Sol is muy orgulloso."
+          "After dos meses, it's una planta grande con flores rosas. '¡Mira cuánto ha crecido mi planta!' Sol is muy orgulloso."
         ],
         "qs": [
           {
@@ -677,7 +677,7 @@
       "subtitle": "The sky",
       "emoji": "☁️",
       "milestone": false,
-      "funFact": "In Spanish folklore, a rainbow ('arcoíris') is a magical bridge from earth to heaven!",
+      "funFact": "'Arcoíris' means 'Iris's arch' — Iris was the Greek goddess of the rainbow!",
       "phrase": {
         "es": "Después de la lluvia hay un arcoíris.",
         "en": "After the rain there's a rainbow."
@@ -687,7 +687,7 @@
           "es": "El cielo",
           "en": "Sky",
           "say": "el THYEH-loh",
-          "emoji": "☁️"
+          "emoji": "🌤️"
         },
         {
           "es": "La nube",
@@ -711,7 +711,7 @@
           "es": "El trueno",
           "en": "Thunder",
           "say": "el TRWEH-no",
-          "emoji": "⛈️"
+          "emoji": "🔊"
         },
         {
           "es": "El viento",
@@ -770,7 +770,7 @@
         "paras": [
           "El cielo gets dark. Las nubes are heavy. De repente, ¡un relámpago! Then ¡el trueno!",
           "¡Una tormenta! El viento blows hard. La lluvia falls. Sol y Luna se esconden in their casa.",
-          "After the storm, ¡un arcoíris! 'Mira, Luna!' grita Sol. The sky is beautiful again. ¡Qué maravilloso!"
+          "After the storm, ¡un arcoíris! '¡Mira, Luna!' grita Sol. The sky is beautiful again. ¡Qué maravilloso!"
         ],
         "qs": [
           {
@@ -905,7 +905,7 @@
         "title": "Journey to the Stars",
         "paras": [
           "Sol y Luna sueñan con el espacio. They imagine un cohete grande. '¡Vamos al universo!'",
-          "They visit la Tierra from above — qué pequeña! Then la Luna — perfecta!",
+          "They visit la Tierra from above — ¡qué pequeña! Then la Luna — ¡perfecta!",
           "Las estrellas brillan around them. Otros planetas: Marte rojo, Júpiter enorme. ¡Qué increíble!"
         ],
         "qs": [

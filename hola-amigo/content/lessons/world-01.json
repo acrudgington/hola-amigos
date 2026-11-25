@@ -23,7 +23,7 @@
           "es": "Adiós",
           "en": "Goodbye",
           "say": "ah-DYOS",
-          "emoji": "👋"
+          "emoji": "🤚"
         },
         {
           "es": "Buenos días",
@@ -627,7 +627,7 @@
       "milestone": false,
       "funFact": "Spanish kids sing 'Cabeza, hombros, rodillas, pies'!",
       "phrase": {
-        "es": "¡Toca la cabeza!",
+        "es": "¡Tócate la cabeza!",
         "en": "Touch your head!"
       },
       "words": [
@@ -775,9 +775,9 @@
           "emoji": "🤒"
         },
         {
-          "es": "Con hambre",
-          "en": "Hungry",
-          "say": "kon AHM-breh",
+          "es": "Tengo hambre",
+          "en": "I'm hungry",
+          "say": "TEN-go AHM-breh",
           "emoji": "😋"
         }
       ],

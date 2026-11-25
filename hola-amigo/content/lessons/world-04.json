@@ -7,7 +7,7 @@
       "subtitle": "Yesterday (past)",
       "emoji": "⏪",
       "milestone": false,
-      "funFact": "Past tense words often end in -É or -Í!",
+      "funFact": "To say what YOU did yesterday, many verbs end in -é (hablé, jugué) or -í (comí, vi). Fui (I went) is a special one!",
       "phrase": {
         "es": "Ayer fui a la playa.",
         "en": "Yesterday I went to the beach."
@@ -115,9 +115,9 @@
       "story": {
         "title": "Yesterday's Adventure",
         "paras": [
-          "Ayer, Pablo fui al parque con su perro. They walked, ran, and played all morning.",
-          "Después, Pablo comí un bocadillo and drank water. He saw a pájaro — it was azul and very bonito.",
-          "He jugó fútbol with his friends and then compró a helado. 'Ayer was the best day!' said Pablo."
+          "Pablo tells his friend: 'Ayer fui al parque con mi perro. We walked, ran, and played all morning.'",
+          "'Después, comí un bocadillo and drank water. Vi un pájaro — it was azul and very bonito.'",
+          "'Then jugué al fútbol with my friends and compré un helado. ¡Fue el mejor día!'"
         ],
         "qs": [
           {
@@ -260,7 +260,7 @@
         "title": "Big Plans",
         "paras": [
           "'Mañana voy a ir a la playa,' says Sofía. 'Voy a nadar in the sea and build a castillo de arena!'",
-          "Her hermano says 'Voy a jugar al fútbol on the sand.' Mamá says 'Voy a comer paella!'",
+          "Her hermano says 'Voy a jugar al fútbol on the sand.' Mamá says '¡Voy a comer paella!'",
           "'This weekend is going to be amazing,' says Sofía. '¡Vamos a la playa!'"
         ],
         "qs": [
@@ -300,7 +300,7 @@
       "subtitle": "At the restaurant",
       "emoji": "🍽️",
       "milestone": false,
-      "funFact": "'Menú del día' = 3 courses for under €12!",
+      "funFact": "Many Spanish restaurants offer a 'menú del día' at lunchtime — a starter, a main course and a dessert for one set price!",
       "phrase": {
         "es": "Quiero la sopa, por favor.",
         "en": "I'd like the soup, please."
@@ -434,7 +434,7 @@
       "subtitle": "Shopping",
       "emoji": "🛍️",
       "milestone": false,
-      "funFact": "Most shops close from 2pm to 5pm for lunch!",
+      "funFact": "Many small shops in Spain close for a long lunch break, often from about 2pm to 5pm!",
       "phrase": {
         "es": "¿Cuánto cuesta la camiseta?",
         "en": "How much does the T-shirt cost?"
@@ -474,7 +474,7 @@
           "es": "El dinero",
           "en": "Money",
           "say": "el dee-NEH-ro",
-          "emoji": "💰"
+          "emoji": "💶"
         },
         {
           "es": "La talla",
@@ -512,7 +512,7 @@
         "paras": [
           "Ana goes to la tienda with mamá. She sees a camiseta azul. '¿Cuánto cuesta?' asks mamá. 'Quince euros,' says the shop lady.",
           "'That's quite barato!' says mamá. But then Ana sees a vestido. It costs 80 euros! 'That's very caro,' says mamá.",
-          "In the end, Ana buys the camiseta. 'Me lo llevo!' she says. She uses her birthday dinero to pay. She is very feliz!"
+          "In the end, Ana buys the camiseta. '¡Me lo llevo!' she says. She uses her birthday dinero to pay. She is very feliz!"
         ],
         "qs": [
           {
@@ -551,7 +551,7 @@
       "subtitle": "Directions",
       "emoji": "🗺️",
       "milestone": false,
-      "funFact": "Spaniards love using roundabouts for directions!",
+      "funFact": "In Spain, 'straight on' is 'todo recto' — you'll hear it every time you ask the way!",
       "phrase": {
         "es": "¿Dónde está la playa?",
         "en": "Where is the beach?"
@@ -603,7 +603,7 @@
           "es": "Allí",
           "en": "There",
           "say": "ah-YEE",
-          "emoji": "👉"
+          "emoji": "🚩"
         }
       ],
       "sentences": [
@@ -628,7 +628,7 @@
         "title": "The Lost Dog",
         "paras": [
           "Pedro's perro Coco is lost! '¿Dónde está Coco?' Pedro asks a lady. 'I don't know,' she says. Pedro is triste.",
-          "Pedro asks a man: '¿Dónde está el parque?' The man says 'Todo recto and then a la derecha.' The park is cerca!",
+          "Pedro asks a man: '¿Dónde está el parque?' The man says 'Todo recto y luego a la derecha.' The park is cerca!",
           "Pedro runs to the park. And there is Coco! He's playing with other perros! '¡Aquí estás!' says Pedro. He is very feliz."
         ],
         "qs": [
@@ -745,7 +745,7 @@
         "title": "The School Nurse",
         "paras": [
           "Marta feels terrible at school. 'Me duele la cabeza,' she tells la profe. The profe sends her to the nurse.",
-          "The nurse asks: '¿Te duele el estómago?' Marta says 'No, me duele la garganta también.' She is enfermo.",
+          "The nurse asks: '¿Te duele el estómago?' Marta says 'No, pero me duele la garganta.' She is enferma.",
           "The nurse says 'Necesitas ir a la farmacia con tu mamá.' Mamá comes and takes her to el médico. After some medicine, Marta feels much better!"
         ],
         "qs": [
@@ -788,7 +788,7 @@
       "funFact": "Spanish stories begin with 'Había una vez'!",
       "phrase": {
         "es": "Había una vez un niño muy valiente.",
-        "en": "Once upon a time a very brave boy."
+        "en": "Once upon a time there was a very brave boy."
       },
       "words": [
         {
@@ -817,13 +817,13 @@
         },
         {
           "es": "Encontró",
-          "en": "Found",
+          "en": "He/she found",
           "say": "en-kon-TRO",
           "emoji": "🔍"
         },
         {
           "es": "Dijo",
-          "en": "Said",
+          "en": "He/she said",
           "say": "DEE-ho",
           "emoji": "💬"
         },
@@ -903,10 +903,10 @@
     {
       "id": 32,
       "title": "¡Super Campeón!",
-      "subtitle": "A2 Final Challenge",
+      "subtitle": "Story Land Challenge",
       "emoji": "🏆",
       "milestone": true,
-      "funFact": "You finished EVERYTHING! 300+ words, sentences, past, future, stories! 🎉🏆",
+      "funFact": "You've finished Story Land! Over 200 words, plus the past, the future and stories! 🎉🏆",
       "phrase": {
         "es": "¡Soy un super campeón del español!",
         "en": "I'm a super Spanish champion!"
@@ -1029,9 +1029,9 @@
       "story": {
         "title": "The Super Champion",
         "paras": [
-          "You started with just 'Hola!' Now you can say SO much more! You can talk about the past: 'Ayer fui a la playa.'",
+          "You started with just '¡Hola!' Now you can say SO much more! You can talk about the past: 'Ayer fui a la playa.'",
           "You can talk about the future: 'Mañana voy a jugar.' You can order food, go shopping, give directions, and tell stories!",
-          "You know over 300 Spanish words. You are a SUPER CAMPEÓN! ¡Felicidades! (Congratulations!) 🏆🌟"
+          "You know over 200 Spanish words. You are a SUPER CAMPEÓN! ¡Felicidades! (Congratulations!) 🏆🌟"
         ],
         "qs": [
           {
@@ -1055,7 +1055,7 @@
           {
             "q": "How many words have you learned?",
             "opts": [
-              "Over 300",
+              "Over 200",
               "Over 50",
               "Over 10"
             ],

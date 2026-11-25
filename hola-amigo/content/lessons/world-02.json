@@ -183,7 +183,7 @@
             "ans": 0
           },
           {
-            "q": "Which fruit does Pedro love?",
+            "q": "Which fruit does Pedro see at the market?",
             "opts": [
               "Fresas (strawberries)",
               "Limones (lemons)",
@@ -356,7 +356,7 @@
           "es": "La clase",
           "en": "Class",
           "say": "la KLAH-seh",
-          "emoji": "🏫"
+          "emoji": "🧑‍🤝‍🧑"
         },
         {
           "es": "El recreo",
@@ -512,7 +512,7 @@
       "subtitle": "My house",
       "emoji": "🏠",
       "milestone": false,
-      "funFact": "Spanish houses have a 'terraza' for dinner under the stars!",
+      "funFact": "Many Spanish homes have a 'terraza' — perfect for dinner under the stars!",
       "phrase": {
         "es": "Mi casa es grande.",
         "en": "My house is big."
@@ -572,7 +572,7 @@
       "story": {
         "title": "The New House",
         "paras": [
-          "The García family moves to a new casa in Spain. It has four rooms: a big salón, a cocina, a baño, and two dormitorios.",
+          "The García family moves to a new casa in Spain. It has five rooms: a big salón, a cocina, a baño, and two dormitorios.",
           "The children love the jardín — it has a big tree and flowers. '¡Mira, una puerta azul!' (Look, a blue door!) says Pablo.",
           "From the ventana, they can see the mountains. '¡Esta casa es muy bonita!' says mamá. Everyone is feliz."
         ],
@@ -613,7 +613,7 @@
       "subtitle": "Days & Weather",
       "emoji": "📅",
       "milestone": false,
-      "funFact": "The Costa Blanca has 300+ sunny days! ☀️",
+      "funFact": "Spanish weekdays are named after the sky: lunes (la Luna), martes (Marte), miércoles (Mercurio), jueves (Júpiter), viernes (Venus)!",
       "phrase": {
         "es": "Hoy es lunes y hace sol.",
         "en": "Today is Monday and it's sunny."
@@ -623,19 +623,31 @@
           "es": "Lunes",
           "en": "Monday",
           "say": "LOO-nes",
-          "emoji": "📅"
+          "emoji": "🌙"
         },
         {
           "es": "Martes",
           "en": "Tuesday",
           "say": "MAR-tes",
-          "emoji": "📅"
+          "emoji": "🔴"
         },
         {
           "es": "Miércoles",
           "en": "Wednesday",
           "say": "MYEHR-ko-les",
-          "emoji": "📅"
+          "emoji": "☄️"
+        },
+        {
+          "es": "Jueves",
+          "en": "Thursday",
+          "say": "HWEH-bes",
+          "emoji": "🪐"
+        },
+        {
+          "es": "Viernes",
+          "en": "Friday",
+          "say": "BYEHR-nes",
+          "emoji": "✨"
         },
         {
           "es": "Sábado",
@@ -647,7 +659,7 @@
           "es": "Domingo",
           "en": "Sunday",
           "say": "do-MEEN-go",
-          "emoji": "🎉"
+          "emoji": "🥘"
         },
         {
           "es": "Hace sol",
@@ -673,7 +685,7 @@
       "story": {
         "title": "The Weather Week",
         "paras": [
-          "On lunes, it's sunny — hace sol! On martes, it's cloudy. On miércoles, llueve all day. The children stay inside.",
+          "On lunes, it's sunny — hace sol! On martes, it's cloudy. On miércoles, llueve all day. The children stay inside. On jueves and viernes, they go to school.",
           "On sábado, hace sol again! The children go to the park. But hace frío — they need their abrigos.",
           "On domingo, the whole family goes to the beach. '¡Qué buen tiempo!' (What nice weather!) says papá."
         ],
@@ -710,11 +722,11 @@
     },
     {
       "id": 16,
-      "title": "A1 Final Challenge!",
+      "title": "Word Town Challenge!",
       "subtitle": "Test everything!",
       "emoji": "🏆",
       "milestone": true,
-      "funFact": "You've finished A1! 150+ words! Next: sentences and stories! 🎉🏆",
+      "funFact": "You've finished Starter Island and Word Town — over 120 words! Next: sentences and stories! 🎉🏆",
       "phrase": {
         "es": "¡Soy un campeón de español!",
         "en": "I'm a Spanish champion!"
@@ -843,7 +855,7 @@
         "paras": [
           "You have learned so many words! You know greetings — ¡Hola! ¡Adiós! You know colours — rojo, azul, verde.",
           "You know animals — el perro, el gato. You know your family — mamá, papá, hermano, hermana.",
-          "You know feelings — feliz, triste. You know food — pan, queso, pizza. ¡Eres un campeón de A1!"
+          "You know feelings — feliz, triste. You know food — pan, queso, pizza. ¡Eres un campeón de español!"
         ],
         "qs": [
           {

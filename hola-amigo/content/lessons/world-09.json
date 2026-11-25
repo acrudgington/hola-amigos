@@ -7,7 +7,7 @@
       "subtitle": "Everyday actions",
       "emoji": "🏃",
       "milestone": false,
-      "funFact": "Spanish has TWO different verbs for 'to take' — 'tomar' and 'coger'!",
+      "funFact": "Spanish has TWO verbs for 'to take' — 'tomar' and 'coger'. In Spain, you'll hear 'coger' all the time!",
       "phrase": {
         "es": "Empiezo a las nueve y termino a las dos.",
         "en": "I start at nine and finish at two."
@@ -23,7 +23,7 @@
           "es": "Cerrar",
           "en": "To close",
           "say": "theh-RRAR",
-          "emoji": "🚪"
+          "emoji": "🔒"
         },
         {
           "es": "Encontrar",
@@ -94,8 +94,8 @@
       "story": {
         "title": "The Magic Book",
         "paras": [
-          "Luna abre un libro mágico. ¡Encontró una llave!",
-          "Sol toma la llave. Together they empezan an adventure. 'Vamos a abrir la puerta secreta!'",
+          "Luna abre un libro mágico. ¡Encuentra una llave!",
+          "Sol toma la llave. Together they empiezan an adventure. '¡Vamos a abrir la puerta secreta!'",
           "Después de muchas horas, terminan their journey con un gran tesoro. ¡Qué aventura!"
         ],
         "qs": [
@@ -145,7 +145,7 @@
           "es": "El columpio",
           "en": "Swing",
           "say": "el ko-LOOM-pyo",
-          "emoji": "🛝"
+          "emoji": "🎠"
         },
         {
           "es": "El tobogán",
@@ -287,7 +287,7 @@
           "es": "Doblar",
           "en": "To fold",
           "say": "do-BLAR",
-          "emoji": "📄"
+          "emoji": "📃"
         },
         {
           "es": "Construir",
@@ -317,7 +317,7 @@
           "es": "Las manualidades",
           "en": "Crafts",
           "say": "las mah-nwah-lee-DAH-des",
-          "emoji": "🎨"
+          "emoji": "🖍️"
         }
       ],
       "sentences": [
@@ -355,8 +355,8 @@
         "title": "Craft Day",
         "paras": [
           "Sol and Luna hacen manualidades. Luna corta papel into pieces. Sol pega them juntos.",
-          "They construyen una casita with paper. Then pintan it muchos colores. ¡Qué bonita!",
-          "'Doblé este pájaro!' Luna shows un origami pájaro. Sol is muy impressed."
+          "They construyen una casita with paper. Luego la pintan de muchos colores. ¡Qué bonita!",
+          "'¡Mira, he doblado este pájaro!' Luna shows un pájaro de origami. Sol is muy impresionado."
         ],
         "qs": [
           {
@@ -395,7 +395,7 @@
       "subtitle": "My toys",
       "emoji": "🧸",
       "milestone": false,
-      "funFact": "Spain's most famous toy is the 'peonza' — a spinning top played for centuries!",
+      "funFact": "The 'peonza' (spinning top) is a traditional toy that children in Spain have played with for centuries!",
       "phrase": {
         "es": "Mi juguete favorito es mi peluche.",
         "en": "My favourite toy is my stuffed animal."
@@ -428,7 +428,7 @@
         {
           "es": "El puzzle",
           "en": "Puzzle",
-          "say": "el POOS-leh",
+          "say": "POOTH-leh",
           "emoji": "🧩"
         },
         {
@@ -527,7 +527,7 @@
       "subtitle": "Playing with friends",
       "emoji": "🎮",
       "milestone": false,
-      "funFact": "In Spain, kids play 'el escondite inglés' — like 'Red Light, Green Light' but with hiding!",
+      "funFact": "In Spain, kids play 'el escondite inglés' — it's like 'Grandmother's Footsteps' or 'Red Light, Green Light'!",
       "phrase": {
         "es": "Jugamos al escondite en el parque.",
         "en": "We play hide and seek in the park."
@@ -601,17 +601,21 @@
         {
           "correct": [
             "Juego",
+            "a",
             "piedra",
             "papel",
+            "o",
             "tijera"
           ],
           "shuffle": [
+            "o",
+            "a",
             "tijera",
-            "papel",
             "Juego",
-            "piedra"
+            "piedra",
+            "papel"
           ],
-          "en": "I play rock paper scissors."
+          "en": "I play rock, paper, scissors."
         }
       ],
       "gaps": [],
@@ -886,7 +890,7 @@
         "paras": [
           "¡Es noche de cine! Sol and Luna get into la cama with palomitas. They ponen una película.",
           "Es muy divertida — un robot has adventures con un niño. They laugh muchísimo.",
-          "After, they watch su serie favorita — dibujos animados about little stars. 'Mi favorita!' grita Luna."
+          "After, they watch su serie favorita — dibujos animados about little stars. '¡Mi favorita!' grita Luna."
         ],
         "qs": [
           {
@@ -1056,7 +1060,7 @@
         "title": "Game Champions",
         "paras": [
           "Sol and Luna have learned so much about play. Toys, games, books, movies — they love everything!",
-          "'Jugar es lo mejor!' says Sol. Luna agrees: 'Y aprender mientras jugamos es perfecto.'",
+          "'¡Jugar es lo mejor!' says Sol. Luna agrees: 'Y aprender mientras jugamos es perfecto.'",
           "They are los campeones del juego. Tomorrow, new adventures! 🎮🌟"
         ],
         "qs": [

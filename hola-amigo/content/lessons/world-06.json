@@ -100,7 +100,7 @@
         "paras": [
           "Sol's mejor amigo is a star called Estrella. They love compartir tiempo together.",
           "One day Estrella was triste. Sol gave her un abrazo. 'Estoy aquí para ayudarte,' he said.",
-          "They reír together and become más amigos than ever. ¡La amistad es lo mejor!"
+          "They laugh together — ¡cómo se ríen! — and are better friends than ever. ¡La amistad es lo mejor!"
         ],
         "qs": [
           {
@@ -139,10 +139,10 @@
       "subtitle": "Celebrations",
       "emoji": "🎉",
       "milestone": false,
-      "funFact": "In Spain, kids get presents from the Three Kings on January 6th, not Santa!",
+      "funFact": "In Spain, children get presents from los Reyes Magos (the Three Kings) on 6 January — and many get some from Papá Noel too!",
       "phrase": {
-        "es": "¡Felicidades en tu cumpleaños!",
-        "en": "Happy birthday to you!"
+        "es": "¡Feliz cumpleaños!",
+        "en": "Happy birthday!"
       },
       "words": [
         {
@@ -235,7 +235,7 @@
         "title": "Luna's Birthday",
         "paras": [
           "¡Es el cumpleaños de Luna! There's una fiesta with muchos globos and una tarta with velas.",
-          "Sol gives her muchos regalos: a book, a guitar, and a hug! 'Felicidades, Luna!'",
+          "Sol gives her muchos regalos: a book, a guitar, and a hug! '¡Felicidades, Luna!'",
           "They sing 'Cumpleaños feliz' and dance. The best fiesta in the universe!"
         ],
         "qs": [
@@ -364,7 +364,7 @@
       "story": {
         "title": "What I Want to Be",
         "paras": [
-          "Sol asks Luna: '¿Qué quieres ser de mayor?' Luna says 'Quiero ser astronauta!'",
+          "Sol asks Luna: '¿Qué quieres ser de mayor?' Luna says '¡Quiero ser astronauta!'",
           "'Y yo quiero ser cocinero,' replies Sol. 'Like my abuelo!'",
           "Both have big sueños. Maybe one day Sol will be el cocinero más famoso, and Luna will travel through space!"
         ],
@@ -439,7 +439,7 @@
           "es": "La pintura",
           "en": "Painting",
           "say": "la peen-TOO-rah",
-          "emoji": "🖼️"
+          "emoji": "🎨"
         },
         {
           "es": "El cuadro",
@@ -557,7 +557,7 @@
           "es": "La tableta",
           "en": "Tablet",
           "say": "la tah-BLEH-tah",
-          "emoji": "📱"
+          "emoji": "📲"
         },
         {
           "es": "La pantalla",
@@ -624,7 +624,7 @@
       "story": {
         "title": "The Robot Helper",
         "paras": [
-          "Sol gets un nuevo móvil! He learns to take fotos and play videojuegos.",
+          "Sol gets un móvil nuevo! He learns to take fotos and play videojuegos.",
           "Luna prefers el ordenador. She uses Internet to talk with friends on otros planetas.",
           "Then a friendly robot arrives! He plays música on his pantalla. ¡La tecnología es divertida!"
         ],
@@ -665,7 +665,7 @@
       "subtitle": "I'm sick",
       "emoji": "🤒",
       "milestone": false,
-      "funFact": "In Spain, you can ask for medicine over the counter at any 'farmacia' — green cross sign!",
+      "funFact": "Spanish pharmacies have a green cross sign, and the pharmacist can give advice for small problems like colds!",
       "phrase": {
         "es": "Tengo fiebre y tos.",
         "en": "I have a fever and a cough."
@@ -845,7 +845,7 @@
           "es": "Avergonzado",
           "en": "Embarrassed",
           "say": "ah-behr-gon-THAH-do",
-          "emoji": "😳"
+          "emoji": "🫣"
         }
       ],
       "sentences": [
@@ -883,7 +883,7 @@
         "title": "The Big Day",
         "paras": [
           "Today is Luna's first concert. She is muy nerviosa. 'Estoy muy nerviosa,' she tells Sol.",
-          "Sol smiles: 'Tranquila! You'll be amazing.' Luna feels más tranquila.",
+          "Sol smiles: '¡Tranquila! You'll be amazing.' Luna feels más tranquila.",
           "After the concert, all the stars cheer. Luna is orgullosa and ¡un poco sorprendida! 'I did it!'"
         ],
         "qs": [
@@ -923,7 +923,7 @@
       "subtitle": "Giving opinions",
       "emoji": "💬",
       "milestone": false,
-      "funFact": "Spaniards are known for being very direct with opinions — they don't sugar-coat!",
+      "funFact": "'Creo que' and 'pienso que' both mean 'I think' — you'll hear them all the time in Spain!",
       "phrase": {
         "es": "Creo que el chocolate es delicioso.",
         "en": "I think chocolate is delicious."
@@ -1016,7 +1016,7 @@
       "story": {
         "title": "What's the Best?",
         "paras": [
-          "Sol and Luna debate: '¿Cuál es el mejor postre?' Sol creo que el chocolate es lo mejor.",
+          "Sol and Luna debate: '¿Cuál es el mejor postre?' Sol says: 'Creo que el chocolate es lo mejor.'",
           "Luna piensa que la fruta es mejor. 'En mi opinión, la fruta es más sana.'",
           "Estrella arrives: 'Estoy de acuerdo con los dos. Both are great!' They all laugh."
         ],
@@ -1057,7 +1057,7 @@
       "subtitle": "Comparisons",
       "emoji": "⚖️",
       "milestone": false,
-      "funFact": "Spanish uses 'que' for comparisons — like saying 'taller QUE me' for 'taller than me'!",
+      "funFact": "Spanish compares with 'más… que': 'más alto que yo' means 'taller than me'!",
       "phrase": {
         "es": "Mi hermano es más alto que yo.",
         "en": "My brother is taller than me."
@@ -1091,7 +1091,7 @@
           "es": "La mejor",
           "en": "The best (f)",
           "say": "la meh-HOR",
-          "emoji": "🥇"
+          "emoji": "🏅"
         },
         {
           "es": "El peor",
@@ -1154,7 +1154,7 @@
         "paras": [
           "Sol, Luna, and Estrella compare. 'Yo soy más grande que tú,' Sol says to Estrella.",
           "'Pero Luna es más rápida que Sol,' Estrella says. They check — it's true!",
-          "En el final, they decide: each one is el mejor at something. ¡Todos son únicos!"
+          "Al final, they decide: each one is el mejor at something. ¡Todos son únicos!"
         ],
         "qs": [
           {
@@ -1324,7 +1324,7 @@
         "title": "The Comparison Champion",
         "paras": [
           "Sol, Luna, and Estrella have learned so much! They can now compare and give opinions.",
-          "'Eres mejor amigo que nunca!' Sol tells Luna. 'Y tú eres más simpático que el sol!' Luna laughs.",
+          "'¡Eres la mejor amiga del mundo!' Sol tells Luna. '¡Y tú eres más simpático que nadie!' Luna laughs.",
           "Together they are los mejores amigos del universo. ¡Felicidades, campeones!"
         ],
         "qs": [
@@ -1340,7 +1340,7 @@
           {
             "q": "How does Luna describe Sol?",
             "opts": [
-              "Nicer than the sun",
+              "Nicer than anyone",
               "Bigger than the moon",
               "Faster than a star"
             ],

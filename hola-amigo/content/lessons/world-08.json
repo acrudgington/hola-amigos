@@ -35,7 +35,7 @@
           "es": "La goma",
           "en": "Eraser",
           "say": "la GOH-mah",
-          "emoji": "🪦"
+          "emoji": "🧽"
         },
         {
           "es": "El sacapuntas",
@@ -137,7 +137,7 @@
       "subtitle": "Bath time",
       "emoji": "🛁",
       "milestone": false,
-      "funFact": "Spanish kids brush their teeth at least twice a day — morning and night!",
+      "funFact": "In Spain, 'el baño' can mean the bath OR the bathroom — and a small toilet room is 'el aseo'!",
       "phrase": {
         "es": "Me lavo con jabón y champú.",
         "en": "I wash with soap and shampoo."
@@ -228,7 +228,7 @@
       "story": {
         "title": "Luna's Bath Time",
         "paras": [
-          "After playing, Luna is muy sucia. 'Necesito un baño!' she says. She turns on the water.",
+          "After playing, Luna is muy sucia. '¡Necesito un baño!' she says. She turns on the water.",
           "She uses jabón to wash her arms, champú in her hair, and pasta de dientes to clean her teeth.",
           "Finally, she uses una toalla suave to dry off. '¡Estoy limpia y feliz!' Luna shines bright."
         ],
@@ -425,13 +425,13 @@
           "es": "Las sábanas",
           "en": "Sheets",
           "say": "las SAH-bah-nas",
-          "emoji": "🛏️"
+          "emoji": "🧺"
         },
         {
           "es": "La manta",
           "en": "Blanket",
           "say": "la MAHN-tah",
-          "emoji": "🧺"
+          "emoji": "🧶"
         },
         {
           "es": "La lámpara",
@@ -559,7 +559,7 @@
           "es": "La aspiradora",
           "en": "Vacuum cleaner",
           "say": "la ahs-pee-rah-DOH-rah",
-          "emoji": "🪛"
+          "emoji": "🌀"
         },
         {
           "es": "El polvo",
@@ -628,7 +628,7 @@
         "paras": [
           "The house is muy sucia! Sol coge la escoba. Luna usa la aspiradora to clean el polvo.",
           "Together they sacan la basura and lavan los platos in the kitchen. Sol slips on water — '¡Ay!'",
-          "After two hours, the house is brillante. 'Limpiar es trabajo, pero juntos es divertido!'"
+          "After two hours, the house is brillante. 'Limpiar es trabajo, pero ¡juntos es divertido!'"
         ],
         "qs": [
           {
@@ -803,7 +803,7 @@
       "subtitle": "Going shopping",
       "emoji": "💰",
       "milestone": false,
-      "funFact": "Spain uses the euro — and Spanish euro coins have King Felipe VI's face on them!",
+      "funFact": "Spain's €1 and €2 coins show King Felipe VI, and the 10, 20 and 50 cent coins show Cervantes, who wrote Don Quijote!",
       "phrase": {
         "es": "Tengo cinco euros para gastar.",
         "en": "I have five euros to spend."
@@ -813,7 +813,7 @@
           "es": "El dinero",
           "en": "Money",
           "say": "el dee-NEH-ro",
-          "emoji": "💵"
+          "emoji": "💰"
         },
         {
           "es": "El euro",
@@ -831,7 +831,7 @@
           "es": "Las monedas",
           "en": "Coins",
           "say": "las mo-NEH-dahs",
-          "emoji": "🪙"
+          "emoji": "👛"
         },
         {
           "es": "El billete",
@@ -894,7 +894,7 @@
         "paras": [
           "Sol has ten euros for the supermarket. He sees una pelota that costs cinco euros — '¡Barato!'",
           "He also wants chocolate de tres euros. He paga con un billete and gets dos euros de cambio.",
-          "Luna says 'Bien hecho!' Sol gasta his money pero is muy feliz with his pelota nueva."
+          "Luna says '¡Bien hecho!' Sol gasta his money pero is muy feliz with his pelota nueva."
         ],
         "qs": [
           {
@@ -973,7 +973,7 @@
           "es": "Hacer la cama",
           "en": "Make the bed",
           "say": "ah-THEHR la KAH-mah",
-          "emoji": "🛏️"
+          "emoji": "🛌"
         },
         {
           "es": "El dinero",
@@ -1068,7 +1068,7 @@
         "title": "Home Champions",
         "paras": [
           "Sol and Luna have learned so much about everyday life. They know all about their casa, baño, and cocina.",
-          "They can clean, do chores, and even go shopping. 'Somos los mejores!' says Sol.",
+          "They can clean, do chores, and even go shopping. '¡Somos los mejores!' says Sol.",
           "Mamá gives them un abrazo. 'Estoy muy orgullosa de los dos.' They are home champions! 🏠⭐"
         ],
         "qs": [

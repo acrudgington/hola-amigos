@@ -100,9 +100,9 @@
       "story": {
         "title": "Yesterday's Surprise",
         "paras": [
-          "Sol estaba leyendo un libro tranquilamente. De repente, hubo un ruido fuerte!",
-          "Era Luna! Estaba jugando con un nuevo juguete. Sol estaba sorprendido.",
-          "'¿Qué hacías?' asked Sol. 'Estaba descubriendo cosas nuevas!' Luna laughed."
+          "Sol estaba leyendo un libro tranquilamente. ¡De repente, hubo un ruido fuerte!",
+          "¡Era Luna! Estaba jugando con un nuevo juguete. Sol estaba sorprendido.",
+          "'¿Qué hacías?' asked Sol. '¡Estaba descubriendo cosas nuevas!' Luna laughed."
         ],
         "qs": [
           {
@@ -141,7 +141,7 @@
       "subtitle": "When I was little",
       "emoji": "👶",
       "milestone": false,
-      "funFact": "In Spain, school doesn't start until kids are 6 — they go to 'guardería' (nursery) before that!",
+      "funFact": "In Spain, most children start 'el cole' at age 3, in Infantil. Primary school (Primaria) starts at 6!",
       "phrase": {
         "es": "Cuando era pequeño, vivía en Inglaterra.",
         "en": "When I was little, I lived in England."
@@ -239,8 +239,8 @@
         "title": "When I Was Little",
         "paras": [
           "Luna remembers: 'Cuando era pequeña, vivía en una nube. Tenía muchos amigos.'",
-          "'Yo también!' says Sol. 'Cuando era pequeño, era muy tímido. Pero ahora soy más valiente.'",
-          "Memories make them sonreír. ¡Cómo crece el tiempo!"
+          "'¡Yo también!' says Sol. 'Cuando era pequeño, era muy tímido. Pero ahora soy más valiente.'",
+          "Memories make them sonreír. ¡Cómo pasa el tiempo!"
         ],
         "qs": [
           {
@@ -279,7 +279,7 @@
       "subtitle": "My old routine",
       "emoji": "🌅",
       "milestone": false,
-      "funFact": "Spaniards say 'siempre' a lot — it sounds like 'syempre' and means 'always'!",
+      "funFact": "'Siempre' (always) and 'nunca' (never) are opposites — and 'a veces' (sometimes) is right in the middle!",
       "phrase": {
         "es": "Siempre comía pasta los domingos.",
         "en": "I always used to eat pasta on Sundays."
@@ -355,13 +355,15 @@
             "A",
             "veces",
             "jugaba",
+            "al",
             "fútbol"
           ],
           "shuffle": [
-            "fútbol",
-            "A",
+            "al",
             "jugaba",
-            "veces"
+            "veces",
+            "A",
+            "fútbol"
           ],
           "en": "Sometimes I used to play football."
         }
@@ -370,16 +372,16 @@
       "story": {
         "title": "My Old Routine",
         "paras": [
-          "Cuando era pequeño, Sol siempre se levantaba a las cinco. Por la mañana, comía cereales.",
-          "A veces iba al colegio en bicicleta. Por la noche leía cuentos with mamá.",
+          "Cuando era pequeño, Sol siempre se levantaba a las siete. Por la mañana, comía cereales.",
+          "A veces iba al colegio en bicicleta. Por la noche leía cuentos con mamá.",
           "Nunca se aburría. Todos los días eran una aventura."
         ],
         "qs": [
           {
             "q": "When did Sol get up when he was little?",
             "opts": [
-              "At five",
               "At seven",
+              "At five",
               "At ten"
             ],
             "ans": 0
@@ -512,9 +514,9 @@
       "story": {
         "title": "Why I Love Friends",
         "paras": [
-          "Sol explains: 'Quiero a Luna porque es divertida.' But aunque ella es más pequeña, es muy fuerte!",
-          "'Sin embargo,' says Estrella, 'no son hermanas.' 'Por eso somos amigas — by choice!' replies Luna.",
-          "Además, they share everything. Por ejemplo, sus libros, sus sueños, y su tiempo."
+          "Sol explains: 'Quiero mucho a Luna porque es divertida. Aunque es más pequeña que yo, ¡es muy fuerte!'",
+          "'Sois muy diferentes,' says Estrella. 'Sin embargo, sois los mejores amigos.' 'Por eso nos divertimos tanto,' replies Luna.",
+          "Además, they share everything. Por ejemplo, sus libros, sus sueños y su tiempo. Por fin, Estrella understands!"
         ],
         "qs": [
           {
@@ -529,7 +531,7 @@
           {
             "q": "What does Estrella point out?",
             "opts": [
-              "They are not sisters",
+              "They are very different",
               "They are sisters",
               "They are old"
             ],
@@ -553,7 +555,7 @@
       "subtitle": "My dream house",
       "emoji": "🏰",
       "milestone": false,
-      "funFact": "Spain has lots of beautiful old castles — over 2,500 of them across the country!",
+      "funFact": "Spain has thousands of castles — more than almost any other country in Europe!",
       "phrase": {
         "es": "Mi casa ideal tendría una piscina grande.",
         "en": "My dream house would have a big swimming pool."
@@ -650,7 +652,7 @@
       "story": {
         "title": "My Dream House",
         "paras": [
-          "Sol imagina su casa ideal: un castillo enorme with una piscina de chocolate!",
+          "Sol imagina su casa ideal: ¡un castillo enorme with una piscina de chocolate!",
           "Tendría un tobogán from his bedroom to the kitchen. ¡Sería divertidísimo!",
           "Luna's casa ideal would have a library with a million books and a comfy nube to sleep on. ¡Qué sueños!"
         ],
@@ -691,7 +693,7 @@
       "subtitle": "My dream trip",
       "emoji": "🌍",
       "milestone": false,
-      "funFact": "Spain is in Europe, but it has rainforests, deserts, beaches and mountains all in one country!",
+      "funFact": "Spain has deserts, beaches, snowy mountains and even ancient laurel forests in the Canary Islands!",
       "phrase": {
         "es": "Quiero viajar a las montañas.",
         "en": "I want to travel to the mountains."
@@ -920,8 +922,8 @@
       "story": {
         "title": "The Big Debate",
         "paras": [
-          "'Las galletas son lo mejor!' says Sol. 'Tienes razón!' replies Luna. 'Yo también pienso así.'",
-          "But Estrella says 'Yo no estoy de acuerdo. La fruta es mejor!'",
+          "'¡Las galletas son lo mejor!' says Sol. '¡Tienes razón!' replies Luna. 'Yo también pienso así.'",
+          "But Estrella says 'Yo no estoy de acuerdo. ¡La fruta es mejor!'",
           "'Más o menos,' laughs Sol. 'Las dos son ricas. Sí, claro, yes, yes, both are great!'"
         ],
         "qs": [
@@ -961,7 +963,7 @@
       "subtitle": "Giving instructions",
       "emoji": "📋",
       "milestone": false,
-      "funFact": "In Spanish, you can give instructions just by using the verb without 'you' — like 'Mezcla!' for 'Mix!'",
+      "funFact": "In Spanish you can give an instruction with just the verb — '¡Mezcla!' means 'Mix!'",
       "phrase": {
         "es": "Primero coge un huevo, luego mezcla.",
         "en": "First take an egg, then mix."
@@ -1053,8 +1055,8 @@
         "title": "How to Make a Sandwich",
         "paras": [
           "Sol teaches Luna: 'Primero, coge dos rebanadas de pan. Luego pon mantequilla.'",
-          "'Después mezcla queso y jamón. Por último, junta las dos rebanadas. ¡Listo!'",
-          "Luna prueba and says '¡Qué rico! Eres el mejor profesor de cocina!'"
+          "'Después pon queso y jamón. Por último, junta las dos rebanadas. ¡Listo!'",
+          "Luna prueba and says '¡Qué rico! ¡Eres el mejor profesor de cocina!'"
         ],
         "qs": [
           {
@@ -1095,8 +1097,8 @@
       "milestone": false,
       "funFact": "Spaniards often say 'tranqui' (short for 'tranquilo') to friends — it means 'chill out!'",
       "phrase": {
-        "es": "¿Puedes ayudarme con la tarea?",
-        "en": "Can you help me with the homework?"
+        "es": "¿Puedes ayudarme con los deberes?",
+        "en": "Can you help me with my homework?"
       },
       "words": [
         {
@@ -1139,7 +1141,7 @@
           "es": "Cuidado",
           "en": "Be careful",
           "say": "kwee-DAH-do",
-          "emoji": "⚠️"
+          "emoji": "🚧"
         },
         {
           "es": "Tranquilo",
@@ -1184,7 +1186,7 @@
         "paras": [
           "Sol is worried. '¿Qué hago, Luna? Tengo miedo del concierto.'",
           "Luna gives advice: 'Tranquilo. Deberías respirar profundo. No deberías preocuparte tanto.'",
-          "'Tienes que practicar y disfrutar. Es mejor divertirse!' Sol smiles. ¡Buena consejera!"
+          "'Tienes que practicar y disfrutar. ¡Es mejor divertirse!' Sol smiles. ¡Buena consejera!"
         ],
         "qs": [
           {
@@ -1275,7 +1277,7 @@
           "es": "Deberías",
           "en": "You should",
           "say": "deh-beh-REE-as",
-          "emoji": "💡"
+          "emoji": "🧭"
         }
       ],
       "sentences": [
@@ -1284,15 +1286,15 @@
             "Cuando",
             "era",
             "pequeño",
-            "estaba",
+            "era",
             "feliz"
           ],
           "shuffle": [
-            "feliz",
-            "Cuando",
-            "estaba",
             "era",
-            "pequeño"
+            "pequeño",
+            "era",
+            "Cuando",
+            "feliz"
           ],
           "en": "When I was little I was happy."
         },
@@ -1354,8 +1356,8 @@
         "title": "The Master Storyteller",
         "paras": [
           "Sol and Luna sit under the stars. 'Cuando éramos pequeños,' says Sol, 'no sabíamos tantas palabras.'",
-          "'Ahora podemos contar historias del pasado y del futuro!' Luna replies. They are muy orgullosos.",
-          "Sol smiles: 'Eres mi mejor amiga, Luna.' '¡Y tú el mío!' replies Luna. ¡Qué aventura tan increíble!"
+          "'¡Ahora podemos contar historias del pasado y del futuro!' Luna replies. They are muy orgullosos.",
+          "Sol smiles: 'Eres mi mejor amiga, Luna.' '¡Y tú, mi mejor amigo!' replies Luna. ¡Qué aventura tan increíble!"
         ],
         "qs": [
           {

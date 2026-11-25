@@ -17,7 +17,7 @@ describe("course content", () => {
     expect(MILESTONES).toEqual([16, 24, 32, 40, 50, 60, 68, 76, 84, 92, 100]);
     expect(WORLDS.reduce((n, w) => n + lessonsInWorld(w).length, 0)).toBe(100);
     expect(worldOf(33)?.name).toBe("Plaza del Pueblo");
-    expect(ALL_WORDS).toHaveLength(690);
+    expect(ALL_WORDS).toHaveLength(692);
   });
 
   test("the checker catches broken content", () => {

@@ -19,7 +19,8 @@
     "emulators": "firebase emulators:start --only auth,firestore --project demo-hola-amigos",
     "firebase:deploy-rules": "firebase deploy --only firestore:rules,firestore:indexes",
     "legal:export": "vite-node scripts/export-legal.ts",
-    "art:sync": "vite-node scripts/sync-art.ts"
+    "art:sync": "vite-node scripts/sync-art.ts",
+    "content:review-sheet": "vite-node scripts/review-sheet.ts"
   },
   "dependencies": {
     "@fontsource/fredoka": "5.3.0",

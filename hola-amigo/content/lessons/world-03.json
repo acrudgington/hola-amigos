@@ -96,7 +96,7 @@
         "paras": [
           "'Yo soy grande,' says the elefante. 'Yo soy pequeño,' says the ratón (mouse). 'Yo soy alto,' says the jirafa (giraffe).",
           "'¿Y tú? ¿Quién eres?' asks the elefante to a child. The child thinks...",
-          "'Yo soy simpático y un poco pequeño... ¡pero soy muy valiente!' Everyone laughs. Tú eres fantástico!"
+          "'Yo soy simpático y un poco pequeño... ¡pero soy muy valiente!' Everyone laughs. ¡Tú eres fantástico!"
         ],
         "qs": [
           {
@@ -187,7 +187,7 @@
           "es": "Hermanos",
           "en": "Siblings",
           "say": "er-MAH-nos",
-          "emoji": "👧👦"
+          "emoji": "👫"
         }
       ],
       "sentences": [
@@ -222,9 +222,9 @@
       "story": {
         "title": "The Birthday Party",
         "paras": [
-          "Marta has a birthday party. 'Tengo ocho años!' she says. She has un perro and dos gatos at home.",
-          "Her amigo Luis says 'Tengo un regalo para ti!' It is a libro about animales. Marta has many regalos.",
-          "'Tengo un hermano and una hermana,' says Marta. 'We are a big familia!' Everyone eats tarta and is feliz."
+          "Marta has a birthday party. '¡Tengo ocho años!' she says. She has un perro and dos gatos at home.",
+          "Her amigo Luis says '¡Tengo un regalo para ti!' It is a libro about animales. Marta has many regalos.",
+          "'Tengo un hermano y una hermana,' says Marta. 'We are a big familia!' Everyone eats tarta and is feliz."
         ],
         "qs": [
           {
@@ -279,7 +279,7 @@
           "es": "Me gustan",
           "en": "I like (many)",
           "say": "meh GOOS-tan",
-          "emoji": "❤️"
+          "emoji": "💕"
         },
         {
           "es": "No me gusta",
@@ -315,7 +315,7 @@
           "es": "Y",
           "en": "And",
           "say": "ee",
-          "emoji": "➕"
+          "emoji": "🔗"
         }
       ],
       "sentences": [
@@ -490,7 +490,7 @@
       "story": {
         "title": "The Adventure Plan",
         "paras": [
-          "'Quiero ir a la playa,' says Ana. 'Puedo nadar muy bien!' Her hermano says 'Quiero jugar al fútbol.'",
+          "'Quiero ir a la playa,' says Ana. '¡Puedo nadar muy bien!' Her hermano says 'Quiero jugar al fútbol.'",
           "Mamá says 'Necesito comprar comida primero.' They go to the tienda. Ana wants to buy helado.",
           "After the tienda, they go to the playa. Ana can swim, hermano can play, and they all eat helado. ¡Perfecto!"
         ],
@@ -541,7 +541,7 @@
           "es": "¿Qué hora es?",
           "en": "What time is it?",
           "say": "keh OH-ra es",
-          "emoji": "🕐"
+          "emoji": "⌚"
         },
         {
           "es": "Es la una",
@@ -565,7 +565,7 @@
           "es": "Y cuarto",
           "en": "Quarter past",
           "say": "ee KWAR-to",
-          "emoji": "🕐"
+          "emoji": "🕒"
         },
         {
           "es": "De la mañana",
@@ -609,9 +609,9 @@
       "story": {
         "title": "The Clock Tower",
         "paras": [
-          "In the middle of the town there is a big clock tower. At es la una it rings ONCE. BONG! At son las dos it rings TWICE. BONG BONG!",
-          "School starts at son las nueve de la mañana. Lunch is at son las dos y media. Home time is at son las cuatro.",
-          "At night, son las diez de la noche, the clock rings TEN times! All the children are in bed. ¡Buenas noches!"
+          "In the middle of the town there is a big clock tower. When es la una (one o'clock), it rings ONCE. BONG! When son las dos, it rings TWICE. BONG BONG!",
+          "School starts a las nueve de la mañana. Lunch is a las dos y media. Home time is a las cuatro.",
+          "At night, when son las diez de la noche, the clock rings TEN times! All the children are in bed. ¡Buenas noches!"
         ],
         "qs": [
           {
@@ -747,9 +747,9 @@
       "story": {
         "title": "Carlos's Day",
         "paras": [
-          "Carlos se despierta at seven. He se ducha and then desayuna cereal with leche. At half past eight, he va al cole.",
-          "At two o'clock, Carlos comes home and como pasta. In the afternoon, he juega football with his amigos.",
-          "At nine, Carlos cena with his familia. At ten, me acuesto. '¡Buenas noches!' Carlos has had a great day!"
+          "Carlos tells us about his day. 'Me despierto a las siete. Me ducho y desayuno cereales con leche. A las ocho y media, voy al cole.'",
+          "'A las dos, como pasta en casa. Por la tarde, juego al fútbol con mis amigos.'",
+          "'A las nueve, ceno con mi familia. A las diez, me acuesto. ¡Buenas noches!' Carlos has had a great day!"
         ],
         "qs": [
           {

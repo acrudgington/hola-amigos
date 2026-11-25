@@ -9,8 +9,8 @@
       "milestone": false,
       "funFact": "Most Spanish towns have a 'plaza mayor' — the main square where everyone meets!",
       "phrase": {
-        "es": "Vamos al parque en la plaza.",
-        "en": "Let's go to the park in the square."
+        "es": "Quedamos en la plaza.",
+        "en": "Let's meet in the square."
       },
       "words": [
         {
@@ -277,7 +277,7 @@
           "es": "El supermercado",
           "en": "Supermarket",
           "say": "el soo-per-mer-KAH-do",
-          "emoji": "🛒"
+          "emoji": "🏪"
         },
         {
           "es": "El carrito",
@@ -313,7 +313,7 @@
           "es": "La caja",
           "en": "Box / checkout",
           "say": "la KAH-hah",
-          "emoji": "📦"
+          "emoji": "🧾"
         },
         {
           "es": "La bolsa",
@@ -489,8 +489,8 @@
         "title": "Luna's Salad",
         "paras": [
           "Luna makes a salad. She takes una lechuga, dos tomates, and un pepino.",
-          "She also adds una zanahoria small and una cebolla. ¡Qué colorida!",
-          "De postre, Luna eats una piña sweet and un melocotón juicy. ¡Qué delicia!"
+          "She also adds a small zanahoria and una cebolla. ¡Qué colorida!",
+          "De postre, Luna eats a sweet piña and a juicy melocotón. ¡Qué delicia!"
         ],
         "qs": [
           {
@@ -616,9 +616,9 @@
       "story": {
         "title": "Sports Day",
         "paras": [
-          "Today is sports day! Sol plays al fútbol. Luna plays al baloncesto.",
-          "Sol corre very fast and salta high! 'Voy a ganar!' he shouts.",
-          "Luna gana al tenis. Sol pierde al fútbol but smiles. 'Lo importante es divertirse!'"
+          "Today is sports day! Sol juega al fútbol. Luna juega al tenis.",
+          "Sol corre very fast and salta high! '¡Voy a ganar!' he shouts.",
+          "Luna gana al tenis. Sol pierde al fútbol but smiles. '¡Lo importante es divertirse!'"
         ],
         "qs": [
           {
@@ -657,7 +657,7 @@
       "subtitle": "My free time",
       "emoji": "🎨",
       "milestone": false,
-      "funFact": "Spanish kids love to dance flamenco — it has been around for over 200 years!",
+      "funFact": "Flamenco, the famous music and dance from Andalucía, is so special that UNESCO protects it as world heritage!",
       "phrase": {
         "es": "En mi tiempo libre, me gusta dibujar.",
         "en": "In my free time, I like to draw."
@@ -746,9 +746,9 @@
       "story": {
         "title": "Free Time Friends",
         "paras": [
-          "In her tiempo libre, Luna le gusta dibujar y pintar. She paints flores rojas and gatos blancos.",
+          "In her tiempo libre, a Luna le gusta dibujar y pintar. She paints flores rojas and gatos blancos.",
           "Sol prefers cantar y bailar. He's a fantastic dancer!",
-          "'¿Quieres cocinar conmigo?' Luna asks. They cook chocolate cake and ver la tele juntos. ¡Qué tarde tan bonita!"
+          "'¿Quieres cocinar conmigo?' Luna asks. They cook a chocolate cake and watch la tele together. ¡Qué tarde tan bonita!"
         ],
         "qs": [
           {
@@ -881,7 +881,7 @@
         "title": "At the Farm",
         "paras": [
           "Sol and Luna visit una granja. They see una gallina with five baby chicks!",
-          "Un gallo says 'kikirikí!' Una oveja and una cabra eat grass. Un pato swims in the pond.",
+          "Un gallo says '¡Kikirikí!' Una oveja and una cabra eat grass. Un pato swims in the pond.",
           "Then they walk into el bosque and see a tall árbol with un pájaro singing. ¡La naturaleza es bonita!"
         ],
         "qs": [
@@ -921,7 +921,7 @@
       "subtitle": "Vocabulary Master Challenge",
       "emoji": "🏆",
       "milestone": true,
-      "funFact": "You learned 60+ new words! ¡Eres un maestro de las palabras! 🌟",
+      "funFact": "You learned over 50 new words in this world! ¡Eres un maestro de las palabras! 🌟",
       "phrase": {
         "es": "¡Sé muchas palabras nuevas!",
         "en": "I know lots of new words!"
@@ -1053,8 +1053,8 @@
       "story": {
         "title": "The Word Master",
         "paras": [
-          "Today, Sol and Luna are very orgullosos. They have learned 60+ new words!",
-          "'¡Eres una maestra de palabras!' Sol tells Luna. 'Y tú también!' Luna replies.",
+          "Today, Sol and Luna are very orgullosos. They have learned over 50 new words!",
+          "'¡Eres una maestra de palabras!' Sol tells Luna. '¡Y tú también!' Luna replies.",
           "From cities to farms, transports to sports — they know muchas cosas. ¡Adelante to the next adventure!"
         ],
         "qs": [
