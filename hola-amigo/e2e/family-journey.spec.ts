@@ -6,13 +6,18 @@ import { expect, test, type Locator, type Page } from "@playwright/test";
 // Buttons can vanish mid-click while one activity animates out and the next
 // animates in, so clicks use a short timeout and the loop simply looks again.
 const tap = (l: Locator) => l.click({ timeout: 3000 }).then(() => true, () => false);
+// The robot taps answers at random; on a busy phone emulator the "is it still?"
+// check can time out while animations run, so answer buttons are tapped directly.
+const tapNow = (l: Locator) => l.click({ timeout: 3000, force: true }).then(() => true, () => false);
 
 async function playThrough(page: Page) {
   for (let i = 0; i < 400; i++) {
     if (await page.getByText("Lesson complete!").count()) return;
     if (await page.locator(".level-up").count()) { await tap(page.getByRole("button", { name: /Vamos/ })); continue; }
     const next = page.getByRole("button", { name: /Next word|Let’s practise|Next →|Continue →|Questions →|Next page|Finish|Skip this/ });
-    if (await next.count() && await next.first().isEnabled().catch(() => false)) { await tap(next.first()); continue; }
+    // A short timeout matters: a button counted a moment ago may have just gone
+    // (e.g. "Continue →" as the next question appears); without it this waits forever.
+    if (await next.count() && await next.first().isEnabled({ timeout: 500 }).catch(() => false)) { await tap(next.first()); continue; }
     const chip = page.locator(".drag-chip:not(.drag-float)").first();
     if (await chip.count()) {
       const target = page.locator(".drop-target:not(.is-done)").first();
@@ -24,13 +29,13 @@ async function playThrough(page: Page) {
     if (await tile.count()) {
       await tap(tile);
       const check = page.getByRole("button", { name: "Check ✓" });
-      if (await check.isEnabled().catch(() => false) && await tap(check)) await page.waitForTimeout(2300);
+      if (await check.isEnabled({ timeout: 500 }).catch(() => false) && await tap(check)) await page.waitForTimeout(2300);
       continue;
     }
     // Pick a random answer (tapping the same one forever would never make a pair in Matching).
     const choices = page.locator(".choice:not([disabled])");
     const n = await choices.count();
-    if (n) { await tap(choices.nth(Math.floor(Math.random() * n))); await page.waitForTimeout(650); continue; }
+    if (n) { await tapNow(choices.nth(Math.floor(Math.random() * n))); await page.waitForTimeout(650); continue; }
     const learnt = page.getByRole("button", { name: /I’ve learnt/ });
     if (await learnt.count()) { await tap(learnt); continue; }
     await page.waitForTimeout(250);
@@ -204,7 +209,7 @@ test("Let's talk: a full conversation, then chat cards in Learn together", async
     const before = await page.locator(".talk__bubble--me").count();
     for (let k = 0; k < 3 && (await page.locator(".talk__bubble--me").count()) === before; k++) {
       const opts = page.locator(".talk .choice");
-      if (!(await opts.nth(k).isEnabled())) break;
+      if (!(await opts.nth(k).isEnabled({ timeout: 500 }).catch(() => false))) break;
       await opts.nth(k).click();
       await page.waitForTimeout(400);
     }
