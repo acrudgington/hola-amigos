@@ -13,7 +13,6 @@ import { shuffle } from "../lib/utils.ts";
 import { Button, SpeakButton } from "../components/ui.tsx";
 import { Luna, Sol } from "../components/Mascots.tsx";
 import { Art } from "../components/Art.tsx";
-import { useLater } from "./hooks.ts";
 
 interface Bubble { from: "them" | "me"; es: string; en?: string }
 type Phase = "asking" | "answering" | "listening" | "answered";
@@ -30,7 +29,11 @@ export function TalkGame({ conversation: c, onDone }: { conversation: Conversati
   const mic = useRef(0);
   const recog = useRef<Recognizer | null>(null);
   const box = useRef<HTMLDivElement>(null);
-  const later = useLater();
+  // The character's reply (or the model answer) is spoken a moment after an
+  // answer; moving on cancels it so it can't talk over the next question.
+  const pending = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const sayLater = (fn: () => void, ms: number) => { if (pending.current) clearTimeout(pending.current); pending.current = setTimeout(fn, ms); };
+  useEffect(() => () => { if (pending.current) clearTimeout(pending.current); }, []);
   const turn = c.turns[i];
   const canListen = speech.recogSupported();
   const options = useMemo(() => shuffle([turn.answer, ...turn.wrong.slice(0, 2)]), [turn]);
@@ -59,7 +62,8 @@ export function TalkGame({ conversation: c, onDone }: { conversation: Conversati
     setHint(null);
     setChat(ch => [...ch, { from: "me", es: said }, ...(turn.reply ? [{ from: "them" as const, es: turn.reply, en: turn.replyEn }] : [])]);
     setPhase("answered");
-    if (turn.reply) later(() => voice.spanishBy(c.who, turn.reply!), 450);
+    // The reply waits for the child's answer to finish playing.
+    if (turn.reply) sayLater(() => voice.spanishBy(c.who, turn.reply!, { mode: "queue" }), 250);
   };
   const miss = () => {
     const n = tries + 1;
@@ -71,7 +75,7 @@ export function TalkGame({ conversation: c, onDone }: { conversation: Conversati
       // Show the answer and move on: hearing the model is learning too.
       setChat(ch => [...ch, { from: "me", es: turn.answer }]);
       setPhase("answered");
-      later(() => voice.spanish(turn.answer), 300);
+      sayLater(() => voice.spanish(turn.answer), 300);
     }
   };
 
@@ -92,10 +96,11 @@ export function TalkGame({ conversation: c, onDone }: { conversation: Conversati
   };
   const tap = (o: string) => {
     if (phase !== "answering") return;
-    voice.spanish(o);
+    try { voice.spanish(o); } catch { /* sound is a bonus; never block the chat */ }
     if (o === turn.answer) accept(o); else miss();
   };
   const next = () => {
+    if (pending.current) { clearTimeout(pending.current); pending.current = null; }
     voice.stop();
     if (i + 1 < c.turns.length) setI(i + 1);
     else onDone(right.current, c.turns.length, mic.current);

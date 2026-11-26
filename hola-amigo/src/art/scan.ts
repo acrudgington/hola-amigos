@@ -11,7 +11,7 @@ const EMOJI = new RegExp(`[\\u{1F1E6}-\\u{1F1FF}]{2}|[#*0-9]\\uFE0F?\\u20E3|${PI
 export const findEmoji = (text: string): string[] => text.match(EMOJI) ?? [];
 
 // Plain symbols used as UI glyphs, not pictures.
-const NOT_PICTURES = new Set(["▭", "⌘", "→", "←", "↑", "↓", "↵", "↻", "★", "✓"]);
+const NOT_PICTURES = new Set(["▭", "⌘", "→", "←", "↑", "↓", "↵", "↻", "↺", "★", "✓"]);
 
 function walk(dir: string, out: string[] = []): string[] {
   for (const name of readdirSync(dir)) {
