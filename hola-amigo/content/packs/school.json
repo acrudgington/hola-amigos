@@ -173,13 +173,13 @@
             "Marta"
           ],
           "shuffle": [
-            "Marta",
-            "la",
-            "Soy",
             "nueva",
-            "en",
+            "Marta",
             "de",
-            "clase"
+            "la",
+            "clase",
+            "Soy",
+            "en"
           ],
           "en": "I'm new in Marta's class."
         },
@@ -192,10 +192,10 @@
             "Pablo"
           ],
           "shuffle": [
-            "Mi",
-            "compañero",
-            "Pablo",
             "se",
+            "Mi",
+            "Pablo",
+            "compañero",
             "llama"
           ],
           "en": "My classmate is called Pablo."
@@ -330,11 +330,11 @@
             "baño"
           ],
           "shuffle": [
-            "ir",
+            "baño",
             "puedo",
+            "ir",
             "al",
-            "Seño",
-            "baño"
+            "Seño"
           ],
           "en": "Miss, can I go to the toilet?"
         },
@@ -348,11 +348,11 @@
             "favor"
           ],
           "shuffle": [
-            "Me",
             "un",
-            "dejas",
-            "favor",
+            "Me",
             "lápiz",
+            "favor",
+            "dejas",
             "por"
           ],
           "en": "Can I borrow a pencil, please?"
@@ -486,10 +486,10 @@
             "pregunta"
           ],
           "shuffle": [
-            "pregunta",
+            "entiendo",
             "la",
-            "No",
-            "entiendo"
+            "pregunta",
+            "No"
           ],
           "en": "I don't understand the question."
         },
@@ -503,12 +503,12 @@
             "español"
           ],
           "shuffle": [
-            "Cómo",
-            "pencil",
-            "se",
-            "dice",
             "en",
-            "español"
+            "pencil",
+            "dice",
+            "Cómo",
+            "español",
+            "se"
           ],
           "en": "How do you say 'pencil' in Spanish?"
         }
@@ -643,10 +643,10 @@
           ],
           "shuffle": [
             "favor",
-            "y",
+            "Sentaos",
             "por",
-            "escuchad",
-            "Sentaos"
+            "y",
+            "escuchad"
           ],
           "en": "Sit down and listen, please."
         },
@@ -662,12 +662,12 @@
           ],
           "shuffle": [
             "el",
-            "Abrid",
-            "en",
-            "página",
-            "diez",
+            "libro",
             "la",
-            "libro"
+            "página",
+            "en",
+            "Abrid",
+            "diez"
           ],
           "en": "Open your books at page ten."
         }
@@ -804,10 +804,10 @@
           "shuffle": [
             "Tengo",
             "estuche",
-            "las",
             "en",
-            "pinturas",
-            "el"
+            "las",
+            "el",
+            "pinturas"
           ],
           "en": "I've got my colouring pencils in my pencil case."
         },
@@ -821,12 +821,12 @@
             "agenda"
           ],
           "shuffle": [
-            "me",
-            "agenda",
+            "Se",
             "olvidado",
-            "la",
+            "me",
             "ha",
-            "Se"
+            "agenda",
+            "la"
           ],
           "en": "I've forgotten my school diary."
         }
@@ -961,10 +961,10 @@
           ],
           "shuffle": [
             "en",
-            "conmigo",
             "Juegas",
             "patio",
-            "el"
+            "el",
+            "conmigo"
           ],
           "en": "Will you play with me in the playground?"
         },
@@ -979,13 +979,13 @@
             "amigos"
           ],
           "shuffle": [
-            "comedor",
-            "amigos",
-            "el",
-            "con",
-            "En",
             "como",
-            "mis"
+            "con",
+            "el",
+            "comedor",
+            "mis",
+            "En",
+            "amigos"
           ],
           "en": "I eat with my friends in the dining hall."
         }
@@ -1120,11 +1120,11 @@
             "patio"
           ],
           "shuffle": [
+            "caído",
             "en",
             "patio",
-            "caído",
-            "el",
             "Me",
+            "el",
             "he"
           ],
           "en": "I've fallen over in the playground."
@@ -1140,13 +1140,13 @@
             "favor"
           ],
           "shuffle": [
-            "Quiero",
-            "favor",
-            "por",
             "madre",
+            "por",
+            "favor",
+            "Quiero",
+            "a",
             "llamar",
-            "mi",
-            "a"
+            "mi"
           ],
           "en": "I want to call my mum, please."
         }
@@ -1281,12 +1281,12 @@
             "cole"
           ],
           "shuffle": [
-            "Ya",
             "me",
-            "en",
             "apaño",
             "cole",
-            "el"
+            "el",
+            "Ya",
+            "en"
           ],
           "en": "I can manage at school now."
         },
@@ -1300,12 +1300,12 @@
             "clase"
           ],
           "shuffle": [
-            "mi",
-            "en",
             "amigos",
             "muchos",
-            "Tengo",
-            "clase"
+            "mi",
+            "clase",
+            "en",
+            "Tengo"
           ],
           "en": "I've got lots of friends in my class."
         }

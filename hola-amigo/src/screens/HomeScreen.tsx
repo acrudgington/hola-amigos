@@ -12,6 +12,7 @@ import { WorldScene } from "../components/WorldScene.tsx";
 import { ActivityFeed, AgentPanel, KpiTile, MasteryCard, QuestsCard, WeeklyChart } from "../components/Widgets.tsx";
 import { packProgress, visiblePacks } from "../domain/packs.ts";
 import { Art } from "../components/Art.tsx";
+import { SeasonBanner, SeasonalDecor } from "../components/SeasonalDecor.tsx";
 
 const EASE = [0.22, 1, 0.36, 1];
 
@@ -201,7 +202,8 @@ export function HomeScreen({ child, progress, onStartLesson, onOpenLesson, onCla
   const label = allDone ? `ALL ${LESSONS.length} DONE · PLAY AGAIN` : done === 0 ? "START YOUR ADVENTURE" : `UP NEXT · LESSON ${current.id}`;
   const dateStr = new Date().toLocaleDateString(undefined, { weekday: "long", day: "numeric", month: "long" });
 
-  return <div style={{ paddingTop: 4 }}>
+  return <div style={{ paddingTop: 4, position: "relative" }}>
+    <SeasonalDecor />
     <motion.div className="dash-head" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
       <div>
         <div className="eyebrow">{dateStr} · Level {info.level}</div>
@@ -216,6 +218,7 @@ export function HomeScreen({ child, progress, onStartLesson, onOpenLesson, onCla
       <div className="l-7"><AgentPanel progress={progress} onAction={onMission} /></div>
       <div className="l-5"><NextCard lesson={current} label={label} onClick={() => onStartLesson(current)} /></div>
 
+      <div className="l-12"><SeasonBanner progress={progress} onOpen={onPack} /></div>
       <div className="l-12"><PacksRow progress={progress} onPack={onPack} /></div>
 
       <div className="xs-6 l-3"><KpiTile icon="bolt" art="⚡" color="var(--gold)" label="XP today" value={today} sub={`${week.reduce((a, d) => a + d.xp, 0)} XP this week`} spark={week.map(d => d.xp)} delay={0.05} /></div>

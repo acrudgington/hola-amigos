@@ -1,0 +1,1145 @@
+{
+  "id": "christmas",
+  "title": "Navidad en España",
+  "en": "Christmas in Spain",
+  "about": "A limited-time Christmas pack (1 December to 6 January): the Belén, carols, Nochebuena, the 12 grapes and the Three Kings.",
+  "emoji": "🎄",
+  "color": "#E0453A",
+  "audience": "child",
+  "sequential": false,
+  "window": {
+    "from": "12-01",
+    "to": "01-06"
+  },
+  "sticker": {
+    "id": "k_christmas",
+    "name": "Royal Star",
+    "emoji": "👑"
+  },
+  "lessons": [
+    {
+      "id": 1201,
+      "title": "¡Feliz Navidad!",
+      "subtitle": "Merry Christmas!",
+      "emoji": "🎄",
+      "milestone": false,
+      "funFact": "Many Spanish homes and town halls set up a 'Belén' (a nativity scene), sometimes huge, with whole villages, rivers and animals.",
+      "phrase": {
+        "es": "¡Feliz Navidad! Vamos a poner el árbol.",
+        "en": "Merry Christmas! Let's put up the tree."
+      },
+      "words": [
+        {
+          "es": "Feliz Navidad",
+          "en": "Merry Christmas",
+          "say": "feh-LEETH nah-bee-DAD",
+          "emoji": "🎄"
+        },
+        {
+          "es": "El árbol de Navidad",
+          "en": "The Christmas tree",
+          "say": "el AR-bol deh nah-bee-DAD",
+          "emoji": "🌲"
+        },
+        {
+          "es": "El Belén",
+          "en": "The nativity scene",
+          "say": "el beh-LEN",
+          "emoji": "🐑"
+        },
+        {
+          "es": "Las luces",
+          "en": "The lights",
+          "say": "las LOO-thes",
+          "emoji": "✨"
+        },
+        {
+          "es": "Los villancicos",
+          "en": "Christmas carols",
+          "say": "los bee-yan-THEE-kos",
+          "emoji": "🎶"
+        },
+        {
+          "es": "Papá Noel",
+          "en": "Father Christmas",
+          "say": "pah-PAH noh-EL",
+          "emoji": "🎅"
+        },
+        {
+          "es": "Decorar",
+          "en": "To decorate",
+          "say": "deh-koh-RAR",
+          "emoji": "🎀"
+        },
+        {
+          "es": "Las vacaciones de Navidad",
+          "en": "The Christmas holidays",
+          "say": "las bah-kah-THYOH-nes deh nah-bee-DAD",
+          "emoji": "🗓️"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Decoramos",
+            "el",
+            "árbol",
+            "con",
+            "luces"
+          ],
+          "shuffle": [
+            "con",
+            "Decoramos",
+            "árbol",
+            "el",
+            "luces"
+          ],
+          "en": "We decorate the tree with lights."
+        },
+        {
+          "correct": [
+            "En",
+            "el",
+            "cole",
+            "cantamos",
+            "villancicos"
+          ],
+          "shuffle": [
+            "el",
+            "villancicos",
+            "En",
+            "cole",
+            "cantamos"
+          ],
+          "en": "At school we sing Christmas carols."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Los villancicos' are:",
+          "opts": [
+            "Christmas carols",
+            "Christmas biscuits",
+            "Christmas lights"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'El Belén' is:",
+          "opts": [
+            "The nativity scene",
+            "The Christmas tree",
+            "The church bell"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Decorating Day",
+        "paras": [
+          "It's the first weekend of December. Sol and Luna help to decorate.",
+          "'Primero el árbol, después las luces,' says Mamá. Luna puts the figures in the Belén: the sheep, the river, the little houses.",
+          "They switch on the luces and sing villancicos. '¡Feliz Navidad!'"
+        ],
+        "qs": [
+          {
+            "q": "What do they decorate first?",
+            "opts": [
+              "The tree",
+              "The window",
+              "The door"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Luna put in the Belén?",
+            "opts": [
+              "Sheep, a river and little houses",
+              "Presents",
+              "Candles"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What do they sing?",
+            "opts": [
+              "Christmas carols",
+              "Birthday songs",
+              "The school song"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 1202,
+      "title": "Nochebuena",
+      "subtitle": "Christmas Eve",
+      "emoji": "🌟",
+      "milestone": false,
+      "funFact": "On 22 December, Spain holds the Christmas lottery. Children from a Madrid school sing the winning numbers, and the top prize is called 'El Gordo' (the fat one)!",
+      "phrase": {
+        "es": "En Nochebuena cenamos todos juntos.",
+        "en": "On Christmas Eve we all have dinner together."
+      },
+      "words": [
+        {
+          "es": "Nochebuena",
+          "en": "Christmas Eve",
+          "say": "noh-cheh-BWEH-nah",
+          "emoji": "🌟"
+        },
+        {
+          "es": "La cena de Nochebuena",
+          "en": "Christmas Eve dinner",
+          "say": "lah THEH-nah deh noh-cheh-BWEH-nah",
+          "emoji": "🍽️"
+        },
+        {
+          "es": "El Gordo",
+          "en": "The Christmas lottery prize",
+          "say": "el GOR-doh",
+          "emoji": "🎟️"
+        },
+        {
+          "es": "Los polvorones",
+          "en": "Polvorones (crumbly biscuits)",
+          "say": "los pol-boh-ROH-nes",
+          "emoji": "🍪"
+        },
+        {
+          "es": "El mazapán",
+          "en": "Marzipan",
+          "say": "el mah-thah-PAN",
+          "emoji": "🍬"
+        },
+        {
+          "es": "Brindar",
+          "en": "To make a toast",
+          "say": "breen-DAR",
+          "emoji": "🥂"
+        },
+        {
+          "es": "Toda la familia",
+          "en": "The whole family",
+          "say": "TOH-dah lah fah-MEE-lyah",
+          "emoji": "👨‍👩‍👧‍👦"
+        },
+        {
+          "es": "¡Felices fiestas!",
+          "en": "Happy holidays!",
+          "say": "feh-LEE-thes FYES-tas",
+          "emoji": "🎉"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "En",
+            "Nochebuena",
+            "cenamos",
+            "con",
+            "toda",
+            "la",
+            "familia"
+          ],
+          "shuffle": [
+            "la",
+            "con",
+            "familia",
+            "En",
+            "cenamos",
+            "toda",
+            "Nochebuena"
+          ],
+          "en": "On Christmas Eve we have dinner with the whole family."
+        },
+        {
+          "correct": [
+            "De",
+            "postre",
+            "comemos",
+            "turrón",
+            "y",
+            "polvorones"
+          ],
+          "shuffle": [
+            "postre",
+            "polvorones",
+            "turrón",
+            "comemos",
+            "y",
+            "De"
+          ],
+          "en": "For dessert we eat turrón and polvorones."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Nochebuena' is:",
+          "opts": [
+            "Christmas Eve",
+            "New Year's Eve",
+            "Christmas Day"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'El Gordo' is:",
+          "opts": [
+            "The Christmas lottery prize",
+            "Father Christmas",
+            "A big turkey"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Dinner at Grandma's",
+        "paras": [
+          "On Nochebuena, toda la familia goes to Abuela's house. There are twelve people at the table!",
+          "After dinner come the turrón, the polvorones and the mazapán. Grandad stands up: '¡Vamos a brindar!'",
+          "Everyone raises a glass (the children have juice). '¡Felices fiestas!'"
+        ],
+        "qs": [
+          {
+            "q": "Where do they have dinner?",
+            "opts": [
+              "At Grandma's house",
+              "At a restaurant",
+              "At school"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How many people are at the table?",
+            "opts": [
+              "Twelve",
+              "Six",
+              "Twenty"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What do the children drink for the toast?",
+            "opts": [
+              "Juice",
+              "Milk",
+              "Water"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 1203,
+      "title": "Nochevieja",
+      "subtitle": "New Year's Eve",
+      "emoji": "🍇",
+      "milestone": false,
+      "funFact": "At midnight on 31 December, people in Spain eat 12 grapes, one on each chime of the Puerta del Sol clock in Madrid, which is shown live on TV.",
+      "phrase": {
+        "es": "¡Feliz Año Nuevo! Me he comido las doce uvas.",
+        "en": "Happy New Year! I've eaten the twelve grapes."
+      },
+      "words": [
+        {
+          "es": "Nochevieja",
+          "en": "New Year's Eve",
+          "say": "noh-cheh-BYEH-hah",
+          "emoji": "🕛"
+        },
+        {
+          "es": "Las doce uvas",
+          "en": "The twelve grapes",
+          "say": "las DOH-theh OO-bas",
+          "emoji": "🍇"
+        },
+        {
+          "es": "Las campanadas",
+          "en": "The midnight chimes",
+          "say": "las kam-pah-NAH-das",
+          "emoji": "🔔"
+        },
+        {
+          "es": "La Puerta del Sol",
+          "en": "Puerta del Sol (in Madrid)",
+          "say": "lah PWEHR-tah del sol",
+          "emoji": "🕰️"
+        },
+        {
+          "es": "¡Feliz Año Nuevo!",
+          "en": "Happy New Year!",
+          "say": "feh-LEETH AH-nyoh NWEH-boh",
+          "emoji": "🎆"
+        },
+        {
+          "es": "La medianoche",
+          "en": "Midnight",
+          "say": "lah meh-dyah-NOH-cheh",
+          "emoji": "🌌"
+        },
+        {
+          "es": "Los fuegos artificiales",
+          "en": "Fireworks",
+          "say": "los FWEH-gos ar-tee-fee-THYAH-les",
+          "emoji": "🎇"
+        },
+        {
+          "es": "El año que viene",
+          "en": "Next year",
+          "say": "el AH-nyoh keh BYEH-neh",
+          "emoji": "📆"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "A",
+            "medianoche",
+            "comemos",
+            "las",
+            "doce",
+            "uvas"
+          ],
+          "shuffle": [
+            "doce",
+            "medianoche",
+            "comemos",
+            "las",
+            "A",
+            "uvas"
+          ],
+          "en": "At midnight we eat the twelve grapes."
+        },
+        {
+          "correct": [
+            "Vemos",
+            "las",
+            "campanadas",
+            "en",
+            "la",
+            "tele"
+          ],
+          "shuffle": [
+            "Vemos",
+            "en",
+            "tele",
+            "campanadas",
+            "la",
+            "las"
+          ],
+          "en": "We watch the midnight chimes on TV."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "How many grapes do people eat at midnight?",
+          "opts": [
+            "Twelve",
+            "Ten",
+            "Seven"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Las campanadas' are:",
+          "opts": [
+            "The midnight chimes",
+            "The bells on a cat",
+            "The fireworks"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Twelve Grapes, Twelve Chimes",
+        "paras": [
+          "It's Nochevieja. Sol has his twelve grapes in a little bowl. On the TV is the clock of the Puerta del Sol.",
+          "¡Dong! ¡Dong! One grape on each campanada… Sol's cheeks are full! '¡Mmmf!'",
+          "At medianoche, there are fuegos artificiales outside. '¡Feliz Año Nuevo!' everyone shouts."
+        ],
+        "qs": [
+          {
+            "q": "Where is the clock on TV?",
+            "opts": [
+              "Puerta del Sol in Madrid",
+              "Barcelona",
+              "London"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "When do you eat each grape?",
+            "opts": [
+              "On each chime",
+              "Before dinner",
+              "After the fireworks"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What's outside at midnight?",
+            "opts": [
+              "Fireworks",
+              "Snow",
+              "A parade"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 1204,
+      "title": "Los Reyes Magos",
+      "subtitle": "The Three Kings",
+      "emoji": "👑",
+      "milestone": false,
+      "funFact": "In Spain, the Three Kings bring presents on the night of 5 January. Children leave their shoes out, and sometimes water for the camels! Naughty children might get 'carbón' (coal), but it's made of sugar.",
+      "phrase": {
+        "es": "Los Reyes Magos me han traído un regalo.",
+        "en": "The Three Kings have brought me a present."
+      },
+      "words": [
+        {
+          "es": "Melchor, Gaspar y Baltasar",
+          "en": "Melchior, Caspar and Balthazar",
+          "say": "mel-CHOR gas-PAR ee bal-tah-SAR",
+          "emoji": "👑"
+        },
+        {
+          "es": "La carta a los Reyes",
+          "en": "The letter to the Kings",
+          "say": "lah KAR-tah ah los RREH-yes",
+          "emoji": "✉️"
+        },
+        {
+          "es": "Los camellos",
+          "en": "The camels",
+          "say": "los kah-MEH-yos",
+          "emoji": "🐪"
+        },
+        {
+          "es": "El roscón de Reyes",
+          "en": "Roscón (Three Kings cake)",
+          "say": "el rros-KON deh RREH-yes",
+          "emoji": "🥯"
+        },
+        {
+          "es": "Los zapatos",
+          "en": "The shoes",
+          "say": "los thah-PAH-tos",
+          "emoji": "👟"
+        },
+        {
+          "es": "El carbón dulce",
+          "en": "Sugar coal",
+          "say": "el kar-BON DOOL-theh",
+          "emoji": "⚫"
+        },
+        {
+          "es": "La sorpresa del roscón",
+          "en": "The surprise in the roscón",
+          "say": "lah sor-PREH-sah del rros-KON",
+          "emoji": "🎁"
+        },
+        {
+          "es": "Portarse bien",
+          "en": "To behave well",
+          "say": "por-TAR-seh byen",
+          "emoji": "😇"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Escribo",
+            "la",
+            "carta",
+            "a",
+            "los",
+            "Reyes",
+            "Magos"
+          ],
+          "shuffle": [
+            "Reyes",
+            "Magos",
+            "Escribo",
+            "los",
+            "carta",
+            "a",
+            "la"
+          ],
+          "en": "I'm writing my letter to the Three Kings."
+        },
+        {
+          "correct": [
+            "Dejo",
+            "mis",
+            "zapatos",
+            "al",
+            "lado",
+            "del",
+            "árbol"
+          ],
+          "shuffle": [
+            "mis",
+            "lado",
+            "zapatos",
+            "al",
+            "del",
+            "Dejo",
+            "árbol"
+          ],
+          "en": "I leave my shoes next to the tree."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "When do the Three Kings bring presents?",
+          "opts": [
+            "On the night of 5 January",
+            "On 25 December",
+            "On 31 December"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'El roscón de Reyes' is:",
+          "opts": [
+            "A Three Kings cake",
+            "A crown",
+            "A camel"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "The Magic Night",
+        "paras": [
+          "Luna writes her carta a los Reyes: 'Me he portado muy bien. Quiero un libro de dragones.'",
+          "On 5 January they watch the cabalgata. At home, Luna leaves her zapatos and water for the camellos.",
+          "In the morning: ¡regalos! And at breakfast, the roscón. Luna finds the sorpresa inside: a tiny king!"
+        ],
+        "qs": [
+          {
+            "q": "What does Luna ask for?",
+            "opts": [
+              "A book about dragons",
+              "A bike",
+              "A doll"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does she leave for the camels?",
+            "opts": [
+              "Water",
+              "Carrots",
+              "Biscuits"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Luna find in the roscón?",
+            "opts": [
+              "A tiny king",
+              "A coin",
+              "A ring"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 1205,
+      "title": "¡Felices fiestas!",
+      "subtitle": "Happy holidays!",
+      "emoji": "🏆",
+      "milestone": false,
+      "funFact": "You've finished the Christmas pack! From the Belén to the Reyes Magos, you know how Spain celebrates. ¡Felices fiestas!",
+      "phrase": {
+        "es": "¡Feliz Navidad y feliz Año Nuevo!",
+        "en": "Merry Christmas and Happy New Year!"
+      },
+      "words": [
+        {
+          "es": "Feliz Navidad",
+          "en": "Merry Christmas",
+          "say": "feh-LEETH nah-bee-DAD",
+          "emoji": "🎄"
+        },
+        {
+          "es": "Nochebuena",
+          "en": "Christmas Eve",
+          "say": "noh-cheh-BWEH-nah",
+          "emoji": "🌟"
+        },
+        {
+          "es": "Los villancicos",
+          "en": "Christmas carols",
+          "say": "los bee-yan-THEE-kos",
+          "emoji": "🎶"
+        },
+        {
+          "es": "Las doce uvas",
+          "en": "The twelve grapes",
+          "say": "las DOH-theh OO-bas",
+          "emoji": "🍇"
+        },
+        {
+          "es": "¡Feliz Año Nuevo!",
+          "en": "Happy New Year!",
+          "say": "feh-LEETH AH-nyoh NWEH-boh",
+          "emoji": "🎆"
+        },
+        {
+          "es": "El roscón de Reyes",
+          "en": "Roscón (Three Kings cake)",
+          "say": "el rros-KON deh RREH-yes",
+          "emoji": "🥯"
+        },
+        {
+          "es": "La carta a los Reyes",
+          "en": "The letter to the Kings",
+          "say": "lah KAR-tah ah los RREH-yes",
+          "emoji": "✉️"
+        },
+        {
+          "es": "¡Felices fiestas!",
+          "en": "Happy holidays!",
+          "say": "feh-LEE-thes FYES-tas",
+          "emoji": "🎉"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "En",
+            "Nochevieja",
+            "comemos",
+            "las",
+            "doce",
+            "uvas"
+          ],
+          "shuffle": [
+            "En",
+            "uvas",
+            "comemos",
+            "las",
+            "doce",
+            "Nochevieja"
+          ],
+          "en": "On New Year's Eve we eat the twelve grapes."
+        },
+        {
+          "correct": [
+            "Los",
+            "Reyes",
+            "Magos",
+            "traen",
+            "regalos"
+          ],
+          "shuffle": [
+            "traen",
+            "regalos",
+            "Magos",
+            "Los",
+            "Reyes"
+          ],
+          "en": "The Three Kings bring presents."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Los polvorones' are:",
+          "opts": [
+            "Crumbly Christmas biscuits",
+            "Fireworks",
+            "Carols"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'¡Felices fiestas!' means:",
+          "opts": [
+            "Happy holidays!",
+            "Happy birthday!",
+            "Have a good party!"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Christmas Calendar",
+        "paras": [
+          "Sol and Luna make a Christmas calendar for their class.",
+          "'El veintidós, el Gordo. El veinticuatro, Nochebuena. El treinta y uno, las doce uvas.'",
+          "'¡Y el seis de enero, los Reyes Magos!' says Luna. '¡Mi día favorito!'"
+        ],
+        "qs": [
+          {
+            "q": "What happens on the 22nd?",
+            "opts": [
+              "The Christmas lottery",
+              "Christmas Eve",
+              "The Three Kings"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "When do they eat the twelve grapes?",
+            "opts": [
+              "On the 31st",
+              "On the 24th",
+              "On 6 January"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What is Luna's favourite day?",
+            "opts": [
+              "6 January",
+              "25 December",
+              "31 December"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    }
+  ],
+  "conversations": [
+    {
+      "lesson": 1201,
+      "who": "sol",
+      "title": "Decorating together",
+      "scene": "🎄",
+      "turns": [
+        {
+          "ask": "¡Feliz Navidad! ¿Qué decoramos primero?",
+          "askEn": "Merry Christmas! What shall we decorate first?",
+          "answer": "El árbol de Navidad.",
+          "answerEn": "The Christmas tree.",
+          "keys": [
+            "arbol",
+            "belen",
+            "luces"
+          ],
+          "wrong": [
+            "Los villancicos.",
+            "Papá Noel."
+          ],
+          "reply": "¡Vale!",
+          "replyEn": "OK!"
+        },
+        {
+          "ask": "¿Qué ponemos en el árbol?",
+          "askEn": "What shall we put on the tree?",
+          "answer": "Las luces y una estrella.",
+          "answerEn": "The lights and a star.",
+          "keys": [
+            "luces",
+            "estrella",
+            "bolas"
+          ],
+          "wrong": [
+            "El Belén.",
+            "Las vacaciones."
+          ],
+          "reply": "¡Qué bonito!",
+          "replyEn": "How pretty!"
+        },
+        {
+          "ask": "¿Cantamos un villancico?",
+          "askEn": "Shall we sing a carol?",
+          "answer": "¡Sí, vamos!",
+          "answerEn": "Yes, let's go!",
+          "keys": [
+            "si",
+            "vamos",
+            "vale",
+            "claro"
+          ],
+          "wrong": [
+            "El árbol de Navidad.",
+            "Decorar."
+          ],
+          "reply": "Ande, ande, ande, la marimorena…",
+          "replyEn": "(singing a famous Spanish carol, “La Marimorena”)"
+        }
+      ]
+    },
+    {
+      "lesson": 1202,
+      "who": "luna",
+      "title": "Christmas Eve dinner",
+      "scene": "🌟",
+      "turns": [
+        {
+          "ask": "¿Dónde cenas en Nochebuena?",
+          "askEn": "Where do you have dinner on Christmas Eve?",
+          "answer": "En casa de mis abuelos.",
+          "answerEn": "At my grandparents' house.",
+          "keys": [
+            "en casa",
+            "en mi casa",
+            "abuelos",
+            "abuela"
+          ],
+          "wrong": [
+            "El Gordo.",
+            "Brindar."
+          ],
+          "reply": "¡Qué bonito!",
+          "replyEn": "How lovely!"
+        },
+        {
+          "ask": "¿Qué comes de postre en Navidad?",
+          "askEn": "What do you have for dessert at Christmas?",
+          "answer": "Turrón y polvorones.",
+          "answerEn": "Turrón and polvorones.",
+          "keys": [
+            "turron",
+            "polvorones",
+            "mazapan"
+          ],
+          "wrong": [
+            "Castañas.",
+            "Una calabaza."
+          ],
+          "reply": "¡Mmm!",
+          "replyEn": "Mmm!"
+        },
+        {
+          "ask": "¡Vamos a brindar! ¿Qué decimos?",
+          "askEn": "Let's make a toast! What do we say?",
+          "answer": "¡Felices fiestas!",
+          "answerEn": "Happy holidays!",
+          "keys": [
+            "felices fiestas",
+            "feliz navidad",
+            "salud"
+          ],
+          "wrong": [
+            "¡Truco o trato!",
+            "¡Buenas noches!"
+          ],
+          "reply": "¡Felices fiestas a todos!",
+          "replyEn": "Happy holidays, everyone!"
+        }
+      ]
+    },
+    {
+      "lesson": 1203,
+      "who": "sol",
+      "title": "The midnight chimes",
+      "scene": "🍇",
+      "turns": [
+        {
+          "ask": "¿Cuántas uvas comes en Nochevieja?",
+          "askEn": "How many grapes do you eat on New Year's Eve?",
+          "answer": "Doce uvas.",
+          "answerEn": "Twelve grapes.",
+          "keys": [
+            "doce"
+          ],
+          "wrong": [
+            "Diez uvas.",
+            "Siete uvas."
+          ],
+          "reply": "¡Una en cada campanada!",
+          "replyEn": "One on each chime!"
+        },
+        {
+          "ask": "¿Dónde está el reloj de las campanadas?",
+          "askEn": "Where is the clock for the chimes?",
+          "answer": "En la Puerta del Sol, en Madrid.",
+          "answerEn": "At Puerta del Sol, in Madrid.",
+          "keys": [
+            "puerta del sol",
+            "madrid"
+          ],
+          "wrong": [
+            "En Barcelona.",
+            "En mi cole."
+          ],
+          "reply": "¡Exacto!",
+          "replyEn": "Exactly!"
+        },
+        {
+          "ask": "¡Dong! ¡Es medianoche! ¿Qué decimos?",
+          "askEn": "Dong! It's midnight! What do we say?",
+          "answer": "¡Feliz Año Nuevo!",
+          "answerEn": "Happy New Year!",
+          "keys": [
+            "feliz ano nuevo",
+            "feliz ano"
+          ],
+          "wrong": [
+            "¡Feliz cumpleaños!",
+            "¡Truco o trato!"
+          ],
+          "reply": "¡Feliz Año Nuevo!",
+          "replyEn": "Happy New Year!"
+        }
+      ]
+    },
+    {
+      "lesson": 1204,
+      "who": "luna",
+      "title": "The Three Kings",
+      "scene": "👑",
+      "turns": [
+        {
+          "ask": "¿Qué escribes a los Reyes Magos?",
+          "askEn": "What do you write to the Three Kings?",
+          "answer": "Una carta con mis deseos.",
+          "answerEn": "A letter with my wishes.",
+          "keys": [
+            "carta"
+          ],
+          "wrong": [
+            "Un roscón.",
+            "Un camello."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Great!"
+        },
+        {
+          "ask": "¿Qué dejas para los camellos?",
+          "askEn": "What do you leave for the camels?",
+          "answer": "Agua y un poco de comida.",
+          "answerEn": "Water and a little food.",
+          "keys": [
+            "agua",
+            "comida",
+            "zanahorias",
+            "pan"
+          ],
+          "wrong": [
+            "Mis zapatos.",
+            "El carbón."
+          ],
+          "reply": "¡Qué detalle!",
+          "replyEn": "How kind!"
+        },
+        {
+          "ask": "¿Qué hay dentro del roscón?",
+          "askEn": "What's inside the roscón?",
+          "answer": "¡Una sorpresa!",
+          "answerEn": "A surprise!",
+          "keys": [
+            "sorpresa",
+            "rey",
+            "haba"
+          ],
+          "wrong": [
+            "Carbón dulce.",
+            "Una carta."
+          ],
+          "reply": "¡Y quien la encuentra es el rey!",
+          "replyEn": "And whoever finds it is king!"
+        },
+        {
+          "ask": "¿Te has portado bien este año?",
+          "askEn": "Have you behaved well this year?",
+          "answer": "¡Sí, muy bien!",
+          "answerEn": "Yes, very well!",
+          "keys": [
+            "si",
+            "bien",
+            "no",
+            "un poco"
+          ],
+          "wrong": [
+            "El roscón.",
+            "Los zapatos."
+          ],
+          "reply": "¡Entonces nada de carbón!",
+          "replyEn": "Then no coal for you!"
+        }
+      ]
+    },
+    {
+      "lesson": 1205,
+      "who": "sol",
+      "title": "Christmas quiz",
+      "scene": "🏆",
+      "turns": [
+        {
+          "ask": "¿Qué día es Nochebuena?",
+          "askEn": "What day is Christmas Eve?",
+          "answer": "El veinticuatro de diciembre.",
+          "answerEn": "The twenty-fourth of December.",
+          "keys": [
+            "veinticuatro",
+            "24"
+          ],
+          "wrong": [
+            "El treinta y uno.",
+            "El seis de enero."
+          ],
+          "reply": "¡Correcto!",
+          "replyEn": "Correct!"
+        },
+        {
+          "ask": "¿Cuándo vienen los Reyes Magos?",
+          "askEn": "When do the Three Kings come?",
+          "answer": "La noche del cinco de enero.",
+          "answerEn": "The night of the fifth of January.",
+          "keys": [
+            "cinco de enero",
+            "seis de enero",
+            "enero"
+          ],
+          "wrong": [
+            "En Nochebuena.",
+            "En Nochevieja."
+          ],
+          "reply": "¡Muy bien!",
+          "replyEn": "Very good!"
+        },
+        {
+          "ask": "¿Qué comemos en Nochevieja a medianoche?",
+          "askEn": "What do we eat at midnight on New Year's Eve?",
+          "answer": "Las doce uvas.",
+          "answerEn": "The twelve grapes.",
+          "keys": [
+            "uvas"
+          ],
+          "wrong": [
+            "El roscón.",
+            "Castañas."
+          ],
+          "reply": "¡Eso es!",
+          "replyEn": "That's it!"
+        },
+        {
+          "ask": "¿Cuál es tu fiesta favorita?",
+          "askEn": "Which is your favourite celebration?",
+          "answer": "Me gustan más los Reyes Magos.",
+          "answerEn": "I like the Three Kings best.",
+          "keys": [
+            "reyes",
+            "navidad",
+            "nochebuena",
+            "nochevieja",
+            "me gusta",
+            "me gustan"
+          ],
+          "wrong": [
+            "Doce uvas.",
+            "El veinticuatro."
+          ],
+          "reply": "¡Eres un campeón de Navidad!",
+          "replyEn": "You're a Christmas champion!"
+        }
+      ]
+    }
+  ]
+}

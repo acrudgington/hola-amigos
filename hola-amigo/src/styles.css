@@ -1114,3 +1114,16 @@ li:last-child > .step .step__rail { display: none; }
 .phrase-full__card { width: min(560px, 100%); text-align: center; padding: 28px 20px; border-radius: 28px; background: #fffaf0; color: #1b1b2a; }
 .phrase-full__es { font-family: var(--font-display); font-weight: 700; font-size: clamp(34px, 9vw, 56px); line-height: 1.08; margin-top: 10px; }
 .phrase-full__en { font-size: 18px; font-weight: 700; color: #5a5a72; margin-top: 8px; }
+
+/* Seasonal decorations and banner */
+.season-decor { position: absolute; inset: -20px 0 auto 0; height: 460px; overflow: hidden; pointer-events: none; z-index: 5; }
+.season-decor span { position: absolute; top: -30px; opacity: 0.6; filter: drop-shadow(0 2px 4px rgba(0,0,0,.35)); animation-name: season-fall; animation-timing-function: linear; animation-iteration-count: infinite; }
+.season-decor--halloween span { animation-name: season-drift; }
+@keyframes season-fall { from { transform: translate(0, -30px) rotate(0); } to { transform: translate(30px, 440px) rotate(200deg); } }
+@keyframes season-drift { 0% { transform: translate(0, -30px); opacity: 0; } 15% { opacity: 0.8; } 50% { transform: translate(-40px, 200px); } 100% { transform: translate(20px, 440px); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .season-decor { display: none; } }
+.season-banner { display: flex; align-items: center; gap: 14px; width: 100%; padding: 14px 16px; border-radius: 20px; cursor: pointer; color: var(--text); font: inherit; text-align: left;
+  border: 1px solid color-mix(in srgb, var(--pc) 60%, transparent); background: linear-gradient(110deg, color-mix(in srgb, var(--pc) 35%, transparent), color-mix(in srgb, var(--pc) 8%, var(--glass-2)) 70%); }
+.season-banner__es { display: block; font-family: var(--font-display); font-weight: 700; font-size: 22px; }
+.season-banner__en { display: block; font-size: 13px; color: var(--text-2); font-weight: 700; }
+.season-banner__go { font-weight: 900; color: var(--pc); white-space: nowrap; }

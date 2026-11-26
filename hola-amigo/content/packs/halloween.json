@@ -1,0 +1,914 @@
+{
+  "id": "halloween",
+  "title": "Halloween y Todos los Santos",
+  "en": "Halloween & All Saints",
+  "about": "A limited-time autumn pack (1 October to 2 November): costumes, spooky words and Spain's own autumn traditions, like roasted chestnuts and huesos de santo.",
+  "emoji": "🎃",
+  "color": "#FF8A1F",
+  "audience": "child",
+  "sequential": false,
+  "window": {
+    "from": "10-01",
+    "to": "11-02"
+  },
+  "sticker": {
+    "id": "k_halloween",
+    "name": "Pumpkin Pal",
+    "emoji": "🎃"
+  },
+  "lessons": [
+    {
+      "id": 1101,
+      "title": "¡Truco o trato!",
+      "subtitle": "Trick or treat!",
+      "emoji": "🎃",
+      "milestone": false,
+      "funFact": "Halloween has become very popular with children in Spain. Kids go round saying '¡Truco o trato!' (Trick or treat!).",
+      "phrase": {
+        "es": "¡Truco o trato! ¿Tienes caramelos?",
+        "en": "Trick or treat! Have you got any sweets?"
+      },
+      "words": [
+        {
+          "es": "La calabaza",
+          "en": "The pumpkin",
+          "say": "lah kah-lah-BAH-thah",
+          "emoji": "🎃"
+        },
+        {
+          "es": "El fantasma",
+          "en": "The ghost",
+          "say": "el fan-TAS-mah",
+          "emoji": "👻"
+        },
+        {
+          "es": "El murciélago",
+          "en": "The bat",
+          "say": "el moor-THYEH-lah-goh",
+          "emoji": "🦇"
+        },
+        {
+          "es": "El esqueleto",
+          "en": "The skeleton",
+          "say": "el es-keh-LEH-toh",
+          "emoji": "💀"
+        },
+        {
+          "es": "La telaraña",
+          "en": "The spider's web",
+          "say": "lah teh-lah-RAH-nyah",
+          "emoji": "🕸️"
+        },
+        {
+          "es": "¡Truco o trato!",
+          "en": "Trick or treat!",
+          "say": "TROO-koh oh TRAH-toh",
+          "emoji": "🍬"
+        },
+        {
+          "es": "¡Qué miedo!",
+          "en": "How scary!",
+          "say": "keh MYEH-doh",
+          "emoji": "😱"
+        },
+        {
+          "es": "La noche de Halloween",
+          "en": "Halloween night",
+          "say": "lah NOH-cheh deh HA-loh-ween",
+          "emoji": "🌕"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "En",
+            "Halloween",
+            "hay",
+            "calabazas",
+            "y",
+            "fantasmas"
+          ],
+          "shuffle": [
+            "calabazas",
+            "fantasmas",
+            "hay",
+            "En",
+            "y",
+            "Halloween"
+          ],
+          "en": "At Halloween there are pumpkins and ghosts."
+        },
+        {
+          "correct": [
+            "El",
+            "murciélago",
+            "vuela",
+            "por",
+            "la",
+            "noche"
+          ],
+          "shuffle": [
+            "El",
+            "noche",
+            "murciélago",
+            "vuela",
+            "por",
+            "la"
+          ],
+          "en": "The bat flies at night."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'El murciélago' is:",
+          "opts": [
+            "The bat",
+            "The witch",
+            "The ghost"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'¡Qué miedo!' means:",
+          "opts": [
+            "How scary!",
+            "How funny!",
+            "How tasty!"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "A Spooky Night",
+        "paras": [
+          "It's Halloween night. Sol and Luna carry a big calabaza with a smiley face.",
+          "At the first door, they shout: '¡Truco o trato!' A man dressed as an esqueleto opens it. '¡Qué miedo!' laughs Luna.",
+          "He gives them caramelos. Above them, a murciélago flies past the full moon. '¡Feliz Halloween!'"
+        ],
+        "qs": [
+          {
+            "q": "What do Sol and Luna carry?",
+            "opts": [
+              "A pumpkin",
+              "A lantern",
+              "A broom"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How is the man dressed?",
+            "opts": [
+              "As a skeleton",
+              "As a ghost",
+              "As a bat"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What flies past the moon?",
+            "opts": [
+              "A bat",
+              "A witch",
+              "An owl"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 1102,
+      "title": "Disfraces",
+      "subtitle": "Costumes",
+      "emoji": "🧛",
+      "milestone": false,
+      "funFact": "In Spain, 'disfrazarse' (dressing up) isn't just for Halloween: Carnaval in February is the biggest dressing-up party of the year!",
+      "phrase": {
+        "es": "Me disfrazo de vampiro.",
+        "en": "I'm dressing up as a vampire."
+      },
+      "words": [
+        {
+          "es": "El disfraz",
+          "en": "The costume",
+          "say": "el dees-FRATH",
+          "emoji": "🎭"
+        },
+        {
+          "es": "Me disfrazo de",
+          "en": "I'm dressing up as",
+          "say": "meh dees-FRAH-thoh deh",
+          "emoji": "👗"
+        },
+        {
+          "es": "El vampiro",
+          "en": "The vampire",
+          "say": "el bam-PEE-roh",
+          "emoji": "🧛"
+        },
+        {
+          "es": "El zombi",
+          "en": "The zombie",
+          "say": "el THOM-bee",
+          "emoji": "🧟"
+        },
+        {
+          "es": "El mago",
+          "en": "The wizard",
+          "say": "el MAH-goh",
+          "emoji": "🧙‍♂️"
+        },
+        {
+          "es": "El gato negro",
+          "en": "The black cat",
+          "say": "el GAH-toh NEH-groh",
+          "emoji": "🐈‍⬛"
+        },
+        {
+          "es": "La capa",
+          "en": "The cape",
+          "say": "lah KAH-pah",
+          "emoji": "🦸"
+        },
+        {
+          "es": "¿De qué te disfrazas?",
+          "en": "What are you dressing up as?",
+          "say": "deh keh teh dees-FRAH-thas",
+          "emoji": "❓"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Este",
+            "año",
+            "me",
+            "disfrazo",
+            "de",
+            "zombi"
+          ],
+          "shuffle": [
+            "me",
+            "Este",
+            "año",
+            "zombi",
+            "de",
+            "disfrazo"
+          ],
+          "en": "This year I'm dressing up as a zombie."
+        },
+        {
+          "correct": [
+            "Mi",
+            "hermana",
+            "lleva",
+            "una",
+            "capa",
+            "negra"
+          ],
+          "shuffle": [
+            "Mi",
+            "capa",
+            "hermana",
+            "negra",
+            "una",
+            "lleva"
+          ],
+          "en": "My sister is wearing a black cape."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'El disfraz' is:",
+          "opts": [
+            "The costume",
+            "The mask shop",
+            "The party"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Me disfrazo de mago' means:",
+          "opts": [
+            "I'm dressing up as a wizard",
+            "I like wizards",
+            "I'm scared of wizards"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Costume Party",
+        "paras": [
+          "The class is having a Halloween party. '¿De qué te disfrazas?' asks Luna.",
+          "'Me disfrazo de vampiro, con una capa negra,' says Sol. 'Yo, de gato negro,' says Luna.",
+          "The teacher arrives dressed as a mago. '¡Qué disfraces tan chulos!' she says."
+        ],
+        "qs": [
+          {
+            "q": "What is Sol dressing up as?",
+            "opts": [
+              "A vampire",
+              "A zombie",
+              "A wizard"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What is Luna dressing up as?",
+            "opts": [
+              "A black cat",
+              "A witch",
+              "A ghost"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What is the teacher dressed as?",
+            "opts": [
+              "A wizard",
+              "A vampire",
+              "A skeleton"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 1103,
+      "title": "Todos los Santos",
+      "subtitle": "All Saints' Day",
+      "emoji": "🌰",
+      "milestone": false,
+      "funFact": "On 1 November, Spain celebrates Todos los Santos, a holiday to remember family members. People eat roasted chestnuts, 'huesos de santo' (marzipan sweets) and 'buñuelos'.",
+      "phrase": {
+        "es": "En noviembre comemos castañas asadas.",
+        "en": "In November we eat roasted chestnuts."
+      },
+      "words": [
+        {
+          "es": "Todos los Santos",
+          "en": "All Saints' Day",
+          "say": "TOH-dos los SAN-tos",
+          "emoji": "🕯️"
+        },
+        {
+          "es": "Las castañas asadas",
+          "en": "Roasted chestnuts",
+          "say": "las kas-TAH-nyas ah-SAH-das",
+          "emoji": "🌰"
+        },
+        {
+          "es": "El castañero",
+          "en": "The chestnut seller",
+          "say": "el kas-tah-NYEH-roh",
+          "emoji": "🧑‍🍳"
+        },
+        {
+          "es": "Los huesos de santo",
+          "en": "Huesos de santo (marzipan sweets)",
+          "say": "los WEH-sos deh SAN-toh",
+          "emoji": "🦴"
+        },
+        {
+          "es": "Los buñuelos",
+          "en": "Buñuelos (sweet fritters)",
+          "say": "los boo-NYWEH-los",
+          "emoji": "🍩"
+        },
+        {
+          "es": "Hace fresco",
+          "en": "It's chilly",
+          "say": "AH-theh FRES-koh",
+          "emoji": "🍂"
+        },
+        {
+          "es": "Calentito",
+          "en": "Nice and warm",
+          "say": "kah-len-TEE-toh",
+          "emoji": "☕"
+        },
+        {
+          "es": "Recordar",
+          "en": "To remember",
+          "say": "rreh-kor-DAR",
+          "emoji": "💭"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Las",
+            "castañas",
+            "asadas",
+            "están",
+            "calentitas"
+          ],
+          "shuffle": [
+            "asadas",
+            "castañas",
+            "calentitas",
+            "están",
+            "Las"
+          ],
+          "en": "The roasted chestnuts are nice and warm."
+        },
+        {
+          "correct": [
+            "El",
+            "uno",
+            "de",
+            "noviembre",
+            "es",
+            "Todos",
+            "los",
+            "Santos"
+          ],
+          "shuffle": [
+            "es",
+            "de",
+            "los",
+            "Todos",
+            "noviembre",
+            "uno",
+            "El",
+            "Santos"
+          ],
+          "en": "The first of November is All Saints' Day."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Las castañas asadas' are:",
+          "opts": [
+            "Roasted chestnuts",
+            "Chocolate sweets",
+            "Hot drinks"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "Todos los Santos is on:",
+          "opts": [
+            "1 November",
+            "31 October",
+            "25 December"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Chestnuts in the Square",
+        "paras": [
+          "It's the first of November. Hace fresco, so Sol and his grandma go to the plaza.",
+          "A castañero is roasting chestnuts. 'Una docena, por favor.' The paper cone is calentito in Sol's hands.",
+          "At home, Abuela brings huesos de santo. 'Hoy recordamos a la familia,' she says, and tells stories about Sol's great-grandad."
+        ],
+        "qs": [
+          {
+            "q": "What's the weather like?",
+            "opts": [
+              "Chilly",
+              "Hot",
+              "Rainy"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does the castañero sell?",
+            "opts": [
+              "Roasted chestnuts",
+              "Ice cream",
+              "Churros"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Grandma do at home?",
+            "opts": [
+              "Tells stories about the family",
+              "Bakes a cake",
+              "Watches TV"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 1104,
+      "title": "¡Fiesta de otoño!",
+      "subtitle": "Autumn party",
+      "emoji": "🏆",
+      "milestone": false,
+      "funFact": "You've finished the Halloween pack! You can talk about costumes, spooky things and Spain's autumn traditions. ¡Felicidades!",
+      "phrase": {
+        "es": "Me disfrazo de fantasma y como castañas.",
+        "en": "I'm dressing up as a ghost and eating chestnuts."
+      },
+      "words": [
+        {
+          "es": "La calabaza",
+          "en": "The pumpkin",
+          "say": "lah kah-lah-BAH-thah",
+          "emoji": "🎃"
+        },
+        {
+          "es": "El fantasma",
+          "en": "The ghost",
+          "say": "el fan-TAS-mah",
+          "emoji": "👻"
+        },
+        {
+          "es": "¡Truco o trato!",
+          "en": "Trick or treat!",
+          "say": "TROO-koh oh TRAH-toh",
+          "emoji": "🍬"
+        },
+        {
+          "es": "El disfraz",
+          "en": "The costume",
+          "say": "el dees-FRATH",
+          "emoji": "🎭"
+        },
+        {
+          "es": "Me disfrazo de",
+          "en": "I'm dressing up as",
+          "say": "meh dees-FRAH-thoh deh",
+          "emoji": "👗"
+        },
+        {
+          "es": "Las castañas asadas",
+          "en": "Roasted chestnuts",
+          "say": "las kas-TAH-nyas ah-SAH-das",
+          "emoji": "🌰"
+        },
+        {
+          "es": "Todos los Santos",
+          "en": "All Saints' Day",
+          "say": "TOH-dos los SAN-tos",
+          "emoji": "🕯️"
+        },
+        {
+          "es": "¡Qué miedo!",
+          "en": "How scary!",
+          "say": "keh MYEH-doh",
+          "emoji": "😱"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "En",
+            "Halloween",
+            "me",
+            "disfrazo",
+            "de",
+            "fantasma"
+          ],
+          "shuffle": [
+            "En",
+            "Halloween",
+            "de",
+            "me",
+            "disfrazo",
+            "fantasma"
+          ],
+          "en": "At Halloween I dress up as a ghost."
+        },
+        {
+          "correct": [
+            "En",
+            "otoño",
+            "comemos",
+            "castañas",
+            "asadas"
+          ],
+          "shuffle": [
+            "comemos",
+            "asadas",
+            "castañas",
+            "otoño",
+            "En"
+          ],
+          "en": "In autumn we eat roasted chestnuts."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'El esqueleto' is:",
+          "opts": [
+            "The skeleton",
+            "The skater",
+            "The scarecrow"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Hace fresco' means:",
+          "opts": [
+            "It's chilly",
+            "It's fresh fruit",
+            "It's hot"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Autumn Memories",
+        "paras": [
+          "Sol and Luna make a poster about autumn in Spain.",
+          "'En Halloween nos disfrazamos y decimos ¡truco o trato!' writes Luna.",
+          "'Y el uno de noviembre comemos castañas y huesos de santo,' writes Sol. '¡Qué rico!'"
+        ],
+        "qs": [
+          {
+            "q": "What are they making?",
+            "opts": [
+              "A poster",
+              "A cake",
+              "A costume"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What do they say at Halloween?",
+            "opts": [
+              "Trick or treat!",
+              "Happy birthday!",
+              "Good night!"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What do they eat on 1 November?",
+            "opts": [
+              "Chestnuts and huesos de santo",
+              "Turrón",
+              "Grapes"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    }
+  ],
+  "conversations": [
+    {
+      "lesson": 1101,
+      "who": "luna",
+      "title": "Trick or treat",
+      "scene": "🎃",
+      "turns": [
+        {
+          "ask": "¡Hola! ¿Qué decís en Halloween?",
+          "askEn": "Hello! What do you all say at Halloween?",
+          "answer": "¡Truco o trato!",
+          "answerEn": "Trick or treat!",
+          "keys": [
+            "truco o trato",
+            "truco",
+            "trato"
+          ],
+          "wrong": [
+            "¡Feliz Navidad!",
+            "¡Buenas noches!"
+          ],
+          "reply": "¡Aquí tenéis caramelos!",
+          "replyEn": "Here are some sweets!"
+        },
+        {
+          "ask": "¿Qué es esto? 🎃",
+          "askEn": "What's this? 🎃",
+          "answer": "Es una calabaza.",
+          "answerEn": "It's a pumpkin.",
+          "keys": [
+            "calabaza"
+          ],
+          "wrong": [
+            "Es un fantasma.",
+            "Es un murciélago."
+          ],
+          "reply": "¡Qué grande!",
+          "replyEn": "So big!"
+        },
+        {
+          "ask": "¡Uuuh! Soy un fantasma. ¿Tienes miedo?",
+          "askEn": "Woooo! I'm a ghost. Are you scared?",
+          "answer": "¡Sí! ¡Qué miedo!",
+          "answerEn": "Yes! How scary!",
+          "keys": [
+            "que miedo",
+            "si",
+            "no",
+            "miedo"
+          ],
+          "wrong": [
+            "Es una calabaza.",
+            "Me gusta el turrón."
+          ],
+          "reply": "¡Ja, ja! ¡Soy yo, Luna!",
+          "replyEn": "Ha ha! It's me, Luna!"
+        }
+      ]
+    },
+    {
+      "lesson": 1102,
+      "who": "sol",
+      "title": "The costume party",
+      "scene": "🧛",
+      "turns": [
+        {
+          "ask": "¿De qué te disfrazas este año?",
+          "askEn": "What are you dressing up as this year?",
+          "answer": "Me disfrazo de vampiro.",
+          "answerEn": "I'm dressing up as a vampire.",
+          "keys": [
+            "me disfrazo de",
+            "de vampiro",
+            "de zombi",
+            "de mago",
+            "de bruja",
+            "de fantasma",
+            "de gato"
+          ],
+          "wrong": [
+            "Me gusta la capa.",
+            "Es la noche."
+          ],
+          "reply": "¡Qué chulo!",
+          "replyEn": "How cool!"
+        },
+        {
+          "ask": "¿Qué llevas con el disfraz de vampiro?",
+          "askEn": "What do you wear with the vampire costume?",
+          "answer": "Una capa negra.",
+          "answerEn": "A black cape.",
+          "keys": [
+            "capa"
+          ],
+          "wrong": [
+            "Un gato negro.",
+            "Una calabaza."
+          ],
+          "reply": "¡Perfecto!",
+          "replyEn": "Perfect!"
+        },
+        {
+          "ask": "¿Y tu hermano? ¿De qué se disfraza?",
+          "askEn": "And your brother? What's he dressing up as?",
+          "answer": "Se disfraza de zombi.",
+          "answerEn": "He's dressing up as a zombie.",
+          "keys": [
+            "se disfraza de",
+            "de zombi",
+            "de mago",
+            "de vampiro",
+            "de fantasma",
+            "de esqueleto"
+          ],
+          "wrong": [
+            "Me disfrazo hoy.",
+            "La capa es negra."
+          ],
+          "reply": "¡Uuuh, qué miedo!",
+          "replyEn": "Ooooh, how scary!"
+        }
+      ]
+    },
+    {
+      "lesson": 1103,
+      "who": "luna",
+      "title": "Chestnuts in the square",
+      "scene": "🌰",
+      "role": "the chestnut seller",
+      "turns": [
+        {
+          "ask": "Hola, ¿cuántas castañas quieres?",
+          "askEn": "Hello, how many chestnuts would you like?",
+          "answer": "Una docena, por favor.",
+          "answerEn": "A dozen, please.",
+          "keys": [
+            "docena",
+            "seis",
+            "diez",
+            "doce",
+            "por favor"
+          ],
+          "wrong": [
+            "Hace fresco.",
+            "Todos los Santos."
+          ],
+          "reply": "Aquí tienes. ¡Cuidado, queman!",
+          "replyEn": "Here you are. Careful, they're hot!"
+        },
+        {
+          "ask": "¿Qué día es Todos los Santos?",
+          "askEn": "What day is All Saints' Day?",
+          "answer": "El uno de noviembre.",
+          "answerEn": "The first of November.",
+          "keys": [
+            "uno de noviembre",
+            "noviembre"
+          ],
+          "wrong": [
+            "El treinta y uno de octubre.",
+            "En Navidad."
+          ],
+          "reply": "¡Muy bien!",
+          "replyEn": "Very good!"
+        },
+        {
+          "ask": "¿Qué dulces se comen en Todos los Santos?",
+          "askEn": "What sweets do people eat on All Saints' Day?",
+          "answer": "Huesos de santo y buñuelos.",
+          "answerEn": "Huesos de santo and buñuelos.",
+          "keys": [
+            "huesos de santo",
+            "bunuelos",
+            "castanas"
+          ],
+          "wrong": [
+            "Turrón y polvorones.",
+            "Churros con chocolate."
+          ],
+          "reply": "¡Qué ricos!",
+          "replyEn": "Yummy!"
+        }
+      ]
+    },
+    {
+      "lesson": 1104,
+      "who": "sol",
+      "title": "Autumn quiz",
+      "scene": "🏆",
+      "turns": [
+        {
+          "ask": "¿Qué es esto? 👻",
+          "askEn": "What's this? 👻",
+          "answer": "Es un fantasma.",
+          "answerEn": "It's a ghost.",
+          "keys": [
+            "fantasma"
+          ],
+          "wrong": [
+            "Es una calabaza.",
+            "Es una castaña."
+          ],
+          "reply": "¡Uuuh!",
+          "replyEn": "Ooooh!"
+        },
+        {
+          "ask": "¿De qué te disfrazas en Halloween?",
+          "askEn": "What do you dress up as at Halloween?",
+          "answer": "Me disfrazo de esqueleto.",
+          "answerEn": "I dress up as a skeleton.",
+          "keys": [
+            "me disfrazo de"
+          ],
+          "wrong": [
+            "Las castañas asadas.",
+            "¡Qué miedo!"
+          ],
+          "reply": "¡Genial!",
+          "replyEn": "Great!"
+        },
+        {
+          "ask": "¿Qué comemos en otoño en la plaza?",
+          "askEn": "What do we eat in the square in autumn?",
+          "answer": "Castañas asadas.",
+          "answerEn": "Roasted chestnuts.",
+          "keys": [
+            "castanas"
+          ],
+          "wrong": [
+            "Helado de fresa.",
+            "Uvas."
+          ],
+          "reply": "¡Calentitas!",
+          "replyEn": "Nice and warm!"
+        },
+        {
+          "ask": "¿Te ha gustado Halloween?",
+          "askEn": "Did you enjoy Halloween?",
+          "answer": "¡Sí, me ha encantado!",
+          "answerEn": "Yes, I loved it!",
+          "keys": [
+            "me ha encantado",
+            "me ha gustado",
+            "si",
+            "no",
+            "me encanta"
+          ],
+          "wrong": [
+            "Todos los Santos.",
+            "Hace fresco."
+          ],
+          "reply": "¡Eres un campeón de otoño!",
+          "replyEn": "You're an autumn champion!"
+        }
+      ]
+    }
+  ]
+}
