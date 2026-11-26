@@ -89,7 +89,7 @@ export function FamilyScreen({ parent, onPickChild, onDashboard, onLogout, prefs
       </div>
 
       <div className="stack">
-        {children.length > 0 && <Button variant="luna" block onClick={onDashboard}>📊 Grown-up dashboard</Button>}
+        <Button variant="luna" block onClick={onDashboard}>📊 Grown-up dashboard &amp; settings</Button>
         <Button block onClick={onLogout}>Log out</Button>
         {prefs && onToggle && <PrefToggles prefs={prefs} onToggle={onToggle} />}
       </div>

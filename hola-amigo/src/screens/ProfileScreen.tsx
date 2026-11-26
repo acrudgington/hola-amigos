@@ -91,6 +91,7 @@ export function ProfileScreen({ child, parent, progress, onTrophies, onSwitchChi
       </div>
       <Button size="sm" variant="luna" onClick={onPlacement}>Find my level</Button>
     </Card>
+    <p className="tiny muted text-center" style={{ margin: "4px 0 0" }}>Grown-ups: to start {child.name} again from lesson 1, or to delete your account, go to <b>Switch learner → Grown-up dashboard &amp; settings</b>.</p>
     {editing && <Modal onClose={() => setEditing(false)} labelledBy="look-title">
       <h3 id="look-title" className="h2 text-center" style={{ marginBottom: 6 }}>Change my look</h3>
       <AvatarMaker value={look} onChange={setLook} />

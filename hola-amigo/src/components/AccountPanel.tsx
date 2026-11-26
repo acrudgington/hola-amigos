@@ -48,7 +48,7 @@ export function AccountPanel({ parent, onDeleted }: { parent: Parent; onDeleted:
 
   const agreed = parent.consent ? new Date(parent.consent.acceptedAt).toLocaleDateString(undefined, { day: "numeric", month: "long", year: "numeric" }) : null;
 
-  return <Card style={{ marginTop: 8 }}>
+  return <Card style={{ marginTop: 8 }} id="account">
     <div className="widget__head"><div className="widget__title" style={{ fontSize: 16 }}><Icon name="lock" size={18} />Account & privacy</div></div>
     <p className="small" style={{ fontWeight: 700, color: "var(--text-2)", lineHeight: 1.5, marginBottom: 14 }}>
       Signed in as <b>{parent.email}</b>. {cloud ? "Progress syncs across your family’s devices." : "Everything is saved on this device only."}

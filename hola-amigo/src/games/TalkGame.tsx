@@ -101,7 +101,7 @@ export function TalkGame({ conversation: c, onDone }: { conversation: Conversati
     else onDone(right.current, c.turns.length, mic.current);
   };
 
-  return <div className="talk">
+  return <div className="talk" data-phase={phase} data-turn={i} data-tries={tries}>
     <div className="talk__head">
       <div className="talk__who"><Who size={64} mood={mood} /></div>
       <div className="grow">

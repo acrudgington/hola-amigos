@@ -256,3 +256,44 @@ test("Find my level: stricter quiz with sentence questions", async ({ page }, in
   expect(sawSentence).toBe(false);   // a beginner never reaches the sentence worlds
   expect(errors).toEqual([]);
 });
+
+test("grown-ups can start a child again and find account deletion", async ({ page }) => {
+  const errors: string[] = [];
+  page.on("pageerror", e => errors.push(e.message));
+  await page.goto("/");
+  await page.getByRole("tab", { name: /Sign up/i }).click();
+  await page.getByLabel("Your name").fill("Sam");
+  await page.getByLabel("Email").fill(`sam+${Date.now()}@example.com`);
+  await page.getByLabel("Password").fill("secret123");
+  await page.getByRole("checkbox", { name: /parent or guardian/ }).check();
+  await page.getByRole("button", { name: /Create account/ }).click();
+  // The dashboard (and account settings) is there even before adding a child.
+  await expect(page.getByRole("button", { name: /Grown-up dashboard & settings/ })).toBeVisible();
+  await page.locator(".profile-tile--add").click();
+  await page.getByLabel("Child’s name").fill("Mia");
+  await page.getByRole("button", { name: "Add ✓" }).click();
+  await page.locator(".profile-tile").first().click();
+  await page.getByRole("button", { name: /new to Spanish/ }).click();
+  await expect(page.getByText(/Sol · study buddy/)).toBeVisible();
+  await page.evaluate(() => {
+    const key = Object.keys(localStorage).find(k => k.startsWith("hola_progress_"))!;
+    const p = JSON.parse(localStorage.getItem(key)!);
+    localStorage.setItem(key, JSON.stringify({ ...p, stars: { 1: 3, 2: 2 }, xp: 500, placedUpTo: 40 }));
+  });
+  await page.reload();
+  await page.locator(".avatar-btn:visible").first().click();
+  await page.getByRole("button", { name: /Grown-up dashboard & settings/ }).click();
+  await expect(page.getByRole("button", { name: /Account & privacy/ })).toBeVisible();
+  await expect(page.getByRole("button", { name: /Delete my account/ })).toBeVisible();
+  await page.getByRole("button", { name: /Start Mia again from lesson 1/ }).last().click();
+  await page.getByRole("button", { name: "Start again" }).click();
+  const saved = await page.evaluate(() => {
+    const key = Object.keys(localStorage).find(k => k.startsWith("hola_progress_"))!;
+    return JSON.parse(localStorage.getItem(key)!);
+  });
+  expect(saved.stars).toEqual({});
+  expect(saved.xp).toBe(0);
+  expect(saved.placedUpTo).toBe(0);
+  expect(saved.placementOffered).toBe(false);
+  expect(errors).toEqual([]);
+});

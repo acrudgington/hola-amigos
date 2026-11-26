@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Icon } from "../components/Icon.tsx";
-import { countLessons, getDueWords, liveStreak, sumStars, type Progress } from "../domain/progress.ts";
+import { countLessons, getDueWords, liveStreak, normalizeProgress, sumStars, type Progress } from "../domain/progress.ts";
 import { services, type Child, type Parent } from "../services/index.ts";
 import { useFamily } from "../state/useFamily.ts";
 import { AccountPanel } from "../components/AccountPanel.tsx";
@@ -123,7 +123,7 @@ function CanDo({ name, progress }: { name: string; progress: Progress }) {
   </section>;
 }
 
-function ChildReport({ child, progress: p, email, onRemove }: { child: Child; progress: Progress; email: string; onRemove: (c: Child) => void }) {
+function ChildReport({ child, progress: p, email, onRemove, onReset }: { child: Child; progress: Progress; email: string; onRemove: (c: Child) => void; onReset: (c: Child) => void }) {
   const stars = p.stars || {};
   const words = Object.values(p.wordMemory || {});
   const strong = words.filter(w => w.box >= 3).length;
@@ -139,6 +139,7 @@ function ChildReport({ child, progress: p, email, onRemove }: { child: Child; pr
         <div className="h3">{child.name}</div>
         <div className="small muted">{active} · 🔥 {liveStreak(p)}-day streak</div>
       </div>
+      <button type="button" className="icon-btn" onClick={() => onReset(child)} aria-label={`Start ${child.name} again from lesson 1`} title="Start again from lesson 1">↺</button>
       <button type="button" className="icon-btn" onClick={() => onRemove(child)} aria-label={`Remove ${child.name}`} title="Remove">🗑️</button>
     </div>
 
@@ -167,13 +168,21 @@ function ChildReport({ child, progress: p, email, onRemove }: { child: Child; pr
       </div>;
     })()}
     <CanDo name={child.name} progress={p} />
+    <div className="row row--wrap" style={{ gap: 8, marginTop: 16, paddingTop: 14, borderTop: "1px solid var(--hairline)" }}>
+      <Button size="sm" variant="white" onClick={() => onReset(child)}>↺ Start {child.name} again from lesson 1</Button>
+      <Button size="sm" variant="ghost" onClick={() => onRemove(child)} style={{ color: "var(--coral)" }}>Remove {child.name}</Button>
+    </div>
   </Card>;
 }
 
 export function ParentDashboard({ parent, onBack, onAccountDeleted }: { parent: Parent; onBack: () => void; onAccountDeleted: () => void }) {
   const [toRemove, setToRemove] = useState<Child | null>(null);
+  const [toReset, setToReset] = useState<Child | null>(null);
   const { family, reload } = useFamily(parent.id);
   const children = family ?? [];
+  // Start a child again from lesson 1: a brand-new progress record (they'll be
+  // offered the level check again). Name and avatar stay.
+  const reset = async () => { if (!toReset) return; await services.progress.save(toReset.id, normalizeProgress(null)); setToReset(null); await reload(); };
   const remove = async () => { if (!toRemove) return; await services.family.removeChild(toRemove.id); setToRemove(null); await reload(); };
 
   return <div className="app-bg">
@@ -183,11 +192,23 @@ export function ParentDashboard({ parent, onBack, onAccountDeleted }: { parent: 
         <Art e="📊" size={60} eager />
         <h1 className="h2">Grown-up dashboard</h1>
         <p className="muted small" style={{ marginTop: 4 }}>{children.length} {children.length === 1 ? "learner" : "learners"} · {parent.name}</p>
+        <Button size="sm" variant="ghost" style={{ marginTop: 6 }} onClick={() => document.getElementById("account")?.scrollIntoView({ behavior: "smooth" })}>🔒 Account &amp; privacy: download data or delete account ↓</Button>
       </div>
       {children.length === 0 && <Card className="text-center"><Art e="👶" size={60} /><p className="muted">No learners yet — add one to start tracking progress.</p></Card>}
-      {children.map(({ child, progress }) => <ChildReport key={child.id} child={child} progress={progress} email={parent.email} onRemove={setToRemove} />)}
+      {children.map(({ child, progress }) => <ChildReport key={child.id} child={child} progress={progress} email={parent.email} onRemove={setToRemove} onReset={setToReset} />)}
       <AccountPanel parent={parent} onDeleted={onAccountDeleted} />
     </div>
+    {toReset && <Modal onClose={() => setToReset(null)} labelledBy="reset-title">
+      <div className="text-center">
+        <div style={{ marginBottom: 6 }}><Art e="↩️" size={56} /></div>
+        <h3 id="reset-title" className="h2" style={{ marginBottom: 8 }}>Start {toReset.name} again?</h3>
+        <p className="muted small" style={{ marginBottom: 18 }}>{toReset.name} will go back to lesson 1. All stars, words learned, badges, stickers, XP and streaks will be wiped. {toReset.name}’s name and look stay the same. This can’t be undone.</p>
+        <div className="row" style={{ gap: 10 }}>
+          <Button block onClick={() => setToReset(null)}>Cancel</Button>
+          <Button block variant="coral" onClick={() => void reset()}>Start again</Button>
+        </div>
+      </div>
+    </Modal>}
     {toRemove && <Modal onClose={() => setToRemove(null)} labelledBy="rm-title">
       <div className="text-center">
         <div style={{ marginBottom: 6 }}><Art e="⚠️" size={56} /></div>
