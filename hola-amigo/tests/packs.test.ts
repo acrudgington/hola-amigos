@@ -6,8 +6,10 @@ import { awardStars, normalizeProgress } from "../src/domain/progress.ts";
 const d = (s: string) => new Date(`${s}T12:00:00`);
 
 describe("packs", () => {
-  it("has the school kit and the two seasonal packs", () => {
-    expect(PACKS.map(p => p.id)).toEqual(expect.arrayContaining(["school", "halloween", "christmas"]));
+  it("has the school kit, the two seasonal packs and the parents' course", () => {
+    expect(PACKS.map(p => p.id)).toEqual(expect.arrayContaining(["school", "halloween", "christmas", "parents"]));
+    expect(visiblePacks("adult").map(p => p.id)).toEqual(["parents"]);
+    expect(visiblePacks("child").map(p => p.id)).not.toContain("parents");
   });
 
   it("opens Halloween from 1 October to 2 November", () => {

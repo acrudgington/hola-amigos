@@ -4,12 +4,12 @@
 // their accounts and progress when they update.
 // ============================================================
 import { normalizeProgress, type Progress } from "../domain/progress.ts";
-import type { AuthResult, Child, Consent, FamilyExport, Outcome, Parent, Services, Session } from "./types.ts";
+import { assertRoom, type AuthResult, type Child, type Consent, type FamilyExport, type LearnerKind, type Outcome, type Parent, type Services, type Session } from "./types.ts";
 
 const KEYS = { parents: "hola_parents", children: "hola_children", session: "hola_session", progress: (id: string) => `hola_progress_${id}` };
 
 interface StoredParent { email: string; name: string; created: number; children: string[]; passHash?: string; pass?: string; consent?: Consent }
-interface StoredChild { id: string; parentEmail: string; name: string; avatar: string; created: number }
+interface StoredChild { id: string; parentEmail: string; name: string; avatar: string; created: number; kind?: LearnerKind }
 interface StoredSession { parentEmail: string; activeChildId: string | null }
 
 const read = <T,>(key: string, fallback: T): T => {
@@ -32,7 +32,7 @@ export async function hashPassword(email: string, pass: string): Promise<string>
 }
 
 const toParent = (p: StoredParent): Parent => ({ id: p.email, email: p.email, name: p.name, created: p.created, consent: p.consent, plan: "free" });
-const toChild = (c: StoredChild): Child => ({ id: c.id, parentId: c.parentEmail, name: c.name, avatar: c.avatar, created: c.created });
+const toChild = (c: StoredChild): Child => ({ id: c.id, parentId: c.parentEmail, name: c.name, avatar: c.avatar, created: c.created, kind: c.kind === "adult" ? "adult" : "child" });
 const parents = () => read<StoredParent[]>(KEYS.parents, []);
 const children = () => read<Record<string, StoredChild>>(KEYS.children, {});
 
@@ -108,12 +108,14 @@ export function createLocalServices(): Services {
         const all = children();
         return (p?.children || []).map(id => all[id]).filter(Boolean).map(toChild);
       },
-      async addChild(parentId, name, avatar) {
+      async addChild(parentId, name, avatar, kind = "child") {
         const all = parents();
         const idx = all.findIndex(p => p.email === parentId);
         if (idx < 0) throw new Error("Parent account not found");
+        const existing = (all[idx].children || []).map(id => children()[id]).filter(Boolean).map(toChild);
+        assertRoom(existing, kind);
         const id = `c_${Date.now()}_${Math.random().toString(36).slice(2, 7)}`;
-        const c: StoredChild = { id, parentEmail: parentId, name: name.trim(), avatar: avatar || "🦊", created: Date.now() };
+        const c: StoredChild = { id, parentEmail: parentId, name: name.trim(), avatar: avatar || "🦊", created: Date.now(), kind };
         write(KEYS.children, { ...children(), [id]: c });
         all[idx] = { ...all[idx], children: [...(all[idx].children || []), id] };
         write(KEYS.parents, all);

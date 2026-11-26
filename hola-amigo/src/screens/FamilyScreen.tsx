@@ -1,6 +1,10 @@
 import { useEffect, useState, type FormEvent } from "react";
 import { countLessons, liveStreak, sumStars } from "../domain/progress.ts";
 import { services, type Child, type Parent } from "../services/index.ts";
+import { roomFor, type LearnerKind } from "../services/types.ts";
+import { FAMILY } from "../config.ts";
+import { packById } from "../content/index.ts";
+import { packProgress } from "../domain/packs.ts";
 import { useFamily } from "../state/useFamily.ts";
 import { dismissDeviceLearners, findDeviceLearners, importDeviceLearners } from "../services/deviceImport.ts";
 import type { Prefs } from "../lib/prefs.ts";
@@ -13,19 +17,20 @@ import { AvatarMaker } from "../components/AvatarMaker.tsx";
 import { Avatar } from "../components/Avatar.tsx";
 
 
-function AddChildModal({ onClose, onAdd }: { onClose: () => void; onAdd: (name: string, avatar: string) => void }) {
+function AddChildModal({ kind, onClose, onAdd }: { kind: LearnerKind; onClose: () => void; onAdd: (name: string, avatar: string) => Promise<void> }) {
   const [name, setName] = useState("");
   const [avatar, setAvatar] = useState(randomAvatar);
   const [error, setError] = useState("");
   const submit = (e: FormEvent) => {
     e.preventDefault();
     if (!name.trim()) return setError("Please type a name!");
-    onAdd(name.trim(), avatar);
+    onAdd(name.trim(), avatar).catch((err: unknown) => setError(err instanceof Error ? err.message : "Something went wrong. Please try again."));
   };
   return <Modal onClose={onClose} labelledBy="add-child-title">
     <form onSubmit={submit}>
-      <h3 id="add-child-title" className="h2 text-center" style={{ marginBottom: 12 }}>Add a learner</h3>
-      <Field label="Child’s name" placeholder="e.g. Mia" value={name} onChange={e => setName(e.target.value)} autoFocus maxLength={20} />
+      <h3 id="add-child-title" className="h2 text-center" style={{ marginBottom: 4 }}>{kind === "adult" ? "Add a grown-up learner" : "Add a child"}</h3>
+      <p className="small muted text-center" style={{ marginBottom: 12 }}>{kind === "adult" ? "Grown-ups get “Español para padres”: Spanish for school, the doctor, neighbours and more." : "Each child gets their own map, stars and stickers."}</p>
+      <Field label={kind === "adult" ? "Your name" : "Child’s name"} placeholder={kind === "adult" ? "e.g. Emma" : "e.g. Mia"} value={name} onChange={e => setName(e.target.value)} autoFocus maxLength={20} />
       <span className="field__label">Make your avatar</span>
       <div style={{ marginBottom: 18 }}><AvatarMaker value={avatar} onChange={setAvatar} /></div>
       {error && <div className="form-error" role="alert">{error}</div>}
@@ -38,10 +43,14 @@ function AddChildModal({ onClose, onAdd }: { onClose: () => void; onAdd: (name: 
 }
 
 export function FamilyScreen({ parent, onPickChild, onDashboard, onLogout, prefs, onToggle }: { parent: Parent; onPickChild: (c: Child) => void; onDashboard: () => void; onLogout: () => void; prefs?: Prefs; onToggle?: (key: keyof Prefs) => void }) {
-  const [showAdd, setShowAdd] = useState(false);
+  const [showAdd, setShowAdd] = useState<LearnerKind | null>(null);
   const { family, reload } = useFamily(parent.id);
-  const add = async (name: string, avatar: string) => { await services.family.addChild(parent.id, name, avatar); setShowAdd(false); await reload(); };
-  const children = family ?? [];
+  const add = async (name: string, avatar: string) => { if (!showAdd) return; await services.family.addChild(parent.id, name, avatar, showAdd); setShowAdd(null); await reload(); };
+  const everyone = family ?? [];
+  const children = everyone.filter(x => x.child.kind !== "adult");
+  const adults = everyone.filter(x => x.child.kind === "adult");
+  const learners = everyone.map(x => x.child);
+  const parentsPack = packById("parents");
   // Learners saved on this device before cloud accounts: offer to bring them in.
   const [deviceKids, setDeviceKids] = useState<Child[]>([]);
   const [importing, setImporting] = useState(false);
@@ -70,6 +79,7 @@ export function FamilyScreen({ parent, onPickChild, onDashboard, onLogout, prefs
           <Button size="sm" variant="ghost" onClick={() => { dismissDeviceLearners(parent.email); setDeviceKids([]); }}>Not now</Button>
         </div>
       </div>}
+      <h2 className="eyebrow" style={{ marginBottom: 8 }}>Children · {children.length} of {FAMILY.maxChildren}</h2>
       <div className="grid-2" style={{ gap: 14, marginBottom: 22 }}>
         {children.map(({ child: c, progress: p }, i) => {
           const streak = liveStreak(p);
@@ -81,11 +91,28 @@ export function FamilyScreen({ parent, onPickChild, onDashboard, onLogout, prefs
             {streak > 0 && <div className="small" style={{ color: "var(--fire)", fontWeight: 900 }}>🔥 {streak}-day streak</div>}
           </Card></motion.div>;
         })}
-        <button type="button" className="card profile-tile profile-tile--add" onClick={() => setShowAdd(true)}>
+        {roomFor(learners, "child") > 0 && <button type="button" className="card profile-tile profile-tile--add" onClick={() => setShowAdd("child")}>
           <div className="profile-tile__avatar" style={{ borderStyle: "dashed", fontSize: 40, color: "var(--sun)" }}>＋</div>
-          <div className="h3">Add learner</div>
+          <div className="h3">Add a child</div>
           <div className="small muted">Each child gets their own map</div>
-        </button>
+        </button>}
+      </div>
+
+      <h2 className="eyebrow" style={{ marginBottom: 8 }}>Grown-ups · {adults.length} of {FAMILY.maxAdults}</h2>
+      <div className="grid-2" style={{ gap: 14, marginBottom: 22 }}>
+        {adults.map(({ child: c, progress: p }) => {
+          const pr = parentsPack ? packProgress(p, parentsPack) : null;
+          return <Card key={c.id} as="button" type="button" pad={false} className="profile-tile profile-tile--adult" onClick={() => onPickChild(c)}>
+            <Avatar value={c.avatar} size={84} style={{ marginBottom: 8 }} />
+            <div className="h3">{c.name}</div>
+            <div className="small muted">{pr ? `☕ ${pr.done} of ${pr.total} parent lessons` : "Grown-up learner"}</div>
+          </Card>;
+        })}
+        {roomFor(learners, "adult") > 0 && <button type="button" className="card profile-tile profile-tile--add profile-tile--adult" onClick={() => setShowAdd("adult")}>
+          <div className="profile-tile__avatar" style={{ borderStyle: "dashed", fontSize: 40, color: "var(--luna, #a99cff)" }}>＋</div>
+          <div className="h3">Add a grown-up</div>
+          <div className="small muted">Spanish for parents</div>
+        </button>}
       </div>
 
       <div className="stack">
@@ -94,6 +121,6 @@ export function FamilyScreen({ parent, onPickChild, onDashboard, onLogout, prefs
         {prefs && onToggle && <PrefToggles prefs={prefs} onToggle={onToggle} />}
       </div>
     </div>
-    {showAdd && <AddChildModal onClose={() => setShowAdd(false)} onAdd={add} />}
+    {showAdd && <AddChildModal kind={showAdd} onClose={() => setShowAdd(null)} onAdd={add} />}
   </div>;
 }

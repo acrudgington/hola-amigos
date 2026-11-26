@@ -32,7 +32,8 @@ service cloud.firestore {
     }
 
     function validChild(d) {
-      return d.keys().hasOnly(['name', 'avatar', 'created'])
+      return d.keys().hasOnly(['name', 'avatar', 'created', 'kind'])
+        && (!('kind' in d) || d.kind in ['child', 'adult'])
         && d.name is string && d.name.size() > 0 && d.name.size() <= 20
         && d.avatar is string && d.avatar.size() > 0 && d.avatar.size() <= 16
         && d.created is int;

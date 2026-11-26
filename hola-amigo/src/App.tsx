@@ -23,7 +23,7 @@ import { setSoundEnabled, sfx } from "./lib/sound.ts";
 import { voice } from "./audio/player.ts";
 import { GuideContext } from "./audio/guide.ts";
 import { LEVEL_UP_LINE } from "./audio/lines.ts";
-import { Confetti, LevelUpModal, RewardToast, XpPops, type XpPop } from "./components/ui.tsx";
+import { Button, Confetti, LevelUpModal, RewardToast, XpPops, type XpPop } from "./components/ui.tsx";
 import { MascotReaction } from "./components/Mascots.tsx";
 import { Cosmos } from "./components/Cosmos.tsx";
 import { Shell, type NavKey } from "./components/Shell.tsx";
@@ -41,11 +41,12 @@ import { TrophyScreen } from "./screens/TrophyScreen.tsx";
 import { PlacementScreen } from "./screens/PlacementScreen.tsx";
 import { lastLessonOf } from "./domain/placement.ts";
 import { StoriesScreen } from "./screens/StoriesScreen.tsx";
-import { PackScreen } from "./screens/PackScreen.tsx";
+import { AdultCourseCard, PackScreen } from "./screens/PackScreen.tsx";
+import { LabelsScreen } from "./screens/LabelsScreen.tsx";
 import { TogetherScreen } from "./screens/TogetherScreen.tsx";
 import type { Book } from "./content/index.ts";
 
-const SHELL_VIEWS = new Set(["home", "review", "stories", "trophies", "profile", "lesson", "pack"]);
+const SHELL_VIEWS = new Set(["home", "review", "stories", "trophies", "profile", "lesson", "pack", "course"]);
 const pageMotion = {
   // Opacity + y only: a lingering filter/transform would break position:fixed children.
   initial: { opacity: 0, y: 18 },
@@ -138,7 +139,11 @@ export default function App() {
   // Scroll to the top whenever the screen changes (the map manages its own scroll).
   useEffect(() => { if (nav.view !== "home") window.scrollTo(0, 0); }, [nav.view, nav.activity?.run]);
   // A brand-new learner is first asked whether Spanish is new to them (placement check).
-  useEffect(() => { if (nav.view === "home" && progress && isFreshLearner(progress)) dispatch({ type: "go", view: "placement" }); }, [nav.view, progress]);
+  useEffect(() => {
+    // Grown-ups land on their own course; they're offered the level check when they open the main course.
+    const main = child?.kind === "adult" ? "course" : "home";
+    if (nav.view === main && progress && isFreshLearner(progress)) dispatch({ type: "go", view: "placement" });
+  }, [nav.view, progress, child?.kind]);
 
   const gainXP = (amount: number, label?: string) => {
     sessionXpRef.current += amount;
@@ -270,7 +275,12 @@ export default function App() {
   };
 
   // Pack lessons go back to their pack's page; map lessons to the map.
-  const backFromLesson = () => { const pk = packOf(lesson.id); dispatch(pk ? { type: "openPack", packId: pk.id } : { type: "go", view: "home" }); };
+  const isAdult = child?.kind === "adult";
+  const backFromLesson = () => {
+    const pk = packOf(lesson.id);
+    if (isAdult) return dispatch(pk && pk.audience !== "adult" ? { type: "openPack", packId: pk.id } : { type: "go", view: pk ? "home" : "course" });
+    dispatch(pk ? { type: "openPack", packId: pk.id } : { type: "go", view: "home" });
+  };
   const openPack = (packId: string) => dispatch({ type: "openPack", packId });
 
   // ---------- render ----------
@@ -284,15 +294,26 @@ export default function App() {
     topKey = "auth";
   } else if (nav.view === "dashboard") {
     content = <ParentDashboard parent={parent} onBack={() => dispatch({ type: "go", view: "family" })}
-      onAccountDeleted={() => { setParent(null); setChild(null); clear(); dispatch({ type: "go", view: "family" }); }} />;
+      onAccountDeleted={() => { setParent(null); setChild(null); clear(); dispatch({ type: "go", view: "family" }); }}
+      onLabels={() => dispatch({ type: "go", view: "labels" })} />;
+  } else if (nav.view === "labels") {
+    content = <LabelsScreen onBack={() => dispatch({ type: "go", view: "dashboard" })} />;
   } else if (!child || !progress || nav.view === "family") {
     content = <FamilyScreen parent={parent} onPickChild={c => void pickChild(c)} onDashboard={() => dispatch({ type: "go", view: "dashboard" })}
       onLogout={() => void logout()} prefs={prefs} onToggle={togglePref} />;
     topKey = "family";
   } else if (SHELL_VIEWS.has(nav.view)) {
     let inner: JSX.Element | null = null;
-    if (nav.view === "home") inner = <HomeScreen child={child} progress={progress} onStartLesson={startLesson} onOpenLesson={openLesson}
+    const kidsHome = <HomeScreen child={child} progress={progress} onStartLesson={startLesson} onOpenLesson={openLesson}
       onClaim={openChest} onSearch={() => setPalette(true)} onMission={onMission} onPack={openPack} />;
+    if (nav.view === "home") inner = isAdult
+      ? <PackScreen packId="parents" progress={progress} onBack={() => undefined} onStart={startLesson} onOpen={openLesson}
+          home={{ greeting: `¡Hola, ${child.name}!`, extra: <AdultCourseCard onOpen={() => dispatch({ type: "go", view: "course" })} /> }} />
+      : kidsHome;
+    if (nav.view === "course") inner = <>
+      {isAdult && <Button size="sm" variant="ghost" onClick={() => dispatch({ type: "go", view: "home" })} style={{ marginBottom: 8 }}>← Español para padres</Button>}
+      {kidsHome}
+    </>;
     if (nav.view === "profile") inner = <ProfileScreen child={child} parent={parent} progress={progress} onTrophies={() => dispatch({ type: "go", view: "trophies" })} onSwitchChild={() => void switchChild()} onPlacement={() => dispatch({ type: "go", view: "placement" })}
       onAvatar={code => void services.family.updateChild(child.id, { avatar: code }).then(c => { if (c) setChild(c); })} />;
     if (nav.view === "stories") inner = <StoriesScreen progress={progress} onFinish={finishStory}
@@ -303,7 +324,7 @@ export default function App() {
       onStart={startLesson} onOpen={openLesson} />;
     if (nav.view === "lesson") inner = <LessonScreen lesson={lesson} stars={starsOf(progress, lesson.id)} onBack={backFromLesson}
       onStart={() => startLesson(lesson)} onPractice={practice} />;
-    content = <Shell child={child} progress={progress} active={nav.view === "lesson" || nav.view === "pack" ? "home" : (nav.view as ShellView)} onNav={goTo}
+    content = <Shell child={child} progress={progress} active={nav.view === "lesson" || nav.view === "pack" || nav.view === "course" ? "home" : (nav.view as ShellView)} onNav={goTo}
       prefs={prefs} onToggle={togglePref} onSearch={() => setPalette(true)}>
       <AnimatePresence mode="wait">
         <motion.div key={nav.view + nav.lessonId} {...pageMotion}>{inner}</motion.div>
@@ -326,11 +347,11 @@ export default function App() {
   } else if (nav.view === "placement") {
     content = <PlacementScreen child={child} progress={progress}
       onRecord={(es, en, ok, dir) => onWord(es, en, ok, { quiet: true, dir })}
-      onCancel={() => { update(p => ({ ...p, placementOffered: true })); dispatch({ type: "go", view: "home" }); }}
+      onCancel={() => { update(p => ({ ...p, placementOffered: true })); dispatch({ type: "go", view: isAdult ? "course" : "home" }); }}
       onDone={r => {
         update(p => r === "new" ? { ...p, placementOffered: true }
           : { ...p, placementOffered: true, placedUpTo: lastLessonOf(r.world), placement: { world: r.world, at: Date.now(), asked: r.asked, right: r.right } });
-        dispatch({ type: "go", view: "home" });
+        dispatch({ type: "go", view: isAdult ? "course" : "home" });
       }} />;
   } else if (nav.view === "done" && nav.done) {
     content = <DoneScreen lesson={lesson} result={nav.done} progress={progress}

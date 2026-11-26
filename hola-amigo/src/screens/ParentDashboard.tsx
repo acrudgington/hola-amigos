@@ -175,7 +175,7 @@ function ChildReport({ child, progress: p, email, onRemove, onReset }: { child: 
   </Card>;
 }
 
-export function ParentDashboard({ parent, onBack, onAccountDeleted }: { parent: Parent; onBack: () => void; onAccountDeleted: () => void }) {
+export function ParentDashboard({ parent, onBack, onAccountDeleted, onLabels }: { parent: Parent; onBack: () => void; onAccountDeleted: () => void; onLabels?: () => void }) {
   const [toRemove, setToRemove] = useState<Child | null>(null);
   const [toReset, setToReset] = useState<Child | null>(null);
   const { family, reload } = useFamily(parent.id);
@@ -194,6 +194,11 @@ export function ParentDashboard({ parent, onBack, onAccountDeleted }: { parent: 
         <p className="muted small" style={{ marginTop: 4 }}>{children.length} {children.length === 1 ? "learner" : "learners"} · {parent.name}</p>
         <Button size="sm" variant="ghost" style={{ marginTop: 6 }} onClick={() => document.getElementById("account")?.scrollIntoView({ behavior: "smooth" })}>🔒 Account &amp; privacy: download data or delete account ↓</Button>
       </div>
+      {onLabels && <button type="button" className="card pack-cards-cta" style={{ marginBottom: 16 }} onClick={onLabels}>
+        <Art e="🏷️" size={44} />
+        <div className="grow"><div className="h3">Printable labels for home</div><div className="small muted">Spanish labels for the fridge, the door, the toothbrush and more. Print, cut out and stick on.</div></div>
+        <span aria-hidden="true">→</span>
+      </button>}
       {children.length === 0 && <Card className="text-center"><Art e="👶" size={60} /><p className="muted">No learners yet — add one to start tracking progress.</p></Card>}
       {children.map(({ child, progress }) => <ChildReport key={child.id} child={child} progress={progress} email={parent.email} onRemove={setToRemove} onReset={setToReset} />)}
       <AccountPanel parent={parent} onDeleted={onAccountDeleted} />

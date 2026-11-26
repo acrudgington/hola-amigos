@@ -23,7 +23,7 @@ import {
   persistentLocalCache, persistentMultipleTabManager, setDoc, writeBatch, type Firestore,
 } from "firebase/firestore";
 import { normalizeProgress, type Progress } from "../domain/progress.ts";
-import type { AuthResult, Child, Consent, FamilyExport, Outcome, Parent, Plan, Services, Session } from "./types.ts";
+import { assertRoom, type AuthResult, type Child, type Consent, type FamilyExport, type LearnerKind, type Outcome, type Parent, type Plan, type Services, type Session } from "./types.ts";
 
 export interface FirebaseSettings {
   apiKey: string;
@@ -101,7 +101,8 @@ export function createFirebaseServices(settings: FirebaseSettings = firebaseSett
   const progressRef = (parentId: string, childId: string) => doc(db, "parents", parentId, "children", childId, "progress", "current");
 
   const toParent = (id: string, d: ParentDoc): Parent => ({ id, email: d.email, name: d.name, created: d.created, consent: d.consent, plan: d.plan || "free" });
-  const toChild = (parentId: string, id: string, d: { name: string; avatar: string; created: number }): Child => ({ id, parentId, name: d.name, avatar: d.avatar, created: d.created });
+  type ChildDoc = { name: string; avatar: string; created: number; kind?: LearnerKind };
+const toChild = (parentId: string, id: string, d: ChildDoc): Child => ({ id, parentId, name: d.name, avatar: d.avatar, created: d.created, kind: d.kind === "adult" ? "adult" : "child" });
 
   async function loadParent(id: string): Promise<Parent | null> {
     const snap = await getDoc(parentRef(id));
@@ -211,11 +212,14 @@ export function createFirebaseServices(settings: FirebaseSettings = firebaseSett
     family: {
       async listChildren(parentId) {
         const snap = await getDocs(childrenCol(parentId));
-        return snap.docs.map(d => toChild(parentId, d.id, d.data() as { name: string; avatar: string; created: number })).sort((a, b) => a.created - b.created);
+        return snap.docs.map(d => toChild(parentId, d.id, d.data() as ChildDoc)).sort((a, b) => a.created - b.created);
       },
-      async addChild(parentId, name, avatar) {
+      async addChild(parentId, name, avatar, kind = "child") {
+        const existing = await getDocs(childrenCol(parentId));
+        assertRoom(existing.docs.map(d => toChild(parentId, d.id, d.data() as ChildDoc)), kind);
         const ref = doc(childrenCol(parentId));
-        const data = { name: name.trim(), avatar: avatar || "🦊", created: Date.now() };
+        // Children keep the original three fields; only grown-ups carry "kind".
+        const data: ChildDoc = { name: name.trim(), avatar: avatar || "🦊", created: Date.now(), ...(kind === "adult" ? { kind } : {}) };
         await setDoc(ref, data);
         await setDoc(progressRef(parentId, ref.id), plain(normalizeProgress(null)));
         return toChild(parentId, ref.id, data);
@@ -225,7 +229,7 @@ export function createFirebaseServices(settings: FirebaseSettings = firebaseSett
         const ref = childRef(parentId, childId);
         const snap = await getDoc(ref);
         if (!snap.exists()) return null;
-        const cur = snap.data() as { name: string; avatar: string; created: number };
+        const cur = snap.data() as ChildDoc;
         const next = { ...cur, ...(changes.name ? { name: changes.name.trim() } : {}), ...(changes.avatar ? { avatar: changes.avatar } : {}) };
         await setDoc(ref, next);
         return toChild(parentId, childId, next);
@@ -241,7 +245,7 @@ export function createFirebaseServices(settings: FirebaseSettings = firebaseSett
         if (!auth.currentUser) return null;
         const parentId = uid();
         const snap = await getDoc(childRef(parentId, childId));
-        return snap.exists() ? toChild(parentId, snap.id, snap.data() as { name: string; avatar: string; created: number }) : null;
+        return snap.exists() ? toChild(parentId, snap.id, snap.data() as ChildDoc) : null;
       },
       async exportData(parentId): Promise<FamilyExport> {
         await flush();

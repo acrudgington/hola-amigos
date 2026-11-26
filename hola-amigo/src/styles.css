@@ -1127,3 +1127,41 @@ li:last-child > .step .step__rail { display: none; }
 .season-banner__es { display: block; font-family: var(--font-display); font-weight: 700; font-size: 22px; }
 .season-banner__en { display: block; font-size: 13px; color: var(--text-2); font-weight: 700; }
 .season-banner__go { font-weight: 900; color: var(--pc); white-space: nowrap; }
+.profile-tile--adult { border-color: color-mix(in srgb, #7C6CF2 45%, var(--line, transparent)); }
+
+/* Printable home labels */
+.labels-controls { display: grid; gap: 14px; padding: 16px; margin-bottom: 22px; }
+.labels-controls__group { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; }
+.chip-toggle { display: inline-flex; align-items: center; gap: 6px; padding: 7px 12px; border-radius: 999px; font: inherit; font-weight: 800; font-size: 14px; cursor: pointer;
+  color: var(--text-2); background: transparent; border: 1px dashed var(--line, rgba(255,255,255,.2)); }
+.chip-toggle.is-on { color: var(--text); background: color-mix(in srgb, var(--sun, #ffc93c) 18%, transparent); border: 1px solid color-mix(in srgb, var(--sun, #ffc93c) 60%, transparent); }
+.check { display: inline-flex; align-items: center; gap: 6px; font-weight: 700; font-size: 14px; cursor: pointer; }
+.check input { width: 18px; height: 18px; accent-color: var(--sun, #ffc93c); }
+.label-room { margin-bottom: 22px; }
+.label-room__title { font-family: var(--font-display); font-size: 18px; margin-bottom: 10px; }
+.label-grid { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+.label-sheet--small .label-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+.home-label { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; padding: 16px 10px; min-height: 170px; border-radius: 16px; cursor: pointer;
+  background: #fffdf6; color: #1d1a2e; border: 2px dashed #c9c2b0; font: inherit; text-align: center; }
+.label-sheet--small .home-label { min-height: 120px; padding: 10px 8px; }
+.home-label__es { font-family: var(--font-display); font-weight: 700; font-size: 26px; line-height: 1.1; }
+.label-sheet--small .home-label__es { font-size: 19px; }
+.home-label__say { font-size: 13px; color: #6b6480; font-weight: 700; letter-spacing: .02em; }
+.home-label__en { font-size: 13px; color: #8a849a; font-style: italic; }
+@media print {
+  @page { size: A4; margin: 10mm; }
+  :root { color-scheme: light !important; }
+  html, body, #root, .app-bg, .labels-page, .page { width: auto !important; background: #fff !important; color: #000 !important; padding: 0 !important; margin: 0 !important; max-width: none !important; min-height: 0 !important; }
+  .app-bg::before, .app-bg::after { display: none !important; }
+  .no-print { display: none !important; }
+  .label-room { margin-bottom: 6mm; }
+  .label-room__title { font-size: 12pt; margin-bottom: 3mm; break-after: avoid; }
+  .label-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 0 !important; }
+  .label-sheet--small .label-grid { grid-template-columns: repeat(3, 1fr) !important; }
+  .home-label { break-inside: avoid; border-radius: 0; border: 1px dashed #999; background: #fff !important; min-height: 64mm; }
+  .label-sheet--small .home-label { min-height: 52mm; }
+  .home-label__es { font-size: 30pt; }
+  .label-sheet--small .home-label__es { font-size: 20pt; }
+  .home-label__say, .home-label__en { font-size: 11pt; }
+  .label-sheet--big .home-label img { width: 26mm !important; height: 26mm !important; }
+}

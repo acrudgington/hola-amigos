@@ -18,7 +18,9 @@ export async function importDeviceLearners(email: string, parentId: string): Pro
   const kids = await local.family.listChildren(email);
   for (const kid of kids) {
     const progress = await local.progress.load(kid.id);
-    const created = await services.family.addChild(parentId, kid.name, kid.avatar);
+    let created;
+    try { created = await services.family.addChild(parentId, kid.name, kid.avatar, kid.kind); } catch { continue; } // account full
+
     await services.progress.save(created.id, progress);
   }
   try { localStorage.setItem(doneKey(email), String(Date.now())); } catch { /* ignore */ }

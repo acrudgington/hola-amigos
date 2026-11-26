@@ -70,6 +70,11 @@ describe("children and progress", () => {
     await assertFails(setDoc(doc(db, "parents/alice/children/c1/progress/other"), progress()));
     await assertFails(setDoc(doc(db, "parents/alice/children/c1/progress/current"), { xp: -5 }));
   });
+  it("a learner can be a grown-up, and nothing else", async () => {
+    const db = as("alice");
+    await assertSucceeds(setDoc(doc(db, "parents/alice/children/a1"), { name: "Emma", avatar: "🦉", created: 1, kind: "adult" }));
+    await assertFails(setDoc(doc(db, "parents/alice/children/a2"), { name: "Tom", avatar: "🐻", created: 1, kind: "teacher" }));
+  });
   it("another parent can't see or change the children", async () => {
     await setDoc(doc(as("alice"), "parents/alice/children/c1"), { name: "Mia", avatar: "🦊", created: 1 });
     const bob = as("bob");

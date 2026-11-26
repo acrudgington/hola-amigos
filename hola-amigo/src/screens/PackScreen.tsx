@@ -1,6 +1,6 @@
 // A pack's page: its lessons (with stars), and for the school kit the
 // "show the teacher" phrase cards.
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { motion } from "framer-motion";
 import { packById, type Lesson } from "../content/index.ts";
 import { isPackLessonOpen, packProgress } from "../domain/packs.ts";
@@ -10,8 +10,10 @@ import { Art } from "../components/Art.tsx";
 import { Icon } from "../components/Icon.tsx";
 import { TeacherCards } from "./TeacherCards.tsx";
 
-export function PackScreen({ packId, progress, onBack, onStart, onOpen }: {
+export function PackScreen({ packId, progress, onBack, onStart, onOpen, home }: {
   packId: string; progress: Progress; onBack: () => void; onStart: (l: Lesson) => void; onOpen: (l: Lesson) => void;
+  // Shown as a grown-up learner's home page: a greeting instead of "Back".
+  home?: { greeting: string; extra?: ReactNode };
 }) {
   const pack = packById(packId);
   const [cards, setCards] = useState(false);
@@ -20,7 +22,8 @@ export function PackScreen({ packId, progress, onBack, onStart, onOpen }: {
   if (cards && pack.cards) return <TeacherCards cards={pack.cards} title={pack.title} onClose={() => setCards(false)} />;
 
   return <div style={{ paddingTop: 4, maxWidth: 760, margin: "0 auto" }}>
-    <Button size="sm" variant="ghost" onClick={onBack} style={{ marginBottom: 8 }}><Icon name="chevronLeft" size={16} />Back</Button>
+    {home ? <h1 className="h2" style={{ margin: "6px 0 14px" }}>{home.greeting}</h1>
+      : <Button size="sm" variant="ghost" onClick={onBack} style={{ marginBottom: 8 }}><Icon name="chevronLeft" size={16} />Back</Button>}
     <Card className="card--pad-lg pack-hero" style={{ "--pc": pack.color }}>
       <Art e={pack.emoji} size={72} eager />
       <div className="grow">
@@ -53,8 +56,18 @@ export function PackScreen({ packId, progress, onBack, onStart, onOpen }: {
         </motion.button>;
       })}
     </div>
+    {home?.extra}
     {pack.lessons[0] && <p className="tiny muted text-center" style={{ marginTop: 12 }}>
       Tip: tap <SpeakButton text={pack.lessons[0].phrase.es} size={24} /> buttons to hear any word, and 🐢 to hear it slowly.
     </p>}
   </div>;
+}
+
+// On a grown-up's home: the main 200-lesson course is open to them too.
+export function AdultCourseCard({ onOpen }: { onOpen: () => void }) {
+  return <button type="button" className="card pack-cards-cta" style={{ marginTop: 14 }} onClick={onOpen}>
+    <Art e="🗺️" size={44} />
+    <div className="grow"><div className="h3">The full course</div><div className="small muted">200 lessons from your first “hola” to a solid A2, the same journey your children are on.</div></div>
+    <Icon name="chevronRight" size={20} />
+  </button>;
 }

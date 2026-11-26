@@ -15,6 +15,24 @@ class MemoryStorage {
 beforeEach(() => { (globalThis as unknown as { localStorage: MemoryStorage }).localStorage = new MemoryStorage(); });
 
 describe("on-device account & storage service", () => {
+  test("a family has room for three children and two grown-ups", async () => {
+    const s = createLocalServices();
+    const up = await s.auth.signUp("Sam", "fam@example.com", "secret123", CONSENT);
+    if (!up.ok) throw new Error("sign-up failed");
+    const id = up.parent.id;
+    for (const n of ["Mia", "Leo", "Ava"]) await s.family.addChild(id, n, "🦊");
+    await expect(s.family.addChild(id, "Max", "🦊")).rejects.toThrow(/3 children/);
+    const emma = await s.family.addChild(id, "Emma", "🦉", "adult");
+    expect(emma.kind).toBe("adult");
+    await s.family.addChild(id, "Tom", "🐻", "adult");
+    await expect(s.family.addChild(id, "Zoe", "🐱", "adult")).rejects.toThrow(/2 grown-up/);
+    const all = await s.family.listChildren(id);
+    expect(all.filter(c => c.kind === "child")).toHaveLength(3);
+    expect(all.filter(c => c.kind === "adult").map(c => c.name)).toEqual(["Emma", "Tom"]);
+    // Renaming keeps a grown-up a grown-up.
+    expect((await s.family.updateChild(emma.id, { name: "Em" }))?.kind).toBe("adult");
+  });
+
   test("sign up, log in, wrong password, duplicate email", async () => {
     const s = createLocalServices();
     const up = await s.auth.signUp("Sam", "sam@example.com", "secret123", CONSENT);

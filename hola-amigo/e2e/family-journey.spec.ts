@@ -56,7 +56,7 @@ test("sign up → add a child → play lesson 1 → progress is saved", async ({
   await page.getByRole("checkbox", { name: /parent or guardian/ }).check();
   await page.getByRole("button", { name: /Create account/ }).click();
 
-  await page.locator(".profile-tile--add").click();
+  await page.getByRole("button", { name: /Add a child/ }).click();
   await page.getByLabel("Child’s name").fill("Mia");
   await page.getByRole("button", { name: "Add ✓" }).click();
   await page.locator(".profile-tile").first().click();
@@ -89,7 +89,7 @@ test("Ask Sol finds and speaks words", async ({ page }) => {
   await page.getByLabel("Password").fill("secret123");
   await page.getByRole("checkbox", { name: /parent or guardian/ }).check();
   await page.getByRole("button", { name: /Create account/ }).click();
-  await page.locator(".profile-tile--add").click();
+  await page.getByRole("button", { name: /Add a child/ }).click();
   await page.getByLabel("Child’s name").fill("Leo");
   await page.getByRole("button", { name: "Add ✓" }).click();
   await page.locator(".profile-tile").first().click();
@@ -111,7 +111,7 @@ test("learn together → the weekly report shows it", async ({ page }, info) => 
   await page.getByLabel("Password").fill("secret123");
   await page.getByRole("checkbox", { name: /parent or guardian/ }).check();
   await page.getByRole("button", { name: /Create account/ }).click();
-  await page.locator(".profile-tile--add").click();
+  await page.getByRole("button", { name: /Add a child/ }).click();
   await page.getByLabel("Child’s name").fill("Mia");
   await page.getByRole("button", { name: "Add ✓" }).click();
   await page.locator(".profile-tile").first().click();
@@ -152,7 +152,7 @@ test("an A2 lesson (101) plays from start to finish", async ({ page }) => {
   await page.getByLabel("Password").fill("secret123");
   await page.getByRole("checkbox", { name: /parent or guardian/ }).check();
   await page.getByRole("button", { name: /Create account/ }).click();
-  await page.locator(".profile-tile--add").click();
+  await page.getByRole("button", { name: /Add a child/ }).click();
   await page.getByLabel("Child’s name").fill("Mia");
   await page.getByRole("button", { name: "Add ✓" }).click();
   await page.locator(".profile-tile").first().click();
@@ -186,7 +186,7 @@ test("Let's talk: a full conversation, then chat cards in Learn together", async
   await page.getByLabel("Password").fill("secret123");
   await page.getByRole("checkbox", { name: /parent or guardian/ }).check();
   await page.getByRole("button", { name: /Create account/ }).click();
-  await page.locator(".profile-tile--add").click();
+  await page.getByRole("button", { name: /Add a child/ }).click();
   await page.getByLabel("Child’s name").fill("Mia");
   await page.getByRole("button", { name: "Add ✓" }).click();
   await page.locator(".profile-tile").first().click();
@@ -241,7 +241,7 @@ test("Find my level: stricter quiz with sentence questions", async ({ page }, in
   await page.getByLabel("Password").fill("secret123");
   await page.getByRole("checkbox", { name: /parent or guardian/ }).check();
   await page.getByRole("button", { name: /Create account/ }).click();
-  await page.locator(".profile-tile--add").click();
+  await page.getByRole("button", { name: /Add a child/ }).click();
   await page.getByLabel("Child’s name").fill("Mia");
   await page.getByRole("button", { name: "Add ✓" }).click();
   await page.locator(".profile-tile").first().click();
@@ -274,7 +274,7 @@ test("grown-ups can start a child again and find account deletion", async ({ pag
   await page.getByRole("button", { name: /Create account/ }).click();
   // The dashboard (and account settings) is there even before adding a child.
   await expect(page.getByRole("button", { name: /Grown-up dashboard & settings/ })).toBeVisible();
-  await page.locator(".profile-tile--add").click();
+  await page.getByRole("button", { name: /Add a child/ }).click();
   await page.getByLabel("Child’s name").fill("Mia");
   await page.getByRole("button", { name: "Add ✓" }).click();
   await page.locator(".profile-tile").first().click();
@@ -301,4 +301,55 @@ test("grown-ups can start a child again and find account deletion", async ({ pag
   expect(saved.placedUpTo).toBe(0);
   expect(saved.placementOffered).toBe(false);
   expect(errors).toEqual([]);
+});
+
+test("a grown-up learner gets Español para padres and plays its first lesson", async ({ page }) => {
+  test.setTimeout(600_000);
+  const errors: string[] = [];
+  page.on("pageerror", e => errors.push(e.message));
+  await page.goto("/");
+  await page.getByRole("tab", { name: /Sign up/i }).click();
+  await page.getByLabel("Your name").fill("Emma");
+  await page.getByLabel("Email").fill(`emma+${Date.now()}@example.com`);
+  await page.getByLabel("Password").fill("secret123");
+  await page.getByRole("checkbox", { name: /parent or guardian/ }).check();
+  await page.getByRole("button", { name: /Create account/ }).click();
+  await page.evaluate(() => localStorage.setItem("hola_prefs", JSON.stringify({ ...JSON.parse(localStorage.getItem("hola_prefs") || "{}"), guide: false })));
+
+  await expect(page.getByText(/Grown-ups · 0 of 2/)).toBeVisible();
+  for (const name of ["Emma", "Tom"]) {
+    await page.getByRole("button", { name: /Add a grown-up/ }).click();
+    await page.getByLabel("Your name").fill(name);
+    await page.getByRole("button", { name: "Add ✓" }).click();
+  }
+  await expect(page.getByText(/Grown-ups · 2 of 2/)).toBeVisible();
+  await expect(page.getByRole("button", { name: /Add a grown-up/ })).toHaveCount(0);   // full
+
+  await page.locator(".profile-tile--adult").first().click();
+  await expect(page.getByRole("heading", { name: "¡Hola, Emma!" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Español para padres" })).toBeVisible();
+  await expect(page.getByRole("button", { name: /La tutoría, locked/ })).toBeDisabled();
+  await page.getByRole("button", { name: /En la puerta del cole/ }).click();
+  await playThrough(page);
+  await expect(page.getByText("Lesson complete!")).toBeVisible();
+  await page.getByRole("button", { name: "Back to the map" }).click();
+  await expect(page.getByRole("button", { name: /La tutoría: Meeting the class teacher/ })).toBeEnabled();
+  expect(errors).toEqual([]);
+});
+
+test("grown-ups can open printable labels for home", async ({ page }) => {
+  await page.goto("/");
+  await page.getByRole("tab", { name: /Sign up/i }).click();
+  await page.getByLabel("Your name").fill("Sam");
+  await page.getByLabel("Email").fill(`sam+${Date.now()}@example.com`);
+  await page.getByLabel("Password").fill("secret123");
+  await page.getByRole("checkbox", { name: /parent or guardian/ }).check();
+  await page.getByRole("button", { name: /Create account/ }).click();
+  await page.getByRole("button", { name: /dashboard/i }).click();
+  await page.getByRole("button", { name: /Printable labels for home/ }).click();
+  await expect(page.getByRole("heading", { name: /Labels for home/ })).toBeVisible();
+  const all = await page.locator(".home-label").count();
+  await page.getByRole("button", { name: /The kitchen/ }).click();   // leave the kitchen out
+  await expect(page.locator(".home-label")).toHaveCount(all - 15);
+  await expect(page.getByRole("button", { name: `🖨️ Print ${all - 15} labels` })).toBeEnabled();
 });

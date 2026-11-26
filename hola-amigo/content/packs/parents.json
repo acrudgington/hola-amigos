@@ -1,0 +1,2224 @@
+{
+  "id": "parents",
+  "title": "Español para padres",
+  "en": "Spanish for parents",
+  "about": "Ten lessons for grown-ups on Spanish family life: chatting at the school gate, the parent-teacher meeting, the class WhatsApp group, school forms, the health centre, the chemist's, pick-up, neighbours, party invitations and the town hall.",
+  "emoji": "☕",
+  "color": "#7C6CF2",
+  "audience": "adult",
+  "sequential": true,
+  "sticker": {
+    "id": "k_parents",
+    "name": "Super Parent",
+    "emoji": "🏅"
+  },
+  "lessons": [
+    {
+      "id": 2001,
+      "title": "En la puerta del cole",
+      "subtitle": "Hello at the school gate",
+      "emoji": "🏫",
+      "milestone": false,
+      "funFact": "At the gate, Spanish parents greet each other with a quick '¡Hola! ¿Qué tal?', and often two kisses (dos besos) once they know you. A handshake is fine at first.",
+      "phrase": {
+        "es": "Hola, soy la madre de Mia. Somos nuevos.",
+        "en": "Hi, I'm Mia's mum. We're new."
+      },
+      "words": [
+        {
+          "es": "Soy la madre de…",
+          "en": "I'm …'s mum",
+          "say": "soy lah MAH-dreh deh",
+          "emoji": "👩"
+        },
+        {
+          "es": "Soy el padre de…",
+          "en": "I'm …'s dad",
+          "say": "soy el PAH-dreh deh",
+          "emoji": "👨"
+        },
+        {
+          "es": "Somos nuevos",
+          "en": "We're new",
+          "say": "SOH-mos NWEH-bos",
+          "emoji": "🆕"
+        },
+        {
+          "es": "¿En qué clase está?",
+          "en": "Which class is he/she in?",
+          "say": "en keh KLAH-seh es-TAH",
+          "emoji": "🏫"
+        },
+        {
+          "es": "Está en primero",
+          "en": "He/she is in Year 1",
+          "say": "es-TAH en pree-MEH-roh",
+          "emoji": "1️⃣"
+        },
+        {
+          "es": "Encantada",
+          "en": "Nice to meet you (woman speaking)",
+          "say": "en-kan-TAH-dah",
+          "emoji": "🤝"
+        },
+        {
+          "es": "Encantado",
+          "en": "Nice to meet you (man speaking)",
+          "say": "en-kan-TAH-doh",
+          "emoji": "🙂"
+        },
+        {
+          "es": "Nos vemos a la salida",
+          "en": "See you at pick-up",
+          "say": "nos BEH-mos ah lah sah-LEE-dah",
+          "emoji": "👋"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Soy",
+            "el",
+            "padre",
+            "de",
+            "Leo"
+          ],
+          "shuffle": [
+            "de",
+            "el",
+            "Soy",
+            "Leo",
+            "padre"
+          ],
+          "en": "I'm Leo's dad."
+        },
+        {
+          "correct": [
+            "Mi",
+            "hija",
+            "está",
+            "en",
+            "tercero"
+          ],
+          "shuffle": [
+            "en",
+            "Mi",
+            "está",
+            "tercero",
+            "hija"
+          ],
+          "en": "My daughter is in Year 3."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Somos nuevos' means:",
+          "opts": [
+            "We're new",
+            "We're nine",
+            "We're late"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Nos vemos a la salida' means:",
+          "opts": [
+            "See you at pick-up",
+            "See you on the way in",
+            "See you at the weekend"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "New at the Gate",
+        "paras": [
+          "Emma has just moved to Spain with her daughter Mia. On the first morning, another mum smiles at her at the school gate.",
+          "'Hola, soy la madre de Mia. Somos nuevos,' says Emma. 'Encantada. Yo soy Carmen, la madre de Lucía. ¿En qué clase está Mia?'",
+          "'Está en primero.' 'Como Lucía. ¡Nos vemos a la salida!'"
+        ],
+        "qs": [
+          {
+            "q": "Who is Carmen?",
+            "opts": [
+              "Lucía's mum",
+              "Mia's teacher",
+              "Emma's sister"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Which class is Mia in?",
+            "opts": [
+              "Year 1 (primero)",
+              "Year 3 (tercero)",
+              "Nursery"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "When will they see each other again?",
+            "opts": [
+              "At pick-up time",
+              "Tomorrow",
+              "At the weekend"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 2002,
+      "title": "La tutoría",
+      "subtitle": "Meeting the class teacher",
+      "emoji": "👩‍🏫",
+      "milestone": false,
+      "funFact": "Each class in Spain has a 'tutor' or 'tutora', the class teacher. A 'tutoría' is a one-to-one meeting with them, usually booked through the agenda or the school app.",
+      "phrase": {
+        "es": "¿Qué tal va Mia en clase?",
+        "en": "How is Mia getting on in class?"
+      },
+      "words": [
+        {
+          "es": "La tutora",
+          "en": "The class teacher (woman)",
+          "say": "lah too-TOH-rah",
+          "emoji": "👩‍🏫"
+        },
+        {
+          "es": "El tutor",
+          "en": "The class teacher (man)",
+          "say": "el too-TOR",
+          "emoji": "👨‍🏫"
+        },
+        {
+          "es": "La tutoría",
+          "en": "The parent-teacher meeting",
+          "say": "lah too-toh-REE-ah",
+          "emoji": "📅"
+        },
+        {
+          "es": "¿Qué tal va en clase?",
+          "en": "How's he/she getting on in class?",
+          "say": "keh tal bah en KLAH-seh",
+          "emoji": "📈"
+        },
+        {
+          "es": "Se porta bien",
+          "en": "He/she behaves well",
+          "say": "seh POR-tah byen",
+          "emoji": "😇"
+        },
+        {
+          "es": "Le cuesta…",
+          "en": "He/she finds … hard",
+          "say": "leh KWES-tah",
+          "emoji": "🧗"
+        },
+        {
+          "es": "Está muy contento",
+          "en": "He's very happy",
+          "say": "es-TAH mwee kon-TEN-toh",
+          "emoji": "😊"
+        },
+        {
+          "es": "¿Cómo podemos ayudar en casa?",
+          "en": "How can we help at home?",
+          "say": "KOH-moh poh-DEH-mos ah-yoo-DAR en KAH-sah",
+          "emoji": "🏠"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Le",
+            "cuesta",
+            "un",
+            "poco",
+            "la",
+            "lectura"
+          ],
+          "shuffle": [
+            "Le",
+            "poco",
+            "la",
+            "un",
+            "cuesta",
+            "lectura"
+          ],
+          "en": "He/she finds reading a bit hard."
+        },
+        {
+          "correct": [
+            "Cómo",
+            "podemos",
+            "ayudar",
+            "en",
+            "casa"
+          ],
+          "shuffle": [
+            "ayudar",
+            "casa",
+            "en",
+            "podemos",
+            "Cómo"
+          ],
+          "en": "How can we help at home?"
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'La tutoría' is:",
+          "opts": [
+            "A parent-teacher meeting",
+            "A school trip",
+            "A lunch menu"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Se porta bien' means:",
+          "opts": [
+            "He/she behaves well",
+            "He/she carries a lot",
+            "He/she is very tall"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "The First Meeting",
+        "paras": [
+          "Emma has a tutoría with Mia's teacher, Ana. 'Buenas tardes. ¿Qué tal va Mia en clase?'",
+          "'Muy bien. Se porta bien y está muy contenta. Le cuesta un poco la lectura en español, pero es normal.'",
+          "'¿Cómo podemos ayudar en casa?' 'Leed un cuento juntos cada noche.' Emma smiles: that's easy!"
+        ],
+        "qs": [
+          {
+            "q": "Who is Ana?",
+            "opts": [
+              "Mia's class teacher",
+              "Mia's friend",
+              "The head teacher"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Mia find a bit hard?",
+            "opts": [
+              "Reading in Spanish",
+              "Maths",
+              "Making friends"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Ana suggest?",
+            "opts": [
+              "Reading a story together every night",
+              "Extra homework",
+              "A private tutor"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 2003,
+      "title": "El grupo de WhatsApp",
+      "subtitle": "The class parents' group",
+      "emoji": "💬",
+      "milestone": false,
+      "funFact": "Almost every class in Spain has a parents' WhatsApp group. It's where you find out about trips, birthdays, costumes and forgotten jumpers. A short '¡Gracias!' is always welcome.",
+      "phrase": {
+        "es": "¿Alguien sabe si mañana hay excursión?",
+        "en": "Does anyone know if there's a trip tomorrow?"
+      },
+      "words": [
+        {
+          "es": "¿Alguien sabe…?",
+          "en": "Does anyone know…?",
+          "say": "al-GYEN SAH-beh",
+          "emoji": "❓"
+        },
+        {
+          "es": "La excursión",
+          "en": "The school trip",
+          "say": "lah es-koor-SYON",
+          "emoji": "🚌"
+        },
+        {
+          "es": "¿Qué hay que llevar?",
+          "en": "What do we need to bring?",
+          "say": "keh ai keh yeh-BAR",
+          "emoji": "🎒"
+        },
+        {
+          "es": "La merienda",
+          "en": "The afternoon snack",
+          "say": "lah meh-RYEN-dah",
+          "emoji": "🥪"
+        },
+        {
+          "es": "El disfraz",
+          "en": "The costume",
+          "say": "el dees-FRATH",
+          "emoji": "🎭"
+        },
+        {
+          "es": "Se ha dejado…",
+          "en": "He/she has left … behind",
+          "say": "seh ah deh-HAH-doh",
+          "emoji": "🧥"
+        },
+        {
+          "es": "Muchas gracias por avisar",
+          "en": "Thanks a lot for letting us know",
+          "say": "MOO-chas GRAH-thyas por ah-bee-SAR",
+          "emoji": "🙏"
+        },
+        {
+          "es": "Mañana no hay cole",
+          "en": "There's no school tomorrow",
+          "say": "mah-NYAH-nah noh ai KOH-leh",
+          "emoji": "🚫"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Qué",
+            "hay",
+            "que",
+            "llevar",
+            "a",
+            "la",
+            "excursión"
+          ],
+          "shuffle": [
+            "a",
+            "llevar",
+            "hay",
+            "que",
+            "excursión",
+            "la",
+            "Qué"
+          ],
+          "en": "What do we need to bring on the trip?"
+        },
+        {
+          "correct": [
+            "Muchas",
+            "gracias",
+            "por",
+            "avisar"
+          ],
+          "shuffle": [
+            "avisar",
+            "por",
+            "gracias",
+            "Muchas"
+          ],
+          "en": "Thanks a lot for letting us know."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'La excursión' is:",
+          "opts": [
+            "The school trip",
+            "The exam",
+            "The excuse"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Mañana no hay cole' means:",
+          "opts": [
+            "There's no school tomorrow",
+            "School is open tomorrow",
+            "Tomorrow is a short day"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Ping! Ping! Ping!",
+        "paras": [
+          "Emma's phone goes ping twenty times. It's the class WhatsApp group. Someone writes: 'Mañana es la excursión al zoo.'",
+          "Emma types slowly: '¿Qué hay que llevar?' Carmen answers: 'La merienda, agua y gorra.'",
+          "Emma replies: '¡Muchas gracias por avisar!' Three parents send a thumbs-up."
+        ],
+        "qs": [
+          {
+            "q": "Where is the class going?",
+            "opts": [
+              "To the zoo",
+              "To the beach",
+              "To a museum"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Who answers Emma's question?",
+            "opts": [
+              "Carmen",
+              "The teacher",
+              "Mia"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What do they need to bring?",
+            "opts": [
+              "A snack, water and a cap",
+              "A costume",
+              "Money for lunch"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 2004,
+      "title": "Papeles del cole",
+      "subtitle": "School forms and notes",
+      "emoji": "📝",
+      "milestone": false,
+      "funFact": "Spanish schools send home lots of paper: 'autorizaciones' (permission slips) for trips, forms for the 'comedor' (school lunch) and 'actividades extraescolares' (after-school clubs). Most need a signature: 'firma del padre, madre o tutor legal'.",
+      "phrase": {
+        "es": "Tengo que firmar la autorización.",
+        "en": "I have to sign the permission slip."
+      },
+      "words": [
+        {
+          "es": "La autorización",
+          "en": "The permission slip",
+          "say": "lah ow-toh-ree-thah-THYON",
+          "emoji": "📄"
+        },
+        {
+          "es": "Firmar",
+          "en": "To sign",
+          "say": "feer-MAR",
+          "emoji": "✍️"
+        },
+        {
+          "es": "La firma",
+          "en": "The signature",
+          "say": "lah FEER-mah",
+          "emoji": "🖊️"
+        },
+        {
+          "es": "El comedor",
+          "en": "School lunch / dining hall",
+          "say": "el koh-meh-DOR",
+          "emoji": "🍽️"
+        },
+        {
+          "es": "Las extraescolares",
+          "en": "After-school clubs",
+          "say": "las es-trah-es-koh-LAH-res",
+          "emoji": "⚽"
+        },
+        {
+          "es": "La matrícula",
+          "en": "Enrolment",
+          "say": "lah mah-TREE-koo-lah",
+          "emoji": "🗂️"
+        },
+        {
+          "es": "El plazo",
+          "en": "The deadline",
+          "say": "el PLAH-thoh",
+          "emoji": "⏳"
+        },
+        {
+          "es": "¿Hasta cuándo?",
+          "en": "Until when?",
+          "say": "AS-tah KWAN-doh",
+          "emoji": "📅"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Tengo",
+            "que",
+            "firmar",
+            "la",
+            "autorización"
+          ],
+          "shuffle": [
+            "autorización",
+            "que",
+            "la",
+            "Tengo",
+            "firmar"
+          ],
+          "en": "I have to sign the permission slip."
+        },
+        {
+          "correct": [
+            "El",
+            "plazo",
+            "termina",
+            "el",
+            "viernes"
+          ],
+          "shuffle": [
+            "plazo",
+            "El",
+            "viernes",
+            "el",
+            "termina"
+          ],
+          "en": "The deadline is Friday."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Firmar' means:",
+          "opts": [
+            "To sign",
+            "To finish",
+            "To fill"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'El plazo' is:",
+          "opts": [
+            "The deadline",
+            "The square",
+            "The price"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "The Pile of Paper",
+        "paras": [
+          "Mia comes home with three papers in her mochila. Emma reads the first: 'Autorización para la excursión.' She signs it.",
+          "The second is for the comedor next month. The third is about extraescolares: football or music?",
+          "'¿Hasta cuándo?' asks Emma. Mia points to the bottom: 'El plazo termina el viernes, mamá.'"
+        ],
+        "qs": [
+          {
+            "q": "How many papers does Mia bring home?",
+            "opts": [
+              "Three",
+              "One",
+              "Five"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What is the first paper?",
+            "opts": [
+              "A permission slip for a trip",
+              "A school report",
+              "A party invitation"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "When is the deadline?",
+            "opts": [
+              "Friday",
+              "Monday",
+              "Tomorrow"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 2005,
+      "title": "En el centro de salud",
+      "subtitle": "At the health centre",
+      "emoji": "🏥",
+      "milestone": false,
+      "funFact": "In Spain your family doctor and the children's 'pediatra' are at your local 'centro de salud'. Bring the 'tarjeta sanitaria' (health card) and ask for 'cita' (an appointment), often online or by app.",
+      "phrase": {
+        "es": "Quería pedir cita con la pediatra.",
+        "en": "I'd like to make an appointment with the paediatrician."
+      },
+      "words": [
+        {
+          "es": "El centro de salud",
+          "en": "The health centre",
+          "say": "el THEN-troh deh sah-LOOD",
+          "emoji": "🏥"
+        },
+        {
+          "es": "La pediatra",
+          "en": "The paediatrician (woman)",
+          "say": "lah peh-DYAH-trah",
+          "emoji": "👩‍⚕️"
+        },
+        {
+          "es": "Pedir cita",
+          "en": "To make an appointment",
+          "say": "peh-DEER THEE-tah",
+          "emoji": "📅"
+        },
+        {
+          "es": "La tarjeta sanitaria",
+          "en": "The health card",
+          "say": "lah tar-HEH-tah sah-nee-TAH-ryah",
+          "emoji": "💳"
+        },
+        {
+          "es": "Tiene fiebre",
+          "en": "He/she has a temperature",
+          "say": "TYEH-neh FYEH-breh",
+          "emoji": "🤒"
+        },
+        {
+          "es": "Tiene tos",
+          "en": "He/she has a cough",
+          "say": "TYEH-neh tos",
+          "emoji": "😷"
+        },
+        {
+          "es": "Desde ayer",
+          "en": "Since yesterday",
+          "say": "DES-deh ah-YER",
+          "emoji": "🗓️"
+        },
+        {
+          "es": "La receta",
+          "en": "The prescription",
+          "say": "lah rreh-THEH-tah",
+          "emoji": "📋"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Mi",
+            "hijo",
+            "tiene",
+            "fiebre",
+            "desde",
+            "ayer"
+          ],
+          "shuffle": [
+            "Mi",
+            "desde",
+            "ayer",
+            "tiene",
+            "fiebre",
+            "hijo"
+          ],
+          "en": "My son has had a temperature since yesterday."
+        },
+        {
+          "correct": [
+            "Quería",
+            "pedir",
+            "cita",
+            "con",
+            "la",
+            "pediatra"
+          ],
+          "shuffle": [
+            "pedir",
+            "pediatra",
+            "cita",
+            "con",
+            "la",
+            "Quería"
+          ],
+          "en": "I'd like to make an appointment with the paediatrician."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Pedir cita' means:",
+          "opts": [
+            "To make an appointment",
+            "To ask the city",
+            "To cancel"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Tiene tos' means:",
+          "opts": [
+            "He/she has a cough",
+            "He/she has a toast",
+            "He/she is tired"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "A Hot Forehead",
+        "paras": [
+          "Leo wakes up hot and grumpy. His dad, Tom, phones the centro de salud. 'Quería pedir cita con la pediatra. Mi hijo tiene fiebre desde ayer.'",
+          "'¿Tiene la tarjeta sanitaria?' 'Sí.' 'Vale, a las once.'",
+          "The pediatra listens to Leo's chest. 'Es un virus. Mucha agua y descanso.' No receta needed."
+        ],
+        "qs": [
+          {
+            "q": "What's wrong with Leo?",
+            "opts": [
+              "He has a temperature",
+              "He has broken his arm",
+              "He has a rash"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What time is the appointment?",
+            "opts": [
+              "At eleven",
+              "At nine",
+              "At four"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does the doctor say?",
+            "opts": [
+              "It's a virus: lots of water and rest",
+              "He needs medicine",
+              "He must go to hospital"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 2006,
+      "title": "En la farmacia",
+      "subtitle": "At the chemist's",
+      "emoji": "💊",
+      "milestone": false,
+      "funFact": "Spanish pharmacists give a lot of friendly advice, so the 'farmacia' (look for the green cross) is often the first stop for small problems. At night and at weekends, a 'farmacia de guardia' (duty pharmacy) is open.",
+      "phrase": {
+        "es": "¿Tiene algo para la tos?",
+        "en": "Have you got anything for a cough?"
+      },
+      "words": [
+        {
+          "es": "La farmacia",
+          "en": "The chemist's",
+          "say": "lah far-MAH-thyah",
+          "emoji": "💊"
+        },
+        {
+          "es": "¿Tiene algo para…?",
+          "en": "Have you got anything for…?",
+          "say": "TYEH-neh AL-goh PAH-rah",
+          "emoji": "🤲"
+        },
+        {
+          "es": "El jarabe",
+          "en": "The syrup",
+          "say": "el hah-RAH-beh",
+          "emoji": "🧴"
+        },
+        {
+          "es": "Para niños",
+          "en": "For children",
+          "say": "PAH-rah NEE-nyos",
+          "emoji": "🧒"
+        },
+        {
+          "es": "¿Cada cuántas horas?",
+          "en": "How often (every how many hours)?",
+          "say": "KAH-dah KWAN-tas OH-ras",
+          "emoji": "⏰"
+        },
+        {
+          "es": "Las tiritas",
+          "en": "Plasters",
+          "say": "las tee-REE-tas",
+          "emoji": "🩹"
+        },
+        {
+          "es": "Me duele la garganta",
+          "en": "I've got a sore throat",
+          "say": "meh DWEH-leh lah gar-GAN-tah",
+          "emoji": "🗣️"
+        },
+        {
+          "es": "La farmacia de guardia",
+          "en": "The duty pharmacy",
+          "say": "lah far-MAH-thyah deh GWAR-dyah",
+          "emoji": "🌙"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Tiene",
+            "algo",
+            "para",
+            "la",
+            "tos"
+          ],
+          "shuffle": [
+            "la",
+            "Tiene",
+            "tos",
+            "algo",
+            "para"
+          ],
+          "en": "Have you got anything for a cough?"
+        },
+        {
+          "correct": [
+            "Es",
+            "para",
+            "mi",
+            "hija",
+            "de",
+            "seis",
+            "años"
+          ],
+          "shuffle": [
+            "mi",
+            "años",
+            "hija",
+            "Es",
+            "de",
+            "seis",
+            "para"
+          ],
+          "en": "It's for my six-year-old daughter."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Las tiritas' are:",
+          "opts": [
+            "Plasters",
+            "Tickets",
+            "Little towels"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'¿Cada cuántas horas?' means:",
+          "opts": [
+            "How often (every how many hours)?",
+            "What time is it?",
+            "How many hours are left?"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "The Green Cross",
+        "paras": [
+          "Mia has a cough at night. In the morning, Emma looks for the green cross. 'Buenos días. ¿Tiene algo para la tos? Es para mi hija de seis años.'",
+          "The pharmacist gives her a jarabe para niños. '¿Cada cuántas horas?' 'Cada ocho horas, con la comida.'",
+          "'¿Y tiene tiritas de dibujos?' Mia will be happy: they've got unicorns on them!"
+        ],
+        "qs": [
+          {
+            "q": "Who is the medicine for?",
+            "opts": [
+              "Mia, who is six",
+              "Emma",
+              "Leo"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How often should Mia take it?",
+            "opts": [
+              "Every eight hours",
+              "Every two hours",
+              "Once a day"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What else does Emma buy?",
+            "opts": [
+              "Plasters with pictures",
+              "Sweets",
+              "A toothbrush"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 2007,
+      "title": "La recogida",
+      "subtitle": "Pick-up and after school",
+      "emoji": "🕓",
+      "milestone": false,
+      "funFact": "Many Spanish schools have a 'jornada continua' (school ends around 2pm) or a 'jornada partida' (with a long lunch break). If someone else is collecting your child, tell the school first.",
+      "phrase": {
+        "es": "Hoy lo recoge su abuela.",
+        "en": "His grandmother is picking him up today."
+      },
+      "words": [
+        {
+          "es": "Recoger",
+          "en": "To pick up / collect",
+          "say": "rreh-koh-HER",
+          "emoji": "🚸"
+        },
+        {
+          "es": "Hoy lo recoge su abuela",
+          "en": "His grandma is picking him up today",
+          "say": "oy loh rreh-KOH-heh soo ah-BWEH-lah",
+          "emoji": "👵"
+        },
+        {
+          "es": "A qué hora sale",
+          "en": "What time he/she finishes",
+          "say": "ah keh OH-rah SAH-leh",
+          "emoji": "🕐"
+        },
+        {
+          "es": "El horario",
+          "en": "The timetable",
+          "say": "el oh-RAH-ryoh",
+          "emoji": "🗓️"
+        },
+        {
+          "es": "La jornada continua",
+          "en": "The school day without a lunch break",
+          "say": "lah hor-NAH-dah kon-TEE-nwah",
+          "emoji": "⏱️"
+        },
+        {
+          "es": "Llego tarde",
+          "en": "I'm running late",
+          "say": "YEH-goh TAR-deh",
+          "emoji": "🏃"
+        },
+        {
+          "es": "El aula matinal",
+          "en": "Breakfast club",
+          "say": "el OW-lah mah-tee-NAL",
+          "emoji": "🥣"
+        },
+        {
+          "es": "¿Puede esperar un momento?",
+          "en": "Can he/she wait a moment?",
+          "say": "PWEH-deh es-peh-RAR oon moh-MEN-toh",
+          "emoji": "⏳"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Hoy",
+            "lo",
+            "recoge",
+            "su",
+            "abuela"
+          ],
+          "shuffle": [
+            "lo",
+            "Hoy",
+            "su",
+            "recoge",
+            "abuela"
+          ],
+          "en": "His grandmother is picking him up today."
+        },
+        {
+          "correct": [
+            "Llego",
+            "tarde",
+            "diez",
+            "minutos"
+          ],
+          "shuffle": [
+            "diez",
+            "minutos",
+            "tarde",
+            "Llego"
+          ],
+          "en": "I'm running ten minutes late."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Recoger' means:",
+          "opts": [
+            "To pick up / collect",
+            "To record",
+            "To remember"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Llego tarde' means:",
+          "opts": [
+            "I'm running late",
+            "I arrive early",
+            "I'm leaving now"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Stuck in Traffic",
+        "paras": [
+          "Tom is stuck in traffic. He calls the school. 'Hola, soy el padre de Leo. Llego tarde diez minutos.'",
+          "'No pasa nada. Leo puede esperar en conserjería.' Tom feels better.",
+          "Tomorrow his mother is visiting, so he adds: 'Y mañana lo recoge su abuela.' 'Vale, lo apunto.'"
+        ],
+        "qs": [
+          {
+            "q": "Why is Tom late?",
+            "opts": [
+              "He's stuck in traffic",
+              "He forgot",
+              "His car broke down"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Where will Leo wait?",
+            "opts": [
+              "At the school office (conserjería)",
+              "At the gate",
+              "In the playground"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Who will collect Leo tomorrow?",
+            "opts": [
+              "His grandmother",
+              "His mum",
+              "Carmen"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 2008,
+      "title": "Los vecinos",
+      "subtitle": "Meeting the neighbours",
+      "emoji": "🏢",
+      "milestone": false,
+      "funFact": "Most people in Spanish towns live in flats, and the 'comunidad de vecinos' (residents' association) holds a 'junta' (meeting) once or twice a year. Saying hello in the lift goes a long way.",
+      "phrase": {
+        "es": "Hola, somos los nuevos del tercero.",
+        "en": "Hi, we're the new people on the third floor."
+      },
+      "words": [
+        {
+          "es": "El vecino",
+          "en": "The neighbour (man)",
+          "say": "el beh-THEE-noh",
+          "emoji": "🧑"
+        },
+        {
+          "es": "La vecina",
+          "en": "The neighbour (woman)",
+          "say": "lah beh-THEE-nah",
+          "emoji": "👩"
+        },
+        {
+          "es": "Somos los nuevos del tercero",
+          "en": "We're the new people on the third floor",
+          "say": "SOH-mos los NWEH-bos del ter-THEH-roh",
+          "emoji": "🏢"
+        },
+        {
+          "es": "El ascensor",
+          "en": "The lift",
+          "say": "el as-then-SOR",
+          "emoji": "🛗"
+        },
+        {
+          "es": "El portero",
+          "en": "The caretaker / doorman",
+          "say": "el por-TEH-roh",
+          "emoji": "🔑"
+        },
+        {
+          "es": "La comunidad de vecinos",
+          "en": "The residents' association",
+          "say": "lah koh-moo-nee-DAD deh beh-THEE-nos",
+          "emoji": "🏘️"
+        },
+        {
+          "es": "Cualquier cosa, aquí estamos",
+          "en": "If you need anything, we're here",
+          "say": "kwal-KYER KOH-sah ah-KEE es-TAH-mos",
+          "emoji": "🤗"
+        },
+        {
+          "es": "Perdón por el ruido",
+          "en": "Sorry about the noise",
+          "say": "per-DON por el RRWEE-doh",
+          "emoji": "🔊"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Somos",
+            "los",
+            "nuevos",
+            "del",
+            "tercero"
+          ],
+          "shuffle": [
+            "los",
+            "tercero",
+            "del",
+            "Somos",
+            "nuevos"
+          ],
+          "en": "We're the new people on the third floor."
+        },
+        {
+          "correct": [
+            "Perdón",
+            "por",
+            "el",
+            "ruido",
+            "de",
+            "los",
+            "niños"
+          ],
+          "shuffle": [
+            "por",
+            "niños",
+            "los",
+            "Perdón",
+            "ruido",
+            "de",
+            "el"
+          ],
+          "en": "Sorry about the children's noise."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'El ascensor' is:",
+          "opts": [
+            "The lift",
+            "The ascent",
+            "The doorbell"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Cualquier cosa, aquí estamos' means:",
+          "opts": [
+            "If you need anything, we're here",
+            "Anything is possible",
+            "We are everywhere"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "In the Lift",
+        "paras": [
+          "In the lift, Emma meets an older woman. 'Hola, somos los nuevos del tercero.' 'Ah, encantada. Yo soy Pilar, del quinto.'",
+          "Emma adds: 'Perdón por el ruido de los niños.' Pilar laughs. 'Tranquila, me encantan los niños.'",
+          "At the door, Pilar says: 'Cualquier cosa, aquí estamos.' A week later, she brings a plate of rosquillas."
+        ],
+        "qs": [
+          {
+            "q": "Where does Pilar live?",
+            "opts": [
+              "On the fifth floor",
+              "On the third floor",
+              "Next door"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Emma apologise for?",
+            "opts": [
+              "The children's noise",
+              "Being late",
+              "The rubbish"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Pilar bring later?",
+            "opts": [
+              "A plate of rosquillas (doughnut-like sweets)",
+              "A cake",
+              "Flowers"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 2009,
+      "title": "¡Un cumpleaños!",
+      "subtitle": "Birthday party invitations",
+      "emoji": "🎂",
+      "milestone": false,
+      "funFact": "Children's birthday parties in Spain often happen at a 'parque de bolas' (soft play) or in the park, and sometimes the whole class is invited. Parents often club together for one shared present, organised in the WhatsApp group.",
+      "phrase": {
+        "es": "¿Puede venir Mia al cumpleaños?",
+        "en": "Can Mia come to the birthday party?"
+      },
+      "words": [
+        {
+          "es": "El cumpleaños",
+          "en": "The birthday (party)",
+          "say": "el koom-pleh-AH-nyos",
+          "emoji": "🎂"
+        },
+        {
+          "es": "La invitación",
+          "en": "The invitation",
+          "say": "lah een-bee-tah-THYON",
+          "emoji": "💌"
+        },
+        {
+          "es": "¿Puede venir…?",
+          "en": "Can … come?",
+          "say": "PWEH-deh beh-NEER",
+          "emoji": "🙋"
+        },
+        {
+          "es": "El parque de bolas",
+          "en": "Soft play",
+          "say": "el PAR-keh deh BOH-las",
+          "emoji": "🎈"
+        },
+        {
+          "es": "El regalo",
+          "en": "The present",
+          "say": "el rreh-GAH-loh",
+          "emoji": "🎁"
+        },
+        {
+          "es": "¿Ponemos un bote?",
+          "en": "Shall we all chip in?",
+          "say": "poh-NEH-mos oon BOH-teh",
+          "emoji": "💶"
+        },
+        {
+          "es": "¿A qué hora termina?",
+          "en": "What time does it finish?",
+          "say": "ah keh OH-rah ter-MEE-nah",
+          "emoji": "🕖"
+        },
+        {
+          "es": "¡Allí estaremos!",
+          "en": "We'll be there!",
+          "say": "ah-YEE es-tah-REH-mos",
+          "emoji": "🥳"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Muchas",
+            "gracias",
+            "por",
+            "la",
+            "invitación"
+          ],
+          "shuffle": [
+            "por",
+            "invitación",
+            "la",
+            "Muchas",
+            "gracias"
+          ],
+          "en": "Thank you very much for the invitation."
+        },
+        {
+          "correct": [
+            "A",
+            "qué",
+            "hora",
+            "termina",
+            "la",
+            "fiesta"
+          ],
+          "shuffle": [
+            "la",
+            "fiesta",
+            "A",
+            "termina",
+            "qué",
+            "hora"
+          ],
+          "en": "What time does the party finish?"
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'El regalo' is:",
+          "opts": [
+            "The present",
+            "The rule",
+            "The return"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'¿Ponemos un bote?' means:",
+          "opts": [
+            "Shall we all chip in?",
+            "Shall we take a boat?",
+            "Shall we put it in a jar?"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Lucía's Party",
+        "paras": [
+          "Mia brings home an invitation: Lucía's birthday is on Saturday at the parque de bolas.",
+          "In the WhatsApp group, Carmen writes: '¿Ponemos un bote para el regalo? Cinco euros cada uno.' Emma answers: '¡Genial!'",
+          "Then she writes: 'Muchas gracias por la invitación. ¿A qué hora termina?' 'A las siete.' '¡Allí estaremos!'"
+        ],
+        "qs": [
+          {
+            "q": "Where is the party?",
+            "opts": [
+              "At soft play",
+              "At the beach",
+              "At school"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How much does each family put in?",
+            "opts": [
+              "Five euros",
+              "Ten euros",
+              "Twenty euros"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What time does the party finish?",
+            "opts": [
+              "At seven",
+              "At five",
+              "At nine"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 2010,
+      "title": "En el ayuntamiento",
+      "subtitle": "At the town hall",
+      "emoji": "🏛️",
+      "milestone": false,
+      "funFact": "When you move to a Spanish town, you sign up on the 'padrón' (local register) at the 'ayuntamiento' (town hall). You need it for school places and the health centre. Most offices ask for 'cita previa', an appointment booked in advance.",
+      "phrase": {
+        "es": "Vengo a empadronarme.",
+        "en": "I've come to register on the padrón."
+      },
+      "words": [
+        {
+          "es": "El ayuntamiento",
+          "en": "The town hall",
+          "say": "el ah-yoon-tah-MYEN-toh",
+          "emoji": "🏛️"
+        },
+        {
+          "es": "Empadronarse",
+          "en": "To register as a resident",
+          "say": "em-pah-droh-NAR-seh",
+          "emoji": "📝"
+        },
+        {
+          "es": "La cita previa",
+          "en": "A pre-booked appointment",
+          "say": "lah THEE-tah PREH-byah",
+          "emoji": "📅"
+        },
+        {
+          "es": "El certificado",
+          "en": "The certificate",
+          "say": "el ther-tee-fee-KAH-doh",
+          "emoji": "📜"
+        },
+        {
+          "es": "El pasaporte",
+          "en": "The passport",
+          "say": "el pah-sah-POR-teh",
+          "emoji": "🛂"
+        },
+        {
+          "es": "El contrato de alquiler",
+          "en": "The rental contract",
+          "say": "el kon-TRAH-toh deh al-kee-LER",
+          "emoji": "🏠"
+        },
+        {
+          "es": "¿Qué documentos necesito?",
+          "en": "Which documents do I need?",
+          "say": "keh doh-koo-MEN-tos neh-theh-SEE-toh",
+          "emoji": "📂"
+        },
+        {
+          "es": "Una fotocopia",
+          "en": "A photocopy",
+          "say": "OO-nah foh-toh-KOH-pyah",
+          "emoji": "🖨️"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Qué",
+            "documentos",
+            "necesito",
+            "para",
+            "el",
+            "padrón"
+          ],
+          "shuffle": [
+            "Qué",
+            "documentos",
+            "el",
+            "para",
+            "padrón",
+            "necesito"
+          ],
+          "en": "Which documents do I need for the padrón?"
+        },
+        {
+          "correct": [
+            "Tengo",
+            "cita",
+            "previa",
+            "a",
+            "las",
+            "diez"
+          ],
+          "shuffle": [
+            "cita",
+            "Tengo",
+            "previa",
+            "diez",
+            "las",
+            "a"
+          ],
+          "en": "I have an appointment at ten."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'El ayuntamiento' is:",
+          "opts": [
+            "The town hall",
+            "The police station",
+            "The post office"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'El contrato de alquiler' is:",
+          "opts": [
+            "The rental contract",
+            "The phone contract",
+            "The work contract"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "The Padrón",
+        "paras": [
+          "Tom and Emma go to the ayuntamiento. 'Buenos días. Tenemos cita previa a las diez. Venimos a empadronarnos.'",
+          "'¿Tienen los pasaportes y el contrato de alquiler?' 'Sí, aquí están.' 'Y una fotocopia, por favor.'",
+          "Twenty minutes later they have their certificado: they are on the padrón. Now they can sign up at the centro de salud!"
+        ],
+        "qs": [
+          {
+            "q": "What time is their appointment?",
+            "opts": [
+              "At ten",
+              "At nine",
+              "At twelve"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What do they need to bring?",
+            "opts": [
+              "Passports and the rental contract",
+              "A school report",
+              "A photo of the house"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What can they do now?",
+            "opts": [
+              "Sign up at the health centre",
+              "Buy a car",
+              "Start work"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    }
+  ],
+  "conversations": [
+    {
+      "lesson": 2001,
+      "who": "luna",
+      "title": "At the school gate",
+      "scene": "🏫",
+      "role": "another parent",
+      "turns": [
+        {
+          "ask": "¡Hola! No te conozco. ¿Eres nueva?",
+          "askEn": "Hi! I don't know you. Are you new?",
+          "answer": "Sí, somos nuevos. Soy la madre de Mia.",
+          "answerEn": "Yes, we're new. I'm Mia's mum.",
+          "also": [
+            "Sí, somos nuevos. Soy el padre de Leo."
+          ],
+          "keys": [
+            "somos nuevos",
+            "soy la madre",
+            "soy el padre",
+            "nuevo",
+            "nueva"
+          ],
+          "wrong": [
+            "Nos vemos a la salida.",
+            "Está en primero."
+          ],
+          "reply": "¡Bienvenidos!",
+          "replyEn": "Welcome!"
+        },
+        {
+          "ask": "¿En qué clase está?",
+          "askEn": "Which class is she in?",
+          "answer": "Está en primero.",
+          "answerEn": "She's in Year 1.",
+          "keys": [
+            "esta en",
+            "primero",
+            "segundo",
+            "tercero",
+            "infantil"
+          ],
+          "wrong": [
+            "Somos nuevos.",
+            "Encantada."
+          ],
+          "reply": "¡Como mi hija!",
+          "replyEn": "Like my daughter!"
+        },
+        {
+          "ask": "Yo soy Carmen, la madre de Lucía.",
+          "askEn": "I'm Carmen, Lucía's mum.",
+          "answer": "Encantada, Carmen.",
+          "answerEn": "Nice to meet you, Carmen.",
+          "keys": [
+            "encantada",
+            "encantado",
+            "mucho gusto"
+          ],
+          "wrong": [
+            "Está en primero.",
+            "Somos nuevos."
+          ],
+          "reply": "¡Igualmente! Nos vemos a la salida.",
+          "replyEn": "Likewise! See you at pick-up."
+        }
+      ]
+    },
+    {
+      "lesson": 2002,
+      "who": "sol",
+      "title": "The parent-teacher meeting",
+      "scene": "👩‍🏫",
+      "role": "the class teacher",
+      "turns": [
+        {
+          "ask": "Buenas tardes. Siéntese, por favor. ¿Qué quería saber?",
+          "askEn": "Good afternoon. Please sit down. What did you want to know?",
+          "answer": "¿Qué tal va Mia en clase?",
+          "answerEn": "How's Mia getting on in class?",
+          "keys": [
+            "que tal va",
+            "en clase",
+            "como va"
+          ],
+          "wrong": [
+            "Se porta bien.",
+            "Le cuesta."
+          ],
+          "reply": "Va muy bien. Está muy contenta.",
+          "replyEn": "She's doing very well. She's very happy."
+        },
+        {
+          "ask": "¿Hay algo que le preocupe?",
+          "askEn": "Is there anything that worries you?",
+          "answer": "Le cuesta un poco la lectura.",
+          "answerEn": "She finds reading a bit hard.",
+          "keys": [
+            "le cuesta",
+            "lectura",
+            "mates",
+            "no",
+            "nada"
+          ],
+          "wrong": [
+            "Está muy contenta.",
+            "Se porta bien."
+          ],
+          "reply": "Es normal al principio.",
+          "replyEn": "That's normal at the beginning."
+        },
+        {
+          "ask": "¿Tiene alguna otra pregunta?",
+          "askEn": "Do you have any other questions?",
+          "answer": "¿Cómo podemos ayudar en casa?",
+          "answerEn": "How can we help at home?",
+          "keys": [
+            "ayudar en casa",
+            "ayudar",
+            "en casa"
+          ],
+          "wrong": [
+            "Le cuesta la lectura.",
+            "Está en primero."
+          ],
+          "reply": "Leed un cuento juntos cada noche.",
+          "replyEn": "Read a story together every night."
+        }
+      ]
+    },
+    {
+      "lesson": 2003,
+      "who": "luna",
+      "title": "The WhatsApp group",
+      "scene": "💬",
+      "role": "a parent in the group",
+      "turns": [
+        {
+          "ask": "Mañana es la excursión al zoo. ¿Tienes alguna pregunta?",
+          "askEn": "Tomorrow is the trip to the zoo. Do you have any questions?",
+          "answer": "¿Qué hay que llevar?",
+          "answerEn": "What do we need to bring?",
+          "keys": [
+            "que hay que llevar",
+            "llevar"
+          ],
+          "wrong": [
+            "Mañana no hay cole.",
+            "El disfraz."
+          ],
+          "reply": "La merienda, agua y una gorra.",
+          "replyEn": "A snack, water and a cap."
+        },
+        {
+          "ask": "¡Ah! Y el viernes es fiesta. Mañana no, ¡el viernes!",
+          "askEn": "Oh! And Friday is a holiday. Not tomorrow, Friday!",
+          "answer": "Muchas gracias por avisar.",
+          "answerEn": "Thanks a lot for letting us know.",
+          "keys": [
+            "gracias",
+            "avisar"
+          ],
+          "wrong": [
+            "¿Alguien sabe?",
+            "La excursión."
+          ],
+          "reply": "¡De nada!",
+          "replyEn": "You're welcome!"
+        },
+        {
+          "ask": "Leo se ha dejado la chaqueta en clase. ¿Alguien la tiene?",
+          "askEn": "Leo has left his jacket in class. Has anyone got it?",
+          "answer": "No, lo siento.",
+          "answerEn": "No, sorry.",
+          "keys": [
+            "no",
+            "lo siento",
+            "si",
+            "la tengo"
+          ],
+          "wrong": [
+            "La merienda.",
+            "La excursión al zoo."
+          ],
+          "reply": "Vale, preguntaré a la tutora.",
+          "replyEn": "OK, I'll ask the class teacher."
+        }
+      ]
+    },
+    {
+      "lesson": 2004,
+      "who": "sol",
+      "title": "Filling in forms",
+      "scene": "📝",
+      "role": "the school office",
+      "turns": [
+        {
+          "ask": "Hay que devolver la autorización para la excursión. ¿La tienes?",
+          "askEn": "You need to return the permission slip for the trip. Have you got it?",
+          "answer": "Sí, tengo que firmar la autorización.",
+          "answerEn": "Yes, I have to sign the permission slip.",
+          "keys": [
+            "firmar",
+            "si",
+            "aqui"
+          ],
+          "wrong": [
+            "El comedor.",
+            "La matrícula."
+          ],
+          "reply": "Perfecto. Firma aquí abajo.",
+          "replyEn": "Perfect. Sign down here."
+        },
+        {
+          "ask": "¿Mia se queda al comedor?",
+          "askEn": "Is Mia staying for school lunch?",
+          "answer": "Sí, se queda al comedor.",
+          "answerEn": "Yes, she's staying for lunch.",
+          "keys": [
+            "si",
+            "comedor",
+            "no",
+            "en casa"
+          ],
+          "wrong": [
+            "Las extraescolares.",
+            "La firma."
+          ],
+          "reply": "Muy bien, lo apunto.",
+          "replyEn": "Very good, I'll write it down."
+        },
+        {
+          "ask": "Las inscripciones de extraescolares ya están abiertas.",
+          "askEn": "Sign-ups for after-school clubs are now open.",
+          "answer": "¿Hasta cuándo es el plazo?",
+          "answerEn": "When's the deadline?",
+          "keys": [
+            "hasta cuando",
+            "plazo"
+          ],
+          "wrong": [
+            "Firmar.",
+            "El comedor."
+          ],
+          "reply": "Hasta el viernes.",
+          "replyEn": "Until Friday."
+        }
+      ]
+    },
+    {
+      "lesson": 2005,
+      "who": "luna",
+      "title": "Calling the health centre",
+      "scene": "🏥",
+      "role": "the receptionist",
+      "turns": [
+        {
+          "ask": "Centro de salud, buenos días. ¿Qué desea?",
+          "askEn": "Health centre, good morning. How can I help?",
+          "answer": "Quería pedir cita con la pediatra.",
+          "answerEn": "I'd like an appointment with the paediatrician.",
+          "keys": [
+            "pedir cita",
+            "cita",
+            "pediatra"
+          ],
+          "wrong": [
+            "Tiene tos.",
+            "La receta."
+          ],
+          "reply": "Muy bien. ¿Qué le pasa al niño?",
+          "replyEn": "Fine. What's wrong with the child?"
+        },
+        {
+          "ask": "¿Qué le pasa?",
+          "askEn": "What's wrong?",
+          "answer": "Tiene fiebre desde ayer.",
+          "answerEn": "He's had a temperature since yesterday.",
+          "keys": [
+            "fiebre",
+            "tos",
+            "le duele",
+            "desde ayer"
+          ],
+          "wrong": [
+            "El centro de salud.",
+            "Pedir cita."
+          ],
+          "reply": "Vale, puede venir a las once.",
+          "replyEn": "OK, you can come at eleven."
+        },
+        {
+          "ask": "¿Tiene la tarjeta sanitaria del niño?",
+          "askEn": "Have you got the child's health card?",
+          "answer": "Sí, aquí la tengo.",
+          "answerEn": "Yes, I've got it here.",
+          "keys": [
+            "si",
+            "aqui",
+            "tarjeta",
+            "la tengo"
+          ],
+          "wrong": [
+            "Tiene fiebre.",
+            "La pediatra."
+          ],
+          "reply": "Perfecto. Hasta luego.",
+          "replyEn": "Perfect. See you later."
+        }
+      ]
+    },
+    {
+      "lesson": 2006,
+      "who": "sol",
+      "title": "At the chemist's",
+      "scene": "💊",
+      "role": "the pharmacist",
+      "turns": [
+        {
+          "ask": "Buenos días. ¿Qué necesita?",
+          "askEn": "Good morning. What do you need?",
+          "answer": "¿Tiene algo para la tos?",
+          "answerEn": "Have you got anything for a cough?",
+          "keys": [
+            "tiene algo",
+            "para la tos",
+            "tos",
+            "garganta",
+            "fiebre"
+          ],
+          "wrong": [
+            "Las tiritas.",
+            "Cada cuántas horas."
+          ],
+          "reply": "Sí. ¿Es para usted?",
+          "replyEn": "Yes. Is it for you?"
+        },
+        {
+          "ask": "¿Es para usted o para un niño?",
+          "askEn": "Is it for you or for a child?",
+          "answer": "Es para mi hija de seis años.",
+          "answerEn": "It's for my six-year-old daughter.",
+          "keys": [
+            "mi hija",
+            "mi hijo",
+            "para mi",
+            "para ninos"
+          ],
+          "wrong": [
+            "El jarabe.",
+            "La farmacia de guardia."
+          ],
+          "reply": "Entonces, este jarabe para niños.",
+          "replyEn": "Then this children's syrup."
+        },
+        {
+          "ask": "Aquí tiene el jarabe.",
+          "askEn": "Here's the syrup.",
+          "answer": "¿Cada cuántas horas?",
+          "answerEn": "How often should she take it?",
+          "keys": [
+            "cada cuantas horas",
+            "horas",
+            "cuantas"
+          ],
+          "wrong": [
+            "Las tiritas.",
+            "Me duele la garganta."
+          ],
+          "reply": "Cada ocho horas, con la comida.",
+          "replyEn": "Every eight hours, with food."
+        }
+      ]
+    },
+    {
+      "lesson": 2007,
+      "who": "luna",
+      "title": "Calling the school",
+      "scene": "🕓",
+      "role": "the school office",
+      "turns": [
+        {
+          "ask": "Colegio, ¿dígame?",
+          "askEn": "School, hello?",
+          "answer": "Hola, soy el padre de Leo. Llego tarde.",
+          "answerEn": "Hi, I'm Leo's dad. I'm running late.",
+          "also": [
+            "Hola, soy la madre de Mia. Llego tarde."
+          ],
+          "keys": [
+            "llego tarde",
+            "tarde"
+          ],
+          "wrong": [
+            "El aula matinal.",
+            "El horario."
+          ],
+          "reply": "No pasa nada. ¿Cuánto tardas?",
+          "replyEn": "No problem. How long will you be?"
+        },
+        {
+          "ask": "¿Cuánto tiempo vas a tardar?",
+          "askEn": "How long are you going to be?",
+          "answer": "Llego tarde diez minutos.",
+          "answerEn": "I'm ten minutes late.",
+          "keys": [
+            "minutos",
+            "diez",
+            "cinco",
+            "quince"
+          ],
+          "wrong": [
+            "Recoger.",
+            "El horario."
+          ],
+          "reply": "Vale, Leo puede esperar en conserjería.",
+          "replyEn": "OK, Leo can wait at the office."
+        },
+        {
+          "ask": "¿Mañana lo recoges tú?",
+          "askEn": "Are you collecting him tomorrow?",
+          "answer": "No, mañana lo recoge su abuela.",
+          "answerEn": "No, his grandmother is collecting him tomorrow.",
+          "keys": [
+            "lo recoge",
+            "abuela",
+            "abuelo",
+            "si",
+            "yo"
+          ],
+          "wrong": [
+            "El aula matinal.",
+            "Llego tarde."
+          ],
+          "reply": "Vale, lo apunto.",
+          "replyEn": "OK, I'll make a note."
+        }
+      ]
+    },
+    {
+      "lesson": 2008,
+      "who": "sol",
+      "title": "In the lift",
+      "scene": "🏢",
+      "role": "a neighbour",
+      "turns": [
+        {
+          "ask": "¡Hola! Tú no eres de aquí, ¿verdad?",
+          "askEn": "Hi! You're not from here, are you?",
+          "answer": "Somos los nuevos del tercero.",
+          "answerEn": "We're the new people on the third floor.",
+          "keys": [
+            "nuevos",
+            "del tercero",
+            "tercero"
+          ],
+          "wrong": [
+            "El ascensor.",
+            "Perdón por el ruido."
+          ],
+          "reply": "¡Ah, encantado! Yo soy del quinto.",
+          "replyEn": "Ah, nice to meet you! I'm on the fifth floor."
+        },
+        {
+          "ask": "¿Qué tal el piso?",
+          "askEn": "How's the flat?",
+          "answer": "Muy bien, pero perdón por el ruido.",
+          "answerEn": "Very good, but sorry about the noise.",
+          "keys": [
+            "bien",
+            "perdon",
+            "ruido",
+            "genial"
+          ],
+          "wrong": [
+            "El portero.",
+            "La comunidad de vecinos."
+          ],
+          "reply": "Tranquilos, no se oye nada.",
+          "replyEn": "Don't worry, you can't hear a thing."
+        },
+        {
+          "ask": "Cualquier cosa, aquí estamos.",
+          "askEn": "If you need anything, we're here.",
+          "answer": "Muchas gracias, muy amable.",
+          "answerEn": "Thank you very much, very kind.",
+          "keys": [
+            "gracias",
+            "amable"
+          ],
+          "wrong": [
+            "El ascensor.",
+            "Somos del tercero."
+          ],
+          "reply": "¡De nada, vecina!",
+          "replyEn": "You're welcome, neighbour!"
+        }
+      ]
+    },
+    {
+      "lesson": 2009,
+      "who": "luna",
+      "title": "A party invitation",
+      "scene": "🎂",
+      "role": "Lucía's mum",
+      "turns": [
+        {
+          "ask": "El sábado es el cumpleaños de Lucía en el parque de bolas. ¿Puede venir Mia?",
+          "askEn": "Saturday is Lucía's birthday at soft play. Can Mia come?",
+          "answer": "¡Sí! Muchas gracias por la invitación.",
+          "answerEn": "Yes! Thank you very much for the invitation.",
+          "keys": [
+            "si",
+            "gracias",
+            "invitacion"
+          ],
+          "wrong": [
+            "El regalo.",
+            "El parque de bolas."
+          ],
+          "reply": "¡Qué bien! Lucía se va a alegrar mucho.",
+          "replyEn": "Great! Lucía will be really pleased."
+        },
+        {
+          "ask": "Empieza a las cinco.",
+          "askEn": "It starts at five.",
+          "answer": "¿A qué hora termina?",
+          "answerEn": "What time does it finish?",
+          "keys": [
+            "a que hora termina",
+            "termina"
+          ],
+          "wrong": [
+            "¿Ponemos un bote?",
+            "El cumpleaños."
+          ],
+          "reply": "A las siete.",
+          "replyEn": "At seven."
+        },
+        {
+          "ask": "Para el regalo, ¿ponemos un bote entre todos?",
+          "askEn": "For the present, shall we all chip in?",
+          "answer": "¡Sí, claro! ¿Cuánto ponemos?",
+          "answerEn": "Yes, of course! How much shall we put in?",
+          "keys": [
+            "si",
+            "claro",
+            "cuanto",
+            "vale"
+          ],
+          "wrong": [
+            "La invitación.",
+            "A las siete."
+          ],
+          "reply": "Cinco euros cada familia.",
+          "replyEn": "Five euros per family."
+        }
+      ]
+    },
+    {
+      "lesson": 2010,
+      "who": "sol",
+      "title": "At the town hall",
+      "scene": "🏛️",
+      "role": "the town hall clerk",
+      "turns": [
+        {
+          "ask": "Buenos días. ¿Tiene cita previa?",
+          "askEn": "Good morning. Do you have an appointment?",
+          "answer": "Sí, tengo cita previa a las diez.",
+          "answerEn": "Yes, I have an appointment at ten.",
+          "keys": [
+            "cita",
+            "si",
+            "a las diez"
+          ],
+          "wrong": [
+            "El certificado.",
+            "Una fotocopia."
+          ],
+          "reply": "Muy bien. ¿Qué trámite viene a hacer?",
+          "replyEn": "Very good. What have you come to do?"
+        },
+        {
+          "ask": "¿Qué trámite viene a hacer?",
+          "askEn": "What have you come to do?",
+          "answer": "Vengo a empadronarme.",
+          "answerEn": "I've come to register on the padrón.",
+          "keys": [
+            "empadronar",
+            "empadronarme",
+            "padron"
+          ],
+          "wrong": [
+            "El pasaporte.",
+            "Tengo cita."
+          ],
+          "reply": "De acuerdo.",
+          "replyEn": "All right."
+        },
+        {
+          "ask": "¿Tiene el pasaporte y el contrato de alquiler?",
+          "askEn": "Have you got your passport and rental contract?",
+          "answer": "Sí, aquí están.",
+          "answerEn": "Yes, here they are.",
+          "keys": [
+            "si",
+            "aqui",
+            "estan"
+          ],
+          "wrong": [
+            "Vengo a empadronarme.",
+            "Una fotocopia."
+          ],
+          "reply": "Perfecto. Necesito también una fotocopia.",
+          "replyEn": "Perfect. I also need a photocopy."
+        },
+        {
+          "ask": "Ya está. Aquí tiene el certificado.",
+          "askEn": "Done. Here's the certificate.",
+          "answer": "Muchas gracias. ¡Adiós!",
+          "answerEn": "Thank you very much. Goodbye!",
+          "keys": [
+            "gracias",
+            "adios",
+            "hasta luego"
+          ],
+          "wrong": [
+            "¿Qué documentos necesito?",
+            "El contrato."
+          ],
+          "reply": "¡Bienvenidos al pueblo!",
+          "replyEn": "Welcome to the town!"
+        }
+      ]
+    }
+  ]
+}

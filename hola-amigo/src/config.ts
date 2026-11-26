@@ -8,6 +8,10 @@ export const APP = {
   audience: "families" as const,
 } as const;
 
+// Learners on one family account: up to three children and two grown-ups
+// (grown-ups get the "Spanish for parents" course).
+export const FAMILY = { maxChildren: 3, maxAdults: 2 } as const;
+
 // Castilian (Spain) Spanish throughout: voices, pronunciation guides and
 // speech recognition all use es-ES. Interface language is British English.
 export const LANGUAGE = {

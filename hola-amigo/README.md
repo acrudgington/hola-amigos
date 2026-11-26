@@ -11,6 +11,8 @@ An interactive Spanish learning app for kids aged 6+, taking them from absolute 
 - **Guided lessons** that mix the activities differently in each lesson, scored 1–3 stars
 - **Daily review** with spaced repetition (Leitner boxes) so words stick
 - **Interactive stories** on every lesson, written around that lesson's vocabulary
+- **Extra packs** beside the main course (see *Packs* below): the School survival kit, seasonal Halloween and Christmas packs, and *Español para padres* for grown-ups
+- **Printable labels for home**: A4 sheets of Spanish labels (picture, word, pronunciation, English) for things in each room
 
 ### Audio & voice
 - **🔊 Listen buttons** on every flashcard and phrase — hear words in Spanish
@@ -19,7 +21,7 @@ An interactive Spanish learning app for kids aged 6+, taking them from absolute 
 
 ### Family accounts & progress
 - **Parent accounts** with email + password login (passwords are hashed, never stored as plain text)
-- **Multiple child profiles** per family — each child has their own avatar, name, and separate progress
+- **Up to three children and two grown-ups** per family, each with their own avatar, name and separate progress. Grown-ups get *Español para padres* as their home page, and can open the full course too
 - **Parent Dashboard** showing all children's stats in one place
 - **Persistent progress** saved locally (survives browser refresh)
 
@@ -192,7 +194,7 @@ Same process — connect your GitHub repo. Build command: `npm run build`. Publi
 ## How Family Accounts Work
 
 - A **parent or guardian** signs up (email + password) and agrees to the privacy notice. Their consent is recorded.
-- From parent home, **add child profiles**: just a first name and an animal avatar.
+- From parent home, **add learners**: up to 3 children and 2 grown-ups (set in `FAMILY` in `src/config.ts`). Just a first name and an avatar.
 - Tap a child to start their learning. Switch children anytime with the 👥 button.
 - The **grown-up dashboard** shows every child's progress. Its *Account & privacy* panel lets the parent download all their data, reset their password, read the privacy notice, or permanently delete the account.
 
@@ -258,3 +260,30 @@ the phone… The child answers **out loud** or taps an answer.
   the judging fair.
 - **Learn together → Chat cards** shows the same questions to a grown-up, with an
   example answer and its English, so families can have the conversation at home.
+
+## Packs
+
+Packs are short themed courses that sit beside the main 200 lessons. Each one lives in
+`content/packs/<id>.json` (checked by `npm run content:check`), has its own lessons (ids from 1001)
+with a conversation for each, and earns its own sticker.
+
+| Pack | Lessons | Who | When |
+|---|---|---|---|
+| Mi primer día en el cole (School survival kit) | 1001–1008 | children | all year, with "Show the teacher" phrase cards |
+| Halloween y Todos los Santos | 1101–1104 | children | 1 October to 2 November |
+| Navidad en España | 1201–1205 | children | 1 December to 6 January |
+| Español para padres | 2001–2010 | grown-ups | all year, unlocked in order |
+
+While a seasonal pack is on, Home shows a banner and drifting decorations (switched off for
+reduced motion). Add `?season=halloween` or `?season=christmas` to the URL to preview one at any
+time of year.
+
+**Firebase note:** grown-up learners are saved with a `kind: "adult"` field, which the updated
+`firestore.rules` allows. Republish the rules (Firebase console → Firestore → Rules, or
+`npm run firebase:deploy-rules`) before adding a grown-up on a live project.
+
+## Printable labels
+
+Grown-up dashboard → *Printable labels for home*. Choose rooms, big (8 a page) or small (15 a
+page), with or without English and the pronunciation guide, then print. The words are in
+`src/content/labels.ts`, and each one has a voice clip, so tapping a label on screen says it.
