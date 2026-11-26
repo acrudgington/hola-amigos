@@ -1,0 +1,1873 @@
+{
+  "id": "school",
+  "title": "Mi primer día en el cole",
+  "en": "School survival kit",
+  "about": "The Spanish a child needs in their first weeks at a Spanish school: asking to go to the toilet, saying they don't understand, playground and dining-hall phrases, and what the teacher says.",
+  "emoji": "🎒",
+  "color": "#3FA7F5",
+  "audience": "child",
+  "sequential": false,
+  "sticker": {
+    "id": "k_school",
+    "name": "School Star",
+    "emoji": "🏫"
+  },
+  "cards": [
+    {
+      "es": "¿Puedo ir al baño?",
+      "en": "Can I go to the toilet?",
+      "emoji": "🚻"
+    },
+    {
+      "es": "¿Puedo beber agua?",
+      "en": "Can I drink some water?",
+      "emoji": "💧"
+    },
+    {
+      "es": "No entiendo",
+      "en": "I don't understand",
+      "emoji": "🤔"
+    },
+    {
+      "es": "¿Puedes repetirlo, por favor?",
+      "en": "Can you repeat it, please?",
+      "emoji": "🔁"
+    },
+    {
+      "es": "Más despacio, por favor",
+      "en": "More slowly, please",
+      "emoji": "🐢"
+    },
+    {
+      "es": "¿Cómo se dice…?",
+      "en": "How do you say…?",
+      "emoji": "💬"
+    },
+    {
+      "es": "No sé hacerlo",
+      "en": "I don't know how to do it",
+      "emoji": "🧩"
+    },
+    {
+      "es": "He terminado",
+      "en": "I've finished",
+      "emoji": "✅"
+    },
+    {
+      "es": "Se me ha olvidado",
+      "en": "I've forgotten it",
+      "emoji": "🎒"
+    },
+    {
+      "es": "Me duele la barriga",
+      "en": "My tummy hurts",
+      "emoji": "🤢"
+    },
+    {
+      "es": "Me duele la cabeza",
+      "en": "My head hurts",
+      "emoji": "🤕"
+    },
+    {
+      "es": "Me he caído",
+      "en": "I've fallen over",
+      "emoji": "🩹"
+    },
+    {
+      "es": "Tengo hambre",
+      "en": "I'm hungry",
+      "emoji": "🍽️"
+    },
+    {
+      "es": "Quiero llamar a mi madre",
+      "en": "I want to call my mum",
+      "emoji": "📞"
+    },
+    {
+      "es": "Estoy triste",
+      "en": "I'm sad",
+      "emoji": "😢"
+    },
+    {
+      "es": "¿Puedo jugar contigo?",
+      "en": "Can I play with you?",
+      "emoji": "⚽"
+    },
+    {
+      "es": "Necesito ayuda",
+      "en": "I need help",
+      "emoji": "🙋"
+    }
+  ],
+  "lessons": [
+    {
+      "id": 1001,
+      "title": "¡Hola, seño!",
+      "subtitle": "Saying hello at school",
+      "emoji": "🏫",
+      "milestone": false,
+      "funFact": "In many Spanish primary schools, children call their teacher 'seño' (from 'señorita') or 'profe', and use the teacher's first name.",
+      "phrase": {
+        "es": "Buenos días, seño. Soy nueva.",
+        "en": "Good morning, Miss. I'm new."
+      },
+      "words": [
+        {
+          "es": "Buenos días, seño",
+          "en": "Good morning, Miss",
+          "say": "BWEH-nos DEE-as SEH-nyoh",
+          "emoji": "🌞"
+        },
+        {
+          "es": "El profe",
+          "en": "The teacher (man)",
+          "say": "el PROH-feh",
+          "emoji": "👨‍🏫"
+        },
+        {
+          "es": "Soy nuevo",
+          "en": "I'm new (boy)",
+          "say": "soy NWEH-boh",
+          "emoji": "🆕"
+        },
+        {
+          "es": "Soy nueva",
+          "en": "I'm new (girl)",
+          "say": "soy NWEH-bah",
+          "emoji": "✨"
+        },
+        {
+          "es": "Mi clase",
+          "en": "My class",
+          "say": "mee KLAH-seh",
+          "emoji": "🏫"
+        },
+        {
+          "es": "El compañero",
+          "en": "The classmate (boy)",
+          "say": "el kom-pah-NYEH-roh",
+          "emoji": "👦"
+        },
+        {
+          "es": "La compañera",
+          "en": "The classmate (girl)",
+          "say": "lah kom-pah-NYEH-rah",
+          "emoji": "👧"
+        },
+        {
+          "es": "Hasta mañana",
+          "en": "See you tomorrow",
+          "say": "AS-tah mah-NYAH-nah",
+          "emoji": "👋"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Soy",
+            "nueva",
+            "en",
+            "la",
+            "clase",
+            "de",
+            "Marta"
+          ],
+          "shuffle": [
+            "Marta",
+            "la",
+            "Soy",
+            "nueva",
+            "en",
+            "de",
+            "clase"
+          ],
+          "en": "I'm new in Marta's class."
+        },
+        {
+          "correct": [
+            "Mi",
+            "compañero",
+            "se",
+            "llama",
+            "Pablo"
+          ],
+          "shuffle": [
+            "Mi",
+            "compañero",
+            "Pablo",
+            "se",
+            "llama"
+          ],
+          "en": "My classmate is called Pablo."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Soy nuevo' means:",
+          "opts": [
+            "I'm new",
+            "I'm nine",
+            "I'm nice"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'La compañera' is:",
+          "opts": [
+            "A classmate (girl)",
+            "A company",
+            "A teacher"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "The First Day",
+        "paras": [
+          "It's Luna's first day at a Spanish school. She is a bit nervous.",
+          "'Buenos días, seño. Me llamo Luna. Soy nueva,' she says. 'Hola, Luna. ¡Bienvenida!' says the teacher.",
+          "A girl smiles. 'Soy Marta, tu compañera.' At the end of the day: '¡Hasta mañana, Marta!'"
+        ],
+        "qs": [
+          {
+            "q": "How does Luna feel at first?",
+            "opts": [
+              "A bit nervous",
+              "Very angry",
+              "Bored"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Luna call her teacher?",
+            "opts": [
+              "Seño",
+              "Mum",
+              "Doctor"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Who is Marta?",
+            "opts": [
+              "Her classmate",
+              "Her teacher",
+              "Her sister"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 1002,
+      "title": "¿Puedo…?",
+      "subtitle": "Asking if you can",
+      "emoji": "🙋",
+      "milestone": false,
+      "funFact": "Spanish children usually say 'seño' or 'profe' to get the teacher's attention, then ask: '¿Puedo ir al baño?'",
+      "phrase": {
+        "es": "Seño, ¿puedo ir al baño, por favor?",
+        "en": "Miss, can I go to the toilet, please?"
+      },
+      "words": [
+        {
+          "es": "¿Puedo ir al baño?",
+          "en": "Can I go to the toilet?",
+          "say": "PWEH-doh eer al BAH-nyoh",
+          "emoji": "🚻"
+        },
+        {
+          "es": "¿Puedo beber agua?",
+          "en": "Can I drink some water?",
+          "say": "PWEH-doh beh-BEHR AH-gwah",
+          "emoji": "💧"
+        },
+        {
+          "es": "¿Puedo salir?",
+          "en": "Can I go out?",
+          "say": "PWEH-doh sah-LEER",
+          "emoji": "🚪"
+        },
+        {
+          "es": "¿Puedo sentarme aquí?",
+          "en": "Can I sit here?",
+          "say": "PWEH-doh sen-TAR-meh ah-KEE",
+          "emoji": "🪑"
+        },
+        {
+          "es": "¿Me dejas…?",
+          "en": "Can I borrow…?",
+          "say": "meh DEH-has",
+          "emoji": "🤲"
+        },
+        {
+          "es": "Sí, claro",
+          "en": "Yes, of course",
+          "say": "see KLAH-roh",
+          "emoji": "👍"
+        },
+        {
+          "es": "Ahora no",
+          "en": "Not now",
+          "say": "ah-OH-rah noh",
+          "emoji": "✋"
+        },
+        {
+          "es": "Gracias, seño",
+          "en": "Thank you, Miss",
+          "say": "GRAH-thyas SEH-nyoh",
+          "emoji": "🙏"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Seño",
+            "puedo",
+            "ir",
+            "al",
+            "baño"
+          ],
+          "shuffle": [
+            "ir",
+            "puedo",
+            "al",
+            "Seño",
+            "baño"
+          ],
+          "en": "Miss, can I go to the toilet?"
+        },
+        {
+          "correct": [
+            "Me",
+            "dejas",
+            "un",
+            "lápiz",
+            "por",
+            "favor"
+          ],
+          "shuffle": [
+            "Me",
+            "un",
+            "dejas",
+            "favor",
+            "lápiz",
+            "por"
+          ],
+          "en": "Can I borrow a pencil, please?"
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'¿Puedo beber agua?' means:",
+          "opts": [
+            "Can I drink some water?",
+            "Can I swim?",
+            "Is it raining?"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'¿Me dejas tu goma?' means:",
+          "opts": [
+            "Can I borrow your rubber?",
+            "Can I keep your rubber?",
+            "Where is your rubber?"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Asking Nicely",
+        "paras": [
+          "In class, Sol needs the toilet. He puts up his hand. 'Seño, ¿puedo ir al baño, por favor?'",
+          "'Sí, claro,' says the teacher. Later, Sol has no pencil. '¿Me dejas un lápiz?' he asks Marta.",
+          "'¡Toma!' says Marta. 'Gracias,' says Sol. Asking nicely works!"
+        ],
+        "qs": [
+          {
+            "q": "What does Sol need first?",
+            "opts": [
+              "The toilet",
+              "Water",
+              "His coat"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does the teacher say?",
+            "opts": [
+              "Yes, of course",
+              "Not now",
+              "No"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Sol borrow?",
+            "opts": [
+              "A pencil",
+              "A book",
+              "A rubber"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 1003,
+      "title": "No entiendo",
+      "subtitle": "When you don't understand",
+      "emoji": "🤔",
+      "milestone": false,
+      "funFact": "It's completely normal not to understand everything at first. Teachers in Spain are used to new pupils: just say 'No entiendo'.",
+      "phrase": {
+        "es": "No entiendo. ¿Puedes repetirlo, por favor?",
+        "en": "I don't understand. Can you repeat it, please?"
+      },
+      "words": [
+        {
+          "es": "No entiendo",
+          "en": "I don't understand",
+          "say": "noh en-TYEN-doh",
+          "emoji": "🤔"
+        },
+        {
+          "es": "¿Puedes repetirlo?",
+          "en": "Can you repeat it?",
+          "say": "PWEH-des rreh-peh-TEER-loh",
+          "emoji": "🔁"
+        },
+        {
+          "es": "Más despacio",
+          "en": "More slowly",
+          "say": "mas des-PAH-thyoh",
+          "emoji": "🐢"
+        },
+        {
+          "es": "¿Cómo se dice…?",
+          "en": "How do you say…?",
+          "say": "KOH-moh seh DEE-theh",
+          "emoji": "💬"
+        },
+        {
+          "es": "¿Qué significa…?",
+          "en": "What does … mean?",
+          "say": "keh seeg-nee-FEE-kah",
+          "emoji": "❓"
+        },
+        {
+          "es": "No lo sé",
+          "en": "I don't know",
+          "say": "noh loh seh",
+          "emoji": "🤷"
+        },
+        {
+          "es": "Ayúdame, por favor",
+          "en": "Help me, please",
+          "say": "ah-YOO-dah-meh por fah-BOR",
+          "emoji": "🆘"
+        },
+        {
+          "es": "¡Ya lo entiendo!",
+          "en": "Now I get it!",
+          "say": "yah loh en-TYEN-doh",
+          "emoji": "💡"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "No",
+            "entiendo",
+            "la",
+            "pregunta"
+          ],
+          "shuffle": [
+            "pregunta",
+            "la",
+            "No",
+            "entiendo"
+          ],
+          "en": "I don't understand the question."
+        },
+        {
+          "correct": [
+            "Cómo",
+            "se",
+            "dice",
+            "pencil",
+            "en",
+            "español"
+          ],
+          "shuffle": [
+            "Cómo",
+            "pencil",
+            "se",
+            "dice",
+            "en",
+            "español"
+          ],
+          "en": "How do you say 'pencil' in Spanish?"
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'No lo sé' means:",
+          "opts": [
+            "I don't know",
+            "I don't see",
+            "I'm not sure about you"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Más despacio' means:",
+          "opts": [
+            "More slowly",
+            "More quickly",
+            "More quietly"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "A Tricky Question",
+        "paras": [
+          "The teacher asks Luna a question, but she speaks very fast. 'No entiendo. ¿Puedes repetirlo, por favor?'",
+          "The teacher says it again, más despacio. Luna thinks… '¡Ya lo entiendo!'",
+          "Then Luna asks: '¿Cómo se dice ruler en español?' 'Se dice regla,' says the teacher."
+        ],
+        "qs": [
+          {
+            "q": "Why doesn't Luna understand at first?",
+            "opts": [
+              "The teacher speaks very fast",
+              "She isn't listening",
+              "It's too noisy"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How does the teacher say it the second time?",
+            "opts": [
+              "More slowly",
+              "In English",
+              "Louder"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "How do you say 'ruler' in Spanish?",
+            "opts": [
+              "La regla",
+              "La goma",
+              "El lápiz"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 1004,
+      "title": "Lo que dice la seño",
+      "subtitle": "What the teacher says",
+      "emoji": "🗣️",
+      "milestone": false,
+      "funFact": "Spanish teachers speak to the whole class with 'vosotros' commands: 'sentaos' (sit down), 'escuchad' (listen), 'abrid el libro' (open your books).",
+      "phrase": {
+        "es": "Sentaos y abrid el libro, por favor.",
+        "en": "Sit down and open your books, please."
+      },
+      "words": [
+        {
+          "es": "Sentaos",
+          "en": "Sit down (everyone)",
+          "say": "sen-TAH-os",
+          "emoji": "🪑"
+        },
+        {
+          "es": "Silencio, por favor",
+          "en": "Quiet, please",
+          "say": "see-LEN-thyoh por fah-BOR",
+          "emoji": "🤫"
+        },
+        {
+          "es": "Abrid el libro",
+          "en": "Open your books",
+          "say": "ah-BREED el LEE-broh",
+          "emoji": "📖"
+        },
+        {
+          "es": "Escuchad",
+          "en": "Listen (everyone)",
+          "say": "es-koo-CHAD",
+          "emoji": "👂"
+        },
+        {
+          "es": "Levantad la mano",
+          "en": "Put your hands up",
+          "say": "leh-ban-TAD lah MAH-noh",
+          "emoji": "✋"
+        },
+        {
+          "es": "Copiad",
+          "en": "Copy (everyone)",
+          "say": "koh-PYAD",
+          "emoji": "✏️"
+        },
+        {
+          "es": "Recoged",
+          "en": "Tidy up (everyone)",
+          "say": "rreh-koh-HED",
+          "emoji": "🧺"
+        },
+        {
+          "es": "En fila",
+          "en": "In a line",
+          "say": "en FEE-lah",
+          "emoji": "🚶"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Sentaos",
+            "y",
+            "escuchad",
+            "por",
+            "favor"
+          ],
+          "shuffle": [
+            "favor",
+            "y",
+            "por",
+            "escuchad",
+            "Sentaos"
+          ],
+          "en": "Sit down and listen, please."
+        },
+        {
+          "correct": [
+            "Abrid",
+            "el",
+            "libro",
+            "en",
+            "la",
+            "página",
+            "diez"
+          ],
+          "shuffle": [
+            "el",
+            "Abrid",
+            "en",
+            "página",
+            "diez",
+            "la",
+            "libro"
+          ],
+          "en": "Open your books at page ten."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Levantad la mano' means:",
+          "opts": [
+            "Put your hands up",
+            "Wash your hands",
+            "Hold hands"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'Recoged' means:",
+          "opts": [
+            "Tidy up",
+            "Run",
+            "Go home"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Simon Says, Teacher Style",
+        "paras": [
+          "The teacher plays a game: 'La seño dice… ¡levantad la mano!' Everyone puts their hand up.",
+          "'La seño dice… ¡escuchad!' Everyone is quiet. '¡Sentaos!' Sol sits down… but she didn't say 'la seño dice'!",
+          "Everyone laughs. '¡Muy bien! Ahora, recoged y en fila para el recreo.'"
+        ],
+        "qs": [
+          {
+            "q": "What does everyone do first?",
+            "opts": [
+              "Put their hands up",
+              "Sit down",
+              "Tidy up"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What mistake does Sol make?",
+            "opts": [
+              "He sits down too early",
+              "He shouts",
+              "He runs out"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Where are they going at the end?",
+            "opts": [
+              "To break time",
+              "Home",
+              "To lunch"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 1005,
+      "title": "Mi estuche",
+      "subtitle": "My school things",
+      "emoji": "✏️",
+      "milestone": false,
+      "funFact": "Most Spanish pupils have an 'agenda', a school diary where teachers and parents write notes to each other. Check it every day!",
+      "phrase": {
+        "es": "Tengo el estuche y la agenda en la mochila.",
+        "en": "I've got my pencil case and school diary in my bag."
+      },
+      "words": [
+        {
+          "es": "El estuche",
+          "en": "The pencil case",
+          "say": "el es-TOO-cheh",
+          "emoji": "🧰"
+        },
+        {
+          "es": "La agenda",
+          "en": "The school diary",
+          "say": "lah ah-HEN-dah",
+          "emoji": "📒"
+        },
+        {
+          "es": "Las pinturas",
+          "en": "Colouring pencils",
+          "say": "las peen-TOO-ras",
+          "emoji": "🖍️"
+        },
+        {
+          "es": "La ficha",
+          "en": "The worksheet",
+          "say": "lah FEE-chah",
+          "emoji": "📄"
+        },
+        {
+          "es": "El sacapuntas",
+          "en": "The pencil sharpener",
+          "say": "el sah-kah-POON-tas",
+          "emoji": "✏️"
+        },
+        {
+          "es": "La goma",
+          "en": "The rubber",
+          "say": "lah GOH-mah",
+          "emoji": "🩹"
+        },
+        {
+          "es": "Los deberes",
+          "en": "Homework",
+          "say": "los deh-BEH-res",
+          "emoji": "📝"
+        },
+        {
+          "es": "Se me ha olvidado",
+          "en": "I've forgotten it",
+          "say": "seh meh ah ol-bee-DAH-doh",
+          "emoji": "🤦"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Tengo",
+            "las",
+            "pinturas",
+            "en",
+            "el",
+            "estuche"
+          ],
+          "shuffle": [
+            "Tengo",
+            "estuche",
+            "las",
+            "en",
+            "pinturas",
+            "el"
+          ],
+          "en": "I've got my colouring pencils in my pencil case."
+        },
+        {
+          "correct": [
+            "Se",
+            "me",
+            "ha",
+            "olvidado",
+            "la",
+            "agenda"
+          ],
+          "shuffle": [
+            "me",
+            "agenda",
+            "olvidado",
+            "la",
+            "ha",
+            "Se"
+          ],
+          "en": "I've forgotten my school diary."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'El estuche' is:",
+          "opts": [
+            "A pencil case",
+            "A sticker",
+            "A school bag"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'La ficha' is:",
+          "opts": [
+            "A worksheet",
+            "A file box",
+            "A fish"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "The Missing Diary",
+        "paras": [
+          "Sol opens his mochila. 'Estuche, pinturas, goma… ¡Ay! Se me ha olvidado la agenda.'",
+          "'No pasa nada,' says the teacher. 'Hoy los deberes están en esta ficha.'",
+          "At home, Mamá finds the agenda on the table. 'Sol, ¡aquí está tu agenda!'"
+        ],
+        "qs": [
+          {
+            "q": "What has Sol forgotten?",
+            "opts": [
+              "His school diary",
+              "His pencil case",
+              "His lunch"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Where is today's homework?",
+            "opts": [
+              "On a worksheet",
+              "In the diary",
+              "On the board"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Where is the diary?",
+            "opts": [
+              "On the table at home",
+              "In the classroom",
+              "In the car"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 1006,
+      "title": "Recreo y comedor",
+      "subtitle": "Break time and lunch",
+      "emoji": "⚽",
+      "milestone": false,
+      "funFact": "Many Spanish schools have a 'comedor' (dining hall) where children have a hot lunch around two o'clock, often with a first course, a main course and fruit.",
+      "phrase": {
+        "es": "¿Juegas conmigo en el recreo?",
+        "en": "Will you play with me at break?"
+      },
+      "words": [
+        {
+          "es": "¿Juegas conmigo?",
+          "en": "Will you play with me?",
+          "say": "HWEH-gas kon-MEE-goh",
+          "emoji": "🤝"
+        },
+        {
+          "es": "¿Puedo jugar?",
+          "en": "Can I play?",
+          "say": "PWEH-doh hoo-GAR",
+          "emoji": "⚽"
+        },
+        {
+          "es": "El patio",
+          "en": "The playground",
+          "say": "el PAH-tyoh",
+          "emoji": "🛝"
+        },
+        {
+          "es": "El comedor",
+          "en": "The school dining hall",
+          "say": "el koh-meh-DOR",
+          "emoji": "🍽️"
+        },
+        {
+          "es": "El almuerzo",
+          "en": "Mid-morning snack",
+          "say": "el al-MWEHR-thoh",
+          "emoji": "🍎"
+        },
+        {
+          "es": "Tengo hambre",
+          "en": "I'm hungry",
+          "say": "TEN-goh AM-breh",
+          "emoji": "😋"
+        },
+        {
+          "es": "¿Me pasas el agua?",
+          "en": "Can you pass me the water?",
+          "say": "meh PAH-sas el AH-gwah",
+          "emoji": "🥛"
+        },
+        {
+          "es": "Me toca",
+          "en": "It's my turn",
+          "say": "meh TOH-kah",
+          "emoji": "🎯"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Juegas",
+            "conmigo",
+            "en",
+            "el",
+            "patio"
+          ],
+          "shuffle": [
+            "en",
+            "conmigo",
+            "Juegas",
+            "patio",
+            "el"
+          ],
+          "en": "Will you play with me in the playground?"
+        },
+        {
+          "correct": [
+            "En",
+            "el",
+            "comedor",
+            "como",
+            "con",
+            "mis",
+            "amigos"
+          ],
+          "shuffle": [
+            "comedor",
+            "amigos",
+            "el",
+            "con",
+            "En",
+            "como",
+            "mis"
+          ],
+          "en": "I eat with my friends in the dining hall."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'El comedor' is:",
+          "opts": [
+            "The school dining hall",
+            "The kitchen at home",
+            "A comic"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'¿Juegas conmigo?' means:",
+          "opts": [
+            "Will you play with me?",
+            "Are you playing football?",
+            "Can I go home?"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "A New Friend",
+        "paras": [
+          "At break, Luna sees some girls playing in the patio. '¿Puedo jugar?' she asks.",
+          "'¡Sí! ¿Juegas conmigo?' says Marta. They play until the bell rings.",
+          "At lunch, in el comedor, Luna sits with Marta. '¿Me pasas el agua?' '¡Claro!'"
+        ],
+        "qs": [
+          {
+            "q": "What does Luna ask the girls?",
+            "opts": [
+              "Can I play?",
+              "What's your name?",
+              "Where's the toilet?"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Who plays with Luna?",
+            "opts": [
+              "Marta",
+              "The teacher",
+              "Sol"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Where do they have lunch?",
+            "opts": [
+              "In the dining hall",
+              "In the playground",
+              "At home"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 1007,
+      "title": "No me encuentro bien",
+      "subtitle": "Feeling unwell at school",
+      "emoji": "🤒",
+      "milestone": false,
+      "funFact": "If a child feels ill at school in Spain, the teacher usually phones a parent to come and collect them, so make sure the school has your number.",
+      "phrase": {
+        "es": "Seño, me duele la barriga. No me encuentro bien.",
+        "en": "Miss, my tummy hurts. I don't feel well."
+      },
+      "words": [
+        {
+          "es": "No me encuentro bien",
+          "en": "I don't feel well",
+          "say": "noh meh en-KWEN-troh byen",
+          "emoji": "🤒"
+        },
+        {
+          "es": "Me duele la barriga",
+          "en": "My tummy hurts",
+          "say": "meh DWEH-leh lah bah-RREE-gah",
+          "emoji": "🤢"
+        },
+        {
+          "es": "Me duele la cabeza",
+          "en": "My head hurts",
+          "say": "meh DWEH-leh lah kah-BEH-thah",
+          "emoji": "🤕"
+        },
+        {
+          "es": "Me he caído",
+          "en": "I've fallen over",
+          "say": "meh eh kah-EE-doh",
+          "emoji": "🩹"
+        },
+        {
+          "es": "Tengo frío",
+          "en": "I'm cold",
+          "say": "TEN-goh FREE-oh",
+          "emoji": "🥶"
+        },
+        {
+          "es": "Quiero llamar a mi madre",
+          "en": "I want to call my mum",
+          "say": "KYEH-roh yah-MAR ah mee MAH-dreh",
+          "emoji": "📞"
+        },
+        {
+          "es": "Quiero ir a casa",
+          "en": "I want to go home",
+          "say": "KYEH-roh eer ah KAH-sah",
+          "emoji": "🏠"
+        },
+        {
+          "es": "Necesito ayuda",
+          "en": "I need help",
+          "say": "neh-theh-SEE-toh ah-YOO-dah",
+          "emoji": "🆘"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Me",
+            "he",
+            "caído",
+            "en",
+            "el",
+            "patio"
+          ],
+          "shuffle": [
+            "en",
+            "patio",
+            "caído",
+            "el",
+            "Me",
+            "he"
+          ],
+          "en": "I've fallen over in the playground."
+        },
+        {
+          "correct": [
+            "Quiero",
+            "llamar",
+            "a",
+            "mi",
+            "madre",
+            "por",
+            "favor"
+          ],
+          "shuffle": [
+            "Quiero",
+            "favor",
+            "por",
+            "madre",
+            "llamar",
+            "mi",
+            "a"
+          ],
+          "en": "I want to call my mum, please."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'Me he caído' means:",
+          "opts": [
+            "I've fallen over",
+            "I've caught it",
+            "I've gone out"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'No me encuentro bien' means:",
+          "opts": [
+            "I don't feel well",
+            "I can't find it",
+            "I don't like it"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "A Bump in the Playground",
+        "paras": [
+          "Sol is running in the patio and… ¡pum! 'Me he caído. Me duele la rodilla.'",
+          "The teacher comes. '¿Estás bien?' 'No me encuentro bien. Quiero llamar a mi madre.'",
+          "The teacher puts a plaster on his knee and calls Mamá. Sol feels much better."
+        ],
+        "qs": [
+          {
+            "q": "What happened to Sol?",
+            "opts": [
+              "He fell over",
+              "He felt sick",
+              "He lost his coat"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "Who does Sol want to call?",
+            "opts": [
+              "His mum",
+              "His friend",
+              "The doctor"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does the teacher put on his knee?",
+            "opts": [
+              "A plaster",
+              "Ice cream",
+              "A bandage"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": 1008,
+      "title": "¡Ya me apaño!",
+      "subtitle": "I can manage now!",
+      "emoji": "🏆",
+      "milestone": false,
+      "funFact": "Most children who move to Spain understand a lot within a few months at school. Keep practising: you're doing brilliantly!",
+      "phrase": {
+        "es": "¡Ya me apaño en el cole!",
+        "en": "I can manage at school now!"
+      },
+      "words": [
+        {
+          "es": "Buenos días, seño",
+          "en": "Good morning, Miss",
+          "say": "BWEH-nos DEE-as SEH-nyoh",
+          "emoji": "🌞"
+        },
+        {
+          "es": "¿Puedo ir al baño?",
+          "en": "Can I go to the toilet?",
+          "say": "PWEH-doh eer al BAH-nyoh",
+          "emoji": "🚻"
+        },
+        {
+          "es": "No entiendo",
+          "en": "I don't understand",
+          "say": "noh en-TYEN-doh",
+          "emoji": "🤔"
+        },
+        {
+          "es": "Sentaos",
+          "en": "Sit down (everyone)",
+          "say": "sen-TAH-os",
+          "emoji": "🪑"
+        },
+        {
+          "es": "El estuche",
+          "en": "The pencil case",
+          "say": "el es-TOO-cheh",
+          "emoji": "🧰"
+        },
+        {
+          "es": "¿Juegas conmigo?",
+          "en": "Will you play with me?",
+          "say": "HWEH-gas kon-MEE-goh",
+          "emoji": "🤝"
+        },
+        {
+          "es": "No me encuentro bien",
+          "en": "I don't feel well",
+          "say": "noh meh en-KWEN-troh byen",
+          "emoji": "🤒"
+        },
+        {
+          "es": "Ya me apaño",
+          "en": "I can manage now",
+          "say": "yah meh ah-PAH-nyoh",
+          "emoji": "💪"
+        }
+      ],
+      "sentences": [
+        {
+          "correct": [
+            "Ya",
+            "me",
+            "apaño",
+            "en",
+            "el",
+            "cole"
+          ],
+          "shuffle": [
+            "Ya",
+            "me",
+            "en",
+            "apaño",
+            "cole",
+            "el"
+          ],
+          "en": "I can manage at school now."
+        },
+        {
+          "correct": [
+            "Tengo",
+            "muchos",
+            "amigos",
+            "en",
+            "mi",
+            "clase"
+          ],
+          "shuffle": [
+            "mi",
+            "en",
+            "amigos",
+            "muchos",
+            "Tengo",
+            "clase"
+          ],
+          "en": "I've got lots of friends in my class."
+        }
+      ],
+      "gaps": [
+        {
+          "q": "'¿Puedo salir?' means:",
+          "opts": [
+            "Can I go out?",
+            "Can I jump?",
+            "Can I sit down?"
+          ],
+          "ans": 0
+        },
+        {
+          "q": "'¿Qué significa…?' means:",
+          "opts": [
+            "What does … mean?",
+            "What's your sign?",
+            "Where is…?"
+          ],
+          "ans": 0
+        }
+      ],
+      "story": {
+        "title": "Luna's Brilliant Month",
+        "paras": [
+          "A month has passed. Luna walks into class. '¡Buenos días, seño!'",
+          "When she doesn't understand, she says: '¿Puedes repetirlo, por favor?' At break she plays with Marta and her friends.",
+          "At home she tells Mamá: '¡Ya me apaño en el cole!' Mamá gives her a big hug."
+        ],
+        "qs": [
+          {
+            "q": "How long has Luna been at school?",
+            "opts": [
+              "A month",
+              "A day",
+              "A year"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Luna do when she doesn't understand?",
+            "opts": [
+              "Asks the teacher to repeat it",
+              "Stays quiet",
+              "Goes home"
+            ],
+            "ans": 0
+          },
+          {
+            "q": "What does Luna tell her mum?",
+            "opts": [
+              "She can manage at school now",
+              "She wants a new school",
+              "She's tired"
+            ],
+            "ans": 0
+          }
+        ]
+      }
+    }
+  ],
+  "conversations": [
+    {
+      "lesson": 1001,
+      "who": "luna",
+      "title": "Your first morning",
+      "scene": "🏫",
+      "role": "your teacher",
+      "turns": [
+        {
+          "ask": "¡Hola! Buenos días. ¿Cómo te llamas?",
+          "askEn": "Hello! Good morning. What's your name?",
+          "answer": "Me llamo Mia. Soy nueva.",
+          "answerEn": "My name is Mia. I'm new.",
+          "keys": [
+            "me llamo",
+            "soy"
+          ],
+          "wrong": [
+            "Hasta mañana.",
+            "Mi clase es grande."
+          ],
+          "reply": "¡Bienvenida a la clase!",
+          "replyEn": "Welcome to the class!"
+        },
+        {
+          "ask": "¿Cómo se llama tu compañero?",
+          "askEn": "What's your classmate's name?",
+          "answer": "Se llama Pablo.",
+          "answerEn": "He's called Pablo.",
+          "keys": [
+            "se llama"
+          ],
+          "wrong": [
+            "Soy nuevo.",
+            "Buenos días."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Great!"
+        },
+        {
+          "ask": "Es la hora de irse. ¡Adiós!",
+          "askEn": "It's time to go. Bye!",
+          "answer": "¡Hasta mañana, seño!",
+          "answerEn": "See you tomorrow, Miss!",
+          "keys": [
+            "hasta manana",
+            "adios",
+            "hasta luego"
+          ],
+          "wrong": [
+            "Buenos días.",
+            "Soy nueva."
+          ],
+          "reply": "¡Hasta mañana!",
+          "replyEn": "See you tomorrow!"
+        }
+      ]
+    },
+    {
+      "lesson": 1002,
+      "who": "sol",
+      "title": "Asking in class",
+      "scene": "🙋",
+      "turns": [
+        {
+          "ask": "Necesitas ir al baño. ¿Qué le dices a la seño?",
+          "askEn": "You need the toilet. What do you say to the teacher?",
+          "answer": "Seño, ¿puedo ir al baño?",
+          "answerEn": "Miss, can I go to the toilet?",
+          "keys": [
+            "puedo ir al bano",
+            "bano"
+          ],
+          "wrong": [
+            "¿Puedo beber agua?",
+            "Gracias, seño."
+          ],
+          "reply": "Sí, claro. Ve.",
+          "replyEn": "Yes, of course. Go on."
+        },
+        {
+          "ask": "Tienes sed. ¿Qué preguntas?",
+          "askEn": "You're thirsty. What do you ask?",
+          "answer": "¿Puedo beber agua?",
+          "answerEn": "Can I drink some water?",
+          "keys": [
+            "beber agua",
+            "agua"
+          ],
+          "wrong": [
+            "¿Puedo ir al baño?",
+            "¿Puedo salir?"
+          ],
+          "reply": "Sí, toma.",
+          "replyEn": "Yes, go ahead."
+        },
+        {
+          "ask": "No tienes lápiz. ¿Qué le dices a tu compañero?",
+          "askEn": "You haven't got a pencil. What do you say to your classmate?",
+          "answer": "¿Me dejas un lápiz?",
+          "answerEn": "Can I borrow a pencil?",
+          "keys": [
+            "me dejas",
+            "lapiz"
+          ],
+          "wrong": [
+            "Ahora no.",
+            "Sí, claro."
+          ],
+          "reply": "¡Toma!",
+          "replyEn": "Here you go!"
+        }
+      ]
+    },
+    {
+      "lesson": 1003,
+      "who": "luna",
+      "title": "When it's too fast",
+      "scene": "🤔",
+      "role": "your teacher",
+      "turns": [
+        {
+          "ask": "Hoy vamos a hacer la ficha número tres de la página cuarenta y dos.",
+          "askEn": "Today we're going to do worksheet three on page forty-two.",
+          "answer": "No entiendo. ¿Puedes repetirlo, por favor?",
+          "answerEn": "I don't understand. Can you repeat it, please?",
+          "keys": [
+            "no entiendo",
+            "repetir",
+            "repetirlo",
+            "mas despacio"
+          ],
+          "wrong": [
+            "¡Ya lo entiendo!",
+            "Ayúdame con la goma."
+          ],
+          "reply": "Claro. La ficha tres. Página cuarenta y dos.",
+          "replyEn": "Of course. Worksheet three. Page forty-two."
+        },
+        {
+          "ask": "¿Sabes cómo se dice 'ruler' en español?",
+          "askEn": "Do you know how to say 'ruler' in Spanish?",
+          "answer": "No lo sé.",
+          "answerEn": "I don't know.",
+          "keys": [
+            "no lo se",
+            "regla",
+            "no se"
+          ],
+          "wrong": [
+            "Más despacio.",
+            "Me duele la cabeza."
+          ],
+          "reply": "Se dice «regla».",
+          "replyEn": "It's 'regla'."
+        },
+        {
+          "ask": "¿Lo entiendes ahora?",
+          "askEn": "Do you understand now?",
+          "answer": "¡Sí, ya lo entiendo!",
+          "answerEn": "Yes, now I get it!",
+          "keys": [
+            "entiendo",
+            "si",
+            "no"
+          ],
+          "wrong": [
+            "Ayúdame, por favor, la goma.",
+            "¿Cómo se dice?"
+          ],
+          "reply": "¡Muy bien!",
+          "replyEn": "Very good!"
+        }
+      ]
+    },
+    {
+      "lesson": 1004,
+      "who": "sol",
+      "title": "Teacher says…",
+      "scene": "🗣️",
+      "turns": [
+        {
+          "ask": "La seño dice «sentaos». ¿Qué haces?",
+          "askEn": "The teacher says 'sentaos'. What do you do?",
+          "answer": "Me siento.",
+          "answerEn": "I sit down.",
+          "keys": [
+            "me siento",
+            "siento",
+            "sentar"
+          ],
+          "wrong": [
+            "Me levanto.",
+            "Corro."
+          ],
+          "reply": "¡Muy bien!",
+          "replyEn": "Very good!"
+        },
+        {
+          "ask": "La seño dice «levantad la mano». ¿Qué levantas?",
+          "askEn": "The teacher says 'levantad la mano'. What do you put up?",
+          "answer": "La mano.",
+          "answerEn": "My hand.",
+          "keys": [
+            "mano"
+          ],
+          "wrong": [
+            "El libro.",
+            "La mochila."
+          ],
+          "reply": "¡Eso es!",
+          "replyEn": "That's it!"
+        },
+        {
+          "ask": "¿Qué dice la seño cuando hay mucho ruido?",
+          "askEn": "What does the teacher say when it's very noisy?",
+          "answer": "Silencio, por favor.",
+          "answerEn": "Quiet, please.",
+          "keys": [
+            "silencio"
+          ],
+          "wrong": [
+            "Abrid el libro.",
+            "Recoged."
+          ],
+          "reply": "¡Shhh!",
+          "replyEn": "Shhh!"
+        },
+        {
+          "ask": "¿Qué dice la seño antes del recreo?",
+          "askEn": "What does the teacher say before break?",
+          "answer": "Recoged y en fila.",
+          "answerEn": "Tidy up and get in line.",
+          "keys": [
+            "recoged",
+            "en fila",
+            "fila"
+          ],
+          "wrong": [
+            "Abrid el libro.",
+            "Copiad."
+          ],
+          "reply": "¡Al recreo!",
+          "replyEn": "Off to break!"
+        }
+      ]
+    },
+    {
+      "lesson": 1005,
+      "who": "luna",
+      "title": "Packing for school",
+      "scene": "✏️",
+      "turns": [
+        {
+          "ask": "¿Dónde guardas los lápices?",
+          "askEn": "Where do you keep your pencils?",
+          "answer": "En el estuche.",
+          "answerEn": "In my pencil case.",
+          "keys": [
+            "estuche"
+          ],
+          "wrong": [
+            "En la agenda.",
+            "En la ficha."
+          ],
+          "reply": "¡Muy bien!",
+          "replyEn": "Very good!"
+        },
+        {
+          "ask": "¿Dónde escribe la seño las notas para tus padres?",
+          "askEn": "Where does the teacher write notes for your parents?",
+          "answer": "En la agenda.",
+          "answerEn": "In the school diary.",
+          "keys": [
+            "agenda"
+          ],
+          "wrong": [
+            "En el estuche.",
+            "En las pinturas."
+          ],
+          "reply": "¡Exacto!",
+          "replyEn": "Exactly!"
+        },
+        {
+          "ask": "¿Tienes los deberes?",
+          "askEn": "Have you got your homework?",
+          "answer": "¡Ay! Se me ha olvidado.",
+          "answerEn": "Oh! I've forgotten it.",
+          "keys": [
+            "olvidado",
+            "si",
+            "no",
+            "aqui"
+          ],
+          "wrong": [
+            "El sacapuntas.",
+            "Las pinturas."
+          ],
+          "reply": "No pasa nada. Mañana.",
+          "replyEn": "Never mind. Tomorrow."
+        }
+      ]
+    },
+    {
+      "lesson": 1006,
+      "who": "sol",
+      "title": "In the playground",
+      "scene": "⚽",
+      "turns": [
+        {
+          "ask": "Unos niños juegan al fútbol. ¿Qué les preguntas?",
+          "askEn": "Some children are playing football. What do you ask them?",
+          "answer": "¿Puedo jugar?",
+          "answerEn": "Can I play?",
+          "keys": [
+            "puedo jugar",
+            "juegas conmigo",
+            "jugar"
+          ],
+          "wrong": [
+            "Tengo hambre.",
+            "Me toca."
+          ],
+          "reply": "¡Claro! ¡Ven!",
+          "replyEn": "Of course! Come on!"
+        },
+        {
+          "ask": "¿Dónde comes al mediodía?",
+          "askEn": "Where do you have lunch?",
+          "answer": "En el comedor.",
+          "answerEn": "In the dining hall.",
+          "keys": [
+            "comedor",
+            "en casa"
+          ],
+          "wrong": [
+            "En el patio.",
+            "En la clase."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Nice!"
+        },
+        {
+          "ask": "Quieres agua en la comida. ¿Qué dices?",
+          "askEn": "You want some water at lunch. What do you say?",
+          "answer": "¿Me pasas el agua, por favor?",
+          "answerEn": "Can you pass me the water, please?",
+          "keys": [
+            "me pasas",
+            "agua"
+          ],
+          "wrong": [
+            "Tengo hambre.",
+            "Me toca."
+          ],
+          "reply": "¡Toma!",
+          "replyEn": "Here you go!"
+        }
+      ]
+    },
+    {
+      "lesson": 1007,
+      "who": "luna",
+      "title": "Feeling poorly",
+      "scene": "🤒",
+      "role": "your teacher",
+      "turns": [
+        {
+          "ask": "¿Qué te pasa? ¿Estás bien?",
+          "askEn": "What's wrong? Are you OK?",
+          "answer": "No me encuentro bien.",
+          "answerEn": "I don't feel well.",
+          "keys": [
+            "no me encuentro bien",
+            "me duele",
+            "mal"
+          ],
+          "wrong": [
+            "Tengo frío en el comedor.",
+            "Quiero jugar."
+          ],
+          "reply": "¡Vaya! ¿Qué te duele?",
+          "replyEn": "Oh dear! What hurts?"
+        },
+        {
+          "ask": "¿Qué te duele?",
+          "askEn": "What hurts?",
+          "answer": "Me duele la barriga.",
+          "answerEn": "My tummy hurts.",
+          "keys": [
+            "me duele",
+            "me duelen"
+          ],
+          "wrong": [
+            "Me he caído.",
+            "Tengo frío."
+          ],
+          "reply": "Pobrecito.",
+          "replyEn": "Poor thing."
+        },
+        {
+          "ask": "¿Quieres llamar a alguien?",
+          "askEn": "Do you want to call someone?",
+          "answer": "Quiero llamar a mi madre.",
+          "answerEn": "I want to call my mum.",
+          "keys": [
+            "madre",
+            "padre",
+            "mama",
+            "papa",
+            "llamar"
+          ],
+          "wrong": [
+            "Quiero jugar.",
+            "Me he caído."
+          ],
+          "reply": "Vale, la llamamos ahora.",
+          "replyEn": "OK, we'll call her now."
+        }
+      ]
+    },
+    {
+      "lesson": 1008,
+      "who": "sol",
+      "title": "Your first month",
+      "scene": "🏆",
+      "turns": [
+        {
+          "ask": "¡Buenos días! ¿Qué tal en el cole?",
+          "askEn": "Good morning! How's school going?",
+          "answer": "¡Muy bien! Ya me apaño.",
+          "answerEn": "Really well! I can manage now.",
+          "keys": [
+            "bien",
+            "me apano",
+            "genial"
+          ],
+          "wrong": [
+            "Me he caído.",
+            "Tengo hambre."
+          ],
+          "reply": "¡Qué bien!",
+          "replyEn": "Brilliant!"
+        },
+        {
+          "ask": "Si no entiendes algo, ¿qué dices?",
+          "askEn": "If you don't understand something, what do you say?",
+          "answer": "No entiendo. ¿Puedes repetirlo?",
+          "answerEn": "I don't understand. Can you repeat it?",
+          "keys": [
+            "no entiendo",
+            "repetir",
+            "repetirlo"
+          ],
+          "wrong": [
+            "Me toca.",
+            "Sentaos."
+          ],
+          "reply": "¡Perfecto!",
+          "replyEn": "Perfect!"
+        },
+        {
+          "ask": "¿Con quién juegas en el recreo?",
+          "askEn": "Who do you play with at break?",
+          "answer": "Juego con mis amigos.",
+          "answerEn": "I play with my friends.",
+          "keys": [
+            "juego",
+            "con mis amigos",
+            "con mi amiga",
+            "con mi amigo"
+          ],
+          "wrong": [
+            "En el comedor.",
+            "La agenda."
+          ],
+          "reply": "¡Genial!",
+          "replyEn": "Great!"
+        },
+        {
+          "ask": "¿Qué llevas en el estuche?",
+          "askEn": "What do you have in your pencil case?",
+          "answer": "Lápices, una goma y un sacapuntas.",
+          "answerEn": "Pencils, a rubber and a sharpener.",
+          "keys": [
+            "lapiz",
+            "lapices",
+            "goma",
+            "sacapuntas",
+            "pinturas"
+          ],
+          "wrong": [
+            "La agenda.",
+            "Los deberes."
+          ],
+          "reply": "¡Eres un campeón del cole!",
+          "replyEn": "You're a school champion!"
+        }
+      ]
+    }
+  ]
+}

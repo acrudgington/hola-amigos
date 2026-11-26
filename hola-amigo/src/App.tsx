@@ -6,11 +6,11 @@
 // ============================================================
 import { useCallback, useEffect, useReducer, useRef, useState } from "react";
 import { AnimatePresence, MotionConfig, motion } from "framer-motion";
-import { lessonById, LESSONS, type Lesson } from "./content/index.ts";
+import { lessonById, LESSONS, packOf, type Lesson } from "./content/index.ts";
 import { isBadgeEarned, type EarnedReward } from "./domain/rewards.ts";
 import {
   XP, addStat, addXP, awardStars, bumpDaily, claimChest, logEvent,
-  recordCombo, recordWord, repairProgress, starsForScore, touchStreak, unlockedUpTo, isFreshLearner, type Progress,
+  recordCombo, recordWord, repairProgress, starsForScore, starsOf, touchStreak, unlockedUpTo, isFreshLearner, type Progress,
 } from "./domain/progress.ts";
 import { services, type Child, type Parent } from "./services/index.ts";
 import { initialNav, isLastStep, navReducer, type ShellView } from "./state/nav.ts";
@@ -41,10 +41,11 @@ import { TrophyScreen } from "./screens/TrophyScreen.tsx";
 import { PlacementScreen } from "./screens/PlacementScreen.tsx";
 import { lastLessonOf } from "./domain/placement.ts";
 import { StoriesScreen } from "./screens/StoriesScreen.tsx";
+import { PackScreen } from "./screens/PackScreen.tsx";
 import { TogetherScreen } from "./screens/TogetherScreen.tsx";
 import type { Book } from "./content/index.ts";
 
-const SHELL_VIEWS = new Set(["home", "review", "stories", "trophies", "profile", "lesson"]);
+const SHELL_VIEWS = new Set(["home", "review", "stories", "trophies", "profile", "lesson", "pack"]);
 const pageMotion = {
   // Opacity + y only: a lingering filter/transform would break position:fixed children.
   initial: { opacity: 0, y: 18 },
@@ -225,12 +226,13 @@ export default function App() {
     }
     // Journey complete → stars from how well it went, plus a lesson XP bonus.
     const j = { correct: nav.journey.correct + correct, total: nav.journey.total + total };
-    const before = progress?.stars[lesson.id] || 0;
+    const before = progress ? starsOf(progress, lesson.id) : 0;
     const earned = starsForScore(j.correct, j.total);
     const bonus = XP.lesson + earned * XP.perStar;
     const xp = sessionXpRef.current + bonus;
-    const after = update(p => logEvent(addXP(awardStars(p, lesson.id, earned), bonus),
-      { type: "lesson", title: lesson.title, emoji: lesson.emoji, text: `Finished “${lesson.title}” · ${"★".repeat(earned)} · +${xp} XP` }))?.stars[lesson.id] ?? earned;
+    const afterP = update(p => logEvent(addXP(awardStars(p, lesson.id, earned), bonus),
+      { type: "lesson", title: lesson.title, emoji: lesson.emoji, text: `Finished “${lesson.title}” · ${"★".repeat(earned)} · +${xp} XP` }));
+    const after = afterP ? starsOf(afterP, lesson.id) : earned;
     sessionXpRef.current = xp;
     dispatch({ type: "lessonComplete", result: { ...j, earned, before, after, xp } });
     setReaction(null);
@@ -267,6 +269,10 @@ export default function App() {
     else if (step.action === "quests" && step.ready) openChest();
   };
 
+  // Pack lessons go back to their pack's page; map lessons to the map.
+  const backFromLesson = () => { const pk = packOf(lesson.id); dispatch(pk ? { type: "openPack", packId: pk.id } : { type: "go", view: "home" }); };
+  const openPack = (packId: string) => dispatch({ type: "openPack", packId });
+
   // ---------- render ----------
   let content: JSX.Element | null = null;
   let topKey = nav.view as string;
@@ -286,16 +292,18 @@ export default function App() {
   } else if (SHELL_VIEWS.has(nav.view)) {
     let inner: JSX.Element | null = null;
     if (nav.view === "home") inner = <HomeScreen child={child} progress={progress} onStartLesson={startLesson} onOpenLesson={openLesson}
-      onClaim={openChest} onSearch={() => setPalette(true)} onMission={onMission} />;
+      onClaim={openChest} onSearch={() => setPalette(true)} onMission={onMission} onPack={openPack} />;
     if (nav.view === "profile") inner = <ProfileScreen child={child} parent={parent} progress={progress} onTrophies={() => dispatch({ type: "go", view: "trophies" })} onSwitchChild={() => void switchChild()} onPlacement={() => dispatch({ type: "go", view: "placement" })}
       onAvatar={code => void services.family.updateChild(child.id, { avatar: code }).then(c => { if (c) setChild(c); })} />;
     if (nav.view === "stories") inner = <StoriesScreen progress={progress} onFinish={finishStory}
       onChant={c => update(p => logEvent(addXP(p, XP.activity), { type: "chant", emoji: "🎵", text: `Chanted “${c.title}”` }))} />;
     if (nav.view === "trophies") inner = <TrophyScreen progress={progress} onEquip={equip} />;
     if (nav.view === "review") inner = <ReviewScreen progress={progress} onBack={() => dispatch({ type: "go", view: "home" })} onFinish={finishReview} onWord={onWord} onTogether={() => dispatch({ type: "go", view: "together" })} />;
-    if (nav.view === "lesson") inner = <LessonScreen lesson={lesson} stars={progress.stars[lesson.id] || 0} onBack={() => dispatch({ type: "go", view: "home" })}
+    if (nav.view === "pack" && nav.packId) inner = <PackScreen packId={nav.packId} progress={progress} onBack={() => dispatch({ type: "go", view: "home" })}
+      onStart={startLesson} onOpen={openLesson} />;
+    if (nav.view === "lesson") inner = <LessonScreen lesson={lesson} stars={starsOf(progress, lesson.id)} onBack={backFromLesson}
       onStart={() => startLesson(lesson)} onPractice={practice} />;
-    content = <Shell child={child} progress={progress} active={nav.view === "lesson" ? "home" : (nav.view as ShellView)} onNav={goTo}
+    content = <Shell child={child} progress={progress} active={nav.view === "lesson" || nav.view === "pack" ? "home" : (nav.view as ShellView)} onNav={goTo}
       prefs={prefs} onToggle={togglePref} onSearch={() => setPalette(true)}>
       <AnimatePresence mode="wait">
         <motion.div key={nav.view + nav.lessonId} {...pageMotion}>{inner}</motion.div>
@@ -326,7 +334,7 @@ export default function App() {
       }} />;
   } else if (nav.view === "done" && nav.done) {
     content = <DoneScreen lesson={lesson} result={nav.done} progress={progress}
-      onNext={startLesson} onHome={() => dispatch({ type: "go", view: "home" })} onPractice={() => openLesson(lesson)} />;
+      onNext={startLesson} onHome={backFromLesson} onPractice={() => openLesson(lesson)} />;
   }
 
   return <GuideContext.Provider value={prefs.guide}><MotionConfig reducedMotion="user">

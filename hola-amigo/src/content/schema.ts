@@ -138,8 +138,29 @@ export const ConversationSchema = z.object({
 });
 export const ConversationFileSchema = z.object({ world: z.number().int().positive(), conversations: z.array(ConversationSchema).min(1) });
 
+// Packs: short courses outside the 200-lesson map (the school survival kit,
+// seasonal events, the parent course). Their lessons use ids from 1001 up and
+// keep their own stars, so they never unlock or count towards the main map.
+export const PACK_ID_START = 1001;
+export const PackSchema = z.object({
+  id: z.string().regex(/^[a-z0-9-]+$/),
+  title: text,                           // Spanish title
+  en: text,                              // English title
+  about: text,                           // one-line description for grown-ups
+  emoji: text,
+  color: hex,
+  audience: z.enum(["child", "adult"]),
+  sequential: z.boolean(),               // lessons unlock one after another
+  window: z.object({ from: z.string().regex(/^\d{2}-\d{2}$/), to: z.string().regex(/^\d{2}-\d{2}$/) }).optional(),   // MM-DD, may wrap the new year
+  sticker: z.object({ id: z.string(), name: text, emoji: text }).optional(),          // reward for finishing every lesson
+  cards: z.array(z.object({ es: text, en: text, emoji: text })).optional(),            // "show this to the teacher" phrase cards
+  lessons: z.array(LessonSchema).min(1),
+  conversations: z.array(ConversationSchema),
+});
+
 export type Word = z.infer<typeof WordSchema>;
 export type Turn = z.infer<typeof TurnSchema>;
+export type Pack = z.infer<typeof PackSchema>;
 export type Conversation = z.infer<typeof ConversationSchema>;
 export type ConversationFile = z.infer<typeof ConversationFileSchema>;
 export type Sentence = z.infer<typeof SentenceSchema>;
@@ -162,7 +183,7 @@ const dupes = <T,>(xs: T[]) => xs.filter((x, i) => xs.indexOf(x) !== i);
 
 // Rules that a schema alone can't express: cross-file consistency and
 // teaching-quality checks. Errors fail the build; warnings are reported.
-export function checkCourse(worlds: unknown, lessonFiles: unknown[], surprises: unknown, units?: unknown, books?: unknown, chants?: unknown, conversationFiles?: unknown[]): ContentIssue[] {
+export function checkCourse(worlds: unknown, lessonFiles: unknown[], surprises: unknown, units?: unknown, books?: unknown, chants?: unknown, conversationFiles?: unknown[], packs?: unknown[]): ContentIssue[] {
   const issues: ContentIssue[] = [];
   const err = (where: string, message: string) => issues.push({ level: "error", where, message });
   const warn = (where: string, message: string) => issues.push({ level: "warning", where, message });
@@ -276,6 +297,33 @@ export function checkCourse(worlds: unknown, lessonFiles: unknown[], surprises: 
       if (n === 0) err(`lesson ${l.id}`, "has no conversation");
       if (n > 1) err(`lesson ${l.id}`, "has more than one conversation");
     }
+  }
+
+  // Packs: valid, ids above the main course, one conversation per lesson.
+  if (packs !== undefined) {
+    const used = new Set<number>(lessons.map(l => l.id));
+    const packIds: string[] = [];
+    packs.forEach((raw, pi) => {
+      const r = PackSchema.safeParse(raw);
+      if (!r.success) { r.error.issues.forEach(i => err(`pack #${pi + 1}:${i.path.join(".")}`, i.message)); return; }
+      const pk = r.data;
+      packIds.push(pk.id);
+      for (const l of pk.lessons) {
+        const at = `pack ${pk.id} lesson ${l.id}`;
+        if (l.id < PACK_ID_START) err(at, `pack lesson ids start at ${PACK_ID_START}`);
+        if (used.has(l.id)) err(at, "lesson id is used twice");
+        used.add(l.id);
+        dupes(l.words.map(x => x.es)).forEach(es => err(at, `word "${es}" appears twice`));
+        l.sentences.forEach((x, i) => { if (!sameMultiset(x.correct, x.shuffle)) err(`${at} sentence ${i + 1}`, "word tiles don't match the correct answer"); });
+        const n = pk.conversations.filter(c => c.lesson === l.id).length;
+        if (n !== 1) err(at, n ? "has more than one conversation" : "has no conversation");
+      }
+      for (const c of pk.conversations) {
+        if (!pk.lessons.some(l => l.id === c.lesson)) err(`pack ${pk.id}`, `conversation for unknown lesson ${c.lesson}`);
+        c.turns.forEach((t, i) => { if (dupes([t.answer, ...t.wrong].map(o => o.toLowerCase())).length) err(`pack ${pk.id} conversation ${c.lesson} turn ${i + 1}`, "tap options repeat"); });
+      }
+    });
+    dupes(packIds).forEach(id => err("packs", `pack id "${id}" is used twice`));
   }
 
   return issues;

@@ -3,7 +3,7 @@
 // Mixed English/Spanish lines are split with the same splitter the voices use,
 // so only the Spanish parts are checked. Run: npm run content:grammar
 import { writeFileSync } from "node:fs";
-import { BOOKS, CHANTS, CONVERSATIONS, LESSONS as ALL_LESSONS, UNITS as ALL_UNITS, worldOf } from "../src/content/index.ts";
+import { BOOKS, CHANTS, CONVERSATIONS, PACKS, LESSONS as ALL_LESSONS, UNITS as ALL_UNITS, worldOf } from "../src/content/index.ts";
 
 // FROM_LESSON=101 npm run content:grammar checks only lessons from 101 on (and
 // the goals, stories and chants of their worlds), writing grammar-check-from-101.tsv.
@@ -37,6 +37,23 @@ for (const c of CONVERSATIONS.filter(c => c.lesson >= FROM)) c.turns.forEach((t,
 });
 for (const c of CHANTS.filter(c => c.world >= FROM_WORLD)) { add(`chant ${c.id} title`, c.title); c.lines.forEach((l, i) => add(`chant ${c.id} ${i + 1}`, l.es)); }
 for (const b of BOOKS.filter(b => b.world >= FROM_WORLD)) { add(`story ${b.id} title`, b.title); b.sentences.forEach((x, i) => add(`story ${b.id} ${i + 1}`, x.es)); }
+
+// Packs (school kit, seasonal, parent course). ONLY_PACKS=1 checks just these.
+for (const pk of PACKS) {
+  add(`pack ${pk.id} title`, pk.title);
+  for (const c of pk.cards ?? []) add(`pack ${pk.id} card`, c.es);
+  for (const l of pk.lessons) {
+    const L = `pack ${pk.id} L${l.id}`;
+    add(`${L} phrase`, l.phrase.es);
+    for (const w of l.words) add(`${L} word`, w.es);
+    for (const x of l.sentences) add(`${L} sentence`, x.correct.join(" "));
+    addMixed(`${L} fact`, l.funFact);
+    for (const g of l.gaps) addMixed(`${L} gap`, g.q);
+    l.story.paras.forEach((p, i) => addMixed(`${L} story ${i + 1}`, p));
+  }
+  for (const c of pk.conversations) c.turns.forEach((t, i) => [t.ask, t.answer, ...(t.reply ? [t.reply] : []), ...t.wrong.slice(0, 2)].forEach(x => add(`pack ${pk.id} talk ${c.lesson} turn ${i + 1}`, x)));
+}
+if (process.env.ONLY_PACKS) items.splice(0, items.length, ...items.filter(i => i.where.startsWith("pack")));
 
 // ONLY_TALK=1 checks just the conversations.
 if (process.env.ONLY_TALK) items.splice(0, items.length, ...items.filter(i => i.where.startsWith("talk")));
@@ -90,7 +107,7 @@ for (const [bi, batch] of batches.entries()) {
   process.stdout.write(`  ${bi + 1}/${batches.length}\r`);
   await sleep(4000);
 }
-const ONLY = process.env.ONLY_TALK ? "-talk" : "";
+const ONLY = process.env.ONLY_TALK ? "-talk" : process.env.ONLY_PACKS ? "-packs" : "";
 const OUT = FROM || ONLY ? `content/review/grammar-check${ONLY}-from-${FROM}.tsv` : "content/review/grammar-check.tsv";
 writeFileSync(OUT, ["Where\tRule\tText\tLanguageTool says", ...out].join("\n") + "\n");
 console.log(`\n${out.length} things to look at → ${OUT}`);

@@ -3,7 +3,7 @@
 // and the in-app player, so both always agree on how text is split and
 // which clip file belongs to which piece of text.
 // ============================================================
-import { ALL_WORDS, BOOKS, CHANTS, LESSONS } from "../content/index.ts";
+import { ALL_WORDS, BOOKS, CHANTS, LESSONS, PACK_LESSONS } from "../content/index.ts";
 
 // Who is speaking. Each role maps to one neural voice (see config.ts AUDIO).
 export type VoiceRole = "es" | "en" | "sol-es" | "sol-en" | "luna-es" | "luna-en";
@@ -83,7 +83,7 @@ function spanishLexicon() {
   for (const w of ALL_WORDS) for (const tok of tokenize(w.es)) if (tok.length > 2) add(tok); else lex.add(tok);
   ES_EXTRA.forEach(add);
   // Every word of the course's all-Spanish lines (phrases, sentences, chants, stories) is Spanish too.
-  const lines = [...LESSONS.flatMap(l => [l.phrase.es, ...l.sentences.map(x => x.correct.join(" "))]),
+  const lines = [...[...LESSONS, ...PACK_LESSONS].flatMap(l => [l.phrase.es, ...l.words.map(w => w.es), ...l.sentences.map(x => x.correct.join(" "))]),
     ...CHANTS.flatMap(c => c.lines.map(x => x.es)), ...BOOKS.flatMap(b => b.sentences.map(x => x.es))];
   for (const line of lines) for (const tok of tokenize(line)) lex.add(tok);
   lexicon = lex;

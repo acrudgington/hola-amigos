@@ -48,6 +48,9 @@ export interface Progress {
   // For the weekly report: what was done each day, and when each "I can…" goal was first achieved.
   doneByDay: Record<string, Partial<Record<CountedEvent, number>>>;
   goalsAt: Record<string, number>;
+  // Best stars in pack lessons (school kit, seasonal, parent course), kept apart
+  // from the 200-lesson map so they never unlock it or count towards its goals.
+  packStars: Record<string, number>;
 }
 
 // Event types counted per day for the weekly report.
@@ -62,7 +65,7 @@ export const DEFAULT_PROGRESS: Readonly<Progress> = Object.freeze({
   lessonsDone: 0, correctAnswers: 0, micUses: 0, storiesRead: 0, reviewsDone: 0,
   wordMemory: {}, dailyGoal: 3, dailyDate: null, dailyCount: 0,
   xp: 0, xpByDay: {}, bestCombo: 0, comboDay: null, comboToday: 0, chestDay: null, events: [],
-  placedUpTo: 0, placement: null, placementOffered: false, storyBest: {}, doneByDay: {}, goalsAt: {},
+  placedUpTo: 0, placement: null, placementOffered: false, storyBest: {}, doneByDay: {}, goalsAt: {}, packStars: {},
 });
 
 export const XP = { correct: 10, activity: 15, lesson: 50, perStar: 20, review: 25, combo5: 15, chest: 50 } as const;
@@ -162,8 +165,17 @@ export function starsForScore(correct: number, total: number) {
   return pct >= 0.9 ? 3 : pct >= 0.7 ? 2 : 1;
 }
 
+// Pack lessons have ids from 1001 (see content/schema.ts).
+const PACK_LESSON = (id: number) => id >= 1001;
+export const starsOf = (p: Pick<Progress, "stars" | "packStars">, lessonId: number) =>
+  (PACK_LESSON(lessonId) ? p.packStars?.[lessonId] : p.stars?.[lessonId]) || 0;
+
 // Keep the child's best result for a lesson (max 3 stars).
 export function awardStars(p: Progress, lessonId: number, earned: number): Progress {
+  if (PACK_LESSON(lessonId)) {
+    const best = Math.min(3, Math.max(p.packStars?.[lessonId] || 0, earned));
+    return { ...p, packStars: { ...p.packStars, [lessonId]: best }, lessonsDone: p.lessonsDone + 1 };
+  }
   const best = Math.min(3, Math.max(p.stars[lessonId] || 0, earned));
   return { ...p, stars: { ...p.stars, [lessonId]: best }, lastLesson: Math.max(p.lastLesson, lessonId), lessonsDone: p.lessonsDone + 1 };
 }

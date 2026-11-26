@@ -1,0 +1,2 @@
+Where	Rule	Text	LanguageTool says
+pack school L1001 sentence	MISSING_COMMA	« soy» in «Buenos días soy nueva en la clase»	En este contexto es necesaria una coma después de «buenos días» (ej. «Buenos días, Ana»). → , soy

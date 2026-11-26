@@ -1,6 +1,8 @@
 // ============================================================
 // REWARDS — badges, collectible stickers and mascot outfits
 // ============================================================
+import { PACKS } from "../content/index.ts";
+import { packFinished } from "./packs.ts";
 import { WORLDS } from "../content/index.ts";
 import { countLessons as lessonsOf, sumStars as starsOf, type Progress } from "./progress.ts";
 
@@ -85,6 +87,11 @@ export const STICKERS: Sticker[] = [
   { id: "s_owl", name: "Wise Owl", emoji: "🦉", rarity: "rare", desc: "Did Sol's mix 10 times", check: p => p.reviewsDone >= 10 },
   { id: "s_medal", name: "Gold Medal", emoji: "🥇", rarity: "rare", desc: "3 stars in 10 lessons", check: p => perfectCount(p) >= 10 },
   { id: "s_trophy", name: "Halfway Hero", emoji: "🏆", rarity: "rare", desc: "Finished 50 lessons", check: p => lessonsOf(p) >= 50 },
+  // Finishing a pack (school kit, seasonal events, parent course) earns its own sticker.
+  ...PACKS.filter(pk => pk.sticker).map((pk): Sticker => ({
+    id: pk.sticker!.id, name: pk.sticker!.name, emoji: pk.sticker!.emoji, rarity: pk.window ? "legendary" : "rare",
+    desc: `Finished ${pk.en}`, check: p => packFinished(p, pk),
+  })),
 ];
 
 export const OUTFITS: Reward[] = [

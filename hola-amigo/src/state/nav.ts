@@ -7,7 +7,7 @@
 import type { ActivityType } from "../lib/journey.ts";
 
 export type ShellView = "home" | "review" | "stories" | "trophies" | "profile";
-export type View = "family" | "dashboard" | ShellView | "lesson" | "activity" | "done" | "placement" | "together";
+export type View = "family" | "dashboard" | ShellView | "lesson" | "activity" | "done" | "placement" | "together" | "pack";
 
 export interface Journey {
   steps: ActivityType[];
@@ -31,11 +31,13 @@ export interface NavState {
   activity: { type: ActivityType; run: number } | null;  // run: a fresh id remounts the game
   journey: Journey | null;                                // null = free practice
   done: DoneResult | null;
+  packId?: string;                                        // the pack page that's open (view "pack")
 }
 
 export type NavAction =
   | { type: "go"; view: "family" | "dashboard" | "placement" | "together" | ShellView }
   | { type: "openLesson"; lessonId: number }
+  | { type: "openPack"; packId: string }
   | { type: "startLesson"; lessonId: number; steps: ActivityType[]; run: number }
   | { type: "practice"; activity: ActivityType; run: number }
   | { type: "activityFinished"; correct: number; total: number; run: number }
@@ -53,6 +55,9 @@ export function navReducer(s: NavState, a: NavAction): NavState {
   switch (a.type) {
     case "go":
       return { ...s, view: a.view, activity: null, journey: null };
+
+    case "openPack":
+      return { ...s, view: "pack", packId: a.packId, activity: null, journey: null };
 
     case "openLesson":
       return { ...s, view: "lesson", lessonId: a.lessonId, activity: null, journey: null };

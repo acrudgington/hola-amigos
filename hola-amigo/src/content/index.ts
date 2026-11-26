@@ -6,9 +6,9 @@ import surprisesJson from "../../content/surprises.json";
 import unitsJson from "../../content/units.json";
 import storiesJson from "../../content/stories.json";
 import chantsJson from "../../content/chants.json";
-import type { Book, Chant, Conversation, ConversationFile, Lesson, LessonFile, Surprise, Unit, Word, World } from "./schema.ts";
+import { PACK_ID_START, type Book, type Chant, type Conversation, type ConversationFile, type Lesson, type LessonFile, type Pack, type Surprise, type Unit, type Word, type World } from "./schema.ts";
 
-export type { Book, Chant, Conversation, Turn, Gap, Goal, Lesson, Sentence, Story, StoryQuestion, Surprise, Unit, Word, World } from "./schema.ts";
+export type { Book, Chant, Conversation, Pack, Turn, Gap, Goal, Lesson, Sentence, Story, StoryQuestion, Surprise, Unit, Word, World } from "./schema.ts";
 
 const lessonFiles = Object.values(
   import.meta.glob<LessonFile>("../../content/lessons/*.json", { eager: true, import: "default" }),
@@ -18,9 +18,21 @@ const conversationFiles = Object.values(
   import.meta.glob<ConversationFile>("../../content/conversations/*.json", { eager: true, import: "default" }),
 );
 export const CONVERSATIONS: Conversation[] = conversationFiles.flatMap(f => f.conversations).sort((a, b) => a.lesson - b.lesson);
-export const conversationFor = (lessonId: number): Conversation | undefined => CONVERSATIONS.find(c => c.lesson === lessonId);
 
-export const RAW_CONTENT = { worlds: worldsJson as unknown, lessonFiles: lessonFiles as unknown[], surprises: surprisesJson as unknown, units: unitsJson as unknown, books: storiesJson as unknown, chants: chantsJson as unknown, conversationFiles: conversationFiles as unknown[] };
+// ---------- packs (school kit, seasonal events, parent course) ----------
+const packFiles = Object.values(import.meta.glob<Pack>("../../content/packs/*.json", { eager: true, import: "default" }));
+const PACK_ORDER = ["school", "halloween", "christmas", "parents"];
+export const PACKS: Pack[] = [...packFiles].sort((a, b) => PACK_ORDER.indexOf(a.id) - PACK_ORDER.indexOf(b.id));
+export const PACK_LESSONS: Lesson[] = PACKS.flatMap(p => p.lessons);
+export const PACK_CONVERSATIONS: Conversation[] = PACKS.flatMap(p => p.conversations);
+export const isPackLesson = (id: number) => id >= PACK_ID_START;
+export const packOf = (lessonId: number): Pack | undefined => PACKS.find(p => p.lessons.some(l => l.id === lessonId));
+export const packById = (id: string): Pack | undefined => PACKS.find(p => p.id === id);
+
+export const conversationFor = (lessonId: number): Conversation | undefined =>
+  (isPackLesson(lessonId) ? PACK_CONVERSATIONS : CONVERSATIONS).find(c => c.lesson === lessonId);
+
+export const RAW_CONTENT = { worlds: worldsJson as unknown, lessonFiles: lessonFiles as unknown[], surprises: surprisesJson as unknown, units: unitsJson as unknown, books: storiesJson as unknown, chants: chantsJson as unknown, conversationFiles: conversationFiles as unknown[], packs: packFiles as unknown[] };
 
 export const WORLDS = worldsJson as World[];
 export const SURPRISES = surprisesJson as Surprise[];
@@ -30,7 +42,14 @@ export const CHANTS = chantsJson as Chant[];
 export const LESSONS: Lesson[] = lessonFiles.flatMap(f => f.lessons).sort((a, b) => a.id - b.id);
 export const MILESTONES = LESSONS.filter(l => l.milestone).map(l => l.id);
 
-export const lessonById = (id: number): Lesson | undefined => LESSONS.find(l => l.id === id);
+export const lessonById = (id: number): Lesson | undefined => LESSONS.find(l => l.id === id) ?? PACK_LESSONS.find(l => l.id === id);
+// The lesson after this one: the next on the map, or the next in its pack.
+export function nextLessonAfter(lesson: Lesson): Lesson | undefined {
+  const pack = packOf(lesson.id);
+  if (!pack) return LESSONS.find(l => l.id === lesson.id + 1);
+  const i = pack.lessons.findIndex(l => l.id === lesson.id);
+  return pack.lessons[i + 1];
+}
 export const isMilestone = (id: number) => !!lessonById(id)?.milestone;
 
 // A tiny deterministic hash so each lesson always gets the same variety.

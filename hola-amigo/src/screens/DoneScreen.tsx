@@ -1,4 +1,4 @@
-import { LESSONS, type Lesson } from "../content/index.ts";
+import { nextLessonAfter, type Lesson } from "../content/index.ts";
 import type { DoneResult } from "../state/nav.ts";
 import { motion } from "framer-motion";
 import { levelInfo, type Progress } from "../domain/progress.ts";
@@ -15,7 +15,7 @@ export function DoneScreen({ lesson, result, progress, onNext, onHome, onPractic
   const mood = pct >= 0.85 ? "celebrate" : pct >= 0.6 ? "happy" : "encourage";
   const msg = pct >= 0.85 ? DONE_LINES.great : pct >= 0.6 ? DONE_LINES.good : DONE_LINES.keepGoing;
   useSayOnShow(msg, { delay: 700, speaker: "sol" });
-  const next = LESSONS.find(l => l.id === lesson.id + 1);
+  const next = nextLessonAfter(lesson);
   const gained = after - before;
   const xpGained = result.xp || 0;
   const lvl = levelInfo(progress.xp);

@@ -10,6 +10,9 @@ export function buildJourney(lesson: Lesson): ActivityType[] {
 
   // Milestones are a boss battle over the whole world's vocabulary.
   if (lesson.milestone) return ["learn", "warmup", "boss", "talk", "story"];
+  // Pack lessons (school kit, seasonal, parent course) stand alone: no warm-ups,
+  // bosses or surprises that draw on the main map.
+  if (lesson.id >= 1001) return ["learn", "flash", "listen", "match", "quiz", "sayit", ...(lesson.sentences.length ? ["build" as const] : []), "talk", "story"];
 
   const core: ActivityType[] = ["learn", "flash", "listen", "match", "quiz", "sayit"];
   if (lesson.sentences.length) core.push("build");

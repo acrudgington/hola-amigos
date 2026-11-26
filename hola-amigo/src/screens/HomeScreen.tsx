@@ -10,6 +10,7 @@ import { Stars } from "../components/ui.tsx";
 import { Icon } from "../components/Icon.tsx";
 import { WorldScene } from "../components/WorldScene.tsx";
 import { ActivityFeed, AgentPanel, KpiTile, MasteryCard, QuestsCard, WeeklyChart } from "../components/Widgets.tsx";
+import { packProgress, visiblePacks } from "../domain/packs.ts";
 import { Art } from "../components/Art.tsx";
 
 const EASE = [0.22, 1, 0.36, 1];
@@ -162,9 +163,28 @@ function Journey({ stars, unlockedUpTo, currentId, onStart }: MapProps) {
   </section>;
 }
 
-export function HomeScreen({ child, progress, onStartLesson, onOpenLesson, onClaim, onSearch, onMission }: {
+// Pack tiles: the school survival kit, plus any seasonal pack that's on now.
+function PacksRow({ progress, onPack }: { progress: Progress; onPack: (id: string) => void }) {
+  const packs = visiblePacks("child");
+  if (!packs.length) return null;
+  return <section className="packs-row" aria-label="Extra packs">
+    {packs.map(pk => {
+      const pr = packProgress(progress, pk);
+      return <button key={pk.id} type="button" className="pack-tile" style={{ "--pc": pk.color }} onClick={() => onPack(pk.id)}>
+        <Art e={pk.emoji} size={46} />
+        <span className="grow">
+          <span className="pack-tile__title" lang="es">{pk.title}</span>
+          <span className="pack-tile__sub">{pk.window ? "Limited time · " : ""}{pk.en} · {pr.done}/{pr.total} lessons</span>
+          <span className="pack-tile__bar"><div style={{ width: `${(pr.done / pr.total) * 100}%` }} /></span>
+        </span>
+      </button>;
+    })}
+  </section>;
+}
+
+export function HomeScreen({ child, progress, onStartLesson, onOpenLesson, onClaim, onSearch, onMission, onPack }: {
   child: Child; progress: Progress; onStartLesson: (l: Lesson) => void; onOpenLesson: (l: Lesson) => void;
-  onClaim: () => void; onSearch: () => void; onMission: (s: MissionStep) => void;
+  onClaim: () => void; onSearch: () => void; onMission: (s: MissionStep) => void; onPack: (id: string) => void;
 }) {
   const stars = progress.stars || {};
   const done = learnedUpTo(progress);                       // finished, or placed past by the level check
@@ -195,6 +215,8 @@ export function HomeScreen({ child, progress, onStartLesson, onOpenLesson, onCla
     <div className="bento">
       <div className="l-7"><AgentPanel progress={progress} onAction={onMission} /></div>
       <div className="l-5"><NextCard lesson={current} label={label} onClick={() => onStartLesson(current)} /></div>
+
+      <div className="l-12"><PacksRow progress={progress} onPack={onPack} /></div>
 
       <div className="xs-6 l-3"><KpiTile icon="bolt" art="⚡" color="var(--gold)" label="XP today" value={today} sub={`${week.reduce((a, d) => a + d.xp, 0)} XP this week`} spark={week.map(d => d.xp)} delay={0.05} /></div>
       <div className="xs-6 l-3"><KpiTile icon="flame" art="🔥" color="var(--fire)" label="Day streak" value={streak} sub={`Best combo: ${progress.bestCombo || 0} in a row`} delay={0.1}
